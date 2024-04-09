@@ -1,16 +1,16 @@
 ## **Základní datové typy:**
 
 1. **Integer (celočíselné typy):**
-    - `int`: Standardní celočíselný typ.
-    - `short int`: Krátký celočíselný typ.
-    - `long int`: Dlouhý celočíselný typ.
-    - `unsigned int`: Bez znaménka.
+    - `int (4B)`: Standardní celočíselný typ.
+    - `short int (2B)`: Krátký celočíselný typ.
+    - `long int (4B)`: Dlouhý celočíselný typ.
+    - `unsigned int (4B)`: Bez znaménka.
 2. **Floating-point (plovoucí desetinné číslo):**
-    - `float`: Jednoduchá přesnost s pohyblivou řádovou čárkou.
-    - `double`: Dvojitá přesnost s pohyblivou řádovou čárkou.
-    - `long double`: Rozšířená přesnost s pohyblivou řádovou čárkou.
+    - `float (4B)`: Jednoduchá přesnost s pohyblivou řádovou čárkou.
+    - `double (8B)`: Dvojitá přesnost s pohyblivou řádovou čárkou.
+    - `long double (12B - 32bit a 16B - 64bit)`: Rozšířená přesnost s pohyblivou řádovou čárkou.
 3. **Character (znakové typy):**
-    - `char`: Reprezentace jednoho znaku nebo malého celého čísla.
+    - `char (1B)`: Reprezentace jednoho znaku nebo malého celého čísla.
 4. **Void (prázdný typ):**
     - `void`: Používá se pro funkce, které nevracejí hodnotu, a pro ukazatele bez konkrétního typu.
 
