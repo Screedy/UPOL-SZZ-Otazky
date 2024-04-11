@@ -7,7 +7,7 @@ Jednotlivé otázky jsou rozděleny do svých adekvátních okruhů (složek) ob
 - [[3. Programovací jazyky a programování]]
 
 ## Jak správně použít tento repozitář
-Všechny soubory v tomto repozitáři jsou psány a formátovány pro použití s programem [Obsidian](https://obsidian.md/), což je mocný nástroj pro pořádání vašich poznámek a studijních materiálů.
+Všechny soubory v tomto repozitáři jsou psány a formátovány pro použití s programem [Obsidian](https://obsidian.md/).
 
 ### Instalace
 Pro práci s tímto repozitářem v Obsidianu budete nejprve potřebovat naklonovat repozitář na váš lokální počítač. Následujte tyto kroky:
