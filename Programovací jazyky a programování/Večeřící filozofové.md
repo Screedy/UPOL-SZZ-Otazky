@@ -22,12 +22,5 @@ V roce 1984 K. Mani Chandel a J. Misra navrhli jiné řešení problému obědva
 
 Toto řešení umožňuje velké množství paralelních programů a řeší libovolně velký problém s předpokladem, že každé vlákno potřebuje právě jeden zdroj v čase.
 
-## **Řešení pomocí zamknutí (locků):**
-
-1. **Inicializace zámků:** Každá vidlice je reprezentována jako zámek. Inicializujeme zámky na hodnotu 1, což znamená, že jsou volné.
-    
-2. **Pokus o jídlo:** Když filozof chce jíst, musí atomicky získat oba zámky (vidlice) pomocí operace lock(). Pokud jsou oba zámky volné, filozof je upraven, že má obě vidlice a může začít jíst.
-    
-3. **Návrat vidlic:** Jakmile filozof dojí, vrátí vidlice. To provádí operaci unlock() na obou zámcích, čímž uvolní vidlice pro další filozofy.
-    
-4. **Zajistění vzájemného vyloučení:** Tímto způsobem je zajištěno, že dva filozofové nebo více filozofů nemohou současně vzít obě vidlice a zablokovat se v deadlocku.
+## Jeden filozof je levák
+Je to podobné řešení jako při hiearchii zdrojů. Všichni se snaží získat vždy prvně vidličku pro svou dominantní ruku. Pokud je však jeden z filozofů levák, dostane jeden filozof vždy obě vidličky a poté co dojí je položí. Od této chvíle se můžou najíst další filozofové.
