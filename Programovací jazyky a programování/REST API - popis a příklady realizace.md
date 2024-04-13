@@ -1,6 +1,10 @@
   
 REST API (Representational State Transfer Application Programming Interface) je architektonický styl pro komunikaci mezi klientem a serverem pomocí standardních HTTP metod (GET, POST, PUT, DELETE) a formátů dat (například JSON, XML). Tento styl klade důraz na jednoduchost, rozšiřitelnost a nezávislost na stavech mezi klientem a serverem.
 
+Ilustrace architektury REST API:
+
+![[REST API.png]]
+
 ## Popis:
 
 1. **Zdroje (Resources)**: Každý zdroj má jedinečný identifikátor (URI), kterým je možné k němu přistupovat. Například, pokud máme databázi uživatelů, každý uživatel by mohl mít svůj unikátní URI jako `/users/{id}`.
