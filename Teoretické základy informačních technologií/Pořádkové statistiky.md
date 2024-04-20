@@ -1,4 +1,4 @@
-- **$i$-tá počádková statistika** množiny s $n$ prvky je $i$. **nejmenším prvek dané množiny**. ($i$. prvek **po setřídění** posloupnosti)
+- **$i$-tá pořádková statistika** množiny s $n$ prvky je $i$. **nejmenším prvek dané množiny**. ($i$. prvek **po setřídění** posloupnosti)
 - Nejmenší prvek (**minimum**) je **$1.$** pořádková statistika
 - Největší prvek (**maximum**) je $n.$ pořádková statistika
 - "Prostřední prvek" (**medián**)

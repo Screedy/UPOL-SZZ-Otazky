@@ -1,5 +1,5 @@
 ### Algoritmus
-- **Algoritmus** je posloupnosti nstrukcí pro řešení problému
+- **Algoritmus** je posloupnosti instrukcí pro řešení problému
 	- $\Rightarrow$ vede k dalším otázkám
 	- **Instrukce** je jednoznačný srozumitelný pokyn
 	- **Řešení problému algoritmem** = vykonáváním instrukcí podle algoritmu se od vstupu $I$ po konečném počtu kroků dobereme k výstupu $O$
@@ -17,7 +17,7 @@
 
 ### Časová složitost algoritmu v nejhorším případě a v průměrném případě
 - Vyjadřuje závislost trvání výpočtu daného algoritmu na velikosti vstupních dat
-- **Funkce**. která **velikost vstupních dat přiřadí trvání výpočtu**
+- **Funkce**, která **velikosti vstupních dat přiřadí trvání výpočtu**
   $$
   \begin{matrix}
   n \\ \vdots \\ \text{velikost vstupu}
