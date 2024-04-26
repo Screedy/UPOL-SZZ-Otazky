@@ -13,10 +13,18 @@ doubled_list = list(doubled)  # [2, 4, 6, 8, 10]
 ## Filtrování (`filter()`)
 Funkce `filter()` vybírá prvky z dané sekvence, které splňují zadanou podmínku, definovanou funkcí.
 ```Python
-# Příklad: Vynásobení každého prvku seznamu číslem 2
-numbers = [1, 2, 3, 4, 5]
-doubled = map(lambda x: x * 2, numbers)
-doubled_list = list(doubled)  # [2, 4, 6, 8, 10]
+# Definice testovací funkce
+def is_odd(num):
+    return num % 2 != 0
+
+# Seznam čísel
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Použití filter() k vyfiltrování lichých čísel
+filtered_numbers = filter(is_odd, numbers)
+
+# Konverze výsledku na seznam a výpis
+print(list(filtered_numbers)) # [1, 3, 5, 7, 9]
 ```
 
 ## Redukce (`reduce()`)
