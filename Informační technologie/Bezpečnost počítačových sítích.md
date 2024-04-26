@@ -19,7 +19,7 @@
 	- Tu lze využít pro filtrování a omezení přístupu.
 	- Problémy: 
 		- snadné podvržení
-		- útok na proces účení switche zasíláním podvržených linkových rámců
+		- útok na proces učení switche zasíláním podvržených linkových rámců
 		- přeplnění tabulky switche vymyšlenými MAC adresami
 
 ## Bezpečnost na úrovni síťové vrstvy

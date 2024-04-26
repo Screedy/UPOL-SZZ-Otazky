@@ -1,10 +1,10 @@
 ### Síťová vrstva TCP/IP architektury
 ![[MacBook-2024-03-24-000937@2x.png]]
 - Síťová vrstva je nezávislá na nižších vrstvách.
-- Úkolem této vrstvy je jedinečná identifikace uzlů v síti a zajištění komunikace mezi uzly které se nacházejí ve stejné lokální síti.
-- Síťová vrstva je tvožena několika protokoly, tím nejdůležitějším je IP (Internet Protocol)
+- Úkolem této vrstvy je jedinečná identifikace uzlů v síti a zajištění komunikace mezi uzly které se nenacházejí ve stejné lokální síti.
+- Síťová vrstva je tvořena několika protokoly, tím nejdůležitějším je IP (Internet Protocol)
 	- Umožňuje propojení více sítí a poskytuje nespolehlivý přenos dat
-	- Další protokoly: ICMP, IGMP, ARP
+	- Další protokoly: ICMP, IGMP, ARP (sporné zda patří do L3 nebo L2)
 
 ### IP paket (IPv4)
 - Na úrovni síťové vrstvy jsou data přenášena ve formě IP paketů

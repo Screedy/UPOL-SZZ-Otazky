@@ -22,7 +22,7 @@
 	- **Unicast** adresy - nejméně významný bit  prvního B na 0![[MacBook-2024-03-18-000916@2x.png]]
 	- **Multicast** adresy - nejméně významný bit prvního B na 1![[MacBook-2024-03-18-000917@2x.png]]
 	- **Broadcast** adresa - ff:ff:ff:ff:ff:ff![[MacBook-2024-03-18-000918@2x.png]]
-- Aby bylo možné co nejrychleji identifikovat MAC adresy, jsou bity jednotlivých bajtů posílýny v **opačném pořadí**
+- Aby bylo možné co nejrychleji identifikovat MAC adresy, jsou bity jednotlivých bajtů posílány v **opačném pořadí**
 
 ### Použití média
 - Běžně se v počítačových sítích používají různé topologie
