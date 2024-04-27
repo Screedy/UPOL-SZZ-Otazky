@@ -1,6 +1,6 @@
 Problém večeřících filozofů je klasický synchronizační problém, který ilustruje problém sdílených zdrojů a hrozbu deadlocku. Jedná se o myšlenkový experiment, který popisuje situaci, kdy několik filozofů sedí u kruhového stolu s talíři jídla mezi sebou a vidlicemi na stůl procházející přes každého filozofa. Filozof může buď jíst, nebo myslet. Chce-li jíst, musí uchopit obě vidlice, které leží po obou stranách něj. Problém spočívá v tom, aby filozofové mohli jíst bez zablokování (deadlocku) a současně minimalizovali zákmity (starvace).
 
-![[Filozofové.png]]
+![[Filozofové.png | 450]]
 ## Řešení za pomocí přidání číšníka
 
 Jednoduché řešení lze dosáhnout zavedením číšníka u stolu. Číšník určí, kdo si hůlky vezme, co v podstatě vyřeší problém rozhodování. Protože si uvědomuje, které hůlky jsou použity, je schopen rozhodnout a zabránit tak deadlocku. Protože na stole zůstala v případě 5 filozofů ještě jedna hůlka, je zřejmé, že následovat v jezení bude ten filozof, který se stal jejím dočasným majitelem. Tomu pak číšník přisoudil hůlku, kterou zrovna obsluhuje vedle sedící filozof.
@@ -13,7 +13,7 @@ Toto řešení i navzdory vyhýbání se deadlokům není příliš praktické, 
 
 ## Řešení Chandel-Misra
 
-V roce 1984 K. Mani Chandel a J. Misra navrhli jiné řešení problému obědvajících filozofů, aby povolili libovolnému počtu programů (číslovaných P1, ..., Pn) soutěžit o libovolný počet zdrojů (číslovaných R1, ..., Rm). Na rozdíl od Dijkstrova řešení tato označení mohou být libovolná. Uvědomme si, že toto není skutečný problém obědvajících filozofů, protože _vyžaduje_ jejich vzájemnou komunikaci.
+V roce 1984 K. Mani Chandel a J. Misra navrhli jiné řešení problému obědvajících filozofů, aby povolili libovolnému počtu programů (číslovaných $P_{1}$, ..., $P_{n}$) soutěžit o libovolný počet zdrojů (číslovaných $R_{1}$, ..., $R_{m}$). Na rozdíl od Dijkstrova řešení tato označení mohou být libovolná. Uvědomme si, že toto není skutečný problém obědvajících filozofů, protože _vyžaduje_ jejich vzájemnou komunikaci.
 
 1. Pro každý pár filozofů válčících o zdroj vytvoří hůlku a dají ji filozofovi s nižším ID. Každá hůlka může být buď špinavá, nebo čistá. Na začátku je každá hůlka špinavá.
 2. V případě, že chce filozof použít množinu zdrojů, musí dostat hůlky od svých soupeřících sousedů. Pro všechny takové hůlky zašle žádanku.

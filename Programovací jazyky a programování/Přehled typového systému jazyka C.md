@@ -90,7 +90,7 @@ int main() {
     return 0;
 }
 ```
-## Výčty (enum):
+## Výčty (`enum`):
 
 - `enum`: Definuje soubor pojmenovaných celočíselných konstant, které mohou být použity v kódu pro zvýšení čitelnosti.
 
