@@ -1,29 +1,25 @@
-Node.js je open-source, cross-platform JavaScript runtime environment, který umožňuje vývojářům psát serverovou stranu aplikací v JavaScriptu. Zde jsou některé z jeho hlavních charakteristik a použití:
+Node.js je open-source, cross-platform JavaScript runtime environment, který umožňuje vývojářům psát serverovou stranu aplikací v JavaScriptu.
 
-### Charakteristiky:
+## Charakteristiky:
+1. **Asynchronní a událostmi řízené programování:** 
+	- Node.js je navržen tak, aby byl **efektivní pro I/O**-vysoce **náročné aplikace**. 
+	- Jeho asynchronní model **umožňuje obsluhovat mnoho požadavků současně**, což je důležité pro webové aplikace s vysokou odezvou.
+2. **JavaScript na serveru:** 
+	- Node.js umožňuje vývojářům psát serverovou stranu aplikací v JavaScriptu. 
+	- To usnadňuje synchronizaci kódu mezi klientem a serverem.
+3. **Modulární architektura:** 
+	- Node.js podporuje moduly, což umožňuje vývojářům snadno rozšiřovat a znovupoužívat kód pomocí balíčků dostupných v Node.js balíčkovacím manažeru npm (Node Package Manager).
+4. **Výkon:** 
+	- Díky použití enginu V8 od společnosti Google je Node.js známý pro svůj vysoký výkon a rychlost.
 
-1. **Asynchronní a událostmi řízené programování:** Node.js je navržen tak, aby byl efektivní pro I/O-vysoce náročné aplikace. Jeho asynchronní model umožňuje obsluhovat mnoho požadavků současně, což je důležité pro webové aplikace s vysokou odezvou.
-
-2. **JavaScript na serveru:** Node.js umožňuje vývojářům psát serverovou stranu aplikací v JavaScriptu, což usnadňuje synchronizaci kódu mezi klientem a serverem a umožňuje vývojářům pracovat s plným zásobníkem technologií.
-
-3. **Modulární architektura:** Node.js podporuje moduly, což umožňuje vývojářům snadno rozšiřovat a znovupoužívat kód pomocí balíčků dostupných v Node.js balíčkovacím manažeru npm (Node Package Manager).
-
-4. **Výkon:** Díky použití enginu V8 od společnosti Google (stejně jako Google Chrome) je Node.js známý pro svůj vysoký výkon a rychlost.
-
-### Použití:
-
+## Použití:
 1. **Webové aplikace:** Node.js se často používá pro vytváření webových serverů a backendových aplikací, které mají asynchronní a vysoké požadavky na I/O.
-
 2. **API server:** Node.js je ideální pro vytváření API serverů, které poskytují rozhraní pro komunikaci mezi klientem a serverem.
-
 3. **Real-time aplikace:** Díky své schopnosti manipulovat s asynchronními událostmi je Node.js vhodný pro vytváření real-time aplikací, jako jsou chatovací aplikace, online hry a streamování dat.
-
 4. **Nástroje pro vývojáře:** Node.js lze také použít pro vytváření nástrojů pro vývojáře, jako jsou build systémy, testovací nástroje a další.
-
 5. **IoT (Internet of Things):** Node.js je vhodný pro vytváření aplikací pro IoT zařízení, protože umožňuje snadnou komunikaci s různými zařízeními pomocí protokolů jako MQTT nebo HTTP.
 
 Příklad kódu Node.js serveru:
-
 ```Node.js
 // Importování potřebných modulů
 const http = require('http');
