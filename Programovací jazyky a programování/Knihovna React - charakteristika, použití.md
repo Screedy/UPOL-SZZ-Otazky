@@ -1,19 +1,19 @@
-React je knihovna pro tvorbu uživatelských rozhraní vyvinutá společností Facebook. Jeho hlavním účelem je usnadnění vývoje webových aplikací, zejména těch, které vyžadují časté aktualizace dat a interakci s uživatelem. Zde je několik klíčových charakteristik Reactu:
+- React je knihovna pro tvorbu uživatelských rozhraní vyvinutá společností Facebook. 
+- Jeho hlavním účelem je **usnadnění vývoje webových aplikací**, zejména těch, které **vyžadují** časté **aktualizace dat** a **interakci s uživatelem**. 
 
+## Charakteristika
 1. **Komponenty**: React je založen na konceptu komponent, což jsou samostatné, znovupoužitelné části uživatelského rozhraní. Každá komponenta může mít vlastní stav a metody.
-
-3. **Virtuální DOM**: React používá virtuální DOM k optimalizaci výkonu. Namísto toho, aby přímo manipuloval s reálným DOM (Document Object Model), React pracuje s jeho virtuální reprezentací (Shadow DOM), což umožňuje efektivnější aktualizace a minimalizaci re-rendering.
-    
+2. **Virtuální DOM**: React používá virtuální DOM k optimalizaci výkonu. 
+	- Namísto toho, aby přímo manipuloval s reálným DOM (Document Object Model), React pracuje **s jeho virtuální reprezentací** (**Shadow DOM**), což umožňuje **efektivnější aktualizace** a minimalizaci re-rendering.
 3. **Jednosměrný tok dat**: Data v React aplikacích obvykle cirkulují jedním směrem - od nadřazených komponent k dceřiným komponentám. To zlepšuje předvídatelnost a spravovatelnost aplikace.
-
 4. **Declarative syntax**: Syntaxe Reactu je deklarativní, což znamená, že se zaměřuje na popis toho, jak by měl vypadat výsledný stav aplikace, namísto toho, jak ho dosáhnout.
-
 5. **Životní cyklus komponent**: Každá komponenta v Reactu prochází určitými fázemi životního cyklu, jako je inicializace, aktualizace a odstranění. Toto umožňuje programátorům připojit k těmto událostem vlastní logiku.
-
 6. **JSX**: JSX je syntaxe pro psaní HTML podobných struktur přímo v JavaScriptu. Tato kombinace HTML a JavaScriptu umožňuje vytvářet komponenty s přehlednějším kódem.
 
-
-Co se týče použití, React je často využíván pro vývoj moderních webových aplikací a jednostránkových aplikací (Single Page Applications - SPA). Je populární pro tvorbu uživatelsky přívětivých, interaktivních a rychlých webových rozhraní. Jeho ekosystém zahrnuje také mnoho doplňků a knihoven, které zjednodušují práci s ním, jako například React Router pro routování, Redux pro správu stavu aplikace nebo Styled Components pro stylování komponent pomocí CSS v JavaScriptu.
+## Použití
+- React je často využíván pro vývoj moderních webových aplikací a jednostránkových aplikací (Single Page Applications - SPA). 
+- Je populární pro tvorbu uživatelsky přívětivých, interaktivních a rychlých webových rozhraní. 
+- Jeho ekosystém zahrnuje také mnoho doplňků a knihoven, které zjednodušují práci s ním, jako například React Router pro routování, Redux pro správu stavu aplikace nebo Styled Components pro stylování komponent pomocí CSS v JavaScriptu.
 
 ## JSX vs nízkoúrovňový přístup
 
@@ -138,7 +138,6 @@ export default App;
 ```
 
 ## React Hooky
-
 - Doposud měli možnost mít stav pouze objektové komponenty. 
 - React hooks byly představeny v zatím poslední verzi knihovny React a umožňují vytvářet funkční komponenty s vnitřním stavem. 
 - Tímto objektové komponenty ztrácejí smysl (ve skutečnosti jsou v knihovně postupně utlačovány, jejich odstranění se ale zatím neplánuje).
