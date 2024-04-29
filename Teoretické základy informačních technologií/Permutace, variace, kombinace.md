@@ -38,3 +38,8 @@
 - Výběr, ve kterém nezáleží na pořadí prvků a ve kterém se prvky mohou opakovat, se nazývá kombinace s opakováním.
 - Jsou dány objekty $n$ různých typů. Objektů každého typu je <u>neomezeně mnoho</u> a jsou navzájem *nerozlišitelné*. **Kombinace $r$ (objektů) z $n$ (objektů) s opakováním** je **libovolný výběr $r$ objektů z daných objektů $n$ typů**, ve kterém <u>nezáleží na pořadí</u> vybíraných objektů. Počet takových kombinací značíme $\stackrel{\_\_}{C}(n,r)$.
 - Vzoreček: $\stackrel{\_\_}{C}(n,r) = \binom{n+r-1}{n-1}$.
+
+##### Navigace
+Předchozí:  [[Uspořádání, Hasseovy diagramy]]
+Následující: [[Pravděpodobnost, Laplaceova definice, pravděpodobnostní prostor, náhodná veličina, střední hodnota]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]
