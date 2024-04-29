@@ -28,6 +28,6 @@ Po naklonování repozitáře na váš počítač postupujte takto, abyste jej o
 ## Autoři
 Tento repozitář je výsledkem společné práce následujících autorů:
 - [Karolína Tobiášová](https://github.com/Kermy824)
-- [Petr Jurásek](https://github.com/Screedy?tab=following)
+- [Petr Jurásek](https://github.com/Screedy)
 - [František Jurek](https://github.com/Homesis)
 - [Daniel Štefák](https://github.com/Daniel-Programmer)
