@@ -24,8 +24,6 @@
 
 <iframe width="690" height="360" src="https://www.youtube.com/embed/_lHSawdgXpI?si=d6NouOUOCmePLEzT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
-
 ##### Navigace
 Předchozí:  [[Orientované a neorientované grafy, základní pojmy]]
 Následující: [[Minimální kostra grafu, Kruskalův algoritmus]]

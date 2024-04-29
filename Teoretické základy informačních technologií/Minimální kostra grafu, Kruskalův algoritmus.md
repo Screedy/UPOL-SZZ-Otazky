@@ -1,5 +1,5 @@
 ### Příklad
-- Máme za úkol propojit města $v_{1}, ..., v_{n}$ elektrickým vedením, a to tak, aby výstavba vedení byla co nejlevnější. Musíme tedy rozhodnout, mezi kterými městy máme natáhnout elektrické dráty tak, aby se elektřina mohla dostat z každého města do každého jiného města. Přitom víme, že mezi některými dvojicemi měst přímé propojení postavit nelze. Pokud města $v_{i}$ a $v_{j}$ propjit lze, známe náklady na výstavbu vedení mezi $v_{i}$ a $v_{j}$.
+- Máme za úkol propojit města $v_{1}, ..., v_{n}$ elektrickým vedením, a to tak, aby výstavba vedení byla co nejlevnější. Musíme tedy rozhodnout, mezi kterými městy máme natáhnout elektrické dráty tak, aby se elektřina mohla dostat z každého města do každého jiného města. Přitom víme, že mezi některými dvojicemi měst přímé propojení postavit nelze. Pokud města $v_{i}$ a $v_{j}$ propojit lze, známe náklady na výstavbu vedení mezi $v_{i}$ a $v_{j}$.
 
 - **Kostra neorientovaného grafu $G$** je jeho **podgraf $G'$**, který je stromem a obsahuje **všechny vrcholy** grafu G.
 - Je-li $w: E \rightarrow R^{+}$ hranové ohodnocení grafu $G = <V, E>$, nazývá se **kostra $G' = <V, E'>$ minimální kostra**, pokud má ze všech koster grafu $G$ nejmenší hodnotu $w(G')$, kde $w(G')= \sum_{\{u,v\} \in E'} w(\{u,v\})$
@@ -21,3 +21,10 @@
 	4. $E' = E_{i}$
 
 ![[MacBook-2024-03-07-000799@2x.png | 500]]
+
+<iframe width="690" height="360" src="https://www.youtube.com/embed/71UQH7Pr9kU?si=siVilj3MfpqRVJ2z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+##### Navigace
+Předchozí:  [[Hledání nejkratší cesty, Dijkstrův algoritmus]]
+Následující: [[Stromy, kořenové stromy, vztahy mezi výškou, počtem vrcholů, počtem listů]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]
