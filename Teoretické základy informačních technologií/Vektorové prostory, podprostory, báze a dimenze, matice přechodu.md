@@ -67,7 +67,20 @@ c) $\forall c \in T, \vec{u} \in W ; c \circ \vec{u}=c \vec{u}$.
 Poznámka: Znamená to, že prostor $\mathcal{W}$ je podprostorem prostoru $\mathcal{V}$, je-li $W$ neprázdnou podmnožinou množiny $\mathcal{V}$ a vzniknou-li operace sčítání vektorủ a vnější operace násobení vektorů skaláry z $T$ v prostoru $\mathcal{W}$ z odpovídajících operací ve $\mathcal{V}$ omezením se na množinu W.
 
 
+### Matice přechodu
 
+##### Definice
+Buď dán takový vektorový prostor dimenze $n$ a jeho dvě báze $\alpha$ a $\beta$. Matice přechodu od báze $\alpha$ a k bázi $\beta$ je taková matice $A$, že $(U)_\beta = A \cdot (U)_\alpha$
+
+- víme že $A = (id)_\beta, \alpha$
+- Matice přechodu od $\beta$ k $\alpha$ je matice $B$, pro kterou platí $A · B = B · A = E$  Tj. $B = (id)_{α,β} = A^{−1}$
+- Obecněji:  $ϕ : U → V$ a $ψ : V → W$ lineární zobrazení. Dále $α$ báze $U, β$ báze $V, γ$ báze $W$. Pak $$(ψ ◦ ϕ)γ,α = (ψ)γ,β · (ϕ)β,α$$ 
+
+
+##### Navigace
+Předchozí: [[Matice, operace s maticemi, hodnost, determinant]]
+Následující: [[Eukleidovské vektorové prostory, ortogonální a ortonormální báze, Schwarzova nerovnost, Schmidtova ortogonalizační metoda]]
+Celý okruh: [[Vektorové prostory, podprostory, báze a dimenze, matice přechodu]]
 
 
 
