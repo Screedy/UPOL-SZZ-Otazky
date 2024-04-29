@@ -77,6 +77,12 @@ Buď dán takový vektorový prostor dimenze $n$ a jeho dvě báze $\alpha$ a $\
 - Obecněji:  $ϕ : U → V$ a $ψ : V → W$ lineární zobrazení. Dále $α$ báze $U, β$ báze $V, γ$ báze $W$. Pak $$(ψ ◦ ϕ)γ,α = (ψ)γ,β · (ϕ)β,α$$ 
 
 
+##### Navigace
+Předchozí: [[Matice, operace s maticemi, hodnost, determinant]]
+Následující: [[Eukleidovské vektorové prostory, ortogonální a ortonormální báze, Schwarzova nerovnost, Schmidtova ortogonalizační metoda]]
+Celý okruh: [[Vektorové prostory, podprostory, báze a dimenze, matice přechodu]]
+
+
 
 
 ## Něco navíc - Podprostory:
