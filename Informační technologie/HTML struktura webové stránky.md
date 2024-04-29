@@ -83,3 +83,7 @@
 ```
 
 ### Element `nav`
+- určení hlavní navigace (ne všechny navigace musí být v tomto elementu)
+```HTML
+
+```
