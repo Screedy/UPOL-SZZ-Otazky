@@ -32,7 +32,7 @@
 	- **Pro každé $Y_{1}, Y_{2} \in \Pi$ platí: pokud $Y_{1} \cap Y_{2} \neq \varnothing$, pak $Y_{1} = Y_{2}$**
 		- Požadujeme, aby dvě různé třídy rozkladu $\Pi$ byly disjunktní
 	- $\cup \Pi = X$
-		- Sjednocení všech třád rozkladu $\Pi$ bylo rovnou množině $X$
+		- Sjednocení všech tříd rozkladu $\Pi$ bylo rovno množině $X$
 	se nazývá **rozhklad na množině $X$**. Množiny $Y \in \Pi$ nazýváme **třídy rozkladu $\Pi$**. Pro prvek $x \in X$ označíme $[x]_{\Pi}$ tu třídu rozkladu $\Pi$, která obsahuje $x$.
 
 - Na množině $X$ existují dva mezní roklady:
@@ -67,3 +67,8 @@
 
 - Platí, že každé přirození zobrazení $f_{E}$ je surjektivní
 - $f_{E}$ je i injektivní, právě když $[x]_{E} = \{x\}$ pro každé $x \in X$, což je právě když $E = id_{x}$
+
+##### Navigace
+Předchozí:  [[Binární relace na množině a jejich vlastnosti]]
+Následující: [[Uspořádání, Hasseovy diagramy]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]

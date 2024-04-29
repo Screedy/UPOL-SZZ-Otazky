@@ -22,7 +22,7 @@
 	- Na matici to poznáme, že je symetrická podle diagonály
 	- V orientovaném grafu se projevuje tak, že buď jsou mezi body dvě hrany, nebo žádná
 - **Antisymetrická**
-	- Pokud **pro každé $x,y \in X$ platí  $(<x,y> \in R \wedge <y,x> \in R) \rightarrow (x + y)$**
+	- Pokud **pro každé $x,y \in X$ platí  $(<x,y> \in R \wedge <y,x> \in R) \rightarrow (x = y)$**
 	- Vyjadřuje, že pro každé dva různé prvky z $X$ neplatí zároveň $<x,y> \in R$ a $<y,x> \in R$
 	- Každá dvě různá pole v matice, které jsou souměrné podle diagonály, neobsahují dvě jedničky
 	- V orientovaném grafu mezi dvěma vrcholy vede jedna nebo žádná hrana
@@ -36,3 +36,8 @@
 	- Pokud **pro každé $x,y \in X$ platí $(<x,y> \in R) \rightarrow (<y,x> \notin R)$**
 - Úplná
 	- Pokud pro každé $x,y \in X$ platí $(x<y> \in R) \vee (<y,x> \in R)$
+
+##### Navigace
+Předchozí:  [[Funkce (zobrazení) a jejich vlastnosti]]
+Následující: [[Ekvivalence a rozklady]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]

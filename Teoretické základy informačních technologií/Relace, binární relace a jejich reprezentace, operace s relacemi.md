@@ -11,7 +11,7 @@
 	- **Množiny**, jejichž **prvky** do relace vstupují
 - Relace je matematickým protějškem pojmu **vztah**
 
-- Označuje se **$R = \{<x_{1}, ..., x_{n}\}$**
+- Označuje se **$R = \{<x_{1}, ..., x_{n}>\}$**
 - Číslu n říkáme **arita** relace R, R se nazývá **n-ární** (unární, binární, ternární, ...)
 - **$<x_{1}, ..., x_{n}> = <y_{1}, ..., y_{m}>$**, právě když **$n = m$** a $x_{1} = y_{1}, ..., x_{n} = y_{m}$
 
@@ -47,7 +47,7 @@
 		- Prvek $x$ patří do $A-B$, právě když patří do $A$, ale nepatří do $B$
 - **Inverze** (operace)
 	- Inverzní relací k relaci **$R \subseteq X \times Y$** je relace $R^{-1} \subseteq Y \times X$
-		- **$R^{-1} = \{<y, x> \times <x, y> \in R\}$**
+		- **$R^{-1} = \{<y, x> | <x, y> \in R\}$**
 	- "Pořadí v relaci se převrátí"
 - **Skládání** (operace)
 	- Je-li $R \subseteq X \times Y$ a $S \subseteq Y \times Z$, pak **složením relací** je relace **$R \circ S \subseteq X \times Z$**
@@ -60,7 +60,7 @@
 
 - **Reprezentace maticí (tabulkou)**
 	- Tabulky a matice představují **základní způsob reprezentace binárních relací**
-	- Máme relaci **$R \subseteq X \times Y$**, kde **$X = \{x_{1}, ..., x_{m}\}$** a **$Y = \{y_{1}, ..., y_{n}\}$**. Relaci R repzentujeme maticí/tabulkou, ve které se na místě odpovídající řádku $i$ a sloupci $j$ nachází hodnota, která určuje, **zda dvojici $<x_{i},y_{j}> \in R$**, nebo **$<x_{i},y_{j}> \notin R$
+	- Máme relaci **$R \subseteq X \times Y$**, kde **$X = \{x_{1}, ..., x_{m}\}$** a **$Y = \{y_{1}, ..., y_{n}\}$**. Relaci R repzentujeme maticí/tabulkou, ve které se na místě odpovídající řádku $i$ a sloupci $j$ nachází hodnota, která určuje, **zda dvojici $<x_{i},y_{j}> \in R$**, nebo $<x_{i},y_{j}> \notin R$
 	- $M_{R}$ se nazývá matice relace $R$
 	- **Výhodou je přehlednost, nevýhodou je paměťová náročnost**
 	- Pro relaci $R = \{<a,1>,<a,2>,<a,4>,<b,2>,<b,4>,<c,1>\}$
@@ -71,7 +71,7 @@
 		- Každý prvek $x \in X$ znázorníme v rovině jako **kroužek** s označením daného prvku
 		- Pokud $<x,y> \in R$, nakreslíme z **kroužku odpovídajícího $x$ do kroužku odpovídajícího $y$ orientovanou čáru s šipkou**.
 	- Pro relaci $R=\{<a,b>,<a,d>,<b,d>,<c,a>\}$
-	  ![[MacBook-2024-02-29-000763@2x.png | 400]]
+	  ![[MacBook-2024-02-29-000763@2x.png | 150]]
 
 - **Reprezentace seznamem seznamů**
 	- **Je vhodný pro uložení** binární relace $R$ na množině $X$
@@ -106,5 +106,10 @@
 		- K relaci přidám inverzní relaci
 	- $Tra(R)$ = tranzitivní uzávěr relace R
 		- $Tra(R)$ = $\cup^{\infty}_{n=1} R^{n}$
-		- Sjednocení nekonečně mnoho relací $R^{1} \cup ,... , \cup R^{n}$, pokud ale je R definována na konečné množině $X$, kde $\mid X \mid = n$, pak $Tra(R) = $\cup^{n}_{i=1} R^{i}$
+		- Sjednocení nekonečně mnoho relací $R^{1} \cup ,... , \cup R^{n}$, pokud ale je R definována na konečné množině $X$, kde $\mid X \mid = n$, pak $Tra(R) = \cup^{n}_{i=1} R^{i}$
 - ![[MacBook-2024-02-29-000765@2x.png | 500]]
+
+##### Navigace
+Předchozí:  [[Množiny, množinové operace, potenční množina, kartézský součin, číselné množiny, spočetné a nespočetné množiny]]
+Následující: [[Funkce (zobrazení) a jejich vlastnosti]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]

@@ -41,7 +41,7 @@
 - Výrazy obsahující *proměnné*, ze kterých se po dosazení hodnot za proměnné stanou výroky, nazýváme **výrokové formy**
 
 - **Výrokové formy** bývají zvykem **označovat písmenem, za kterým jsou v závorce uvedeny všechny proměnné, které forma obsahuje**
-	- *Číslo x je větší nebo rovno 3 = **V(x)***
+	- Číslo x je větší nebo rovno 3 = **V(x)**
 	- *$x+y \geq z=U(x,y,z)$*
 
 - **Kvantifikátory** jsou **jazykové výrazy, kterými z výrokových forem vznikají výroky**
@@ -78,7 +78,7 @@
 
 - Formule daného jazyka výrokové logiky je definovaná následovně:
 	- **každý výrokový symbol je formule** (tzv. atomické)
-	- jsou-li φ a 𝜓 formule, jsou i formule (tzv. složené) i výrazy:
+	- jsou-li φ (phi) a 𝜓 (psi) formule, jsou i formule (tzv. složené) i výrazy:
 		- ㄱφ
 		- (φ ∧ 𝜓)
 		- (φ ∨ 𝜓)
