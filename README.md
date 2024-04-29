@@ -30,3 +30,4 @@ Tento repozitář je výsledkem společné práce následujících autorů:
 - [Karolína Tobiášová](https://github.com/Kermy824)
 - [Petr Jurásek](https://github.com/Screedy?tab=following)
 - [František Jurek](https://github.com/Homesis)
+- [Daniel Štefák](https://github.com/Daniel-Programmer)
