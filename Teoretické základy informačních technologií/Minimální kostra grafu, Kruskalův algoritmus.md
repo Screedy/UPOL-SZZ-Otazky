@@ -22,7 +22,7 @@
 
 ![[MacBook-2024-03-07-000799@2x.png | 500]]
 
-<iframe width="690" height="360" src="https://www.youtube.com/embed/71UQH7Pr9kU?si=siVilj3MfpqRVJ2z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="690" height="385" src="https://www.youtube.com/embed/71UQH7Pr9kU?si=siVilj3MfpqRVJ2z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ##### Navigace
 Předchozí:  [[Hledání nejkratší cesty, Dijkstrův algoritmus]]

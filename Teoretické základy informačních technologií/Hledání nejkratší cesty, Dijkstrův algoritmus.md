@@ -22,7 +22,7 @@
 	4. Pro všechny $v \in N, u \in A$ takové, že $\{v,u\} \in E$ jestliže $d(v) + w(\{v,u\}) < d(u),$ pak $d(u)=d(v)+w(\{v,u\});$ pokračuj krokem $2.$
 
 
-<iframe width="690" height="360" src="https://www.youtube.com/embed/_lHSawdgXpI?si=d6NouOUOCmePLEzT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="690" height="385" src="https://www.youtube.com/embed/_lHSawdgXpI?si=d6NouOUOCmePLEzT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ##### Navigace
 Předchozí:  [[Orientované a neorientované grafy, základní pojmy]]
