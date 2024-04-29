@@ -148,3 +148,8 @@ proc tree-delete(T,z)
     y.left = z.left
     y.left.p = y
 ```
+
+##### Navigace
+Předchozí:  [[Vyhledávání v lineárních datových strukturách]]
+Následující: [[AVL stromy, operace a jejich složitost]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]
