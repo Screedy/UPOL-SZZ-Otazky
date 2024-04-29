@@ -54,8 +54,8 @@ Není v okruhu
 - Nechť $<X, \leq >$ je uspořádaná množina. Prvek $x \in X$ se nazývá:
 	- **minimální**, jestliže pro každý $y \in X$ platí: pokud $y \leq x$, pak $x = y$
 	- **nejmenší**, jestliže $x \leq y$ pro každý $y \in X$ (je pouze jeden)
-	- **maximální**, jestliže pro každý $y \in X$ platí: pokud $y \leq x$, pak $x = y$
-	- **největší**, jestliže $x \leq y$ pro každý $y \in X$ (je pouze jeden)
+	- **maximální**, jestliže pro každý $y \in X$ platí: pokud $x \leq y$, pak $x = y$
+	- **největší**, jestliže $y \leq x$ pro každý $y \in X$ (je pouze jeden)
 
 - Nechť $<X, \leq>$ je uspořádaná množina. Pak platí
 	- V $<X, \leq >$ existuje nejvýše **jeden největší** a **jeden nejmenší** prvek
@@ -83,3 +83,8 @@ Není v okruhu
 	- Je-li $<X, \leq>$ průsekový i spojový polosvaz, pak $<X, \leq>$ nazveme **svaz**
 - **Svaz** = pro každé dva prvky existuje *supremum* i *infimum*
 - *Každý konečný svaz má největší a nejmenší prvek*
+
+##### Navigace
+Předchozí:  [[Ekvivalence a rozklady]]
+Následující: [[Permutace, variace, kombinace]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]
