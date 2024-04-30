@@ -29,48 +29,67 @@
 - Typ tabulky D se nazývá **záhlaví tabulky** a $m$-tice řádků tabulky D jejím **tělem**.
  
 - Například uvažujme tabulku $D_{1}$ se záhlavím `<title text, year integer>` a tělem `<<¨The Avengers¨, 1998>, <¨The Avengers¨, 2012>, <¨The Matrix¨, 1999>>`.
-- Tuto tabulku můžeme přirozeně zapsat následující tabulkou:![[MacBook-2024-04-22-001062@2x.png]]
-- Pokud tabulka nemá v těle žádný řádek, říkáme, že je prázdná:![[MacBook-2024-04-22-001063@2x.png | 300]]
+- Tuto tabulku můžeme přirozeně zapsat následující tabulkou:
+
+| title text   | year integer |
+| ------------ | ------------ |
+| The Avengers | 1998         |
+| The Avengers | 2012         |
+| The Matrix   | 1999         |
+
+- Pokud tabulka nemá v těle žádný řádek, říkáme, že je prázdná:
+
+| title | year |
+| ----- | ---- |
 
 ## Vztah k relacím
-- Tabulka nemusí mít unikátní jména sloupců. Například:![[MacBook-2024-04-22-001064@2x.png]]
-- Ale tabulka, která má jedinečné názvy sloupců, neobsahuje `null` hodnoty a duplicitní řádky, nazýváme **relací**. 
-- Tabulka, která je relací:![[MacBook-2024-04-22-001065@2x.png]]
-- Pokud je tabulka relací, můžeme k ní uvažovat klasickou relaci známou z diskrétní matematiky. Předchozí tabulka určuje relaci `{⟨‘The Avengers’,1998,89⟩,⟨‘The Avengers’,2012,143⟩,⟨‘The Matrix’,1999,136⟩}`
-- Pokud chápeme tabulku jako relaci, nespoléháme se na pořadí řádků v tabulce. Tělo tabulky, která je relací, může být podobně jako klasická množina určeno charakteristickou vlastností.
-- Pokud má být hodnota tabulky relace, měli bychom zformulovat její charakteristickou vlastnost. V případě základní tabulky v posledním obrázku by to byla vlastnost: "Vlastním film `title`, vytvořený roku `year`, který má délku `length` minut.
+- Tabulka nemusí mít unikátní jména sloupců. Například:
 
-## Příkazy (jen pro připomenutí)
+| title        | num  | num |
+| ------------ | ---- | --- |
+| The Avengers | 1998 | 89  |
+| The Avengers | 2012 | 143 |
+| The Matrix   | 1999 | 136 |
+
+- Ale tabulka, která má jedinečné názvy sloupců, neobsahuje `null` hodnoty a duplicitní řádky, nazýváme **relací**. 
+- Tabulka, která je relací:
+
+| title        | year | length |
+| ------------ | ---- | ------ |
+| The Avengers | 1998 | 89     |
+| The Avengers | 2012 | 143    |
+| The Matrix   | 1999 | 136    |
+
+- Pokud je tabulka relací, můžeme k ní uvažovat **klasickou relaci** známou z **diskrétní matematiky.** Předchozí tabulka určuje relaci `{⟨‘The Avengers’,1998,89⟩,⟨‘The Avengers’,2012,143⟩,⟨‘The Matrix’,1999,136⟩}`
+- Pokud chápeme tabulku jako relaci, nespoléháme se na pořadí řádků v tabulce. Tělo tabulky, která je relací, může být podobně jako klasická množina **určeno charakteristickou vlastností**.
+- Pokud má být hodnota tabulky relace, měli bychom zformulovat její charakteristickou vlastnost. V případě základní tabulky v posledním obrázku by to byla vlastnost: *"Vlastním film `title`, vytvořený roku `year`, který má délku `length` minut".*
+
+## Příkazy
 ### Vytvoření prázdné tabulky:
-```mysql
+```sql
 CREATE TABLE movies (
 	title text,
 	year integer
 	length integer
 );
 ```
-
 ### Zobrazení hodnoty základní tabulky
-```mysql
+```sql
 SELECT * FROM movies;
-```
-Obdržíme:
-```mysql
+
  title | year | length
 -------+------+--------
 (0 rows)
 ```
-
 ## Přidání řádků do tabulky
-```mysql
+```sql
 INSERT INTO movies VALUES
        ( ’The Matrix’, 1999, 136 ),
        ( ’The Avengers’, 2012, 143 ),
        ( ’The Avengers’, 1998, 89 );
-```
-Po vypsání tabulky:
-```mysql
-# SELECT * FROM movies;
+
+-- Vypsání tabulky:
+SELECT * FROM movies;
     title     | year | length
 --------------+------+--------
  The Matrix   | 1999 |    136
@@ -80,11 +99,15 @@ Po vypsání tabulky:
 ```
 
 Přídání jednoho řádku:
-```mysql
+```sql
 INSERT INTO movies VALUES (’A Space Odyssey’, 1968, 149);
 ```
-
 ### Vymazání tabulky
-```mysql
+```sql
 DROP TABLE movies;
 ```
+
+##### Navigace
+Předchozí:  [[Správa diskového prostoru - oddíly, souborové systémy, zajištění konzistence dat]]
+Následující: [[Výraz SELECT v SQL]]
+Celý okruh: [[2. Informační technologie]]
