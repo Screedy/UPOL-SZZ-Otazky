@@ -7,7 +7,7 @@
 	- Pojem **algoritmus** je totiž podobně jako pojem množina **základním pojmem**, který **není** definován pomocí jednodušších pojmů, je jen objasňován svými vlastnostmi na konkrétních příkladech
 
 ### Problém
-- Definice **problém**
+- Definice **problém**:
 	- Problém **je určen trojicí $(IN, OUT, p)$**, kde **$IN$** je množina (přípustných) vstupů, **$OUT$** je množina výstupů a **$p:IN \rightarrow OUT$** je funkce přiřazující každému vstupu odpovídající výstup
 
 	- Příklad problému:
@@ -35,3 +35,8 @@
 		- $T(n)$ znamená *délku výpočtu algoritmu $A$ nad vstupem velikosti $n$* <u>v průměrném případě</u>;
 		- $T(n) = \frac{t_{A}(l_{1})+...+t_{A}(l_{m})}{m}$
 		- $t_{A}(l)$ je počet elementárních výpočetních kroků vykonaných od zahájení do skončení výpočtu algortmem $A$ pro vstup $l$
+
+##### Navigace
+Předchozí:  [[Geometrická interpretace určitého integrálu]]
+Následující: [[O-notace a růst funkcí, definice, vlastnosti, příklady použití]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]

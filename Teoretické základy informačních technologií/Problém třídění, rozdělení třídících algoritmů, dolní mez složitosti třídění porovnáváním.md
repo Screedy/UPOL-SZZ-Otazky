@@ -42,3 +42,7 @@
 - Věta: *Časová složitost v nejhorším případě libovolného algoritmu třídění porovnáváním je $\Omega (n \lg n)$*.
 - Důkaz:![[MacBook-2024-03-11-000823@2x.png]]
 
+##### Navigace
+Předchozí:  [[Lineární datové struktury - seznam, zásobník, fronta]]
+Následující: [[Základní metody třídění - insert sort, select sort, bubble sort]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]

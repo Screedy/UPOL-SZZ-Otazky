@@ -1,9 +1,11 @@
 #### Trochu navíc ale mohlo by pomoct:
 - Pravidlo součtu a součinu:
-	- **Pravidlo součtu**: Lze- li úkol $A$ provést $m$ způsoby a úkol $B$ n způsoby, přičemž žádný z $m$ způsobů provedení úkolu $A$ není totožný s žádným z $n$ způsobů provedení úkolu $B$, pak provést úkol $A$ nebo úkol $B$ lze **$m + n$** způsoby
+	- **Pravidlo součtu**: Lze-li úkol $A$ provést $m$ způsoby a úkol $B$ n způsoby, přičemž žádný z $m$ způsobů provedení úkolu $A$ není totožný s žádným z $n$ způsobů provedení úkolu $B$, pak provést úkol $A$ nebo úkol $B$ lze **$m + n$** způsoby
 	- **Pravidlo součinu**: Lze-li úkol $C$ rozložit na po sobě následující úkoly $A$ a $B$ a lze-li úkol $A$ provést $m$ způsoby a úkol $B$ $n$ způsoby, pak úkol $C$ lze provést $m*n$ způsoby
 - **Binomická věta**
 	- $(a+b)^{n} = \sum^{n}_{k=0} \binom{n}{k} a^{n-k}b^{k}$
+	- $\binom{n}{k} = \frac{n!}{k!(k-n)!}$
+	- Pro $n=3$: $$(a+b)^{3}= \binom{3}{0}a^{3}b^{0}+ \binom{3}{1}a^{2}b^{1}+ \binom{3}{2}a^{1}b^{2}+ \binom{3}{3}a^{0}b^{3}$$
 
 ### Permutace
 - **Permutace $n$ (nazvájem různých) objektů** je libovlné seřazení těchto objektů, tj. seřazení od prvního k $n$-tému. Počet permutací $n$ objektů značíme $P(n)$.
@@ -13,7 +15,7 @@
 
 #### Permutace s opakováním
 - Seřazujeme-li objekty, z nichž některé jsou stejné
-- Je dáno **$n$ objektů rozdělených do $r$ skupin**, které mají po řadě **$n_{1}, ..., n_{r}$ objektů**. Objekty v každé ze skupin jsou **navzájem nerozlišitelné.** Každé seřazení těchto $n$ objektů e nazývá **permutace s opakováním** (daným parametry ($n_{1}, ..., n_{r}$)). Počet takových permutací **značíme $P(n_{1}, ..., n_{r})$**.
+- Je dáno **$n$ objektů rozdělených do $r$ skupin**, které mají po řadě **$n_{1}, ..., n_{r}$ objektů**. Objekty v každé ze skupin jsou **navzájem nerozlišitelné.** Každé seřazení těchto $n$ objektů se nazývá **permutace s opakováním** (daným parametry ($n_{1}, ..., n_{r}$)). Počet takových permutací **značíme $P(n_{1}, ..., n_{r})$**.
 - Vzoreček: **Pro $n_{1} + ... + n_{r} = n$ je $P(n_{1}, ..., n_{r}) = \frac{n!}{n_{1} * ... * n_{r}}$**
 
 ### Variace
@@ -31,7 +33,7 @@
 ### Kombinace
 - Je dáno $n$ (*navzájem různých*) objektů a číslo $r \leq n$. **Kombinace $r$ (objektů) z $n$ (objektů)** je **libovolný výběr $r$ objektů z daných $n$ objektů**, ve kterém <u>nezáleží na pořadí</u> vybraných objektů. Počet takových kombinací značíme $C(n,r)$
 - Vzoreček: $C(n,r) = \binom{n}{r} = \frac{n!}{(n-r)!*r!}$
-- Důkaz vzorečku: Víme, že $V(n,r) = \frac{n!}{(n-r)!}$. Uvědomme si, že každé kombinaci $r$ z $n$ odpovídá tolik variací $r$ z $n$, kolika způsoby lze uspořádat $r$ vybraných objektů *(u kobinace záleží jen na vybraných objektech, ne na. jejich uspořádání, kdežto u variace záleží i na jejich uspořádání)*. Existuje $r!$ způsobů, jak uspořádat $r$ objektů. Je tedy **počet kombinací $r z $n$ krát počet uspořádání $r$ objektů = počet variací $r$ z $n$** $\binom{n}{r} * r! = V(n,r)$.
+- Důkaz vzorečku: Víme, že $V(n,r) = \frac{n!}{(n-r)!}$. Uvědomme si, že každé kombinaci $r$ z $n$ odpovídá tolik variací $r$ z $n$, kolika způsoby lze uspořádat $r$ vybraných objektů *(u kombinace záleží jen na vybraných objektech, ne na. jejich uspořádání, kdežto u variace záleží i na jejich uspořádání)*. Existuje $r!$ způsobů, jak uspořádat $r$ objektů. Je tedy **počet kombinací $r$ z $n$ krát počet uspořádání $r$ objektů = počet variací $r$ z $n$** $\binom{n}{r} * r! = V(n,r)$.
 - Odtud $\binom{n}{r} = \frac{V(n,r)}{r!} = \frac{n!}{(n-r)!*r!}$.
 
 #### Kombinace s opakováním

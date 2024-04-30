@@ -3,14 +3,18 @@
 - Graf je **souvislý**, pokud mezi libovolnou dvojicí různých uzlů **existuje cesta**
 - Graf **obsahuje kružnici**, pokud existuje **tah**, ve kterém je první a poslední vrchol totožný a jinak jsou všechny vrcholy vzájemně různé
 
-- **Kořenový strom** = jeden uzel je označen jako kořen $\rightarrow$ tím ve stromu získáme směr *(dolů)* ![](https://lh7-us.googleusercontent.com/docsz/AD_4nXe2QKxWSfdAG82iQL59uh34Vh7jU6cRD-ohU97Gc0FEAQuRfmikIxmLjbNXLTnz5WSgL6oChXlcr6XjmvCWyjIGOO-sYURX0Lo15Fl75zY04VG1AYK-WzsaNfmZl1BOfCGtQnQJGdvdbN5gukBjeFs?key=1oMgW2MUuii1DDrztmo2_Q)
-
+- **Kořenový strom** = jeden uzel je označen jako kořen $\rightarrow$ tím ve stromu získáme směr *(dolů)*
+- **Věta**: V *binárním stromu výšky $h$ obsahujícím $n$ vrcholů platí* 
+$$h+1\leq n \leq 2^{h+1}-1,$$
+$$
+\lfloor ln(n) \rfloor \leq h \leq n-1.
+$$
 ### Binární vyhledávací stromy a operace s nimi
 - **Binární (kořenový) strom**, kde v uzlech jsou uloženy další údaje, zejména však **klíč v položce key**
 - Udržujeme **explicitní pointery na potomky a rodiče**: *left* na *levého potomka* (levý podstrom), *right* na *pravého potomka* (pravý podstrom), *p* na rodiče
-- Pro každý vrchol $x$ v tomto stromu platí: Pokud je vrchol $y$ v levém podstromu vrcholu $x$, pak $y.\text{key} < x.\text{key}$. Pokud je $y$ v pravém podstromu vrcholu $x$, pak $y.\text{key} > x.\text{key}$
+- Pro každý vrchol $x$ v tomto stromu platí: Pokud je vrchol $y$ v levém podstromu vrcholu $x$, pak `y.key < x.key`. Pokud je $y$ v pravém podstromu vrcholu $x$, pak `y.key > x.key`
 - Implementace:
-```
+```C
 struct node {
   left, //levy potomek
   right, //pravy potomek
@@ -18,7 +22,8 @@ struct node {
   key //klic
   …
 }
-
+```
+```C
 struct tree {
   root, // koren
   …
@@ -27,32 +32,32 @@ struct tree {
 
 ### Operace s binárními stromy
 #### Průchod stromem
-```
+```C
 //navštíví všechny vrcholy podstromu s kořenem x
 proc in-order-walk(x) 
   if x != nil
     in-order-walk(x.left)
     process(x)
-    in-order-walk(x.right)**
+    in-order-walk(x.right)
 ```
 - $\Theta (n)$ (analogie průchodu do hloubky)
 
 #### Vyhledávání
 - Porovnávám klíč s klíčem vrcholu, **podle výsledku** pokračuji do levého nebo do pravého podstromu
-```
+```C
 // rekurzivní verze
-proc tree-search(x,k)                O(h),
-  if x == nil or k == x.key          nejhůře O(n), nejlépe O(lg n)
+proc tree-search(x,k)                //O(h),
+  if x == nil or k == x.key          //nejhůře O(n), nejlépe O(lg n)
     return x
   if k < x.key
     return tree-search(x.left, k)
   else
     return tree-search(x.right, k)
 ```
-```
+```C
 // iterativní verze
-proc tree-search-iterative(x,k)       O(h)
-  while x != nil and k != x.key       nejhůře O(n), nejlépe O(lg n)
+proc tree-search-iterative(x,k)       //O(h)
+  while x != nil and k != x.key       //nejhůře O(n), nejlépe O(lg n)
     if k < x.key
       x = x.left
     else
@@ -61,15 +66,15 @@ proc tree-search-iterative(x,k)       O(h)
 ```
 
 #### Hledání minimum, maximum
-```
-proc tree-minimum(x)               O(h)
-  while x.left != nil nejhůře      O(n), nejépe O(lg n)
+```C
+proc tree-minimum(x)               //O(h)
+  while x.left != nil              //nejhůře O(n), nejlépe O(lg n)
     x = x.left
   return x
 ```
-```
-proc tree-maximum(x)               O(h)
-  while x.right != nil nejhůře     O(n), nejépe O(lg n)
+```C
+proc tree-maximum(x)               //O(h)
+  while x.right != nil             //nejhůře O(n), nejépe O(lg n)
     x = x.right
   return x
 ```
@@ -79,7 +84,7 @@ proc tree-maximum(x)               O(h)
 
 - **Pořádkový předchůdce je duální pojem** (otočíme znaménka porovnání), operace jeho nalezení a důkaz správnosti je analogický
 ![[MacBook-2024-03-12-000858@2x.png]]
-```
+```C
 proc tree-successor(x)
   // pripad 1
   if x.right != nil
@@ -97,7 +102,7 @@ proc tree-successor(x)
 - Idea: Hledáme jako při vyhledávání. Přidáme na místo, kde by bylo vyhledávání neúspěšné
 - Složitost: $O(h)$
 - Tvar a výška stromu závisí na pořadí, ve kterém je vkládáme
-```
+```C
 proc insert(T, z)
   y = nil
   x = T.root
@@ -122,7 +127,7 @@ proc insert(T, z)
 	- $z$ nemá potomky ($z$ je list) $\rightarrow \Theta (1)$
 	- $z$ má jednoho potomka $\rightarrow \Theta (1)$
 		- $z$ má dva potomky $\rightarrow \Theta (1) + \Theta (h)$
-```
+```C
 proc transplant(T, u, v)
   if u.p == nil
     T.root = v
@@ -132,7 +137,8 @@ proc transplant(T, u, v)
     u.p.right = v
   if v != nil
     v.p = u.p
-
+```
+```C
 proc tree-delete(T,z)
   if z.left == nil
     transplant(T, z, z.right)
@@ -148,3 +154,8 @@ proc tree-delete(T,z)
     y.left = z.left
     y.left.p = y
 ```
+
+##### Navigace
+Předchozí:  [[Vyhledávání v lineárních datových strukturách]]
+Následující: [[AVL stromy, operace a jejich složitost]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]

@@ -44,7 +44,7 @@
 	- **$\{u, v \} \in E_{1}$ právě když $\{h(u), h(v)\} \in E_{2}$**
 
 - Nechť **$G_{1} = <V_{1}, E_{1}>$ a $G_{2} = <V_{2}, E_{2}>$** jsou <u>neorientované</u> grafy. **Bijekce $h: V_{1} \rightarrow V_{2}$** se nazývá *izomorfismus* $G_{1}$ do $G_{2}$, pokud pro každé vrcholy $u, v \in V_{1}$ je
-	- **$<u, v > \in E_{1}$ právě když $<h(u), h(v)> \in E_{2}$
+	- **$<u, v > \in E_{1}$ právě když $<h(u), h(v)> \in E_{2}$**
 ![[MacBook-2024-03-05-000791@2x.png]]
 
 ### Podgrafy
@@ -60,10 +60,14 @@
 - Číslo $n$ se nazývá **délka sledu**
 
 - Sled $v_{0}, e_{0}, v_{1}, e_{1},  ..., v_{n}, e_{n}$ se nazývá:
-	- **uzavřený**, je-li $v_{0} = v_{n}
+	- **uzavřený**, je-li $v_{0} = v_{n}$
 	- **tah**, neopakuje-li se v něm žádná hrana
 	- **cesta**, neopakuje-li se v něm žádný vrchol
 	- **kružnice**, je-li tahem, $v_{0} = v_{n}$ a s výjimkou vrcholů $v_{0}$ a $v_{n}$ jsou každé dva vrcholy různé
 
 - **vzdálenost z vrcholu $u$ do vrcholu $v$** je **délka cesty z $u$ do $v$**, které má ze všech cest z $u$ do $v$ **délku nejmenší**
 
+##### Navigace
+Předchozí:  [[Inducke a rekurze, matematická indukce a její varianty]]
+Následující: [[Hledání nejkratší cesty, Dijkstrův algoritmus]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]
