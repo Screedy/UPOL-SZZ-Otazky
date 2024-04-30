@@ -1,14 +1,14 @@
 ### Hashovací tabulka
-- Zobecnění pole: Rozdíl je ve způsobu adresování. Místo množiny klíčů $\{ 0, 1, 2, ..., m-1\}$, které jsou vlastně indexy do pole, máme obecnou množinu klíčů $\cup$
-- Hlavní idea: Hašhovací funkce
-	- $h: U \rightarrow \{0, 1, ..., m-1\}$
-	  pro přepočet obecného klíče na index v tabulce.
+- Zobecnění pole: 
+	- Rozdíl je ve způsobu adresování. 
+	- Místo množiny klíčů $\{ 0, 1, 2, ..., m-1\}$, které jsou vlastně indexy do pole, máme **obecnou množinu klíčů** $U$.
+- **Hlavní idea**: Hashovací funkce $$h: U \rightarrow \{0, 1, ..., m-1\}$$ pro přepočet obecného klíče na index v tabulce.
 
 #### Implementace
 ```C
 struct table
 	data:[]key //pole klíčů
-	hash-function //hašovací funkce**
+	hash-function //hashovací funkce**
 ```
 
 Kostra přístupu k místu, kde je v tabulce $T$ klíč $k$
@@ -16,13 +16,12 @@ Kostra přístupu k místu, kde je v tabulce $T$ klíč $k$
 - Přistoupíme k prvku: $T.\text{data}[i]$
 
 #### Kolize
-- Pro množinu klíčů $U$, velikost tabulky $m$ a hašovací funkci $h$ kolize nastane pokud: **existují klíče $k_{1}, k_{2} \in U,$ tak že $k_{1} \neq k_{2},$ ale $h(k_{1} = h(k_{2})$**
-- **Kolize určitě nastane,** pokud $\mid U \mid > m$: *to plyne z Dirichletova principu*
-- I když máme $\mid U \mid < m,$ může být pravděpodobnost, že dojde ke kolizi, vysoká (narozeninový paradox)
+- Pro množinu klíčů $U$, velikost tabulky $m$ a hashovací funkci $h$ kolize nastane pokud: **existují klíče $k_{1}, k_{2} \in U,$ tak že $k_{1} \neq k_{2},$ ale $h(k_{1}) = h(k_{2})$**.
+- **Kolize určitě nastane,** pokud $\mid U \mid > m$: to plyne z **Dirichletova principu**
+- I když máme $\mid U \mid < m,$ může být pravděpodobnost, že dojde ke kolizi, **vysoká** (narozeninový paradox)
 
 #### Řešení kolizí pomocí řetězení (chaining)
-- *Klíče*, které se zahašují na stejný index ukládáme **do seznamu**![[MacBook-2024-03-14-000878@2x.png]]
-
+- *Klíče*, které se zahashují na stejný index ukládáme **do seznamu**![[MacBook-2024-03-14-000878@2x.png]]
 #### Implementace
 ```C
 struct table
@@ -48,7 +47,8 @@ proc search(T,k)
 
 #### Složitost v nejhorším čase
 - Složitost `insert` a `delete` zůstávají **konstantní**.
-- Složitost `search` může **být v nejhorším případě lineární** (všechny klíče prvků v tabulce zobrazili pomocí $h$ na stejnou hodnotu, nebo se klíč v tabulce nenachází)
+- Složitost `search` může **být v nejhorším případě lineární** 
+	- všechny klíče prvků v tabulce zobrazili pomocí $h$ na **stejnou hodnotu**, nebo se klíč v **tabulce nenachází**
 
 #### Složitost `search` v průměrném případě
 ![[MacBook-2024-03-14-000879@2x.png]]
@@ -60,12 +60,13 @@ proc search(T,k)
 - Používáme **heuristiky**, jejichž cílem je, aby výsledek funkce závisel na všech částech klíče
 
 - Příklad závislosti na vzoru v datech:
-	- **Klíče jsou celá čísla, $m = 2, h(k) = k \text{ mod } 2$**
-		- Problém je, že výsledek závisí pouze na jednom bitu klíče.
+	- **Klíče jsou celá čísla, $k = 2, h(k) = k \text{ mod } 2$**
+		- Problém je, že výsledek závisí pouze na **jednom bitu** klíče.
 		- Aby funkce dobře fungovala, musíme předpokládat, že je stejně pravděpodobné, že klíč bude lichý jako že klíč bude sudý
 
 #### Obecný postup kosntrukce
-- **Klíč $k$** bereme jako *posloupnost číslic v nějaké číselné soustavě* (např. jako posloupnost bajtů = číslic v soustavě o základu $256$)
+- **Klíč $k$** bereme jako *posloupnost číslic v nějaké číselné soustavě* 
+	- např. jako posloupnost bajtů = číslic v soustavě o základu $256$
 - **Hashovací funkce má obvykle $2$ fáze:**
 	- **sekvenci čísel použijeme pro výpočet hodnoty,** která ovšem může být větší než $m-1$
 	- **hodnotu z předchozího bodu upravíme** tak, aby byla mezi $0$ a $m-1$
@@ -120,3 +121,8 @@ proc search(T,k)
 	- $h_{2}(k) = 1 + (k \text{ mod } m-1)$
 - Pro prvočíselné $m$ existuje $m^{2}$ průzkumných posloupností
 - Příklad pro $m = 5$:![[MacBook-2024-03-14-000882@2x.png]]
+
+##### Navigace
+Předchozí:  [[B stromy, operace a jejich složitost]]
+Následující: [[Základní grafové algoritmy - průchod do šířky, průchod do hloubky, topologické uspořádání]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]
