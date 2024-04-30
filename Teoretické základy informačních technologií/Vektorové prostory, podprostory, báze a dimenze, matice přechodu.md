@@ -80,7 +80,7 @@ Buď dán takový vektorový prostor dimenze $n$ a jeho dvě báze $\alpha$ a $\
 ##### Navigace
 Předchozí: [[Matice, operace s maticemi, hodnost, determinant]]
 Následující: [[Eukleidovské vektorové prostory, ortogonální a ortonormální báze, Schwarzova nerovnost, Schmidtova ortogonalizační metoda]]
-Celý okruh: [[Vektorové prostory, podprostory, báze a dimenze, matice přechodu]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]
 
 
 
