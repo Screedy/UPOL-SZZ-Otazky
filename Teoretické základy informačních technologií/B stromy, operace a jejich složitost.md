@@ -166,3 +166,7 @@ proc tree-insert-nonfull(x, k, d)
 	   ![[MacBook-2024-03-13-000875@2x.png]]
 	 3. Oba sourozenci $x$ mají `t-1` prvků. Vybereme si jednoho souseda $y$ a spojíme ho s uzlem $x$ a jedním klíčem z rodiče do nového uzlu s `2 * t - 1` klíči. Na následujícím obrázku je $y$ pravým sourozencem $x$ (opačná situace je symetrická). Po spojení uzlů pokračujeme novou iterací fáze 2, do které pošleme rodiče uzlu $x$. Z rodiče jsme totiž odebrali jeden klíč a jeho počet klíčů se tak mohl dostat pod `t - 1`![[MacBook-2024-03-13-000876@2x.png]]
 
+##### Navigace
+Předchozí:  [[AVL stromy, operace a jejich složitost]]
+Následující: [[Hashovací tabulky, metody řešení kolizí]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]
