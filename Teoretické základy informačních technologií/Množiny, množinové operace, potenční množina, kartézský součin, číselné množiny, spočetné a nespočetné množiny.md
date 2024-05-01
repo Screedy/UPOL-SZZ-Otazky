@@ -72,6 +72,7 @@
 2. Celá čísla - $\mathbb{Z}$
 3. Racionální čísla - $\mathbb{Q}$
 4. Reální čísla - $\mathbb{R}$
+![[MacBook-2024-05-01-001135@2x.png | 350]]
 
 ### Množiny konečné/nekonečné a spočetné/nespočetné
 - Množiny se dělí na:
