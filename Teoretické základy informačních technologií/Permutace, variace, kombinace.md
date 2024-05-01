@@ -8,7 +8,8 @@
 	- Pro $n=3$: $$(a+b)^{3}= \binom{3}{0}a^{3}b^{0}+ \binom{3}{1}a^{2}b^{1}+ \binom{3}{2}a^{1}b^{2}+ \binom{3}{3}a^{0}b^{3}$$
 
 ### Permutace
-- **Permutace $n$ (nazvájem různých) objektů** je libovlné seřazení těchto objektů, tj. seřazení od prvního k $n$-tému. Počet permutací $n$ objektů značíme $P(n)$.
+- **Permutace $n$ (nazvájem různých) objektů** je libovlné seřazení těchto objektů, tj. seřazení od prvního k $n$-tému. 
+- Počet permutací $n$ objektů značíme $P(n)$.
 - Vzoreček: $P(n) = n!$
 - Důkaz vzorečku:
 	- Jedno, ale libovolné, seřazení dostaneme tak, že vybereme $1.$ prvek *(lze provést $n$ způsoby)*, poté vybereme $2.$ prvek *(to lze provést $n-1$ způsoby)*, poté vybereme $3.$ prvek *(to lze $n-2$ způsoby)*, ..., nakonec vybereme $n$-tý prvek *(to lze provést jedním způsobem)*. Podle pravidla součinu lze takový výběr provést **$n * (n-1) * (n-2) * ... * 1 = n!$** způsoby. Tedy **$P(n) = n!$**.
@@ -19,7 +20,8 @@
 - Vzoreček: **Pro $n_{1} + ... + n_{r} = n$ je $P(n_{1}, ..., n_{r}) = \frac{n!}{n_{1} * ... * n_{r}}$**
 
 ### Variace
-- Je dáno $n$ (navzájem různých) objektů a číslo $r \leq n$. **Variace $r$ (objektů) z $n$ (objektů)** je **libovolný výběr $r$ objektů z daných $n$ objektů**, ve kterém <u>záleží na pořadí</u> vybíraných objektů. Počet takových variací značíme $V(n,r)$.
+- Je dáno $n$ (navzájem různých) objektů a číslo $r \leq n$. **Variace $r$ (objektů) z $n$ (objektů)** je **libovolný výběr $r$ objektů z daných $n$ objektů**, ve kterém <u>záleží na pořadí</u> vybíraných objektů. 
+- Počet takových variací značíme $V(n,r)$.
 - Vzoreček: **$V(n,r) = n * (n-1) * ... * (n-r+1)$**.
 - Důkaz vzorečku:
 	- Každá variace je dána tím, jaké objekty jsou na $1., 2., ..., r$-tém místě. Objekt na $1.$ místě lze zvolit $n$ způsoby *(vybíráme z n objektů)*, objekt na $2.$ místě pak $n-1$ způsoby *(vybíráme z $n-1$ objektů, protože jeden objekt je už na $1.$ místě)*, ..., objekt na $r$-tém místě lze vybrat $n-r+1$ způsoby *(tolik objektů kolik zbývá ještě k výběru)*. Podle pravidla součinu je tedy celkový počet takto provedených výběrů, tj. **počet všech variací, $n * (n-1) * ... * (n-r+1)$**.
@@ -33,7 +35,7 @@
 ### Kombinace
 - Je dáno $n$ (*navzájem různých*) objektů a číslo $r \leq n$. **Kombinace $r$ (objektů) z $n$ (objektů)** je **libovolný výběr $r$ objektů z daných $n$ objektů**, ve kterém <u>nezáleží na pořadí</u> vybraných objektů. Počet takových kombinací značíme $C(n,r)$
 - Vzoreček: $C(n,r) = \binom{n}{r} = \frac{n!}{(n-r)!*r!}$
-- Důkaz vzorečku: Víme, že $V(n,r) = \frac{n!}{(n-r)!}$. Uvědomme si, že každé kombinaci $r$ z $n$ odpovídá tolik variací $r$ z $n$, kolika způsoby lze uspořádat $r$ vybraných objektů *(u kombinace záleží jen na vybraných objektech, ne na. jejich uspořádání, kdežto u variace záleží i na jejich uspořádání)*. Existuje $r!$ způsobů, jak uspořádat $r$ objektů. Je tedy **počet kombinací $r$ z $n$ krát počet uspořádání $r$ objektů = počet variací $r$ z $n$** $\binom{n}{r} * r! = V(n,r)$.
+- Důkaz vzorečku: Víme, že $V(n,r) = \frac{n!}{(n-r)!}$. Uvědomme si, že každé kombinaci $r$ z $n$ odpovídá tolik variací $r$ z $n$, kolika způsoby lze uspořádat $r$ vybraných objektů *(u kombinace záleží jen na vybraných objektech, ne na jejich uspořádání, kdežto u variace záleží i na jejich uspořádání)*. Existuje $r!$ způsobů, jak uspořádat $r$ objektů. Je tedy **počet kombinací $r$ z $n$ krát počet uspořádání $r$ objektů = počet variací $r$ z $n$** $\binom{n}{r} * r! = V(n,r)$.
 - Odtud $\binom{n}{r} = \frac{V(n,r)}{r!} = \frac{n!}{(n-r)!*r!}$.
 
 #### Kombinace s opakováním
