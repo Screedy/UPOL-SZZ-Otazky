@@ -1,5 +1,5 @@
 ### Uspořádání
-- Uspořádání je matematická protějšek pojmu hierarchie
+- Uspořádání je matematický protějšek pojmu hierarchie
 - Binární relace $\cup$ na množině $A \neq \varnothing$ se nazývá **uspořádání**, je-li **reflexivní, antisymetrická a tranzitivní.**
 - Vlastnosti:
 	- **Reflexivní** - Každé $x$ z $X$ je totožné s $x$, tedy $x = x$
@@ -15,19 +15,19 @@
 - Uspořádání pořád ještě **není formálním protějškem "uspořádání"** na které jsme zvyklí při porovnání čísel, protože v uspořádané množině **mohou stále existovat prvky**, které jsou **nesrovnatelné** (značíme **$x \mid \mid y$**)
 
 - V lineárním uspořádání, neboli řetězci (úplné uspořádání) jsou každé dva prvky srovnatelné, tedy můžeme lineární uspořádání chápat jako matematický protějšek k pojmu "tradiční srovnání čísel"
-- Každé relace identity $id_{x}$ **je uspořádání**, které nazýváme **antiřetězec**, v kterém každé dva různé prvky z $X$ jsou nesrovnatelné ($x \mid \mid y$). Antiřetězce jsou nejmenší uspořádání, protože každé uspořádání na $X$ obsahuje $id_{x}$
+- Každá relace identity $id_{x}$ **je uspořádání**, které nazýváme **antiřetězec**, v kterém každé dva různé prvky z $X$ jsou nesrovnatelné ($x \mid \mid y$). Antiřetězce jsou nejmenší uspořádání, protože každé uspořádání na $X$ obsahuje $id_{x}$
 
 - Relaci uspořádání "menší rovno" na číselných množinách $\mathbb{N}, \mathbb{Z}, \mathbb{Q}, ...$ nazýváme **přirozené uspořádání čísel** (je reflexivní, antisymetrické, tranzitivní a úplné), <u>nejedná se však o jediné</u> přirození uspořádání čísel na číselných množinách
 - Když $\leq$ je uspořádání na $X$, pak $\leq^{-1}$ (inverzní) je uspořádání na $X$, které označujeme $\geq$
 
-- **Princip duality =** V praxi to znamená, že pokud řeknu tvrzení pro nejmenší prvek v uspořádané množině $<X,R>$, tak to <u>platí</u> i pro největší prvek v uspořádaní množině $<X,R^{-1}>$
+- **Princip duality =** V praxi to znamená, že pokud řeknu tvrzení pro nejmenší prvek v uspořádané množině $<X,R>$, tak <u>platí</u> i pro největší prvek v uspořádaní množině $<X,R^{-1}>$
 
 ### Znázornění uspořádání a pokrytí
 - Konečnou relaci uspořádání můžeme samozřejmě znázornit matící, nebo orientovaným grafem, ale díky speciálním vlastnostem konečných uspořádání je můžeme znázorňovat mnohem přehledněji pomocí speciálních diagramů
 
 - Ke <u>každému</u> uspořádání $\leq$ na $X$ lze uvažovat odvozenou **relaci** $\prec$ definovanou předpisem
 	- **$x \prec y$, právě když $x < y$ a pro každé $z \in X$ platí: $x \leq z \leq y$ pak $z \in \{x,y\}$**
-	- Znamená že $x < y$ a zároveň neexistuje žádný prvek $z \in X$, která by se nacházel "mezi $x$ a $y$." Zachycuje tedy informaci o prvcích, které se "bezprostředně pokrývají"
+	- Znamená že $x < y$ a zároveň neexistuje žádný prvek $z \in X$, který by se nacházel "mezi $x$ a $y$." Zachycuje tedy informaci o prvcích, které se "bezprostředně pokrývají"
 
 - Relaci $\prec$ nazýváme **pokrytí příslušné $\leq$**
 - výraz $x \prec y$ čteme "x je pokryt y" nebo "y pokrývá x"

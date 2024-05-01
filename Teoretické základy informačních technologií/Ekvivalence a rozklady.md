@@ -41,8 +41,26 @@
 	- $[x]_{\Pi} = X$
 		- Máme jen jednu třídu rozkladu $\Pi$, která je rovna celé $X$
 
-- Všechny rozklady pro $X = \{a,b,c,d\}$
-	![[MacBook-2024-03-01-000768@2x.png | 200]]
+- Všechny rozklady pro $X = \{a,b,c,d\}$:
+	$$
+	\begin{aligned}
+	\{\{a\},\{b\}\{c\},\{d\}\} &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&\\
+	\{\{a,b\}, \{c\}, \{d\}\} \\
+	\{\{b\},\{a,c\},\{d\}\} \\
+	\{\{b\}, \{c\}, \{a,d\}\, \\
+	\{\{a\},\{b,c\},\{d\}\} \\
+	\{\{a,b,c\},\{d\}\} \\
+	\set{\set{b,c},\set{a,d}} \\
+	\set{\set{a},\set{c}, \set{b,d}} \\
+	\set{\set{a,c},\set{b,d}} \\
+	\set{\set{c}, \set{a,b,d}} \\
+	\set{\set{a},\set{b},\set{c,d}} \\
+	\set{\set{a,b},\set{c,d}} \\
+	\set{\set{b},\set{a,c,d}} \\
+	\set{\set{a}, \set{b,c,d}} \\
+	\set{\set{a,b,c,d}}
+	\end{aligned}
+	$$
 
 ### Rozklad a Ekvivalence
 - Nechť **$\Pi$ je rozklad na $X$**. Pak **binární relace $E_{\Pi}$ na $X$** definovaná
