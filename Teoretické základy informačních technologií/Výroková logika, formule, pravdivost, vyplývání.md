@@ -92,9 +92,9 @@
 		- $\mid\mid p\mid\mid_e$ = e(p)
 	- Je-li $\phi$ složená formule, pak
 		- $\mid\mid\neg\psi\mid\mid_e$ = $\neg'\mid\mid \psi\mid\mid_{e}$
-		- $\mid\mid \psi \ \land \  \theta\mid\mid \ = \  \mid\mid \psi\mid\mid_{e} \ \land' \mid \mid \theta \mid\mid_{e}$
+		- $\mid\mid \psi \ \land \  \theta\mid\mid_{e}\ = \  \mid\mid \psi\mid\mid_{e} \ \land' \mid \mid \theta \mid\mid_{e}$
 		- $\mid\mid\phi\lor\theta\mid\mid_{e} \ =\ \mid\mid\phi\mid\mid_{e}\ \lor' \  \mid\mid\theta\mid\mid_{e}$
-		- $\mid\mid\phi\rightarrow\theta\mid\mid_{e} \ =\ \mid\mid\phi\mid\mid_{e}\ \rightarrow' \  \mid\mid\theta\mid\mid_{e}$
+		- $\mid\mid\phi\rightarrow\theta\mid\mid _{e} \ =\ \mid\mid\phi\mid\mid_{e}\ \rightarrow' \  \mid\mid\theta\mid\mid_{e}$
 		- $\mid\mid\phi\leftrightarrow\theta\mid\mid_{e} \ =\ \mid\mid\phi\mid\mid_{e}\ \leftrightarrow' \  \mid\mid\theta\mid\mid_{e}$
 
 - **Tautologie** = je-li formule při **každém ohodnocení pravdivá**
