@@ -67,14 +67,27 @@ c) $\forall c \in T, \vec{u} \in W ; c \circ \vec{u}=c \vec{u}$.
 Poznámka: Znamená to, že prostor $\mathcal{W}$ je podprostorem prostoru $\mathcal{V}$, je-li $W$ neprázdnou podmnožinou množiny $\mathcal{V}$ a vzniknou-li operace sčítání vektorủ a vnější operace násobení vektorů skaláry z $T$ v prostoru $\mathcal{W}$ z odpovídajících operací ve $\mathcal{V}$ omezením se na množinu W.
 
 
-### Matice přechodu
-
+### Transformace souřadnic vektoru vzhledem k bázi
 ##### Definice
-Buď dán takový vektorový prostor dimenze $n$ a jeho dvě báze $\alpha$ a $\beta$. Matice přechodu od báze $\alpha$ a k bázi $\beta$ je taková matice $A$, že $(U)_\beta = A \cdot (U)_\alpha$
+Nechť $V$ je vektorový prostor nad $T$ takový, že $\operatorname{dim} V=n$ (má $n$ bázových vektorů). Jeli $B=\left\{\vec{u}_1, \ldots, \vec{u}_n\right\}$ báze prostoru $V$ a $\vec{u}=\sum_{i=1}^n c_i \vec{u}_i$ vektor z $V$, potom koeficienty $c_1, \ldots, c_n$ nazýváme souřadnice vektoru $\vec{u}$ vzhledem k bázi $B$ a píšeme $\{\vec{u}\}_B=\left(c_1, \ldots, c_n\right)$
 
-- víme že $A = (id)_\beta, \alpha$
-- Matice přechodu od $\beta$ k $\alpha$ je matice $B$, pro kterou platí $A · B = B · A = E$  Tj. $B = (id)_{α,β} = A^{−1}$
-- Obecněji:  $ϕ : U → V$ a $ψ : V → W$ lineární zobrazení. Dále $α$ báze $U, β$ báze $V, γ$ báze $W$. Pak $$(ψ ◦ ϕ)γ,α = (ψ)γ,β · (ϕ)β,α$$ 
+- Transformace souřadnic využívá matice přechodu od jedné báze k druhé bázi. Pokud budeme znát souřadnice vektoru v jedné bázi tak pomocí jeho násobení maticí přechodu dostaneme souřadnice vektoru v nové bázi.
+
+### Matice přechodu
+##### Definice
+Nechť $B=\left\{\vec{u}_1, \vec{u}_2, \ldots, \vec{u}_n\right\}$ a $B^{\prime}=\left\{\vec{u}_1^{\prime}, \vec{u}_2^{\prime}, \ldots, \vec{u}_n^{\prime}\right\}$ jsou báze VP $V$ a nechť $\left\{\vec{u}_i^{\prime}\right\}_B=\left(a_{i 1}, a_{i 2}, \ldots, a_{i n}\right), i \in\{1,2, \ldots, n\}$. Potom matici $A= ||a_{i j}||$ nazýváme maticí přechodů od báze $B$ k bázi $B^{\prime}$
+
+- Matice přechodu bude vypadat tak, že v řádcích bude mít zapsané vektory nové báze popsané pomocí staré báze.
+- První řádek - Vezmeme si první vektor nové báze a zapíšeme jej jako lineární kombinaci vektorů staré báze (zapisuji zde jen koeficienty. Takhle uděláme všechny řádky a dostaneme matici přechodu.
+
+Věta:
+Nechť $B=\left\{\vec{u}_1, \vec{u}_2, \ldots, \vec{u}_n\right\}$ a $B^{\prime}=\left\{\vec{u}_1^{\prime}, \vec{u}_2^{\prime}, \ldots, \vec{u}_n^{\prime}\right\}$ jsou báze VP $V$ a nechť $A$ je matice přechodu od báze $B$ k bázi $B^{\prime}$. Potom každý vektor $\vec{u} \in V$ můžeme vyjádřit:
+$$
+\{\vec{u}\}_B=\{\vec{u}\}_B^{\prime} \cdot A
+$$
+**Do řádku zapsané koeficienty lineárních kombinací kdy vyjadřujeme bázové vektory nové báze pomocí bázových vektorů staré báze.**
+
+
 
 
 ##### Navigace
