@@ -279,3 +279,8 @@ Věta 7.11
 
 Necht $A \vec{x}^{T}=\vec{b}^{T}$ je nehomogenní SLR $\left(A \in \mathcal{M}_{m \times n}(T)\right)$ nad $T$ a necht $\vec{u}$ je některé její řešení. Pak množina všech řešení této soustavy je tvořena právě všemi vektory $\vec{u}+\vec{v} \in T^{n}$, kde $\vec{v}$ je libovolné řešení přiřazené homogenní soustavy.
 
+
+##### Navigace
+Předchozí: [[Eukleidovské vektorové prostory, ortogonální a ortonormální báze, Schwarzova nerovnost, Schmidtova ortogonalizační metoda]]
+Následující: [[Lineární zobrazení a transformace a jejich matice]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]
