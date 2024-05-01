@@ -140,6 +140,11 @@ $$
 	- Jestliže $A \sim B$, pak $h(A) = h(B).$
 	- **$h(A)$ je rovna počtu nenulových řádků** libovolné matice $B$ v $GT$ takové, že $A \sim B$.
 
+> [!Summary] 
+> Hodnost Ize určit pomocí Gaussové eliminační metody tzn. upravuji na "trojúhelníkový" (Gaussův) tvar - *upravuji matici pomocí EŘT.*
+>
+> **Hodnost matice je tedy počet nenulových řádků v Gaussově tvaru**
+
 ### Permutace na množině
 - Dána konečná množina $A = \{a_{1}, a_{2}, ..., a_{n}\}.$ **Pořadím $\Pi$** množiny $A$ nazveme každou $n$-tici $\Pi = (a_{k1}, a_{k2}, ..., a_{kn}) \in A^{n}$ takovou, že **každý prvek z $A$ je v ní zastoupen přávě jednou.**
 
