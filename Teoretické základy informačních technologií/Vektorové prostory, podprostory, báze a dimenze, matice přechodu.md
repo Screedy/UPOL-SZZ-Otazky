@@ -88,16 +88,6 @@ $$
 **Do řádku zapsané koeficienty lineárních kombinací kdy vyjadřujeme bázové vektory nové báze pomocí bázových vektorů staré báze.**
 
 
-
-
-##### Navigace
-Předchozí: [[Matice, operace s maticemi, hodnost, determinant]]
-Následující: [[Eukleidovské vektorové prostory, ortogonální a ortonormální báze, Schwarzova nerovnost, Schmidtova ortogonalizační metoda]]
-Celý okruh: [[1. Teoretické základy informačních technologií]]
-
-
-
-
 ## Něco navíc - Podprostory:
 --- 
 ### Vlastnosti

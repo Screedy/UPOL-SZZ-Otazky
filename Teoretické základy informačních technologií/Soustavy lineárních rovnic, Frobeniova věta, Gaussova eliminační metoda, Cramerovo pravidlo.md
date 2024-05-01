@@ -173,7 +173,7 @@ x_{1}=\frac{1}{b_{11}} \cdot\left(c_{1}-b_{1 n} \cdot x_{n}-b_{1, n-1} \cdot x_{
 $$
 
 Příklad - Gaussova eliminační metoda (Isabolo)
-https://www.youtube.com/watch?v=buhdFjMy7PU
+<iframe width="690" height="385" src="https://www.youtube.com/embed/buhdFjMy7PU?si=RCeB41e5YyVfnCjR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 > [!Summary] 
