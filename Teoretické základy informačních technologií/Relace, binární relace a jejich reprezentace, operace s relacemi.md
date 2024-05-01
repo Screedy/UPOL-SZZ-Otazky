@@ -1,18 +1,18 @@
 ### Kartézský součin
-- Kartézský součin n množin je **množina všech uspořádaných n-tic prvků z těchto množin $X_{1} \times ... \times X_{n} = \{ <x_{1}, ..., x_{n}> \mid x_{1} \in X_{1}, ..., x_{n} \in X_{n} \}$**
+- Kartézský součin $n$ množin je **množina všech uspořádaných $n$-tic prvků z těchto množin $X_{1} \times ... \times X_{n} = \{ <x_{1}, ..., x_{n}> \mid x_{1} \in X_{1}, ..., x_{n} \in X_{n} \}$**
 - Je-li $X_{1} = ... = X_{n} = X$, pak píšeme $X^{n}$ a říkáme **n-tá kartézská mocnina množiny X**
 - Velikost $\mid A \times B \mid$ je $\mid A \mid \times \mid B \mid$
 - **Relace mezi $X_{1}, ..., X_{n}$** je **libovolná podmnožina kartézského součinu $X_{1} \times ... \times X_{n}$**
 
 ### Pojem relace
-- **Relace je množina uspořádaných n-tic prvků**
+- **Relace je množina uspořádaných $n$-tic prvků**
 - Relace je určena:
 	- **Aritou vztahu** = **číslo udávající počet objektů**, které do relace vstupují
 	- **Množiny**, jejichž **prvky** do relace vstupují
 - Relace je matematickým protějškem pojmu **vztah**
 
 - Označuje se **$R = \{<x_{1}, ..., x_{n}>\}$**
-- Číslu n říkáme **arita** relace R, R se nazývá **n-ární** (unární, binární, ternární, ...)
+- Číslu $n$ říkáme **arita** relace R, R se nazývá **$n$-ární** (unární, binární, ternární, ...)
 - **$<x_{1}, ..., x_{n}> = <y_{1}, ..., y_{m}>$**, právě když **$n = m$** a $x_{1} = y_{1}, ..., x_{n} = y_{m}$
 
 ### Vztah a operace s relacemi
