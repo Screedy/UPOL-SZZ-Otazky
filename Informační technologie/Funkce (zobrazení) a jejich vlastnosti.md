@@ -10,7 +10,7 @@
 - Používáme spíš $f, g$ ... než $R, S$
 
 - Je-li $f: X \rightarrow Y$ funkce a $x \in X$, pak $y \in Y$, pro který je $<x,y> \in f$, označujeme $f(x)$, píšeme také $x \mapsto y$ ($x \mapsto f(x)$).
-- V tom případě říkáme, že f zobrazuje prvek $x$ na prvek $y$
+- V tom případě říkáme, že $f$ zobrazuje prvek $x$ na prvek $y$
 
 - Prvek $y$ nazveme **obraz prvku** $x$, prvek $x$ nazveme **vzor prvku** $y$.
 - Množinu $f(X) = \{ f(x); x \in A \}$ nazveme **úplný obraz množiny $X$**
