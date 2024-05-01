@@ -75,3 +75,8 @@ $\vec{w}_1=(1,-2,2,0)$
 1. $\left\|\vec{w}_1\right\|=\sqrt{\vec{w}_1 \circ \vec{w}_1}=\sqrt{9}=3$
 2. Vydělíme každou složku vektoru délkou vektoru
 3. Dostaneme: $\vec{n}_1=\left(\frac{1}{3},-\frac{2}{3}, \frac{2}{3}, 0\right)$
+
+##### Navigace
+Předchozí:  [[Vektorové prostory, podprostory, báze a dimenze, matice přechodu]]
+Následující: [[Soustavy lineárních rovnic, Frobeniova věta, Gaussova eliminační metoda, Cramerovo pravidlo]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]

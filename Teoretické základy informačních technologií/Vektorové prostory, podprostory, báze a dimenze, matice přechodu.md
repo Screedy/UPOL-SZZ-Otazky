@@ -159,3 +159,8 @@ Necht $(V ;+, T, \cdot)$ je VP a $W_1$ a $W_2$ jeho podprostory. Je-li $W_1 \cap
 Je-li VP $(V ;+, T, \cdot)$ prrímým součtem podprostorů $W_1$ a $W_2$, pak každý vektor $\vec{v} \in V$ lze psát právě jedním způsobem ve tvaru $\vec{v}=\vec{w}_1+\overrightarrow{w_2}$, kde $\overrightarrow{w_1} \in W_1$, $\vec{w}_2 \in W_2$.
 
 ---
+
+##### Navigace
+Předchozí:  [[Matice, operace s maticemi, hodnost, determinant]]
+Následující: [[Eukleidovské vektorové prostory, ortogonální a ortonormální báze, Schwarzova nerovnost, Schmidtova ortogonalizační metoda]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]

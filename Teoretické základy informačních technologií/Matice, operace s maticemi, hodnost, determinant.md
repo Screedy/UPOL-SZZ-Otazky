@@ -309,3 +309,8 @@ $$
 - Jsou-li řádkové (sloupcové) vektory matice $A \in M_{n}(T)$ lineární závislé, pak platí **$det(A) = 0$**.
 - Nechť $A, B \in M_{n}(T)$. Pak **$det(A \cdot B) = det(A) \cdot det(B)$**.
 - ![](https://lh7-us.googleusercontent.com/docsz/AD_4nXdp8Bqz8wQFBB6iRuG7lSuSnXWsvQU2zy6C_tYenos4hWU8lM-3c8gddBeSpVdonID4dlXoHBugjxws71ZOKkxHCo2jCxwwx0D6VsT8q-1WS-rtIjvApf-cBdo9VZTQNHGS0qps80y3hf_VlJkDX_s?key=1oMgW2MUuii1DDrztmo2_Q)
+
+##### Navigace
+Předchozí:  [[Stromy, kořenové stromy, vztahy mezi výškou, počtem vrcholů, počtem listů]]
+Následující: [[Vektorové prostory, podprostory, báze a dimenze, matice přechodu]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]
