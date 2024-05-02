@@ -103,8 +103,8 @@ enum Days {
     TUESDAY,         //Např MONDAY = 5, další mají hodnotu o jedno vyšší, pokud 
     WEDNESDAY,       //nepřiřadíme hodnotu ke každému prvku enumu
     THURSDAY,
-    FRIDAY,
-    SATURDAY,
+    FRIDAY = 25,
+    SATURDAY, //hodnota bude 26
     SUNDAY
 };
 
