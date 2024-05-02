@@ -11,8 +11,10 @@ $$
 $$
 ### Binární vyhledávací stromy a operace s nimi
 - **Binární (kořenový) strom**, kde v uzlech jsou uloženy další údaje, zejména však **klíč v položce key**
-- Udržujeme **explicitní pointery na potomky a rodiče**: *left* na *levého potomka* (levý podstrom), *right* na *pravého potomka* (pravý podstrom), *p* na rodiče
-- Pro každý vrchol $x$ v tomto stromu platí: Pokud je vrchol $y$ v levém podstromu vrcholu $x$, pak `y.key < x.key`. Pokud je $y$ v pravém podstromu vrcholu $x$, pak `y.key > x.key`
+- Udržujeme **explicitní pointery na potomky a rodiče**: `left` na *levého potomka* (levý podstrom), `right` na *pravého potomka* (pravý podstrom), `p` na rodiče
+- Pro každý vrchol $x$ v tomto stromu platí: 
+	- Pokud je vrchol $y$ v levém podstromu vrcholu $x$, pak `y.key < x.key`. 
+	- Pokud je vrchol $y$ v pravém podstromu vrcholu $x$, pak `y.key > x.key`.
 - Implementace:
 ```C
 struct node {
@@ -64,7 +66,8 @@ proc tree-search-iterative(x,k)       //O(h)
       x = x.right
   return x
 ```
-
+>[!Example]- Příklad
+><iframe width="640" height="385" src="https://www.youtube.com/embed/fDKIpRe8GW4?si=6LEQToB6o9iEI5n_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 #### Hledání minimum, maximum
 ```C
 proc tree-minimum(x)               //O(h)
@@ -74,7 +77,7 @@ proc tree-minimum(x)               //O(h)
 ```
 ```C
 proc tree-maximum(x)               //O(h)
-  while x.right != nil             //nejhůře O(n), nejépe O(lg n)
+  while x.right != nil             //nejhůře O(n), nejlépe O(lg n)
     x = x.right
   return x
 ```
@@ -99,7 +102,7 @@ proc tree-successor(x)
 ```
 
 #### Přidání uzlu `Insert`
-- Idea: Hledáme jako při vyhledávání. Přidáme na místo, kde by bylo vyhledávání neúspěšné
+- **Idea**: Hledáme jako při vyhledávání. Přidáme na místo, kde by bylo vyhledávání neúspěšné
 - Složitost: $O(h)$
 - Tvar a výška stromu závisí na pořadí, ve kterém je vkládáme
 ```C
