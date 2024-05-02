@@ -40,7 +40,10 @@
 
 ### Dolní mez složitosti třídění porovnáváním
 - Věta: *Časová složitost v nejhorším případě libovolného algoritmu třídění porovnáváním je $\Omega (n \lg n)$*.
-- Důkaz:![[MacBook-2024-03-11-000823@2x.png]]
+>[!Example]- Důkaz
+>
+>![[MacBook-2024-03-11-000823@2x.png]]
+><iframe width="620" height="385" src="https://www.youtube.com/embed/WffUZk1pgXE?si=29P2ErxedVnQXbwz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ##### Navigace
 Předchozí:  [[Lineární datové struktury - seznam, zásobník, fronta]]

@@ -98,8 +98,8 @@ Strom vyhledání:
 - Algoritmus je **vylepšením binárního vyhledávání** pro případy, kdy jsou hodnoty v seznamu nejen seřazené, ale **zároveň rovnoměrně rozložené**.
 - Složitost $\Theta (\log \log n)$
 - V nejhorším případě ovšem může být složitost až $O(n)$. Aby se zabránilo nejhoršímu případu, je možné **kombinovat interpolační** vyhledávání **s binárním vyhledáváním** *(například střídat vždy jeden krok interpolačního vyhledávání a jeden binárního vyhledávání)*
-- Příklad:
-	- Tuto metodu intuitivně používají lidé *například při vyhledávání ve slovníku - odhadnou, kde by přibližně mohlo hledané heslo být* (např. heslo začínající písmenem "K" bude pravděpodobně někde před polovinou slovníku) a *otevřou slovník na odhadnutém místě. Podle odchylky postupují dopředu nebo dozadu o menší nebo větší počet stránek.* Jako příklad budeme uvažovat seznam čísel $1, 2, 3, ..., 1000$. Pokusíme se najít prvek $125$. Pokud bychom hledali pomocí binárního vyhledávání, prvním testovaným prvkem by bylo číslo $500$, poté číslo $250$ a nakonec námi hledané číslo $125$. Interpolační vyhledávací algoritmus odhadne pozici a přímo přejde na prvek $125$.
+>[!Example] Příklad
+>Tuto metodu intuitivně používají lidé *například při vyhledávání ve slovníku - odhadnou, kde by přibližně mohlo hledané heslo být* (např. heslo začínající písmenem "K" bude pravděpodobně někde před polovinou slovníku) a *otevřou slovník na odhadnutém místě. Podle odchylky postupují dopředu nebo dozadu o menší nebo větší počet stránek.* Jako příklad budeme uvažovat seznam čísel $1, 2, 3, ..., 1000$. Pokusíme se najít prvek $125$. Pokud bychom hledali pomocí binárního vyhledávání, prvním testovaným prvkem by bylo číslo $500$, poté číslo $250$ a nakonec námi hledané číslo $125$. Interpolační vyhledávací algoritmus odhadne pozici a přímo přejde na prvek $125$.
 
 <iframe width="690" height="385" src="https://www.youtube.com/embed/DlCPTPQD6Mw?si=F7EWoP8TXvEkq4Vv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
