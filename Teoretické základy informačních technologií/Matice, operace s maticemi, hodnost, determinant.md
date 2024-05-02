@@ -25,7 +25,7 @@
 - Dvě matice $A, B \in M_{m \times n}(T)$ jsou si **rovny** (píšeme $A=B$), jestliže $a_{ij} = b_{ij}$ pro každé $i,j$.
 
 ### Sčítání matic
-- Nechť $A, B \in M_{m \times n}(T)$. **Součtem matic $A$ a $B$** rozumíme matici **$A + B = (c_{ij})_{m \times n}**, kde $c_{ij} = a_{ij} + b_{ij}$ pro každé $i,j$.
+- Nechť $A, B \in M_{m \times n}(T)$. **Součtem matic $A$ a $B$** rozumíme matici **$A + B = (c_{ij})_{m \times n}$**, kde $c_{ij} = a_{ij} + b_{ij}$ pro každé $i,j$.
 - Příklad:
   $$A=
   \begin{pmatrix}
@@ -47,10 +47,9 @@
 - Zavedeme zobrazení "$\cdot$":$\ T \times M_{m \times n}(T) \rightarrow M_{m \times n}(T)$ předpisem $c \cdot A = (b_{ij})_{m \times n},$ kde $b_{ij} = c \cdot a_{ij}$ pro každé $i,j$. Toto zobrazení nazýváme násobení matice skalárem.
 - *(Prvky z $T$ nazýváme skaláry.)*
 - Příklad:
-  Nechť $T := C, c := -i \in C$ a $A:= \begin{pmatrix} i & -1 \\ 2+i & -3+2i \end{pmatrix} \in M_{2}(C).$
-	  Pak
-	  $c \circ A = (-i) \cdot \begin{pmatrix} i & -1 \\ 2+i & -3+2i \end{pmatrix} = \begin{pmatrix} 1 & i \\ 1-2i & 2+3i \end{pmatrix} \in M_{2}(C).$
-
+	- Mějme matici $A=\begin{vmatrix}1 & 2 \\ 3 & 4\end{vmatrix}$ a skalár $c = 3$.
+	- Vynásobíme-li matici skalárem $c$, dostaneme: 
+	  $3A=\begin{vmatrix}3 \cdot 1 & 3 \cdot 2 \\ 3 \cdot 3 & 3 \cdot 4\end{vmatrix} =\begin{vmatrix}3 & 6 \\ 9 & 12\end{vmatrix}$
 - Pro libovolné skaláry $c, d \in T$ a libovolné matice $A, B \in M_{m \times n}(T)$ platí
 	1. $c \cdot (A+B) = c \cdot A + c \cdot B,$
 	2. $(c+d) \cdot A = c \cdot A + d \cdot A,$
@@ -313,7 +312,88 @@ $$
 - **Přičteme-li** k některému řádku (sloupci) matice $A \in M_{n}(T)$ některou **lineární kombinaci** ostatních řádků, pak získáme matici $B \in M_{n}(T)$, pro kterou platí **$det(B) = det(A)$**
 - Jsou-li řádkové (sloupcové) vektory matice $A \in M_{n}(T)$ lineární závislé, pak platí **$det(A) = 0$**.
 - Nechť $A, B \in M_{n}(T)$. Pak **$det(A \cdot B) = det(A) \cdot det(B)$**.
-- ![](https://lh7-us.googleusercontent.com/docsz/AD_4nXdp8Bqz8wQFBB6iRuG7lSuSnXWsvQU2zy6C_tYenos4hWU8lM-3c8gddBeSpVdonID4dlXoHBugjxws71ZOKkxHCo2jCxwwx0D6VsT8q-1WS-rtIjvApf-cBdo9VZTQNHGS0qps80y3hf_VlJkDX_s?key=1oMgW2MUuii1DDrztmo2_Q)
+$$
+  \begin{aligned}
+  \begin{gather}
+  \begin{vmatrix}
+  2 & 5 & -3 & -1 & 0 & 4 \\
+  3 & -1 & 2 & 2 & -2 & 6 \\
+  1 & -5 & -3 & 4 & 2 & -2 \\
+  0 & 2 & -1 & 2 & 1 & -3 \\
+  -1 & 1 & -2 & -3 & 0 & 1 \\
+  1 & 2 & -2 & 2 & 3 & -9 
+  \end{vmatrix}
+  =
+    \begin{vmatrix}
+  2 & 5 & -3 & -1 & 0 & 4 \\
+  3 & 3 & 0 & 6 & 0 & 0 \\
+  1 & -9 & -1 & 0 & 0 & 4 \\
+  0 & 2 & -1 & 2 & 1 & -3 \\
+  -1 & 1 & -2 & -3 & 0 & 1 \\
+  1 & -4 & 1 & -4 & 0 & 0 
+  \end{vmatrix}
+  \\\\=(-1)
+  \begin{vmatrix}
+  2 & 5 & -3 & -1 & 4 \\
+  3 & 3 & 0 & 6 & 0 \\
+  1 & -9 & -1 & 0 & 4 \\
+  -1 & 1 & -2 & -3 & 1 \\
+  1 & -4 & 1 & -4 & 0
+  \end{vmatrix}
+  = (-3)
+  \begin{vmatrix}
+  2 & 5 & -3 & -1 & 4 \\
+  1 & 1 & 0 & 2 & 0 \\
+  1 & -9 & -1 & 0 & 4 \\
+  -1 & 1 & -2 & -3 & 1 \\
+  1 & -4 & 1 & -4 & 0
+  \end{vmatrix}
+  \\\\
+  =(-3)
+    \begin{vmatrix}
+  2 & 3 & -3 & -5 & 4 \\
+  1 & 0 & 0 & 0 & 0 \\
+  1 & -10 & -1 & -2 & 4 \\
+  -1 & 2 & -2 & -1 & 1 \\
+  1 & -5 & 1 & -6 & 0
+  \end{vmatrix}
+  = 3
+  \begin{vmatrix}
+  3 & -3 & -5 & 4 \\
+  -10 & -1 & -2 & 4 \\
+  2 & -2 & -1 & 1 \\
+  -5 & 1 & -6 & 0
+  \end{vmatrix}
+  \\\\
+  = 3
+    \begin{vmatrix}
+  -5 & 5 & -1 & 0 \\
+  -18 & 7 & 2 & 0 \\
+  2 & -2 & -1 & 1 \\
+  -5 & 1 & -6 & 0
+  \end{vmatrix}
+  =(-3)
+  \begin{vmatrix}
+  -5 & 5 & -1 \\
+  -18 & 7 & 2 \\
+  -5 & 1 & -6
+  \end{vmatrix}
+  =(-3)
+    \begin{vmatrix}
+  0 & 0 & -1 \\
+  -28 & 17 & 2 \\
+  25 & -29 & -6
+  \end{vmatrix}
+  \\\\
+  = 3
+  \begin{vmatrix}
+  -28 & 17 \\
+  25 & -29
+  \end{vmatrix}
+  = 3 \cdot 387 = 1161.
+  \end{gather}
+  \end{aligned}
+$$
 
 ##### Navigace
 Předchozí:  [[Stromy, kořenové stromy, vztahy mezi výškou, počtem vrcholů, počtem listů]]

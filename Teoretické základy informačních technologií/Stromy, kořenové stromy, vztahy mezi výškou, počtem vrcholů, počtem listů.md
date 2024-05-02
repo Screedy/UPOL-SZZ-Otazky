@@ -1,12 +1,45 @@
 ### Stromy - definice a základní vlastnosti
 - Grafy připomínající vzhledem stromy / keře
-![[MacBook-2024-03-07-000800@2x.png | 400]]
+```mermaid
+graph BT;
+A[ ] --- B[ ];
+B --- C[ ];
+B --- D[ ];
+C --- E[ ];
+E --- F[ ];
+D --- G[ ];
+D --- H[ ];
+D --- CH[ ];
+CH --- I[ ];
+CH --- J[ ];
+
+classDef default fill:green,stroke-width:3px;
+```
+```mermaid
+graph TD;
+A[ ] --- B[ ];
+A --- C[ ];
+B --- D[ ];
+B --- E[ ];
+D --- F[ ];
+D --- G[ ];
+E --- H[ ];
+E --- CH[ ];
+C --- I[ ];
+C --- J[ ];
+I --- K[ ];
+I --- L[ ];
+J --- M[ ];
+J --- N[ ];
+
+classDef default fill:green,stroke-width:3px;
+```
 
 - **Strom** je **neorientovaný graf bez kružnic**
 - Vrchol se stupněm $1$ se nazývá **koncový**
 - **Koncový** vrchol stromu se nazývá **list**
 
-- Odebereme-li ze stromu list a hranu, která do něj vede, vznikne opět strom
+- Odebereme-li ze stromu list a hranu, která do něj vede, **vznikne opět strom**
 - V každém stromu s alespoň dvěma vrcholy existují alespoň dva listy
 
 - Pro graf $G$ a jeho koncový vrchol $v$ jsou následující tvrzení ekvivalentní
@@ -45,12 +78,46 @@
 ### Binární vyhledávací stromy
 - Binární vyhledávací stromy slouží k ukládání a vyhledávání dat
 - Jsou to binární kořenové stromy s dodatečnou informací, která splňuje jistá omezení usnadňující vyhledávání
-- **Dodatečná informace:** Vrcholy binárního vyhledávacího stromu jsou ohodnoceny číselnými hodnotami; budeme předpokládat, že ohodnocení je **funkce $w: V \rightarrow Z$**
+- **Dodatečná informace:** Vrcholy binárního vyhledávacího stromu jsou ohodnoceny číselnými hodnotami; budeme předpokládat, že ohodnocení je **funkce $w: V \rightarrow \mathbb{Z}$**
 - **Omezení:**
 	- Je-li $u$ levým následníkem vrcholu $v$ nebo potomkem tohoto následníka, pak $w(u) \leq w(v)$
 	- Je-li $u$ pravám následníkem vrcholu $v$ nebo potomkem tohoto následníka, pak $w(u) \geq w(v)$
+```mermaid
+graph TD
+classDef hidden stroke:transparent,fill:transparent,color:transparent;
+8 --- 2;
+8 --- 15;
+2 --- -3;
+2 --- 4;
+-3 --- -5;
+-3 --- 0;
+4 --- X;
+4 --- 7;
+15 --- 14;
+15 --- 20;
+14 --- 11;
+14 --- XX;
+20 --- 16;
+20 --- 21;
 
-![[MacBook-2024-03-07-000801@2x.png]]
+class X,XX hidden;
+linkStyle 6 stroke:transparent; linkStyle 11 stroke:transparent;
+```
+
+```mermaid
+graph TD
+classDef hidden stroke:transparent,fill:transparent,color:transparent;
+5 --- X;
+5 --- 6[4];
+6 --- XX;
+6 --- 10[2];
+10 --- XXX;
+10 --- 12[3];
+
+class X,XX,XXX hidden;
+linkStyle 0 stroke:transparent; linkStyle 2 stroke:transparent;
+linkStyle 4 stroke:transparent;
+```
 - V **zaplněném** binárního kořenového stromu s $n$ vrcholy a $l$ listy, který má výšku $h$ platí:
 	- $2^{h} \leq n \leq 2^{h+1} - 1;$
 	- $h = \lfloor \log_{2}n \rfloor ;$
