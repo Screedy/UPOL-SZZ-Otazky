@@ -8,7 +8,7 @@
 	- Na pravděpodobnosti je založen pojem **složitost algoritmu v průměrném případě**
 
 ### Klasická definice pravděpodobnosti (Laplaceova)
-- Nechť $\Omega$ je konečný vzorový prosto a všechny elementární jevy v $\Omega$ jsou stejně pravděpodobné. Pro libovolnou událost $A \subseteq \Omega$, pravděpodobnost $P(A)$ je definována: $$P(A) = \frac{počet\ příznivých\ výsledků\ pro\ A}{celkový\ počet\ možných\ výsledků}$$kde **počet příznivých výsledků** pro $A$ je počet prvků v množině $A$ a **celkový počet možných výsledků** je počet všech prvků ve vzorovém prostoru $Omega$.
+- Nechť $\Omega$ je konečný vzorový prosto a všechny elementární jevy v $\Omega$ jsou stejně pravděpodobné. Pro libovolnou událost $A \subseteq \Omega$, pravděpodobnost $P(A)$ je definována: $$P(A) = \frac{počet\ příznivých\ výsledků\ pro\ A}{celkový\ počet\ možných\ výsledků}$$kde **počet příznivých výsledků** pro $A$ je počet prvků v množině $A$ a **celkový počet možných výsledků** je počet všech prvků ve vzorovém prostoru $\Omega$.
 
 
 ## Kolmogorova definice pravděpodobnosti
@@ -24,7 +24,7 @@
 - $\mathbb{A}$ = množina měřitelných jevů
 - pravděpodobnost, přesněji **pravděpodobnostní míra**, je funkce $P: \mathbb{B} \rightarrow [0,1]$ splňující jisté vlastnosti
 
-- Základním pojmem v Kolmogorově přístupu je pojem **pravděpodobnostní prostor prostor**:
+- Základním pojmem v Kolmogorově přístupu je pojem **pravděpodobnostní prostor**:
 
 ### Pravděpodobnostní prostor
 - Pravděpodobnostní prostor je trojice $<\Omega, \mathbb{A}, P>$, kde
@@ -46,6 +46,26 @@
 - Jev je tedy množina $A$ sestávající z nějakých výsledků pokusu, o nichž říkáme, že jsou jevy $A$ příznivé.
 - Pro **jev $A$ se číslo $P(A)$** nazývá **pravděpodobnost jevu** A.
 - Pravděpodobnostní prostor se nazývá **diskrétní,** pokud je množina $\Omega$ konečná a nebo spočetná.
+> [!Summary] Zjednodušeně
+> - Pravděpodobnostní prostor se skládá ze tří hlavních komponent: 
+> 	- vzorového prostoru, 
+> 	- σ-algebry,
+> 	- pravděpodobnostní míry.
+> ---
+> - **Vzorový prostor**, označovaný jako $\Omega$, je množina všech možných výsledků náhodného experimentu. 
+> 	- Při hodu kostkou by vzorový prostor byl $\Omega = \set{1,2,3,4,5,6}$
+> - $\sigma$-algebra nad vzorovým prostorem $\Omega$ je kolekce podmnožin $\Omega$ které jsou považovány za **měřitelné**.
+> 	- Musí splňovat: 
+> 		1. Obsahuje $\varnothing$
+> 		2. Je uzavřená na doplňky (pokud množina $A$ je v $\sigma$-algebře, pak její doplněk je taky).
+> 		3. Je uzavřená na spočetné sjednocení
+> 			- Pokud $A_{1}, A_{2}, ...$ jsou v $\sigma$-algebře, pak $\cup_{i = 1}^{\infty}\ A_{i}$ je také v $\sigma$-algebře.
+> - **Pravděpodobnostní míra**, označena jako $P$, je funkce, která přiřazuje číslo mezi $0$ a $1$ každé měřitelné množině v $\sigma$-algebře. Reprezentuje pravděpodobnost, že nastane daný jev repzerentovaný touto množinou. 
+> 	- Musí splňovat:
+> 		1. **Nezápornost**: $P(A) \geq 0$ pro všechna $A$ v $\sigma$-algebře.
+> 		2. **Normalita**: $P(\Omega) = 1$
+> 		3. $\sigma$-**aditivita**: Pro jakoukoli sekvenci vzájemně disjunktních množin $A_{1}, A_{2}, ...$ v $\sigma$-algebře platí, že $P(\cup_{i=1}^{\infty}\ A_{i}) = \sum_{i=1}^{\infty} P(A_{i})$
+
 
 ## Náhodná veličina, střední hodnota
 
