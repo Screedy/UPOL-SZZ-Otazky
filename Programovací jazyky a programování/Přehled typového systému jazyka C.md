@@ -99,9 +99,9 @@ int main() {
 
 // Definice výčtu (enum) pro dny v týdnu
 enum Days {
-    MONDAY,
-    TUESDAY,
-    WEDNESDAY,
+	MONDAY,          //první položka má vždy hodnotu 0 pokud neřejneme jinak
+    TUESDAY,         //Např MONDAY = 5, další mají hodnotu o jedno vyšší, pokud 
+    WEDNESDAY,       //nepřiřadíme hodnotu ke každému prvku enumu
     THURSDAY,
     FRIDAY,
     SATURDAY,
