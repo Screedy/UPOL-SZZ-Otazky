@@ -111,10 +111,10 @@ Matice $A=\left(\begin{array}{ccccc}1 & 2 & -5 & 0 & 1 \\ 0 & 0 & 2 & 0 & 5 \\ 0
 
 Matice $B=\left(\begin{array}{rrrr}0 & 2 & -5 & 0 \\ 0 & 0 & 3 & 1 \\ 0 & 0 & -2 & 8 \\ 0 & 0 & 0 & -8\end{array}\right)$ není v GT.
 
-Každá matice $A \in \mathcal{M}_{m \times n}(T)$ je řádkově ekvivalentní s některou maticí v Gaussově tvaru.
+**Každá matice $A \in \mathcal{M}_{m \times n}(T)$ je řádkově ekvivalentní s některou maticí v Gaussově tvaru.**
 
-##### Vĕta
-Je-li $A \sim B$ pro některé matice $A, B \in \mathcal{M}_{m \times n}(T)$, pak nenulové rádky matice $B$ tvoří bázi řádkového podprostoru matice $A$.
+##### Věta
+Je-li $A \sim B$ pro některé matice $A, B \in \mathcal{M}_{m \times n}(T)$, pak nenulové řádky matice $B$ tvoří bázi řádkového podprostoru matice $A$.
 
 ### Gaussova eliminační metoda 1/5
 - Dána soustava lineárních rovnic $A \vec{x}^{T}=\vec{b}^{T}$, kde $A \in \mathcal{M}_{m \times n}(T)$.
