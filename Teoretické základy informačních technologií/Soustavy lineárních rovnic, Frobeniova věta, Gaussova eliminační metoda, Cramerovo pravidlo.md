@@ -81,6 +81,10 @@ Soustava lineárních rovnic $A \vec{x}^{T}=\vec{b}^{T}$ je řešitelná právě
 Je-li v této situaci navíc $\mathrm{h}(A)=n$, pak má tato soustava právě jedno řešení, pokud $\mathrm{h}(A)<n$, pak má nekonečně mnoho řešení (závislých na $n-\mathrm{h}(A)$ parametrech).
 
 
+> [!Summary] Frobeniova věta
+> Lineární soustava rovnic má řešení, pokud a jen pokud je **hodnost matice koeficientů rovna hodnosti rozšířené matice**. Rozšířená matice zahrnuje jak matici koeficientů, tak sloupec pravých stran rovnic.
+> To se dá vyjádřit vztahem: $\mathrm{h}(A)=\mathrm{h}\left(A \mid \vec{b}^{T}\right)$
+
 ### Elementární řádkové transformace - EŘT
 **EŘT** matice $A \in \mathcal{M}_{m \times n}(T)$ nazýváme tyto úpravy:
 1. vzájemnou záměnu dvou řádků v $A$
@@ -176,8 +180,8 @@ Příklad - Gaussova eliminační metoda (Isabolo)
 <iframe width="690" height="385" src="https://www.youtube.com/embed/buhdFjMy7PU?si=RCeB41e5YyVfnCjR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-> [!Summary] 
-> Gaussova eliminační metoda se používá k vyřešení soustav lineárních rovnic.
+> [!Summary] Gaussova eliminační metoda
+> Používá se k vyřešení soustav lineárních rovnic.
 > 1) Soustavu rovnic přepíšeme do matice i se sloupcem pravých stran.
 > 2) Při aplikování Gaussové eliminační metody tzn. upravuji matici na "trojúhelníkový" (Gaussův) tvar pomocí EŘT.
 > 3) Po úpravě na Gaussův tvar pomocí zpětné substituce od posledního řádku postupně dosazujeme známé hodnoty do předchozích rovnic a řešíme zbylé neznámé.
