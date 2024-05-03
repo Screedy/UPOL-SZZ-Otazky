@@ -32,16 +32,15 @@ Merge(A, p, q, r)
 			else A[k] <- R[j]
 				 j <- j+1
 ```
-Příklad:
-<iframe width="690" height="385" src="https://www.youtube.com/embed/4VqmGXwpLqc?si=7f0Q0lqEHMbtTjAc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+>[!Example]- Příklad
+><iframe width="660" height="385" src="https://www.youtube.com/embed/4VqmGXwpLqc?si=7f0Q0lqEHMbtTjAc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Odůvodnění složitosti MergeSort
 - $T(n) = c$ pro $n = 1$
 - $T(n) = 2T(\frac{n}{2}) + cn$ pro $n > 1$
 - $T(n) = cn \log n + cn = \Theta (n \log n)$
 - ![[MacBook-2024-03-11-000845@2x.png | 500]]
-
-- Příklad (foto):![[MacBook-2024-03-11-000846@2x.png]]
 
 ##### Navigace
 Předchozí:  [[Quick sort a jeho složitost]]

@@ -15,8 +15,10 @@ Insertion-Sort(A[0 ... n-1])
 			      i <- i-1
 		   A[i+1] <- t
 ```
-Příklad:
-<iframe width="690" height="385" src="https://www.youtube.com/embed/JU767SDMDvA?si=Fa9zf5Szl6VcFWMY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+>[!Example]- Příklad
+><iframe width="660" height="385" src="https://www.youtube.com/embed/JU767SDMDvA?si=Fa9zf5Szl6VcFWMY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 ### Selection Sort
 - Idea *"Najdi nejmenší prvek v poli a vyměň ho"*
@@ -35,8 +37,10 @@ Selection-Sort(A[0 ... n-1])
 				do if A[i] < A[iMin] then iMin <- i
 		   t <- A[j]; A[j] <- A[iMin]; A[iMin] <- t
 ```
-Příklad:
-<iframe width="690" height="385" src="https://www.youtube.com/embed/g-PGLbMth_g?si=vfjcGbP2lhtcWpIX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+>[!Example]- Příklad
+><iframe width="660" height="385" src="https://www.youtube.com/embed/g-PGLbMth_g?si=vfjcGbP2lhtcWpIX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 ### Bubble Sort
 - Bublinkové třídění
@@ -54,8 +58,10 @@ Bubble-Sort(A[0 ... n-1])
 			do if A[i] < A[i-1]
 			   then temp <- A[i]; A[i] <- A[i-1]; A[i-1] <- temp
 ```
-Příklad:
-<iframe width="690" height="385" src="https://www.youtube.com/embed/xli_FI7CuzA?si=lSIQxg8Uo_cko_-i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+>[!Example]- Příklad
+><iframe width="660" height="385" src="https://www.youtube.com/embed/xli_FI7CuzA?si=lSIQxg8Uo_cko_-i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 ##### Navigace
 Předchozí:  [[Problém třídění, rozdělení třídících algoritmů, dolní mez složitosti třídění porovnáváním]]

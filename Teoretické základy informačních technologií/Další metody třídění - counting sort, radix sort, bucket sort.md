@@ -26,9 +26,8 @@ Counting-Sort(A, B, k)
 - řádek $7-9: \Theta (n)$ instrukcí.
 - Tedy složitost Counting Sort je v nejhorším případě $\Theta (k + n)$.
 - Je-li $k=O(n)$ (tedy $k \leq cn$ pro $c > 0$), je poté složitost v nejhorším případě $\Theta (n)$
-
-Příklad:
-<iframe width="690" height="385" src="https://www.youtube.com/embed/EItdcGhSLf4?si=RO0qIakGyg1kTm0k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+>[!Example]- Příklad
+><iframe width="620" height="385" src="https://www.youtube.com/embed/EItdcGhSLf4?si=RO0qIakGyg1kTm0k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Radix Sort
 - Používali operátoři mechanických třídič děrných štítků
@@ -45,7 +44,9 @@ Radix-Sort(A, d)
 	for i <- 1 to d
 		do Stable-Sort(A, i)
 ```
-- Příklad: ![[MacBook-2024-03-11-000850@2x.png]]
+
+>[!Example]- Příklad
+>![[MacBook-2024-03-11-000850@2x.png]]
 
 #### Výpočet složitosti v nejhorším případě
 - řádek $1$: $\Theta (d)$ instrukcí
@@ -67,12 +68,13 @@ Bucket-Sort(A[0 ... n-1])
 		do Sort(B[i])
 	vlož postupně prvky z B[0], ..., B[n-1] do pole A
 ```
+>[!Example]- Příklad
+><iframe width="690" height="385" src="https://www.youtube.com/embed/VuXbEb5ywrU?si=pyK3NrE4iY3oNip9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 #### Výpočet složitosti v nejhorším případě
 - To je případ, když všechny prvky z $A$ byly umístěny do jednoho seznamu $B[i]$
 - Složitost bucket Sortu tedy je: $\Theta (n) + \Theta (f(n)) + \Theta (n) = \Theta (f(n))$
 
-Příklad:
-<iframe width="690" height="385" src="https://www.youtube.com/embed/VuXbEb5ywrU?si=pyK3NrE4iY3oNip9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ##### Navigace
 Předchozí:  [[Heap sort a jeho složitost]]

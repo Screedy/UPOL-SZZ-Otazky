@@ -31,8 +31,10 @@ Partition(A, p, r)
 	swap(A[i+1], A[r])
 	return i+1
 ```
-Příklad:
-<iframe width="690" height="385" src="https://www.youtube.com/embed/Hoixgm4-P4M?si=PSKtmEU9xNb69cmH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+>[!Example]- Příklad
+><iframe width="660" height="385" src="https://www.youtube.com/embed/Hoixgm4-P4M?si=PSKtmEU9xNb69cmH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 
 ### Odůvodnění složitosti QuickSort

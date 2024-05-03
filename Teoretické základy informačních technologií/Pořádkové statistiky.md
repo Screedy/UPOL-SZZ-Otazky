@@ -12,12 +12,11 @@
 - **Název:** "Výběr $i$-té pořádkové statistiky"
 - **Vstup:** $A[0 ... n-1]$ a číslo $i \ (1 \leq i \leq n)$
 - **Výstup:** $i.$pořádková statistika  prvku z $A$
-
-- Příklad:
-	- vstup $A = <2, 1, 4, 6, 2, 8, 1>, i = 1, \text{výstup} = 1$
-	- vstup $A = <2, 1, 4, 6, 2, 8, 1>, i = 2, \text{výstup} = 1$
-	- vstup $A = <2, 1, 4, 6, 2, 8, 1>, i = 3, \text{výstup} = 2$
-	- vstup $A = <2, 1, 4, 6, 2, 8, 1>, i = 7, \text{výstup} = 8$
+>[!Example] Příklad
+>- vstup $A = <2, 1, 4, 6, 2, 8, 1>, i = 1, \text{výstup} = 1$
+>- vstup $A = <2, 1, 4, 6, 2, 8, 1>, i = 2, \text{výstup} = 1$
+>- vstup $A = <2, 1, 4, 6, 2, 8, 1>, i = 3, \text{výstup} = 2$
+>- vstup $A = <2, 1, 4, 6, 2, 8, 1>, i = 7, \text{výstup} = 8$
 
 ### Možné řešení problému
 #### Naive-Select
@@ -32,7 +31,9 @@ Naive-Select(A[0 ... n-1], i)
 - Použijeme **Partition** z algoritmu QuickSort s **náhodným** výběrem pivota *(Rozdíl oproti QuickSort je, že po provedení Partition se zabýváme vždy **jen jednou částí**, levou nebo pravou)*
 - Složitost algoritmu v průměrném případě: $\Theta (n)$
 - Složitost algoritmu v nejhorším případě: $\Theta (n^{2})$
-- Poznámka: Pokud hledáme $i$-tý prvek v poli, kde indexujeme od 0, musíme na vstup zadat $i-1$
+>[!Tip] Poznámka
+>Pokud hledáme $i$-tý prvek v poli, kde indexujeme od 0, musíme na vstup zadat $i-1$.
+
 ```C
 Randomized-Select(A, p, r, i)
 	if p=r
@@ -52,7 +53,8 @@ Randomized-Partition(A, p, r)
 	return Partition(A, p, r)
 ```
 Příklad:
-<iframe width="690" height="385" src="https://www.youtube.com/embed/AHaaFVmAsvA?si=Xw3qDMfgqfKATgHH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+>[!Example]- Příklad
+><iframe width="660" height="385" src="https://www.youtube.com/embed/AHaaFVmAsvA?si=Xw3qDMfgqfKATgHH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ##### Navigace
 Předchozí:  [[Další metody třídění - counting sort, radix sort, bucket sort]]

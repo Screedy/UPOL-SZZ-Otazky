@@ -48,8 +48,10 @@ Heap-Sort(A[0 ... n-1])
 		   heapsize(A) <- heapsize(A)-1
 		   Max-Heapify(A, 0)
 ```
-Příklad:
-<iframe width="690" height="385" src="https://www.youtube.com/embed/2DmK_H7IdTo?si=M5Dykby9YuJ-C8tU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+>[!Example]- Příklad
+><iframe width="660" height="385" src="https://www.youtube.com/embed/2DmK_H7IdTo?si=M5Dykby9YuJ-C8tU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 ### Odůvodnění složitosti Heap Sort
 <iframe width="690" height="385" src="https://www.youtube.com/embed/6WTL8Vkn90U?si=yH5WWzecdzcuyLd0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

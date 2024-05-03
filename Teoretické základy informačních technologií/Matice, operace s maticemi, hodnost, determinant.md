@@ -98,8 +98,8 @@
     \end {aligned}
   $$
   ### Maticová transpozice
-  - Je-li $A = (a_{ij})_{m \times n}$ matice nad tělesem $T$, pak transponovanou maticí k matici $A$ rozumíme matici $A^{T} = (a_{ij})_{n \times m}$. $A^{T}$ tedy vznikne vzájemnou záměnou odpovídajících řádků a sloupců matice $A$, tedy jakýmsi *překlopením matice $A$ přes hlavní diagonálu*
-  - Příklad:
+- Je-li $A = (a_{ij})_{m \times n}$ matice nad tělesem $T$, pak transponovanou maticí k matici $A$ rozumíme matici $A^{T} = (a_{ij})_{n \times m}$. $A^{T}$ tedy vznikne vzájemnou záměnou odpovídajících řádků a sloupců matice $A$, tedy jakýmsi *překlopením matice $A$ přes hlavní diagonálu*
+- Příklad:
 $$
     A=
     \begin{pmatrix}
@@ -122,7 +122,7 @@ $$
 
 
 ### Hodnost matice
-- **Řádkovým podprostorem** matice $A \in M_{m \times n}(T)$ rozumíme *podprostor v aritmetickém vektorovém prostoru $T^{n}$*, který **je generovaný řádkovými vektory matice A.**
+- **Řádkovým podprostorem** matice $A \in M_{m \times n}(T)$ rozumíme *podprostor v aritmetickém vektorovém prostoru $T^{n}$*, který **je generovaný řádkovými vektory matice $A$.**
 - Příklad:
   Řádkovým podprostorem matice
   $$
@@ -168,49 +168,52 @@ $$
 - **Znaménkem pořadí $\Pi$** nazveme číslo $sgn(\Pi) = (-1)^{[\Pi]}$, přitom $[\Pi]$ značí počet inverzí v pořadí $\Pi$.
 - Je-li $sgn(\Pi) = 1$, nazveme pořadí $\Pi$ sudé.
 - Je-li $sgn(\Pi) = -1$, nazveme pořadí $\Pi$ liché.
-
-- Příklad: *V pořadí  $\pi = (2, 1, 4, 5, 3)$ množiny $A$ jsou inverze    $2,1$    $4,3$    $5,3$*   tedy $sgn(\pi) = (-1)^{3} = -1$, tedy $\pi$ je liché.
+> [!Example] Příklad
+> *V pořadí  $\pi = (2, 1, 4, 5, 3)$ množiny $A$ jsou inverze    $2,1$ ;  $4,3$ ; $5,3$* tedy $sgn(\pi) = (-1)^{3} = -1$, tedy $\pi$ je liché.
 
 ### Znaménko permutace
 - Nechť $P = \begin{pmatrix} \pi_{1} \\ \pi_{2} \end{pmatrix}$ je permuatace množiny $A$.
 - **Znaménkem permutace $P$** nazveme číslo $1$, **jestliže $sgn(\Pi_{1}) = sgn(\Pi_{2})$**, číslo $-1$, pokud $sgn(\Pi_{1}) \neq sgn(\Pi_{2})$.
 - Je-li $sgn(P) = 1$ nazývá se permutace $P$ sudá.
 - Je-li $sgn(P) = -1$, říkáme, že $P$ je lichá.
-- Příklad:
-	Dána permutace
-  $$
-  P=
-  \begin{pmatrix}
-  2 & 1 & 3 & 5 & 4 \\
-  3 & 1 & 2 & 4 & 5
-  \end{pmatrix} 
-  =
-  \begin{pmatrix}
-  \pi_{1} \\ \pi_{2}
-  \end{pmatrix}.
-  $$
-	  Pak $sgn(\pi_{1}) = (-1)^{2} = 1$ a $sgn(\pi_{2}) = (-1)^{2} = 1$, tedy $P$ je sudá permutace.
-
+> [!Example] Příklad
+> Je dána permutace:
+>   $$
+>   P=
+>   \begin{pmatrix}
+>   2 & 1 & 3 & 5 & 4 \\
+>   3 & 1 & 2 & 4 & 5
+>   \end{pmatrix}
+>   =
+>   \begin{pmatrix}
+>   \pi_{1} \\ \pi_{2}
+>   \end{pmatrix}.
+>   $$ 
+>   Pak $sgn(\pi_{1}) = (-1)^{2} = 1$ a $sgn(\pi_{2}) = (-1)^{2} = 1$, tedy $P$ je sudá permutace.
 ### Transpozice na množině
 - **Transpozicí na $A = \{1, 2, ..., n\}$** rozumíme permutaci $P$ na $A$ takovou, že existují $i, j \in A$ tak, že $P(i) = j, P(j) = i, P(k) = k$ pro všechny $k \in A \\ \{i,j\}$.
-- Příklad:
-	  na $A = \{1,2,3,4,5,6\}$ platí
-	  $$
-	  T(1,4)=
-	  \begin{pmatrix}
-	  1 & 2 & 3 & 4 & 5 & 6 \\
-	  4 & 2 & 3 & 1 & 5 & 6
-	  \end{pmatrix}.
-	  $$
+> [!Example] Příklad
+>  na $A = \{1,2,3,4,5,6\}$ platí: 
+>  $$
+>  T(1,4)=
+>  \begin{pmatrix}
+>  1 & 2 & 3 & 4 & 5 & 6 \\
+>  4 & 2 & 3 & 1 & 5 & 6
+>  \end{pmatrix}.
+>  $$
 
 ### Determinant
 - Nechť $A = (a_{ij}) \in M_{n}(T)$ je **čtvercová** matice stupně $n$ nad číselným tělesem $T$. **Determinantem matice $A$** rozumíme číslo $\det(A)$ z tělesa $T$ takové, že $\det(A) = \sum_{P} sgn(P) \cdot a_{1k_{1}} \cdot a_{2k_{2}} \cdot ... \cdot a_{nk_{n}}$, kde **sčítáme přes všechny permutace** $P = \begin{pmatrix} 1 & 2 & ... & n \\ k_{1} & k_{2} & ... & k_{n} \end{pmatrix}$ na indexové množině $\{1, 2, ..., n\}$. 
-  Každý ze součinů $a_{1k_{1}} \cdot a_{2k_{2}} \cdot ... \cdot a_{nk_{n}}$ přitom nezýváme člen determinantu $\det(A)$.
+  Každý ze součinů $a_{1k_{1}} \cdot a_{2k_{2}} \cdot ... \cdot a_{nk_{n}}$ přitom nazýváme člen determinantu $\det(A)$.
 
 - Jinými slovy:
 	- Determinant čtvercové matice je číslo z $T$, které **se rovná součtu $n!$ součinů prvků** matice $A$, přičemž v každém z těchto součinů $a_{1k_{1}} \cdot a_{2k_{2}} \cdot ... \cdot a_{nk_{n}}$ je každý řádek a sloupec matice zastoupen **právě jedním prvkem**.
 	- Tento **součin ale musíme doplnit znaménkem** stejným jako *je znaménko permutace* určené řádkovými a sloupcovými indexy prvků zastoupených v tomto součinu
-- Příklad:
+
+> [!Example] Příklad
+> Určete determinant matice $A=\begin{vmatrix}a_{11} & a_{12} \\ a_{21} & a_{22}\end{vmatrix} \in M_{2}(T)$:
+> 
+> Členy determinantu budou součiny $a_{11}\ \cdot\ a_{22}$, který odpovídá permutaci $$P_{1}=\begin{vmatrix}1&2\\1&2\end{vmatrix},$$jejíž znaménko je $1$, a také $a_{12}\ \cdot\ a_{21}$, který odpovídá permutaci $$P_{2}=\begin{vmatrix}1&2\\2&1\end{vmatrix},$$ jejíž znaménko je $-1$. Celkem tedy dostáváme $$det(A)=a_{11}\ \cdot\ a_{22}\ -\ a_{12}\ \cdot\ a_{21}.$$
 
 ### Sarrusovo pravidlo
 - Vyjádření determinantů matic $2.$ a $3.$ stupně lze znázornit i schematicky:
@@ -226,39 +229,38 @@ $$
 ### Submatice, subdeterminant
 - Nechť $A = (a_{ij}) \in M_{m \times n}(T)$. Pak každou matici, která vznikne z $A$ **vynecháním** některých jejích řádků a sloupců, nazýváme **submatice** (nebo *dílčí matice*) **matice $A$**
 - Je-li submatice čtvercová, pak její determinant nazýváme **subdeterminant matice $A$**
-- Příklad:
-  $$
-  \begin{pmatrix}
-  2 & -1 & 0 & 0 \\
-  1 & 4 & -2 & 1 \\
-  -2 & 0 & 1 & -3
-  \end{pmatrix}
-  \rightarrow
-  \begin{pmatrix}
-  2 & 0 \\
-  -2 & 1
-  \end{pmatrix}
-  $$
-
+> [!Example] Příklad
+> $$
+> \begin{pmatrix}
+> 2 & -1 & 0 \\
+> 1 & 4  & 1 \\
+> -2 & 0 & -3
+> \end{pmatrix}
+> \rightarrow
+> \begin{pmatrix}
+> 2 & 0 \\
+> -2 & 1
+> \end{pmatrix}
+> $$
 ### Algebraický doplněk prvku ve čtvercové matici
 - Nechť $A = (a_{ij}) \in M_{n}(T)$. Potom **subdeterminant dílčí matice**, která vznikne z $A$ vynecháním $i$-tého řádku a $j$-tého sloupce, budeme **nazývat minor matice $A$ příslušný k prvku $a_{ij}$**. zmačíme $M_{ij}$.
 - **Algebraickým doplňkem prvku $a_{ij}$** matice $A$ rozumíme číslo $$A_{ij} = (-1)^{i+j} \cdot M_{ij}.$$
-- Příklad: 
-  $$
-  A = 
-  \begin{pmatrix}
-  2 & -1 & 0 \\
-  1 & 4 & 1 \\
-  -2 & 0 & -3
-  \end{pmatrix}
-  \rightarrow
-  A_{32} = (-1)^{3+2} \cdot
-  \begin{vmatrix}
-  2 & 0 \\
-  1 & 1 \\
-  \end{vmatrix}
-  = -2
-  $$
+> [!Example] Příklad
+> $$
+> A = 
+> \begin{pmatrix}
+> 2 & -1 & 0 \\
+> 1 & 4 & 1 \\
+> -2 & 0 & -3
+> \end{pmatrix}
+> \rightarrow
+> A_{32} = (-1)^{3+2} \cdot
+> \begin{vmatrix}
+> 2 & 0 \\
+> 1 & 1 \\
+> \end{vmatrix}
+> = -2
+> $$
 
 ### Laplaceův rozvoj determinantu
 - Nechť $A = (a_{ij}) \in M_{n}(T)$. Pak pro každý řádkový index $i = 1, 2, ..., n$ platí
@@ -269,39 +271,40 @@ $$
   $$
   det(A)=\sum_{i=1}^{n} a_{ij} \cdot A_{ij} = a_{1j} \cdot A_{1j} + ...+ a_{nj} \cdot A_{nj},
   $$
-- Příklad:
-  $$
-  \begin{aligned}
-  \begin{gather}
-  \begin{vmatrix}
-  A
-  \end{vmatrix}
-  =
-  \begin{vmatrix}
-  2 & -1 & 0 \\
-  1 & 4 & 1 \\
-  -2 & 0 & -3 \\
-  \end{vmatrix}
-  =\\\\=
-  (-1) \cdot (-1)^{1+2} \cdot 
-  \begin{vmatrix}
-  1 & 1 \\
-  -2 & -3 \\
-  \end{vmatrix}
-  + 4 \cdot (-1)^{2+2} \cdot
-  \begin{vmatrix}
-  2 & 0 \\
-  -2 & -3 \\
-  \end{vmatrix}
-  + 0 \cdot (-1)^{3+2} \cdot
-  \begin{vmatrix}
-  2 & 0 \\
-  1 & 1 \\
-  \end{vmatrix}
-  =\\\\ = -1 + (-24) + 0 = -25
-  \end{gather}
-  \end{aligned}
-  $$
+> [!Example] Příklad
+> $$
+> \begin{aligned}
+> \begin{gather}
+> \begin{vmatrix}
+> A
+> \end{vmatrix}
+> =
+> \begin{vmatrix}
+> 2 & -1 & 0 \\
+> 1 & 4 & 1 \\
+> -2 & 0 & -3 \\
+> \end{vmatrix}
+> =\\\\=
+> (-1) \cdot (-1)^{1+2} \cdot 
+> \begin{vmatrix}
+> 1 & 1 \\
+> -2 & -3 \\
+> \end{vmatrix}
+> + 4 \cdot (-1)^{2+2} \cdot
+> \begin{vmatrix}
+> 2 & 0 \\
+> -2 & -3 \\
+> \end{vmatrix}
+> + 0 \cdot (-1)^{3+2} \cdot
+> \begin{vmatrix}
+> 2 & 0 \\
+> 1 & 1 \\
+> \end{vmatrix}
+> =\\\\ = -1 + (-24) + 0 = -25
+> \end{gather}
+> \end{aligned}
+> $$
+
   ### Řádkové a sloupcové vektory
   - Nechť $A = (a_{ij}) \in M_{m \times n}(T)$.
   - $n$-tici $a_{i}^{\rightarrow} = (a_{i1}, a_{i2}, ..., a_{in})$ budeme nazývat **$i$-tý řádkový vektor matice $A$** pro každý index $i = 1, 2, ..., m$.
@@ -312,88 +315,88 @@ $$
 - **Přičteme-li** k některému řádku (sloupci) matice $A \in M_{n}(T)$ některou **lineární kombinaci** ostatních řádků, pak získáme matici $B \in M_{n}(T)$, pro kterou platí **$det(B) = det(A)$**
 - Jsou-li řádkové (sloupcové) vektory matice $A \in M_{n}(T)$ lineární závislé, pak platí **$det(A) = 0$**.
 - Nechť $A, B \in M_{n}(T)$. Pak **$det(A \cdot B) = det(A) \cdot det(B)$**.
-$$
-  \begin{aligned}
-  \begin{gather}
-  \begin{vmatrix}
-  2 & 5 & -3 & -1 & 0 & 4 \\
-  3 & -1 & 2 & 2 & -2 & 6 \\
-  1 & -5 & -3 & 4 & 2 & -2 \\
-  0 & 2 & -1 & 2 & 1 & -3 \\
-  -1 & 1 & -2 & -3 & 0 & 1 \\
-  1 & 2 & -2 & 2 & 3 & -9 
-  \end{vmatrix}
-  =
-    \begin{vmatrix}
-  2 & 5 & -3 & -1 & 0 & 4 \\
-  3 & 3 & 0 & 6 & 0 & 0 \\
-  1 & -9 & -1 & 0 & 0 & 4 \\
-  0 & 2 & -1 & 2 & 1 & -3 \\
-  -1 & 1 & -2 & -3 & 0 & 1 \\
-  1 & -4 & 1 & -4 & 0 & 0 
-  \end{vmatrix}
-  \\\\=(-1)
-  \begin{vmatrix}
-  2 & 5 & -3 & -1 & 4 \\
-  3 & 3 & 0 & 6 & 0 \\
-  1 & -9 & -1 & 0 & 4 \\
-  -1 & 1 & -2 & -3 & 1 \\
-  1 & -4 & 1 & -4 & 0
-  \end{vmatrix}
-  = (-3)
-  \begin{vmatrix}
-  2 & 5 & -3 & -1 & 4 \\
-  1 & 1 & 0 & 2 & 0 \\
-  1 & -9 & -1 & 0 & 4 \\
-  -1 & 1 & -2 & -3 & 1 \\
-  1 & -4 & 1 & -4 & 0
-  \end{vmatrix}
-  \\\\
-  =(-3)
-    \begin{vmatrix}
-  2 & 3 & -3 & -5 & 4 \\
-  1 & 0 & 0 & 0 & 0 \\
-  1 & -10 & -1 & -2 & 4 \\
-  -1 & 2 & -2 & -1 & 1 \\
-  1 & -5 & 1 & -6 & 0
-  \end{vmatrix}
-  = 3
-  \begin{vmatrix}
-  3 & -3 & -5 & 4 \\
-  -10 & -1 & -2 & 4 \\
-  2 & -2 & -1 & 1 \\
-  -5 & 1 & -6 & 0
-  \end{vmatrix}
-  \\\\
-  = 3
-    \begin{vmatrix}
-  -5 & 5 & -1 & 0 \\
-  -18 & 7 & 2 & 0 \\
-  2 & -2 & -1 & 1 \\
-  -5 & 1 & -6 & 0
-  \end{vmatrix}
-  =(-3)
-  \begin{vmatrix}
-  -5 & 5 & -1 \\
-  -18 & 7 & 2 \\
-  -5 & 1 & -6
-  \end{vmatrix}
-  =(-3)
-    \begin{vmatrix}
-  0 & 0 & -1 \\
-  -28 & 17 & 2 \\
-  25 & -29 & -6
-  \end{vmatrix}
-  \\\\
-  = 3
-  \begin{vmatrix}
-  -28 & 17 \\
-  25 & -29
-  \end{vmatrix}
-  = 3 \cdot 387 = 1161.
-  \end{gather}
-  \end{aligned}
-$$
+> [!Example] Příklad
+> $$
+> \begin{aligned}
+> \begin{gather}
+> \begin{vmatrix}
+> 2 & 5 & -3 & -1 & 0 & 4 \\
+> 3 & -1 & 2 & 2 & -2 & 6 \\
+> 1 & -5 & -3 & 4 & 2 & -2 \\
+> 0 & 2 & -1 & 2 & 1 & -3 \\
+> -1 & 1 & -2 & -3 & 0 & 1 \\
+> 1 & 2 & -2 & 2 & 3 & -9 
+> \end{vmatrix}
+> =
+> \begin{vmatrix}
+> 2 & 5 & -3 & -1 & 0 & 4 \\
+> 3 & 3 & 0 & 6 & 0 & 0 \\
+> 1 & -9 & -1 & 0 & 0 & 4 \\
+> 0 & 2 & -1 & 2 & 1 & -3 \\
+> -1 & 1 & -2 & -3 & 0 & 1 \\
+> 1 & -4 & 1 & -4 & 0 & 0 
+> \end{vmatrix}
+> \\\\=(-1)
+> \begin{vmatrix}
+> 2 & 5 & -3 & -1 & 4 \\
+> 3 & 3 & 0 & 6 & 0 \\
+> 1 & -9 & -1 & 0 & 4 \\
+> -1 & 1 & -2 & -3 & 1 \\
+> 1 & -4 & 1 & -4 & 0
+> \end{vmatrix}
+> = (-3)
+> \begin{vmatrix}
+> 2 & 5 & -3 & -1 & 4 \\
+> 1 & 1 & 0 & 2 & 0 \\
+> 1 & -9 & -1 & 0 & 4 \\
+> -1 & 1 & -2 & -3 & 1 \\
+> 1 & -4 & 1 & -4 & 0
+> \end{vmatrix}
+> \\\\=(-3)
+> \begin{vmatrix}
+> 2 & 3 & -3 & -5 & 4 \\
+> 1 & 0 & 0 & 0 & 0 \\
+> 1 & -10 & -1 & -2 & 4 \\
+> -1 & 2 & -2 & -1 & 1 \\
+> 1 & -5 & 1 & -6 & 0
+> \end{vmatrix}
+> = 3
+> \begin{vmatrix}
+> 3 & -3 & -5 & 4 \\
+> -10 & -1 & -2 & 4 \\
+> 2 & -2 & -1 & 1 \\
+> -5 & 1 & -6 & 0
+> \end{vmatrix}
+> \\\\
+> = 3
+> \begin{vmatrix}
+> -5 & 5 & -1 & 0 \\
+> -18 & 7 & 2 & 0 \\
+> 2 & -2 & -1 & 1 \\
+> -5 & 1 & -6 & 0
+> \end{vmatrix}
+> =(-3)
+> \begin{vmatrix}
+> -5 & 5 & -1 \\
+> -18 & 7 & 2 \\
+> -5 & 1 & -6
+> \end{vmatrix}
+> =(-3)
+> \begin{vmatrix}
+> 0 & 0 & -1 \\
+> -28 & 17 & 2 \\
+> 25 & -29 & -6
+> \end{vmatrix}
+> \\\\
+> = 3
+> \begin{vmatrix}
+> -28 & 17 \\
+> 25 & -29
+> \end{vmatrix}
+> = 3 \cdot 387 = 1161.
+> \end{gather}
+> \end{aligned}
+> $$
 
 ##### Navigace
 Předchozí:  [[Stromy, kořenové stromy, vztahy mezi výškou, počtem vrcholů, počtem listů]]
