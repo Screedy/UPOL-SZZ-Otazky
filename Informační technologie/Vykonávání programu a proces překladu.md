@@ -79,6 +79,14 @@
 3. **Assembler:** vygeneruje objektový kód (`foo.c` $\rightarrow$ `foo.obj`/`foo.o`)
 4. **Linker:** slouží několik souborů s objektovým kódem + knihovny do spustitelného souboru
 
+>[!Tip] Statická vs dynamická knihovna
+>- **staticky linkovaná knihovna** - instaluje s programem
+>	- nevzniká závislost
+>	- program bude větší a při aktualizaci knihovny je nutná rekompilace
+>- **dynamická linkovaná knihovna** - program použivá knihovny OS
+>	- načítají se při spuštění programu
+>	- jsou sdíleny mezi soubory $\rightarrow$ šetří místo
+>	- knihovna můžu v OS chybět
 ##### Navigace
 Předchozí: [[Operační systém, architektura, poskytovaná rozhraní]]
 Následující: [[Správa procesoru - procesy a vlákna, plánování jejich běhu, komunikace a synchronizace]]
