@@ -1,5 +1,4 @@
-### Základní vlastnosti
-##### Definice 9.1 
+### Lineární zobrazení - definice:
 Nechť $\mathcal{V}=(V,+, \mathcal{T},\, \cdot\,)$ a $\mathcal{V}^{\prime}=\left(V^{\prime},+, \mathcal{T}, \, \cdot \,\right)$ jsou vektorové prostory nad číselným tělesem $\mathcal{T}$. Potom zobrazení $f: V \rightarrow V^{\prime}$ nazveme homomorfizmus vektorového prostoru $\mathcal{V}$ do vektorového prostoru $\mathcal{V}^{\prime}$, jestliže
 1. $\forall \vec{u}, \vec{v} \in V ; f(\vec{u}+\vec{v})=f(\vec{u})+f(\vec{v})$,
 2. $\forall c \in T, \vec{u} \in V ; f(c \vec{u})=c f(\vec{u})$.
