@@ -69,7 +69,7 @@
 ```sql
 CREATE TABLE movies (
 	title text,
-	year integer
+	year integer,
 	length integer
 );
 ```
@@ -84,9 +84,9 @@ SELECT * FROM movies;
 ## Přidání řádků do tabulky
 ```sql
 INSERT INTO movies VALUES
-       ( ’The Matrix’, 1999, 136 ),
-       ( ’The Avengers’, 2012, 143 ),
-       ( ’The Avengers’, 1998, 89 );
+       ( 'The Matrix', 1999, 136 ),
+       ( 'The Avengers', 2012, 143 ),
+       ( 'The Avengers', 1998, 89 );
 
 -- Vypsání tabulky:
 SELECT * FROM movies;
@@ -100,7 +100,7 @@ SELECT * FROM movies;
 
 Přídání jednoho řádku:
 ```sql
-INSERT INTO movies VALUES (’A Space Odyssey’, 1968, 149);
+INSERT INTO movies VALUES ('A Space Odyssey', 1968, 149);
 ```
 ### Vymazání tabulky
 ```sql
