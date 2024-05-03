@@ -14,7 +14,7 @@
 ---
 Např. pokud vyhodnotíme:
 ```sql
-SELECT title AS title, year + 1 AS next_year
+SELECT title AS title, year + 1 AS next_year FROM movies;
 
 -- Pro tabulku:
       title      | year | length
@@ -54,7 +54,7 @@ Výraz `SELECT` může mít tvar:
 ```
 - Pomocí podmínky `condition` získáme tabulku, která bude v těle obsahovat právě jeden řádek za každý řádek originální tabulky, pro který je podmínka `condition` splněna.
 ```sql
-SELECT * FROM movies WHERE title = ’The Avengers’;
+SELECT * FROM movies WHERE title = 'The Avengers';
 
 -- Získáme:
     title     | year | length
