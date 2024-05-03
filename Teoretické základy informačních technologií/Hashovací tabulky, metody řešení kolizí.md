@@ -70,8 +70,12 @@ proc search(T,k)
 - **Hashovací funkce má obvykle $2$ fáze:**
 	- **sekvenci čísel použijeme pro výpočet hodnoty,** která ovšem může být větší než $m-1$
 	- **hodnotu z předchozího bodu upravíme** tak, aby byla mezi $0$ a $m-1$
-- Příklad:![[MacBook-2024-03-14-000880@2x.png]]
-- Poznámka: U dělící metody *není dobré, když je velikost tabulky mocnina $2$*, protože pak výsledek záleží pouze na hodnotě spodních bitů (jejich počet odpovídá exponentu)
+
+>[!Example] Příklad
+>![[MacBook-2024-03-14-000880@2x.png]]
+
+>[!Tip]
+>U dělící metody *není dobré, když je velikost tabulky mocnina $2$*, protože pak výsledek záleží pouze na hodnotě spodních bitů (jejich počet odpovídá exponentu)
 
 #### Metoda řešení kolize: Otevřené adresování
 - Prvky jsou v **samostatné tabulce** (neobsahuje seznamy prvků), prázdná políčka jsou `nil`
@@ -109,7 +113,13 @@ proc search(T,k)
 
 - **Vzniká sekundární shlukování** - pokud máme $k_{1} \neq k_{2}$, ale $h(k_{1}) = h(k_{2})$, mají $k_{1}$ a $k_{2}$ stejné průzkumné sekvence.
 - Existuje **$m$ různých průzkumných posloupností**
-- ![[MacBook-2024-03-14-000881@2x.png]]
+>[!Example] Příklady průzkumných posloupností
+>- Předpokládejme, že $h(k) = 0$.
+>	- $m = 7,c_{1} = 0,c_{2}=1$ $$0,1,4,2,2,4,1$$
+>	- $m=11,c_{1}=1,c_{2}=1$ $$0,2,6,1,9,8,9,1,6,2,0$$
+>	- $m=7,c_{1}=13,c_{2}=15$ $$0,0,5,1,2,1,5$$
+>	- $m=16,c_{1}=0.5,c_{2}=0.5$ $$0,1,3,6,10,15,5,12,4,13,7,2,14,11,9,8$$
+
 
 ##### Dvojité hashování
 - Pro hashovací funkce $h_{1}, h_{2}$ zavedeme průzkumnou funkci $g(k, i) = (h_{1}(k) + ih_{2}(k)) \text{ mod } m$
@@ -120,7 +130,8 @@ proc search(T,k)
 	- $h_{1}(k) = k \text{ mod } m$
 	- $h_{2}(k) = 1 + (k \text{ mod } m-1)$
 - Pro prvočíselné $m$ existuje $m^{2}$ průzkumných posloupností
-- Příklad pro $m = 5$:![[MacBook-2024-03-14-000882@2x.png]]
+>[!Example] Příklad pro $m=5$
+>![[MacBook-2024-03-14-000882@2x.png]]
 
 ##### Navigace
 Předchozí:  [[B stromy, operace a jejich složitost]]

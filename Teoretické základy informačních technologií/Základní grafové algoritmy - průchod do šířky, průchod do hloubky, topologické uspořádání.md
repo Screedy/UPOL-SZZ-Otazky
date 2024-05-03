@@ -52,7 +52,9 @@ proc bfs(G, s)
 	- U každého uzlu po jeho odebrání z fronty projdeme seznam jeho sousedů. Víme ale, že součet délek seznamů v `adj` je $O(\mid E \mid)$. Proto procházení seznamů zabere $O(\mid E \mid)$ času
 	- **Celkem je tedy složitost $O( \mid V \mid + \mid E \mid)$**
 
-<iframe width="690" height="385" src="https://www.youtube.com/embed/HZ5YTanv5QE?si=vHtZX2LIAytCaoBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+>[!Example]- Průchod do šířky
+><iframe width="660" height="385" src="https://www.youtube.com/embed/HZ5YTanv5QE?si=vHtZX2LIAytCaoBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 #### BFS(s) hledá uzly v pořadí podle vzdálenosti od $s$
 - **Definice:** Nejkratší vzdálenost $\delta (u, v)$ z uzlu $u$ do uzlu $v$ je **nejmenší počet hran,** které má nějaká cesta z $u$ do $v$. 
@@ -70,7 +72,7 @@ proc bfs(G, s)
 	- $E' = \{\{v, u\} \mid \text{parent}[u] = v\}$
 - $G'$ je strom s kořenem $s$: z principu algortmu `bfs` plyne, že $\mid V' \mid = \mid E' \mid +\ 1$ *(s přidáním každého uzlu mimo $s$ do fronty vytvoříme jednu hranu z $E'$)* a $G'$ je souvislý *(z každého uzlu $v \in V'$ vede cesta do $s$, je to nejkratší cesta nalezená `bfs`)* Uzel $s$ jako jediný nemá rodiče.
 
-#### Průchod do hlouby a jeho vlastnosti
+#### Průchod do hloubky a jeho vlastnosti
 - **Uzly mají položku pro barvu**, podobně jako u průchodu do hloubky. Možné barvy jsou opět `white`, `gray` a `black`
 - Dále si pro každý uzel budeme **zaznamenávat čas**, kdy byl navštíven poprvé a změnil barvu z `white` na `gray`. K tomu použijeme **položku $d$.** Dále **zaznamenáme čas, kdy byl uzel navštíven podruhé,** k tomu použijeme **položku f**
 - Čas budeme udržovat pomocí **globální proměnné `time`**, kterou na začátku nastavíme na $0$, a na vhodných místech inkrementujeme
@@ -112,7 +114,9 @@ proc dfs-visit(G, u)
 - **Lemma 4.** Po provedení `dfs` pro každý uzel $u$ platí $d[u] \leq f[u]$
 - Důkaz. Mezi první a druhou návštěvou uzlu vždy **alespoň jednou inkrementujeme proměnnou `time`**
 
-<iframe width="690" height="385" src="https://www.youtube.com/embed/Urx87-NMm6c?si=RtpuEeavhTJ645sF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+>[!Example]- Průchod do hloubky
+><iframe width="660" height="385" src="https://www.youtube.com/embed/Urx87-NMm6c?si=RtpuEeavhTJ645sF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 ### Topologické uspořádání
 - Orientovaný graf bez cyklů budeme nazývat `dag`. (to je zavedená anglická zkratka pojmu **directed acyclic graph**)

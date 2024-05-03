@@ -10,8 +10,12 @@
 - B-stromy jsou často používány v databázových systémech.
 	- Zaměřují se na vlastnost snížení operací s diskem.
 
-<iframe width="690" height="385" src="https://www.youtube.com/embed/FgWbADOG44s?si=VZkYlNgWOHYCSgjb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<iframe width="690" height="385" src="https://www.youtube.com/embed/fAfuZiFDpRo?si=nbe9TPSTLAuwjQVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+>[!Example]- Úvod
+><iframe width="660" height="385" src="https://www.youtube.com/embed/FgWbADOG44s?si=VZkYlNgWOHYCSgjb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+>[!Example]- Vlastnosti
+><iframe width="660" height="385" src="https://www.youtube.com/embed/fAfuZiFDpRo?si=nbe9TPSTLAuwjQVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 ### Implementace
 ```C
@@ -60,7 +64,9 @@ proc b-tree-search(x,k)
   
   else b-tree-search(x.children[i], k)
 ```
-<iframe width="690" height="385" src="https://www.youtube.com/embed/jLEhJqNVauc?si=uJJUy8XQFgww5ZEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+>[!Example]- Vyhledávání
+><iframe width="660" height="385" src="https://www.youtube.com/embed/jLEhJqNVauc?si=uJJUy8XQFgww5ZEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 #### Vložení prvku (dvoufázově) - $O(t\ log_{t}\ n)$
 1. Uzel, kam budeme vkládat, **nalezneme** pomocí **upravené** operace **b-tree-search**, která **vrací pointer** na **uzel** $x$, a **index** $i$ v poli `x.keys`, na který budeme vkládat.
@@ -164,7 +170,9 @@ proc tree-insert-nonfull(x, k, d)
     // 2.3 provedeme pridani do potomka (není zaplněn)
     tree-insert-nonfull(x.children[i], k, d)
 ```
-<iframe width="690" height="385" src="https://www.youtube.com/embed/tT2DT9Z4H-0?si=NVHfsrLgFnUboj-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+>[!Example]- Vkládání
+><iframe width="660" height="385" src="https://www.youtube.com/embed/tT2DT9Z4H-0?si=NVHfsrLgFnUboj-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 #### Mazání prvku (dvoufázové) $O(t\ \log_{t}\ n)$
 - 1\. fáze - **vlastní smazání**:
@@ -177,7 +185,9 @@ proc tree-insert-nonfull(x, k, d)
 	   ![[MacBook-2024-03-13-000875@2x.png]]
 	 3. Oba sourozenci $x$ mají `t-1` prvků. Vybereme si jednoho souseda $y$ a spojíme ho s uzlem $x$ a jedním klíčem z rodiče do nového uzlu s `2 * t - 1` klíči. Na následujícím obrázku je $y$ pravým sourozencem $x$ (opačná situace je symetrická). Po spojení uzlů pokračujeme novou iterací fáze 2, do které pošleme rodiče uzlu $x$. Z rodiče jsme totiž odebrali jeden klíč a jeho počet klíčů se tak mohl dostat pod `t - 1`![[MacBook-2024-03-13-000876@2x.png]]
 
-<iframe width="690" height="385" src="https://www.youtube.com/embed/pN4C8cLVc7I?si=AvBmer1fUTl0BH1f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+>[!Example]- Mazání
+><iframe width="660" height="385" src="https://www.youtube.com/embed/pN4C8cLVc7I?si=AvBmer1fUTl0BH1f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 ##### Navigace
 Předchozí:  [[AVL stromy, operace a jejich složitost]]
