@@ -23,13 +23,17 @@
 ---
 - provádí se **mapování** logických adres na fyzické
 - CPU společně s OS udržuje stránkovací tabulku, díky které se adresy převádí
-![[MacBook-2024-05-03-001160@2x.png | 500]]
+>[!Example]+ Ukázka stránkování
+![[MacBook-2024-05-03-001160@2x.png]]
 - logická adresa: pd, kde p je číslo stránky a d je offset
 - fyzická adresa: fd
 - číslo stránky se vezme jako index do stárnkovací tabulky a nahradí se tam uložených číslem rámce f
 ---
 - v praxi se používají víceúrovňové tabulky
 	- část logické adresy udává tabulku, další část index v tabulce a další část offset
+
+>[!Example]+ Ukázka i386 s Physical Address Extention
+>![[MacBook-2024-05-03-001163@2x.png]]
 - **TLB: Translation Lookaside Buffer**
 	- cache procesoru obsahující **hodně používané části** stránkovacích tabulek
 	- pro danou stránku uchovává **adresu rámce**
@@ -42,6 +46,8 @@
 ---
 - při použití segmentace a stránkování programy nepracují přímo s lineární adresou
 - používají logickou adresu ve tvaru segment + offset a ta je poté převádí na fyzickou adresu pomocí stránkování
+>[!Example]+ Ukázka segmentace
+![[MacBook-2024-05-03-001162@2x.png ]]
 
 ## Virtuální paměť
 - primární paměť RAM je obvykle málo
