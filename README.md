@@ -7,7 +7,7 @@
 	- [[3. Programovací jazyky a programování]]
 
 ## Webová verze
-- Zprovoznil jsem webovou verzi tohoto repozitáře dostupnou na adrese https://screedy.github.io/SZZ-Otazky-Quartz/.
+- Zprovoznil jsem webovou verzi tohoto repozitáře dostupnou na adrese https://statnice.screedy.com/.
 - Tato verze může obsahovat drobné chyby (především tam špatně fungují obrázky), protože se překládá z md na html.
 
 ## Jak správně použít tento repozitář
