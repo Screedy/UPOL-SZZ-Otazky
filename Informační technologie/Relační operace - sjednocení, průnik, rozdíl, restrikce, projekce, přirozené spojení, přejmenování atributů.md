@@ -254,3 +254,9 @@ WHERE condition )
 	4. Dále se provede restrikce relace $D''$ vzhledem k podmínce `condition`. Jako výsledek obdržíme relaci $D'''$.
 	5. Následuje projekce relace $D'''$ na `{table1.column1, table2.column2, ...}`. Obdržíme relaci $D''''$
 	6. Nakonec se provede přejmenování $D''''$ sloupce `table1.column1` na `column1`, `table2.column2` na `column2`, ... Získáme výstupní relaci $D'''''$.
+
+
+##### Navigace
+Předchozí:  [[Výraz SELECT v SQL]]
+Následující: [[Integrita dat - primární a cizí klíč]]
+Celý okruh: [[2. Informační technologie]]

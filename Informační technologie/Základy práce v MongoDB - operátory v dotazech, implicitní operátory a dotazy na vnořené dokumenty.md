@@ -109,3 +109,8 @@ db.movies.insertMany([
 { "vydavatel.nazev": "Databáze Pro Všechny" }
 ```
 
+
+##### Navigace
+Předchozí:  [[Dokumentový model databáze - dokumenty, kolekce, atomické hodnoty, pole]]
+Následující: [[Elasticsearch - rozdělení textu na termy a základní dotazy]]
+Celý okruh: [[2. Informační technologie]]

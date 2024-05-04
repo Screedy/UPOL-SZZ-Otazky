@@ -40,3 +40,9 @@ Vysvětlení kódu:
 - Cizí klíč `film_id` v tabulce `Herci` odkazuje na sloupec `id` v tabulce `Filmy`.
 - `ON DELETE SET NULL` znamená, že pokud je film odstraněn, hodnota `film_id` u herce, který se na tento film odkazoval, bude nastavena na `NULL`.
 - `ON UPDATE CASCADE` zajistí, že pokud dojde k aktualizaci `id` filmu, změní se automaticky i hodnoty `film_id` v tabulce `Herci`, aby odpovídaly nové hodnotě.
+
+
+##### Navigace
+Předchozí:  [[Relační operace - sjednocení, průnik, rozdíl, restrikce, projekce, přirozené spojení, přejmenování atributů]]
+Následující: [[Dokumentový model databáze - dokumenty, kolekce, atomické hodnoty, pole]]
+Celý okruh: [[2. Informační technologie]]

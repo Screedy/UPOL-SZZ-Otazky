@@ -34,3 +34,10 @@ actors:
 	- Složené hodnoty dělíme na **objekty** a **pole**.
 		- **Objekt** má tvar `{ pairs }`, kde `pairs` jsou čárkou oddělené páry. Pár má tvar `name: value`. Například `{ "title": "Dracula", "year": 1992 }`.
 		- **Pole** má tvar: `[ items ]`, kde `items` jsou libovolné hodnoty oddělené čárkou. Například: `[]`, `[1972, 1974, 1990]`.
+
+
+
+##### Navigace
+Předchozí:  [[Integrita dat - primární a cizí klíč]]
+Následující: [[Základy práce v MongoDB - operátory v dotazech, implicitní operátory a dotazy na vnořené dokumenty]]
+Celý okruh: [[2. Informační technologie]]
