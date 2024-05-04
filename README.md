@@ -1,10 +1,14 @@
 # Otázky na Státní Závěrečné Zkoušky
 
-Tento repozitář obsahuje sbírku otázek na státní závěrečné zkoušky z oboru Informačních Technologií na fakultě informatiky Univerzity Palackého v Olomouci. 
-Jednotlivé otázky jsou rozděleny do svých adekvátních okruhů (složek) obsahující každou otázku jako samostatný soubor. Jednoduchý přístup k otázkám je zajištěn pomocí tří souborů
-- [[1. Teoretické základy informačních technologií]]
-- [[2. Informační technologie]]
-- [[3. Programovací jazyky a programování]]
+- Tento repozitář obsahuje sbírku otázek na státní závěrečné zkoušky z oboru Informačních Technologií na fakultě informatiky Univerzity Palackého v Olomouci. 
+- Jednotlivé otázky jsou rozděleny do svých adekvátních okruhů (složek) obsahující každou otázku jako samostatný soubor. Jednoduchý přístup k otázkám je zajištěn pomocí tří souborů
+	- [[1. Teoretické základy informačních technologií]]
+	- [[2. Informační technologie]]
+	- [[3. Programovací jazyky a programování]]
+
+## Webová verze
+- Zprovoznil jsem webovou verzi tohoto repozitáře dostupnou na adrese https://screedy.github.io/SZZ-Otazky-Quartz/.
+- Tato verze může obsahovat drobné chyby (především tam špatně fungují obrázky), protože se překládá z md na html.
 
 ## Jak správně použít tento repozitář
 Všechny soubory v tomto repozitáři jsou psány a formátovány pro použití s programem [Obsidian](https://obsidian.md/).
@@ -25,9 +29,12 @@ Po naklonování repozitáře na váš počítač postupujte takto, abyste jej o
 3. Vyberte možnost 'Open folder as vault'.
 4. Navigujte k složce, kam jste naklonovali repozitář, a vyberte ji.
 
+
 ## Autoři
 Tento repozitář je výsledkem společné práce následujících autorů:
 - [Karolína Tobiášová](https://github.com/Kermy824)
 - [Petr Jurásek](https://github.com/Screedy)
 - [František Jurek](https://github.com/Homesis)
 - [Daniel Štefák](https://github.com/Daniel-Programmer)
+
+<a href="https://www.buymeacoffee.com/screedy" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
