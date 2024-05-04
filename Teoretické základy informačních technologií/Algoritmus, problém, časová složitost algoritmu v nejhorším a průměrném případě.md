@@ -5,7 +5,7 @@
 	- **Řešení problému algoritmem** = vykonáváním instrukcí podle algoritmu se od vstupu $I$ po konečném počtu kroků dobereme k výstupu $O$
 
 > [!tip]
-Pojem **algoritmus** je podobně jako pojem množina **základním pojmem**, který **není** definován pomocí jednodušších pojmů, je jen objasňován svými vlastnostmi na konkrétních příkladech.
+>Pojem **algoritmus** je podobně jako pojem množina **základním pojmem**, který **není** definován pomocí jednodušších pojmů, je jen objasňován svými vlastnostmi na konkrétních příkladech.
 
 ### Problém
 - Definice **problém**:
