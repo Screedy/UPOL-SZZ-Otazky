@@ -23,15 +23,15 @@
 
 - Pravdivostní hodnota výroku <u>se počítá</u> z **pravdivostních hodnot atomických výroků** pomocí **pravdivostních funkcí spojek**
 
-| Název           | Symbol | Pravdivostní funkce | Tabulka pravdivostní funkce            |
-| --------------- | ------ | ------------------- | -------------------------------------- |
-| **Negace**      | **ㄱ**  | **ㄱ’**              | ![[MacBook-2024-02-28-000750@2x.png]]  |
-| **Konjunkce**   | **⋀**  | **⋀’**              | ![[MacBook-2024-02-28-000751@2x.png ]] |
-| **Disjunkce**   | **⋁**  | **⋁'**              | ![[MacBook-2024-02-28-000752@2x.png]]  |
-| **Implikace**   | **⟶**  | **⟶'**              | ![[MacBook-2024-02-28-000753@2x.png]]  |
-| **Ekvivalence** | **↔**  | **↔'**              | ![[MacBook-2024-02-28-000754@2x.png]]  |
-| **Piercova**    | **↓**  | **↓'**              | ![[MacBook-2024-02-28-000755@2x.png]]  |
-| Shefferova      | **↑**  | **↑'**              | ![[MacBook-2024-02-28-000756@2x 1.png]]  |
+| Název           | Symbol | Pravdivostní funkce | Tabulka pravdivostní funkce             |
+| --------------- | ------ | ------------------- | --------------------------------------- |
+| **Negace**      | **ㄱ**  | **ㄱ’**              | ![[MacBook-2024-02-28-000750@2x.png]]   |
+| **Konjunkce**   | **⋀**  | **⋀’**              | ![[MacBook-2024-02-28-000751@2x.png ]]  |
+| **Disjunkce**   | **⋁**  | **⋁'**              | ![[MacBook-2024-02-28-000752@2x.png]]   |
+| **Implikace**   | **⟶**  | **⟶'**              | ![[MacBook-2024-02-28-000753@2x.png]]   |
+| **Ekvivalence** | **↔**  | **↔'**              | ![[MacBook-2024-02-28-000754@2x.png]]   |
+| **Piercova**    | **↓**  | **↓'**              | ![[MacBook-2024-02-28-000755@2x.png]]   |
+| Shefferova      | **↑**  | **↑'**              | ![[MacBook-2024-02-28-000756@2x 1.png]] |
 
 ### **Výroky s proměnou, kvantifikátory**
 - Některé výrazy *přirozeného jazyka* obsahují proměnné
