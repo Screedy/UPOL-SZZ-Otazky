@@ -56,7 +56,7 @@ TABLE movies1;                 | TABLE movies2;
 (2 rows)
 ```
 
-## Výrazy ve `FROM` kauzuli
+## Výrazy ve `FROM` klauzuli
 - Výrazem `expr AS name` ve `FROM` klauzuli určíme tabulku, která bude hodnotou tabulkového výrazu `expr` a bude se jmenovat `name`.
 - Například:
 ```sql
@@ -102,7 +102,7 @@ A Space Odyssey | 1968 |    149
 
 SELECT *
 FROM ( TABLE movies ) AS t
-WHERE  title = ’The Avengers’;
+WHERE  title = 'The Avengers';
     title     | year | length
 --------------+------+--------
  The Avengers | 2012 |    143
@@ -113,7 +113,7 @@ Výraz můžeme ještě zjednodušit:
 ```sql
 SELECT *
 FROM   movies
-WHERE  title = ’The Avengers’;
+WHERE  title = 'The Avengers';
     title     | year | length
 --------------+------+--------
  The Avengers | 2012 |    143
@@ -164,8 +164,8 @@ FROM   movies;
 - Výsledná relace obsahuje všechny kombinace tuplů z obou relací, které mají stejné hodnoty ve sloupcích, podle kterých se spojují.
 ```sql
 SELECT table1.*,
-       table2.column1',
-       table2.column1'
+       table2.column1,
+       table2.column2
 		...
 FROM expr1 AS table1,
      expr2 AS table2
