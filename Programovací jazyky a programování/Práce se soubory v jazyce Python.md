@@ -77,3 +77,9 @@ finally:
         file.close()
 
 ```
+
+
+##### Navigace
+Předchozí:  [[Typy chyb a jejich hledání v jazyce Python]]
+Následující: [[Binární data v jazyce Python]]
+Celý okruh: [[3. Programovací jazyky a programování]]

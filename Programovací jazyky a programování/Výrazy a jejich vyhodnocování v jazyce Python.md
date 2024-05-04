@@ -17,3 +17,9 @@
 
 ## Vyhodnocení podmínek
 - Python umožňuje vyhodnocování podmínek pomocí konstrukcí jako `if`-`else` výrazy. Tyto výrazy umožňují rozhodnutí na základě logických podmínek.
+
+
+##### Navigace
+Předchozí:  [[Řízení vykonávání programu v jazyce Python - bloky, cykly, větvení, funkce]]
+Následující: [[Základní datové typy v jazyce Python]]
+Celý okruh: [[3. Programovací jazyky a programování]]

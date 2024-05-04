@@ -61,3 +61,9 @@ x = -1
 if x < 0:
     raise ValueError("Hodnota musí být kladná.")
 ```
+
+
+##### Navigace
+Předchozí:  [[Základní datové typy v jazyce Python]]
+Následující: [[Typy chyb a jejich hledání v jazyce Python]]
+Celý okruh: [[3. Programovací jazyky a programování]]

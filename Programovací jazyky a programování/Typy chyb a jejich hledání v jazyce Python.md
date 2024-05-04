@@ -102,3 +102,9 @@ KeyboardInterrupt
 - **Debugging:** Použití debuggeru jako pdb nebo využití vývojových prostředí s funkcemi pro ladění může usnadnit hledání chyb.
 
 - **Logování:** Přidání výstupů nebo logovacích zpráv do kódu může pomoci identifikovat místa, kde program nefunguje správně. (Jak někdo řekl u Janoštíka: Prostě to "vyprintíme".)
+
+
+##### Navigace
+Předchozí:  [[Základy systému výjimek v jazyce Python]]
+Následující: [[Práce se soubory v jazyce Python]]
+Celý okruh: [[3. Programovací jazyky a programování]]

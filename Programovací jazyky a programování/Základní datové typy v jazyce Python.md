@@ -38,3 +38,9 @@ list = [1, 2, 3] list.append(4) # Přidává prvek 4 na konec seznamu
 4. **Metody a operátory:** Každý datový typ v Pythonu má své vlastní metody a operátory pro manipulaci s daty. Například metoda `append()` pro seznamy, nebo operátor `+` pro spojování řetězců.
 
 5. **Dynamická alokace paměti:** Python spravuje paměť dynamicky, což znamená, že se stará o alokaci a dealokaci paměti pro proměnné a datové struktury.
+
+
+##### Navigace
+Předchozí:  [[Výrazy a jejich vyhodnocování v jazyce Python]]
+Následující: [[Základy systému výjimek v jazyce Python]]
+Celý okruh: [[3. Programovací jazyky a programování]]

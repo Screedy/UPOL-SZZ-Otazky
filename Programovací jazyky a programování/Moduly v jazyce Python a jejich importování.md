@@ -18,3 +18,9 @@ Vlastní moduly můžeme vytvářet tím, že uložíme kód do souboru s příp
 - **random:** Pro generování náhodných čísel.
 - **datetime:** Pro manipulaci s datumem a časem.
 - **sys:** Pro práci s interpretem Pythonu.
+
+
+##### Navigace
+Předchozí:  [[Binární data v jazyce Python]]
+Následující: [[Základy objektového programování - třídy, objekty zasílání zpráv]]
+Celý okruh: [[3. Programovací jazyky a programování]]

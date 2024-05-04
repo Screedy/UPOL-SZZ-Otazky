@@ -44,3 +44,9 @@ def nazev_funkce(parametry):
     # kód funkce
     return vysledek
 ```
+
+
+##### Navigace
+Předchozí:  
+Následující: [[Výrazy a jejich vyhodnocování v jazyce Python]]
+Celý okruh: [[3. Programovací jazyky a programování]]

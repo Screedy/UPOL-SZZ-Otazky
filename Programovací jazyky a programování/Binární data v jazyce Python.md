@@ -48,3 +48,9 @@ print(bin(e))  # Vypíše: 0b110
 f = ~a
 print(bin(f))  # Vypíše: -0b1110 (jelikož výsledek závisí na délce bitového slova)
 ```
+
+
+##### Navigace
+Předchozí:  [[Práce se soubory v jazyce Python]]
+Následující: [[Moduly v jazyce Python a jejich importování]]
+Celý okruh: [[3. Programovací jazyky a programování]]
