@@ -1,6 +1,6 @@
 ### Kartézský součin
 - Kartézský součin $n$ množin je **množina všech uspořádaných $n$-tic prvků z těchto množin $X_{1} \times ... \times X_{n} = \{ <x_{1}, ..., x_{n}> \mid x_{1} \in X_{1}, ..., x_{n} \in X_{n} \}$**
-- Je-li $X_{1} = ... = X_{n} = X$, pak píšeme $X^{n}$ a říkáme **n-tá kartézská mocnina množiny X**
+- Je-li $X_{1} = ... = X_{n} = X$, pak píšeme $X^{n}$ a říkáme **$n$-tá kartézská mocnina množiny X**
 - Velikost $\mid A \times B \mid$ je $\mid A \mid \times \mid B \mid$
 - **Relace mezi $X_{1}, ..., X_{n}$** je **libovolná podmnožina kartézského součinu $X_{1} \times ... \times X_{n}$**
 
@@ -16,7 +16,7 @@
 - **$<x_{1}, ..., x_{n}> = <y_{1}, ..., y_{m}>$**, právě když **$n = m$** a $x_{1} = y_{1}, ..., x_{n} = y_{m}$
 
 ### Vztah a operace s relacemi
-- Relace jsou speciální množiny (relace podmožina kartézskáho součinu) $\rightarrow$ lze s nimi provádět **množinové operace a vztahy**
+- Relace jsou speciální množiny (relace je podmmožina kartézského součinu) $\rightarrow$ lze s nimi provádět **množinové operace a vztahy**
 
 - **Rovnost** (vztah)
 	- Označujeme symbolem "$=$"
@@ -51,7 +51,7 @@
 	- "Pořadí v relaci se převrátí"
 - **Skládání** (operace)
 	- Je-li $R \subseteq X \times Y$ a $S \subseteq Y \times Z$, pak **složením relací** je relace **$R \circ S \subseteq X \times Z$**
-		- $R \circ S = \{<x, z> \mid$ existuje $y \in Y: <x,y> \in R$ a $<y,z> \in S$
+		- $R \circ S = \{<x, z> \mid$ existuje $y \in Y: <x,y> \in R$ a $<y,z> \in S\}$
 	- "Přes společný prvek (tzv. prostředníka) spojím relace do jedné"
 
 ### Binární relace a jejich reprezentace
@@ -63,26 +63,28 @@
 	- Máme relaci **$R \subseteq X \times Y$**, kde **$X = \{x_{1}, ..., x_{m}\}$** a **$Y = \{y_{1}, ..., y_{n}\}$**. Relaci R repzentujeme maticí/tabulkou, ve které se na místě odpovídající řádku $i$ a sloupci $j$ nachází hodnota, která určuje, **zda dvojici $<x_{i},y_{j}> \in R$**, nebo $<x_{i},y_{j}> \notin R$
 	- $M_{R}$ se nazývá matice relace $R$
 	- **Výhodou je přehlednost, nevýhodou je paměťová náročnost**
-	- Pro relaci $R = \{<a,1>,<a,2>,<a,4>,<b,2>,<b,4>,<c,1>\}$
-	  ![[MacBook-2024-02-29-000762@2x.png | 400]]
+	>[!Example] Pro relaci $R = \set{<a,1>,<a,2>,<a,4>,<b,2>,<b,4>,<c,1>}$
+	>
+	>![[MacBook-2024-02-29-000762@2x.png]]
 
 - **Reprezentace orientovaným grafem**
-	- Graf binární relace $R \subseteq X \times X$ dostaneme tak
+	- Graf binární relace $R \subseteq X \times X$ dostaneme tak, že:
 		- Každý prvek $x \in X$ znázorníme v rovině jako **kroužek** s označením daného prvku
 		- Pokud $<x,y> \in R$, nakreslíme z **kroužku odpovídajícího $x$ do kroužku odpovídajícího $y$ orientovanou čáru s šipkou**.
-	- Pro relaci $R=\{<a,b>,<a,d>,<b,d>,<c,a>\}$
-	  ![[MacBook-2024-02-29-000763@2x.png | 150]]
+	-
+	>[!Example] Pro relaci $R=\set{<a,b>,<a,d>,<b,d>,<c,a>}$
+	>![[MacBook-2024-02-29-000763@2x.png | 200]]
 
 - **Reprezentace seznamem seznamů**
 	- **Je vhodný pro uložení** binární relace $R$ na množině $X$
 	- Reprezentaci tvoří **hlavní (spojový) seznam**, ve kterém jsou uloženy **všechny prvky množiny X.**
 	- Z každého prvku $x \in X$ hlavního seznamu vede seznam obsahující právě **ty $y \in X$, pro každé $<x,y> \in R$**
 	- Reprezentace seznamem seznamů je **paměťové úsporná** a je vhodná pro počítačové zpracování
-	-  Pro relaci $R=\{<a,b>,<a,d>,<b,d>,<c,a>\}$
-	  ![[MacBook-2024-02-29-000764@2x.png | 400]]
+	>[!Example] Pro relaci $R=\set{<a,b>,<a,d>,<b,d>,<c,a>}$
+	>![[MacBook-2024-02-29-000764@2x.png | 400]]
 
 ### Mocnina relace
-- N-tou mocninu relace zavádíme pomocí *skládání relací*
+- $n$-tou mocninu relace zavádíme pomocí *skládání relací*
 	- $R^{1} = R$
 	- $R^{n} = R \circ R^{n-1}$
 		- $R^{2} = R \circ R$
@@ -107,7 +109,9 @@
 	- $Tra(R)$ = tranzitivní uzávěr relace R
 		- $Tra(R)$ = $\cup^{\infty}_{n=1} R^{n}$
 		- Sjednocení nekonečně mnoho relací $R^{1} \cup ,... , \cup R^{n}$, pokud ale je R definována na konečné množině $X$, kde $\mid X \mid = n$, pak $Tra(R) = \cup^{n}_{i=1} R^{i}$
-- ![[MacBook-2024-02-29-000765@2x.png | 500]]
+
+>[!Example]
+>![[MacBook-2024-02-29-000765@2x.png | 500]]
 
 ##### Navigace
 Předchozí:  [[Množiny, množinové operace, potenční množina, kartézský součin, číselné množiny, spočetné a nespočetné množiny]]

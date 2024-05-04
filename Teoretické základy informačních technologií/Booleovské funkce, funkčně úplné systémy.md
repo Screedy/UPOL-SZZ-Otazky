@@ -44,7 +44,7 @@
   >[!Example] Důkaz
   >- Pomocí $\uparrow$ (resp. $\downarrow$) lze vyjádřit $\neg,\land, \lor$:
   >  Zřejmě $$(a \uparrow b) \leftrightarrow \neg(a \land b).$$
-  >  Odstud:
+  >  Odsud:
   > 	 1. $\neg a \leftrightarrow \neg (a \land a) \leftrightarrow (a \uparrow a);$
   > 	 2. $(a \land b) \leftrightarrow \neg \neg (a \land b) \leftrightarrow \neg (a \uparrow b) \leftrightarrow ((a \uparrow b) \uparrow (a \uparrow b));$
   > 	 3. $(a \lor b) \leftrightarrow \neg \neg (a \lor b) \leftrightarrow \neg (\neg a \land \neg b) \leftrightarrow (\neg a \uparrow \neg b) \leftrightarrow ((a \uparrow a) \uparrow (b \uparrow b)).$
