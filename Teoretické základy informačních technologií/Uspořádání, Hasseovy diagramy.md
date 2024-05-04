@@ -1,6 +1,6 @@
 ### Uspořádání
-- Uspořádání je matematický protějšek pojmu hierarchie
-- Binární relace $\cup$ na množině $A \neq \varnothing$ se nazývá **uspořádání**, je-li **reflexivní, antisymetrická a tranzitivní.**
+- Uspořádání je matematický protějšek pojmu **hierarchie**
+- Binární relace $U$ na množině $A \neq \varnothing$ se nazývá **uspořádání**, je-li **reflexivní, antisymetrická a tranzitivní.**
 - Vlastnosti:
 	- **Reflexivní** - Každé $x$ z $X$ je totožné s $x$, tedy $x = x$
 	- **Tranzitivní** - Pokud $x \leq y$ a $y \leq z$, pak i $x \leq z$
@@ -44,12 +44,13 @@
 	- Prvky $x \in X$ se znázorní jako kroužky
 	- Je-li $x \leq y$, nakreslíme kroužek $x$ níže než kroužek $y$
 	- Je-li $x \prec y$, propojíme kroužky $x$ a $y$ úsečkou
-- Příklad:
-![[MacBook-2024-03-05-000783.png| 700]]
+
+>[!Example] Příklad hasseova diagramu
+>![[MacBook-2024-03-05-000783.png| 700]]
 
 
 ---
-Není v okruhu
+
 ### Speciální prvky v uspořádaných množinách a jejich vztahy
 - Nechť $<X, \leq >$ je uspořádaná množina. Prvek $x \in X$ se nazývá:
 	- **minimální**, jestliže pro každý $y \in X$ platí: pokud $y \leq x$, pak $x = y$
@@ -57,7 +58,7 @@ Není v okruhu
 	- **maximální**, jestliže pro každý $y \in X$ platí: pokud $x \leq y$, pak $x = y$
 	- **největší**, jestliže $y \leq x$ pro každý $y \in X$ (je pouze jeden)
 
-- Nechť $<X, \leq>$ je uspořádaná množina. Pak platí
+- Nechť $<X, \leq>$ je uspořádaná množina. Pak platí:
 	- V $<X, \leq >$ existuje nejvýše **jeden největší** a **jeden nejmenší** prvek
 	- Je-li $x \in X$ **největší (nejmenší)** prvek, pak je také **maximální (minimální)** a žádné další maximální (minimální) prvky se v $X$ nevyskytují
 	- Pokud je $\leq$ **lineární uspořádání**, pak je $x \in X$ **největší (nejmenší)** prvek, **právě když** je **maximální (minimální)**

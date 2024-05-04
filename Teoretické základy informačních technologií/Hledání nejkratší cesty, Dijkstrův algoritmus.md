@@ -1,6 +1,5 @@
 ### Hledání nejkratší cesty a Dijkstrův algoritmus
 - Dijkstrův algoritmus je jeden z nejznámějších algoritmů **hledání nejkratší cesty**
-- Algoritmus pracuje následovně
 ---
 - **Na vstupu**: je neorientovaný graf $G = <V, E>$, jeho hranové ohodnocení $w: E \rightarrow R^{+}$ a vrchol $s \in V$
 - **Výstupem**: algoritmu je pro každý vrchol $v \in V$ číslo $d(v)$, které je vzdáleností z $s$ do $v$.

@@ -22,7 +22,7 @@
 	- Hod kostkou: jev "sudé číslo" $= \set{2,4,6}$
 	- Výběr člověka: jev "žena" $= \set{\text{člověk } c \text{ v ČR } | c \text{ je žena}}$
 - $\mathbb{A}$ = množina měřitelných jevů
-- pravděpodobnost, přesněji **pravděpodobnostní míra**, je funkce $P: \mathbb{B} \rightarrow [0,1]$ splňující jisté vlastnosti
+- pravděpodobnost, přesněji **pravděpodobnostní míra**, je funkce $P: \mathbb{A} \rightarrow [0,1]$ splňující jisté vlastnosti
 
 - Základním pojmem v Kolmogorově přístupu je pojem **pravděpodobnostní prostor**:
 
@@ -70,7 +70,7 @@
 ## Náhodná veličina, střední hodnota
 
 ### Náhodná veličina
-- Představme si, že náhodný pokud spočívá v náhodném výběru muže v České Republice.
+- Představme si, že náhodný pokus spočívá v náhodném výběru muže v České Republice.
 - Označíme-li $\Omega = \set{\omega_{1},...,\omega_{k}}$ množinu všech můžu v ČR, lze tento výběr popsat **pravděpodobnostním prostorem**, ve kterém množinou elementárních jevů je $\Omega$ a pravděpodobnost výběru každého muže $\omega_{i}$ je $P(\set{\omega_{i}}) = 1/k$.
 - V této situaci nás může zajímat například **výška mužů**. Výšku mužů lze chápat jako funkci $X: \Omega \rightarrow \mathbb{R}$, která muži $\omega \in \Omega$ přiřadí jeho výšku $X(\omega)$.
 	- např. $X(\omega) = 182$

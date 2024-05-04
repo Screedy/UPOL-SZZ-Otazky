@@ -43,8 +43,8 @@ classDef default fill:green,stroke-width:3px;
 - V každém stromu s alespoň dvěma vrcholy existují alespoň dva listy
 
 - Pro graf $G$ a jeho koncový vrchol $v$ jsou následující tvrzení ekvivalentní
-	- **G je strom**
-	- **G - v je strom**
+	- **$G$ je strom**
+	- **$G - v$ je strom**
 
 - Pro neorientovaný graf $G = <V,E>$ jsou následující tvrzení <u>ekvivalentní</u>
 	- $G$ je strom
@@ -66,7 +66,7 @@ classDef default fill:green,stroke-width:3px;
 	- **Hloubka** (úroveň) **vrcholu $v$** je délka cesty od kořene $r$ do $v$
 	- **Výška vrcholu $v$** je délka nejdelší cesty od $v$ do některého z listů
 	- **Výška** (hloubka) **stromu** je výška jeho kořene
-	- Kořenový strom $<G, r>$ s hloubkou $h$ se nazývá **vyvážený**, pokud má každý jeho list úroveň *h* nebo *h-1*
+	- Kořenový strom $<G, r>$ s hloubkou $h$ se nazývá **vyvážený**, pokud má každý jeho list úroveň $h$ nebo $h-1$
 
 - Kořenový strom se nazývá **$m$-ární**, právě když každý jeho vrchol má **nejvýše $m$ potomků** 
 - $m$-ární kořenový strom $<G, r>$ výšky $h$ se nazývá **zaplněný**, pokud splňuje následující podmínky:
