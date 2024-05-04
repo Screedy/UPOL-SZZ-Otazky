@@ -65,7 +65,7 @@
 	- **Výhodou je přehlednost, nevýhodou je paměťová náročnost**
 	>[!Example] Pro relaci $R = \set{<a,1>,<a,2>,<a,4>,<b,2>,<b,4>,<c,1>}$
 	>
-	>![[MacBook-2024-02-29-000762@2x.png]]
+	>![[MacBook-2024-02-29-000762.png]]
 
 - **Reprezentace orientovaným grafem**
 	- Graf binární relace $R \subseteq X \times X$ dostaneme tak, že:
@@ -73,7 +73,7 @@
 		- Pokud $<x,y> \in R$, nakreslíme z **kroužku odpovídajícího $x$ do kroužku odpovídajícího $y$ orientovanou čáru s šipkou**.
 	-
 	>[!Example] Pro relaci $R=\set{<a,b>,<a,d>,<b,d>,<c,a>}$
-	>![[MacBook-2024-02-29-000763@2x.png | 200]]
+	>![[MacBook-2024-02-29-000763.png| 200]]
 
 - **Reprezentace seznamem seznamů**
 	- **Je vhodný pro uložení** binární relace $R$ na množině $X$
@@ -81,7 +81,7 @@
 	- Z každého prvku $x \in X$ hlavního seznamu vede seznam obsahující právě **ty $y \in X$, pro každé $<x,y> \in R$**
 	- Reprezentace seznamem seznamů je **paměťové úsporná** a je vhodná pro počítačové zpracování
 	>[!Example] Pro relaci $R=\set{<a,b>,<a,d>,<b,d>,<c,a>}$
-	>![[MacBook-2024-02-29-000764@2x.png | 400]]
+	>![[MacBook-2024-02-29-000764.png| 400]]
 
 ### Mocnina relace
 - $n$-tou mocninu relace zavádíme pomocí *skládání relací*
@@ -111,7 +111,7 @@
 		- Sjednocení nekonečně mnoho relací $R^{1} \cup ,... , \cup R^{n}$, pokud ale je R definována na konečné množině $X$, kde $\mid X \mid = n$, pak $Tra(R) = \cup^{n}_{i=1} R^{i}$
 
 >[!Example]
->![[MacBook-2024-02-29-000765@2x.png | 500]]
+>![[MacBook-2024-02-29-000765.png| 500]]
 
 ##### Navigace
 Předchozí:  [[Množiny, množinové operace, potenční množina, kartézský součin, číselné množiny, spočetné a nespočetné množiny]]

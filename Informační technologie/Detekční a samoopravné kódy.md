@@ -17,7 +17,7 @@
 		- detekuje lichý počet chyb na stejných pozicích v blocích, nedetekuje změnu pořadí bloků
 	1. **CRC (Cyklický redundantní kód)**:
 		- přidává k datům speciální sekvenci bitů, známou jako kontrolní součet (checksum), která umožňuje příjemci ověřit integritu dat pomocí jednoduchého výpočtu
-		- ![[MacBook-2024-04-27-001089@2x.png]]
+		- ![[MacBook-2024-04-27-001089.png]]
 			1. **Zvolení generujícího polynomu**: V našem případě je to polynom $x^{3} + x + 1$ který můžeme zapsat jako binární číslo $1101$
 			2. **Příprava**: K datům se přidají nuly, počet nul odpovídá stupni polynomu (v našem případě 3)
 			3. **Dělení dat pomocí operace XOR**: Využijeme operaci XOR pro simulaci dělení polynomem.

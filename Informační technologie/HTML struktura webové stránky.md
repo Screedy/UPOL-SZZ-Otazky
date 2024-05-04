@@ -50,7 +50,7 @@
 - `p` může být více
 
 ## Struktura stránky
-![[MacBook-2024-04-28-001094@2x.png]]
+![[MacBook-2024-04-28-001094.png]]
 - Stránka je rozdělená na strukturální elementy
 	- `main`, `header`, `nav`, `article`, `section`, `aside`, `footer`
 

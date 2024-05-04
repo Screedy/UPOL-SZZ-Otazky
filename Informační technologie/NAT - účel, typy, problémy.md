@@ -17,7 +17,7 @@
 ### Jak se překládají adresy
 - adresa v LAN se při překladu neukládá do paketu (vede si NAT translation table)
 - krom IP se přepisuje i port z transportní vrstvy
-![[MacBook-2024-04-22-001061@2x.png]]
+![[MacBook-2024-04-22-001061.png]]
 
 ## Typy
 - **Statický NAT (SNAT)**:

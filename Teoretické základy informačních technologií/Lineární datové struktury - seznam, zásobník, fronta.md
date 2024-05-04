@@ -25,7 +25,7 @@
 - Nemusí být v paměti za sebou
 - **Jednosměrný** = u prvků známe následovníka
 - **Obousměrný** = u prvků známe následovníka i předchůdce
-- ![[MacBook-2024-03-11-000822@2x.png | 500]]
+- ![[MacBook-2024-03-11-000822.png| 500]]
 
 ##### Navigace
 Předchozí:  [[O-notace a růst funkcí, definice, vlastnosti, příklady použití]]

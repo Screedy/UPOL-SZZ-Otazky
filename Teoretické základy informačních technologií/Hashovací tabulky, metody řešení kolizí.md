@@ -21,7 +21,7 @@ Kostra přístupu k místu, kde je v tabulce $T$ klíč $k$
 - I když máme $\mid U \mid < m,$ může být pravděpodobnost, že dojde ke kolizi, **vysoká** (narozeninový paradox)
 
 #### Řešení kolizí pomocí řetězení (chaining)
-- *Klíče*, které se zahashují na stejný index ukládáme **do seznamu**![[MacBook-2024-03-14-000878@2x.png]]
+- *Klíče*, které se zahashují na stejný index ukládáme **do seznamu**![[MacBook-2024-03-14-000878.png]]
 #### Implementace
 ```C
 struct table
@@ -51,7 +51,7 @@ proc search(T,k)
 	- všechny klíče prvků v tabulce zobrazili pomocí $h$ na **stejnou hodnotu**, nebo se klíč v **tabulce nenachází**
 
 #### Složitost `search` v průměrném případě
-![[MacBook-2024-03-14-000879@2x.png]]
+![[MacBook-2024-03-14-000879.png]]
 
 ### Konstrukce hashovací funkce
 - *Cíl je jednoduché rovnomrné hashování*
@@ -72,7 +72,7 @@ proc search(T,k)
 	- **hodnotu z předchozího bodu upravíme** tak, aby byla mezi $0$ a $m-1$
 
 >[!Example] Příklad
->![[MacBook-2024-03-14-000880@2x.png]]
+>![[MacBook-2024-03-14-000880.png]]
 
 >[!Tip]
 >U dělící metody *není dobré, když je velikost tabulky mocnina $2$*, protože pak výsledek záleží pouze na hodnotě spodních bitů (jejich počet odpovídá exponentu)
@@ -131,7 +131,7 @@ proc search(T,k)
 	- $h_{2}(k) = 1 + (k \text{ mod } m-1)$
 - Pro prvočíselné $m$ existuje $m^{2}$ průzkumných posloupností
 >[!Example] Příklad pro $m=5$
->![[MacBook-2024-03-14-000882@2x.png]]
+>![[MacBook-2024-03-14-000882.png]]
 
 ##### Navigace
 Předchozí:  [[B stromy, operace a jejich složitost]]

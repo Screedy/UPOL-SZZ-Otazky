@@ -19,7 +19,7 @@
 	- často používán v osobních počítacích s procesory Intel a AMD využívající platformu x86
 - **Mixed-endian**: mohou používat kombinaci předchozích
 	- využíván na platformě ARM
-![[MacBook-2024-04-26-001088@2x.png | 500]]
+![[MacBook-2024-04-26-001088.png| 500]]
 
 ## Celá čísla
 = interval ⟨min. záporné, max. kladné⟩

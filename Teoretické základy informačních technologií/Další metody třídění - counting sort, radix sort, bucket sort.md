@@ -46,7 +46,7 @@ Radix-Sort(A, d)
 ```
 
 >[!Example]- Příklad
->![[MacBook-2024-03-11-000850@2x.png]]
+>![[MacBook-2024-03-11-000850.png]]
 
 #### Výpočet složitosti v nejhorším případě
 - řádek $1$: $\Theta (d)$ instrukcí

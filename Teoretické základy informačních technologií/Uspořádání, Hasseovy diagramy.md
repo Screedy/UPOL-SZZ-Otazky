@@ -45,7 +45,7 @@
 	- Je-li $x \leq y$, nakreslíme kroužek $x$ níže než kroužek $y$
 	- Je-li $x \prec y$, propojíme kroužky $x$ a $y$ úsečkou
 - Příklad:
-![[MacBook-2024-03-05-000783@2x.png | 700]]
+![[MacBook-2024-03-05-000783.png| 700]]
 
 
 ---

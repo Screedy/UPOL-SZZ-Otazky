@@ -1,5 +1,5 @@
 ### Síťová vrstva TCP/IP architektury
-![[MacBook-2024-03-24-000937@2x.png]]
+![[MacBook-2024-03-24-000937.png]]
 - Síťová vrstva je nezávislá na nižších vrstvách.
 - Úkolem této vrstvy je jedinečná identifikace uzlů v síti a zajištění komunikace mezi uzly které se nenacházejí ve stejné lokální síti.
 - Síťová vrstva je tvořena několika protokoly, tím nejdůležitějším je IP (Internet Protocol)
@@ -8,7 +8,7 @@
 
 ### IP paket (IPv4)
 - Na úrovni síťové vrstvy jsou data přenášena ve formě IP paketů
-![[MacBook-2024-03-24-000938@2x.png]]
+![[MacBook-2024-03-24-000938.png]]
 - Obsahuje:
 	- Hlavičku ve velikosti minimálně 20B
 		- V ní je vyhrazena sekce pro volitelné položky o velikosti až 40B
@@ -37,7 +37,7 @@
 ##### Classful
 - Adresní prostor rozdělen do tříd A-E
 - Každá třída má pevně danou velikost pro adresu sítě a uzlů v síti
-  ![[MacBook-2024-03-24-000939@2x.png]]
+  ![[MacBook-2024-03-24-000939.png]]
 - Dnes se již **nepoužívá**.
 
 ##### Classless
@@ -59,7 +59,7 @@
 	- 192.168.1.42 AND 255.255.255.0 $\rightarrow$ 192.168.1.0
 
 - První a poslední adresa v síti je **vyhrazena** pro **adresu sítě** a pro **broadcast** adresu
-![[MacBook-2024-03-24-000940@2x.png]]
+![[MacBook-2024-03-24-000940.png]]
 
 - Počet adres v síti je určen jako $2^{32-n}$, kde $n$ je délka masky
 - Broadcast adresu zjistíme jako IP OR (NOT maska).
@@ -82,17 +82,17 @@
 - Při tvorbě podsítí se původní adresní prostor zmenší o $m$ bitů, které se využijí pro adresaci podsítí.
 - To se provede prodloužením délky síťové masky o $m$ bitů.
 - Je tedy tvořena původní adresou sítě a $m$ bity, které byly ukrojeny z původního adresního prostoru v síti
-![[MacBook-2024-03-24-000941@2x.png]]
+![[MacBook-2024-03-24-000941.png]]
 
 - Tvorbu podsítí můžeme realizovat dvěma způsoby:
 	1. Konstantní maska
 		- Rozdělení na stejně velké podsítě pomocí konstantní masky.
-		- Příklad:![[MacBook-2024-03-24-000942@2x.png]]
+		- Příklad:![[MacBook-2024-03-24-000942.png]]
 	2. Variabilní maska
 		- Rozdělení na různě velké podsítě pomocí variabilní masky
 		- Docílíme menšího plýtvání
 		- Nejprve podsítě seřadíme dle jejich velikosti a postupně jim předělujeme adresy
-		- Příklad:![[MacBook-2024-03-24-000943@2x.png]]
+		- Příklad:![[MacBook-2024-03-24-000943.png]]
 
 #### Přidělení IP adresy koncovým uzlům
 - Statické přidělení - adresa je manuálně přidělena

@@ -1,5 +1,5 @@
 ## Aplikační vrstva
-![[MacBook-2024-04-18-001039@2x.png | 500]]
+![[MacBook-2024-04-18-001039.png| 500]]
 - Nejvyšší vrstva TCP/IP architektury
 
 - Je tvořena aplikační protokoly.
@@ -54,17 +54,17 @@
 	- Toto je nevhodné.
 	- Stav byl do protokolu dodán v podobě cookies. To jsou malé textové soubory uložené na klientovi.
 
-- Při použití HTTP protokolu si mezi sebou klient a server vyměňují HTTP zprávy (request a response).![[MacBook-2024-04-18-001040@2x.png]]
+- Při použití HTTP protokolu si mezi sebou klient a server vyměňují HTTP zprávy (request a response).![[MacBook-2024-04-18-001040.png]]
 
 #### Request zpráva
-![[MacBook-2024-04-18-001041@2x.png | 600]]
+![[MacBook-2024-04-18-001041.png| 600]]
 
 #### Response zpráva
-![[MacBook-2024-04-18-001042@2x.png]]
+![[MacBook-2024-04-18-001042.png]]
 
 ### Elektronická pošta
 - Realizována jako klient-server architektura.
-![[MacBook-2024-04-18-001043@2x.png]]
+![[MacBook-2024-04-18-001043.png]]
 - Alice bude chtít poslat mail Bobovi:
 	- Alice použije poštovního klienta (aplikaci). 
 		- UA - User Agent
@@ -81,13 +81,13 @@
 	- O přístup do mail boxu se stará číst klienta, která se označuje Message Access Agent (MAA). MAA, který je realizován jako klient-server služba, pomocí Internet Mail Access Protocol 4 (IMAP4) přistoupí k Bobovu mail boxu a stáhne jeho obsah do Bobova poštovního klienta.
 
 #### Struktura e-mailu
-![[MacBook-2024-04-18-001044@2x.png | 400]]
+![[MacBook-2024-04-18-001044.png| 400]]
 
 ## Tvorba síťových aplikací
 - Operační systém na požádání aplikace přiděluje síťový socket. Pomocí socketu aplikace může posílat a přijímat data (Socket API).
 - Programátor obvykle potřebuje využívat pouze služby transportní vrstvy.
 
-- Scháma Socket API:![[MacBook-2024-04-18-001045@2x.png]]
+- Scháma Socket API:![[MacBook-2024-04-18-001045.png]]
 - Při vytvoření socketu (funkce `socket()`) se specifikuje typ síťové adresy a transportní protokol
 - Sockety podporují různé síťové adresy, například IPv4 adresy se zpřístupňují volbou `AF_INET`.
 - Základní typy socketů:

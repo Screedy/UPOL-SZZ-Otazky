@@ -3,7 +3,7 @@
 	- **(Binární) halda =** pole, ve kterém uložení prvků **simuluje** jejich **přirozené uložení** v **binárním stromu**
 - Složitost algoritmu v nejhorším případě: $\Theta (n \log n)$
 - Pole $A[0 ... n-1]$ se nazývá **max-halda**, pokud pro každý $i = 1, ..., n-1$ platí, že $A[i] \leq A[\text{Parent}(i)]$
-	- ![[MacBook-2024-04-29-001113@2x.png | 150]]
+	- ![[MacBook-2024-04-29-001113.png| 150]]
 - Pole $A[0 ... n-1]$ se nazývá **min-halda**, pokud pro každý $i = 1, ..., n-1$ platí, že $A[i] \geq A[\text{Parent}(i)]$
 - **in-place** třídění
 - **nestabilní** algoritmus porovnávání

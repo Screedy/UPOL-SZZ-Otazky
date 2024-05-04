@@ -1,5 +1,5 @@
 ## Transportní vrstva
-![[MacBook-2024-04-17-001022@2x.png | 500]]
+![[MacBook-2024-04-17-001022.png| 500]]
 
 - Transportní vrstva zprostředkovává komunikaci mezi **procesy** (**aplikacemi**), které běží na komunikujících uzlech.
 - Poskytuje dvě základní služby
@@ -28,27 +28,27 @@
 	- Zaručení správného pořadí dat
 	- Detekce ztráty dat
 	- Vyžádání opakování přenosu ztracených nebo poškozených dat
-![[MacBook-2024-04-17-001023@2x.png]]
+![[MacBook-2024-04-17-001023.png]]
 - Bajty z vyšší vrstvy jsou postupně ukládány do odesílacího bufferu.
 - Z bufferu jsou v daném pořadí přenášeny do přijímacího bufferu příjemce, ze kterého jsou data postupně v daném pořadí předávána do vyšší vrstvy.
 	- Vyšší vrstva příjemce dostává bajty v pořadí, ve kterém byly vytvořeny vyšší vrstvou na odesílateli.
 
 #### TPC segment
 - Transportní vrstva přenáší data ve formě TCP segmentů
-  ![[MacBook-2024-04-17-001024@2x.png]]
+  ![[MacBook-2024-04-17-001024.png]]
 - Skládá se z:
 	- Hlavičky - $20-60$ B
 	- Datová část - data z vyšší vrstvy
 	- ...
 - Celková velikost TCP segmentu je omezena velikostí IP paketu, do kterého se vkládá.
-	- Data jsou obvykle větší, dochází k rozdělení na menší segmenty $\rightarrow$ segmentace dat.![[MacBook-2024-04-17-001025@2x.png]]
+	- Data jsou obvykle větší, dochází k rozdělení na menší segmenty $\rightarrow$ segmentace dat.![[MacBook-2024-04-17-001025.png]]
 
 #### Navázání spojení
 - Založeno na klient-server architektuře.
 	- Klient navazuje spojení, server přijímá/odmítá.
 - Aby mohlo dojít k navázání spojení, musí mít klient i server otevřený port a poslouchat komunikaci.
 - Navázání spojení probýhá technikou 3-fázového handshake:
-  ![[MacBook-2024-04-17-001026@2x.png | 300]]
+  ![[MacBook-2024-04-17-001026.png| 300]]
 	1. Klient posílá TCP segment (bez dat) s příznakem SYN a náhodně vygenerovaným číslem seq. Tento krok se označuje jako aktivní otevření.
 	2. Server posílá segment (bez dat) s příznaky SYN a ACK a náhodně vygenerovaným číslem seq a číslem potvrzení ack.
 	3. Klient posílá segment s  přiznakem ACK a číslem potvrzení nastavení seq + 1. Již může nést data.
@@ -56,7 +56,7 @@
 #### Přenos dat
 - Po navázání spojení je možné posílat data oběma směry.
 - Data jsou z odesílacího bufferu odstraněna v okamžiku potvrzení jejich přijetí.
-![[MacBook-2024-04-17-001027@2x.png | 300]]
+![[MacBook-2024-04-17-001027.png| 300]]
 1. Klient posílá segment obsahující $1000$ B dat s příznakem ACK. První B odeslaných dat má číslo $8001$, poslední má tedy $9000$. Hodnota čísla potvrzení ack $15001$ identifikuje, že jsou očekávána data začínající bajtem číslo $15001$.
 2. Klient posílá segment obsahující $1000$ B dat s příznakem ACK. První B odeslaných dat má číslo $9001$, poslední $10000$. Hodnota čísla potvrzení je ack je stále $15001$. Server nic neposlal.
 3. Server posílá segment obsahující $2000$ B dat s příznakem ACK. První B má číslo $15001$, poslední $17000$. Hodnota potvrzení ack je $10001$ $\rightarrow$ potvrzuje přejití segmentů z kroku $1$ a $2$. Jsou očekávána data začinající $10001$.
@@ -66,14 +66,14 @@
 - Je možné provést několika způsoby
 
 ##### 3-fázové ukončení spojení
-![[MacBook-2024-04-17-001028@2x.png | 300]]
+![[MacBook-2024-04-17-001028.png| 300]]
 1. Klient posílá segment (může obsahovat data) s příznakem FIN + ACK. Tento krok se označuje jako aktivní uzavření.
 2. Server posílá segment (může obsahovat data) s příznakem FIN + ACK. 
 3. Klient posílá segment (bez dat) s příznakem ACK. 
 
 ##### 4-fázové ukončení spojení
 - Tento způsob se využívá pokud pouze jedna strana chce provést ukončení spojení.
-![[MacBook-2024-04-17-001029@2x.png | 300]]
+![[MacBook-2024-04-17-001029.png| 300]]
 1. Klient posílá segment (může obsahovat data) s příznaky FIN + ACK. Klient dále nemůže posílat data, může ale přijímat a musí posílat segmenty s ACK.
 2. Server posílá segment s příznakem ACK. Server může déle posílat data. Po dokončení tohoto kroku je pro server spojení polouzavřené.
 3. Server posílá segment (může obsahovat data) a příznaky ACK a FIN.
@@ -88,10 +88,10 @@
 - Strategie stop and wait je neefektivní.
 	- Po poslání dat se čeká na potvrzení
 - Namásto toho se data v okně odesálají bez nutnosti čekání na potvrzení jejich přijetí. Jakmile je odeslaná část potvrzena, okno se posouvá.
-![[MacBook-2024-04-17-001030@2x.png]]
+![[MacBook-2024-04-17-001030.png]]
 - Posuvné okno má velikost $7$ a obsahuje bajty s čísly $41-47$. Jsou odeslány bajty $41-44$.
 - Pokud dojde k odeslání bajtu $45$ a potvrzení bajtů $41-42$ posune se okénko následovně:
-![[MacBook-2024-04-17-001031@2x.png]]
+![[MacBook-2024-04-17-001031.png]]
 - Pokud budeme zmenšovat okno, nesmí dojít k situaci, kdy jsou již odeslané bajty mimo posuvní okénko
 
 #### Pozitivní potvrzování
@@ -105,7 +105,7 @@
 	5. Pokud příjemce obdrží chybějící segment, je posláno potvrzení očekávaného segmentu. Tímto je protistrana informována, že chybějící segment již přišel.
 	6. Pokud příjemce obdrží duplicitní segment, zahodí jej a je posláno potvrzení očekávaného segmentu. Toto pravidlo slouží pro kompenzaci ztracených potvrzení.
 
-| Bezchybová komunikace<br>![[MacBook-2024-04-17-001032@2x.png \| 100%]] | Ztracený segment<br>![[MacBook-2024-04-17-001033@2x.png \| 95%]] |
+| Bezchybová komunikace<br>![[MacBook-2024-04-17-001032.png| 100%]] | Ztracený segment<br>![[MacBook-2024-04-17-001033@.png| 95%]] |
 | ---------------------------------------------------------------------- | ---------------------------------------------------------------- |
 #### Zahlcení sítě
 - Protokol TCP umožňuje řízení toku dat nejen mezi odesílatelem a příjemcem, ale také na úrovni sítě (mezilehlých uzlů).
@@ -119,7 +119,7 @@
 	3. Fáze detekce zahlcení. V případě, že je detekována potřeba opětovného zaslání segmentu, je dle události, která odeslání spustila, upraveno okno zahlcení.
 		- Pokud vypršel RTO časovač: je nastaven limit na hodnotu $\frac{1}{2}$ okna zahlcení a velikost okna zahlcení je nastavena na $1$. Je zahájena fáze pomalého startu.
 		- Pokud byl segment poslán na základě detekce tří duplicitních potvrzení: je nastaven limit na hodnotu $\frac{1}{2}$ okna zahlcení a velikost okna zahlcení je nastavena na hodnotu limit. Poté je zahájena fáze vyhýbaní se zahlcení.
-![[MacBook-2024-04-17-001034@2x.png | 500]]
+![[MacBook-2024-04-17-001034.png| 500]]
 
 ### Protokol UDP
 - UDP je oproti TCP výrazně jednodušší. Zajišťuje pouze nespojovou nespolehlivou službu a nedisponuje žádnými prostředky pro řízení toku dat.
@@ -128,4 +128,4 @@
 - Při použití protokolu UDP se data přenášejí ve formě UDP datagramů. Rozdělení do těchto datagramů je ponecháno na aplikační vrstvě.
 
 - Přenos dat je výrazně rychlejší než přenos dat pomocí TCP. Jednotlivé UDP datagramy nejsou nijak potvrzovány a hlavička datagramu nemusí obsahovat tolik informací, jelikož není vytvářeno spojení a není řízen tok dat.
-![[MacBook-2024-04-17-001035@2x.png]]
+![[MacBook-2024-04-17-001035.png]]

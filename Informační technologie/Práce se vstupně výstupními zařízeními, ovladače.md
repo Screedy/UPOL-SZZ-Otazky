@@ -51,13 +51,13 @@
 - dokončení je oznámeno řadiči DMA
 - DMA vyvolá přerušení
 >[!Example]+ Ukázka DMA
->![[MacBook-2024-05-03-001164@2x.png]]
+>![[MacBook-2024-05-03-001164.png]]
 
 ### Bufferování
 - optimalizace přenosu dat - zpoždění zápisu/čtení
 - ve skutečnosti dva buffery (v každém prostoru jeden)
 >[!Example]+ Bufferování
->![[MacBook-2024-05-03-001165@2x.png]]
+>![[MacBook-2024-05-03-001165.png]]
 
 
 ## Ovladače zařízení

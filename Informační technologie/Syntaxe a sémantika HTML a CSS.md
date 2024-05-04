@@ -43,7 +43,7 @@ více řádků
 <p> ... <em>trilogie v pěti dílech</em> ... </p>
 ```
 - elementy vytvářejí hierarchickou strukturu potomek-rodič
-  ![[MacBook-2024-04-28-001093@2x.png | 300]]
+  ![[MacBook-2024-04-28-001093.png| 300]]
 
 ## Význam (sémantika) elementů HTML
 - odkazuje na význam a účel, který mají jednotlivé HTML elementy

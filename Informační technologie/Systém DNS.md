@@ -7,7 +7,7 @@
 - Doménové jméno se skládá z několika částí, které se označují jako domény.
 	- Pro jejich rozdělení se používá tečka (.)
 - Domény jsou hierarchicky organizovány do stromové struktury, čímž vzniká vztah doména-subdoména.
-  ![[MacBook-2024-04-17-001036@2x.png | 500]]
+  ![[MacBook-2024-04-17-001036.png| 500]]
 - Pod kořenovou doménou se nachází top-level domény. (generické nebo národní)
 
 ## Jmenné servery
@@ -33,8 +33,8 @@
 7. Jmenný server spravující doménu example.com zná odpověď (1.2.3.4) a pošle ji DNS resolveru.
 8. DNS resolver přidá 1.2.3.4 klientovi a uloží si údaje do své cache.
 9. Klient uloží 1.2.3.4 do své cache a kontaktuje 1.2.3.4.
-![[MacBook-2024-04-17-001037@2x.png]]
+![[MacBook-2024-04-17-001037.png]]
 
 ## Uložení DNS záznamů
 - DNS záznamy jsou uloženy v RR (Resource Records) záznamech.
-![[MacBook-2024-04-17-001038@2x.png]]
+![[MacBook-2024-04-17-001038.png]]

@@ -1,5 +1,5 @@
 ### John von Neumannova architektura
-![[MacBook-2024-03-17-000893@2x.png | 500]]
+![[MacBook-2024-03-17-000893.png| 500]]
 - CPU:
 	- ALU (Aritmeticko-logická jednotka), provádí výpočty
 	- řadič (řídící jednotka), stará se o komunikaci po sběrnici
@@ -19,7 +19,7 @@
 - instrukce = interpretovaná (binární) data - mezi programem a zpracovávanými daty není z technického hlediska rozdíl
 
 ### Harvardská architektura počítače
-![[MacBook-2024-03-17-000894@2x.png || 500]]
+![[MacBook-2024-03-17-000894.png|| 500]]
 - Velice podobná John von Neumannově, až na oddělené paměti pro program a pro data (ty tedy lze číst současně)
 
 - Výhody:

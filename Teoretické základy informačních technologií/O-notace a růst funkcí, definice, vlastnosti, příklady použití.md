@@ -58,7 +58,7 @@
 - $f = o(g)$ právě když $g = \omega (f)$.
 
 ## Big-O Complexity chart
-![[MacBook-2024-04-29-001106@2x.png]]
+![[MacBook-2024-04-29-001106.png]]
 
 <iframe width="690" height="385" src="https://www.youtube.com/embed/__vX2sjlpXU?si=E-RiU8rWlfMJvZvC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

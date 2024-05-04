@@ -120,7 +120,7 @@ proc dfs-visit(G, u)
 
 ### Topologické uspořádání
 - Orientovaný graf bez cyklů budeme nazývat `dag`. (to je zavedená anglická zkratka pojmu **directed acyclic graph**)
-- Topologické uspořádání *dag*u $G = (V, E)$ je **lineární uspořádání vrcholů** grafu takové, že **pokud $(u,v) \in E,$** pak $u$ je v tomto uspořádání před $v$![[MacBook-2024-03-14-000883@2x.png]]
+- Topologické uspořádání *dag*u $G = (V, E)$ je **lineární uspořádání vrcholů** grafu takové, že **pokud $(u,v) \in E,$** pak $u$ je v tomto uspořádání před $v$![[MacBook-2024-03-14-000883.png]]
 #### Algoritmus topol
 - Inicializujeme prázdný seznam uzlů
 - Spustíme upravený průchod do hloubky. Úprava spočívá v tom, že vždycky, když nastavujeme $f[u]$ pro uzel $u$, připojíme $u$ na začátek seznamu

@@ -5,7 +5,7 @@
 	- Všechny listy ve stromu jsou ve stejné hloubce
 	- Klíče jsou v uzlu *uspořádány vzestupně*
 		- $k_{0} < k_{1} < k_{2} < ... < k_{n-1}$ ($1 \leq n \leq 2t - 1$)
-		  ![[MacBook-2024-03-13-000873@2x.png | 400]]
+		  ![[MacBook-2024-03-13-000873.png| 400]]
 - **Výska B-stromu:** B strom s $n \geq 1$ klíči a $t \geq 2$ má výšku nejvýše $\log_{t} \frac{n+1}{2}$
 - B-stromy jsou často používány v databázových systémech.
 	- Zaměřují se na vlastnost snížení operací s diskem.
@@ -76,7 +76,7 @@ proc b-tree-search(x,k)
 	- Uzel $x$ je již zaplněný - `x.n == 2t-1`, vložením klíče do `x` bychom v tomto vrcholu měli `2t` klíčů a porušili bychom podmínku z definice B-stromu.
 	1. Rozdělením uzlu `x` na dva uzly, každý s `t-1` klíči, a přesunem jednoho klíče do rodiče uzlu `x`
 	2. Po rozdělení můžeme `k` vložit do příslušného uzlu.
-   ![[MacBook-2024-03-13-000874@2x.png]]
+   ![[MacBook-2024-03-13-000874.png]]
 - **Problém**: 
 	- Rodič uzlu `x` ovšem **může** být před přidáním $k_{t-1}$ **také** zaplněn.
 	- Před začleněním $k_{t-1}$ jej tedy musíme **také rozdělit**. 
@@ -182,8 +182,8 @@ proc tree-insert-nonfull(x, k, d)
 - 2\. fáze - **úprava počtu klíčů v uzlech**:
 	1. Je-li $x$ kořen, nebo je-li `x.n >= t-1`, algoritmus končí
 	2. Má-li $x$ sourozence $y$ a `y.n > t-1`, pak provedeme přelití jednoho klíče (a jeho satelitních dat) mezi $x, y$ a jejich rodičem. Obrázek ukazuje situaci, kdy je $y$ levým sourozencem $x$, opačná situace je symetrická. Po přelití algoritmus končí.
-	   ![[MacBook-2024-03-13-000875@2x.png]]
-	 3. Oba sourozenci $x$ mají `t-1` prvků. Vybereme si jednoho souseda $y$ a spojíme ho s uzlem $x$ a jedním klíčem z rodiče do nového uzlu s `2 * t - 1` klíči. Na následujícím obrázku je $y$ pravým sourozencem $x$ (opačná situace je symetrická). Po spojení uzlů pokračujeme novou iterací fáze 2, do které pošleme rodiče uzlu $x$. Z rodiče jsme totiž odebrali jeden klíč a jeho počet klíčů se tak mohl dostat pod `t - 1`![[MacBook-2024-03-13-000876@2x.png]]
+	   ![[MacBook-2024-03-13-000875.png]]
+	 3. Oba sourozenci $x$ mají `t-1` prvků. Vybereme si jednoho souseda $y$ a spojíme ho s uzlem $x$ a jedním klíčem z rodiče do nového uzlu s `2 * t - 1` klíči. Na následujícím obrázku je $y$ pravým sourozencem $x$ (opačná situace je symetrická). Po spojení uzlů pokračujeme novou iterací fáze 2, do které pošleme rodiče uzlu $x$. Z rodiče jsme totiž odebrali jeden klíč a jeho počet klíčů se tak mohl dostat pod `t - 1`![[MacBook-2024-03-13-000876.png]]
 
 >[!Example]- Mazání
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/pN4C8cLVc7I?si=AvBmer1fUTl0BH1f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

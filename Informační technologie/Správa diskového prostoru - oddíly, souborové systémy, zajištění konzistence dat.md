@@ -23,7 +23,7 @@
 	- možnost připojit běžný soubor jako svazek
 	- kompatibilita síťových disků
 >[!Example] Příklad VFS
->![[MacBook-2024-05-03-001166@2x.png]]
+>![[MacBook-2024-05-03-001166.png]]
 
 ### LVM (Logical Volume Management)
 - = metoda správy diskového prostoru
@@ -32,7 +32,7 @@
 - možnost emulovat RAID
 - možnost vložit vrstvu starající se o snapshoty, provádět šifrování
 >[!Example] LVM
->![[MacBook-2024-05-03-001168@2x.png]]
+>![[MacBook-2024-05-03-001168.png]]
 
 ### RAID (Redundant Array of Independent Disks)
 - kombinuje několik fyzických diskových jednotek do jednoho logického úložiště
@@ -70,7 +70,7 @@
 
 ### Copy-on-Write
 >[!Example] Copy-on-Write
->![[MacBook-2024-05-03-001169@2x.png]]
+>![[MacBook-2024-05-03-001169.png]]
 
 
 ## Příklady souborových systémů
@@ -91,7 +91,7 @@
 		- nepřímé bloky odkazují do datové části
 
 >[!Example] struktura i-node 
->![[MacBook-2024-05-03-001167@2x.png]]
+>![[MacBook-2024-05-03-001167.png]]
 
 - NTFS
 	- hlavní souborový systém Windows NT

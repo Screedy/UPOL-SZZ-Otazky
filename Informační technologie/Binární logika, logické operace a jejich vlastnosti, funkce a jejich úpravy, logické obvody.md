@@ -38,15 +38,15 @@
 3 základní:
 #### Negace - $\neg$
 - Pravdivá, když operand je neopravdivý, jinak nepravdivá
-  ![[MacBook-2024-03-18-000904@2x.png | 100]]
+  ![[MacBook-2024-03-18-000904.png| 100]]
 
 #### Logický součin (konjunkce) - $\wedge$
 - Pravdivá, když oba operandy pravdivé, jinak nepravdivá
-  ![[MacBook-2024-03-18-000905@2x.png | 100]]
+  ![[MacBook-2024-03-18-000905.png| 100]]
 
 #### Logický součet (disjunkce) - $\vee$
 - Nepravdivá, když oba operandy jsou nepravdivé, jinak pravda
-  ![[MacBook-2024-03-18-000906@2x.png | 100]]
+  ![[MacBook-2024-03-18-000906.png| 100]]
 
 ### Vlastnosti základních logických operací
 - agresivita (nuly a jedničky) $0 \cdot x = 0$       $1 + x = 1$
@@ -59,11 +59,11 @@
 
 #### Implikace - $\rightarrow$
 - Nepravdivá, když první operand je pravdivý a druhý nepravdivý, jinak pravdivá
-  ![[MacBook-2024-03-18-000907@2x.png | 100]]
+  ![[MacBook-2024-03-18-000907.png| 100]]
 
 #### Ekvivalence - $\leftrightarrow$
 - Pravdivá, když operandy mají stejnou hodnotu
-  ![[MacBook-2024-03-18-000908@2x.png | 100]]
+  ![[MacBook-2024-03-18-000908.png| 100]]
 
 
 ### Logické obvody

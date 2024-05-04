@@ -1,9 +1,9 @@
 ### Linková vrstva
-![[MacBook-2024-03-18-000913@2x.png]]
+![[MacBook-2024-03-18-000913.png]]
 
 ### Linkový rámec
 - Zatímco na úrovni fyzické vrstvy jsou data přenášena v jejich surové podobě (sekvence bitů), na úrovni linkové vrstvy jsou data organizována do **linkových rámců**
-- Struktura Ethernet II linkového rámce:![[MacBook-2024-03-18-000914@2x.png]]
+- Struktura Ethernet II linkového rámce:![[MacBook-2024-03-18-000914.png]]
 - Ethernetový rámec má proměnlivou velikost 64-1518 B - závisí na datové části
 - Preambule, SFD a mezera nejsou součístí linkového rámce, ale fyzické vrstvy
 	- preambule - synchronizace
@@ -15,13 +15,13 @@
 - Každé fyzické rozhraní má fyzickou adresu, označujeme jako MAC adresa
 - Velikost **6B**, zapisuje se hexadecimálně ve tvaru XX:XX:XX:XX:XX:XX, kde X je 0-9 nebo a-f
 	- První 3B - identifikace výrobce
-	- ![[MacBook-2024-03-18-000915@2x.png]]
+	- ![[MacBook-2024-03-18-000915.png]]
 	  Pokud X je 0, jedná se o jedinčnou globální adresu přidělenou výrobcem
 
 - Speciální MAC adresy:
-	- **Unicast** adresy - nejméně významný bit  prvního B na 0![[MacBook-2024-03-18-000916@2x.png]]
-	- **Multicast** adresy - nejméně významný bit prvního B na 1![[MacBook-2024-03-18-000917@2x.png]]
-	- **Broadcast** adresa - ff:ff:ff:ff:ff:ff![[MacBook-2024-03-18-000918@2x.png]]
+	- **Unicast** adresy - nejméně významný bit  prvního B na 0![[MacBook-2024-03-18-000916.png]]
+	- **Multicast** adresy - nejméně významný bit prvního B na 1![[MacBook-2024-03-18-000917.png]]
+	- **Broadcast** adresa - ff:ff:ff:ff:ff:ff![[MacBook-2024-03-18-000918.png]]
 - Aby bylo možné co nejrychleji identifikovat MAC adresy, jsou bity jednotlivých bajtů posílány v **opačném pořadí**
 
 ### Použití média
@@ -33,7 +33,7 @@
 
 - **CSMA (Carrier Sense Multiple Access)**
 	- Než začne vysílat, poslouchá, zda nevysílá někdo jiný
-	- Problém: zpoždění v počítačových sítích $\rightarrow$ chybí detekce kolize![[MacBook-2024-03-18-000919@2x.png | 300]]
+	- Problém: zpoždění v počítačových sítích $\rightarrow$ chybí detekce kolize![[MacBook-2024-03-18-000919.png| 300]]
 
 
 - **CSMA/CD (Carrier Sense Multiple Access / Collision Detection)**

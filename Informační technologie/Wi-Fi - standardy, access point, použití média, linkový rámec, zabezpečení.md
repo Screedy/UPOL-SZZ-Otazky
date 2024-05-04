@@ -49,19 +49,19 @@
 1. žádost směrem k AP s časem pro přenos dat, stanice očekává potvrzení
 2. AP vyšle všem po chvíli (SIFS) rezervaci média (CTS) na čas pro stanici
 3. vysílání dat a jejich potvrzování, ostatní po čas nezkouší vysílat
-![[MacBook-2024-04-19-001050@2x.png | 500]]
+![[MacBook-2024-04-19-001050.png| 500]]
 
 ## Linkový rámec
 - data až 2312B (obvykle do 1500B jako u ethernetu)
 - před rámcem záhlaví fyzické vrstvy (rádia)
-![[MacBook-2024-04-19-001051@2x.png]]
+![[MacBook-2024-04-19-001051.png]]
 - až 4 MAC adresy
 	1. přijímající stanice
 	2. vysílající stanice
 	3. přijemce/odesílatel v infrastruktuře
 	4. pokud se jedná o komunikaci mezi více sítěmi
 		- V takovém případě by 3. adresa byl příjemce a 4. adesílatel
-![[MacBook-2024-04-19-001052@2x.png]]
+![[MacBook-2024-04-19-001052.png]]
 
 - řídící pole (frame control field expanded)
 	1. verze (00)

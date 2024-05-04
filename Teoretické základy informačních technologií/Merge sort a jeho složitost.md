@@ -40,7 +40,7 @@ Merge(A, p, q, r)
 - $T(n) = c$ pro $n = 1$
 - $T(n) = 2T(\frac{n}{2}) + cn$ pro $n > 1$
 - $T(n) = cn \log n + cn = \Theta (n \log n)$
-- ![[MacBook-2024-03-11-000845@2x.png | 500]]
+- ![[MacBook-2024-03-11-000845.png| 500]]
 
 ##### Navigace
 Předchozí:  [[Quick sort a jeho složitost]]

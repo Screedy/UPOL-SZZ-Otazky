@@ -11,12 +11,12 @@
 
 ### Neorientované a orientované grafy - základní pojmy
 #### Neorientovaný graf
-![[MacBook-2024-03-05-000788@2x.png | 300]]
+![[MacBook-2024-03-05-000788.png| 300]]
 - Na obrázku je **neorientovaný graf** který má vrcholy $u, v, w, x$ a $y$
 - *Vrcholy* jsou znázorněny *kroužky*. Úsečky znázorňují *hrany*.
 - Protože v neorientovaném grafu **nemají hrany orientaci**, můžeme hranu mezi vrcholy reprezentovat **neuspořádanou dvojicí, tedy dvouprvkovou množinou** napr. $\{u, w\}$
 #### Orientovaný graf
-![[MacBook-2024-03-05-000789@2x.png | 300]]
+![[MacBook-2024-03-05-000789.png| 300]]
 - Na obrázku je *orientovaný graf* který má opět vrcholy $u, v, w, x$ a $y$
 - Hrany **jsou orientované** a jsou znázorněny *šipkami*. Reprezentujeme je tedy **uspořádanou dvojicí** např. $<w, u>$
 ---
@@ -34,7 +34,7 @@
 - **Symetrizace orientovaného grafu** $G = <V, E>$ je **neorientovaný graf** $G' = <V, E'>$, kde
 	- $\{u,v \} \in E'$ právě když $<u, v> \in E$ nebo $<v, u> \in E$
 
-![[MacBook-2024-03-05-000790@2x.png]]
+![[MacBook-2024-03-05-000790.png]]
 - Graf vlevo je symetrizací grafu vpravo
 
 ### Izomorfismus
@@ -47,12 +47,12 @@
 
 - Nechť **$G_{1} = <V_{1}, E_{1}>$ a $G_{2} = <V_{2}, E_{2}>$** jsou <u>orientované</u> grafy. **Bijekce $h: V_{1} \rightarrow V_{2}$** se nazývá *izomorfismus* $G_{1}$ do $G_{2}$, pokud pro každé vrcholy $u, v \in V_{1}$ je
 	- **$<u, v > \in E_{1}$ právě když $<h(u), h(v)> \in E_{2}$**
-![[MacBook-2024-03-05-000791@2x.png]]
+![[MacBook-2024-03-05-000791.png]]
 
 ### Podgrafy
 - Části grafů se nazývají podgrafy
 - (Orientovaný nebo neorientovaný) **graf $<V_{1}, E_{1}>$** je podgrafem grafu $<V_{2}, E_{2}>$, právě když **$V_{1} \subseteq V_{2}$ a $E_{1} \subseteq E_{2}$**. Podgraf $<V_{1}, E_{1}>$ grafu $<V_{2}, E_{2}>$ se nazývá **indukovaný**, právě když **$E_{1}$ obsahuje každou hranu z $E_{2}$**, jejíž oba **koncové vrcholy patří do $V_{1}$**
-- ![[MacBook-2024-03-07-000798@2x.png]]
+- ![[MacBook-2024-03-07-000798.png]]
 - Graf uprostřed společně s grafem vpravo jsou podgrafy grafu vlevo, přitom graf uprostřed není indukovaný protože mu chybí hrana $\{u, w\}$, graf vpravo je.
 
 ### Cestování v grafech

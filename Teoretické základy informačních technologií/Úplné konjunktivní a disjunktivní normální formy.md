@@ -18,7 +18,7 @@
 	- $p_{i}$ pro $e(p_{i})=0$
 	- $\neg p_{i}$ pro $e(p_{i})=1$
 - Výsledná ÚKNF je konjunkcí ÚED z předchozího kroku
-![[MacBook-2024-02-28-000760@2x.png | 500]]
+![[MacBook-2024-02-28-000760.png| 500]]
 
 ##### Navigace
 Předchozí: [[Booleovské funkce, funkčně úplné systémy]]

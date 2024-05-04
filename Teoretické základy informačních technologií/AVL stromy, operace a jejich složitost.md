@@ -19,7 +19,7 @@
 
 
 ### Operace s AVL stromy
-- Operace `insert` a `delete` děláme jako u **binárního vyhledávacího stromu**. Problém ovšem je, že **tyto operace mohou strom učinit nepřípustným**![[MacBook-2024-03-12-000859@2x.png]]
+- Operace `insert` a `delete` děláme jako u **binárního vyhledávacího stromu**. Problém ovšem je, že **tyto operace mohou strom učinit nepřípustným**![[MacBook-2024-03-12-000859.png]]
 >[!tip]
 >Pozorujme, že přidáním nebo odebráním uzlu můžeme změnit vyváženost **pouze uzlů na cestě** od přidaného/smazaného uzlu **ke kořeni**. 
 >Je to proto, že pro ostatní uzly se výška jejich podstromu **nezmění**.
@@ -67,7 +67,7 @@ struct tree {
   $h(x) = h(y) + 1 = h(A) + 2$
 
 - Po rotaci: $h(y) = h(A) + 1$
-  ![[MacBook-2024-03-12-000860@2x.png | 400]]
+  ![[MacBook-2024-03-12-000860.png| 400]]
 ##### 2. případ - Pravá (Levá rotace)
 - $C$ je o jedna menší než $A$ a $B$
   $y.\text{bf} == 0 \rightarrow \ \ \ h(A) = h(B)$
@@ -78,7 +78,7 @@ struct tree {
   $h(x) = h(y) + 1 = h(A) + 2$
 
 - Po rotaci: $h(y) = h(A) + 2 = h(B) + 2$
-  ![[MacBook-2024-03-12-000861@2x.png | 400]]
+  ![[MacBook-2024-03-12-000861.png| 400]]
 
 ##### 3. případ
 - $B$ je o jedna větší než $A$ a $C$
@@ -89,7 +89,7 @@ struct tree {
   
   $h(x) = h(y) + 1 = h(B) + 2$
 
-- Nemůžeme použít pravou rotaci, protože po přepojení je $B$ o dva větší než $A$.![[MacBook-2024-03-13-000868@2x.png | 500]]
+- Nemůžeme použít pravou rotaci, protože po přepojení je $B$ o dva větší než $A$.![[MacBook-2024-03-13-000868.png| 500]]
 - $x. \text{bf} == 2 \rightarrow$ $y$ existuje
   $y. \text{bf} == -1 \rightarrow$ $z$ existuje
   
@@ -103,17 +103,17 @@ struct tree {
 
 - $C$ je o jedna menší než $A, B$ a $D$
 - Po rotaci: $h(z) = h(B) + 2$
-  ![[MacBook-2024-03-13-000869@2x.png | 500]]
+  ![[MacBook-2024-03-13-000869.png| 500]]
 
 ### Rotace přehled
 >[!Example]- Jednoduché rotace - pravá a levá
->![[MacBook-2024-03-13-000870@2x.png]]
+>![[MacBook-2024-03-13-000870.png]]
 
 >[!Example]- Dvojitá rotace - levo pravá
->![[MacBook-2024-03-13-000871@2x.png]]
+>![[MacBook-2024-03-13-000871.png]]
 
 >[!Example]- Dvojitá rotace - pravo levá
->![[MacBook-2024-03-13-000872@2x.png]]
+>![[MacBook-2024-03-13-000872.png]]
 
 ### Přidání - $O(\lg n)$
 - Provedeme vkládání jako v binárním vyhledávacím stromě. 

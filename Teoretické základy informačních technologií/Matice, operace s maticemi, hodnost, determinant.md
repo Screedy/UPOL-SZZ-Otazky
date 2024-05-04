@@ -217,8 +217,8 @@ $$
 
 ### Sarrusovo pravidlo
 - Vyjádření determinantů matic $2.$ a $3.$ stupně lze znázornit i schematicky:
-- Pro $n = 2:$![[MacBook-2024-03-10-000819@2x.png | 150]]
-- Pro $n = 3:$![[MacBook-2024-03-10-000820@2x.png | 150]]
+- Pro $n = 2:$![[MacBook-2024-03-10-000819.png| 150]]
+- Pro $n = 3:$![[MacBook-2024-03-10-000820.png| 150]]
 
 ### Determinanty matic ve speciálních tvarech
 - Pro každou matici $A \in M_{m \times n}(T)$, kde $T$ je číselné těleso, platí $det(A^{T}) = det(A)$.

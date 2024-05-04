@@ -10,7 +10,7 @@
 - K prvkům přistupujeme pomocí **indexu** v čase $\Theta (1)$ (konstantním čase)
 - Má **fixní velikost** (alternativa dynamické pole)
 - Všechny prvky jsou **stejného typu**
-- ![[MacBook-2024-03-12-000854@2x.png | 400]]
+- ![[MacBook-2024-03-12-000854.png| 400]]
 
 - Výpočet přístupu k $i$-tému prvku:
 	- $\text{adresa začátku} + (\text{velikost prvku} * \text{index})$ 
@@ -33,7 +33,7 @@ proc delete(AS, i)          Θ(1)
   AS.data[i] = AS.data[AS.top] 
 ```
 
-![[MacBook-2024-03-12-000855@2x.png]]
+![[MacBook-2024-03-12-000855.png]]
 
 ### Vyhledávání v nesetřízeném a setřízeném poli
 #### 1. V nesetřízeném poli
@@ -92,7 +92,7 @@ proc binary-search(A,k)
 ```
 
 Strom vyhledání:
-![[MacBook-2024-03-12-000856@2x.png | 500]]
+![[MacBook-2024-03-12-000856.png| 500]]
 
 ### Interpolační vyhledávání
 - Algoritmus je **vylepšením binárního vyhledávání** pro případy, kdy jsou hodnoty v seznamu nejen seřazené, ale **zároveň rovnoměrně rozložené**.
