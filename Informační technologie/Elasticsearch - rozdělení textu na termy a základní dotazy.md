@@ -94,6 +94,6 @@ POST /index/_search
 
 
 ##### Navigace
-Předchozí:  [[Základy práce v MongoDB - identifikátor dokumentu, operátory v dotazech, implicitní operátory a dotazy na vnořené dokumenty]]
+Předchozí:  [[Základy práce v MongoDB - operátory v dotazech, implicitní operátory a dotazy na vnořené dokumenty]]
 Následující: [[Výpočet skóre zásahu]]
 Celý okruh: [[2. Informační technologie]]
