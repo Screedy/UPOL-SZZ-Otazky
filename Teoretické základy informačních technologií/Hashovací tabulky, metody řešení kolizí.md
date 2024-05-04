@@ -93,7 +93,7 @@ proc search(T,k)
 	- **Pokud je na aktuálním indexu `nil`,** klíč se v tabulce nenachází.
 	- **Pokud projdeme celou průzkumnou posloupnost,** klíč se v tabulce nenachází.
 - Analogický postup použijeme **pro přidávání uzlu:** uzel přidáme na první index z průzkumné posloupnosti, na kterém je `nil`.
-- **Odstanění prvku** z tabulky by způsobilo **přerušení průzkumné posloupnosti** při vyhledávání. Prvky v tabulce proto **musíme ponechat,** ale dát jim příznak, že jsou *smazány*. Potom musíme příslušným způsobem upravit procedury pro přidávání (přidáváme i na místo, kde je smazaný prvek) a prohledávání (smazané prvky přeskakujeme).
+- **Odstranění prvku** z tabulky by způsobilo **přerušení průzkumné posloupnosti** při vyhledávání. Prvky v tabulce proto **musíme ponechat,** ale dát jim příznak, že jsou *smazány*. Potom musíme příslušným způsobem upravit procedury pro přidávání (přidáváme i na místo, kde je smazaný prvek) a prohledávání (smazané prvky přeskakujeme).
 - Složitost těchto operací pak ale **nezávisí** přímo na faktoru zaplnění tabulky. Pokud potřebujeme i **operaci mazání,** je lepší použít řetězení.
 
 ##### Lineární prozkoumávání
