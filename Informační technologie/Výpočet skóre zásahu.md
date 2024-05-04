@@ -57,3 +57,9 @@ GET /book/_search
   "explain": true
 }
 ```
+
+
+##### Navigace
+Předchozí:  [[Elasticsearch - rozdělení textu na termy a základní dotazy]]
+Následující: [[Levenštajnova vzdálenost]]
+Celý okruh: [[2. Informační technologie]]

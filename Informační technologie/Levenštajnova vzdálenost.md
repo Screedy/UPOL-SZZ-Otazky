@@ -17,3 +17,9 @@
 	- `"ab"`, `""` je dva.
 	- `"a"`, `"ab"` je jedna.
 	- `"ba"`, `"aa"` je jedna.
+
+
+##### Navigace
+Předchozí:  [[Výpočet skóre zásahu]]
+Následující: [[Unixové operační systémy (UNIX, Linux), uživatelská prostředí a nápovědy]]
+Celý okruh: [[2. Informační technologie]]
