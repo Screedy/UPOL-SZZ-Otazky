@@ -4,7 +4,7 @@
 - Množina je matematickým protějškem k pojmům **soubor, seskupení, ...**
 
 - **Množiny** označujeme **velkými písmeny** a jejich **prvky malými**
-	- $x\in A$ znamené, že $x$ je prvkem množiny $A$
+	- $x\in A$ znamená, že $x$ je prvkem množiny $A$
 
 - Zápis množin lze těmito základními způsoby:
 	- **Výčtem prvků** $A=\{a_{1},\ ...\ a_{n}\}$, množina $A$ obsahuje právě prvky $a_{1},\ ...\ ,a_{n}$

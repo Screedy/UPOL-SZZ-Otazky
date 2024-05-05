@@ -5,7 +5,7 @@
 - Binární relace na množině $X$ jsou relace $R \subseteq X \times Y$, kde $X=Y$
 
 >[!Tip] Speciální relace
->- $\varnothing$ (**Prázdná relace**) - symetrická, antisymetrická, tranzitivní, irreflexivní, asymetrická
+>- $\varnothing$ (**Prázdná relace**) - symetrická, antisymetrická, tranzitivní, ireflexivní, asymetrická
 >- **Relace identity**, $id_{x} = \{<x,y> \mid x \in X \}$ - reflexivní, symetrická, antisymetrická, tranzitivní (a úplná, když je $\mid X \mid = 1$)
 >- **Kartézský součin (plná relace) $X \times X$** - reflexivní, symetrická, tranzitivní a úplná (antisymetrická pro $\mid X \mid = 1$)
 ### Vlastnosti binární relace
