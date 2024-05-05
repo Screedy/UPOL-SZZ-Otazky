@@ -26,35 +26,40 @@
 
 ### Sčítání matic
 - Nechť $A, B \in M_{m \times n}(T)$. **Součtem matic $A$ a $B$** rozumíme matici **$A + B = (c_{ij})_{m \times n}$**, kde $c_{ij} = a_{ij} + b_{ij}$ pro každé $i,j$.
-- Příklad:
-  $$A=
-  \begin{pmatrix}
-	1 & -2 & 0 \\ 
-	-1 & 3 & 1
-  \end{pmatrix}, \ B=
-  \begin{pmatrix}
-	2 & -2 & 1 \\ 
-	0 & -1 & 4
-  \end{pmatrix} \ A+B=
-  \begin{pmatrix}
-    3 & -4 & 1 \\
-    -1 & 2 & 5
-  \end{pmatrix}.
-  $$
+>[!Example] Příklad
+>  $$
+>  \begin{aligned}
+>  \begin{gather}
+>  A=
+>  \begin{pmatrix}
+>  1 & -2 & 0 \\ 
+>  -1 & 3 & 1
+>  \end{pmatrix}, \ B=
+>  \begin{pmatrix}
+>  2 & -2 & 1 \\ 
+>  0 & -1 & 4
+>  \end{pmatrix} \\\\A+B=
+>  \begin{pmatrix}
+>  3 & -4 & 1 \\
+>  -1 & 2 & 5
+>  \end{pmatrix}.
+>  \end{gather}
+>  \end{aligned}
+>  $$
 
 ### Násobení matice skalárem
 - Nechť $(T; +; \cdot)$ je číselné těleso, $A \in M_{m \times n}(T), c \in T$.
 - Zavedeme zobrazení "$\cdot$":$\ T \times M_{m \times n}(T) \rightarrow M_{m \times n}(T)$ předpisem $c \cdot A = (b_{ij})_{m \times n},$ kde $b_{ij} = c \cdot a_{ij}$ pro každé $i,j$. Toto zobrazení nazýváme násobení matice skalárem.
 - *(Prvky z $T$ nazýváme skaláry.)*
-- Příklad:
-	- Mějme matici $A=\begin{vmatrix}1 & 2 \\ 3 & 4\end{vmatrix}$ a skalár $c = 3$.
-	- Vynásobíme-li matici skalárem $c$, dostaneme: 
-	  $3A=\begin{vmatrix}3 \cdot 1 & 3 \cdot 2 \\ 3 \cdot 3 & 3 \cdot 4\end{vmatrix} =\begin{vmatrix}3 & 6 \\ 9 & 12\end{vmatrix}$
-- Pro libovolné skaláry $c, d \in T$ a libovolné matice $A, B \in M_{m \times n}(T)$ platí
-	1. $c \cdot (A+B) = c \cdot A + c \cdot B,$
-	2. $(c+d) \cdot A = c \cdot A + d \cdot A,$
-	3. $(c \cdot d) \cdot A = c \cdot (d \cdot A),$
-	4. $1 \cdot A = A.$
+>[!Example] Příklad
+> - Mějme matici $A=\begin{pmatrix}1 & 2 \\ 3 & 4\end{pmatrix}$ a skalár $c = 3$.
+> - Vynásobíme-li matici skalárem $c$, dostaneme: 
+>   $3A=\begin{pmatrix}3 \cdot 1 & 3 \cdot 2 \\ 3 \cdot 3 & 3 \cdot 4\end{pmatrix} =\begin{pmatrix}3 & 6 \\ 9 & 12\end{pmatrix}$
+> - Pro libovolné skaláry $c, d \in T$ a libovolné matice $A, B \in M_{m \times n}(T)$ platí
+> 	1. $c \cdot (A+B) = c \cdot A + c \cdot B,$
+> 	2. $(c+d) \cdot A = c \cdot A + d \cdot A,$
+> 	3. $(c \cdot d) \cdot A = c \cdot (d \cdot A),$
+> 	4. $1 \cdot A = A.$
 
 ### Součin matic
 - Nechť $A = (a_{ij})_{m \times n}, B = (b_{jk})_{n \times p}$ jsou matice nad tělesem $T$. Součinem matic $A$ a $B$ rozumíme matici $A \cdot B = (c_{ik})_{m \times p}$, kde 
@@ -68,53 +73,56 @@
 	2. $A \cdot (B + D) = A \cdot B + A \cdot D$
 	3. $(B+D) \cdot C = B \cdot C + D \cdot C.$
 
-- Příklad:
-  Součin matic lze provést, neboť první matice v součinu má stejný počet **sloupců**, jako má druhá matice **řádků**.
-  $$ 
-	\begin{aligned}
-	\begin{gather}
-    A \cdot B =
-    \begin{pmatrix}
-	  1 & 2 & 3 \\
-	  -2 & 2 & -1
-    \end{pmatrix}
-    \cdot
-    \begin{pmatrix}
-    0 & 1 & 2 \\
-    -2 & -1 & -1 \\
-    1 & 0 & 0
-    \end{pmatrix}
-    = \\ \\ =
-    \begin{pmatrix}
-    0-4+3 & 1-2+0 & 2-2+0 \\
-    0-4-1 & -2-2-0 & -4-2-0
-    \end{pmatrix}
-    = \\ \\ =
-    \begin{pmatrix}
-    -1 & -1 & 0 \\
-    -5 & -4 & -6
-    \end{pmatrix}
-    \end{gather}
-    \end {aligned}
-  $$
-  ### Maticová transpozice
+>[!Example] Příklad
+>- Součin matic lze provést, neboť první matice v součinu má stejný počet **sloupců**, jako má druhá matice **řádků**.
+>$$ 
+>\begin{aligned}
+>\begin{gather}
+>A \cdot B =
+>\begin{pmatrix}
+>1 & 2 & 3 \\
+>-2 & 2 & -1
+>\end{pmatrix}
+>\cdot
+>\begin{pmatrix}
+>0 & 1 & 2 \\
+>-2 & -1 & -1 \\
+>1 & 0 & 0
+>\end{pmatrix}
+>= \\ \\ =
+>\begin{pmatrix}
+>0-4+3 & 1-2+0 & 2-2+0 \\
+>0-4-1 & -2-2-0 & -4-2-0
+>\end{pmatrix}
+>= \\ \\ =
+>\begin{pmatrix}
+>-1 & -1 & 0 \\
+>-5 & -4 & -6
+>\end{pmatrix}
+>\end{gather}
+>\end {aligned}
+>$$
+
+  
+### Maticová transpozice
 - Je-li $A = (a_{ij})_{m \times n}$ matice nad tělesem $T$, pak transponovanou maticí k matici $A$ rozumíme matici $A^{T} = (a_{ij})_{n \times m}$. $A^{T}$ tedy vznikne vzájemnou záměnou odpovídajících řádků a sloupců matice $A$, tedy jakýmsi *překlopením matice $A$ přes hlavní diagonálu*
-- Příklad:
-$$
-    A=
-    \begin{pmatrix}
-    1 & 2 & 1 & -1 \\
-    0 & 2 & 0 & 1 \\
-    -1 & 0 & 2 & 1
-    \end{pmatrix}
-    \Rightarrow A^{T} =
-    \begin{pmatrix}
-    1 & 0 & -1 \\
-    2 & 2 & 0 \\
-    1 & 0 & 2 \\
-    -1 & 1 & 1
-    \end{pmatrix}
-    $$
+>[!Example] Příklad
+>$$
+>A=
+>\begin{pmatrix}
+>1 & 2 & 1 & -1 \\
+>0 & 2 & 0 & 1 \\
+>-1 & 0 & 2 & 1
+>\end{pmatrix}
+>\Rightarrow A^{T} =
+>\begin{pmatrix}
+>1 & 0 & -1 \\
+>2 & 2 & 0 \\
+>1 & 0 & 2 \\
+>-1 & 1 & 1
+>\end{pmatrix}
+>$$
+
 - Pro libovolné matice $A = (a_{ij})_{m \times n}, B = (b_{ij})_{m \times n}, C = (c_{jk})_{n \times p}$ nad tělesem $T$ a libovolný skalár $c \in T$ platí:
 	1. $(A + B)^{T} = A^{T} + B^{T},$
 	2. $(c \cdot A)^{T} = c \cdot A^{T},$
@@ -123,24 +131,46 @@ $$
 
 ### Hodnost matice
 - **Řádkovým podprostorem** matice $A \in M_{m \times n}(T)$ rozumíme *podprostor v aritmetickém vektorovém prostoru $T^{n}$*, který **je generovaný řádkovými vektory matice $A$.**
-- Příklad:
-  Řádkovým podprostorem matice
-  $$
-  A=
-  \begin{pmatrix}
-  2 & -1 & 3,1 & 5 \\
-  -3 & 1,8 & -2 & 4 \\
-  0 & 0 & 4,5 & 0
-  \end{pmatrix} \in M_{3 \times 4}(R)
-  $$
-	  je tedy prostor $[\{(2; -1; 3,1;5), (-3; 1,8; -2; 4), (0; 0; 4,5; 0)\}] \subseteq \subseteq R^{4}.$
+>[!Example] Příklad
+>  Řádkovým podprostorem matice
+>    $$
+>  A=
+>  \begin{pmatrix}
+>  2 & -1 & 3,1 & 5 \\
+>  -3 & 1,8 & -2 & 4 \\
+>  0 & 0 & 4,5 & 0
+>  \end{pmatrix} \in M_{3 \times 4}(R)
+>  $$
+>  je tedy prostor $[\{(2; -1; 3,1;5), (-3; 1,8; -2; 4), (0; 0; 4,5; 0)\}] \subseteq R^{4}.$
+  
 - **Hodností matice** $A \in M_{m \times n}(T)$ rozumíme **dimenzi řádkového podprostoru** matice $A$ a značíme ji $h(A)$.
-	- **$h(A)$ se musí rovnat počtu LNZ řádků** matice $A \in M_{m \times n}(T)$, tedy $h(A) \leq m.$
+	- **$h(A)$ se musí rovnat počtu lineárně nezávislých řádků** matice $A \in M_{m \times n}(T)$, tedy $h(A) \leq m.$
 	- Jestliže $A \sim B$, pak $h(A) = h(B).$
 	- **$h(A)$ je rovna počtu nenulových řádků** libovolné matice $B$ v $GT$ takové, že $A \sim B$.
 
-> [!Summary] 
-> Hodnost Ize určit pomocí Gaussové eliminační metody tzn. upravuji na "trojúhelníkový" (Gaussův) tvar - *upravuji matici pomocí EŘT.*
+>[!Example] Příklad
+>$$
+>A_{5 \times 4} = 
+>\begin{pmatrix}
+>\times & \times & \times & \times \\
+>0 & \times & \times & \times \\
+>0 & 0 & \times & \times \\
+>0 & 0 & 0 & \times \\
+>0 & 0 & 0 & 0
+>\end{pmatrix}
+>\Rightarrow h(A) = 4,
+>\ \ \ \ 
+>B_{3 \times 3} =
+>\begin{pmatrix}
+>\times & \times & \times \\
+>0 & 0 & \times \\
+>0 & 0 & 0
+>\end{pmatrix}
+>\Rightarrow h(B) = 2.
+>$$
+
+> [!Tip] 
+> Hodnost Ize určit pomocí Gaussové eliminační metody tzn. upravuji na "trojúhelníkový" (Gaussův) tvar - *upravuji matici pomocí EŘT (Elementárních Řádkových Transformací).*
 >
 > **Hodnost matice je tedy počet nenulových řádků v Gaussově tvaru**
 
@@ -211,14 +241,16 @@ $$
 	- Tento **součin ale musíme doplnit znaménkem** stejným jako *je znaménko permutace* určené řádkovými a sloupcovými indexy prvků zastoupených v tomto součinu
 
 > [!Example] Příklad
-> Určete determinant matice $A=\begin{vmatrix}a_{11} & a_{12} \\ a_{21} & a_{22}\end{vmatrix} \in M_{2}(T)$:
+> Určete determinant matice $A=\begin{pmatrix}a_{11} & a_{12} \\ a_{21} & a_{22}\end{pmatrix} \in M_{2}(T)$:
 > 
 > Členy determinantu budou součiny $a_{11}\ \cdot\ a_{22}$, který odpovídá permutaci $$P_{1}=\begin{vmatrix}1&2\\1&2\end{vmatrix},$$jejíž znaménko je $1$, a také $a_{12}\ \cdot\ a_{21}$, který odpovídá permutaci $$P_{2}=\begin{vmatrix}1&2\\2&1\end{vmatrix},$$ jejíž znaménko je $-1$. Celkem tedy dostáváme $$det(A)=a_{11}\ \cdot\ a_{22}\ -\ a_{12}\ \cdot\ a_{21}.$$
 
-### Sarrusovo pravidlo
-- Vyjádření determinantů matic $2.$ a $3.$ stupně lze znázornit i schematicky:
-- Pro $n = 2:$![[MacBook-2024-03-10-000819.png| 150]]
-- Pro $n = 3:$![[MacBook-2024-03-10-000820.png| 150]]
+>[!Tip] Sarrusovo pravidlo
+>- Vyjádření determinantů matic $2.$ a $3.$ stupně lze znázornit i schematicky:
+>- Pro $n=2:$
+>![[MacBook-2024-03-10-000819.png| 150]]
+>- Pro $n=3:$
+>![[MacBook-2024-03-10-000820.png| 150]]
 
 ### Determinanty matic ve speciálních tvarech
 - Pro každou matici $A \in M_{m \times n}(T)$, kde $T$ je číselné těleso, platí $det(A^{T}) = det(A)$.
@@ -239,7 +271,7 @@ $$
 > \rightarrow
 > \begin{pmatrix}
 > 2 & 0 \\
-> -2 & 1
+> -2 & -3
 > \end{pmatrix}
 > $$
 ### Algebraický doplněk prvku ve čtvercové matici
