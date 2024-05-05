@@ -34,8 +34,8 @@ Po naklonování repozitáře na váš počítač postupujte takto, abyste jej o
 <a href="https://github.com/screedy/szz-Otazky2024/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=screedy/szz-Otazky2024" />
 </a>
----
-Speciální poděkování [Karolíně Tobiášové](https://github.com/Kermy824)za poskytnutí materiálů, z kterých vychází první okruh.
+
+- Speciální poděkování [Karolíně Tobiášové](https://github.com/Kermy824) za poskytnutí materiálů, z kterých vychází první okruh.
 
 
 <a href="https://www.buymeacoffee.com/screedy" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
