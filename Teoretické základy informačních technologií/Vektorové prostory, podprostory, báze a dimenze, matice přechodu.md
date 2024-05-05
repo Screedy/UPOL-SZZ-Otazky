@@ -1,84 +1,77 @@
-### Vektorový prostor - definice
-Definice $5.2$
-Čtveřici $(V ;+, T, \cdot)$ nazýváme vektorový prostor, jestliže
-1. $(V ;+)$ je abelovská grupa $s$ jednotkou $\vec{o}$ (nulový vektor);
-2. $T$ je číselné těleso;
-3. $\cdot : T \times V \rightarrow V$ je levá vnější operace nad $T$ a $V$;
-4. Pro všechny $\vec{u}, \vec{v} \in V$ a všechny $c, d \in T$ platí
-- $c \cdot(\vec{u}+\vec{v})=c \cdot \vec{u}+c \cdot \vec{v}$,
-- $(c+d) \cdot \vec{u}=c \cdot \vec{u}+d \cdot \vec{u}$,
-- $(c \cdot d) \cdot \vec{u}=c \cdot(d \cdot \vec{u})$,
-- $1 \cdot \vec{u}=\vec{u}$.
+### Vektorový prostor
+
+- Čtveřici $(V ;+, T, \cdot)$ nazýváme vektorový prostor, jestliže
+	1. $(V ;+)$ je abelovská grupa $s$ jednotkou $\vec{o}$ (nulový vektor);
+	2. $T$ je číselné těleso;
+	3. $\cdot : T \times V \rightarrow V$ je levá vnější operace nad $T$ a $V$;
+	4. Pro všechny $\vec{u}, \vec{v} \in V$ a všechny $c, d \in T$ platí
+		- $c \cdot(\vec{u}+\vec{v})=c \cdot \vec{u}+c \cdot \vec{v}$,
+		- $(c+d) \cdot \vec{u}=c \cdot \vec{u}+d \cdot \vec{u}$,
+		- $(c \cdot d) \cdot \vec{u}=c \cdot(d \cdot \vec{u})$,
+		- $1 \cdot \vec{u}=\vec{u}$.
 - Pole *vektorového prostoru* ... množina $V$
 - *Vektory* ... prvky pole $V$
 - *Skaláry* ... prvky tělesa $T$
+---
+- vektorový prostor $V$ (prvky jsou vektory) nad tělesem $T$ (prvky jsou skaláry). Platí, že " + ": $V \times V \rightarrow V$ a " $\cdot$ ": $T \times V \rightarrow V$ (tzn. když **násobím vektor jiným vektorem** tak výsledek bude zase **v tom samém vektorovém prostoru** a když **násobím vektor skalárem** tak výsledek bude **taktéž v tom samém vektorovém prostoru**)
+- operace musí být **uzavřené** (např. po násobení **nesmím** dostat něco co **není** ve vektorovém prostoru $V$)
 
-- vektorový prostor $V$ (prvky jsou vektory) nad tělesem $T$ (prvky jsou skaláry). Platí, že " + ": $V \times V \rightarrow V$ a " $\cdot$ ": $T \times V \rightarrow V$ (tzn. když násobím vektor jiným vektorem tak výsledek bude zase v tom samém vekt. prostoru a když násobím vektor skalárem tak výsledek bude taktéž v tom samém vekt. prostoru)
-- operace musí být uzavřené (např. po násobení nesmím dostat něco co není ve vekt. prostoru $V$)
+>[!Tip] Levá vnější operace
+>- Nechť' $A \neq \emptyset \neq B$. 
+>- **Levou vnější operaci** nad $A$ a $B$ nazýváme každé zobrazení " . " $: A \times B \rightarrow B$.
 
-Pozn.: Levá vnější operace - Nechť' $A \neq \emptyset \neq B$. Je každé zobrazení " . " $: A \times B \rightarrow B$. Např. násobení matice skalárem (výsledek je zase matice)
-
-### Lineární kombinace vektorů -  definice
-Definice $5.3$
-Nechť $V$ je vektorový prostor nad tělesem $T$, nechť $\vec{v}, \overrightarrow{u_1}, \overrightarrow{u_2}, \ldots, \overrightarrow{u_n} \in V$. Říkáme, že vektor $\vec{v}$ je lineární kombinací vektoru $\overrightarrow{u_1}, \overrightarrow{u_2}, \ldots, \overrightarrow{u_n}$, jestliže existují skaláry $c_1, c_2, \ldots, c_n \in T$ tak, že
+### Lineární kombinace vektorů
+- Nechť $V$ je vektorový prostor nad tělesem $T$, nechť $\vec{v}, \overrightarrow{u_1}, \overrightarrow{u_2}, \ldots, \overrightarrow{u_n} \in V$. Říkáme, že vektor $\vec{v}$ je lineární kombinací vektoru $\overrightarrow{u_1}, \overrightarrow{u_2}, \ldots, \overrightarrow{u_n}$, jestliže existují skaláry $c_1, c_2, \ldots, c_n \in T$ tak, že
 $$
 \vec{v}=\sum_{i=1}^n c_i \overrightarrow{u_i}=c_1 \overrightarrow{u_1}+c_2 \overrightarrow{u_2}+\cdots+c_n \overrightarrow{u_n} .
 $$
-Příklad $5.3$
-Nulový vektor $\vec{o} \in V$ je lineární kombinací libovolných vektorů z $V$
+>[!Example] Příklad $5.3$
+>- Nulový vektor $\vec{o} \in V$ je lineární kombinací libovolných vektorů z $V$
+
 
 ### Lineární závislost a nezávislost vektorů - definice
-Definice $5.4$
-Nechť $V$ je vektorový prostor nad tělesem $T$. Vektory $\overrightarrow{u_1}, \overrightarrow{u_2}, \ldots, \overrightarrow{u_n} \in V$ nazýváme lineárně závislé, jestliže existují skaláry $c_1, c_2, \ldots, c_n \in T$ tak, že
+- Nechť $V$ je vektorový prostor nad tělesem $T$. Vektory $\overrightarrow{u_1}, \overrightarrow{u_2}, \ldots, \overrightarrow{u_n} \in V$ nazýváme **lineárně závislé**, jestliže existují skaláry $c_1, c_2, \ldots, c_n \in T$ tak, že
 $$
 \vec{o}=\sum_{i=1}^n c_i \overrightarrow{u_i}=c_1 \overrightarrow{u_1}+c_2 \overrightarrow{u_2}+\cdots+c_n \overrightarrow{u_n},
 $$
-a přitom alespoň jedno $\mathrm{z}$ číslo mezi $c_1, c_2, \ldots, c_n$ je nenulové.
+a přitom **alespoň jedno z čísel** mezi $c_1, c_2, \ldots, c_n$ je nenulové.
 V opačném případě, tedy pokud
 $$
 \vec{o}=\sum_{i=1}^n c_i \overrightarrow{u_i}=c_1 \overrightarrow{u_1}+c_2 \overrightarrow{u_2}+\cdots+c_n \overrightarrow{u_n},
 $$
-pouze v případě, že $c_1=c_2=\ldots=c_n=0$, se vektory $\overrightarrow{u_1}, \overrightarrow{u_2}, \ldots, \overrightarrow{u_n} \in V$ nazývají lineárně nezávislé.
+pouze v případě, že $c_1=c_2=\ldots=c_n=0$, se vektory $\overrightarrow{u_1}, \overrightarrow{u_2}, \ldots, \overrightarrow{u_n} \in V$ nazývají **lineárně nezávislé**.
 
 ### Báze vektorového prostoru $V$
-- je to množina lineárně nezávislých vektorů, které "generuji" prostor $V$
+- je to **množina lineárně nezávislých vektorů**, které **"generují" prostor** $V$
 - generují znamená, že pomocí této množiny jsme schopni vyjádřit libovolný vektor prostoru $V$
 - (kdybychom nějaký vektor z této množiny odebrali, už bychom nedokázali vyjádřit celý prostor $V$)
 
 ### Dimenze
- - **Dimenze** vektorového prostoru $V$ je rovna počtu prvků báze tohoto vektorového prostoru. 
- - Pokud je báze nekonečná, je i dimenze nekonečná
+ - **Dimenze** vektorového prostoru $V$ je rovna **počtu prvků báze** tohoto vektorového prostoru. 
+ - Pokud je báze nekonečná, je i dimenze nekonečná.
 
-### Podprostor - definice
+### Podprostor
+- Nechť $(V ;+, T, \cdot)$ je vektorový prostor nad tělesem $T$ a nechť $\emptyset \neq W \subseteq V$. Pak $(W ;+, T, \cdot)$ nazveme **podprostor vektorového prostoru** $V$, jestliže
+	1. $\forall \vec{u}, \vec{v} \in W: \quad \vec{u}+\vec{v} \in W$,
+	2. $\forall \vec{u} \in W, \forall c \in T: \quad c \cdot \vec{u} \in W$.
 
-##### Definice 1 - přednáška
-**Definice** $5.5$
-Nechť $(V ;+, T, \cdot)$ je vektorový prostor nad tělesem $T$ a nechť $\emptyset \neq W \subseteq V$. Pak $(W ;+, T, \cdot)$ nazveme podprostor vektorového prostoru $V$, jestliže
-1. $\forall \vec{u}, \vec{v} \in W: \quad \vec{u}+\vec{v} \in W$,
-2. $\forall \vec{u} \in W, \forall c \in T: \quad c \cdot \vec{u} \in W$.
-
-##### **Definice** 2 - skripta [[ATA1.pdf |skripta]]
-Definice 6.5 Řekneme, že vektorový prostor $\mathcal{W}=(W, \oplus, \mathcal{T}, \circ)$ je podprostorem vektorového prostoru $\mathcal{V}=(V,+, \mathcal{T}, \cdot)$, platí-li
-a) $W \subseteq V$,
-b) $\forall \vec{u}, \vec{v} \in W ; \vec{u} \oplus \vec{v}=\vec{u}+\vec{v}$,
-c) $\forall c \in T, \vec{u} \in W ; c \circ \vec{u}=c \vec{u}$.
-(Je-li $\mathcal{W}$ podprostorem prostoru $\mathcal{V}$, pak píseme $\mathcal{W} \subseteq \subseteq \mathcal{V}$.
-
-Poznámka: Znamená to, že prostor $\mathcal{W}$ je podprostorem prostoru $\mathcal{V}$, je-li $W$ neprázdnou podmnožinou množiny $\mathcal{V}$ a vzniknou-li operace sčítání vektorủ a vnější operace násobení vektorů skaláry z $T$ v prostoru $\mathcal{W}$ z odpovídajících operací ve $\mathcal{V}$ omezením se na množinu W.
-
-
+>[!Tip]
+>Musí být tedy uzavřené na sčítání vektorů a na násobení skalárem.
 ### Transformace souřadnic vektoru vzhledem k bázi
-##### Definice
-Nechť $V$ je vektorový prostor nad $T$ takový, že $\operatorname{dim} V=n$ (má $n$ bázových vektorů). Jeli $B=\left\{\vec{u}_1, \ldots, \vec{u}_n\right\}$ báze prostoru $V$ a $\vec{u}=\sum_{i=1}^n c_i \vec{u}_i$ vektor z $V$, potom koeficienty $c_1, \ldots, c_n$ nazýváme souřadnice vektoru $\vec{u}$ vzhledem k bázi $B$ a píšeme $\{\vec{u}\}_B=\left(c_1, \ldots, c_n\right)$
-
-- Transformace souřadnic využívá matice přechodu od jedné báze k druhé bázi. Pokud budeme znát souřadnice vektoru v jedné bázi tak pomocí jeho násobení maticí přechodu dostaneme souřadnice vektoru v nové bázi.
+- Nechť $V$ je vektorový prostor nad $T$ takový, že $\operatorname{dim} V=n$ (má $n$ bázových vektorů). Jeli $B=\left\{\vec{u}_1, \ldots, \vec{u}_n\right\}$ báze prostoru $V$ a $\vec{u}=\sum_{i=1}^n c_i \vec{u}_i$ vektor z $V$, potom koeficienty $c_1, \ldots, c_n$ (skaláry z $T$) nazýváme souřadnice vektoru $\vec{u}$ vzhledem k bázi $B$ a píšeme $\{\vec{u}\}_B=\left(c_1, \ldots, c_n\right)$
+>[!Tip]
+>- Transformace souřadnic využívá **matice přechodu** od **jedné báze k druhé bázi**. 
+>- Pokud budeme znát souřadnice vektoru v jedné bázi tak **pomocí jeho násobení maticí** **přechodu dostaneme souřadnice vektoru v nové bázi**.
 
 ### Matice přechodu
-##### Definice
-Nechť $B=\left\{\vec{u}_1, \vec{u}_2, \ldots, \vec{u}_n\right\}$ a $B^{\prime}=\left\{\vec{u}_1^{\prime}, \vec{u}_2^{\prime}, \ldots, \vec{u}_n^{\prime}\right\}$ jsou báze VP $V$ a nechť $\left\{\vec{u}_i^{\prime}\right\}_B=\left(a_{i 1}, a_{i 2}, \ldots, a_{i n}\right), i \in\{1,2, \ldots, n\}$. Potom matici $A= ||a_{i j}||$ nazýváme maticí přechodů od báze $B$ k bázi $B^{\prime}$
 
-- Matice přechodu bude vypadat tak, že v řádcích bude mít zapsané vektory nové báze popsané pomocí staré báze.
-- První řádek - Vezmeme si první vektor nové báze a zapíšeme jej jako lineární kombinaci vektorů staré báze (zapisuji zde jen koeficienty. Takhle uděláme všechny řádky a dostaneme matici přechodu.
+- Nechť $B=\left\{\vec{u}_1, \vec{u}_2, \ldots, \vec{u}_n\right\}$ a $B^{\prime}=\left\{\vec{u}_1^{\prime}, \vec{u}_2^{\prime}, \ldots, \vec{u}_n^{\prime}\right\}$ jsou báze VP $V$ a nechť $\left\{\vec{u}_i^{\prime}\right\}_B=\left(a_{i 1}, a_{i 2}, \ldots, a_{i n}\right), i \in\{1,2, \ldots, n\}$. Potom matici $A= ||a_{i j}||$ nazýváme maticí přechodů od báze $B$ k bázi $B^{\prime}$.
+
+>[!Tip]
+>- Matice přechodu bude vypadat tak, že v řádcích bude mít zapsané vektory nové báze popsané pomocí staré báze.
+>- První řádek:
+>	- Vezmeme si první vektor nové báze a zapíšeme jej jako lineární kombinaci vektorů staré báze (zapisuji zde jen koeficienty). 
+>	- Takhle uděláme všechny řádky a dostaneme matici přechodu.
 
 Věta:
 Nechť $B=\left\{\vec{u}_1, \vec{u}_2, \ldots, \vec{u}_n\right\}$ a $B^{\prime}=\left\{\vec{u}_1^{\prime}, \vec{u}_2^{\prime}, \ldots, \vec{u}_n^{\prime}\right\}$ jsou báze VP $V$ a nechť $A$ je matice přechodu od báze $B$ k bázi $B^{\prime}$. Potom každý vektor $\vec{u} \in V$ můžeme vyjádřit:
@@ -95,8 +88,9 @@ Věta 5.5
 Neprázdná podmnožina $W$ pole vektorového prostoru $(V ;+, T$, * ) je polem podprostoru ve $V$ právĕ když s každými prvky $\overrightarrow{u_1}, \overrightarrow{u_2}, \ldots, \overrightarrow{u_n}$ obsahuje také každou jejich lineární kombinaci.
 
 ### Průnik
-Průnik $W_1 \cap W_2$ dvou podprostorů $W_1$ a $W_2$ ve $V P(V ;+, T, \cdot)$ je obecně opět podprostor ve $V$. Je to "největší" (vzhledem k $\subseteq$ ) podprostor ve $V$, který je obsažen současnĕ ve $W_1$ a $W_2$.
-Priklad
+Průnik $W_1 \cap W_2$ dvou podprostorů $W_1$ a $W_2$ ve $V P(V ;+, T, \cdot)$ je obecně opět podprostor ve $V$. Je to "největší" (vzhledem k $\subseteq$ ) podprostor ve $V$, který je obsažen současně ve $W_1$ a $W_2$.
+
+Příklad
 Uvažujme množiny
 $$
 M^{+}=\left\{\left(\begin{array}{ll}
@@ -116,7 +110,7 @@ M^{+} \cap M^{-}=\left\{\left(\begin{array}{ll}
 $$
 
 ### Sjednocení
-Pr̆itom $M^{+} \cup M^{-}$není polem podprostoru $\operatorname{VP}\left(\mathcal{M}_2(\mathbf{R}) ;+, \mathbf{R}, \cdot\right)$, protože např.
+Přitom $M^{+} \cup M^{-}$ není polem podprostoru $\operatorname{VP}\left(\mathcal{M}_2(\mathbf{R}) ;+, \mathbf{R}, \cdot\right)$, protože např.
 $$
 (-1) \cdot \underbrace{\left(\begin{array}{rr}
 -2 & 0 \\
