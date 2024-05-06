@@ -206,3 +206,10 @@ obsah `aside` souvisí s obsahem `p`:
 ```HTML
 <p>Stopařův <span class="text-bold">průvodce</span></p>
 ```
+
+
+
+##### Navigace
+Předchozí:  [[Syntaxe a sémantika HTML a CSS]]
+Následující: [[Box model]]
+Celý okruh: [[2. Informační technologie]]

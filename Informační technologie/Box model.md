@@ -8,7 +8,7 @@
 	4. vnitřního okraje (`padding`)
 	5. vnitřní hrany
 	6. obsahu
-## Rámeček (`border`)
+## Rámeček - `border`
 - úprava vizualizace rámečku: **border-\***
 ```CSS
  /* styl čáry, pokud není nastaven, rámeček se nezobrazí */
@@ -31,7 +31,7 @@
 > [!info] 
 >  Existuje i rámeček *`outline`*, ten se ale používá pouze při **ladění / vývoji**, jelikož jeho velikost může upravovat každý prohlížeč jinak
 ## Okraje
-### Vnější (`margin`)
+### Vnější - `margin`
 - vizualizace vnějších okrajů: **margin-\***
 ```CSS
 /* vnejší okraj, nastavení všech */
@@ -52,7 +52,7 @@ margin-left: 15px;
 >  ```CSS
 >  .box--center {margin: auto;}
 >  ```
-### Vnitřní `padding`
+### Vnitřní - `padding`
 - vizualizace vnitřních okrajů: **padding-\*
 ```CSS
 /* vnitřní okraj, nastavení všech */
@@ -123,3 +123,8 @@ padding-left: 15px;
 > - Pokud upravujeme velikosti elementů, může se stát že obsah elementu **přeteče** (*obsah je větší než velikost rodičovského elementu*)
 > - Chování přetečení upravíme vlastností `overflow`
 
+
+##### Navigace
+Předchozí:  [[HTML struktura webové stránky]]
+Následující: [[Dědičnost a kaskáda]]
+Celý okruh: [[2. Informační technologie]]

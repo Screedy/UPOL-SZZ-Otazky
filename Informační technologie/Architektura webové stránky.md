@@ -14,3 +14,9 @@
 ### 5. Statické vs. dynamické stránky:
 - Statické stránky poskytují pevný obsah, který se nemění.
 - Dynamické stránky generují obsah na základě interakcí uživatele nebo serverových procesů.
+
+
+##### Navigace
+Předchozí:  [[IPv6 - vlastnosti, paket, adresy]]
+Následující: [[Syntaxe a sémantika HTML a CSS]]
+Celý okruh: [[2. Informační technologie]]

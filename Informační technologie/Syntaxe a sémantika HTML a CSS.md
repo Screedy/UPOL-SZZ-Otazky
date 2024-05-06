@@ -155,3 +155,11 @@ a:active {...}
 	```HTML
 	<h1 style="color: gold;">
 	```
+
+
+
+
+##### Navigace
+Předchozí:  [[Architektura webové stránky]]
+Následující: [[HTML struktura webové stránky]]
+Celý okruh: [[2. Informační technologie]]
