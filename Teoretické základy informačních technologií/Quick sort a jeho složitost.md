@@ -35,12 +35,10 @@ Partition(A, p, r)
 >[!Example]- Příklad
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/Hoixgm4-P4M?si=PSKtmEU9xNb69cmH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
-
-### Odůvodnění složitosti QuickSort
-<iframe width="690" height="385" src="https://www.youtube.com/embed/YQhfIoK8UDY?si=xfXlqXghJhufKSkE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-![[MacBook-2024-03-11-000843.png]]
+>[!Example]- Odůvodnění složitosti QuickSort
+><iframe width="660" height="385" src="https://www.youtube.com/embed/YQhfIoK8UDY?si=xfXlqXghJhufKSkE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+>
+>![[MacBook-2024-03-11-000843.png]]
 
 ##### Navigace
 Předchozí:  [[Základní metody třídění - insert sort, select sort, bubble sort]]
