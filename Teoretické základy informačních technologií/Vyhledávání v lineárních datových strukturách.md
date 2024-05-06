@@ -71,9 +71,9 @@ proc search(A,k)
 ##### Binární vyhledávání
 - Idea:
 	- Při **hledání prvku s klíčem $k$** se podíváme na prostřední prvek pole $A$, řekněme, že je na indexu $s$. 
-	- Pokud je`k == A[s].key` vyhledávání **je úspěšné**. 
-	- Pokud`k < A[s].key`, rekurzivně vyhledáváme v části pole ohraničeném indexy $0,s-1$. 
-	- Pokud`k > A[s].key`, vyhledáváme v části pole ohraničeném indexy $s+1, n-1$.
+	- Pokud je`k == A[s].key` vyhledávání **je úspěšné**
+	- Pokud`k < A[s].key`, rekurzivně vyhledáváme v části pole ohraničeném indexy $0,s-1$ 
+	- Pokud`k > A[s].key`, vyhledáváme v části pole ohraničeném indexy $s+1, n-1$
 - Složitost $\Theta (\log n$)
 ```C
 proc binary-search(A,k)
@@ -99,9 +99,12 @@ Strom vyhledání:
 - Složitost $\Theta (\log \log n)$
 - V nejhorším případě ovšem může být složitost až $O(n)$. Aby se zabránilo nejhoršímu případu, je možné **kombinovat interpolační** vyhledávání **s binárním vyhledáváním** *(například střídat vždy jeden krok interpolačního vyhledávání a jeden binárního vyhledávání)*
 >[!Example] Příklad
->Tuto metodu intuitivně používají lidé *například při vyhledávání ve slovníku - odhadnou, kde by přibližně mohlo hledané heslo být* (např. heslo začínající písmenem "K" bude pravděpodobně někde před polovinou slovníku) a *otevřou slovník na odhadnutém místě. Podle odchylky postupují dopředu nebo dozadu o menší nebo větší počet stránek.* Jako příklad budeme uvažovat seznam čísel $1, 2, 3, ..., 1000$. Pokusíme se najít prvek $125$. Pokud bychom hledali pomocí binárního vyhledávání, prvním testovaným prvkem by bylo číslo $500$, poté číslo $250$ a nakonec námi hledané číslo $125$. Interpolační vyhledávací algoritmus odhadne pozici a přímo přejde na prvek $125$.
+>- Tuto metodu intuitivně používají lidé *například při vyhledávání ve slovníku - odhadnou, kde by přibližně mohlo hledané heslo být* (např. heslo začínající písmenem "K" bude pravděpodobně někde před polovinou slovníku) a *otevřou slovník na odhadnutém místě. Podle odchylky postupují dopředu nebo dozadu o menší nebo větší počet stránek.* 
+>- Jako příklad budeme uvažovat seznam čísel $1, 2, 3, ..., 1000$. Pokusíme se najít prvek $125$. Pokud bychom hledali pomocí binárního vyhledávání, prvním testovaným prvkem by bylo číslo $500$, poté číslo $250$ a nakonec námi hledané číslo $125$. Interpolační vyhledávací algoritmus odhadne pozici a přímo přejde na prvek $125$.
 
-<iframe width="690" height="385" src="https://www.youtube.com/embed/DlCPTPQD6Mw?si=F7EWoP8TXvEkq4Vv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+>[!Example]- Vizualizace interpolačního vyhledávání
+><iframe width="660" height="385" src="https://www.youtube.com/embed/DlCPTPQD6Mw?si=F7EWoP8TXvEkq4Vv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 ### Fibonacciho posloupnost vyhledávání
 - **Fibonacciho posloupnost vyhledávání** je *vyhledávací algoritmus, který funguje na principu binárního vyhledávání*, ale místo dělení pole na dvě stejně velká podpole se pole dělí na dvě podpole, jejichž velikost odpovídá dvěma po sobě jdoucím číslům Fibonacciho posloupnosti.
