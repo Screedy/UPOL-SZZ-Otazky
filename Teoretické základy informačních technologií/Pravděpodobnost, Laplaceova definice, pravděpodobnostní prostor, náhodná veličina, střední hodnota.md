@@ -21,28 +21,28 @@
 - Určujeme **pravděpodobnost** tzv. **jevů**
 	- Hod kostkou: jev "sudé číslo" $= \set{2,4,6}$
 	- Výběr člověka: jev "žena" $= \set{\text{člověk } c \text{ v ČR } | c \text{ je žena}}$
-- $\mathbb{A}$ = množina měřitelných jevů
-- pravděpodobnost, přesněji **pravděpodobnostní míra**, je funkce $P: \mathbb{A} \rightarrow [0,1]$ splňující jisté vlastnosti
+- $\mathcal{A}$ = množina měřitelných jevů
+- pravděpodobnost, přesněji **pravděpodobnostní míra**, je funkce $P: \mathcal{A} \rightarrow [0,1]$ splňující jisté vlastnosti
 
 - Základním pojmem v Kolmogorově přístupu je pojem **pravděpodobnostní prostor**:
 
 ### Pravděpodobnostní prostor
-- Pravděpodobnostní prostor je trojice $<\Omega, \mathbb{A}, P>$, kde
+- Pravděpodobnostní prostor je trojice $<\Omega, \mathcal{A}, P>$, kde
 	- $\Omega$ je neprázdná množina elementárních jevů (výsledků pokusu)
-	- $\mathbb{A} \subseteq 2^{\Omega}$ je množina jevů
-	- $P: \mathbb{A} \rightarrow [0,1]$ je pravděpodobnostní míra pro jev $A \in \mathbb{A}$ je $P(A) \in [0, 1]$ pravděpodobnost, že nastane jev $A$
+	- $\mathcal{A} \subseteq 2^{\Omega}$ je množina jevů
+	- $P: \mathcal{A} \rightarrow [0,1]$ je pravděpodobnostní míra pro jev $A \in \mathcal{A}$ je $P(A) \in [0, 1]$ pravděpodobnost, že nastane jev $A$
 ---
-- Pravděpodobnostní prostor je trojice $<\Omega, \mathbb{A}, P>$, kde:
-	- $<\Omega, \mathbb{A}>$ je $\sigma$-algebra (sigma) na $\Omega$, tj. $\Omega \neq \varnothing,$ $\varnothing \neq \mathbb{A} \subseteq 2^{\Omega}$ a platí:
-		- je-li $A \in \mathbb{A}$, pak $\overline{A} \in \mathbb{A}$
-		- jsou-li $A_{1}, A_{2}, ... \in \mathbb{A}$, pak $\cup_{i = 1}^{\infty}\ A_{i} \in \mathbb{A}$
-	- $P$ je pravděpodobnostní míra, tj. $P$ je zobrazení přiřazující každé množině $A \in \mathbb{A}$ reálné číslo $P(A)$, které splňuje:
-		- $P(A) \geq 0$ pro každý $A \in \mathbb{A}$
+- Pravděpodobnostní prostor je trojice $<\Omega, \mathcal{A}, P>$, kde:
+	- $<\Omega, \mathcal{A}>$ je $\sigma$-algebra (sigma) na $\Omega$, tj. $\Omega \neq \varnothing,$ $\varnothing \neq \mathcal{A} \subseteq 2^{\Omega}$ a platí:
+		- je-li $A \in \mathcal{A}$, pak $\overline{A} \in \mathcal{A}$
+		- jsou-li $A_{1}, A_{2}, ... \in \mathcal{A}$, pak $\bigcup_{i = 1}^{\infty}\ A_{i} \in \mathcal{A}$
+	- $P$ je pravděpodobnostní míra, tj. $P$ je zobrazení přiřazující každé množině $A \in \mathcal{A}$ reálné číslo $P(A)$, které splňuje:
+		- $P(A) \geq 0$ pro každý $A \in \mathcal{A}$
 		- $P(\Omega) = 1$
 		- $P(\cup_{i=1}^{\infty}\ A_{i}) = \sum_{i=1}^{\infty} P(A_{i})$ pro každou posloupnost jevů $A_{1}, A_{2}, ...,$ které jsou po dvou disjunktní, tj. $A_{i}\ \cap A_{j} = \varnothing$ pro $i \neq j$.
 ---
 - Prvky $\omega \in \Omega$ se nazývají **elementární jevy** a představují výsledky náhodného pokusu.
-- **Množiny $A \in \mathbb{A}$** se nazývají **jevy**, někdy také **měřitelné jevy**, a jsou to podmnožiny množiny $\Omega$, ale ne každá podmnožina množiny $\Omega$ musí být jevem.
+- **Množiny $A \in \mathcal{A}$** se nazývají **jevy**, někdy také **měřitelné jevy**, a jsou to podmnožiny množiny $\Omega$, ale ne každá podmnožina množiny $\Omega$ musí být jevem.
 - Jev je tedy množina $A$ sestávající z nějakých výsledků pokusu, o nichž říkáme, že jsou jevy $A$ příznivé.
 - Pro **jev $A$ se číslo $P(A)$** nazývá **pravděpodobnost jevu** A.
 - Pravděpodobnostní prostor se nazývá **diskrétní,** pokud je množina $\Omega$ konečná a nebo spočetná.
@@ -89,8 +89,13 @@
 - Vidíme tedy, že průměr poskytují jen omezenou informaci o veličině $X$. Hodnoty $X$ mohou být kolem střední hodnoty $E(X)$ různě **rozptýleny**. K vyjádření toho, jak moc jsou rozptýleny, slouží tzv. rozptyl
 
 - **Rozptyl $var\ X$** náhodné veličiny $X$ je definován vztahem $var\ X=E((X-E(X))^{2})$.
-- Směrodatná odchylka $\sigma$ náhodné veličiny $X$ je druhá odmocnina rozptylu, tj. $\sigma \sqrt{var\ X}$.
+- Směrodatná odchylka $\sigma$ náhodné veličiny $X$ je druhá odmocnina rozptylu, tj. $\sigma =  \sqrt{var\ X}$.
 - $var\ X$ vyjadřuje, jak moc jsou hodnoty $X$ rozptýleny kolem $E(X)$. Čím je větší, tím jsou více rozptýleny.
+
+
+> [!note] Kvantil a Modus
+> **Kvantil** je míra polohy rozdělení pravděpodobnosti náhodné veličiny. Medián je 0.5-kvantil.
+> **Modus** je, zhruba řečeno, nejčastější hodnota náhodné veličiny
 
 ##### Navigace. 
 Předchozí:  [[Permutace, variace, kombinace]]
