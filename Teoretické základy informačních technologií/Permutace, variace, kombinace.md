@@ -8,7 +8,7 @@
 	- Pro $n=3$: $$(a+b)^{3}= \binom{3}{0}a^{3}b^{0}+ \binom{3}{1}a^{2}b^{1}+ \binom{3}{2}a^{1}b^{2}+ \binom{3}{3}a^{0}b^{3}$$
 
 ### Permutace
-- **Permutace $n$ (nazvájem různých) objektů** je libovlné seřazení těchto objektů, tj. seřazení od prvního k $n$-tému. 
+- **Permutace $n$ (navzájem různých) objektů** je libovlné seřazení těchto objektů, tj. seřazení od prvního k $n$-tému. 
 - Počet permutací $n$ objektů značíme $P(n)$.
 - Vzoreček: $P(n) = n!$
 - Důkaz vzorečku:
@@ -41,7 +41,7 @@
 #### Kombinace s opakováním
 - Výběr, ve kterém nezáleží na pořadí prvků a ve kterém se prvky mohou opakovat, se nazývá kombinace s opakováním.
 - Jsou dány objekty $n$ různých typů. Objektů každého typu je <u>neomezeně mnoho</u> a jsou navzájem *nerozlišitelné*. **Kombinace $r$ (objektů) z $n$ (objektů) s opakováním** je **libovolný výběr $r$ objektů z daných objektů $n$ typů**, ve kterém <u>nezáleží na pořadí</u> vybíraných objektů. Počet takových kombinací značíme $\stackrel{\_\_}{C}(n,r)$.
-- Vzoreček: $\stackrel{\_\_}{C}(n,r) = \binom{n+r-1}{n-1}$.
+- Vzoreček: $\stackrel{\_\_}{C}(n,r) = \binom{n+r-1}{n-1} = \binom{n+r-1}{r}$.
 
 ##### Navigace
 Předchozí:  [[Uspořádání, Hasseovy diagramy]]
