@@ -1,4 +1,5 @@
 - Algoritmus typu **"rozděl a panuj"** *(divide and conquer)*
+	- Rozebereme problém na menší problémy a ty vyřešíme
 	- Fáze "rozděl":
 		- Zvolí se pivot $q$
 		- Přemístí se prvky tak $A[p ... q - 1] \leq A[q]$ a $A[q + 1 ... r] \geq A[q]$
