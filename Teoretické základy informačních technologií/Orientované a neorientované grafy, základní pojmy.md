@@ -57,8 +57,8 @@
 
 ### Cestování v grafech
 - **Sled** v grafu $G = <V,E>$ je posloupnost $v_{0}, e_{0}, v_{1}, e_{1},  ..., v_{n}, e_{n}$ kde $v_{i} \in V$ jsou vrcholy, $e_{i} \in E$ jsou hrany a platí, že
-	- $e_{i} = \{v_{i-1, v_{i}}\}$ pro $i = 1, ..., n$, je-li graf neorientovaný
-	- $e_{i} = <v_{i-1, v_{i}}>$ pro $i = 1, ..., n$, je-li graf orientovaný
+	- $e_{i} = \{v_{i-1}, v_{i}\}$ pro $i = 1, ..., n$, je-li graf neorientovaný
+	- $e_{i} = <v_{i-1} , v_{i}>$ pro $i = 1, ..., n$, je-li graf orientovaný
 - Číslo $n$ se nazývá **délka sledu**
 
 - Sled $v_{0}, e_{0}, v_{1}, e_{1},  ..., v_{n}, e_{n}$ se nazývá:
