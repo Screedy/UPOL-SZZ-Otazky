@@ -4,6 +4,9 @@
 	- Místo množiny klíčů $\{ 0, 1, 2, ..., m-1\}$, které jsou vlastně indexy do pole, máme **obecnou množinu klíčů** $U$.
 - **Hlavní idea**: Hashovací funkce $$h: U \rightarrow \{0, 1, ..., m-1\}$$ pro přepočet obecného klíče na index v tabulce.
 
+>[!Example]- Úvod do hashovacích tabulek
+><iframe width="660" height="385" src="https://www.youtube.com/embed/knV86FlSXJ8?si=udZIoqjXYoP9fxNf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 #### Implementace
 ```C
 struct table
