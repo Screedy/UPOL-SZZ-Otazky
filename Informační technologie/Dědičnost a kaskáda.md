@@ -1,5 +1,5 @@
 ## Dědičnost
-- klíčoví pojem
+- klíčový pojem
 - pokud nastavíme elementu vlastnost na konkrétní hodnotu, přejímají to i potomci tohoto elementu
 - např. nastavení barvy textu v nadřazeném elementem na zelenou tak i jeho potomci pokud neřeknou jinak budou mít barvu zelenou
 - ne všechny vlastnosti se dědí
