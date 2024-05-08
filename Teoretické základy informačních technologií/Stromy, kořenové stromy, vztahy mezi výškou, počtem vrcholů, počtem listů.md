@@ -70,7 +70,7 @@ classDef default fill:green,stroke-width:3px;
 
 - Kořenový strom se nazývá **$m$-ární**, právě když každý jeho vrchol má **nejvýše $m$ potomků** 
 - $m$-ární kořenový strom $<G, r>$ výšky $h$ se nazývá **zaplněný**, pokud splňuje následující podmínky:
-	- **každý vrchol** s výjimkou vrcholů s hloubkou $h-1$ má **0 nebo $m$ následovníků**
+	- **každý vrchol** s výjimkou vrcholů s hloubkou $h-1$ má **$0$ nebo $m$ následovníků**
 	- **každý list má hloubku $h$ nebo $h-1$**
 
 - Kořenový strom se nazývá **uspořádaný**, je-li ke každému vrcholu, který není listem, zadáno **lineární uspořádání jeho potomků**
@@ -81,7 +81,7 @@ classDef default fill:green,stroke-width:3px;
 - **Dodatečná informace:** Vrcholy binárního vyhledávacího stromu jsou ohodnoceny číselnými hodnotami; budeme předpokládat, že ohodnocení je **funkce $w: V \rightarrow \mathbb{Z}$**
 - **Omezení:**
 	- Je-li $u$ levým následníkem vrcholu $v$ nebo potomkem tohoto následníka, pak $w(u) \leq w(v)$
-	- Je-li $u$ pravám následníkem vrcholu $v$ nebo potomkem tohoto následníka, pak $w(u) \geq w(v)$
+	- Je-li $u$ pravým následníkem vrcholu $v$ nebo potomkem tohoto následníka, pak $w(u) \geq w(v)$
 ```mermaid
 graph TD
 classDef hidden stroke:transparent,fill:transparent,color:transparent;
