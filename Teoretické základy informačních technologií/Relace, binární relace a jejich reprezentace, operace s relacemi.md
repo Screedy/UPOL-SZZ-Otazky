@@ -77,7 +77,7 @@
 
 - **Reprezentace seznamem seznamů**
 	- **Je vhodný pro uložení** binární relace $R$ na množině $X$
-	- Reprezentaci tvoří **hlavní (spojový) seznam**, ve kterém jsou uloženy **všechny prvky množiny X.**
+	- Reprezentaci tvoří **hlavní (spojový) seznam**, ve kterém jsou uloženy **všechny prvky množiny $X$.**
 	- Z každého prvku $x \in X$ hlavního seznamu vede seznam obsahující právě **ty $y \in X$, pro každé $<x,y> \in R$**
 	- Reprezentace seznamem seznamů je **paměťové úsporná** a je vhodná pro počítačové zpracování
 	>[!Example] Pro relaci $R=\set{<a,b>,<a,d>,<b,d>,<c,a>}$
@@ -104,7 +104,7 @@
 		- $Ref(R) = R \cup id_{x}$
 		- K relaci přidám relaci identity
 	- $Sym(R)$ = symetrický uzávěr relace $R$
-		- $Sym(R) = R \cap R^{-1}$
+		- $Sym(R) = R \cup R^{-1}$
 		- K relaci přidám inverzní relaci
 	- $Tra(R)$ = tranzitivní uzávěr relace R
 		- $Tra(R)$ = $\cup^{\infty}_{n=1} R^{n}$
