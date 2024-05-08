@@ -245,6 +245,9 @@
 > 
 > Členy determinantu budou součiny $a_{11}\ \cdot\ a_{22}$, který odpovídá permutaci $$P_{1}=\begin{vmatrix}1&2\\1&2\end{vmatrix},$$jejíž znaménko je $1$, a také $a_{12}\ \cdot\ a_{21}$, který odpovídá permutaci $$P_{2}=\begin{vmatrix}1&2\\2&1\end{vmatrix},$$ jejíž znaménko je $-1$. Celkem tedy dostáváme $$det(A)=a_{11}\ \cdot\ a_{22}\ -\ a_{12}\ \cdot\ a_{21}.$$
 
+>[!Example]- Isibalo - Definice determinantu
+><iframe width="660" height="385" src="https://www.youtube.com/embed/Km0rb7-M8aU?si=MPA0jamRC_BpJraX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 >[!Tip] Sarrusovo pravidlo
 >- Vyjádření determinantů matic $2.$ a $3.$ stupně lze znázornit i schematicky:
 >- Pro $n=2:$
