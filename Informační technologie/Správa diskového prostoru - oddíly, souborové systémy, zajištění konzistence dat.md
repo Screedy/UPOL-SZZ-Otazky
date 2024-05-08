@@ -2,9 +2,9 @@
 - umožňují uchovávání většího množství dat
 - data jsou perzistentní (přežijí proces)
 - k datům je umožněn souběžný přístup
-- řešení: ukládání dat na vnější paměť (např. disk), data jsou ukládána do souborů tvořící souborový systém
+- **řešení**: ukládání dat na vnější paměť (např. disk), data jsou ukládána do souborů tvořící souborový systém
 ---
-- OS navízí základní sadu funkcí pro operace se soubory:
+- OS nabízí základní sadu funkcí pro operace se soubory:
 	- `create`: vytvoření souboru
 	- `write/append`: přepis nebo zápis na konec souboru
 	- `read`: čtení ze souboru
@@ -15,14 +15,15 @@
 ## Oddíly
 - každý fyzický disk se obvykle skládá z jedné nebo více logické části (partition)
 - v každém oddílu může existovat souborový systém (svazek)
-- v Unix každá svazek připojen jako adresář
+- v Unix každý svazek připojen jako adresář
 - ve Windows jednotlivé svazky označeny (`a:`, `b:`, `c:`,...)
 ---
-- VFS : Virtual File System
+- **VFS : Virtual File System**:
 	- využití abstrakce: umožňuje kombinovat různé FS do jednoho VFS
 	- možnost připojit běžný soubor jako svazek
 	- kompatibilita síťových disků
->[!Example] Příklad VFS
+
+>[!Example]- Příklad VFS
 >![[MacBook-2024-05-03-001166.png]]
 
 ### LVM (Logical Volume Management)
@@ -74,13 +75,13 @@
 
 
 ## Příklady souborových systémů
-- FAT
+- **FAT**
 	- FS původně pro MS-DOS
 	- jednoduchý design
 	- soubory a adresáře ve tvaru $8+3$
 	- nemá ochranu proti poškození dat
 	- varianty: FAT12, FAT16, FAT32, VirtualFAT, exFAT
-- UFS: Unix File System
+- **UFS: Unix File System**
 	- reálně používané varianty UFS obvykle obsahují navzájem nekompatibilní rozšíření
 	- využívá strukturu i-node
 		- $15$ ukazatelů na bloky na disku:
@@ -93,10 +94,10 @@
 >[!Example] struktura i-node 
 >![[MacBook-2024-05-03-001167.png]]
 
-- NTFS
+- **NTFS**
 	- hlavní souborový systém Windows NT
 	- oproti FAT ochrana před poškozením, práva žurnálování a transakce
-- ZFS
+- **ZFS**
 	- kombinuje prvky LVM a RAID
 	- disky spojeny do poolu, FS dělá automaticky stripping
 	- deduplikace dat

@@ -48,7 +48,7 @@
 
 ### Odhad skoků
 - podmíněné skoky zpomalují běh programu $\rightarrow$ procesory provádí různé heuristiky pro odhad, zda bude skok proveden
-- Např. čtyčstavové počítadlo se saturací (`11`, `10`, `01`, `00` - až na `00` počítá, že se skok provede)
+- Např. čtyř-stavové počítadlo se saturací (`11`, `10`, `01`, `00` - až na `00` počítá, že se skok provede)
 
 ### Zásobník
 - procesor má vyčlenění úsek paměti pro zásobník

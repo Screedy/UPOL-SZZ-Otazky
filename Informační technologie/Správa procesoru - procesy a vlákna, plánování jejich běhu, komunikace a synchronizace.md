@@ -3,9 +3,9 @@
 - neformálně: **proces** = **běžící program** (vykonávaná činnost)
 - Každý proces má svůj vlastní **virtuální adresní prostor**
 	- procesy jsou od sebe **izolovány** a neovlivňují se navzájem při standardním běhu.
-	- Obsahuje kód **programu, paměťový prostor, data, zásobník, registry**
+	- Obsahuje **kód programu, paměťový prostor, data, zásobník, registry**
 - Operační systém **spravuje** a **organizuje** procesy
-- Komunikace mezi procesy, sdílení zdrojů vyžaduje **synchronizaci**
+- Komunikace mezi procesy a sdílení zdrojů vyžaduje **synchronizaci**
 ```mermaid
 graph BT
 A[nový] -- admited--> B[připravený]
@@ -31,10 +31,11 @@ C -- terminated --> E[ukončený]
 - každé vlákno má své registry, zásobník `IP`, stav (stejně jako proces)
 	- zbytek zdrojů je sdílený
 - Využití vláken:
-	- rozdělení běku na popředí a na pozadí
+	- rozdělení běhu na popředí a na pozadí
 	- asynchronní zpracování dat
 	- víceprocesorové stroje
 	- modulární architektura
+
 >[!Tip] Vztah proces-vlákno v různých systémech:
 >- $1:1$ - proces = vlákno
 >- $1:\text{N}$ - proces může mít více vláken (nejčastější řešení)
