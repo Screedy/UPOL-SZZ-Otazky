@@ -13,7 +13,7 @@
 	- Hodnota $d(v) = \infty$ znamená, že žádná cesta do $v$ zatím nebyla nalezena. Tato hodnota se pak u vrcholů, do kterých existuje cesta z $s$, v průběhu výpočtu zmenšuje, v každém kroku obsahuje délku nejkratší zatím nalezené cesty z $s$ do $v$, a na konci délku nejkratší cesty z $s$ do $v$. 
 	- U vrcholů $v$, do kterých cesta z $s$ nevede, zůstává $d(v) = \infty$. 
 	- Množina $A$ se na začátku nastaví na $A = V$. Během výpočtu obsahuje $A$ vrcholy $v$, pro něž zatím nebyla stanovena konečná hodnota $d(v)$ (tj. $d(v)$ byla stanovena, ale v dalším výpočtu se ještě může změnit). 
-- **Algoritmus opakuje následující krok:** 
+- **Algoritmus opakuje následující kroky:** 
 	- zjistí nejmenší hodnotu $d(v)$ vrcholů z $A$. Množinu vrcholů $v$ z $A$ s touto nejmenší hodnotou označí $N$. Z množiny $A$ vyjme všechny vrcholy $v$, pro které je $d(v)$ nejmenší. 
 		- Vrchol $v$ se tedy odstraní z $A$ a vloží do $N$, právě když $d(v) = min\ \{d(u) \mid u \in A\}$. 
 	- Každý takový vrchol $v$ je pak považován za vrchol, pro nějž byla nalezena nejkratší cesta z $s$ do $v$, délkou této cesty je $d(v)$, a kratší cesta do $v$ se v dalších krocích algoritmu už nehledá (to je zajištěno tím, že se vrchol odstranil z $A$). 
