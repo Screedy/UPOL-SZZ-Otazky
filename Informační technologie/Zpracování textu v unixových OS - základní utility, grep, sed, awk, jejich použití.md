@@ -38,3 +38,8 @@ awk '{sum += $1} END {print sum}' filename.txt # suma hodnot ve sloupci
 awk '/pattern/ {print $2}' filename.txt  # vypíše druhý sloupec pro řádky obsahující "pattern"
 awk '{if ($1 > 100) print $0}' filename.txt > newfile.txt  # vypíše do nového souboru řádky, kde první sloupec má hodnotu větší než 100
 ```
+
+##### Navigace
+Předchozí:  [[Text a regulární výrazy]]
+Následující: [[Architektury a princip činnosti počítače]]
+Celý okruh: [[2. Informační technologie]]

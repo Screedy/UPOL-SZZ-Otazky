@@ -27,3 +27,7 @@
 	- **Anycast adresy:** Adresa přidělená skupině rozhraní, ale pakety jsou doručeny pouze nejbližšímu rozhraní ve skupině podle směrovacího algoritmu.
 	- **Link-local adresy:** Používají se pouze v lokální síti a pakety s těmito adresami nejsou směrovány na internet.
 
+##### Navigace
+Předchozí:  [[NAT - účel, typy, problémy]]
+Následující: [[Architektura webové stránky]]
+Celý okruh: [[2. Informační technologie]]

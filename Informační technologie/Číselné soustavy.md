@@ -52,3 +52,8 @@
 	- Pozice 6: $0 \cdot 2^{7} = 0 \cdot 64 = 0$
 	- Pozice 7: $1 \cdot 2^{8} = 1 \cdot 128 = 128$
 	- $128 + 16 + 8 + 4 = (156)_{10}$
+
+##### Navigace
+Předchozí:  [[Architektury a princip činnosti počítače]]
+Následující: [[Binární logika, logické operace a jejich vlastnosti, funkce a jejich úpravy, logické obvody]]
+Celý okruh: [[2. Informační technologie]]

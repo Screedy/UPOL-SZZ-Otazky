@@ -42,3 +42,8 @@
 	- okolo 60 tisíc volných TCP/UDP portů na adresu
 - **mezi LAN a ISP manipulace s tabulkou překladů**
 	- nutné výpočetní zdroje
+
+##### Navigace
+Předchozí:  [[Wi-Fi - standardy, access point, použití média, linkový rámec, zabezpečení]]
+Následující: [[IPv6 - vlastnosti, paket, adresy]]
+Celý okruh: [[2. Informační technologie]]

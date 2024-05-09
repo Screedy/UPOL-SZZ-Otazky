@@ -28,3 +28,8 @@
 - **Komprese a archivace**: `tar`, `gzip`, `bzip2`.
 - **Síťové nástroje**: `ping`, `netstat`, `ssh`, `scp`, `curl`, `wget`.
 - **Zabezpečení a monitoring**: `chmod`, `chown`, `top`, `htop`, `iptables`.
+
+##### Navigace
+Předchozí:  [[Unixové operační systémy (UNIX, Linux), uživatelská prostředí a nápovědy]]
+Následující: [[Příkazový interpret (shell), vstup a výstup programu a roura v unixových OS]]
+Celý okruh: [[2. Informační technologie]]

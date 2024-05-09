@@ -100,3 +100,7 @@
 	- Pokud není specifikován port, je určen OS.
 - Komunikace pomocí TCP využívá funkci `connect()` pro navázání spojení. Následně jsou využívány funkce `send()` a `recv()`.
 - Komunikace pomocí UDP využívá funkce `sendTo()` a `recvFrom()`.
+##### Navigace
+Předchozí:  [[Systém DNS]]
+Následující: [[Bezpečnost počítačových sítích]]
+Celý okruh: [[2. Informační technologie]]

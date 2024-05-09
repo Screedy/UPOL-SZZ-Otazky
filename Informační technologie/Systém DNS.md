@@ -38,3 +38,8 @@
 ## Uložení DNS záznamů
 - DNS záznamy jsou uloženy v RR (Resource Records) záznamech.
 ![[MacBook-2024-04-17-001038.png]]
+
+##### Navigace
+Předchozí:  [[Protokoly TCP a UDP - spojení a řízení toku dat]]
+Následující: [[Aplikační služby a tvorba síťových aplikací]]
+Celý okruh: [[2. Informační technologie]]

@@ -90,3 +90,8 @@
 	- u WPA2/3 se šifrují i některé hlavičky
 - WPS (Wi-Fi Protected Setup)
 	- generování a distribuce SSID a nastavení zabezpečení z AP na stanice
+
+##### Navigace
+Předchozí:  [[Bezpečnost počítačových sítích]]
+Následující: [[Wi-Fi - standardy, access point, použití média, linkový rámec, zabezpečení]]
+Celý okruh: [[2. Informační technologie]]

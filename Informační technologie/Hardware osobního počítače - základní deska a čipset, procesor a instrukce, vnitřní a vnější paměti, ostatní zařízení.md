@@ -74,3 +74,8 @@
 
 ## Ostatní zařízení
 - Různé přídavné karty jako je GPU, Síťové karty, zvukové, RAID karty, ...
+
+##### Navigace
+Předchozí:  [[Detekční a samoopravné kódy]]
+Následující: [[Počítačové sítě, jejich služby a architektury]]
+Celý okruh: [[2. Informační technologie]]

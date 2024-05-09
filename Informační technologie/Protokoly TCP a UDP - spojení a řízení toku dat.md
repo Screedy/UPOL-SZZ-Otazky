@@ -129,3 +129,8 @@
 
 - Přenos dat je výrazně rychlejší než přenos dat pomocí TCP. Jednotlivé UDP datagramy nejsou nijak potvrzovány a hlavička datagramu nemusí obsahovat tolik informací, jelikož není vytvářeno spojení a není řízen tok dat.
 ![[MacBook-2024-04-17-001035.png]]
+
+##### Navigace
+Předchozí:  [[Protokol IP - paket, adresy a podsítě, směrování]]
+Následující: [[Systém DNS]]
+Celý okruh: [[2. Informační technologie]]

@@ -60,3 +60,8 @@
 	- Nutnost automatického plnění tabulky switche
 	- Při přijetí rámce je do tabulky zaznamenána adresa odesílatele, port a čas přijetí
 	- Následně switch prochází svoji tabulku - není-li tam příjemce pošle rámec v tabulce na všechny porty krom portu odesílatele
+
+##### Navigace
+Předchozí:  [[Počítačové sítě, jejich služby a architektury]]
+Následující: [[Protokol IP - paket, adresy a podsítě, směrování]]
+Celý okruh: [[2. Informační technologie]]

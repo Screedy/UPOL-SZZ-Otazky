@@ -55,3 +55,8 @@
 		- umožňuje detekovat až 2 chyby současně a opravit 1
 	- **Reed-Solomonovy kódy**:
 		- Např. v CD/DVD/BD
+
+##### Navigace
+Předchozí:  [[Reprezentace čísel a znaků v počítači]]
+Následující: [[Hardware osobního počítače - základní deska a čipset, procesor a instrukce, vnitřní a vnější paměti, ostatní zařízení]]
+Celý okruh: [[2. Informační technologie]]

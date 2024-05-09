@@ -36,3 +36,8 @@ sed -i 's/oldtext/newtext/g' filename.txt
 ```bash
 awk '/^[0-9]+/ { print $0 }' filename.txt
 ```
+
+##### Navigace
+Předchozí:  [[Příkazový interpret (shell), vstup a výstup programu a roura v unixových OS]]
+Následující: [[Zpracování textu v unixových OS - základní utility, grep, sed, awk, jejich použití]]
+Celý okruh: [[2. Informační technologie]]

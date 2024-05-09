@@ -13,3 +13,8 @@
 	- **--help**: Většina příkazů podporuje tento přepínač, který vypíše krátkou nápovědu o tom, jak příkaz používat. Například `ls --help`.
 	- **apropos**: Hledání v manuálových stránkách podle klíčových slov. Například `apropos user` vypíše seznam příkazů souvisejících s uživateli.
 	- **whereis** a **which**: Tyto příkazy pomáhají uživatelům najít cestu k souborům příkazů. Například `which bash` nebo `whereis ls`.
+
+##### Navigace
+Předchozí:  [[Levenštajnova vzdálenost]]
+Následující: [[Unixové systémy souborů a procesů, základní programy]]
+Celý okruh: [[2. Informační technologie]]

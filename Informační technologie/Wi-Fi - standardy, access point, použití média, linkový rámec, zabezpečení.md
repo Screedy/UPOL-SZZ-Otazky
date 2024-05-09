@@ -88,3 +88,8 @@
 	- u WPA2/3 se šifrují i některé hlavičky
 - WPS (Wi-Fi Protected Setup)
 	- generování a distribuce SSID a nastavení zabezpečení z AP na stanice
+
+##### Navigace
+Předchozí:  [[Bezdrátové sítě - režimy, přenosové médium, problémy, bezpečnost]]
+Následující: [[NAT - účel, typy, problémy]]
+Celý okruh: [[2. Informační technologie]]

@@ -27,3 +27,8 @@ cat /var/log/system.log | grep 'error' | wc -l
 - `cat /var/log/system.log` čte soubor a posílá jeho obsah do stdout.
 - `grep 'error'` přijímá vstup z předchozího příkazu (proud dat z `cat`), filtruje řádky obsahující "error", a výstupy posílá dále.
 - `wc -l` počítá řádky ze svého vstupu, které přijal od `grep`.
+
+##### Navigace
+Předchozí:  [[Unixové systémy souborů a procesů, základní programy]]
+Následující: [[Text a regulární výrazy]]
+Celý okruh: [[2. Informační technologie]]

@@ -26,14 +26,14 @@
 - End-to-End
 	- Implementace složitější funkcionality v uzlech, které spolu komunikují
 	- Mezilehlé uzly si vystačí pouze s jednoduchými operacemi
-	- + spolehlivější přenos dat
-	- - vyšší zpoždění při přenosu
+	- \+ spolehlivější přenos dat
+	- \- vyšší zpoždění při přenosu
 - Hop-by-Hop
 	- Stejná funkcionalita na každém uzlu
-	- - méně spolehlivý přenos (selhání jakéhokoliv uzlu = konec komunikace)
-	- - omezené škálování
-	- - udržovat stav komunikace
-	- + zpoždění přenosu je minimální
+	- \- méně spolehlivý přenos (selhání jakéhokoliv uzlu = konec komunikace)
+	- \- omezené škálování
+	- \- udržovat stav komunikace
+	- \+ zpoždění přenosu je minimální
 
 ### Model ISO
 - Jedná se o obecný popis komunikace mezi dvěma uzly
@@ -51,3 +51,8 @@
 - Je tvořen čtyřmi vrstvami: **aplikační, transportní, síťová a síťového rozhraní**
 - Jednotlivé vrstvy jsou popsány standardy a jejich funkce je zajištěna pomocí protokolů, které tyto standardy implementují
 - ![[MacBook-2024-03-18-000912.png]]
+
+##### Navigace
+Předchozí:  [[Hardware osobního počítače - základní deska a čipset, procesor a instrukce, vnitřní a vnější paměti, ostatní zařízení]]
+Následující: [[Ethernet - přepínač, použití média, linkový rámec]]
+Celý okruh: [[2. Informační technologie]]

@@ -107,3 +107,8 @@
 	- **LF (Line Feed)** - v unixech
 	- **CR (Carriage Return)** - starší MacOS
 	- **CR + LF** - dos, windows
+
+##### Navigace
+Předchozí:  [[Binární logika, logické operace a jejich vlastnosti, funkce a jejich úpravy, logické obvody]]
+Následující: [[Detekční a samoopravné kódy]]
+Celý okruh: [[2. Informační technologie]]

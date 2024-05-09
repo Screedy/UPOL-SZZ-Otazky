@@ -30,3 +30,8 @@
 - Nevýhody:
 	- Dvě sběrnice kladou vyšší nároky na vývoj řídící jednotky procesoru a zvyšují i náklady na výrobu výsledného počítače
 	- Nevyužitou část paměti dat nelze použít pro program a obráceně
+
+##### Navigace
+Předchozí:  [[Zpracování textu v unixových OS - základní utility, grep, sed, awk, jejich použití]]
+Následující: [[Číselné soustavy]]
+Celý okruh: [[2. Informační technologie]]

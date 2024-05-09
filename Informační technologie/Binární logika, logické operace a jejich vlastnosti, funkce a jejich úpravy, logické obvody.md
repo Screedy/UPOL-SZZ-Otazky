@@ -67,3 +67,8 @@
 
 
 ### Logické obvody
+
+##### Navigace
+Předchozí:  [[Číselné soustavy]]
+Následující: [[Reprezentace čísel a znaků v počítači]]
+Celý okruh: [[2. Informační technologie]]

@@ -48,3 +48,8 @@
 - Lze chápat jako bezpečnost jednotlivých služeb.
 - Nejběžnějším bezpečnostním problémem jsou chyby v implementaci těchto služeb.
 - Např. "Heartbleed" v OpenSSL.
+
+##### Navigace
+Předchozí:  [[Aplikační služby a tvorba síťových aplikací]]
+Následující: [[Bezdrátové sítě - režimy, přenosové médium, problémy, bezpečnost]]
+Celý okruh: [[2. Informační technologie]]
