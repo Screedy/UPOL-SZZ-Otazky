@@ -26,7 +26,7 @@
 - $\theta (g)$ ... **Asymptotická oboustranná mez**
 	- popisuje těsnější popis chování funkce
 	- $\theta (g(n)) = \{f(n) \mid (\exists c_{1} \in \mathbb{N})(\exists c_{2} \in \mathbb{N})(\exists n_{0} \in \mathbb{N})(\forall n \geq n_{0}): 0 \leq c_{1} \cdot g(n) \leq f(n) \leq c_{2} \cdot g(n)\}$
-	- **Asymptotická oboustranná mez funkce $g(n)$** je množina funkcí $f(n$, takových, že **existují** přirozená čísla $c_{1} > 0$ a $c_{2} > 0$ a **existuje** přirozené číslo $n_{0}$ tako, že **pro každé** $n \geq n_{0}$ platí: $0 \leq c_{1} \cdot g(n) \leq f(n) \leq c_{2} \cdot g(n)$
+	- **Asymptotická oboustranná mez funkce $g(n)$** je množina funkcí $f(n$, takových, že **existují** přirozená čísla $c_{1} > 0$ a $c_{2} > 0$ a **existuje** přirozené číslo $n_{0}$ takové, že **pro každé** $n \geq n_{0}$ platí: $0 \leq c_{1} \cdot g(n) \leq f(n) \leq c_{2} \cdot g(n)$
 	- Věta: $f(n) \in \theta (g(n))$ právě když $f(n) \in O(g(n))$ a $f(n) \in \Omega (g(n))$
 
 - $o(g)$ ... **Asymptotická ostrá horní mez**

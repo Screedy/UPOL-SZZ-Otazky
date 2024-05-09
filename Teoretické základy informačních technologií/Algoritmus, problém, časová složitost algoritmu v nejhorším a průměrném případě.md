@@ -35,7 +35,7 @@
 	2. **Časová složitost v průměrném případě**
 		- $T(n)$ znamená *délku výpočtu algoritmu $A$ nad vstupem velikosti $n$* <u>v průměrném případě</u>;
 		- $T(n) = \frac{t_{A}(i_{1})+...+t_{A}(i_{m})}{m}$
-		- $t_{A}(i)$ je počet elementárních výpočetních kroků vykonaných od zahájení do skončení výpočtu algortmem $A$ pro vstup $i$
+		- $t_{A}(i)$ je počet elementárních výpočetních kroků vykonaných od zahájení do skončení výpočtu algoritmem $A$ pro vstup $i$
 
 ##### Navigace
 Předchozí:  [[Geometrická interpretace určitého integrálu]]
