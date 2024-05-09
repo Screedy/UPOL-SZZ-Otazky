@@ -19,6 +19,7 @@
 	- často používán v osobních počítacích s procesory Intel a AMD využívající platformu x86
 - **Mixed-endian**: mohou používat kombinaci předchozích
 	- využíván na platformě ARM
+
 ![[MacBook-2024-04-26-001088.png| 500]]
 
 ## Celá čísla
@@ -80,7 +81,7 @@
 		- **mantisa** - vlastní číselná hodnota čísla
 	- Číslo $-6.25$ by mohlo být reprezentováno jako:
 		- **Znaménko**: $1$ (pro záporné číslo)
-		- **Exponent**: $1000\ 0011$(130 v decimálním systému, odpovídá reálnému exponentu 3, protože 130-127=3)
+		- **Exponent**: $1000\ 0011$($130$ v decimálním systému, odpovídá reálnému exponentu $3$, protože $130-127=3$)
 		- **Mantisa**: $100\ 1000\ 0000\ 0000\ 0000\ 0000$ (frakce za 1., v tomto případě 1.1001 v binární formě, což odpovídá 1.5625)
 	- Výhody:
 		- široký rozsah hodnot
@@ -92,14 +93,14 @@
 
 ## Text
 = posloupnost tisknutelných znaků (písmena různých abeced, cifer a symbolů)
-+ + řídící znaky
++ \+ řídící znaky
 - kódování znaků na binární hodnoty pomocí kódových tabulek:
 - **ASCII**: 
 	- standardní kódová tabulka pro anglické abecedy a cifry
-	- původně do 7b = 128 znaků
+	- původně do $7$b = $128$ znaků
 - **Unicode**: 
 	- rozsáhlý znakový standard, který byl vyvinut s cílem poskytnout jednotný a univerzální způsob reprezentace a manipulace s textem
-- **UTF**
+- **UTF**:
 	- kódování kódových bodů do binární reprezentace 
 	- různé verze: UTF-8, UTF-16
 

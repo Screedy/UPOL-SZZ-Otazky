@@ -17,7 +17,7 @@ grep "search_pattern" filename.txt
 	- `-i` - ignoruje malá/velká písmena
 	- `-c` - počet výskytů vzorů
 	- `-v` - zobrazení řádků, které neobsahují vzor
-- `"search_pattern"` využítá regulární výrazy:
+- `"search_pattern"` využítá regulární výrazy
 
 ## sed
 - Nástroj pro provádění různých operací na textových souborech nebo datových proudech, jako je nahrazování, vkládání, mazání nebo získání určitých řádků.

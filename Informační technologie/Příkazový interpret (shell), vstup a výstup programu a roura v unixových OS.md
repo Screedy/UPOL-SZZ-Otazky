@@ -9,12 +9,12 @@
 	2. **Standardní výstup (stdout)**: Proud pro data vycházející z programu. Standardně se zobrazuje na obrazovku uživatele.
 	3. **Standardní chybový výstup (stderr)**: Proud používaný programem k vypisování chybových zpráv nebo diagnostických informací, nezávisle na běžném výstupu programu. Také standardně vede na obrazovku.
 ```bash
-program > soubor        # Standardní výstup do souboru, vytvoří pokud neexistuje
-program 2> soubor       # Chybový výstup do souboru, vytvoří pokud neexistuje
-program &> soubor       # Oba výstupy do souboru, vytvoří pokud neexistuje
-program >> soubor       # vytvoří soubor pokud neexistuje, jinak ho appendne
+program > soubor       # Standardní výstup do souboru, vytvoří pokud neexistuje
+program 2> soubor      # Chybový výstup do souboru, vytvoří pokud neexistuje
+program &> soubor      # Oba výstupy do souboru, vytvoří pokud neexistuje
+program >> soubor      # vytvoří soubor pokud neexistuje, jinak ho appendne
 
-program < soubor        # přesměruje soubor na vstup do programu
+program < soubor       # přesměruje soubor na vstup do programu
 ```
 
 ## Roura
