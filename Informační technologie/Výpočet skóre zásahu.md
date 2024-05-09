@@ -3,7 +3,7 @@
 - Zásahy jsou uspořádané podle skóre sestupně.
 
 ## Výpočet
-- Výpočet probíhá posle algoritmu `BM25`. `BM` = Best Matching.
+- Výpočet probíhá podle algoritmu `BM25`. `BM` = Best Matching.
 - Skóre dotazu $Q$ obsahující tokeny $q_{1}, ..., q_{n}$ na hodnotu zadané položky dokumentu $D$ je dáno výpočtem:
 $$
 score(D,Q) = \sum^{n}_{i=1}boost*IDF(q_{i})*tf(q_{i},D)
@@ -11,7 +11,7 @@ $$
 - Základní hodnota $boost$ je $k_{1} + 1$. Výchozí hodnota parametru $k_{1}$ (*term saturation parameter*) je $1.2$. Základní hodnota $boost$ je tedy $2.2$
 - Hodnota $IDF(q_{i})$ je dána vzorcem:
 $$
-ln(1+\frac{N-n(q_{i}+0.5)}{n(q_{i}+0.5)})
+ln\left(1+\frac{N-n(q_{i}+0.5)}{n(q_{i}+0.5)}\right)
 $$
 - Hodnota $n(_q{i})$ udává počet dokumentů obsahující v zadané položce term $q_{i}$ a hodnota $N$ celkový počet dokumentů s položkou.
 - Hodnota $tf(q_{i},D)$ je dána vzorcem:

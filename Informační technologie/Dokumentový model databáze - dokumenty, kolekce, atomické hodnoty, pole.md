@@ -3,7 +3,7 @@
 
 ## Dokumenty
 - Vezmeme-li dvojice řetězců a hodnot `name1` a `value1`, `name2` a `value2`, ... můžeme z nich vytvořit **dokument**.
-- Dokument je hodnota, který obsahuje určené hodnoty v zadaném pořadí a každou z nich označuje zadaným jménem.
+- Dokument je hodnota, která obsahuje určené hodnoty v zadaném pořadí a každou z nich označuje zadaným jménem.
 - Dvojice jméno a hodnota se nazývá **položka**.
 
 - Například uvazujme dokument:

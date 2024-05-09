@@ -159,7 +159,7 @@ FROM   movies;
 (3 rows)
 ```
 
-## Spojení
+## Přirozené spojení
 - Přirozené spojení kombinuje relace podle sloupců, které mají stejný název a datový typ v obou relacích.
 - Výsledná relace obsahuje všechny kombinace tuplů z obou relací, které mají stejné hodnoty ve sloupcích, podle kterých se spojují.
 ```sql

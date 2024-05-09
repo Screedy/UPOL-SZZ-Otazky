@@ -1,4 +1,5 @@
-- Integrita dat je klíčový koncept v relačních databázích, který zajistí správnost a konzistenci dat. Základními mechanismy pro udržení integrity dat jsou primární a cizí klíče.
+- Integrita dat je klíčový koncept v relačních databázích, který zajistí správnost a konzistenci dat. 
+- Základními mechanismy pro udržení integrity dat jsou primární a cizí klíče.
 
 ## Primární klíč (Primary Key)
 - Primární klíč je sloupec nebo skupina sloupců v relační databázové tabulce, které jednoznačně identifikují každý řádek tabulky.

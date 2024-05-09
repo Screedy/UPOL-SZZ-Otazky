@@ -6,7 +6,7 @@
 - Klauzule se většinou jmenují podle klíčového slova, které klauzuli uvozuje.
 - Například výraz `SELECT` se může skládat z klauzulí `SELECT` a `FROM`
 
-### `SELECT` a `FROM`
+### Klauzule `SELECT` a `FROM`
 - `( SELECT columns FROM table )`
 - Část `SELECT columns` je `SELECT` klauzule a část `FROM table` je `FROM` klauzule.
 	- Místo `columns` popisujeme sloupce výsledné tabulky.
@@ -47,7 +47,7 @@ SELECT DISTINCT title FROM movies;
 (3 rows)
 ```
 
-### WHERE
+### Klauzule `WHERE`
 Výraz `SELECT` může mít tvar:
 ```sql
 ( SELECT DISTINCT columns FROM table WHERE condition )
@@ -63,7 +63,7 @@ SELECT * FROM movies WHERE title = 'The Avengers';
  The Avengers | 1998 |     89
 (2 rows)
 ```
-### ORDER BY
+### Klauzule `ORDER BY`
 - `ORDER BY` klauzule se skládá z výrazů tvaru: `column ASC` a `column DESC`.
 ```sql
 SELECT * FROM movies ORDER BY year ASC;
@@ -81,15 +81,15 @@ SELECT * FROM movies ORDER BY year ASC;
 (7 rows)
 ```
 
-### LIMIT a OFFSET
+### Klauzule `LIMIT` a `OFFSET`
 ```sql
 LIMIT count
 OFFSET start
 ```
-- Nejprve se vyhodnocuje klauzule `OFFSET`, která pro tabulku D vrátí tabulku D', jejíž tělo tvoří řádky tabulky D bez prvních `start` řádků
-- Klauzule `LIMIT` vrátí pro tabulku D tabulku D', jejíž tělo tvoří prvních `count` řádků těla tabulky D.
+- Nejprve se vyhodnocuje klauzule `OFFSET`, která pro tabulku $D$ vrátí tabulku $D'$, jejíž tělo tvoří řádky tabulky D bez prvních `start` řádků
+- Klauzule `LIMIT` vrátí pro tabulku $D$ tabulku $D'$, jejíž tělo tvoří prvních `count` řádků těla tabulky D.
 
-### GROUP BY
+### Klauzule `GROUP BY`
 ```sql
 GROUP BY column1, column2, ...
 ```
@@ -128,7 +128,7 @@ GROUP BY year, country;
 | 1962 | USA     | 2     |
 (5 rows)
 ```
-## Klauzule SELECT výrazu
+## Klauzule `SELECT` výrazu
 ```sql
 ( SELECT   columns
   FROM     tables

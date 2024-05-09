@@ -5,7 +5,7 @@
 	1. Pokud je řetězec $y$ prázdný, pak je vzdálenost rovna délce řetězce $x$,
 	2. pokud je řetězec $x$ prázdný, pak je vzdálenost rovna délce řetězce y,
 	3. začínají-li oba řetězce $x$ i $y$ stejným znakem, pak je vzdálenost rovna vzdálenosti řetězců $x,y$ bez prvních znaků,
-	4. pokud oba řetězce nezačínají stejným znakem, pak je vzdálenost rovna jedna plus minimum z hodnot:
+	4. pokud oba řetězce **nezačínají** stejným znakem, pak je vzdálenost rovna $1+$ minimum z hodnot:
 		(a) vzdálenost řetězce $x$ bez prvního znaku a řetězce $y$,
 		(b) vzdálenost řetězce $x$ a řetězce $y$ bez prvního znaku
 		(c) a vzdálenost řetězců $x, y$ bez prvních znaků.
