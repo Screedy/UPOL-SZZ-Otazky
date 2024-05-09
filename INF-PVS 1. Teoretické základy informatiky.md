@@ -63,7 +63,6 @@
 5. [ ] [[Vztah rekurzivních a částečně rekurzivních jazyků]]
 6. [ ] [[Uzávěrové vlastnosti jazyků TS]]
 7. [ ] [[Riceova věta]]
----
 1. [ ] [[Složitost algoritmu (časová a paměťová)]]
 2. [ ] [[Třída P, třída NP, důvody jejich zavedení, jejich vzájemný vztah]]
 3. [ ] [[NP-úplné problémy]]
