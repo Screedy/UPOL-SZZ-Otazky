@@ -15,6 +15,85 @@
 - Statické stránky poskytují pevný obsah, který se nemění.
 - Dynamické stránky generují obsah na základě interakcí uživatele nebo serverových procesů.
 
+---
+
+- na základě WWW služby
+	- popisuje prohlížení, ukládání a odkazování navzájem provázaných hypertextových dokumentů uložených v síti.
+	- Uživatelé kteří jsou v této síti si mohou dokumenty prohlížet
+
+### Komunkace po síťi
+
+- klient-server architektura
+- webová stránka umístěna na webovém serveru
+- adresy web stránky - **Uniform Resouce Locationn (URL)**
+- pro komunikaci serveru a klienta HTTP(S) protokol
+
+#### Protokol HTTP(S)
+
+- pro výměnu dat mezi klientem a webovým serverem
+- HTTP - Hyper Transfer Protocol
+- HTTPS - zabezpečená varienta HTTP
+- požadavek:
+	- ![[req.png]]
+- odpověd:
+	- ![[res.png]]
+	- **data** - zdrojoví kód stránky
+	- **status** - je číselné značení odpovědi jestli proběhla správně a informuje o vzniklé situaci
+		- 200 - OK
+		- 301 - soubor permanentně přesunut
+		- 302 - soubor dočasně přesunut
+		- 404 - soubor nenalezen
+		- 410 - soubor odstraněn
+		- 500 - chyba serveru
+
+#### Uniform Resource Location(URL)
+
+- představuje adresu souboru v síťi
+$$http://www.example.cz/adresa/index.html.$$
+- první část - protokol
+- druhá - doménové jméno serveru (DNS) - můžeme psát IP - pokud nemá registrované doménové jméno
+- třetí - cesta k souboru na servru a soubor
+- . - kořebá adresa
+- možnost adresovat soubory na lokálním PC
+
+**Absolutní vs Realtivní adresování**
+
+- absolutní - jsou cesty které označuj úplné adresy které vedou na daný soubor
+- relativní - adresa souboru k aktuální adrese stránky ve které je použita
+
+### Co je webová stránka?
+
+- dříve dokument v síti internet
+- dnes těžko definovat (i mobilní číi deskotp app)
+- statické a dynamické web stránky
+
+#### Statická stránka
+
+- tvořena statickým obsahem (dokumenty, obrazky, etc) které je vrácen web servrem.
+![[static.png]]
+
+### Dynamická stránka
+
+- dynamický stránka je vytvářena při každém dotazu. 
+- web aplikace - stránky používajíc ve větší míře skriptovací jazyk
+![[dynamic.png]]
+
+### Webové technologie
+
+#### Klientské technologie
+
+- tetchnologie na straně klienta (běží)
+- HTML - struktura, CSS - vzhled, JavaScript - interakce a manipulace
+
+#### Serverové technologie
+
+- technologie běžící na serveru
+- weboví server, databázoví server, aplikační server
+
+#### Webové standarty
+
+- konsorcium W3C  - vydává specifika popisující webové technologie
+- pouze recommended -> pouze doporučení, prohlížeč může implementovat jinak
 
 ##### Navigace
 Předchozí:  [[IPv6 - vlastnosti, paket, adresy]]
