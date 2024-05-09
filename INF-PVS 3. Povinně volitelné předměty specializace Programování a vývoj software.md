@@ -1,0 +1,72 @@
+**KMI/JCS1 Jazyk C# 1**
+1. [ ] [[Základní vlastnosti a konstrukty jazyka (typování, hodnotové a referenční datové typy, platforma .NET, cykly, podmínky, ...)]]
+2. [ ] [[Objektově orientované rysy jazyka (properties, fields, metody, dědičnost, modifikátory přístupu, rozhraní, delegáti)]]
+3. [ ] [[Generitické datové typy, systém výjimek]]
+4. [ ] [[Tvorba grafického uživatelského rozhraní]]
+---
+**KMI/JCS2 Jazyk C# 2**
+1. [ ] [[Práce se soubory a souborovým systémem, XML a JSON, serializace, deserializace]]
+2. [ ] [[LINQ]]
+3. [ ] [[Základy paralelního programování - vlákna]]
+4. [ ] [[Práce s relačními databázemi, Objektově relační mapování a EntityFramework]]
+5. [ ] [[Tvorba webových stránek s ASP.NET MVC, WebAPI a OData]]
+6. [ ] [[Reflexe]]
+---
+**KMI/JJ1 Jazyk Java 1**
+1. [ ] [[OOP v jazyce Java (Třídy, objekty, atributy, rozhraní, rozsahy platnosti, polymorfismus, dědičnost)]]
+2. [ ] [[Specifické třídy jazyka (např. výčtové typy, záznamy, výjimky, obalové třídy)]]
+3. [ ] [[Generické třídy a metody]]
+4. [ ] [[Kolekce a práce s nimi]]
+5. [ ] [[Lambda výrazy, funkční rozhraní, vnořené a anonymní třídy, Stream API]]
+6. [ ] [[Organizace kódu, testování, dokumentace, překlad a provádění programu]]
+---
+**KMI/JJ2 Jazyk Java 2**
+1. [ ] [[Zpracování dat ve formátu XML, srovnání různých přístupů]]
+2. [ ] [[Tvorba grafického uživatelského rozhraní, principy použité v grafických knihovnách]]
+3. [ ] [[Práce se sítí, podpora standardních protokolů, komunikace protokolem TCP IP]]
+4. [ ] [[Principy práce s relační databází, typy dotazů, zpracování dat]]
+5. [ ] [[Reflexe, anotace]]
+---
+**KMI/JP Jazyk Python**
+1. [ ] [[Základní datové typy, mutibilita a imutabilita]]
+2. [ ] [[Sekvence - unpacking, cykly]]
+3. [ ] [[Dekorátory a jejich použití]]
+4. [ ] [[Systém dunder metod a objektově orientované programování]]
+5. [ ] [[Struktura projektu - balíčky, moduly a jejich importování]]
+6. [ ] [[Protokol iterování a comprehensions]]
+7. [ ] [[Testování - principy a možnosti]]
+8. [ ] [[Dokumentace a typování a PEP8]]
+---
+**Jazyk JCP Jazyk C++**
+1. [ ] [[Vstupy a výstupy přes streamy cin, cout]]
+2. [ ] [[Objekty a třídy]]
+3. [ ] [[Konstruktory třídy a destruktor třídy]]
+4. [ ] [[Dědičnost tříd]]
+5. [ ] [[Přetížení operátorů (operace overloading)]]
+6. [ ] [[Šablony (templates)]]
+7. [ ] [[Třída pro řetězce (string)]]
+8. [ ] [[Třída pro regulární výrazy (regex)]]
+9. [ ] [[Knihovna standardních šablon STL]]
+10. [ ] [[Kontejnery vektor, množina, mapa]]
+11. [ ] [[Streamy pro soubory]]
+---
+**KMI/TMAP Tvorba mobilních aplikací**
+1. [ ] [[Struktura Android mobilní aplikace]]
+2. [ ] [[Aktivity a jejich životní cyklus]]
+3. [ ] [[Ukládání dat v Android aplikacích]]
+4. [ ] [[Práce na pozadí v Android aplikacích]]
+5. [ ] [[Rozhraní Android mobilních aplikací a jeho tvorba]]
+6. [ ] [[Možnosti vývoje multiplatformních mobilních aplikací]]
+7. [ ] [[Jazyk Kotlin]]
+8. [ ] [[Základy vývoje aplikací pro iOS]]
+---
+**KMI/WEBA Webové aplikace**
+1. [x] [[Webové aplikace a přehled technologií používaných při jejich tvorbě]]
+2. [x] [[Architektura webové aplikace a problematika škálovatelnosti]]
+3. [x] [[Zpracování HTTP požadavků - předávání dat mezi webovým a aplikačním serverem, překlady realizace]]
+4. [x] [[REST API - popis a příklady realizace]]
+5. [x] [[JavaScript na webovém frontendu a jeho možnosti]]
+6. [x] [[Technologie AJAX a její použití]]
+7. [x] [[Knihovna React - charakteristika, použití]]
+8. [x] [[Možnosti tvorby nativních aplikací pomocí webových technologií]]
+9. [x] [[Node.js - charakteristika, použití]]
