@@ -3,11 +3,6 @@
 - Každou podmnožinu $R \subseteq A \times B$ nazveme **binární relace mezi množinami $A$ a $B$**. **Je-li $A = B$, pak $R \subseteq A \times A$** nazveme **binární relace na množině $A$**
 
 - Binární relace na množině $X$ jsou relace $R \subseteq X \times Y$, kde $X=Y$
-
->[!Tip] Speciální relace
->- $\varnothing$ (**Prázdná relace**) - symetrická, antisymetrická, tranzitivní, ireflexivní, asymetrická
->- **Relace identity**, $id_{x} = \{<x,y> \mid x \in X \}$ - reflexivní, symetrická, antisymetrická, tranzitivní (a úplná, když je $\mid X \mid = 1$)
->- **Kartézský součin (plná relace) $X \times X$** - reflexivní, symetrická, tranzitivní a úplná (antisymetrická pro $\mid X \mid = 1$)
 ### Vlastnosti binární relace
 - Nechť $R$ je relace na množině $X$:
 
@@ -36,6 +31,11 @@
 	- Pokud **pro každé $x,y \in X$ platí $(<x,y> \in R) \rightarrow (<y,x> \notin R)$**
 - Úplná
 	- Pokud pro každé $x,y \in X$ platí $(<x,y> \in R) \vee (<y,x> \in R)$
+
+>[!Tip] Speciální relace
+>- $\varnothing$ (**Prázdná relace**) - symetrická, antisymetrická, tranzitivní, ireflexivní, asymetrická
+>- **Relace identity**, $id_{x} = \{<x,y> \mid x \in X \}$ - reflexivní, symetrická, antisymetrická, tranzitivní (a úplná, když je $\mid X \mid = 1$)
+>- **Kartézský součin (plná relace) $X \times X$** - reflexivní, symetrická, tranzitivní a úplná (antisymetrická pro $\mid X \mid = 1$)
 
 ##### Navigace
 Předchozí:  [[Funkce (zobrazení) a jejich vlastnosti]]

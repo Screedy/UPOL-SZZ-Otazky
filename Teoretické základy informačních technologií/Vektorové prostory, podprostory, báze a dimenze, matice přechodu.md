@@ -13,7 +13,7 @@
 - *Vektory* ... prvky pole $V$
 - *Skaláry* ... prvky tělesa $T$
 ---
-- vektorový prostor $V$ (prvky jsou vektory) nad tělesem $T$ (prvky jsou skaláry). Platí, že " + ": $V \times V \rightarrow V$ a " $\cdot$ ": $T \times V \rightarrow V$ (tzn. když **násobím vektor jiným vektorem** tak výsledek bude zase **v tom samém vektorovém prostoru** a když **násobím vektor skalárem** tak výsledek bude **taktéž v tom samém vektorovém prostoru**)
+- vektorový prostor $V$ (prvky jsou vektory) nad tělesem $T$ (prvky jsou skaláry). Platí, že "$+$": $V \times V \rightarrow V$ a "$\cdot$": $T \times V \rightarrow V$ (tzn. když **násobím vektor jiným vektorem** tak výsledek bude zase **v tom samém vektorovém prostoru** a když **násobím vektor skalárem** tak výsledek bude **taktéž v tom samém vektorovém prostoru**)
 - operace musí být **uzavřené** (např. po násobení **nesmím** dostat něco co **není** ve vektorovém prostoru $V$)
 
 >[!Tip] Levá vnější operace
@@ -21,7 +21,7 @@
 >- **Levou vnější operaci** nad $A$ a $B$ nazýváme každé zobrazení " . " $: A \times B \rightarrow B$.
 
 ### Lineární kombinace vektorů
-- Nechť $V$ je vektorový prostor nad tělesem $T$, nechť $\vec{v}, \overrightarrow{u_1}, \overrightarrow{u_2}, \ldots, \overrightarrow{u_n} \in V$. Říkáme, že vektor $\vec{v}$ je lineární kombinací vektoru $\overrightarrow{u_1}, \overrightarrow{u_2}, \ldots, \overrightarrow{u_n}$, jestliže existují skaláry $c_1, c_2, \ldots, c_n \in T$ tak, že
+- Nechť $V$ je vektorový prostor nad tělesem $T$, nechť $\vec{v}, \vec{u_1}, \vec{u_2}, \ldots, \vec{u_n} \in V$. Říkáme, že vektor $\vec{v}$ je lineární kombinací vektoru $\vec{u_1}, \vec{u_2}, \ldots, \vec{u_n}$, jestliže existují skaláry $c_1, c_2, \ldots, c_n \in T$ tak, že
 $$
 \vec{v}=\sum_{i=1}^n c_i \overrightarrow{u_i}=c_1 \overrightarrow{u_1}+c_2 \overrightarrow{u_2}+\cdots+c_n \overrightarrow{u_n} .
 $$
@@ -29,17 +29,17 @@ $$
 >- Nulový vektor $\vec{o} \in V$ je lineární kombinací libovolných vektorů z $V$
 
 
-### Lineární závislost a nezávislost vektorů - definice
-- Nechť $V$ je vektorový prostor nad tělesem $T$. Vektory $\overrightarrow{u_1}, \overrightarrow{u_2}, \ldots, \overrightarrow{u_n} \in V$ nazýváme **lineárně závislé**, jestliže existují skaláry $c_1, c_2, \ldots, c_n \in T$ tak, že
+### Lineární závislost a nezávislost vektorů
+- Nechť $V$ je vektorový prostor nad tělesem $T$. Vektory $\vec{u_1}, \vec{u_2}, \ldots, \vec{u_n} \in V$ nazýváme **lineárně závislé**, jestliže existují skaláry $c_1, c_2, \ldots, c_n \in T$ tak, že
 $$
-\vec{o}=\sum_{i=1}^n c_i \overrightarrow{u_i}=c_1 \overrightarrow{u_1}+c_2 \overrightarrow{u_2}+\cdots+c_n \overrightarrow{u_n},
+\vec{o}=\sum_{i=1}^n c_i \vec{u_i}=c_1 \vec{u_1}+c_2 \vec{u_2}+\cdots+c_n \vec{u_n},
 $$
 a přitom **alespoň jedno z čísel** mezi $c_1, c_2, \ldots, c_n$ je nenulové.
 V opačném případě, tedy pokud
 $$
-\vec{o}=\sum_{i=1}^n c_i \overrightarrow{u_i}=c_1 \overrightarrow{u_1}+c_2 \overrightarrow{u_2}+\cdots+c_n \overrightarrow{u_n},
+\vec{o}=\sum_{i=1}^n c_i \vec{u_i}=c_1 \vec{u_1}+c_2 \vec{u_2}+\cdots+c_n \vec{u_n},
 $$
-pouze v případě, že $c_1=c_2=\ldots=c_n=0$, se vektory $\overrightarrow{u_1}, \overrightarrow{u_2}, \ldots, \overrightarrow{u_n} \in V$ nazývají **lineárně nezávislé**.
+pouze v případě, že $c_1=c_2=\ldots=c_n=0$, se vektory $\vec{u_1}, \vec{u_2}, \ldots, \vec{u_n} \in V$ nazývají **lineárně nezávislé**.
 
 ### Báze vektorového prostoru $V$
 - je to **množina lineárně nezávislých vektorů**, které **"generují" prostor** $V$

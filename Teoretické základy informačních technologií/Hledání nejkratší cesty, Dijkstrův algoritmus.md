@@ -1,7 +1,7 @@
 ### Hledání nejkratší cesty a Dijkstrův algoritmus
 - Dijkstrův algoritmus je jeden z nejznámějších algoritmů **hledání nejkratší cesty**
 ---
-- **Na vstupu**: je neorientovaný graf $G = <V, E>$, jeho hranové ohodnocení $w: E \rightarrow R^{+}$ a vrchol $s \in V$
+- **Na vstupu**: je neorientovaný graf $G = <V, E>$, jeho hranové ohodnocení $w: E \rightarrow \mathbb{R}^{+}$ a vrchol $s \in V$
 - **Výstupem**: algoritmu je pro každý vrchol $v \in V$ číslo $d(v)$, které je vzdáleností z $s$ do $v$.
 - Algoritmus **používá proměnné**: $A, N, d, m$, 
 	- $A$ a $N$ označují množiny vrcholů 
@@ -13,8 +13,8 @@
 	- Hodnota $d(v) = \infty$ znamená, že žádná cesta do $v$ zatím nebyla nalezena. Tato hodnota se pak u vrcholů, do kterých existuje cesta z $s$, v průběhu výpočtu zmenšuje, v každém kroku obsahuje délku nejkratší zatím nalezené cesty z $s$ do $v$, a na konci délku nejkratší cesty z $s$ do $v$. 
 	- U vrcholů $v$, do kterých cesta z $s$ nevede, zůstává $d(v) = \infty$. 
 	- Množina $A$ se na začátku nastaví na $A = V$. Během výpočtu obsahuje $A$ vrcholy $v$, pro něž zatím nebyla stanovena konečná hodnota $d(v)$ (tj. $d(v)$ byla stanovena, ale v dalším výpočtu se ještě může změnit). 
-- **Algoritmus opakuje následující krok:** 
-	- zjistí nejmenší hodnotu $d(v)$ vrcholů z $A$. Množinu vrcholů $v$ z $A$ s touto nejmenší hodnotou označí $N$. Z množiny $A$ vyjme všechny vrcholy $v$, pro které je $d(v)$ nejmenší. 
+- **Algoritmus opakuje následující kroky:** 
+	- Zjistí nejmenší hodnotu $d(v)$ vrcholů z $A$. Množinu vrcholů $v$ z $A$ s touto nejmenší hodnotou označí $N$. Z množiny $A$ vyjme všechny vrcholy $v$, pro které je $d(v)$ nejmenší. 
 		- Vrchol $v$ se tedy odstraní z $A$ a vloží do $N$, právě když $d(v) = min\ \{d(u) \mid u \in A\}$. 
 	- Každý takový vrchol $v$ je pak považován za vrchol, pro nějž byla nalezena nejkratší cesta z $s$ do $v$, délkou této cesty je $d(v)$, a kratší cesta do $v$ se v dalších krocích algoritmu už nehledá (to je zajištěno tím, že se vrchol odstranil z $A$). 
 	- Vložení vrcholu $v$ do $N$ znamená, že $v$ je považován za vrchol, přes který může do zbývajících vrcholů $u$ množiny $A$ vést kratší cesta, než je dosud nalezená nejkratší cesta do $u$. V tomto smyslu je tedy každý vrchol $v$ z $N$ kandidátem na zlepšení hodnoty $d(u)$. 
@@ -24,12 +24,12 @@
 	- Na konci je množina $A$ buď prázdná, a to tehdy, když ke všem vrcholům z $s$ cesta existuje, nebo je neprázdná, a obsahuje jen vrcholy $v$ s hodnotou $d(v) = \infty$. Vrcholy s hodnotou $d(v) = \infty$ jsou právě ty, ke kterým z s neexistuje cesta.
 
 ### Algoritmus
-- **Vstup:** Graf $G = <V, E>$, vrchol $s \in V$, hranové ohodnocení $w: E \rightarrow R^{+}$
+- **Vstup:** Graf $G = <V, E>$, vrchol $s \in V$, hranové ohodnocení $w: E \rightarrow \mathbb{R}^{+}$
 - **Výstup:** Hodnota $d(v)$ pro každý $v \in V$, $d(v)$ je délka nejkratší cesty z $s$ do $v$
-- **Proměnné:** Funkce $d: V \rightarrow R^{+}$, číslo $m \in R^{+}$, množiny $A, N \in V$
+- **Proměnné:** Funkce $d: V \rightarrow \mathbb{R}^{+}$, číslo $m \in \mathbb{R}^{+}$, množiny $A, N \in V$
 - **Postup:**
 	1. $d(s) = 0$; pro každý $v \in V - \{s\}: d(v):= \infty ; A = V$
-	2. Pokud existuje $v \in A$ takový, že $d(v) \neq \infty$, skonči
+	2. Pokud neexistuje $v \in A$ takový, že $d(v) \neq \infty$, skonči
 	3. $m = min\{d(v) \mid v \in A\}, N= \{ v \in A \mid d(v)=m \}, A = A - N$
 	4. Pro všechny $v \in N, u \in A$ takové, že $\{v,u\} \in E$ jestliže $d(v) + w(\{v,u\}) < d(u),$ pak $d(u)=d(v)+w(\{v,u\});$ pokračuj krokem $2.$
 

@@ -44,7 +44,7 @@
 - Prvky $\omega \in \Omega$ se nazývají **elementární jevy** a představují výsledky náhodného pokusu.
 - **Množiny $A \in \mathcal{A}$** se nazývají **jevy**, někdy také **měřitelné jevy**, a jsou to podmnožiny množiny $\Omega$, ale ne každá podmnožina množiny $\Omega$ musí být jevem.
 - Jev je tedy množina $A$ sestávající z nějakých výsledků pokusu, o nichž říkáme, že jsou jevy $A$ příznivé.
-- Pro **jev $A$ se číslo $P(A)$** nazývá **pravděpodobnost jevu** A.
+- Pro **jev $A$ se číslo $P(A)$** nazývá **pravděpodobnost jevu** $A$.
 - Pravděpodobnostní prostor se nazývá **diskrétní,** pokud je množina $\Omega$ konečná a nebo spočetná.
 > [!Summary] Zjednodušeně
 > - Pravděpodobnostní prostor se skládá ze tří hlavních komponent: 

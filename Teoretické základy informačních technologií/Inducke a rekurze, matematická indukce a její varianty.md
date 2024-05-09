@@ -30,11 +30,11 @@ f(n)
 - Umožňuje dokazovat tvrzení tvaru
 	- "pro každé přirození číslo $n$ platí $V(n)$, kde $V(n)$ je nějaké tvrzení, které závisí na $n$".
 - Základem dokazování matematickou indukcí je následující tvrzení (**princip indukce**):
-	- Nechť je pro každé $n \in N$ dáno tvrzení $V(n)$.
+	- Nechť je pro každé $n \in \mathbb{N}$ dáno tvrzení $V(n)$.
 	- Předpokládejme, že platí
 		1. $V(1)$ (indukční předpoklad)
-		2. pro každé $n \in N$: z $V(n)$ plyne $V(n+1)$ (indukční krok).
-		Pak $V(n)$ platí pro každé $n \in N$.
+		2. pro každé $n \in \mathbb{N}$: z $V(n)$ plyne $V(n+1)$ (indukční krok).
+		Pak $V(n)$ platí pro každé $n \in \mathbb{N}$.
 
 ### Definice matematickou indukcí
 - Vraťme se k definici faktoriálu:
@@ -42,9 +42,9 @@ f(n)
 	2. `pro n > 1 je f(n) = n * f(n - 1)`
 - Intuitivně je jasná, že tímto způsobem je jednoznačně definována jistá funkce. 
 - Z čeho ale plyne že funkce splňující podmínky $1$ a $2$ z uvedené definice existuje a je určena jednoznačně?
-	- **Věta:** Nechť je dána množina $V$, prvek $a \in V$ a funkce $G: N \times V \rightarrow V$. Pak existuje právě jedna funkce $F: N \rightarrow V$, pro kterou platí
+	- **Věta:** Nechť je dána množina $V$, prvek $a \in V$ a funkce $G: \mathbb{N} \times V \rightarrow V$. Pak existuje právě jedna funkce $F: \mathbb{N} \rightarrow V$, pro kterou platí
 		1. $F(1) = a,$
-		2. pro každé $n \in N$: $F(n+1)=G(n,F(n))$
+		2. pro každé $n \in \mathbb{N}$: $F(n+1)=G(n,F(n))$
 
 ## Strukturální indukce
 - Strukturální indukce je **zobecněním matematické indukce**. Místo množiny $\mathbb{N}$, se kterou pracuje matematická indukce, pracuje strukturální indukce s množinou $T$ **jistých objektů**.

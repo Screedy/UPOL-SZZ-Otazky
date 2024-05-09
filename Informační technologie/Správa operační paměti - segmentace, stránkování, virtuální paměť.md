@@ -4,11 +4,11 @@
 - může být realizována různými prostředky - DRAM, SRAM, HDD, SSD, flash
 
 ## Požadavky na správu operační paměti
-- hw a OS počítače se podílí na:
+- HW a OS počítače se podílí na:
 	- evidenci volného a přiděleného prostoru procesům
 	- přidělování a uvolňování paměti procesů
-	- ochrana přiděleného prostoru
-	- realizace virtuální paměti
+	- ochraně přiděleného prostoru
+	- realizaci virtuální paměti
 
 ## Správa paměti v jednoúlohových operačních systémech
 - v jeden okamžik může běžet pouze jeden proces - žádné extra nároky
@@ -55,9 +55,9 @@
 - za pomoci OS se počítač tváří, jako by primární paměti bylo více
 - aktuálně používaná  data musí být v RAM
 >[!Example] Pojmy
->- virtuální paměť: operační paměť zahrnující jak primární paměť, tak i vyhrazený prostor na pevním disku
->- swapování: je proces, kdy OS vyměňuje úsek operační paměti mezi primární pamětí a diskem
->- stránkovací/swapovací soubor: je soubor na disku obsahující data namapovaná systémem do operační paměti
+>- **virtuální paměť**: operační paměť zahrnující jak primární paměť, tak i vyhrazený prostor na pevním disku
+>- **swapování**: je proces, kdy OS vyměňuje úsek operační paměti mezi primární pamětí a diskem
+>- **stránkovací/swapovací soubor**: je soubor na disku obsahující data namapovaná systémem do operační paměti
 
 ##### Navigace
 Předchozí: [[Problém uváznutí, jeho detekce a metody předcházení]]
