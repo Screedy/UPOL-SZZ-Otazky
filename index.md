@@ -1,14 +1,20 @@
 # Otázky na Státní Závěrečné Zkoušky
 
-- Tento repozitář obsahuje sbírku otázek na státní závěrečné zkoušky z oboru Informačních Technologií na fakultě informatiky Univerzity Palackého v Olomouci. 
-- Jednotlivé otázky jsou rozděleny do svých adekvátních okruhů (složek) obsahující každou otázku jako samostatný soubor. Jednoduchý přístup k otázkám je zajištěn pomocí tří souborů
+- Tento repozitář obsahuje sbírku otázek na státní závěrečné zkoušky Katedry informatiky Univerzity Palackého v Olomouci. 
+- Jednotlivé otázky jsou rozděleny do svých adekvátních okruhů (složek) obsahující každou otázku jako samostatný soubor. Jednoduchý přístup k otázkám je zajištěn pomocí tří souborů. Každý reprezentuje okruh otázek.
+- Pro **IT**:
 	- [[1. Teoretické základy informačních technologií]]
 	- [[2. Informační technologie]]
+	- [[3. Programovací jazyky a programování]]
+- Pro **INF-PVS**:
+	- [[1. Teoretické základy informatiky]]
+	- [[2. Programování a vývoj software]]
 	- [[3. Programovací jazyky a programování]]
 
 ## Webová verze
 - Zprovoznil jsem webovou verzi tohoto repozitáře dostupnou na adrese https://statnice.screedy.com/.
-- Tato verze může obsahovat drobné chyby (především tam špatně fungují obrázky), protože se překládá z md na html.
+- Tato verze může obsahovat drobné chyby (především tam špatně fungují obrázky), protože se překládá z markdown na html.
+- Obvykle je tato verze pár dní pozadu za tímto repozitářem.
 
 ## Jak správně použít tento repozitář
 Všechny soubory v tomto repozitáři jsou psány a formátovány pro použití s programem [Obsidian](https://obsidian.md/).
