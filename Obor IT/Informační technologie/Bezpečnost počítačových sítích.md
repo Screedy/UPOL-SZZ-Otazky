@@ -6,7 +6,7 @@
 - Na fyzické vrstvě jsou přenášena data ve formě bitů. Nemá smysl uvažovat o modifikaci dat.
 
 ## Bezpečnost na úrovni linkové vrstvy
-- Kontrolní součet v likových rámcích pomáhá odhalit pouze chyby přenosu.
+- Kontrolní součet v linkových rámcích pomáhá odhalit pouze chyby přenosu.
 	- Žádoucí rychlé spočítání a verifikace.
 - Rizika:
 	- Útočník může snadno měnit obsah linkového rámce. 
