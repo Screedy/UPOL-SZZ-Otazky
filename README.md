@@ -9,7 +9,7 @@
 - Pro **INF-PVS**:
 	- [[1. Teoretické základy informatiky]]
 	- [[2. Programování a vývoj software]]
-	- [[3. Programovací jazyky a programování]]
+	- [[3. Povinně volitelné předměty specializace Programování a vývoj software]]
 
 ## Webová verze
 - Zprovoznil jsem webovou verzi tohoto repozitáře dostupnou na adrese https://statnice.screedy.com/.

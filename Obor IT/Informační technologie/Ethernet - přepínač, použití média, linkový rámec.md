@@ -13,7 +13,7 @@
 ### Mac adresa
 - Každé zařízení v počítačové síti má fyzické síťové rozhraní. (NIC)
 - Každé fyzické rozhraní má fyzickou adresu, označujeme jako MAC adresa
-- Velikost **6B**, zapisuje se hexadecimálně ve tvaru XX:XX:XX:XX:XX:XX, kde X je 0-9 nebo a-f
+- Velikost **6B**, zapisuje se hexadecimálně ve tvaru XX:XX:XX:XX:XX:XX, kde X je $0-9$ nebo $a-f$
 	- První 3B - identifikace výrobce
 	- ![[MacBook-2024-03-18-000915.png]]
 	  Pokud X je 0, jedná se o jedinčnou globální adresu přidělenou výrobcem
@@ -48,16 +48,16 @@
 - Moderní **ethernetový kabel** nevyužívá CSMA/CD, jelikož nedochází ke kolizím
 
 ### Switch (přepínač)
-- Nejběžnější zařízení používané na úrovni L2 vrstvy.
-- Předává (přepíná) přijatý linkový rámec na základě položky *adresa přijemce*
-- Následně pošle přijatý rámec na port, ke kterému je připojeno NIC s MAC adresou shodnou s položkou adresa příjemce uvedenou v hlavičce
-- Na zbylé porty není rámec předán
+- Nejběžnější zařízení používané na **úrovni L2** vrstvy.
+- **Předává** (přepíná) přijatý **linkový rámec** na základě položky `adresa přijemce`
+- Následně pošle přijatý rámec na **port**, ke kterému je připojeno **NIC** s **MAC adresou** shodnou s položkou `adresa příjemce` **uvedenou v hlavičce**
+- Na zbylé porty **není** rámec **předán**
 - K realizaci tohoto si udržuje **tabulku**, ve které je ke každému portu uchovávána MAC adresa NIC
 	- Možno naplnit ručně nebo automaticky
 
-- Transparentní bridge 
-	- propojení na L2, které je pro jednotlivé uzly zcela transparetní (nevědí o něm)
-	- Nutnost automatického plnění tabulky switche
+- **Transparentní bridge** 
+	- propojení na L2, které je pro jednotlivé uzly zcela **transparetní** (nevědí o něm)
+	- **Nutnost automatického plnění** tabulky switche
 	- Při přijetí rámce je do tabulky zaznamenána adresa odesílatele, port a čas přijetí
 	- Následně switch prochází svoji tabulku - není-li tam příjemce pošle rámec v tabulce na všechny porty krom portu odesílatele
 
