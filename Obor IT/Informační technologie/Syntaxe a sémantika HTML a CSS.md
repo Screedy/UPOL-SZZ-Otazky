@@ -1,22 +1,22 @@
 ## HTML (HyperText Markup Language)
 - značkovací jazyk
-- slouží pro definici významu (sémantiky) obsahu webové stránky
+- slouží pro definici **významu** (**sémantiky**) **obsahu** webové stránky
 - nejzákladnější webová technologie
 
 ### Syntaxe HTML
 #### Elementy
-- HTML element se skládá z otevírací značky, obsahu a zavírací značky. 
-- Elementy mohou obsahovat další elementy (dětské elementy), text nebo mohou být prázdné.
+- HTML element se skládá z **otevírací** značky, **obsahu** a **zavírací** značky. 
+- Elementy mohou **obsahovat další elementy** (dětské elementy), **text** nebo mohou být **prázdné**.
 	```HTML
 	<p id="prvniOdstavec" class="text">Toto je odstavec textu.</p>
 	```
 - **Typy HTML Elementů**:
-	1. **Párové elementy**: Tyto elementy mají otevírací a zavírací značku. Většina HTML elementů je párových, například `<div>`, `<h1>`, `<table>`, `<a>` atd.
+	1. **Párové elementy**: Tyto elementy mají **otevírací a zavírací značk**u. Většina HTML elementů je párových, například `<div>`, `<h1>`, `<table>`, `<a>` atd.
 	2. **Samozavírací elementy**: Některé HTML elementy nevyžadují zavírací značku a jsou "samozavírací". Tyto elementy často vkládají média nebo vytvářejí vstupy do formulářů. Příklady zahrnují `<img>`, `<input>`, `<br>`, a `<hr>`.
 
 #### Atributy
 - skládají se z názvu a hodnoty, které jsou spojeny rovnítkem
-- hodnota atributu by měla být vždy obalena uvozovkami
+- hodnota atributu by měla být vždy **obalena uvozovkami**
 	```HTML
 	<a href="https://www.example.com">Navštivte naši stránku</a>
 	```
@@ -37,8 +37,8 @@ více řádků
 ```
 
 #### Zanořování elementů
-- vytváří vztah potomek-rodič
-- značny musí být uzavírány v pořadí LIFO
+- vytváří **vztah potomek-rodič**
+- značky musí být uzavírány **v pořadí LIFO**
 ```HTML
 <p> ... <em>trilogie v pěti dílech</em> ... </p>
 ```
@@ -48,22 +48,21 @@ více řádků
 ## Význam (sémantika) elementů HTML
 - odkazuje na význam a účel, který mají jednotlivé HTML elementy
 - používání sémantických elementů umožňuje **vývojářům, prohlížečům a vyhledávačům** lépe pochopit, **jaké informace stránka obsahuje** a jak jsou tyto informace organizovány
-- příklad sémantiky:
-	```HTML
-	<h1>Stopařův průvodce Galaxií</h1>
-	<p>Kniha Stopařův průvodce Galaxií je ...</p>
-	```
-- příklad bez sémantiky:
-	```HTML
-	<span>Stopařův průvodce Galaxií</span>
-	<span>Kniha Stopařův průvodce Galaxií je ...</span>
-	```
-
-- ověřit sémantickou správnost není možné
-- syntaktická správnost (validita) ale jde:
-	- ověřuje se vůči standardu
-	- automatické nástroje - validátory
-	- HTML kód by měl být vždy validní
+>[!Example] Příklad sémantiky
+>```HTML
+>	<h1>Stopařův průvodce Galaxií</h1>
+>	<p>Kniha Stopařův průvodce Galaxií je ...</p>
+>```
+>>[!missing] Příklad **bez** sémantiky
+>>```HTML
+>>	<span>Stopařův průvodce Galaxií</span>
+>>	<span>Kniha Stopařův průvodce Galaxií je ...</span>
+>>```
+- ověřit sémantickou správnost **není možné**
+- **syntaktická správnost** (validita) ale **jde**:
+	- ověřuje se **vůči standardu**
+	- automatické nástroje - **validátory**
+	- HTML kód by **měl být vždy validní**
 
 ## CSS (Cascading Style Sheets)
 - HTML elementy mají výchozí vizualizaci, CSS umožňuje změnu této vizualizace

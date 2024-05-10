@@ -7,42 +7,45 @@ na základě WWW služby
 - adresy web stránky - **Uniform Resource Location (URL)**
 - pro komunikaci serveru a klienta **HTTP(S)** protokol
 #### Protokol HTTP(S)
-- pro výměnu dat mezi klientem a webovým serverem
-- HTTP - Hypertext Transfer Protocol
-- HTTPS - zabezpečená varianta HTTP
-- požadavek:
-```text
-GET /pozadovana-stranka HTTP/1.1
-Host: www.example.cz
-Connection: keep-alive
-User-Agent: Mozilla/5.0
-Accept-Language: cs
-```
-- odpověď:
-```text
-HTTP/1.1 200 OK
-Date: Thu, 13 Jul 2305 12:34:56 GMT
-Server: Apache/2.4.10 (Debian)
-Content-Type: text/html; charset=UTF-8
+- pro výměnu dat **mezi klientem** a **webovým serverem**
+- **HTTP** - Hypertext Transfer Protocol
+- **HTTPS** - zabezpečená varianta HTTP
 
-data
-```
+>[!Example] Požadavek HTTP
+>```HTTP
+>GET /pozadovana-stranka HTTP/1.1
+>Host: www.example.cz
+>Connection: keep-alive
+>User-Agent: Mozilla/5.0
+>Accept-Language: cs
+>```
 
-- **data** - zdrojový kód stránky
-- **status** - je číselné značení odpovědi jestli proběhla správně a informuje o vzniklé situaci:
-	- 200 - OK
-	- 301 - soubor permanentně přesunut
-	- 302 - soubor dočasně přesunut
-	- 404 - soubor nenalezen
-	- 410 - soubor odstraněn
-	- 500 - chyba serveru
+>[!Example] Odpověď
+>```HTTP
+>HTTP/1.1 200 OK
+>Date: Thu, 13 Jul 2305 12:34:56 GMT
+>Server: Apache/2.4.10 (Debian)
+>Content-Type: text/html; charset=UTF-8
+>
+>data
+>```
+
+- **data** - **zdrojový kód** stránky
+- **status** - je číselné **značení odpovědi** jestli proběhla správně a informuje o vzniklé situaci:
+	- $200$ - OK
+	- $301$ - soubor permanentně přesunut
+	- $302$ - soubor dočasně přesunut
+	- $404$ - soubor nenalezen
+	- $410$ - soubor odstraněn
+	- $500$ - chyba serveru
 #### Uniform Resource Location(URL)
-- představuje adresu souboru v síti, příklad:
-$$http://www.example.cz/adresa/index.html$$
-
-
-![[url_parts.png| 500]]
-*url*^[https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2022/07/the-structure-of-a-url.webp]
+- představuje adresu souboru v síti
+>[!Example] Příklad
+>```HTTP
+>http://www.example.cz/adresa/index.html
+>```
+>![[url_parts.png| 500]]
+>*url*^[https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2022/07/the-structure-of-a-url.webp]
 
 - **první část** - protokol
 - **druhá část**- doménové jméno serveru (DNS) - můžeme psát IP - pokud nemá registrované doménové jméno
@@ -50,42 +53,43 @@ $$http://www.example.cz/adresa/index.html$$
 - . - kořenová adresa
 - možnost adresovat soubory na lokálním PC: `C:\muj-web\index.html`
 
-**Absolutní vs Relativní adresování**
-- absolutní - jsou cesty které označuj úplné adresy které vedou na daný soubor
-	- `http://www.example.cz/adresa/index.html`
-- relativní - adresa souboru k aktuální adrese stránky ve které je použit
-	- `../index.html`
+>[!info] Absolutní vs Relativní adresování
+>- **absolutní** - jsou cesty které označuj **úplné adresy** které vedou na daný soubor
+> 	- `http://www.example.cz/adresa/index.html`
+> - **relativní** - adresa souboru k aktuální adrese stránky ve které je použit
+> 	- `./index.html`
+
 ### Co je webová stránka?
 - dříve dokument v síti internet
 - dnes těžko definovat (i mobilní nebo desktop aplikace)
 - **statické** a **dynamické** webové stránky
 
-#### Statická stránka
-- tvořena statickým obsahem (dokumenty, obrázky, etc) které je vrácen web serverem
+>[!Example] Statická stránka
+>- tvořena statickým obsahem (dokumenty, obrázky, etc) které je vrácen web serverem
+>![[static-page.png|400]]
+>*static page*^[https://teleporthq.io/blog/content/images/2022/04/what-is-a-static-site-1.png]
 
-![[static-page.png|400]]
-*static page*^[https://teleporthq.io/blog/content/images/2022/04/what-is-a-static-site-1.png]
-### Dynamická stránka
-- dynamický stránka je vytvářena při každém dotazu
-- web aplikace - stránky používají ve větší míře skriptovací jazyk
+>[!Example] Dynamická stránka
+>- dynamický stránka je vytvářena při každém dotazu
+>- web aplikace - stránky používají ve větší míře skriptovací jazyk
+>- ![[dynamic-page.png|400]]
+>- *dynamic page*^[https://teleporthq.io/blog/content/images/2022/04/what-is-a-dynamic-site-1.png]
 
-![[dynamic-page.png|400]]
-*dynamic page*^[https://teleporthq.io/blog/content/images/2022/04/what-is-a-dynamic-site-1.png]
 ### Webové technologie
 #### Klientské technologie
 - technologie na straně klienta (běží)
-- HTML - struktura, CSS - vzhled, JavaScript - interakce a manipulace
+- **HTML** - struktura, **CSS** - vzhled, **JavaScript** - interakce a manipulace
 #### Serverové technologie
 - technologie běžící na serveru
-- webový server, databázový server, aplikační server
+- **webový server**, **databázový server**, **aplikační server**
 #### Webové standarty
 - konsorcium W3C  - vydává specifika popisující webové technologie
-- pouze recommended -> pouze doporučení, prohlížeč může implementovat jinak
+- **pouze recommended** -> pouze doporučení, **prohlížeč může implementovat jinak**
 
 
 >[!summary] V kostce
 > ##### 1. Komunikace v síti:
-> - Využití protokolů jako HTTP(S) pro výměnu dat mezi klientem (webový prohlížeč) a serverem.
+> - Využití protokolů jako **HTTP(S)** pro **výměnu dat** mezi klientem (webový prohlížeč) a serverem.
 > - Adresace zdrojů pomocí URL (Uniform Resource Locator).
 > ##### 2. Klientské (Frontend) technologie:
 > - **HTML (Hyper Text Markup Language)**: Definuje strukturu webové stránky.
