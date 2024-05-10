@@ -1,33 +1,30 @@
-
 - při psaní CSS pravidel je dobré co nejvíce využívat dědičnost, kaskádu a znuvupoužitelnost
-
 ### Typické chyby
 
 #### Nízká specifičnost
-
 - používání selektorů, které obsahují jména HTML elementů
 - to je nevýhodné pokud se elementy opakovaně objevují na různých místech ve více podobách
 - pokud by jsme chtěli další elementy s jinou barvou dostaneme se do slepé uličky
 - vytvoříme nepřehledné řešení
 
 ```CSS
+/* špatně - použití selektoru, který obsahuje jméno HTML elementu */
 em { color: gray; }
 
 ...
-/*výjimka pro jiné elementy*/
-.text-color-secundary { color: gold; }
+/* výjimka pro jiné em elementy */
+.text-color-secondary { color: gold; }
 ```
 
-- pokud je takových úprav více psaní CSS musíme opakovaně měnit již nastavené hodnoty -> redundantní CSS.
-- řešení pojmenováním elementů pomocí class
+- pokud je takových úprav více psaní CSS musíme opakovaně měnit již nastavené hodnoty -> **redundantní CSS**.
+- řešení pojmenováním elementů pomocí atributu **class**
 
 ```CSS
 .text-color-primary { color: gray; }
-.text-color-secudnary { color: gold; }
+.text-color-secondary { color: gold; }
 ```
 
-- jediná výjimka je úprava výchozího chování elementů
-
+- jediná výjimka je úprava výchozího(globální) chování elementů
 ```CSS
 body { color: white; }
 ```
@@ -54,11 +51,10 @@ body { color: white; }
 #navigation .item:first-child {color: green;}
 ```
 
-- ukázkoví kód ale nefunguje
+- ukázkový kód ale **nefunguje**
 - kaskáda způsobí, že pravidlo `.active { color: gold; }` se neaplikuje
 - jelikož má menší specifičnost
-- pokusíme se opravit
-
+- pokusíme se opravit:
 ```CSS
 /* funguje, ale zvýšili jsme specifičnost */ 
 #navigation .active {color: gold;}
@@ -66,43 +62,41 @@ body { color: white; }
 
 - zkomplikuje situaci
 - použitý selektor má vyšší specifičnost kvůli vysoké specifičnosti ostatních selektorů
-- navíc stále jsou tam chyby. pokud aktiv by byl položka první element `li` bude zobrazena zeleně
+- navíc stále jsou tam chyby -> pokud by aktivní položkou byl první element `li` bude zobrazen zeleně
 - už jen dvě možnosti řešení (ani jedno dobré)
 	1. `!important`
-	2. class -> id
+	2. změna `class` na `id`
 - oba případy zase zvednou specifičnost
 - **proč je problematická:**
-	- selektory s velkou specifičností omezují dědičnost
-	- redundantní kód
-	- se špatnou organizací -> velké problémy 
+	- selektory s velkou specifičností **omezují dědičnost**
+	- **redundantní** kód
+	- se **špatnou organizací** -> velké problémy 
 - **řešení:**
 	- vyhnout se selektoru atributu `id`
 	- vyhnout se psaní `!important`
 
 #### Pojmenování
-
 - pojmenovávání elementů dle jejich vzhledu -> po čase může problematické když chceme změnit design a už to neodpovídá názvu
 ```CSS
+/* špatně */
 .button-color-gold {color: gold;}
-/*chceme změnit barvu*/
-.button-color-gold {color: gray;} /*matoucí*/
+/* později chceme změnit barvu */
+.button-color-gold {color: gray;} /* matoucí */
 ```
-- lepší pojmenovávat radši dle použití
-- následná změna hodnot nebude dělat nepořádek
+- lepší pojmenovávat dle **použití**
+- případná změna hodnot nebude matoucí
 ```CSS
+/* správně */
 .button-color-primary {color: gold;}
 ```
- - pojmenování dle umístění taky není vhodné -> element může být použit na jiných místech -> název v jiném místě bude nelogický
+ - pojmenování dle umístění (`.button-main-page`) taky není vhodné -> element může být použit na jiných místech -> název v jiném místě bude nelogický
 
 ### CSS metodiky
-
 - pomohou nám vyhnout se chybám
 - popisují základní konvence psaní CSS
-
 #### OOCSS (Object Oriented CSS)
-
 - **doporučuje**:
-	- používat selektory s nízkou specifičností 
+	- používat selektory s **nízkou specifičností** 
 	- vyhnout se pojmenování na základě vizuální podoby a místa použití
 	- nepromítat kontext elementu do CSS selektorů
 **Příklad:**
@@ -122,8 +116,8 @@ body { color: white; }
 	<h2 class="title">dolor sit amet</h2>
 </article>
 ```
-- zabraňuje snadnému znovupoužití na jiném místě.
-- chceme element `h2` na 2 řádku vizualizovat stejně jako na 4 ale jinou barvou.
+- zabraňuje snadnému znovupoužití na jiném místě
+- chceme element `h2` (*Lorem Ipsum*) vizualizovat stejně jako `h2`(*dolor sit amet*) ale jinou barvou
 - existující pravidlo nám tomu brání a musíme přidat redundantní pravidlo
 ```CSS
 /* chybné dle OOCSS */ 
@@ -140,6 +134,8 @@ body { color: white; }
 }
 ```
 - řešení dle OOCSS - přejmenování a odstranění kontextu v selektorech
+
+Správně:
 ```HTML
 <h2 class="title">Lorem Ipsum</h2>
 
@@ -162,18 +158,18 @@ body { color: white; }
 ```
 
 **Základní principy:**
-- vyčlenění společných vlastností do jedné třídy, úprava pro specifické části jsou určený dalšími CSS pravidly které upravují jen určité atributy
-- nahrazení kontextové závislosti vhodným pojmenováním. Další upravující/rozšiřující pravidla pomocí rozšíření názvu
+- vyčlenění **společných vlastností** do jedné třídy, úprava pro specifické části jsou určený dalšími CSS pravidly které upravují jen určité atributy
+- nahrazení kontextové závislosti **vhodným pojmenováním**
+- další upravující/rozšiřující pravidla pomocí rozšíření názvu
 
 #### BEM (Block Element Modificator)
-
 - implementuje OOCSS
 - zajímavá metodika většinou se používá část o pojmenování elementů
 - **struktura -** blok, element a modifikátor
 	- **blok -** samostatná nezávislá část stránky
 	- **element -** představuje součást bloku
 	- **modifikátor -** představuje variantu bloku či elementu
-```css
+```CSS
 /* blok */
 jmeno-bloku
 
@@ -189,18 +185,17 @@ jmeno-bloku__jmeno-elementu--jmeno-modifikatoru-elementu
 **Příklad:**
 ```HTML
 <!-- Představ me si že tento kód je sekundární navigace na stránce-->
-<ul class="nav nav--secudary" role="navigation"> 
+<ul class="nav nav--secodary" role="navigation"> 
 	<li class="nav__item">
-		<a hrref="#">A</a>
+		<a href="#">A</a>
 	</li>
 	<li class="nav__item nav__item--active">
 		<a href="#">B</a>
 	</li>
 </ul>
 ```
+Pravidla CSS pro předchozí HTML:
 ```CSS
-/* pravidla CSS pro předchozí HTML */
-
 /* společné pro všechny navigace */ 
 .nav {...} 
 /* specifika pro sekundární navigaci */ 
@@ -210,11 +205,10 @@ jmeno-bloku__jmeno-elementu--jmeno-modifikatoru-elementu
 /* specifika pro aktivní položku navigace */ 
 .nav__item--active {...}
 ```
-- vhodné rozdělení tříd minimalizuje redundanci výsledného CSS.
-- díky struktuře je vždy blok zapouzdřený
+- vhodné rozdělení tříd **minimalizuje redundanci** výsledného CSS.
+- díky struktuře názvu je vždy blok zapouzdřený (neovlivňuje zbylé části stránky)
 
 #### SUIT CSS
-
 ```CSS
 /* komponenta (blok v terminologii BEM) */ 
 JmenoKomponenty 
@@ -228,15 +222,15 @@ JmenoKomponenty-jmenoCastiKomponenty
 /* modifikátor části komponenty */ 
 JmenoKomponenty-jmenoCastiKomponenty--jmenoModifikatoruCastiKomponenty
 ```
-- **utility třídy** - jsou CSS pravidla obsahující pouze jednu deklaraci
-	- kód z utility tříd se označuje jako atomické CSS
+- **utility třídy** - jsou CSS pravidla obsahující pouze jednu deklaraci (pouze jeden účel)
+	- kód z utility tříd se označuje jako **atomické CSS**
 	- lze pomocí nich vytvořit celou web stránku
 	- náročný ale populární
 	 -> na atomickém CSS je založený Tailwind CSS
 **Příklad utility tříd:**
 ```CSS
 .text-color-primary { color: gray; }
-.text-color-secundary { color: gold; }
+.text-color-secondary { color: gold; }
 .margin-1 { margin: 1rem; }
 ```
 
@@ -250,20 +244,18 @@ JmenoKomponenty-jmenoCastiKomponenty--jmenoModifikatoruCastiKomponenty
 2. od pravidel s největší specifičností po pravidla s nejnižší specifičností;
 3. od pravidel s největší konkrétností po pravidla s nejmenší konkrétností
 
+![[itcss.png|350]]
 #### Kde začít?
-
 #### Předloha atomický design 
-
-- je vhodné implementovat elementární části stránky, kterým se v terminologii říkají *atomy*
-- Následně skládáním atomů -> komponenty -> design
-- umožnuje spolupráci více vývojářů (každý pracuje na atomu)
+- je vhodné implementovat elementární části stránky, kterým se v terminologii říkají ***atomy***
+- Následně **skládáním atomů** -> **komponenty** -> **design**
+- umožňuje spolupráci více vývojářů (každý pracuje na atomu)
 
 ![[design1.png]]
 ###  Předloha méně atomických prvků
-
-- vhodné vytvořit základní vizualizaci a tu následně vylepšovat
+- vhodné vytvořit **základní vizualizaci** a tu následně **vylepšovat**
 - nejprve hrubý layout stránky a následně komponenty
-- pokud se komponenty opakují v různých variantách -> vytvořit obecnou podobu následně upravovat specifické části
+- pokud se komponenty opakují v různých variantách -> vytvořit **obecnou podobu** následně **upravovat** specifické **části**
 ![[design2.png]]
 
 
