@@ -69,7 +69,9 @@ newElement.classList.add("list__item")
 - Běžné události: `click`, `mouseover`, `keydown`, `load`
 
 ```JS
-button.addEventListener('click', function() { alert('Bylo kliknuto na tlačítko!'); });
+button.addEventListener('click', function() { 
+	alert('Bylo kliknuto na tlačítko!'); 
+});
 ```
 
 ## Časovače
