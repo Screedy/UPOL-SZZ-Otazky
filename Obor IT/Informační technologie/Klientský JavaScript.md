@@ -17,7 +17,7 @@
 
 <!-- vložení JavaScript kódu do HTML -->
 <script>
-	<!-- vypíše zprávu do konzole prohlížeče - používá se při testování -->
+	// vypíše zprávu do konzole prohlížeče - používá se při testování
 	console.log('Hello, world!');
 </script>
 ```
