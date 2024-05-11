@@ -2,22 +2,21 @@
 
 - možnosti jak lze měnit umístění elementů na stránce
 
-### Grid
-
-- zavádí dvoudimenzionální mřížku (grid), do které je možné rozmisťovat prvky.
+## Grid
+- zavádí dvoudimenzionální mřížku (grid), do které je možné rozmisťovat prvky
 
 **Obrázek ukazující základní pojmy**
-![[grid-pojmy.png]]
+![[grid-pojmy.png|500]]
 
-- *grid kontejner* - element obsahující mřížku
-- *čáry* - vymezují *buňky* a *oblasti* (seskupení buněk)
-- *řádky* a *sloupce* - řádek/sloupec buněk
-- *hlavní osa* - osa x
-- *příčná osa* - osa y
+- **grid kontejner** - základní element obsahující mřížku
+- **čáry** - vymezují *buňky* a *oblasti* (seskupení buněk)
+- **řádky** a **sloupce** - speciální oblasti, řádek/sloupec buněk
+- **hlavní osa** - osa x
+- **příčná osa** - osa y
 
- - osy určují jakým způsobem budou prvky v mřížce zarovnány.
- - čáry nejsou zobrazeny pouze vymezují oblasti do kterých jdou umístit elementy
- - při inicializaci gridu je první potřeba nastavit `display: grid` následně vytvořit mřížku následně rozmístit elementy
+ - osy určují jakým způsobem budou prvky v mřížce zarovnány
+ - čáry *nejsou zobrazeny* pouze vymezují oblasti do kterých jdou umístit elementy
+ - **Vytvoření mřížky(gridu)**: elementu nastavíme `display: grid` (případně `display: inline-grid`), to vytvoří mřížku a do ní následně rozmístíme elementy
 
 **HTML pro příklady**
 ```HTML
@@ -29,26 +28,24 @@
 </div>
 ```
 #### Vytvoření mřížky
-
 **Ukázka vytvoření gridu**
 ```CSS
 .grid {
-	display: grid; 
+	display: grid; /* lze i inline grid */
 	/*nastavení třech řádků*/
 	grid-template-rows: 100px 300px 100px; 
 	/*nastavení tžech sloupců*/
 	grid-template-columns: 200px 400px 200px;
 }
 ```
-**Obrázek mřížky pro přechozí kód**
+**Obrázek mřížky pro předchozí kód**
 ![[grid-prvni.png]]
  - *index čáry* - pří vytvoření mřížky
 #### Index čáry
-
 ![[index-cary.png]]
-
  - čáry jsou indexované vzestupně zleva doprava na hlavní ose a na příčné z hora dolů
  - současně zprava doleva od -1 do -n a na příčné zdola nahoru
+ - indexy odpovídají i indexům **sloupce** a **řádku**
  - možnost čáry pojmenovat
 ```CSS
 .grid { 
@@ -57,54 +54,36 @@
 }
 ```
 - možnost přidání více jmen do hranatých závorek pro jednu čáru
-
-#### Index sloupce a řádku
-
-- stejně jako indexovány čáry
-
-#### Jednotka *fr*
-
+#### Jednotka fraction - *fr*
 - náhrada pixelů
 - přizpůsobuje se různým zobrazovacím zařízením
 - určuje poměrnou část nespecifikovaného místa
+
 **Příklady**
 ```CSS
 /* prostřední sloupec bude pružný */ 
 grid-template-columns: 200px 1fr 200px; 
-
-/* všechny sloupce budou pružné a zabírat stejné místo */
-grid-template-columns: 1fr 1fr 1fr; 
-
-/* všechny sloupce budou pružné, 
-	prostřední zabírá 2x více místa než první a poslední 
-		sloupec */ 
+/* všechny sloupce budou pružné, prostřední zabírá 2x více místa než první a poslední sloupec */ 
 grid-template-columns: 1fr 2fr 1fr;
 ```
-
 #### Automatické generování mřížky
-
 - možné generovat automaticky pomocí funkce `repeat()`
+- pouze jeden `repeat()` v deklaraci
+
 **Příklady**
 ```CSS
-/* 12 stejných sloupců */ 
-grid-template-columns: repeat(12, 1fr);
-
 /* 12 sloupců, první a poslední je 2x vetší*/
 grid-template-columns: 2fr repeat(10, 1fr) 2fr;
 
 /* 12 sloupců, opakuje se vzor 1fr 2fr, 8 tedy 1fr 2fr 1fr 2fr ... */
 grid-template-columns: repeat(6, 1fr 2fr);
-
-/* 12 stejných sloupců, každý se bude jmenovat column */ 
-grid-template-columns: repeat(12, [column] 1fr);
 ```
 
-- pří automatickém generování můžeme nechat prohlížeč rozhodnout. kolikrát má daný vzor opakovat, 
+- pří automatickém generování můžeme nechat prohlížeč rozhodnout kolikrát má daný vzor opakovat, 
 	- nelze použít s jednotkou `fr, min-content, max-content`
 	- možné použít funkci `minmax()`
 
 ##### Auto-fill
-
 - je vzor zopakovaný tolikrát, kolikrát to umožní daný prostor, přičemž je preferováno vložení nové buňky před zvětšením
 ```CSS
 .grid { 
@@ -115,7 +94,6 @@ grid-template-columns: repeat(12, [column] 1fr);
 ```
 ![[auto-fill.png]]
 ##### Auto-fit
-
 - je vzor zopakovaný tolikrát, kolikrát to umožní daný prostor, přičemž je preferováno zvětšení buňky před vložením nové
 ```CSS
 .grid { 
@@ -127,7 +105,6 @@ grid-template-columns: repeat(12, [column] 1fr);
 ![[auto-fit.png]]
 
 #### Pojmenovávání oblastí
-
 - pomocí `grid-template-areas`
 ```CSS
 .grid { 
@@ -141,8 +118,9 @@ grid-template-columns: repeat(12, [column] 1fr);
 ```
 ![[pojmenovávání__oblastí.png]]
 
+> [!note] Zkrácený zápis
+> existuje ještě zkrácený zápis pro `grid-template` a pro `grid` (dobré pro jednoduché mřížky)
 #### Umístění elementů do mřížky
-
 - po vytvoření můžeme umisťovat jednotlivé elementy
 
 **Rozšíření HTML**
@@ -155,8 +133,7 @@ grid-template-columns: repeat(12, [column] 1fr);
 </div>
 ```
 
-
-- elementy umístíme tak že určíme čáry, které vymezují oblast do které chceme element umístit
+- vymezení oblasti čarami
 	- `grid-row-start, grid-row-end, grid-column-start a grid-column-end`
 	- zkrácená `grid-row, grid-column`
 ```CSS
@@ -241,9 +218,7 @@ grid-column: x;
 }
 ...
 ```
-
 #### Implicitní mřížka
-
 - je generovaná, pokud umístíme element mimo explicitní mřížku
 - `grid-auto-rows (columns)`
 
@@ -252,10 +227,10 @@ grid-column: x;
 	display: grid; 
 	/* explicitní mřížka */ 
 	grid-template-rows: 100px 300px 100px;
-	 grid-template-columns: 200px 400px 200px; 
-	 /* implicitní mřížka */ 
-	 grid-auto-rows: 1fr; 
-	 grid-auto-columns: 1fr; 
+	grid-template-columns: 200px 400px 200px; 
+	/* implicitní mřížka */ 
+	grid-auto-rows: 1fr; 
+	grid-auto-columns: 1fr; 
  } 
 /* umístíme prvek mimo explicitní mřížku */ 
 .grid__item--C { 
@@ -275,14 +250,13 @@ grid-column: x;
 	- `align-items` - zarovnání všech buněk na příčné ose
 	- `justify-content` - zarovnání sloupců na hlavní ose
 	- `align-content` - zarovnání řádků na příčné ose
-### Flexbox
-
+## Flexbox
 - automatické rozmístit elementy do řádků nebo sloupců
 
 ![[flexbox.png]]
-- *flex kontejner* - obsahuje *flex položky*
-- *hlavní osa* - osa x
-- *příčná osa* - osa y 
+- **flex kontejner** - obsahuje **flex** položky
+- **hlavní osa** - osa x (u řádku, u sloupce naopak)
+- **příčná osa** - osa y (u řádku, u sloupce naopak)
 
 **HTML pro příklady**
 ```HTML
@@ -298,35 +272,31 @@ grid-column: x;
 - pro to aby se kontejner choval jako flex
 	- `display: flex`
 - elementy se zarovnávají dle hlavní osy
-
-- `flex-direction` - může změnit směr hlavní osy)
+- `flex-direction` - **změna směru hlavní osy**
 ![[flex-direction.png]]
 
-- `flex-wrap` - zalomení elementů ve flex kontejneru
+- `flex-wrap` - **zalomení elementů** ve flex kontejneru
 ![[flex-wrap.png]]
-
 #### Umístění elementů
-
-- `justify-content`- umístění položek flexboxu na hlavní ose
+- `justify-content`- umístění položek flexboxu na **hlavní ose**
 ![[justify-content.png]]
-- `align-content` - umístění položek na příčné ose
+- `align-content` - umístění položek na **příčné ose**
 ![[align-content.png]]
-- `align-items` - zarovnání položek na vedlejší ose
+- `align-items` - **zarovnání** položek na **vedlejší ose**
 ![[align-items.png]]
 
 #### Položky kontejneru
-
 - `flex-grow` - řídí zvětšení položek kontejneru na hlavní ose
-	- `flex-grow: 2;` se označuje jako *relativní flex*. element má 2x více místa
+	- `flex-grow: 2;` se označuje jako **relativní flex**. element má 2x více místa
 - `flex-shrink` - protiklad
 	- udává, jak mají být zmenšeny, pokud se nevejdou do kontejneru
 - výchozí hodnota je 1
 ![[flex-grow.png]]
 
 - `align-self` - možnost zarovnat každou položku samostatně
-- `flex-basis` -možné určit výchozí rozměr položky (hodnota `auto` -> z flex modelu)
+- `flex-basis` - možné určit výchozí rozměr položky (hodnota `auto` -> z flex modelu)
 
-- možnost zapsání všech přechozích položek zkráceně
+- možnost zapsání všech předchozích položek zkráceně
 ```CSS
 .flex__iteam {
 /*flex-grow flex-shrink flex-basis*/
@@ -334,7 +304,7 @@ grid-column: x;
 }
 ```
 
-- *aboslutní flex* - `flex-basis: 0`  se spojením `flex-grow` lze docílit chování kdy rozdělení probíhá na základě `flex-grow.
+- **absolutní flex** - `flex-basis: 0`  se spojením `flex-grow` lze docílit chování kdy rozdělení probíhá na základě `flex-grow.
 ```CSS
 .flex__item {flex: 1;} 
 
@@ -342,40 +312,63 @@ grid-column: x;
 /*položky .flex__item--changed jsou 2x větší než .flex__items*/
 ```
 
-### Pozicování elementů
-
-- změna jeho umístění oproti normál flow na stránce. K tomu účelu slouží vlastnost `position`.
+## Pozicování elementů
+- změna jeho umístění oproti normal flow na stránce. K tomu účelu slouží vlastnost `position`.
 - **Hodnoty position**
-	 - `static` - výchozí hodnota, pozice určena flow 
+	 - `static` - výchozí hodnota, pozice určena normal flow 
 	 - `relative` - relativní pozice k jeho normal flow, místo které zabírá je ponecháno prázdné
-	 - `absolute` - absolutní vzhledem k oknu nebo prvnímu  absolutně, relativně či fixně pozicováními rodičovskému elementu, původní místo použito ostatníma elementy, jeho aktuální pozice neovlivňuje ostatní elementy
+	 - `absolute` - absolutní vzhledem k oknu nebo prvnímu absolutně, relativně či fixně pozicovánému rodičovskému elementu, původní místo použito dalšími elementy, jeho aktuální pozice neovlivňuje ostatní elementy
 	 - `fixed` - pevná pozice vzhledem k viewportu
-	 - `sticky` - kombinace relativního a fixního pozicování (relativní pokuĎ není odrolován, pak fixní)
+	 - `sticky` - kombinace relativního a fixního pozicování (relativní dokud není odrolován, pak fixní)
 - pokud je element `relative, fixed, absolute nebo sticky`
 	- možnost nastavit `top, right, bottom, left`
 	- určuje pozici elementu vzhledem k počátečním souřadnicím (liší se podle typu pozicování)
 
 #### Relativní pozicování
-
-- počátek souřadnicového systému je dán normal flow a je umístěn v levém horní rohu elementu pro `top` a `left`, pro `bottom` a `right` pravý dolní roh
-
+- počátek souřadnicového systému je dán normal flow a je umístěn v **levém horní rohu elementu** pro `top` a `left`, pro `bottom` a `right` pravý dolní roh
 #### Absolutní pozicování
-
 - `top`, `left` - leví horní roh webové stránky nebo rodičovského elementu s nastavenou vlastnosti `position`
 - `bottom`, `right` - stejné jen praví dolní roh
-
 #### Fixní pozicování
-
 - pozicování dle prohlížeče. (levý horní roh a pravý dolní roh)
 #### Sticky pozicování
-
 - chová se jako relativně pozicováný ale pokud je odrolován mimo okno začne se chovat fixně
 #### Překrytí elementů
-
 - překrytí řídí normál flow
 - Změnit pořadí překrytí je možné pomocí `z-index`
-- hodnota je celé číslo nezáporné
+- hodnota je celé číslo (i záporné)
 - větší číslo překryje menší
+<br>
+
+>[!summary] Grid a Flexbox
+>##### Grid
+> - základem je **grid kontejner**, obsahující **mřížku** pro rozmístění prvků
+> - v CSS musíme nastavit `display: grid` nebo `display: inline-grid`
+> - určen čárami, které vymezují buňky a oblasti (řádky a sloupce)
+> - jednotlivé oblasti lze pojmenovat
+> - osy určují jakým způsobem budou prvky v mřížce zarovnány
+> - osy nejsou zobrazeny pouze vymezují prostor pro jednotlivé elementy
+> - vždy hlavní + vedlejší osa
+> ##### Flexbox
+> - základem je **flex container**, který obsahuje **flex položky**
+> - v CSS musíme nastavit `display: flex`
+> - sloupec a řádek - vždy hlavní + vedlejší osa
+> 
+> Pomůcka pro vlastnosti Gridu a Flexboxu:
+> - zarovnání obsahu kontejneru na hlavní ose provádí vlastnosti justify-\* a zarovnání na příčné ose se provádí vlastnosti align-\*
+> - zarovnání všech položek určují vlastnosti \*-items, distribuci volného místa (mezery) mezi položkami určuje vlastnost \*-content a zarovnání samostatné položky určuje \*-&nbsp;self
+> ![[grid-flexbox.png|350]]
+> 
+
+> [!summary] Pozicování
+> je změna umístění elementu (oproti normal flow) na stránce
+> 
+> vlastnost `position`: 
+> - `static` - výchozí pozice určená normal flow
+> - `relative` - relativní vzhled k flow, místo, které element zabíral je prázdné
+> - `absolute` - absolutní pozice vzhledem k oknu prohlížeče nebo prvnímu absolutně, relativně či fixně pozicovanému rodičovskému elementu, místo je použité pro jiné elementy
+> - `fixed` - pevná pozice vzhledem k viewportu prohlížeče
+> - `sticky` - kombinace relativní a fixní pozice (dokud není odrolováno)
 
 
 ##### Navigace
