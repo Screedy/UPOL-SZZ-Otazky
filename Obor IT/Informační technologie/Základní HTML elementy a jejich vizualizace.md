@@ -1,4 +1,5 @@
-- Základní HTML elementy jsou stavebními bloky webových stránek. Každý element má své specifické vizuální reprezentace, které definují, jak se bude obsah zobrazovat v prohlížeči
+- Základní HTML elementy jsou stavebními bloky webových stránek. 
+- Každý element má své specifické vizuální reprezentace, které definují, jak se bude obsah zobrazovat v prohlížeči
 ## Práce s textem
 
 ```HTML
@@ -56,7 +57,8 @@ color: #333; /* Barva textu */
 ```
 
 ## Odkazy
-- Jsou fundamentální pro propojení obsahu na internetu. HTML poskytuje element `<a>` pro vytvoření hypertextových odkazů
+- Jsou fundamentální pro propojení obsahu na internetu. 
+- HTML poskytuje element `<a>` pro vytvoření hypertextových odkazů
 
 ```HTML
 <a href="url_stranky.html">Název odkazu</a>

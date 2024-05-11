@@ -1,14 +1,14 @@
 ## Element `p`
-- odstavec textu
+- **odstavec textu**
 - prakticky veškerý text
-- text = alespoň věta
+- text = alespoň **věta**
 
 ## Element `a`
-- slouží jako odkaz
+- slouží jako **odkaz**
 - atributy:
 	- `href`: URL destinace
 	- `rel`: specifikace vztahu odkazu k aktuálnímu dokumentu
-	- `target`: kde má být odkaz otevřen (nedoporučuje se používat)
+	- `target`: kde má být odkaz otevřen (**nedoporučuje se** používat)
 	- `title`: popisek
 ```HTML
 <p><a href="zapocty.xls" title="Tabulka zápočtů"> Přehled zápočtů (.xls)</a> z předmětu KMI/WEB.</p>
@@ -20,14 +20,14 @@
 ```
 
 ## Element `img`
-- slouží pro vložení obrázků
+- slouží pro **vložení obrázků**
 - atributy:
 	- `src` : URL obrázku (relativní/absolutní)
 	- `alt`: popisek obrázku
 	- `height`: výška obrázku
 	- `width`: šířka obrázku
-- velikost obrázku může ovlivnit rychlost stránky
-- moderní formáty: WebP, JPEG, AVIF
+- velikost obrázku může **ovlivnit rychlost** stránky
+- moderní formáty: **WebP**, JPEG, AVIF
 
 ## Nadpisy
 - elementy `h1`, ..., `h6`
@@ -40,7 +40,7 @@
 
 ## Podnadpisy
 - dva nadpisy za sebou $\neq$ podnadpis
-- element `hgroup` služí pro vytvoření podnadpisu
+- element `hgroup` slouží pro vytvoření podnadpisu
 ```HTML
 <hgroup>
 	<h1>nadpis</h1>
@@ -51,13 +51,13 @@
 
 ## Struktura stránky
 ![[MacBook-2024-04-28-001094.png]]
-- Stránka je rozdělená na strukturální elementy
+- Stránka je rozdělená na **strukturální elementy**
 	- `main`, `header`, `nav`, `article`, `section`, `aside`, `footer`
 
 ### Element `main`
-- definice hlavního obsahu v rámci `body`
-- na stránce musí být pouze jeden element `main`
-	- teoreticky může být více, ale jen jeden aktivní
+- definice **hlavního obsahu** v rámci `body`
+- na stránce musí být **pouze jeden** element `main`
+	- teoreticky může být více, ale **jen jeden aktivní**
 - slouží pro vymezení hlavního obsahu
 ```HTML
 <body>
@@ -85,7 +85,7 @@
 ```
 
 ### Element `nav`
-- určení hlavní navigace (ne všechny navigace musí být v tomto elementu)
+- určení **hlavní navigace** (ne všechny navigace musí být v tomto elementu)
 - *seznam odkazů*
 ```HTML
 <nav> 
@@ -101,7 +101,7 @@
 
 ### Element `aside`
 - vymezuje obsah, který souvisí s předchozím uvedeným elementem
-- většinou obsahuje doplňující informace, zdroje, vedlejší navigaci,... (typicky ***sidebar***)
+- většinou **obsahuje doplňující informace**, **zdroje**, vedlejší **navigaci**,... (typicky ***sidebar***)
 ##### Sidebar
 obsah `aside` souvisí s obsahem `main`:
 ```HTML
@@ -134,10 +134,10 @@ obsah `aside` souvisí s obsahem `p`:
 
 ### Element `footer`
 - analogie elementu `header`
-- určení patičky
+- určení **patičky**
 
 ### Element `article`
-- úplný, samostatný a nezávislý obsah
+- **úplný, samostatný a nezávislý obsah**
 - musí obsahovat [[HTML struktura webové stránky#Nadpisy |nadpis]]
 - může obsahovat další elementy `article` a může obsahovat element [[HTML struktura webové stránky#Element `header`|header]] a `footer`
 - elementy `article` jdou zanořit - předpokládá se, že souvisí s rodičovským elementem
@@ -153,10 +153,10 @@ obsah `aside` souvisí s obsahem `p`:
 ```
 
 ### Element `section`
-- slouží pro seskupení částí stránky, které spolu významově souvisí
+- slouží pro **seskupení částí stránky**, které spolu významově **souvisí**
 - musí obsahovat společný [[HTML struktura webové stránky#Nadpisy |nadpis]]
-- `section` je možné zanořit do elementu `article` a naopak
-	- zaměňování těchto dvou elementů bývá častým zdrojem chyb
+- `section` je možné **zanořit do elementu `article`** a naopak
+	- zaměňování těchto dvou elementů **bývá častým zdrojem chyb**
 ```HTML
 ... 
 <main>
@@ -192,11 +192,11 @@ obsah `aside` souvisí s obsahem `p`:
 ```
 
 ### Vylepšení přístupnosti
-- Správné používání elementu zvyšuje přístupnost webových stránek
+- **Správné používání** elementu **zvyšuje přístupnost** webových stránek
 - Lze vylepšit použitím standardu [Accessible Rich Internet Applications (WAI-ARIA)](https://www.w3.org/TR/html-aria/)
 ## Nesémantické HTML elementy
-- používají se pro účely vizualizace (pomocí CSS)
-- jejich použití nepřiřadí obsahu žádný význam
+- používají se **pro účely vizualizace** (pomocí CSS)
+- jejich použití **nepřiřadí obsahu žádný význam**
 ### Element `div`
 ```HTML
 <div class="box centered">Lorem ipsum</div>
@@ -206,8 +206,6 @@ obsah `aside` souvisí s obsahem `p`:
 ```HTML
 <p>Stopařův <span class="text-bold">průvodce</span></p>
 ```
-
-
 
 ##### Navigace
 Předchozí:  [[Syntaxe a sémantika HTML a CSS]]

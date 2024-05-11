@@ -1,6 +1,6 @@
 ## Dědičnost
 - klíčový pojem
-- pokud nastavíme elementu vlastnost na konkrétní hodnotu, přejímají to i potomci tohoto elementu
+- pokud **nastavíme elementu vlastnost** na konkrétní hodnotu, přejímají to **i potomci tohoto elementu**
 - např. nastavení barvy textu v nadřazeném elementem na zelenou tak i jeho potomci pokud neřeknou jinak budou mít barvu zelenou
 - ne všechny vlastnosti se dědí
 - pokud vlastnosti dáme hodnotu `inherit` = hodnotu rodiče
@@ -26,7 +26,7 @@
 > ```
 
 ## Kaskáda
-- jak víme můžeme jednotlivé elementy mohou být vybrány různými selektory
+- jednotlivé elementy mohou být vybrány různými selektory
 
 HTML:
 ```html
@@ -43,7 +43,8 @@ article h2 { color: green; }
 #article h2 { color: gold; }
 ```
 - pokud v deklaracích budou vlastnosti stejné bude docházet ke kolizím CSS pravidel
-- řeší pravidlo(princip) kaskády
+- řeší pravidlo(**princip**) **kaskády**
+
 ##### Pravidlo kaskády má 2 části:
 1. při kolizi rozhoduje **specifičnost**, přesně řečeno hodnota uvedena v pravidle s více specifickým selektorem má přednost před méně specifickým
 2. při kolizi se shodnou specifičností rozhoduje **pořadí**, přesněji hodnota která byla uvedena **později**
@@ -58,7 +59,7 @@ article h2 { color: green; }
 	- `c` - počet elementů a pseudo-elementů
 - `a` největší `c` nejmenší specifičnost
 - inline CSS má specifickou specifičnost `1 0 0 0`
-- **komplikace dědičnosti** - vždy nastavená hodnota má přednost před hodnotou získanou dědičností (bez ohledu na specifičnost)
+- **komplikace dědičnosti** - vždy **nastavená hodnota** má **přednost** před hodnotou **získanou dědičností** (bez ohledu na specifičnost)
 
 > [!example] Nastaví se vlastnost `color` na **blue**
 > -  0 1 0 < 1 0 1
@@ -98,7 +99,7 @@ article h2 { color: green; }
 ### Důležitost
 - pravidla kaskády jdou obejít pomocí **důležitosti**
 - **důležitá** hodnota má přednost především
-- uvádíme `!important`
+- uvádíme **`!important`**
 - jakoby specifičnost byla `1 0 a b c`
 - pokud více hodnot používá `!important` -> pravidlo kaskády
 ```css

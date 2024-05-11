@@ -3,20 +3,19 @@
 - možnosti jak lze měnit umístění elementů na stránce
 
 ## Grid
-- zavádí dvoudimenzionální mřížku (grid), do které je možné rozmisťovat prvky
+- zavádí **dvoudimenzionální mřížku** (grid), do které je možné rozmisťovat prvky
 
-**Obrázek ukazující základní pojmy**
-![[grid-pojmy.png|500]]
-
-- **grid kontejner** - základní element obsahující mřížku
-- **čáry** - vymezují *buňky* a *oblasti* (seskupení buněk)
-- **řádky** a **sloupce** - speciální oblasti, řádek/sloupec buněk
-- **hlavní osa** - osa x
-- **příčná osa** - osa y
-
- - osy určují jakým způsobem budou prvky v mřížce zarovnány
- - čáry *nejsou zobrazeny* pouze vymezují oblasti do kterých jdou umístit elementy
- - **Vytvoření mřížky(gridu)**: elementu nastavíme `display: grid` (případně `display: inline-grid`), to vytvoří mřížku a do ní následně rozmístíme elementy
+>[!Example] Základní pojmy
+>![[grid-pojmy.png|500]]
+>- **grid kontejner** - základní element obsahující mřížku
+>- **čáry** - vymezují *buňky* a *oblasti* (seskupení buněk)
+>- **řádky** a **sloupce** - speciální oblasti, řádek/sloupec buněk
+>- **hlavní osa** - osa x
+>- **příčná osa** - osa y
+>---
+ >- osy určují jakým způsobem budou prvky v mřížce zarovnány
+ >- čáry *nejsou zobrazeny* pouze vymezují oblasti do kterých jdou umístit elementy
+ >- **Vytvoření mřížky(gridu)**: elementu nastavíme `display: grid` (případně `display: inline-grid`), to vytvoří mřížku a do ní následně rozmístíme elementy
 
 **HTML pro příklady**
 ```HTML
@@ -44,7 +43,7 @@
 #### Index čáry
 ![[index-cary.png]]
  - čáry jsou indexované vzestupně zleva doprava na hlavní ose a na příčné z hora dolů
- - současně zprava doleva od -1 do -n a na příčné zdola nahoru
+ - současně zprava doleva od $-1$ do $-n$ a na příčné zdola nahoru
  - indexy odpovídají i indexům **sloupce** a **řádku**
  - možnost čáry pojmenovat
 ```CSS
@@ -54,18 +53,18 @@
 }
 ```
 - možnost přidání více jmen do hranatých závorek pro jednu čáru
-#### Jednotka fraction - *fr*
-- náhrada pixelů
-- přizpůsobuje se různým zobrazovacím zařízením
+#### Jednotka fraction - `fr`
+- **náhrada pixelů**
+- **přizpůsobuje se** různým zobrazovacím zařízením
 - určuje poměrnou část nespecifikovaného místa
+>[!Example] Příklady `fr`
+>```CSS
+>/* prostřední sloupec bude pružný */ 
+>grid-template-columns: 200px 1fr 200px; 
+>/* všechny sloupce budou pružné, prostřední zabírá 2x více místa než první a poslední sloupec */ 
+>grid-template-columns: 1fr 2fr 1fr;
+>```
 
-**Příklady**
-```CSS
-/* prostřední sloupec bude pružný */ 
-grid-template-columns: 200px 1fr 200px; 
-/* všechny sloupce budou pružné, prostřední zabírá 2x více místa než první a poslední sloupec */ 
-grid-template-columns: 1fr 2fr 1fr;
-```
 #### Automatické generování mřížky
 - možné generovat automaticky pomocí funkce `repeat()`
 - pouze jeden `repeat()` v deklaraci
@@ -244,7 +243,7 @@ grid-column: x;
 - mezery mezi řádky a sloupci
 	- `column-gap`
 	- `row-gap`
-	- `gap
+	- `gap`
 - zarovnání v mřížce
 	- `justify-items` - zarovnání všech buněk na hlavní ose
 	- `align-items` - zarovnání všech buněk na příčné ose

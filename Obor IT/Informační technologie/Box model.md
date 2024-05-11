@@ -1,5 +1,5 @@
 # CSS box model
-- popisuje vizualizaci každého HTML elementu.
+- popisuje **vizualizaci** každého HTML **elementu**.
 - ten se skládá z:
 ![[MacBook-2024-05-06-11-07-35.png|250]]
 	1. venkovní hrany
@@ -32,7 +32,7 @@
 >  Existuje i rámeček *`outline`*, ten se ale používá pouze při **ladění / vývoji**, jelikož jeho velikost může upravovat každý prohlížeč jinak
 ## Okraje
 ### Vnější - `margin`
-- vizualizace vnějších okrajů: **margin-\***
+- vizualizace vnějších okrajů: **`margin-*`**
 ```CSS
 /* vnejší okraj, nastavení všech */
 margin: 15px;
@@ -53,7 +53,7 @@ margin-left: 15px;
 >  .box--center {margin: auto;}
 >  ```
 ### Vnitřní - `padding`
-- vizualizace vnitřních okrajů: **padding-\*
+- vizualizace vnitřních okrajů: **`padding-*`**
 ```CSS
 /* vnitřní okraj, nastavení všech */
 padding: 15px;

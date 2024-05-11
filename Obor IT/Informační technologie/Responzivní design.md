@@ -1,14 +1,15 @@
-- Schopnost přizpůsobit se různým velikostem displeje
-- Responzivní design je zásadní pro vytvoření webových stránek, které efektivně fungují na širokém spektru zařízení od desktopů po mobilní telefony
+- Schopnost **přizpůsobit** se různým **velikostem** **displeje**
+- Responzivní design je zásadní pro vytvoření webových stránek, které efektivně **fungují** na **širokém spektru zařízení** od desktopů po mobilní telefony
 
 ## Plně fluidní layout 
-- Flexibilní layout, který se umí přizpůsobit většině všech zařízení
+- Flexibilní layout, který se umí přizpůsobit většině zařízení
 - Pouze jednoduché stránky mohou být plně fluidní
-- Vyhnutí se používání position: absolute -> pevně daná velikost je na různých zařízení vnímána jinak
+- **Vyhnutí** se používání **position: absolute** $\rightarrow$ pevně daná velikost je na různých zařízení vnímána jinak
 - Ideální je používat:
-	- Pro písma: `em`, `rem`,  (relativní velikost vzhledem k velikost fontu) 
-	- Pro mezery: `vw`, `vh` (nedoporučuje se kvůli iOS)
-	- Případně: `%`
+	- Pro písma: **`em`, `rem`**,  (relativní velikost vzhledem k velikost fontu) 
+	- Pro mezery: **`vw`, `vh`** (nedoporučuje se kvůli iOS)
+	- Případně: **`%`**
+
 ## Media Queries
 - Media Queries jsou mocným nástrojem pro modifikaci layoutu stránek podle specifikací zařízení, na kterých jsou zobrazeny
 - Umožňují aplikovat různé styly pro různé charakteristiky zařízení, jako je šířka, výška, orientace obrazovky nebo typ zařízení
@@ -29,12 +30,11 @@
     color: navy;
   }
 }
-
 ```
 
 >[!note] Container queries
 > Umožňuje stylování elementů na základě vlastností jejich rodičovského kontejneru, nikoli na základě viewportu, jako je to v případě tradičních media queries.
-> Tato funkce je poměrně nová -> [limitovaná podpora prohlížečů](https://caniuse.com/?search=Container%20queries).
+> Tato funkce je poměrně nová $\rightarrow$ [limitovaná podpora prohlížečů](https://caniuse.com/?search=Container%20queries).
 ## Flexibilní obrázky
 - Flexibilní obrázky a média jsou klíčové pro zajištění, že obsah stránky se správně zobrazuje na všech zařízeních
 - Obrázky se automaticky přizpůsobují velikosti a orientaci zařízení, aby byly vždy dobře viditelné

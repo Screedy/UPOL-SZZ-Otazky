@@ -62,7 +62,7 @@ body { color: white; }
 
 - zkomplikuje situaci
 - použitý selektor má vyšší specifičnost kvůli vysoké specifičnosti ostatních selektorů
-- navíc stále jsou tam chyby -> pokud by aktivní položkou byl první element `li` bude zobrazen zeleně
+- navíc stále jsou tam chyby $\rightarrow$ pokud by aktivní položkou byl první element `li` bude zobrazen zeleně
 - už jen dvě možnosti řešení (ani jedno dobré)
 	1. `!important`
 	2. změna `class` na `id`
@@ -93,69 +93,74 @@ body { color: white; }
 
 ### CSS metodiky
 - pomohou nám vyhnout se chybám
-- popisují základní konvence psaní CSS
+- popisují **základní konvence** psaní CSS
 #### OOCSS (Object Oriented CSS)
 - **doporučuje**:
 	- používat selektory s **nízkou specifičností** 
 	- vyhnout se pojmenování na základě vizuální podoby a místa použití
 	- nepromítat kontext elementu do CSS selektorů
-**Příklad:**
-```CSS
-/* chybné dle OOCSS */ 
-.article .title { 
-	color: gold; 
-	border-left: 1em solid gold; 
-	padding: 1em; 
-}
-```
-```HTML
-<!-- pro následujcí kód-->
-<h2 class="title">Lorem Ipsum</h2>
 
-<article class="article">
-	<h2 class="title">dolor sit amet</h2>
-</article>
-```
+>[!fail] Příklad
+>```CSS
+>/* chybné dle OOCSS */ 
+>.article .title { 
+>	color: gold; 
+>	border-left: 1em solid gold; 
+>	padding: 1em; 
+>}
+>```
+>```HTML
+><!-- pro následujcí kód-->
+><h2 class="title">Lorem Ipsum</h2>
+>
+><article class="article">
+>	<h2 class="title">dolor sit amet</h2>
+></article>
+>```
+>
+
 - zabraňuje snadnému znovupoužití na jiném místě
 - chceme element `h2` (*Lorem Ipsum*) vizualizovat stejně jako `h2`(*dolor sit amet*) ale jinou barvou
 - existující pravidlo nám tomu brání a musíme přidat redundantní pravidlo
-```CSS
-/* chybné dle OOCSS */ 
-.article .title { 
-	color: gold; 
-	border-left: 1em solid gold; 
-	padding: 1em; 
-} 
-/* přidané redundantní pravidlo */ 
-.title { 
-	color: gray; 
-	border-left: 1em solid gray; 
-	padding: 1em; 
-}
-```
-- řešení dle OOCSS - přejmenování a odstranění kontextu v selektorech
 
-Správně:
-```HTML
-<h2 class="title">Lorem Ipsum</h2>
+>[!fail] Příklad
+>```CSS
+>/* chybné dle OOCSS */ 
+>.article .title { 
+>	color: gold; 
+>	border-left: 1em solid gold; 
+>	padding: 1em; 
+>} 
+>/* přidané redundantní pravidlo */ 
+>.title { 
+>	color: gray; 
+>	border-left: 1em solid gray; 
+>	padding: 1em; 
+>}
+>```
 
-<article>
-	<h2 class="title title-article">dolor sit amet</h2>
-</article>
-```
-```CSS
-/* vlastnosti pro všechny nadpisy */ 
-.title { 
-	color: gray; 
-	border-left: 1em solid gray; 
-	padding: 1em; 
-} 
-/* specifické vlastnosti pro nadpis v elementu article */ 
-.title-article { 
-	color: gold; 
-	border-color: gold; 
-}
-```
+- **řešení dle OOCSS** - přejmenování a odstranění kontextu v selektorech
+
+>[!success] Správné řešení
+>```HTML
+><h2 class="title">Lorem Ipsum</h2>
+><article>
+>	<h2 class="title title-article">dolor sit amet</h2>
+></article>
+>```
+>```CSS
+>/* vlastnosti pro všechny nadpisy */ 
+>.title { 
+>	color: gray; 
+>	border-left: 1em solid gray; 
+>	padding: 1em; 
+>} 
+>/* specifické vlastnosti pro nadpis v elementu article */ 
+>.title-article { 
+>	color: gold; 
+>	border-color: gold; 
+>}
+>```
 
 **Základní principy:**
 - vyčlenění **společných vlastností** do jedné třídy, úprava pro specifické části jsou určený dalšími CSS pravidly které upravují jen určité atributy
@@ -182,29 +187,31 @@ jmeno-bloku__jmeno-elementu
 /* modifikátor elementu bloku */
 jmeno-bloku__jmeno-elementu--jmeno-modifikatoru-elementu
 ```
-**Příklad:**
-```HTML
-<!-- Představ me si že tento kód je sekundární navigace na stránce-->
-<ul class="nav nav--secodary" role="navigation"> 
-	<li class="nav__item">
-		<a href="#">A</a>
-	</li>
-	<li class="nav__item nav__item--active">
-		<a href="#">B</a>
-	</li>
-</ul>
-```
-Pravidla CSS pro předchozí HTML:
-```CSS
-/* společné pro všechny navigace */ 
-.nav {...} 
-/* specifika pro sekundární navigaci */ 
-.nav--secondary {...} 
-/* položka navigace */ 
-.nav__item {...} 
-/* specifika pro aktivní položku navigace */ 
-.nav__item--active {...}
-```
+
+>[!Example] Příklad
+>```HTML
+><!-- Představ me si že tento kód je sekundární navigace na stránce-->
+><ul class="nav nav--secodary" role="navigation"> 
+>	<li class="nav__item">
+>		<a href="#">A</a>
+>	</li>
+>	<li class="nav__item nav__item--active">
+>		<a href="#">B</a>
+>	</li>
+></ul>
+>```
+>
+>```CSS
+>/* společné pro všechny navigace */ 
+>.nav {...} 
+>/* specifika pro sekundární navigaci */ 
+>.nav--secondary {...} 
+>/* položka navigace */ 
+>.nav__item {...} 
+>/* specifika pro aktivní položku navigace */ 
+>.nav__item--active {...}
+>```
+
 - vhodné rozdělení tříd **minimalizuje redundanci** výsledného CSS.
 - díky struktuře názvu je vždy blok zapouzdřený (neovlivňuje zbylé části stránky)
 
@@ -226,13 +233,14 @@ JmenoKomponenty-jmenoCastiKomponenty--jmenoModifikatoruCastiKomponenty
 	- kód z utility tříd se označuje jako **atomické CSS**
 	- lze pomocí nich vytvořit celou web stránku
 	- náročný ale populární
-	 -> na atomickém CSS je založený Tailwind CSS
-**Příklad utility tříd:**
-```CSS
-.text-color-primary { color: gray; }
-.text-color-secondary { color: gold; }
-.margin-1 { margin: 1rem; }
-```
+	 $\rightarrow$ na atomickém CSS je založený Tailwind CSS
+
+>[!Example] Příklad utility tříd
+>```CSS
+>.text-color-primary { color: gray; }
+>.text-color-secondary { color: gold; }
+>.margin-1 { margin: 1rem; }
+>```
 
 ### Organizace souboru
 
