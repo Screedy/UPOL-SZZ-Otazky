@@ -67,17 +67,11 @@ clearInterval(timer);
 setTimeout(function(){console.log("čas vypršel");}, 3000);
 ```
 
-## Asynchronní operace a AJAX
-- Asynchronous JavaScript and XML (AJAX) umožňuje načítání dat bez obnovení stránky
-- Moderní techniky pro práci s asynchronními operacemi, jako je `fetch()` pro získávání dat z serveru
 
-```JS
-fetch('https://api.example.com/data')
-  .then(response => response.json())
-  .then(data => console.log(data));
-```
-
-
+> [!note] Frameworky a knihovny
+>  - Při tvorbě stránek se běžně používají různé JavaScriptové knihovny
+>  - Přinášejí výrazně jednodušší práci s DOM a také mnoho užitečné funkcionality
+>  - jQuery, React, Angular, a Vue.js
 
 ##### Navigace
 Předchozí:  [[Analýza kvality webové stránky]]
