@@ -44,6 +44,26 @@ var allParagraphs = document.querySelectorAll('p');
 - *`querySelector` vrátí první element odpovídající CSS selektoru*
 - *`querySelectorAll` vrátí NodeList všech odpovídajících elementů*
 
+```JS
+// vytvoříme nový element li
+var newElement = document.createElement("li");
+
+// vytvoříme nový uzel DOM, který bude obsahovat text
+var newTextNode = document.createTextNode("D");
+
+// uzel obsahující text nastavíme jako potomka elementu
+newElement.appendChild(newTextNode);
+```
+#### Vlastnosti elementů
+- vlastnosti je možné číst a nastavovat
+```JS
+// nastavení vlastnosti color
+newElement.style.color = "gold";
+
+// přidání třídy k elementu
+newElement.classList.add("list__item")
+```
+
 ## Události
 - JavaScript reaguje na uživatelské akce (kliky, pohyb myši, stisky kláves) pomocí event listeners
 - Běžné události: `click`, `mouseover`, `keydown`, `load`
