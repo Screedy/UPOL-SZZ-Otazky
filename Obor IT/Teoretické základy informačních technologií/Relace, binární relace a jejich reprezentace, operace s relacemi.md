@@ -110,7 +110,7 @@
 		- $Tra(R)$ = $\cup^{\infty}_{n=1} R^{n}$
 		- Sjednocení nekonečně mnoho relací $R^{1} \cup ,... , \cup R^{n}$, pokud ale je R definována na konečné množině $X$, kde $\mid X \mid = n$, pak $Tra(R) = \cup^{n}_{i=1} R^{i}$
 
->[!Example]
+>[!Example] Příklad
 >![[MacBook-2024-02-29-000765.png| 500]]
 
 ##### Navigace

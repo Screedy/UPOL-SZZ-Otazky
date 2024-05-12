@@ -1,9 +1,9 @@
 ### **Booleovské funkce**
-- **Booleovská funkce s n argumenty** (n-ární booleovská funkce) je *libovolné zobrazení*, které *uspořádané n-tici hodnot 0 nebo 1 přiřadí hodnotu 0 nebo 1.*
-- Každou booleovskou funkci f s n argumenty lze **zapsat v tabulce**
-- Předpokládejme, že argumenty funkce f označíme $x_{1}, ..., x_{n}$, pak píšeme také $f(x_{1}, ..., x_{n})$
+- **Booleovská funkce s $n$ argumenty** ($n$-ární booleovská funkce) je *libovolné zobrazení*, které *uspořádané $n$-tici hodnot $0$ nebo $1$ přiřadí hodnotu $0$ nebo $1$.*
+- Každou booleovskou funkci $f$ s $n$ argumenty lze **zapsat v tabulce**
+- Předpokládejme, že argumenty funkce $f$ označíme $x_{1}, ..., x_{n}$, pak píšeme také $f(x_{1}, ..., x_{n})$
 
-- Existuje právě $2^{2^{n}}$ booleovských funkcí s n argumenty
+- Existuje právě $2^{2^{n}}$ booleovských funkcí s $n$ argumenty
 
 >[!Example] Všechny booleovské funkce jedné proměnné
 >

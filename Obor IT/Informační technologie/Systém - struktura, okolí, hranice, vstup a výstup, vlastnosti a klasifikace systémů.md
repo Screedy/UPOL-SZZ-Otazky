@@ -1,20 +1,33 @@
-- Systém je skupina objektů, které se navzájem ovlivňují za účelem splnit nějaký cíl.
+- Systém je soubor vzájemně propojených prvků, které spolu interagují a vykazují určitou organizovanou strukturu
+- Jedná se o entitu, která má vymezené hranice a může existovat ve svém okolí
+- Systém přijímá vstupy, zpracovává je a generuje výstupy
 
 >[!Example] Nákres systému
 >![[Systém-nákres.png]]
-## Prvky
-- **Prvky systému** - **elementární**, dále **nedělitelné** části systému
-- **Subsystém** - podmnožina prvků systému, kterou můžeme hodnotit jako **samostatný systém**
 
-## Okolí a Hranice
-- **Hranice** odděluje 2 nebo více systémů. 
-	- Může být **prostorová** (fyzická) nebo **logická** (hranice IS).
-- **Okolí** systému je **zdrojem podnětů** pro systém samotný. 
+## Struktura
+- je definována množinou všech prvků a vazeb mezi prvky
+- **Prvky systému:**
+	- elementární, dále nedělitelné části systému
+- **Subsystémy:**
+	- podmnožina prvků systému
+	- obvykle můžeme brát jako samostatný systém se specifickou charakteristikou
+
+## Hranice
+- uzavírá systém nebo odděluje více systémů
+- dělíme na:
+	1. prostorová hranice (fyzická)
+	2. logická hranice (hranice při informačních systémech)
+
+## Okolí
+- entita nacházející se za hranicemi systému
+- ovlivňují systém přes vstupy
+- systém je ovlivňuje přes výstupy
 
 ## Vstup a výstup
 - Systém interaguje s okolím pomocí **vstupů** a **výstupů**.
-	- **Vstup systému** - množina vazeb či proměnných, pomocí kterých **okolí působí na systém**.
-	- **Výstup systému** - množina vazeb či proměnných, pomocí kterých **systém působí na okolí**.
+- **Vstup systému** - množina vazeb či proměnných, pomocí kterých **okolí působí na systém**.
+- **Výstup systému** - množina vazeb či proměnných, pomocí kterých **systém působí na okolí**.
 
 ## Vlastnosti systému
 - **Chování**:
@@ -33,17 +46,17 @@
 
 ### Otevřenost
 
-- **Otevřený**:
+1. **Otevřený systém**:
 	- Dochází k **výměně informací s okolím**, zpracovává **nečekané vstupní hodnoty**. 
 	- Snaží se **reagovat** tak, aby byla **zachována jejich existence**.
-- **Uzavřený**:
+2. **Uzavřený systém**:
 	- Systém je zcela **izolovaný**. 
 	- Nemá **žádné** vazby s okolím.
 
-### Kauzualita
-- **Deterministický**:
+### Kauzalita
+- **Deterministické systémy**:
 	- **Řídí** se jasně danou **množinou pravidel**, jejich chování je **jednoznačně určeno aktuálním stavem** a **vstupy systému**.
-- **Nedeterministický**:
+- **Nedeterministické systémy**:
 	- **Řízeny náhodou**. 
 	- Chování více dáno **pravděpodobností než jistotu**.
 ### Stav
