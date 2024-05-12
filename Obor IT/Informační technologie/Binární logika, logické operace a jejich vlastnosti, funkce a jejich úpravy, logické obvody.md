@@ -85,6 +85,7 @@
 ### Fyzická realizace logických funkcí
 - dnes pomocí tranzistorů (a diod) v integrovaných obvodech: technologie RTL, DTL, **TTL**, **CMOS**...
 - realizace log. operací pomocí integrovaných obvodů – **logických členů**, **hradel**
+
 ![[log-funkce.png|450]]
 
 
@@ -104,7 +105,7 @@
 
 ##### Multiplexor
 - přepíná na výstup $Q$ log. hodnotu na jednom z $2^n$ datových vstupů $D_i$ vybraném na základě $n-$bitové hodnoty na adresním vstupu $A$
-- mě výstupu $Q$ navíc ještě negovaný (invertovaný) výstup $\overline{Q}$
+- kromě výstupu $Q$ navíc ještě negovaný (invertovaný) výstup $\overline{Q}$
 - použití: multiplexování datových vstupů na základě adresy
 
 ![[multiplexor.png|450]]
@@ -150,6 +151,7 @@
 - asynchronní vstupy $R$ (Reset) pro nulování log. hodnoty na výstupu $Q$ (v čase $i$) a $S$ (Set) pro nastavení hodnoty
 - kromě výstupu $Q$ navíc ještě negovaný (invertovaný) výstup $Q$
 - varianty: varianta se synchronizačním vstupem CLK s hodinových signálem, varianta Master-Slave
+
 ![[klop-rs.png|450]]
 
 ##### Klopný obvod (typu) D
