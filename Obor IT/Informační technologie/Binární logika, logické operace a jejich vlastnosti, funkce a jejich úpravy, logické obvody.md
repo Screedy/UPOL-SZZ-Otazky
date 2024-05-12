@@ -26,13 +26,14 @@
 - Logická rovnice
 	- dva logické výrazy v relaci rovnost $=$
 	- ekvivalentní úpravy = zachování (pravdivosti rovnosti výrazů: např. negace obou stran, logický součin/součet obou stran se stejným výrazem, ..., log. funkce obou stran se stejnými ostatními operandy funkce
-	- NEekvivalentní úpravy: "krácení" obou stran o stejný (pod)výraz, např $x + y = x + z$ na $y = z$
+	- NEekvivalentní úpravy: "krácení" obou stran o stejný (pod)výraz
+		- např $x + y = x + z$ není ekvivalentní s $y = z$ 
 
 ### Axiomy (Booleovy algebry)
-- Komutativa - $x \cdot y = y \cdot x$          $x + y = y + x$
-- Distributivita - $x \cdot (y + z) = x \cdot y + x \cdot z$        $x + y \cdot z = (x + y) \cdot (x + z)$
-- Identita/neutrálnost/existence neutrální hodnoty - $1 \cdot x = x$        $0 + x = x$
-- Komplementárnost - $x \cdot \neg x = 0$         $x + \neg x = 1$
+- Komutativa:  $x \cdot y = y \cdot x \qquad x + y = y + x$
+- Distributivita:  $x \cdot (y + z) = x \cdot y + x \cdot z \qquad  x + y \cdot z = (x + y) \cdot (x + z)$
+- Identita/neutrálnost/existence neutrální hodnoty:  $1 \cdot x = x \qquad 0 + x = x$
+- Komplementárnost:  $x \cdot \neg x = 0 \qquad x + \neg x = 1$
 
 ### Logické operace
 3 základní:
@@ -49,12 +50,12 @@
   ![[MacBook-2024-03-18-000906.png| 100]]
 
 ### Vlastnosti základních logických operací
-- agresivita (nuly a jedničky) $0 \cdot x = 0$       $1 + x = 1$
-- idempotence $x \cdot x = x$     $x + x = x$
-- asociativita $x \cdot (y \cdot z) = (x \cdot y) \cdot z$       $x + (y + z) = (x + y) + z$
-- involuce (dvojí negace) $\neg \neg x = x$
-- De Morganovy zákony $\neg (x \cdot y) = \neg x + \neg y$      $\neg (x + y) = \neg x \cdot \neg y$
-- absorpce $x \cdot (x + y) = x$      $x + x \cdot y = x$
+- agresivita (nuly a jedničky)$0 \cdot x = 0 \qquad 1 + x = 1$
+- idempotence: $x \cdot x = x \qquad x + x = x$
+- asociativita: $x \cdot (y \cdot z) = (x \cdot y) \cdot z \qquad x + (y + z) = (x + y) + z$
+- involuce (dvojí negace):  $\neg \neg x = x$
+- De Morganovy zákony:  $\neg (x \cdot y) = \neg x + \neg y \qquad   \neg (x + y) = \neg x \cdot \neg y$
+- absorpce:  $x \cdot (x + y) = x \qquad  x + x \cdot y = x$
 - a další
 
 #### Implikace - $\rightarrow$
