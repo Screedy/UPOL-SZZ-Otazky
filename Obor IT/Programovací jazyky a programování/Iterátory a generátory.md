@@ -59,3 +59,8 @@ numbers_gen = infinite_numbers()
 for _ in range(10):
     print(next(numbers_gen))  # Vypíše 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 ```
+
+
+>[!note] Iterátory a generátory
+>- **Každý generátor je iterátor**, ale ne každý iterátor je generátor.
+>- Generátory poskytují jednodušší a kompaktnější způsob psaní iterátorů, protože automatizují vytváření metod `__iter__()` a `__next__()` a správu stavu.
