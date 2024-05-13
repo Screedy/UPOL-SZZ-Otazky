@@ -58,18 +58,19 @@ Semafor je synchronizační abstrakce, která udržuje interní počítadlo a um
 
 ```Python
 import threading
+import time
 
 semaphore = threading.Semaphore(5)  # Vytvoření semaforu s maximálním počtem 5 povolených vláken
 
 def worker():
     with semaphore:
-        print("Vlákno", threading.currentThread().getName(), "získalo povolení")
+        print("Vlákno", threading.current_thread().name, "získalo povolení")
         # Simulace dlouhodobého úkolu
-        threading.currentThread().sleep(2)
-        print("Vlákno", threading.currentThread().getName(), "končí")
+        time.sleep(2)
+        print("Vlákno", threading.current_thread().name, "končí")
 
 for i in range(10):
-    t = threading.Thread(target=worker)  # Spuštění vlákna s funkci worker
+    t = threading.Thread(target=worker)  # Spuštění vlákna s funkcí worker
     t.start()
 ```
 
