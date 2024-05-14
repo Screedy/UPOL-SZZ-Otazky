@@ -45,7 +45,7 @@
 	- oproti tomu segmentace umožňuje rozdělit program do logických celků
 ---
 - při použití segmentace a stránkování programy nepracují přímo s lineární adresou
-- používají logickou adresu ve tvaru segment + offset a ta je poté převádí na fyzickou adresu pomocí stránkování
+- používají logickou adresu ve tvaru segment + offset a ta se poté převádí na fyzickou adresu pomocí stránkování
 >[!Example]+ Ukázka segmentace
 ![[MacBook-2024-05-03-001162.png]]
 

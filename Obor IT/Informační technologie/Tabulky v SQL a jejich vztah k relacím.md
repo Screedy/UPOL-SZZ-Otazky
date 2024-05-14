@@ -25,7 +25,7 @@
 	- Např. `<title text, year integer>`.
 
 ## Tabulky
-- Tabulka $D$ je hodnota, která se skládá z typu tabulky $<A_{1}T_{1},...,A_{n}T_{n}>$ je $n$-tice $<T_{1},...,T_{n}$ a $m$-tice řádků, kde každý řádek je typu $<T_{1},...,T_{n}>$.
+- Tabulka $D$ je hodnota, která se skládá z typu tabulky $<A_{1}T_{1},...,A_{n}T_{n}>$ je $n$-tice $<T_{1},...,T_{n}>$ a $m$-tice řádků, kde každý řádek je typu $<T_{1},...,T_{n}>$.
 - Typ tabulky $D$ se nazývá **záhlaví tabulky** a $m$-tice řádků tabulky $D$ jejím **tělem**.
  
 - Například uvažujme tabulku $D_{1}$ se záhlavím `<title text, year integer>` a tělem `<<¨The Avengers¨, 1998>, <¨The Avengers¨, 2012>, <¨The Matrix¨, 1999>>`.

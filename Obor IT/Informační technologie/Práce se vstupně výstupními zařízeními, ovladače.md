@@ -25,7 +25,7 @@
 - data se čtou/zapisují přímo na sběrnici
 >[!info] 
 >>[!success] Výhody
->>- k začízení se přistupuje stejně jako k paměti (možné použít všechny instrukce)
+>>- k zařízení se přistupuje stejně jako k paměti (možné použít všechny instrukce)
 >>- k řízení přístupu lze použít vše co pro paměť
 >
 >

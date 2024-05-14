@@ -19,7 +19,7 @@ SELECT title AS title, year + 1 AS next_year FROM movies;
 -- Pro tabulku:
       title      | year | length
 -----------------+------+--------
-The Matrix.      | 1999 |    136
+The Matrix       | 1999 |    136
 The Avengers     | 2012 |    143
 The Avengers     | 1998 |     89
 A Space Odyssey  | 1968 |    149
