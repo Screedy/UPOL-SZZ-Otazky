@@ -77,7 +77,7 @@
 1. **Preprocesor:** expanduje makra, odstraní nepotřebný kód, načte požadované soubory (např. `math.h`)
 2. **Překladač:** generuje kód v assembleru
 3. **Assembler:** vygeneruje objektový kód (`foo.c` $\rightarrow$ `foo.obj`/`foo.o`)
-4. **Linker:** slouží několik souborů s objektovým kódem + knihovny do spustitelného souboru
+4. **Linker:** sloučí několik souborů s objektovým kódem + knihovny do spustitelného souboru
 
 >[!Tip] Statická vs dynamická knihovna
 >- **staticky linkovaná knihovna** - instaluje s programem

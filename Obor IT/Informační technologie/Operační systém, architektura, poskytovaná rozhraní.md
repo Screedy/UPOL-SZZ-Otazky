@@ -32,7 +32,7 @@
 		- horší rozšířitelnost
 2. **Mikrojádro**
 	- Mikrojádrové jádro minimalizuje služby běžící v privilegovaném režimu jádra.
-	- **Přesouvá služeby jádra** (ovladače zařízení, protokoly síťové komunikace a systémové služby) **do uživatelského prostoru**
+	- **Přesouvá služby jádra** (ovladače zařízení, protokoly síťové komunikace a systémové služby) **do uživatelského prostoru**
 	- **Výhody:**
 		- bezpečnost
 		- stabilita
