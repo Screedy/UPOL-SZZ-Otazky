@@ -16,8 +16,8 @@ $$se nazývá **soustava $m$ lineárních rovnic** (SLR) o $n$ neznámých nad $
 - Soustavu $(S)$ můžeme zkráceně zapisovat jako $$\sum_{j=1}^{n} a_{i j} x_{j}=b_{i}, \quad i=1, \ldots, m$$
 
 ### Matice soustavy lineárních rovnic
-- Nechť je dána soustava $(S)$ lineárních rovnic. Pak matici 
-  $$
+- Nechť je dána soustava $(S)$ lineárních rovnic. Pak matici  
+$$
 A=\left(\begin{array}{ccc}
 a_{11} & \ldots & a_{1 n} \\
 a_{21} & \ldots & a_{2 n} \\
@@ -104,21 +104,21 @@ nazýváme **matice soustavy** $(S)$, resp. **rozšířená matice soustavy** $(
 - Pracujeme tedy dál s jinou soustavou, která má ale podle [[Soustavy lineárních rovnic, Frobeniova věta, Gaussova eliminační metoda, Cramerovo pravidlo#^09f1b7|věty]] stejnou množinu řešení jako daná. 
 ---
 - Je-li $\mathrm{h}(A)=\mathrm{h}\left(A \mid \vec{b}^{T}\right)=h<n$, pak
-  $$
-  \left
-  (B \mid \vec{c}^{T}\right)=
-  \left(
-  \begin{array}{cccccc|c}
-  b_{11} & b_{12} & \ldots & b_{1 h} & \ldots & b_{1 n} & c_{1} \\
-  0 & b_{22} & \ldots & b_{2 h} & \ldots & b_{2 n} & c_{2} \\
-  \vdots & \vdots & \ddots & \vdots & & \vdots & \vdots \\
-  0 & 0 & \ldots & b_{h h} & \ldots & b_{h n} & c_{h} \\
-  0 & & & \ldots & & 0 & 0 \\
-  \vdots & & & & & \vdots & \vdots \\
-  0 & & & \ldots & & 0 & 0
-  \end{array}
-  \right)
-  $$
+$$
+\left
+(B \mid \vec{c}^{T}\right)=
+\left(
+\begin{array}{cccccc|c}
+b_{11} & b_{12} & \ldots & b_{1 h} & \ldots & b_{1 n} & c_{1} \\
+0 & b_{22} & \ldots & b_{2 h} & \ldots & b_{2 n} & c_{2} \\
+\vdots & \vdots & \ddots & \vdots & & \vdots & \vdots \\
+0 & 0 & \ldots & b_{h h} & \ldots & b_{h n} & c_{h} \\
+0 & & & \ldots & & 0 & 0 \\
+\vdots & & & & & \vdots & \vdots \\
+0 & & & \ldots & & 0 & 0
+\end{array}
+\right)
+$$
 - Přitom se dá vždy zařídit (prohození sloupců), že $b_{i i} \neq 0$ pro každé $i=$ $1,2, \ldots, h$.
 ---
 - Z rovnice $b_{h h} x_{h}+\ldots+b_{h n} x_{n}=c_{h}$, která odpovídá **poslednímu nenulovému řádku matice** $\left(B \mid \vec{c}^{T}\right)$ vypočítáme $x_{h}$ v závislosti na $x_{h+1}, \ldots, x_{n}$.

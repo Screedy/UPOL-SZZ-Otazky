@@ -1,17 +1,11 @@
 ### Asymptotická horní mez ($f$ roste nejvýše tak rychle jako $g$)
-- Pro libovolné funkce $f, g: \mathbb{N} \rightarrow \mathbb{N}$ znamená zápis $f \in O(g)$ toto:
-  $$
-(\exists k \in \mathbb{N})(\exists n_{0} \in \mathbb{N})(\forall n \geq n_{0}):f(n) \leq k \ \cdot \ g(n)
-  $$
+- Pro libovolné funkce $f, g: \mathbb{N} \rightarrow \mathbb{N}$ znamená zápis $f \in O(g)$ toto:$$(\exists k \in \mathbb{N})(\exists n_{0} \in \mathbb{N})(\forall n \geq n_{0}):f(n) \leq k \ \cdot \ g(n)$$
 
 ### Asymptotická oboustranná mez ($f$ roste stejně rychle jako $g$)
 - Pro libovolné funkce $f, g: \mathbb{N} \rightarrow \mathbb{N}$ zápis $f \in \Theta(g)$ znamená, že $f \in O(g)$ a $g \in O(f)$
 
 ### Asymptotická ostrá horní mez ($f$ roste pomaleji než $g$)
-- Pro libovolné funkce $f, g: \mathbb{N} \rightarrow \mathbb{N}$ zápis $f \in o(g)$ znamená, že 
-  $$
-  (\forall k \in \mathbb{N})(\exists n_{0} \in \mathbb{N})(\forall n \geq n_{0}):k \ \cdot \ f(n) < g(n)
-  $$
+- Pro libovolné funkce $f, g: \mathbb{N} \rightarrow \mathbb{N}$ zápis $f \in o(g)$ znamená, že $$(\forall k \in \mathbb{N})(\exists n_{0} \in \mathbb{N})(\forall n \geq n_{0}):k \ \cdot \ f(n) < g(n)$$
 
 ### Základní pojmy pro porovnání růstu funkcí
 - $O(g)$ ... **Asymptotická horní mez**
