@@ -67,7 +67,7 @@ proc search(T,k)
 		- Problém je, že výsledek závisí pouze na **jednom bitu** klíče.
 		- Aby funkce dobře fungovala, musíme předpokládat, že je stejně pravděpodobné, že klíč bude lichý jako že klíč bude sudý
 
-#### Obecný postup kosntrukce
+#### Obecný postup konstrukce
 - **Klíč $k$** bereme jako *posloupnost číslic v nějaké číselné soustavě* 
 	- např. jako posloupnost bajtů = číslic v soustavě o základu $256$
 - **Hashovací funkce má obvykle $2$ fáze:**

@@ -74,7 +74,7 @@ proc bfs(G, s)
 
 #### Průchod do hloubky a jeho vlastnosti
 - **Uzly mají položku pro barvu**, podobně jako u průchodu do hloubky. Možné barvy jsou opět `white`, `gray` a `black`
-- Dále si pro každý uzel budeme **zaznamenávat čas**, kdy byl navštíven poprvé a změnil barvu z `white` na `gray`. K tomu použijeme **položku $d$.** Dále **zaznamenáme čas, kdy byl uzel navštíven podruhé,** k tomu použijeme **položku f**
+- Dále si pro každý uzel budeme **zaznamenávat čas**, kdy byl navštíven poprvé a změnil barvu z `white` na `gray`. K tomu použijeme **položku $d$.** Dále **zaznamenáme čas, kdy byl uzel navštíven podruhé,** k tomu použijeme **položku $f$**
 - Čas budeme udržovat pomocí **globální proměnné `time`**, kterou na začátku nastavíme na $0$, a na vhodných místech inkrementujeme
 ```python
 proc dfs(G)

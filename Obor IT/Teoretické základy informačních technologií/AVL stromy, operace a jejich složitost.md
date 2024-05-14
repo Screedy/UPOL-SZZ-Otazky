@@ -1,4 +1,4 @@
-- **Motivate**: udržovat výšku s $n$ prvky omezenou na $O(\lg n)$ tak, aby složitost operací *(závislá lineárně na výšce stromu)* zůstala $O(\lg n)$. 
+- **Motivate**: udržovat výšku s $n$ prvky omezenou na $O(\lg n)$ tak, aby složitost operací *(závisela lineárně na výšce stromu)* zůstala $O(\lg n)$. 
 - Jeden z přístupů vymysleli G. M. Adelson-Velskij a J. M. Landis v roce 1962 $\rightarrow$ **AVL stromy**
 ---
 - **Hlavní idea**: 
@@ -9,7 +9,7 @@
 - **Věta**: Výška přípustného stromu je **seshora omezena** $\frac{3}{2} \lg (n+1)$.
 >[!abstract] Intuice důvodu:
 >- pokusíme se namalovat přípustný strom, který má výšku $1, 2, ...,$ tak, aby obsahoval co nejméně uzlů 
->- tím bude funkce popisující výšku stromu v závislosti na počtu uzlů "nejvíce rostoucí" a najdeme tak vztak k Fibonacciho posloupnosti.
+>- tím bude funkce popisující výšku stromu v závislosti na počtu uzlů "nejvíce rostoucí" a najdeme tak vztah k Fibonacciho posloupnosti.
 >$f(h) = f(h-1) - f(h-2) + 1$
   $f(0) = 1$
   $f(1) = 2$
