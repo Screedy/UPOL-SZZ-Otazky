@@ -91,7 +91,7 @@
 	2. **Variabilní maska**
 		- Rozdělení na různě velké podsítě pomocí variabilní masky
 		- Docílíme **menšího plýtvání**
-		- Nejprve podsítě **seřadíme** dle jejich **velikosti** a postupně jim předělujeme adresy
+		- Nejprve podsítě **seřadíme** dle jejich **velikosti** a postupně jim přidělujeme adresy
 		- Příklad:![[MacBook-2024-03-24-000943.png]]
 
 #### Přidělení IP adresy koncovým uzlům

@@ -13,7 +13,7 @@
 ### Mac adresa
 - Každé zařízení v počítačové síti má fyzické síťové rozhraní. (NIC)
 - Každé fyzické rozhraní má fyzickou adresu, označujeme jako MAC adresa
-- Velikost **6B**, zapisuje se hexadecimálně ve tvaru XX:XX:XX:XX:XX:XX, kde X je $0-9$ nebo $a-f$
+- Velikost **6B**, zapisuje se hexadecimálně ve tvaru XX:XX:XX:XX:XX:XX, kde X je $0-9$ nebo $A-F$
 	- První 3B - identifikace výrobce
 	- ![[MacBook-2024-03-18-000915.png]]
 	  Pokud X je 0, jedná se o jedinčnou globální adresu přidělenou výrobcem

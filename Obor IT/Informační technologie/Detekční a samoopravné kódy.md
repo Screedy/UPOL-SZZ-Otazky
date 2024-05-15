@@ -9,7 +9,7 @@
 1. **Paritní bit**:
 	- nejjednodušší formou detekčního kódu
 	- přidává **jeden bit** k datům tak, aby celkový počet jedniček byl buď sudý (**sudá parita**) nebo lichý (**lichá parita**)
-	- umožňuje detekci jednoduchých chyb v jednom bitu
+	- umožňuje detekovat lichý počet chyb (tj. $1, 3, 5, ...$)
 2. **Kontrolní součty**:
 	- suma všech přenesených datových slov
 	- často používaná v síťové komunikaci a souborových systémech
@@ -18,8 +18,8 @@
 1. **CRC (Cyklický redundantní kód)**:
 	- přidává k datům speciální sekvenci bitů, známou jako kontrolní součet (checksum), která umožňuje příjemci ověřit integritu dat pomocí jednoduchého výpočtu
 	- ![[MacBook-2024-04-27-001089.png]]
-	1. **Zvolení generujícího polynomu**: V našem případě je to polynom $x^{3} + x + 1$ který můžeme zapsat jako binární číslo $1101$
-	2. **Příprava**: K datům se přidají nuly, počet nul odpovídá stupni polynomu (v našem případě 3)
+	1. **Zvolení generujícího polynomu**: V našem případě je to polynom $x^{3} + x^{2} + 1$ který můžeme zapsat jako binární číslo $1101$
+	2. **Příprava**: K datům se přidají nuly, počet nul odpovídá stupni polynomu (v našem případě $3$)
 	3. **Dělení dat pomocí operace XOR**: Využijeme operaci XOR pro simulaci dělení polynomem.
 	- **Výhody:** vysoká spolehlivost, jednoduchost implementace v hw i sw
 	- **Limitace:** pouze detekuje chyby, výběr polynomu ovlivňuje efektivitu detekce

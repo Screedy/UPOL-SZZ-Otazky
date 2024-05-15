@@ -13,18 +13,23 @@
 	- soustava vodičů pro komunikaci a přenos dat
 	- u sběrnice je důležitá **šířka přenosu** (kolik b můžeme najednou přenést), **frekvence** (v Hz), **propustnost** (množství přenesených dat za sekundu)
 	- Typy sběrnic:
-		- **Procesorová sběrnice (FSB)**: 
+		- **Systémová sběrnice (FSB)**: 
 			- Spojuje procesor (CPU) s hlavním paměťovým řadičem.
 			- **Účel**: Hlavním úkolem procesorové sběrnice je poskytovat rychlý přenos dat mezi CPU a pamětí, což je zásadní pro celkový výkon systému.
 		- **Paměťová sběrnice**:
 			- Zajišťuje komunikaci mezi CPU a fyzickou pamětí (RAM).
 			- Speciální sběrnice, která se používá pro přenos dat, adres a kontrolních signálů mezi procesorem a pamětí.
 			- **Účel**: Umožnit rychlý přístup k datům uloženým v RAM, což je klíčové pro rychlé vykonávání programů a operací.
-		- **Rozšiřující sběrnice**:
+		- **Periferní sběrnice**:
 			- Umožňuje připojení rozšiřujících karet nebo periférií.
 			- grafické karty, síťové karty, zvukové karty, ...
 			- ISA, PCI a AGP, PCIe
 			- **Účel**: Poskytovat modulární rozšiřitelnost počítačů, umožňující uživatelům přidávat nové funkce a vylepšovat existující vlastnosti bez nutnosti nahrazovat celý počítač.
+		- **Externí sběrnice**:
+			- Propojuje externí zařízení s počítačem
+			- USB, Thunderbolt, Firewire, ...
+		- **Specializované sběrnice**:
+			- SATA, NVMe, IDE, ...
 - **Chipset**:
 	- koordinuje přenos dat mezi procesorem, pamětí, grafickými kartami, pevnými disky a dalšími periferiemi
 	- Skládá z jednoho nebo více integrovaných obvodů, které fungují jako most mezi různými komponentami počítače.
@@ -54,7 +59,7 @@
 		- úplná instrukční sada, více instrukcí i pro déletrvající operace
 	- **RISC** - reduced instruction set computer
 		- redukovaná instrukční sada, instrukce pouze pro základní jednodušší operace, složitější překladačem programu
-- Rigistry mají u CISC různý význam, u RISC jsou obecně univerzální
+- Registry mají u CISC různý význam, u RISC jsou obecně univerzální
 	- univerzální (datové) – pro operandy, mezivýsledky a výsledky instrukcí: EAX (RAX), EBX (RBX), ECX (RCX), EDX (RDX)
 	- se stanoveným významem – pro řízení vykonávání programu, např. EIP (RIP), EBP (RBP), ESP (RSP), EFlags, pro implicitní operandy a výsledky, např. ESI (RSI), EDI (RDI), pro řízení procesoru, např. CRx, TRx, a další
 ## Vnitřní a vnější paměti

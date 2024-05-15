@@ -29,7 +29,7 @@
 - Je realizována pomocí **protokolu SSH-2**. Ten se skládá z:
 	- **SSH-TRANS** (transportní protokol) - vytváří bezpečné připojení pomocí TCP a zajišťuje šifrování a integritu dat
 	- **SSH-AUTH** (autentizační protokol) - zajišťuje autentizaci klienta vůči serveru
-	- **(SSH-CONN**) - (spojovací protokol) - slouží pro správu bezpečných spojení
+	- **SSH-CONN** - (spojovací protokol) - slouží pro správu bezpečných spojení
 	- **aplikační protokol** - popisuje vyměňovaná data
 - První tři části je možné použít **samostatně** a **bezpečným kanálem vyměňovat data** jiných aplikačních protokolů (**SSH tunelování**)
 

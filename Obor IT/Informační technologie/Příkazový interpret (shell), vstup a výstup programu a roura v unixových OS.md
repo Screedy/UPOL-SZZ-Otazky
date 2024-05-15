@@ -20,13 +20,15 @@ program < soubor       # přesměruje soubor na vstup do programu
 ## Roura
 -  Roura (`|`) je **nástroj**, který umožňuje **výstupy jednoho programu** použít jako **vstupy pro jiný program**.
 - To umožňuje vytvářet **řetězce programů**, kde každý program transformuje data a předává je dalšímu.
-- Např:
-```bash
-cat /var/log/system.log | grep 'error' | wc -l
-```
-- `cat /var/log/system.log` čte soubor a posílá jeho obsah do stdout.
-- `grep 'error'` přijímá vstup z předchozího příkazu (proud dat z `cat`), filtruje řádky obsahující "error", a výstupy posílá dále.
-- `wc -l` počítá řádky ze svého vstupu, které přijal od `grep`.
+
+>[!Example] Příklad použití roury
+>```bash
+>cat /var/log/system.log | grep 'error' | wc -l
+>```
+>- `cat /var/log/system.log` čte soubor a posílá jeho obsah do stdout.
+>- `grep 'error'` přijímá vstup z předchozího příkazu (proud dat z `cat`), filtruje řádky obsahující "error", a výstupy posílá dále.
+>- `wc -l` počítá řádky ze svého vstupu, které přijal od `grep`.
+
 
 ##### Navigace
 Předchozí:  [[Unixové systémy souborů a procesů, základní programy]]

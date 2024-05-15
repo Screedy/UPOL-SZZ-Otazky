@@ -11,7 +11,7 @@
 
 ### Dvojková soustava (binární)
 - Základní soustava používaná v počítačích.
-- Elektromechanické a elektronické součásti: nejsnadnější realizovatelné $2$ stavy pro $2$ hodnoty, symboly (číslice) $0$ a $1$ (digitální začízení/elektronika)
+- Elektromechanické a elektronické součásti: nejsnadnější realizovatelné $2$ stavy pro $2$ hodnoty, symboly (číslice) $0$ a $1$ (digitální zařízení/elektronika)
 - Každé číslo je vyjádřeno jako součet mocninné řady základu 2
 >[!Example] Například
 >$(11)_{10} = (1011)_{2} = 1 \cdot 2^{3} + 0 \cdot 2^{2} + 1 \cdot 2^{1} + 1 \cdot 2^{0}$

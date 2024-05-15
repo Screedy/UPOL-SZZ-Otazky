@@ -37,6 +37,7 @@ na základě WWW služby
 	- $302$ - soubor dočasně přesunut
 	- $404$ - soubor nenalezen
 	- $410$ - soubor odstraněn
+	- $418$ - I'm a teapot
 	- $500$ - chyba serveru
 #### Uniform Resource Location(URL)
 - představuje adresu souboru v síti
@@ -84,7 +85,7 @@ na základě WWW služby
 - **webový server**, **databázový server**, **aplikační server**
 #### Webové standarty
 - konsorcium W3C  - vydává specifika popisující webové technologie
-- **pouze recommended** -> pouze doporučení, **prohlížeč může implementovat jinak**
+- **pouze recommended** $\rightarrow$ pouze doporučení, **prohlížeč může implementovat jinak**
 
 
 >[!summary] V kostce

@@ -41,7 +41,7 @@
 - Pro pokročilejší filtraci síťové komunikace.
 - Typicky filtrace na základě portu, protokolu a stavu spojení.
 - Díky portu můžeme realizovat plnohodnotný NAT.
-- Návázání spojení = bezpečnostní problém, jelikož je možné jej snadno zneužít k realizaci DoS útoku.
+- Navázání spojení = bezpečnostní problém, jelikož je možné jej snadno zneužít k realizaci DoS útoku.
 	- Např. SYN flooding útok. Útočník pošle mnoho TCP segmentů s příznakem SYN z různých IP adres. Z pohledu příjemce se jen někod snaží navázat spojení. Příjemce odpoví segmentem s příznaky SYN a ACK a alokuje zdroje pro právě vznikající komunikaci.
 
 ## Bezpečnost na úrovni aplikační vrstvy
