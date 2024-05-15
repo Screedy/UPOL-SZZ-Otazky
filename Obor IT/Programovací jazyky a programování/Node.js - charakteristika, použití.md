@@ -53,3 +53,8 @@ server.listen(port, (err) => {
   console.log(`Server běží na http://localhost:${port}/`);
 });
 ```
+
+##### Navigace
+Předchozí:  [[Možnosti tvorby nativních aplikací pomocí webových technologií]]
+Následující:
+Celý okruh: [[3. Programovací jazyky a programování]]

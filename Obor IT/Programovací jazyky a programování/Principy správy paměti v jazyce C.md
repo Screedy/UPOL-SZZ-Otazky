@@ -65,3 +65,8 @@ int main() {
 3. **Přepsání paměti**: Pokud uživatel zadá více dat než je velikost bufferu, data se zapisují mimo paměťový blok určený pro buffer. To může vést k přepsání jiných důležitých dat v paměti, včetně návratové adresy, ukazatelů nebo jiných proměnných.
 
 4. **Potenciální zneužití útočníkem**: Pokud útočník dokáže vhodně manipulovat s daty zapsanými za hranice bufferu, může zneužít tuto chybu k provádění škodlivých akcí, jako je spuštění škodlivého kódu, získání citlivých informací nebo destabilizace programu.
+
+##### Navigace
+Předchozí:  [[Přehled typového systému jazyka C]]
+Následující: [[Principy adresování a práce s pointery v jazyce C]]
+Celý okruh: [[3. Programovací jazyky a programování]]

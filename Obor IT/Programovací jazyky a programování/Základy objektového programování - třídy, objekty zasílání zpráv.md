@@ -61,3 +61,8 @@ my_car.drive()
 2. **Volání metody**: Voláme metodu `drive()` na objektu `my_car`.
 3. **Zpracování metody**: Objekt `my_car` přijímá zprávu a provádí kód v metodě `drive()`, tedy vypíše zprávu o tom, že auto jede.
 4. **Výsledek**: Výstup bude "Toyota Corolla is driving.".
+
+##### Navigace
+Předchozí:  [[Moduly v jazyce Python a jejich importování]]
+Následující: [[Principy objektového programování - zapouzdření, polymorfismus a dědičnost]]
+Celý okruh: [[3. Programovací jazyky a programování]]

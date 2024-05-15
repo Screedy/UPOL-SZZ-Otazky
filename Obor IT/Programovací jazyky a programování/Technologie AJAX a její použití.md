@@ -44,3 +44,8 @@ Příklad užití AJAXu:
 </body>
 </html>
 ```
+
+##### Navigace
+Předchozí:  [[JavaScript na webovém frontendu a jeho možnosti]]
+Následující: [[Knihovna React - charakteristika, použití]]
+Celý okruh: [[3. Programovací jazyky a programování]]

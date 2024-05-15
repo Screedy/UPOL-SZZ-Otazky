@@ -47,3 +47,8 @@ Rozděluje aplikaci na **3 základní celky**:
 1. **Složitost**: Správa mnoha malých služeb může být komplikovanější než správa monolitické aplikace, zejména pokud jde o testování, sledování a zajištění bezpečnosti.
 2. **Komunikace**: Vzájemná komunikace mezi službami přes síť může představovat výkonnostní a spolehlivostní výzvy.
 3. **Datová konzistence**: Každá mikroslužba spravuje svá vlastní data, což může ztížit udržení konzistence dat napříč systémem.
+
+##### Navigace
+Předchozí:  [[Webové aplikace a přehled technologií používaných při jejich tvorbě]]
+Následující: [[Zpracování HTTP požadavků - předávání dat mezi webovým a aplikačním serverem, překlady realizace]]
+Celý okruh: [[3. Programovací jazyky a programování]]

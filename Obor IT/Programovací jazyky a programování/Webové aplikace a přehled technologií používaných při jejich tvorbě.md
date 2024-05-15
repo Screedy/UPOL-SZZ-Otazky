@@ -48,3 +48,9 @@ Dle chatGPT:
 11. **Bezpečnostní nástroje a postupy**: SSL/TLS pro šifrování komunikace, autentizace a autorizace uživatelů, ochrana proti útokům typu XSS (Cross-Site Scripting) nebo SQL Injection.
 
 Toto je pouze přehled některých z hlavních technologií a nástrojů používaných při vývoji webových aplikací. Samozřejmě, každý projekt může vyžadovat specifické technologie v závislosti na požadavcích a potřebách.
+
+
+##### Navigace
+Předchozí:  [[Zařazení jazyka C mezi ostatní jazyky, výhody a nevýhody]]
+Následující: [[Architektura webové aplikace a problematika škálovatelnosti]]
+Celý okruh: [[3. Programovací jazyky a programování]]

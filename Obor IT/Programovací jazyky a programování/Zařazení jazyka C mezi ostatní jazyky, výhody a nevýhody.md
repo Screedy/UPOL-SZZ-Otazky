@@ -68,3 +68,8 @@
 #### Podle účelu použití:
 
 1. **Univerzální jazyk**: Java se používá pro vývoj různých aplikací, včetně webových aplikací, desktopových aplikací, mobilních aplikací a podnikových systémů.
+
+##### Navigace
+Předchozí:  [[Organizace kódu v jazyce C]]
+Následující: [[Webové aplikace a přehled technologií používaných při jejich tvorbě]]
+Celý okruh: [[3. Programovací jazyky a programování]]

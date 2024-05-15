@@ -252,3 +252,8 @@ export default Example;
 - Užitečný hook je také useMemo, který umožňuje zapamatovat při renderování vypočítané hodnoty. Ty následně nemusí být opět přepočítávány (pouze pokud dojde ke změně hodnot, ze který byly vypočítány). Tento hook slouží pro optimalizaci výkonu.
 - Hooky je možné volat pouze na top-level úrovni. Nesmí být v cyklech a podmínkách (můžou je ale obsahovat). Hook by měl být volán pouze uvnitř komponenty. ESlint v create-react-app tato pravidla hlídá.
 - Kromě vestavěných hooks je možné vytvářet vlastní.
+
+##### Navigace
+Předchozí:  [[Technologie AJAX a její použití]]
+Následující: [[Možnosti tvorby nativních aplikací pomocí webových technologií]]
+Celý okruh: [[3. Programovací jazyky a programování]]

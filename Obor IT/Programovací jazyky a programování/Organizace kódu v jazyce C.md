@@ -26,3 +26,8 @@
 8. **Správa paměti**: Pokud program pracuje s dynamickou pamětí (např. alokace a dealokace paměti pomocí funkcí malloc() a free()), je důležité pečlivě spravovat paměť a zabránit únikům paměti a jiným chybám.
 
 9. **Error handling**: Správné zacházení s chybami a výjimkami, aby byl kód robustní a odolný vůči neočekávaným situacím.
+
+##### Navigace
+Předchozí:  [[Typy chyb a jejich hledání v jazyce C]]
+Následující: [[Zařazení jazyka C mezi ostatní jazyky, výhody a nevýhody]]
+Celý okruh: [[3. Programovací jazyky a programování]]

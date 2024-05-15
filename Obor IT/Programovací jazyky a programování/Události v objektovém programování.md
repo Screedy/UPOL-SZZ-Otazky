@@ -32,3 +32,8 @@ root.mainloop()
 2. **Event Listeners (Posluchači událostí)**: Posluchači událostí jsou funkce nebo objekty, které jsou registrovány k naslouchání (poslouchání) určitým událostem. Když je spuštěna událost, posluchači jsou aktivováni a provedou odpovídající kód reakce. V našem příkladu s knihovnou `tkinter` by funkce `button_click()` byla posluchačem události kliknutí na tlačítko.
 
 3. **Trigger (Spouštěč)**: Spouštěč je část kódu, která vyvolává (trigger) určitou událost. To může být například kliknutí na tlačítko, načtení souboru, dokončení časovače apod. Když je událost vyvolána, událostní smyčka ji zaznamená a spustí příslušné posluchače událostí. V našem příkladu by kliknutí na tlačítko bylo triggerem události, která spustí funkci `button_click()`.
+
+##### Navigace
+Předchozí:  [[Principy objektového programování - zapouzdření, polymorfismus a dědičnost]]
+Následující: [[Funkce vyšších řádů - mapování, filtrování, redukce a anonymní funkce]]
+Celý okruh: [[3. Programovací jazyky a programování]]

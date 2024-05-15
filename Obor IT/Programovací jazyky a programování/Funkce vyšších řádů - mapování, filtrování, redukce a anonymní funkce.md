@@ -45,3 +45,8 @@ multiply = lambda x, y: x * y
 result = multiply(3, 4)  # 12
 
 ```
+
+##### Navigace
+Předchozí:  [[Události v objektovém programování]]
+Následující: [[Rekurze a rekurzivní datové struktury (spojové seznamy, stromy)]]
+Celý okruh: [[3. Programovací jazyky a programování]]

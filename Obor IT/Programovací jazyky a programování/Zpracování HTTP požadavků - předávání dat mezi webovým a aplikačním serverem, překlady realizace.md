@@ -79,3 +79,8 @@ Překlady realizace HTTP požadavků mohou být realizovány pomocí různých t
 - **Django a Flask v Pythonu:** Frameworky pro vývoj webových aplikací a API v jazyce Python.
 - **Ruby on Rails:** Framework pro vývoj webových aplikací v jazyce Ruby.
 - **ASP.NET Core:** Framework pro vývoj webových aplikací v jazyce C#.
+
+##### Navigace
+Předchozí:  [[Architektura webové aplikace a problematika škálovatelnosti]]
+Následující: [[REST API - popis a příklady realizace]]
+Celý okruh: [[3. Programovací jazyky a programování]]

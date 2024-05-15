@@ -61,3 +61,9 @@
 	DELETE /users/123 HTTP/1.1
 	Host: api.example.com
 	```
+
+
+##### Navigace
+Předchozí:  [[Zpracování HTTP požadavků - předávání dat mezi webovým a aplikačním serverem, překlady realizace]]
+Následující: [[JavaScript na webovém frontendu a jeho možnosti]]
+Celý okruh: [[3. Programovací jazyky a programování]]
