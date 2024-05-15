@@ -4,6 +4,7 @@
 - nejzákladnější webová technologie
 
 ### Syntaxe HTML
+- HTML používá značky (tags), které jsou uzavřeny v hranatých závorkách < >
 #### Elementy
 - HTML element se skládá z **otevírací** značky, **obsahu** a **zavírací** značky. 
 - Elementy mohou **obsahovat další elementy** (dětské elementy), **text** nebo mohou být **prázdné**.
@@ -45,8 +46,8 @@ více řádků
 - elementy vytvářejí hierarchickou strukturu potomek-rodič
   ![[MacBook-2024-04-28-001093.png| 300]]
 
-## Význam (sémantika) elementů HTML
-- odkazuje na význam a účel, který mají jednotlivé HTML elementy
+## Význam (sémantika) HTML
+- sémantické HTML používá **sémantické značky**, které poskytují **smysluplnou strukturu** obsahu
 - používání sémantických elementů umožňuje **vývojářům, prohlížečům a vyhledávačům** lépe pochopit, **jaké informace stránka obsahuje** a jak jsou tyto informace organizovány
 >[!Example] Příklad sémantiky
 >```HTML
