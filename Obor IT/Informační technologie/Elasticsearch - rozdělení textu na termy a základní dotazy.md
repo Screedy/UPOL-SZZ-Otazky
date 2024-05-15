@@ -9,8 +9,8 @@
 - V Elasticsearch se indexace dokumentů skládá z několika kroků, ve kterých je text rozdělen na menší části nazývané "termy" nebo "tokeny".
 - Proces tokenizace:
 	1. **Analýza**: Text je zpracován analyzátorem. To je kombinace tokenizeru a filterů
-		- **Tokenizer** rozděluje text na tokeny, obvykle na základě mezery a interpunkce.
-		- **Filtry** modifikují tokeny, například převádění na malá písmena, odstranění stop slov, synonyma, atd.
+		- **Tokenizer**: rozděluje text na tokeny, obvykle na základě mezery a interpunkce.
+		- **Token filtr**: modifikuje tokeny, například převádění na malá písmena, odstranění stop slov, synonyma, atd.
 		- Například řetězec `"The Hobbit, or There and Back Again"` se přeloží na termy: `"the"`, `"hobbit"`, `"or"`, `"there"`, `"and"`, `"back"`, `"again"`.
 	1. **Indexace (Indexing)**: Tokeny jsou poté přidány do invertovaného indexu, který mapuje termíny na místa jejich výskytu v dokumentech.
 
@@ -26,6 +26,17 @@ POST /index/_search
 }
 ```
 - kde `query` je objekt popisující *dotaz*
+
+>[!Example] Příklad požadavku
+>```JSON
+>{
+>	"query": {
+> 		"term": {
+> 			"status": "active"
+> 		}
+> 	}
+> }
+>```
 
 ### Odpověď
 - Tělo odpovědi obsahuje:
