@@ -65,43 +65,63 @@ db.movies.insertMany([
 	- `$exists`: zda klíč existuje
 	- `$type`: typ hodnoty klíče
 - Použití například:
-```mongodb
+```javascript
 { field: { $eq: argument } }
+db.collection.find({ age: { $gt: 18 } })
+
 { field: { $exists: boolean_value } }
+db.collection.find({ email: { $exists: true } })
+
 { $type: type }
+db.collection.find({ name: { $type: "string" } })
 ```
 
 ## Logické operátory
 - Podmínky lze skládat za použití logických operátorů.
 - Dokument splňuje podmínku:
-```mongodb
+```javascript
 { $and: [ condition1, condition2, ...] }
-{ $and: [ { title: "Dracula"}, { year: 1992 } ] }
+db.collection.find({ $and: [ { title: "Dracula"}, { year: 1992 } ] })
 ```
 - pokud splňuje všechny podmínky `condition1`, `condition2`, ...
 
 - Dokument splňuje podmínku:
-```mongodb
+```javascript
 { $or: [ condition1, condition2, ... ] }
 ```
 - pokud splňuje aspoň jednu z podmínek `condition1`, `condition2`, ...
 
 - Hodnota splňuje podmínku:
-```mongodb
+```javascript
 { $not: condition }
 ```
 - pokud nesplňuje podmínku `condition`.
 
 ## Implicitní operátory
-- V dotazech, kde není specifikován žádný operátor, MongoDB implicitně používá `$eq`. Například:
-```mongodb
-{ "jmeno": "Jan" }
+- V dotazech, kde není specifikován žádný operátor, MongoDB implicitně používá `$eq`. 
+```javascript
+db.collection.find({ name: "John" }) 
+// je ekvivalentní k:
+db.collection.find({ name: { $eq: "John" } })
 ```
-- Tento dotaz vybere dokumenty, kde hodnota klíče `jmeno` je rovna "Jan", což je ekvivalentní k:
-```mongodb
-{ "jmeno": { "$eq": "Jan" } }
+- Operátor `$and` je implicitně použit, pokud jsou ve vyhledávacím dotazu specifikovány více podmínky jako samostatné klíče ve stejném objektu.
+```javascript
+db.collection.find({ age: { $gt: 18 }, status: "active" })
+// je ekvivalentní k:
+db.collection.find({ $and: [ { age: { $gt: 18 } }, { status: "active" } ] })
 ```
-
+- Operátor `$elemMatch` je implicitně použit v některých případech, kdy se provádí dotazy na pole objektů, které mají více podmínek.
+```javascript
+db.collection.find({ "orders.product": "Laptop", "orders.quantity": { $gt: 1 } })
+// je ekvivalentní k:
+db.collection.find({ orders: { $elemMatch: { product: "Laptop", quantity: { $gt: 1 } } } })
+```
+- Operátor `$all` je implicitně použit, když je pole porovnáváno s více hodnotami.
+```javascript
+db.collection.find({ tags: ["tag1", "tag2"] })
+// je ekvivalentní k:
+db.collection.find({ tags: { $all: ["tag1", "tag2"] } })
+```
 ## Dotazy na vnořené dokumenty
 - Dotazování na vnořené dokumenty vyžaduje použití tečkové notace. 
 - Příklad dotazu na vnořený objekt by mohl vypadat takto:
