@@ -64,3 +64,9 @@ for _ in range(10):
 >[!note] Iterátory a generátory
 >- **Každý generátor je iterátor**, ale ne každý iterátor je generátor.
 >- Generátory poskytují jednodušší a kompaktnější způsob psaní iterátorů, protože automatizují vytváření metod `__iter__()` a `__next__()` a správu stavu.
+
+
+##### Navigace
+Předchozí:  [[Rekurze a rekurzivní datové struktury (spojové seznamy, stromy)]]
+Následující: [[Synchronizace vláken - problém kritické sekce, zámky, semafory]]
+Celý okruh: [[3. Programovací jazyky a programování]]

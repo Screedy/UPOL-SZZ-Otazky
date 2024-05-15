@@ -152,3 +152,8 @@ int main() {
 
 - Přetypování umožňuje změnit typ proměnné na jiný typ.
 - Například `(int) 5.5` provede přetypování desetinného čísla na celé číslo.
+
+##### Navigace
+Předchozí:  [[Večeřící filozofové]]
+Následující: [[Principy správy paměti v jazyce C]]
+Celý okruh: [[3. Programovací jazyky a programování]]

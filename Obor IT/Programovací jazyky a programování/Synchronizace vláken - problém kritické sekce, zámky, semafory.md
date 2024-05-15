@@ -74,3 +74,7 @@ for i in range(10):
     t.start()
 ```
 
+##### Navigace
+Předchozí:  [[Iterátory a generátory]]
+Následující: [[Producenti a konzumenti]]
+Celý okruh: [[3. Programovací jazyky a programování]]

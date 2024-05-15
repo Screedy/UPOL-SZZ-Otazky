@@ -26,3 +26,8 @@
 - **Charakteristika**: Electron je open-source framework vyvinutý společností GitHub, který umožňuje vytvářet multiplatformní desktopové aplikace pomocí webových technologií, jako jsou HTML, CSS a JavaScript. S Electronem můžete vytvářet aplikace pro Windows, macOS a Linux.
 - **Použití**: Electron je často používán pro vývoj desktopových aplikací, jako jsou textové editory, komunikační aplikace nebo vývojová prostředí. Jednou z nejznámějších aplikací postavených na Electronu je například Visual Studio Code.
 - **Výhody**: Jednou z hlavních výhod Electronu je možnost využití webových technologií pro vývoj desktopových aplikací, což může být pro vývojáře pohodlné a efektivní. Electron také poskytuje přístup k nativním funkcím operačního systému, což umožňuje vytvářet plnohodnotné desktopové aplikace.
+
+##### Navigace
+Předchozí:  [[Knihovna React - charakteristika, použití]]
+Následující: [[Node.js - charakteristika, použití]]
+Celý okruh: [[3. Programovací jazyky a programování]]

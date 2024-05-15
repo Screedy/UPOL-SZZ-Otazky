@@ -67,3 +67,8 @@ spotrebitel() {
         }
 }
 ```
+
+##### Navigace
+Předchozí:  [[Synchronizace vláken - problém kritické sekce, zámky, semafory]]
+Následující: [[Večeřící filozofové]]
+Celý okruh: [[3. Programovací jazyky a programování]]

@@ -81,3 +81,9 @@ print(cat.introduce())  # Výstup: Jmenuji se Fluffy.
 print(cat.sound())  # Výstup: Mňau
 print(dog.sound())  # Výstup: Haf
 ```
+
+
+##### Navigace
+Předchozí:  [[Základy objektového programování - třídy, objekty zasílání zpráv]]
+Následující: [[Události v objektovém programování]]
+Celý okruh: [[3. Programovací jazyky a programování]]

@@ -24,3 +24,8 @@ Toto řešení umožňuje velké množství paralelních programů a řeší lib
 
 ## Jeden filozof je levák
 Je to podobné řešení jako při hiearchii zdrojů. Všichni se snaží získat vždy prvně vidličku pro svou dominantní ruku. Pokud je však jeden z filozofů levák, dostane jeden filozof vždy obě vidličky a poté co dojí je položí. Od této chvíle se můžou najíst další filozofové.
+
+##### Navigace
+Předchozí:  [[Producenti a konzumenti]]
+Následující: [[Přehled typového systému jazyka C]]
+Celý okruh: [[3. Programovací jazyky a programování]]

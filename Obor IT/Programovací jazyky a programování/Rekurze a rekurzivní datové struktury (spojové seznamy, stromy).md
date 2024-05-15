@@ -138,3 +138,8 @@ child2.children.append(child3)
 # Spuštění preorder procházení
 preorder_traversal(root)
 ```
+
+##### Navigace
+Předchozí:  [[Funkce vyšších řádů - mapování, filtrování, redukce a anonymní funkce]]
+Následující: [[Iterátory a generátory]]
+Celý okruh: [[3. Programovací jazyky a programování]]

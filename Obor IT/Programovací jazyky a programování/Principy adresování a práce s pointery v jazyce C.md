@@ -87,3 +87,8 @@ int main() {
     return 0;
 }
 ```
+
+##### Navigace
+Předchozí:  [[Principy správy paměti v jazyce C]]
+Následující: [[Typy chyb a jejich hledání v jazyce C]]
+Celý okruh: [[3. Programovací jazyky a programování]]

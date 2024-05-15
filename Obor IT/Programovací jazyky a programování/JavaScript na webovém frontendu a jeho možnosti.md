@@ -30,3 +30,8 @@
 - **PWA (Progressive Web Apps)**: Využití moderních webových technologií pro vytvoření webových aplikací, které se chovají jako nativní aplikace.
 - **WebAssembly**: Možnost integrovat jiné jazyky, jako je C++ nebo Rust, přímo do webového prostředí pro výkonější aplikace.
 - **Server-side rendering**: Použití JavaScriptu na serverové straně pro generování obsahu přímo na serveru, což může zlepšit výkon a SEO.
+
+##### Navigace
+Předchozí:  [[REST API - popis a příklady realizace]]
+Následující: [[Technologie AJAX a její použití]]
+Celý okruh: [[3. Programovací jazyky a programování]]

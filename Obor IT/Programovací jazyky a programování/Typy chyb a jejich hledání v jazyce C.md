@@ -98,3 +98,8 @@ int main() {
 - **Valgrind:** Nástroj Valgrind poskytuje detekci memory leaks a dalších chyb paměti pomocí nástrojů jako Memcheck.
 - **Statická analýza:** Některé nástroje pro statickou analýzu kódu mohou identifikovat potenciální chyby paměti a nedefinované chování v kódu.
 - **Manuální inspekce kódu:** Pečlivé prohlížení kódu s ohledem na správu paměti a manipulaci s ukazateli může odhalit chyby, jako jsou memory leaks a segmentační chyby.
+
+##### Navigace
+Předchozí:  [[Principy adresování a práce s pointery v jazyce C]]
+Následující: [[Organizace kódu v jazyce C]]
+Celý okruh: [[3. Programovací jazyky a programování]]
