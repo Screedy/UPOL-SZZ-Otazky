@@ -7,15 +7,16 @@
 - často označován jako **životní cyklus vývoje softwaru**
 - jeho hlavním cílem je **produkovat kvalitní software**, který **splňuje** nebo překračuje **očekávání zákazníků** v rámci **odhadovaných nákladů** a **časového plánu**
 >[!Info] Fáze softwarového procesu
->1. **Specifikace**
->	- definuje funkce a omezení systému
->	- identifikace potřeb a priority
->	- analýza (určení požadavků, priorita alternativ, ...)
->2. **Návrh a implementace**
->	- aplikační logika a technické specifikace
->3. **vytvoření systému splňující specifikace**
->4. **validace softwaru** (testování)
->5. **evoluce softwaru**
+>1. **Plánování**
+>	- stanovení cílů a požadavků projektu
+>2. **Analýza požadavků**
+>	- sběr a dokumentace požadavků na systém
+>3. **Návrh**
+>4. **Implementace**
+>	- návrh architektury systému
+>5. **Validace softwaru** (testování)
+>6. **Nasazení**
+>7. **Evoluce softwaru**
 >	- vývoj pokračuje, aby uspokojil potřeby zákazníka
 - Máme různé modely procesů - vodopád, prototypování, spirální, evoluční, ...
 
