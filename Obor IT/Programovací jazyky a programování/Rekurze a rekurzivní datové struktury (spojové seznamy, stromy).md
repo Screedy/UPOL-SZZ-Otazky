@@ -21,8 +21,8 @@
 - Rekurzivní datové struktury jsou struktury, které obsahují odkazy na objekty stejného typu. Toto umožňuje vytvářet složitější struktury, jako jsou spojové seznamy, stromy, grafy atd.
 
 #### Spojový seznam
-
-Spojový seznam je rekurzivní datová struktura, která se skládá z uzlů, kde každý uzel obsahuje data a odkaz na následující uzel v seznamu.
+- Spojový seznam je rekurzivní datová struktura, která se skládá z uzlů, kde každý uzel obsahuje data a odkaz na následující uzel v seznamu.
+- Spojové seznamy můžou obsahovat i odkaz na předchozí prvek.
 
 ```Python
 class Node:
@@ -42,10 +42,9 @@ node2.next = node3
 1 -> 2 -> 3
 ```
 
-Spojové seznamy můžou obsahovat i odkaz na předchozí prvek.
 #### Strom
-
-Strom je hierarchická datová struktura skládající se z uzlů, kde každý uzel má určitý počet podřízených uzlů, nazývaných potomci.
+- Stromy jsou hierarchické datové struktury, kde každý uzel může mít nulové nebo více poduzlů.
+- Binární strom je speciální druh stromu, kde každý uzel má nejvýše dva potomky.
 
 ```Python
 class TreeNode:
@@ -73,73 +72,38 @@ child2.children.append(child3)
 ```
 
 ## Procházení rekurzivních struktur
-
-Rekurze je využívána k procházení a manipulaci s rekurzivními datovými strukturami jako jsou stromy a spojové seznamy. Pomocí rekurze můžeme snadno implementovat algoritmy pro procházení, vyhledávání, vkládání, mazání a mnoho dalších operací na těchto strukturách.
+- Rekurze je využívána k procházení a manipulaci s rekurzivními datovými strukturami jako jsou stromy a spojové seznamy. 
+- Pomocí rekurze můžeme snadno implementovat algoritmy pro procházení, vyhledávání, vkládání, mazání a mnoho dalších operací na těchto strukturách.
 
 ### Procházení spojového seznamu
+- Spojový seznam můžeme procházet pomocí rekurze nebo iterativního způsobu.
 
-Spojový seznam můžeme procházet pomocí rekurze nebo iterativního způsobu.
-
-#### Rekurzivní procházení spojového seznamu
-
-```Python
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-
-# Funkce pro rekurzivní procházení spojového seznamu
-def recursive_traversal(node):
-    if node is None:
-        return
-    print(node.data)  # Provádí operaci s daty uzlu
-    recursive_traversal(node.next)
-
-# Vytvoření spojového seznamu
-node1 = Node(1)
-node2 = Node(2)
-node3 = Node(3)
-
-node1.next = node2
-node2.next = node3
-
-# Spuštění rekurzivního procházení
-recursive_traversal(node1)
-```
+>[!Example] Rekurzivní procházení spojového seznamu
+>```Python
+># Funkce pro rekurzivní procházení spojového seznamu
+>def recursive_traversal(node):
+> 	if node is None:
+> 		return
+> 	print(node.data)  # Provádí operaci s daty uzlu
+> 	recursive_traversal(node.next)
+>```
 
 ### Procházení stromu
 
-Procházení stromu můžeme provést pomocí různých strategií, jako je inorder, preorder a postorder.
+- Procházení stromu můžeme provést pomocí různých strategií, jako je inorder, preorder a postorder.
 
 #### Preorder procházení stromu (kořen - levý podstrom - pravý podstrom)
 
-```Python
-class TreeNode:
-    def __init__(self, data):
-        self.data = data
-        self.children = []
-
-# Funkce pro preorder procházení stromu
-def preorder_traversal(node):
-    if node is None:
-        return
-    print(node.data)  # Provádí operaci s daty uzlu
-    for child in node.children:
-        preorder_traversal(child)
-
-# Vytvoření stromu
-root = TreeNode("A")
-child1 = TreeNode("B")
-child2 = TreeNode("C")
-child3 = TreeNode("D")
-
-root.children.append(child1)
-root.children.append(child2)
-child2.children.append(child3)
-
-# Spuštění preorder procházení
-preorder_traversal(root)
-```
+>[!Example] preorder procházení stromu
+>```Python
+># Funkce pro preorder procházení stromu
+>def preorder_traversal(node):
+> 	if node is None:
+> 		return
+> 	print(node.data)  # Provádí operaci s daty uzlu
+> 	for child in node.children:
+> 		preorder_traversal(child)
+>```
 
 ##### Navigace
 Předchozí:  [[Funkce vyšších řádů - mapování, filtrování, redukce a anonymní funkce]]
