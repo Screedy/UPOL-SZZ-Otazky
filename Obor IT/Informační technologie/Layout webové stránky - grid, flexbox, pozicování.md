@@ -1,6 +1,4 @@
-
-
-- možnosti jak lze měnit umístění elementů na stránce
+- layout webové stránky určuje, jak jsou různé prvky na stránce uspořádány
 
 ## Grid
 - zavádí **dvoudimenzionální mřížku** (grid), do které je možné rozmisťovat prvky
@@ -315,9 +313,13 @@ grid-column: x;
 - změna jeho umístění oproti normal flow na stránce. K tomu účelu slouží vlastnost `position`.
 - **Hodnoty position**
 	 - `static` - výchozí hodnota, pozice určena normal flow 
+		 - <img src="https://media.geeksforgeeks.org/wp-content/uploads/20211029154457/20211029154026.gif" alt="static pozicovani" height="200px">
 	 - `relative` - relativní pozice k jeho normal flow, místo které zabírá je ponecháno prázdné
-	 - `absolute` - absolutní vzhledem k oknu nebo prvnímu absolutně, relativně či fixně pozicovánému rodičovskému elementu, původní místo použito dalšími elementy, jeho aktuální pozice neovlivňuje ostatní elementy
+		- <img src="https://media.geeksforgeeks.org/wp-content/uploads/20211029155726/20211029155406.gif" alt="relative pozicovani" height="200px">
+	 - `absolute` - absolutní pozicování umístí prvek relativně k jeho nejbližšímu předkovi s `position: relative;`.
+		 - <img src="https://media.geeksforgeeks.org/wp-content/uploads/20211029152705/20211029152518.gif" alt="absolute pozicovani" height="200px">
 	 - `fixed` - pevná pozice vzhledem k viewportu
+		 - <img src="https://media.geeksforgeeks.org/wp-content/uploads/20211029142813/20211029142357.gif" alt="fixed pozicovani" height="200px">
 	 - `sticky` - kombinace relativního a fixního pozicování (relativní dokud není odrolován, pak fixní)
 - pokud je element `relative, fixed, absolute nebo sticky`
 	- možnost nastavit `top, right, bottom, left`

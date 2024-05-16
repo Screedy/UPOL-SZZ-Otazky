@@ -31,7 +31,7 @@
 > [!info] 
 >  Existuje i rámeček *`outline`*, ten se ale používá pouze při **ladění / vývoji**, jelikož jeho velikost může upravovat každý prohlížeč jinak
 ## Okraje
-### Vnější - `margin`
+### Vnější okraj - `margin`
 - vizualizace vnějších okrajů: **`margin-*`**
 ```CSS
 /* vnejší okraj, nastavení všech */
@@ -52,7 +52,7 @@ margin-left: 15px;
 >  ```CSS
 >  .box--center {margin: auto;}
 >  ```
-### Vnitřní - `padding`
+### Vnitřní okraj - `padding`
 - vizualizace vnitřních okrajů: **`padding-*`**
 ```CSS
 /* vnitřní okraj, nastavení všech */
@@ -71,9 +71,16 @@ padding-left: 15px;
 ## Zobrazení elementu
 - zobrazení elementu pomocí vlastnosti `display`
 - tři základní zobrazení:
-	1. **Blokové zobrazení** (`block`) - zalomí řádky před a za elementem
-	2. **Řádkové zobrazení** (`inline`) - nedochází k zalomení řádků, *ignorují se vlastnosti elementu: margin-top, margin-bottom, width a height*
-	3. **Řádkově-blokové zobrazení** (`inline-block`) - uvnitř se chová jako blokový z venku jako řádkový
+	1. **Blokové zobrazení** (`block`)
+		- Zabírá celou šířku svého nadřazeného prvku.
+		- Každý blokový prvek začíná na novém řádku.
+	2. **Řádkové zobrazení** (`inline`)
+		- Zabírá pouze tolik místa, kolik je potřeba pro jeho obsah.
+		- Více řádkových prvků může být umístěno vedle sebe na stejném řádku.
+	3. **Řádkově-blokové zobrazení** (`inline-block`)
+		- Kombinace vlastností blokových a řádkových prvků.
+		- Prvek je zobrazen jako řádkový prvek, ale může mít nastavené rozměry (šířku a výšku).
+		- Více inline-block prvků může být umístěno vedle sebe na stejném řádku.
 ```CSS
 .box--block {display: block;}
 .box--inline {display: inline;}

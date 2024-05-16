@@ -1,15 +1,13 @@
 ## Dědičnost
 - klíčový pojem
 - pokud **nastavíme elementu vlastnost** na konkrétní hodnotu, přejímají to **i potomci tohoto elementu**
-- např. nastavení barvy textu v nadřazeném elementem na zelenou tak i jeho potomci pokud neřeknou jinak budou mít barvu zelenou
+- např. nastavíme-li barvu textu v nadřazeném elementem na zelenou, tak i jeho potomci budou mít barvu zelenou, pokud neřeknou jinak 
 - ne všechny vlastnosti se dědí
-- pokud vlastnosti dáme hodnotu `inherit` = hodnotu rodiče
-- pokud vlastnosti dáme hodnotu `initial` = defaultní hodnota prohlížeče
+- pokud vlastnosti dáme hodnotu `inherit` $\rightarrow$ bude děděna z rodiče
+- pokud vlastnosti dáme hodnotu `initial` $\rightarrow$ defaultní hodnota prohlížeče
 - vlastnost `all` řídí dědičnost všech vlastností a to i v potomku
 
 > [!example] Vlastnost `all`
-> - analogicky je možné použít klíčové slovo `initial` místo `inherit`
-> 
 >  ```HTML
 >  <p>Stopařův průvodce Galaxií, jehož autorem je Angličan Douglas Adams, je prvním dílem stejnojmenné pentalogie označované jako <em>trilogie v pěti dílech</em>.</p>
 >  ```
@@ -24,6 +22,7 @@
 > /* em zdědí všechny vlastnosti (a jejich nastavení) od svého rodiče */
 > em {all: inherit;}
 > ```
+> - analogicky je možné použít klíčové slovo `initial` místo `inherit`
 
 ## Kaskáda
 - jednotlivé elementy mohou být vybrány různými selektory
@@ -47,7 +46,7 @@ article h2 { color: green; }
 
 ##### Pravidlo kaskády má 2 části:
 1. při kolizi rozhoduje **specifičnost**, přesně řečeno hodnota uvedena v pravidle s více specifickým selektorem má přednost před méně specifickým
-2. při kolizi se shodnou specifičností rozhoduje **pořadí**, přesněji hodnota která byla uvedena **později**
+2. při kolizi se shodnou specifičností rozhoduje **pořadí** (hodnota uvedená **později**)
 
 > [!tip] Pravidlo kaskády je nejdůležitější koncept CSS
 ### Specifičnost
@@ -74,7 +73,7 @@ article h2 { color: green; }
 >Kombinační operátory **+**, **>** a **~** nemají na výpočet specifičnosti vliv
 >
 ### Pořadí
-- pokud CSS pravidla mají stejnou specifičnost, rozhoduje o nastavení vlastnosti pořadí pravidel ve kterém je tato vlastnost uvedena -> aplikují se **později uvedené**
+- pokud CSS pravidla mají stejnou specifičnost, rozhoduje o nastavení vlastnosti pořadí pravidel ve kterém je tato vlastnost uvedena $\rightarrow$ aplikují se **později uvedené**
 
 > [!example] Nastaví se vlastnost `color` na **red**
 > ```HTML
@@ -101,7 +100,7 @@ article h2 { color: green; }
 - **důležitá** hodnota má přednost především
 - uvádíme **`!important`**
 - jakoby specifičnost byla `1 0 a b c`
-- pokud více hodnot používá `!important` -> pravidlo kaskády
+- pokud více hodnot používá `!important` $\rightarrow$ pravidlo kaskády
 ```css
 .title { 
 	color: gold !important;

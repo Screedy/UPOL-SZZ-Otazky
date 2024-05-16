@@ -10,7 +10,7 @@
 - **Google PageSpeed Insights**, **Lighthouse**, **WebAIM**
 - Pro měření kvality webových stránek existuje řada nástrojů, které umožňují analyzovat různé aspekty, jako jsou rychlost načítání, SEO, přístupnost a další
 - Poskytují detailní zprávy a doporučení pro optimalizaci
-- Poskytují interaktivní zpětnou vazbu a často jsou integrovány přímo do vývojářských nástrojů webových prohlížeč
+- Poskytují interaktivní zpětnou vazbu a často jsou integrovány přímo do vývojářských nástrojů webových prohlížečů
 
 ## Metriky pro měření kvality
 - Metriky kvality webové stránky zahrnují **čas načítání**, **počet chyb** na stránce, **SEO skóre**, míru **přístupnosti** a mnoho dalších faktorů

@@ -16,7 +16,7 @@ em { color: gray; }
 .text-color-secondary { color: gold; }
 ```
 
-- pokud je takových úprav více psaní CSS musíme opakovaně měnit již nastavené hodnoty -> **redundantní CSS**.
+- pokud je takových úprav více psaní CSS musíme opakovaně měnit již nastavené hodnoty $\rightarrow$ **redundantní CSS**.
 - řešení pojmenováním elementů pomocí atributu **class**
 
 ```CSS
@@ -76,7 +76,7 @@ body { color: white; }
 	- vyhnout se psaní `!important`
 
 #### Pojmenování
-- pojmenovávání elementů dle jejich vzhledu -> po čase může problematické když chceme změnit design a už to neodpovídá názvu
+- pojmenovávání elementů dle jejich vzhledu $\rightarrow$ po čase může problematické když chceme změnit design a už to neodpovídá názvu
 ```CSS
 /* špatně */
 .button-color-gold {color: gold;}
@@ -89,7 +89,7 @@ body { color: white; }
 /* správně */
 .button-color-primary {color: gold;}
 ```
- - pojmenování dle umístění (`.button-main-page`) taky není vhodné -> element může být použit na jiných místech -> název v jiném místě bude nelogický
+ - pojmenování dle umístění (`.button-main-page`) taky není vhodné $\rightarrow$ element může být použit na jiných místech $\rightarrow$ název v jiném místě bude nelogický
 
 ### CSS metodiky
 - pomohou nám vyhnout se chybám
@@ -144,6 +144,7 @@ body { color: white; }
 >[!success] Správné řešení
 >```HTML
 ><h2 class="title">Lorem Ipsum</h2>
+>
 ><article>
 >	<h2 class="title title-article">dolor sit amet</h2>
 ></article>
