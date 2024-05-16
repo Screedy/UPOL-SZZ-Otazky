@@ -1,34 +1,35 @@
-Funkce vyšších řádů jsou mocným nástrojem v Pythonu, který umožňuje provádět operace na kolekcích dat, jako jsou seznamy, slovníky nebo n-tice, elegantním a efektivním způsobem.
+- Funkce vyšších řádů jsou funkce, které buď přijímají jako argumenty jiné funkce, nebo je vracejí.
+- Python poskytuje několik vestavěných funkcí vyššího řádu, jako jsou `map()`, `filter()`, a také podporuje anonymní funkce pomocí `lambda`.
+- Funkce `reduce()` musí být importována přes modul `functools`
 
 ## Mapování (`map()`)
-Funkce `map()` aplikuje danou funkci na každý prvek v zadané sekvenci (seznamu, n-tici atd.) a vrátí iterátor obsahující výsledky.
+- Funkce `map()` aplikuje danou funkci na každý prvek iterovatelného objektu (seznamu, n-tici, ...) a vrací iterátor s výsledky.
 
-```python
-# Příklad: Vynásobení každého prvku seznamu číslem 2
-numbers = [1, 2, 3, 4, 5]
-doubled = map(lambda x: x * 2, numbers)
-doubled_list = list(doubled)  # [2, 4, 6, 8, 10]
-```
+>[!Example] funkce `map()`
+>```python
+>numbers = [1, 2, 3, 4, 5]
+>squared = map(lambda x: x ** 2, numbers)
+>
+>print(list(squared))  # Výstup: [1, 4, 9, 16, 25]
+>```
 
 ## Filtrování (`filter()`)
-Funkce `filter()` vybírá prvky z dané sekvence, které splňují zadanou podmínku, definovanou funkcí.
-```Python
-# Definice testovací funkce
-def is_odd(num):
-    return num % 2 != 0
+- Funkce `filter()` aplikuje danou funkci na každý prvek iterovatelného objektu a vrací iterátor s prvky, pro které funkce vrátí `True`.
 
-# Seznam čísel
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-# Použití filter() k vyfiltrování lichých čísel
-filtered_numbers = filter(is_odd, numbers)
-
-# Konverze výsledku na seznam a výpis
-print(list(filtered_numbers)) # [1, 3, 5, 7, 9]
-```
+>[!Example] funkce `filter()`
+>```python
+>numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+>even_numbers = filter(lambda x: x % 2 == 0, numbers)
+>
+>print(list(even_numbers))  # Výstup: [2, 4, 6, 8, 10]
+>```
 
 ## Redukce (`reduce()`)
 Funkce `reduce()` postupně aplikuje zadanou binární funkci k prvkům sekvence a vrátí jedinou hodnotu.
+
+- Funkce `reduce()` aplikuje danou funkci kumulativně na prvky iterovatelného objektu, odleva doprava, aby se zredukovaly na jednu hodnotu. 
+- `reduce()` není vestavěná funkce a musí být importována z modulu `functools`.
+
 ```Python
 from functools import reduce
 
@@ -38,13 +39,20 @@ total = reduce(lambda x, y: x + y, numbers)  # 15
 ```
 
 ## Anonymní funkce
-Anonymní funkce, často nazývané lambda funkce, jsou malé funkce, které můžete definovat na místě a použít je tam, kde jsou potřeba.
-```Python
-# Příklad: Lambda funkce pro násobení dvou čísel
-multiply = lambda x, y: x * y
-result = multiply(3, 4)  # 12
+- Anonymní funkce jsou malé, jednorázové funkce, které nemusí být definovány pomocí klíčového slova `def`.
 
-```
+>[!Example] normální vs lambda funkce
+>```python
+># Normální funkce
+>def add(x, y):
+> 	return x + y
+>
+># Lambda funkce
+>add_lambda = lambda x, y: x + y
+>
+>print(add(3, 5))        # Výstup: 8
+>print(add_lambda(3, 5))  # Výstup: 8
+>```
 
 ##### Navigace
 Předchozí:  [[Události v objektovém programování]]
