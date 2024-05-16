@@ -1,22 +1,24 @@
-Rekurze a rekurzivní datové struktury jsou klíčovými koncepty v počítačové vědě a programování. Rekurze je technika, která umožňuje funkci volat sama sebe. Rekurzivní datové struktury jsou takové struktury, které obsahují odkazy na stejný typ struktury.
+- Rekurze je technika v programování, kdy funkce volá sama sebe.
+- Rekurze je velmi užitečná při práci s datovými strukturami, které mají rekurzivní povahu, jako jsou spojové seznamy a stromy.
+- Tyto datové struktury se skládají z podobných menších struktur, což je činí vhodnými pro řešení pomocí rekurze.
 
 ## Rekurze
+- Rekurzivní funkce musí splňovat podmínky:
+	1. **Základní případ** - podmínka, která ukončí rekurzi
+	2. **Rekurzivní případ** - část, kde funkce volá sama sebe
+- Např. faktoriál čísla, Fibonacciho posloupnost, procházení stromů, ...
 
-Rekurze je základní technikou v programování, kde funkce volá sama sebe s menšími částmi vstupu, dokud není dosaženo určitého podmíněného ukončení. Tato technika se obvykle používá k řešení problémů, které lze snadno rozdělit na menší části stejného typu. Příkladem může být faktoriál čísla, Fibonacciho posloupnost, procházení stromů atd.
-
-Příklad rekurzivní funkce pro výpočet faktoriálu:
-
-```Python
-def factorial(n):
-    if n == 0:
-        return 1
-    else:
-        return n * factorial(n - 1)
-```
+>[!Example] Příklad faktoriál
+>```Python
+>def factorial(n):
+> 	if n == 0:
+> 		return 1
+> 	else:
+> 		return n * factorial(n - 1)
+>```
 
 ## Rekurzivní datové struktury
-
-Rekurzivní datové struktury jsou struktury, které obsahují odkazy na objekty stejného typu. Toto umožňuje vytvářet složitější struktury, jako jsou spojové seznamy, stromy, grafy atd.
+- Rekurzivní datové struktury jsou struktury, které obsahují odkazy na objekty stejného typu. Toto umožňuje vytvářet složitější struktury, jako jsou spojové seznamy, stromy, grafy atd.
 
 #### Spojový seznam
 
