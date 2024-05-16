@@ -1,29 +1,31 @@
-## Zapouzdření:
-
- **Zapouzdření** je mechanismus, který umožňuje skrýt určité části třídy a umožnit přístup k nim pouze pomocí definovaného rozhraní. Tím se minimalizuje přímý přístup k datům třídy ze strany vnějšího kódu a snižuje se riziko neoprávněné manipulace s daty.
+## Zapouzdření
+ - **Zapouzdření** je mechanismus, který umožňuje skrýt určité části třídy a umožnit přístup k nim pouze pomocí definovaného rozhraní.
+ - Tím se minimalizuje přímý přístup k datům třídy ze strany vnějšího kódu a snižuje se riziko neoprávněné manipulace s daty.
 
 ```Python
 class Car:
     def __init__(self, brand):
-        self.__brand = brand  # Privátní atribut
-        
-    def get_brand(self):  # Getter pro získání hodnoty privátního atributu
-        return self.__brand
-    
-    def set_brand(self, brand):  # Setter pro nastavení hodnoty privátního atributu
-        self.__brand = brand
+        self._brand = brand  # Privátní atribut
+
+	@property
+    def brand(self):  # Getter pro získání hodnoty privátního atributu
+        return self._brand
+
+	@brand.setter
+    def brand(self, brand):  # Setter pro nastavení hodnoty privátního atributu
+        self._brand = brand
 
 # Použití getteru a setteru
 car = Car("Toyota")
-print(car.get_brand())  # Výstup: Toyota
+print(car.brand)  # Výstup: Toyota
 
-car.set_brand("Honda")
-print(car.get_brand())  # Výstup: Honda
+car.brand = "Honda"
+print(car.brand)  # Výstup: Honda
 ```
 
 ## Polymorfismus:
-
-**Polymorfismus** umožňuje třídě mít více metod se stejným názvem, ale jiným chováním. To umožňuje různým třídám poskytnout různé implementace stejného konceptu.
+- Polymorfismus umožňuje použití stejných metod na objektech různých tříd.
+- Python podporuje polymorfismus prostřednictvím dědičnosti a přepisování metod.
 
 ```Python
 class Animal:
@@ -45,43 +47,27 @@ print(dog.sound())  # Výstup: Woof
 print(cat.sound())  # Výstup: Meow
 ```
 
-
 ## Dědičnost:
-
- **Dědičnost** umožňuje třídě získat atributy a metody jiné třídy. Třída, která dědí, se nazývá potomkem (podtřída), zatímco třída, ze které dědí, se nazývá rodičem (nadřazená třída).
+ - Dědičnost umožňuje vytvoření nové třídy na základě existující třídy. 
+ - Nová třída dědí atributy a metody základní třídy.
+ - Třída, která dědí, se nazývá potomkem, zatímco třída, ze které dědí, se nazývá rodičem.
 
 ```Python
-class Animal:
-    def __init__(self, name):
-        self.name = name
+class ElektrickeAuto(Auto):
+    def __init__(self, znacka, model, rok, kapacita_baterie):
+        super().__init__(znacka, model, rok)  # Volání konstruktoru třídy Auto
+        self.kapacita_baterie = kapacita_baterie
 
-    def sound(self):
-        return "Zvuk zvířete"
+    def popis_baterie(self):
+        return f"Kapacita baterie: {self.kapacita_baterie} kWh"
 
-    def introduce(self):
-        return f"Jmenuji se {self.name}."
+# Vytvoření objektu třídy ElektrickeAuto
+elektro_auto = ElektrickeAuto("Tesla", "Model 3", 2020, 75)
 
-
-class Dog(Animal):
-    def sound(self):
-        return "Haf"
-
-
-class Cat(Animal):
-    def sound(self):
-        return "Mňau"
-
-
-dog = Dog("Buddy")
-print(dog.introduce())  # Výstup: Jmenuji se Buddy.
-
-cat = Cat("Fluffy")
-print(cat.introduce())  # Výstup: Jmenuji se Fluffy.
-
-print(cat.sound())  # Výstup: Mňau
-print(dog.sound())  # Výstup: Haf
+# Volání metod na objektu ElektrickeAuto
+print(elektro_auto.popis())  # Výstup: Tesla Model 3, 2020
+print(elektro_auto.popis_baterie())  # Výstup: Kapacita baterie: 75 kWh
 ```
-
 
 ##### Navigace
 Předchozí:  [[Základy objektového programování - třídy, objekty zasílání zpráv]]
