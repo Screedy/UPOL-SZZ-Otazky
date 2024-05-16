@@ -7,6 +7,8 @@
 - **minimalizuje** náklady na **chybně zadané projekty**
 
 ## Globální architektura
+- zaměřuje se na celkový přehled a centralizované řízení velkých, integrovaných systémů
+- vhodná pro organizace, které potřebují vysokou míru integrace a standardizace na globální úrovni
 - hlavním modelem globální architektury je model **ICT** služeb
 - zaměřuje se na **integraci a koordinaci dat**, **procesů** a **aplikací** napříč různými **geografickými a kulturními hranicemi**
 - typy ICT služeb:
@@ -39,6 +41,13 @@
 >- EDI - Electronic Data Interchange
 >- TPS - Transaction Processing System
 
+>[!Example] Příklad globální architektury
+>- Velká korporace s globálním dosahem, jako je například bankovní instituce, může mít globální informační systém, který spravuje všechny její operace po celém světě. 
+>- Tento systém by zahrnoval:
+>	- Centrální datové úložiště (databáze)
+>	- Jednotné rozhraní pro všechny aplikace
+>	- Globální síť pro komunikaci mezi pobočkami
+>	- Centralizované řízení přístupu a bezpečnosti
 ## Vrstvená architektura
 - běžný designový vzor, který **rozděluje aplikace na oddělené vrstvy**
 - každá **vrstva** poskytuje **konkrétní funkcionalitu**
@@ -54,6 +63,15 @@
 	3. **Datová vrstva**:
 		- zabývá se **ukládáním** a **načítáním dat** z **databází** nebo jiných úložišť
 
+>[!Example] Příklad vrstvené architektury
+>- E-commerce aplikace může mít následující vrstvy:
+>
+>- **Prezentační vrstva**:
+>	- Webová stránka, mobilní aplikace, API pro externí přístup.
+>- **Aplikační vrstva**:
+>	- Obchodní logika, jako je správa produktů, zpracování objednávek, řízení uživatelských účtů.
+>- **Datová vrstva**:
+>	- Databáze obsahující informace o produktech, uživatelích, objednávkách a transakcích.
 ##### Navigace
 Předchozí:  [[Základní pojmy informačních systémů - data, informace, informační systém]]
 Následující: [[Tvorba informačních systémů - softwarový proces, metodika vývoje, analýza systému]]
