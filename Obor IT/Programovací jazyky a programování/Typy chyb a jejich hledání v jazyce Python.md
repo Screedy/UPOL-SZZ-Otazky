@@ -1,7 +1,7 @@
 
 ### 1. Syntax Errors (Chyby syntaxe):
-
-Syntax errors se vyskytují, když Python narazí na neplatnou syntaxi ve vašem kódu. Tyto chyby jsou detekovány již při parsování kódu, protože neodpovídá syntaxi jazyka Python.
+- Syntax errors se vyskytují, když Python narazí na neplatnou syntaxi v kódu. 
+- Tyto chyby jsou detekovány již při parsování kódu, protože neodpovídá syntaxi jazyka Python.
 
 ```Python
 >>> print("Hello, world!"
@@ -9,8 +9,8 @@ SyntaxError: unexpected EOF while parsing
 ```
 
 ### 2. Runtime Errors (Běhové chyby):
-
-Runtime errors (také nazývané výjimky) se vyskytují, když je kód syntakticky správný, ale obsahuje logickou chybu, která brání jeho vykonání. Tyto chyby se objevují až při běhu programu.
+- Runtime errors se vyskytují, když je kód syntakticky správný, ale obsahuje logickou chybu, která brání jeho vykonání. 
+- Tyto chyby se objevují až při běhu programu.
 
 ```Python
 >>> x = 10
@@ -20,8 +20,9 @@ ZeroDivisionError: division by zero
 ```
 
 ### 3. Logické chyby:
-
-Logické chyby jsou obtížnější na identifikaci, protože program s nimi stále funguje, ale ne tak, jak je zamýšleno. Tyto chyby se vyskytují, když je algoritmus nesprávně navržen nebo implementován.
+- Logické chyby jsou obtížnější na identifikaci, protože program s nimi stále funguje, ale ne tak, jak je zamýšleno. 
+- Tyto chyby se vyskytují, když je algoritmus nesprávně navržen nebo implementován.
+- Pro jejich nalezení musíme použít testování a ladění (debugging)
 
 ```Python
 def factorial(n):
@@ -35,8 +36,7 @@ print(factorial(-1))  # Logická chyba: Factorial of negative number
 ```
 
 ### 4. IndexError:
-
-IndexError nastává, když se pokoušíte přistupovat k prvkům v seznamu, n-tici nebo řetězci pomocí indexu, který je mimo rozsah.
+- IndexError nastává, když se pokoušíte přistupovat k prvkům v seznamu, n-tici nebo řetězci pomocí indexu, který je mimo rozsah.
 
 ```Python
 >>> my_list = [1, 2, 3]
@@ -45,8 +45,7 @@ IndexError: list index out of range
 ```
 
 ### 5. KeyError:
-
-KeyError se objeví, když se pokusíte přistoupit k prvkům slovníku pomocí klíče, který ve slovníku neexistuje.
+- KeyError se objeví, když se pokusíte přistoupit k prvkům slovníku pomocí klíče, který ve slovníku neexistuje.
 
 ```Python
 >>> my_dict = {'a': 1, 'b': 2}
@@ -55,8 +54,7 @@ KeyError: 'c'
 ```
 
 ### 6. AttributeError:
-
-AttributeError nastává, když se pokusíte přistoupit k atributu objektu, který tento objekt neobsahuje.
+- AttributeError nastává, když se pokusíte přistoupit k atributu objektu, který tento objekt neobsahuje.
 
 ```Python
 >>> my_list = [1, 2, 3]
@@ -65,8 +63,7 @@ AttributeError: 'list' object has no attribute 'append'
 ```
 
 ### 7. NameError:
-
-NameError se objeví, když se používá nedefinovaná proměnná.
+- NameError se objeví, když se používá nedefinovaná proměnná.
 
 ```Python
 >>> print(my_variable)
@@ -74,8 +71,7 @@ NameError: name 'my_variable' is not defined
 ```
 
 ### 8. TypeErrors:
-
-TypeError nastává, když operace je provedena na objektu nepodporujícím danou operaci.
+- TypeError nastává, když operace je provedena na objektu nepodporujícím danou operaci.
 
 ```Python
 >>> x = "5"
@@ -85,8 +81,7 @@ TypeError: can only concatenate str (not "int") to str
 ```
 
 ### 9. KeyboardInterrupt:
-
-KeyboardInterrupt se vyskytuje, když uživatel přeruší běh programu stiskem klávesy, obvykle Ctrl + C.
+- KeyboardInterrupt se vyskytuje, když uživatel přeruší běh programu stiskem klávesy, obvykle Ctrl + C.
 
 ```Python
 >>> while True:
