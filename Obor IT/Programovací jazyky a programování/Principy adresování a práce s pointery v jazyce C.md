@@ -1,92 +1,101 @@
-Principy adresování a práce s ukazateli (pointery) jsou základními koncepty v jazyce C. Ukazatele umožňují pracovat s pamětí přímo a poskytují možnost dynamické alokace paměti a efektivní manipulace s daty. Zde jsou klíčové principy adresování a práce s ukazateli v jazyce C:
+- Adresování a práce s pointery (ukazateli) jsou klíčové aspekty programování v jazyce C. 
+- Pointery umožňují přímý přístup a manipulaci s paměťovými adresami, což zvyšuje výkon a flexibilitu programů. 
 
-## **Adresování paměti**:
-
-- V jazyce C můžete pracovat s pamětí pomocí adres. Každá proměnná nebo objekt v paměti má svou adresu, což je číselná hodnota, která určuje umístění v paměti.
-
-- Adresu proměnné získáte pomocí operátoru `&`. Například `&variable` vrátí adresu proměnné `variable`.
-
-## **Ukazatele (pointery)**:
-
-- Ukazatel je proměnná, která obsahuje adresu jiné proměnné nebo objektu v paměti.
-
-- Definice ukazatele vypadá takto: `type *pointer;`, kde `type` je typ dat, na který ukazatel odkazuje.
-
-- Ukazatel se inicializuje přiřazením adresy existující proměnné: `int *ptr = &variable;`
-
-## **Dereferencování ukazatele**:
-
-- Dereferencování ukazatele znamená přístup k hodnotě, na kterou ukazuje.
-
-- Dereferencování se provádí pomocí operátoru `*`. Například `*ptr` vrátí hodnotu, na kterou ukazuje ukazatel `ptr`.
-
-## **Operace s ukazateli**:
-
-- Ukazatele mohou být inkrementovány nebo dekrementovány, což se vztahuje k přesunutí adresy v paměti o počet bajtů odpovídající velikosti datového typu, na který ukazatel ukazuje.
-
-- Aritmetika ukazatelů je velmi užitečná pro práci s poli a dynamickou alokací paměti.
-
-## **Dynamická alokace paměti**:
-
-- Ukazatele jsou často používány pro dynamickou alokaci paměti za běhu programu pomocí funkcí jako `malloc()`, `calloc()` a `realloc()`.
-
-- Například: `int *array = (int*)malloc(n * sizeof(int));`
-
-## **Uvolňování alokované paměti**:
-
-- Po použití alokované paměti je důležité ji uvolnit pomocí funkce `free()`, aby nedocházelo k paměťovým únikům.
-
-- Například: `free(array);`
-
-## **Vztah mezi polem a ukazatelem**:
-
-- Pole v jazyce C je ve skutečnosti ukazatel na jeho první prvek.
-
-- Pokud máte pole `int array[5];`, můžete získat ukazatel na jeho první prvek pomocí `int *ptr = array;`.
-
-Příklad práce s pointerem:
+## Pointery a jejich deklarace
+- Pointer je proměnná, která obsahuje adresu jiné proměnné.
+- definice: `type *pointer;`
 ```C
-#include <stdio.h>
+int *ptr;  // Pointer na integer
+char *cptr;  // Pointer na char
+```
 
-int main() {
-    int variable = 10; // Deklarace a inicializace proměnné
-    
-    int *ptr; // Deklarace ukazatele
-    ptr = &variable; // Přiřazení adresy proměnné ukazateli
-    
-    printf("Hodnota proměnné: %d\n", variable); // Výpis hodnoty proměnné
-    printf("Adresa proměnné: %p\n", (void*)&variable); // Výpis adresy proměnné
-    printf("Hodnota ukazatele: %d\n", *ptr); // Výpis hodnoty, na kterou ukazuje ukazatel
-    printf("Adresa ukazatele: %p\n", (void*)ptr); // Výpis adresy, kam ukazatel ukazuje
-    
-    return 0;
+## Adresování a operátor adresy
+- Operátor `&` se používá k získání adresy proměnné.
+- Každá proměnná nebo objekt v paměti má svou adresu, což je číselná hodnota, která určuje umístění v paměti.
+```C
+int a = 10;
+int *ptr = &a;  // ptr nyní obsahuje adresu proměnné a
+```
+
+## Dereferencování pointeru
+- Operátor `*` se používá k přístupu k hodnotě, na kterou pointer ukazuje.
+```C
+int a = 10;
+int *ptr = &a;
+int b = *ptr;  // b nyní obsahuje hodnotu 10
+```
+
+## Aritmetika pointerů
+- Pointery podporují **aritmetiku**, což umožňuje **posun ukazatele** na další prvky pole.
+- *Since the variable "y" stores 1000 (the address of "x"), we expect it to become 1001 because of the "++" operator, but it increments by 4, which is the size of "int" variable.*
+```C
+int x = 10; // created at address 1000 
+
+// "y" is created at address 2000 
+// it holds 1000 (address of "x") 
+int *y = &x ; 
+y++; // y becomes 1004
+```
+- U pole díky tomu můžeme hned vidět následující prvek:
+```C
+int arr[5] = {1, 2, 3, 4, 5};
+int *ptr = arr;  // ptr ukazuje na začátek pole
+ptr++;  // ptr nyní ukazuje na druhý prvek pole
+int val = *ptr;  // val nyní obsahuje hodnotu 2
+```
+
+## Pointery na pointery
+- Pointer může také ukazovat na jiný pointer, což umožňuje vytváření složitých datových struktur, jako jsou dynamicky alokované víceúrovňové pole nebo seznamy.
+```C
+int a = 10;
+int *ptr = &a;
+int **pptr = &ptr;  // Pointer na pointer
+int val = **pptr;  // val nyní obsahuje hodnotu 10
+```
+
+## Pointery a dynamická alokace paměti
+- Pointery se často používají pro práci s dynamicky alokovanou pamětí pomocí funkcí jako `malloc()`, `calloc()`, `realloc()` a `free()`.
+```C
+int *ptr = (int *)malloc(5 * sizeof(int));  // Alokace pole o 5 prvcích
+if (ptr == NULL) {
+    // Zpracování chyby při alokaci
+}
+for (int i = 0; i < 5; i++) {
+    ptr[i] = i * 2;  // Inicializace pole
+}
+free(ptr);  // Uvolnění paměti
+ptr = NULL;  // Prevence dereferencování neplatného pointeru
+```
+
+## Pointery a funkce
+- Pointery mohou také ukazovat na funkce, což umožňuje dynamické volání funkcí.
+```C
+void func() {
+    printf("Hello, World!\n");
+}
+void (*fptr)() = &func;  // Pointer na funkci
+(*fptr)();  // Volání funkce přes pointer
+```
+
+
+## Vztah mezi polem a ukazatelem
+- Pointery a pole jsou úzce spjaty. 
+- Pole je ve skutečnosti konstantní pointer na první prvek pole.
+```C
+int arr[5] = {1, 2, 3, 4, 5};
+int *ptr = arr;  // ekvivalentní k &arr[0]
+for (int i = 0; i < 5; i++) {
+    printf("%d ", *(ptr + i));  // Přístup k prvkům pole
 }
 ```
 
-Příklad práce s pointerem a polem:
-```C
-#include <stdio.h>
-
-int main() {
-    int array[] = {10, 20, 30, 40, 50}; // Deklarace a inicializace pole
-
-    // Deklarace ukazatele na int
-    int *ptr;
-
-    // Ukazatel nastavíme na začátek pole
-    ptr = array;
-
-    // Výpis prvků pole pomocí ukazatele
-    printf("Prvky pole: ");
-    for (int i = 0; i < 5; i++) {
-        printf("%d ", *ptr); // Výpis hodnoty, na kterou ukazuje ukazatel
-        ptr++; // Posuneme ukazatel na další prvek v poli
-    }
-    printf("\n");
-
-    return 0;
-}
-```
+## Bezpečnost práce s pointery
+- Bezpečnost práce s pointery je kritická, protože chyby mohou vést k neplatným přístupům do paměti, což může způsobit pád programu nebo bezpečnostní zranitelnosti.
+- **Zásady bezpečnosti:**
+	- Nikdy nedereferencujte neplatný nebo `NULL` pointer.
+	- Vyhněte se přístupu mimo hranice pole.
+	- Po uvolnění paměti nastavte pointer na `NULL`.
+	- Pravidelně používejte nástroje pro detekci chyb paměti, jako je Valgrind.
 
 ##### Navigace
 Předchozí:  [[Principy správy paměti v jazyce C]]
