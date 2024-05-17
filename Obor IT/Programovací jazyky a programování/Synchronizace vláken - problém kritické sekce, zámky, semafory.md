@@ -1,78 +1,87 @@
-## Problém kritické sekce:
+- Synchronizace vláken je klíčový aspekt programování v prostředí, kde **více vláken přistupuje** ke sdíleným **zdrojům**. 
+- Bez správné synchronizace mohou nastat problémy, jako je **nekonzistence dat** a **chyba souběhu** (race conditions). 
+- Pro řešení těchto problémů se používají různé **synchronizační mechanismy**, jako jsou **kritické sekce**, **zámky** (locks) a **semafory**.
 
-Problém kritické sekce je situace v paralelním programování, kdy více vláken soutěží o přístup k sdíleným prostředkům nebo datům, což může vést k nekonzistentním stavům dat nebo chybám v aplikaci. Nekonzistence může vzniknout, pokud jedno vlákno čte data, která jsou zároveň změněna jiným vláknem.
-### 1. Sdílené prostředky:
+## Problém kritické sekce
+- Kritická sekce je část kódu, kde **přístup** k **sdílenému** zdroji musí být **omezen** tak, aby k němu v **daném čase** mohlo **přistupovat pouze jedno vlákno**. 
+- Pokud více vláken vstoupí do kritické sekce současně, může dojít k **nekonzistenci dat**.
+ 
+### Požadavky na kritickou sekci
+- **vzájemné vyloučení** - nejvýše jeden proces v kritické sekci
+- **absence zbytečného čekání** - není-li žádný proces v kritické sekci a proces do ní chce vstoupit, není mu bráněno
+- **zaručený vstup** - pokud se proces snaží vstoupit do kritické sekce, jednou musí uspět
 
-- **Sdílené prostředky** jsou data nebo zdroje, ke kterým více vláken má přístup. Může se jednat o sdílenou paměť, soubory, databáze nebo další zdroje, ke kterým mohou vlákna přistupovat paralelně.
-### 2. Neatomické operace:
+### Řešení problému kritické sekce
+- Řešení problému kritické sekce spočívá v zajištění toho, že pouze jedno vlákno má přístup ke sdílenému zdroji nebo kritické sekci v daném čase.
+- V Pythonu lze tento problém řešit pomocí synchronizačních mechanismů, jako jsou zámky (locks) a semafory.
+- Správným použitím těchto synchronizačních mechanismů lze zajistit, že kritická sekce bude bezpečně chráněna před souběžným přístupem více vláken, čímž se předejde nekonzistenci dat a dalším problémům spojeným s paralelním zpracováním.
 
-- **Neatomické operace** jsou operace, které nelze provést atomicky, tj. nelze je provést jedním instrukčním cyklem CPU. Typické příklady zahrnují čtení a zápis do paměti nebo manipulaci se sdílenými daty.
-### 3. Riziko kritické sekce:
+## Zámky
+- Zámky jsou synchronizační mechanismy, které umožňují exkluzivní přístup k určitému zdroji nebo části kódu. 
+- Používají se k minimalizaci problémů kritické sekce a zabraňují soutěžení mezi vlákny o sdílené zdroje. 
+- Zámky mohou být buď jednoduché (binární), které mají dvě stavy (otevřený/zavřený), nebo mohou být složitější (například zámky s podporou priorit).
+- Python poskytuje zámky prostřednictvím modulu `threading`.
 
-- **Soutěžení o zdroje**: Kritická sekce vzniká, když více vláken soutěží o přístup k sdílenému zdroji. Pokud jedno vlákno provádí operaci nad sdílenými daty a zároveň je tato data čte nebo mění jiné vlákno, může dojít k nekonzistenci dat.
-    
-- **Nekonzistence dat**: Nekonzistence dat může zahrnovat nekonzistentní stavy, poškozené struktury dat nebo jiné neočekávané chování aplikace.
+>[!Example] příklad použití zámku
+>```Python
+>import threading
+>
+>shared_resource = 0
+>lock = threading.Lock()
+>
+>def increment():
+> 	global shared_resource
+> 	for _ in range(100000):
+> 		lock.acquire()  # Získání zámku
+> 		shared_resource += 1
+> 		lock.release()  # Uvolnění zámku
+>
+>thread1 = threading.Thread(target=increment)
+>thread2 = threading.Thread(target=increment)
+>
+>thread1.start()
+>thread2.start()
+>
+>thread1.join()
+>thread2.join()
+>
+>print(shared_resource)
+>```
+>- V tomto příkladu zámek `lock` zajišťuje, že pouze jedno vlákno může získat exkluzivní přístup k inkrementaci sdílené proměnné `shared_resource` v každém okamžiku. 
 
-### 4. Řešení problému kritické sekce:
+>[!Example] alternativní použití zámku
+>```python
+>def increment():
+>	global shared_resource
+>	for _ in range(100000):
+>		with lock:               # získání zámku, kritická sekce v 
+>			shared_resource += 1 # indentaci a automatické uvolnění
+>```
 
-- **Synchronizační mechanismy**: Problém kritické sekce lze řešit pomocí synchronizačních mechanismů, jako jsou zámky, semafory nebo podmínkové proměnné. Tyto mechanismy umožňují regulovat přístup k sdíleným prostředkům a minimalizovat soutěžení o ně.
-    
-- **Kritické sekce**: Kritické sekce jsou části kódu, ve kterých mohou vlákna získat exkluzivní přístup k sdíleným zdrojům pomocí synchronizačních mechanismů. Během této kritické sekce jsou prováděny operace nad sdílenými daty, což minimalizuje riziko nekonzistence dat.
-    
-- **Atomické operace**: Některé programovací jazyky a platformy poskytují podporu pro atomické operace, které zajistí, že operace bude provedena jako jedna nedělitelná jednotka, což eliminuje riziko kritické sekce.
+## Semafor
+- Semafor je synchronizační abstrakce, která udržuje interní počítadlo a umožňuje omezit počet vláken, která mohou současně získat přístup k sdíleným prostředkům. 
+- Semafor může mít počáteční hodnotu větší nebo rovnu nule. 
+- Pokud je počet vláken, která žádají o zámek, větší než hodnota semaforu, vlákna jsou umístěna do fronty čekajících a jsou probuzena, jakmile je semafor uvolněn.
 
-## Zámky:
-
-Zámky jsou synchronizační mechanismy, které umožňují exkluzivní přístup k určitému zdroji nebo části kódu. Používají se k minimalizaci problémů kritické sekce a zabraňují soutěžení mezi vlákny o sdílené zdroje. Zámky mohou být buď jednoduché (binární), které mají dvě stavy (otevřený/zavřený), nebo mohou být složitější (například zámky s podporou priorit).
-
-```Python
-import threading
-
-shared_resource = 0
-lock = threading.Lock()
-
-def increment():
-    global shared_resource
-    for _ in range(100000):
-        lock.acquire()  # Získání zámku
-        shared_resource += 1
-        lock.release()  # Uvolnění zámku
-
-threads = []
-for _ in range(10):
-    thread = threading.Thread(target=increment)
-    threads.append(thread)
-    thread.start()
-
-for thread in threads:
-    thread.join()
-
-print("Výsledek:", shared_resource)
-```
-
-V tomto příkladu zámek `lock` zajišťuje, že pouze jedno vlákno může získat exkluzivní přístup k inkrementaci sdílené proměnné `shared_resource` v každém okamžiku. Tím se minimalizuje problém kritické sekce a zabraňuje se nekonzistentním stavům dat.
-
-## Semafor:
-
-Semafor je synchronizační abstrakce, která udržuje interní počítadlo a umožňuje omezit počet vláken, která mohou současně získat přístup k sdíleným prostředkům. Semafor může mít počáteční hodnotu větší nebo rovnu nule. Pokud je počet vláken, která žádají o zámek, větší než hodnota semaforu, vlákna jsou umístěna do fronty čekajících a jsou probuzena, jakmile je semafor uvolněn.
-
-```Python
-import threading
-import time
-
-semaphore = threading.Semaphore(5)  # Vytvoření semaforu s maximálním počtem 5 povolených vláken
-
-def worker():
-    with semaphore:
-        print("Vlákno", threading.current_thread().name, "získalo povolení")
-        # Simulace dlouhodobého úkolu
-        time.sleep(2)
-        print("Vlákno", threading.current_thread().name, "končí")
-
-for i in range(10):
-    t = threading.Thread(target=worker)  # Spuštění vlákna s funkcí worker
-    t.start()
-```
+>[!Example] příklad použití zámku
+>```Python
+>import threading
+>import time
+>
+>semaphore = threading.Semaphore(5)  # Vytvoření semaforu s maximálním 
+>								    # počtem 5 povolených vláken
+>def worker():
+> 	with semaphore:
+> 		print("Vlákno", threading.current_thread().name, "získalo povolení")
+> 		# Simulace dlouhodobého úkolu
+> 		time.sleep(2)
+> 		print("Vlákno", threading.current_thread().name, "končí")
+>
+>for i in range(10):
+> 	t = threading.Thread(target=worker)  # Spuštění vlákna s funkcí worker
+> 	t.start()
+>```
+>- opět místo `with semaphore` můžeme použít funkce `semaphore.acquire()` a `semaphore.release()`
 
 ##### Navigace
 Předchozí:  [[Iterátory a generátory]]
