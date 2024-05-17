@@ -1,100 +1,94 @@
-### 1. Syntax Errors (Chyby syntaxe):
+### Syntaktické chyby (Syntax Errors)
+- Syntaktické chyby se vyskytují, když kód neodpovídá gramatickým pravidlům jazyka C. 
+- Syntaktické chyby jsou odhaleny kompilátorem, který poskytne chybová hlášení s uvedením řádku a typu chyby.
 
-Syntax errors se vyskytují, když je v kódu nalezena neplatná syntaxe, kterou překladač nemůže pochopit. Syntax errors jsou detekovány při překladu kódu pomocí kompilátoru. Jsou zpravidla doprovázeny výzvou, která ukazuje, kde byla nalezena chyba v kódu.
+>[!Example] Příklady syntaktických chyb
+>- Chybějící středník:
+>```C
+>int a = 5  // Chybějící středník
+>```
+>- Nesprávně uzavřený blok kódu:
+>```C
+>if (a > 5) {
+> 	printf("a is greater than 5");
+>// Chybějící uzavírací závorka
+>```
 
-```C
-#include <stdio.h>
+## Sémantické chyby (Semantic Errors)
+- Sémantické chyby vznikají, když kód sice syntakticky správný, ale logicky chybný. 
+- Kompilátor je nedokáže detekovat, protože neporušují pravidla jazyka.
+- Detekce: Tyto chyby se často projeví během běhu programu a vyžadují testování a ladění.
 
-int main() {
-    printf("Hello, world!"  // Chybějící uzavírací závorka
-    return 0;
-}
-```
+>[!Example] Příklady sémantických chyb
+>- Nesprávná inicializace proměnné:
+>```C
+>int a = 5;
+>int b = a / 0;  // Dělení nulou
+>```
+>- Použití nesprávného operátoru:
+>```C
+>if (a = 5) {  // Místo '==' je použito '='
+> 	printf("a is equal to 5");
+>}
+>```
 
-### 2. Runtime Errors (Běhové chyby):
+## Chyby během běhu programu (Runtime Errors)
+- Chyby během běhu se projeví při spuštění programu. 
+- Může jít o chyby, které způsobí pád programu nebo nepředvídatelné chování.
+- Detekce: Použití ladicích nástrojů jako GDB nebo Valgrind, které mohou pomoci identifikovat místo a příčinu chyby.
 
-Runtime errors se objevují, když program běží a narazí na chybu, která se neobjevila během překladu, například dělení nulou nebo přístup k neplatné paměti.
+>[!Example] Příklady běhových chyb
+>```C
+>int arr[5];
+>arr[10] = 3;  // Přístup mimo rozsah pole
+>```
+>- Nebo
+>```C
+>int *ptr = NULL;
+>int val = *ptr;  // Dereferencování NULL pointeru
+>```
 
-```C
-#include <stdio.h>
+## Logické chyby (Logic Errors)
+- Logické chyby vznikají, když kód neprovádí zamýšlenou činnost. 
+- Program běží bez chyb, ale výsledky nejsou správné.
+- Detekce: Pečlivé testování a kontrola výsledků, někdy použití **unit testů** nebo jiných testovacích technik.
 
-int main() {
-    int x = 10;
-    int y = 0;
-    int result = x / y;  // Dělení nulou
-    return 0;
-}
-```
+>[!Example] Příklady logických chyb
+>- Nesprávný algoritmus:
+>```C
+>int sum = 0;
+>for (int i = 1; i <= 10; i++) {
+> 	sum -= i;  // Místo 'sum += i'
+>}
+>```
 
-### 3. Logic Errors (Logické chyby):
+## Chyby ve správě paměti (Memory Management Errors)
+- Chyby ve správě paměti zahrnují úniky paměti, dvojité uvolnění paměti a přístupy k neplatným paměťovým oblastem.
+- Detekce: Nástroje jako Valgrind mohou pomoci odhalit chyby v alokaci a uvolňování paměti.
 
-Logic errors jsou chyby v implementaci, kdy kód produkuje nežádoucí výsledky kvůli chybnému algoritmu nebo nesprávnému výpočtu.
+>[!Example] Příklad chyb ve správě paměti
+>- Únik paměti:
+>```C
+>int *ptr = (int *)malloc(sizeof(int) * 10);
+>// Nedochází k volání free(ptr);
+>```
+>- Dvojité uvolnění paměti:
+>```C
+>free(ptr);
+>free(ptr);  // Dvojité uvolnění
+>```
 
-```C
-#include <stdio.h>
+## Chyby typové kompatibility (Type Compatibility Errors)
+- Tyto chyby se vyskytnou, když se pokusíme provést operaci s nesprávným typem dat.
+- Kompilátor často upozorní na potenciální problémy, ale některé chyby mohou být detekovány až během běhu programu.
 
-int factorial(int n) {
-    int result = 1;
-    for (int i = 1; i <= n; i++) {
-        result *= i;
-    }
-    return result;
-}
-
-int main() {
-    printf("%d\n", factorial(5));  // Správný výstup: 120
-    printf("%d\n", factorial(-1));  // Logická chyba: Factorial of negative number
-    return 0;
-}
-```
-
-### 4. Memory Errors (Chyby paměti):
-
-Chyby paměti jsou častým problémem v jazyce C a mohou mít závažné důsledky. Některé z běžných chyb paměti zahrnují:
-
-- **Segmentation Fault (Přetečení paměti):** Vzniká, když program přistupuje k paměti, ke které nemá oprávnění. To může nastat při pokusu o čtení nebo zápis do neplatné paměti.
-
-```C
-#include <stdio.h>
-
-int main() {
-    int *ptr = NULL;
-    *ptr = 10;  // Přístup k neinicializovanému ukazateli
-    return 0;
-}
-```
-
-- **Memory Leaks (Úniky paměti):** Vznikají, když program dynamicky alokuje paměť, ale neuvolňuje ji správně, což vede ke ztrátě dostupné paměti a může způsobit, že program zpomalí nebo spadne.
-
-```C
-#include <stdlib.h>
-
-int main() {
-    while (1) {
-        int *ptr = malloc(100 * sizeof(int));  // Neuvolněná paměť
-    }
-    return 0;
-}
-```
-
-### 5. Undefined Behavior (Nedefinované chování):
-
-Nedefinované chování je situace, kdy standard jazyka C nedefinuje výsledek určité operace. To může vést k neočekávanému chování programu, což je obtížné identifikovat a debugovat.
-
-```C
-#include <stdio.h>
-
-int main() {
-    int a = 10;
-    int b = 0;
-    int result = a / b;  // Nedefinované chování - dělení nulou
-    printf("%d\n", result);
-    return 0;
-}
-```
+>[!Example] Příklad chyby typové kompatibility
+>```C
+>float *fptr;
+>int *iptr = (int *)fptr;  // Nesprávné přetypování bez explicitního záměru
+>```
 
 ## Hledání chyb:
-
 - **Valgrind:** Nástroj Valgrind poskytuje detekci memory leaks a dalších chyb paměti pomocí nástrojů jako Memcheck.
 - **Statická analýza:** Některé nástroje pro statickou analýzu kódu mohou identifikovat potenciální chyby paměti a nedefinované chování v kódu.
 - **Manuální inspekce kódu:** Pečlivé prohlížení kódu s ohledem na správu paměti a manipulaci s ukazateli může odhalit chyby, jako jsou memory leaks a segmentační chyby.
