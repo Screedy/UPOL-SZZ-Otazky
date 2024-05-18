@@ -256,9 +256,9 @@
 >![[MacBook-2024-03-10-000820.png| 150]]
 
 ### Determinanty matic ve speciálních tvarech
-- Pro každou matici $A \in M_{m \times n}(T)$, kde $T$ je číselné těleso, platí $det(A^{T}) = det(A)$.
-- Má-li matice $A \in M_{m \times n}(T)$ v některém řádku (sloupci) samé nuly, platí $det(A) = 0$.
-- Má-li matice $A \in M_{m \times n}(T)$ pod (nad) hlavní diagonálou samé nuly, platí $det(A) = \prod_{i=1}^{n} a_{ii} = a_{11} \cdot a_{22} \cdot ... \cdot a_{nn}$
+- Pro každou matici $A \in M_{n}(T)$, kde $T$ je číselné těleso, platí $det(A^{T}) = det(A)$.
+- Má-li matice $A \in M_{n}(T)$ v některém řádku (sloupci) samé nuly, platí $det(A) = 0$.
+- Má-li matice $A \in M_{n}(T)$ pod (nad) hlavní diagonálou samé nuly, platí $det(A) = \prod_{i=1}^{n} a_{ii} = a_{11} \cdot a_{22} \cdot ... \cdot a_{nn}$
 - Vznikne-li matice $B \in M_{n}(T)$ dva stejné řádky (sloupce), pak $det(A) = 0$.
 
 ### Submatice, subdeterminant
