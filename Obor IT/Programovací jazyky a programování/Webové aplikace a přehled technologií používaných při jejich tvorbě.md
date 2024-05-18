@@ -1,54 +1,80 @@
-V dnešní době je již těžké vymezit co je webová aplikace a co ještě ne. Původně byly www stránky statické a za webovou aplikaci se označovala jakákoliv stránka obsahující script. Dnes scripty používají snad všechny webové stránky. Proto je těžké určit hranici. Většina webových aplikací ale využívá kromě webového serveru ještě aplikační a navíc například databázi. Obecně můžeme říct, že webová aplikace označuje webové stránky, kde je ve větší míře používán programový kód na straně klienta nebo serveru.
+- V dnešní době je již těžké vymezit co je webová aplikace a co ještě ne. 
+- Původně byly www stránky statické a za webovou aplikaci se označovala j**akákoliv stránka obsahující script**. Dnes scripty používají **snad všechny** webové stránky. 
+	- Proto je těžké určit hranici. 
+- Většina webových aplikací ale využívá **kromě webového serveru** ještě **aplikační** a navíc například **databázi**. 
+- Obecně můžeme říct, že webová aplikace označuje webové stránky, kde je **ve větší míře používán programový kód** na straně klienta nebo serveru.
 
-V dnešní době nemají ale webové aplikace podobu pouze dynamické webové stránky, ale mohou být realizovány jako mobilní nebo desktopové aplikace. Poněkud přesněji je tedy možné webovou aplikaci vymezit jako aplikaci, která potřebuje pro neomezené fungování přístup k Internetu nebo jádro prohlížeče.
+---
 
-Statická web stránka:
+- V dnešní době nemají ale webové aplikace podobu pouze dynamické webové stránky, ale mohou být realizovány jako **mobilní nebo desktopové aplikace**. 
+- Poněkud přesněji je tedy možné webovou aplikaci vymezit jako aplikaci, která potřebuje pro neomezené fungování přístup k Internetu nebo jádro prohlížeče.
 
-![[Statiická web stránka.png]]
+>[!Example] Statická webová stránka
+>![[Statiická web stránka.png]]
 
-Webová aplikace:
+>[!Example] Webová aplikace
+>![[Webová aplikace.png]]
 
-![[Webová aplikace.png]]
+>[!success] Výhody webových aplikací
+> - Dostupně po internetu - rychlé aktualizace, možnost vynucení aktualizace
+> - Dobrá škálovatelnost - možno využít výkonu serverů a není omezena na zdroje zařízení
+> - Multiplatformnost
 
-Výhody web aplikací:
+>[!fail] Nevýhody
+>- Bezpečnost - náročné na zajištění kvůli vzdálenému přístupu
+>- Technologicky náročné - velké množství technologií, které je třeba ovládat
 
- - Dostupně po internetu - rychlé aktualizace, možnost vynucení aktualizace
- - Dobrá škálovatelnost - možno využít výkonu serverů a není omezena na zdroje zařízení
- - Multiplatformnost
+## Výčet technologií
 
-Nevýhody:
+### Front-end technologie
+- Front-end technologie se zaměřují na vývoj části webové aplikace, se kterou interagují uživatelé.
+- **HTML (HyperText Markup Language)**
+	- Jazyk pro vytváření struktury webových stránek.
+	- Umožňuje definovat různé prvky jako text, obrázky, odkazy, formuláře atd.
+- **CSS (Cascading Style Sheets)**
+	- Používá se pro stylování HTML dokumentů.
+	- Umožňuje definovat layout, barvy, písma a další vizuální aspekty.
+- **JavaScript**
+	- Skriptovací jazyk pro vytváření interaktivních webových stránek.
+	- Umožňuje manipulaci s DOM (Document Object Model), provádění asynchronních operací (AJAX) a mnoho dalšího.
+- **Front-end frameworky a knihovny**
+	- **React** - Knihovna pro budování uživatelských rozhraní
+	- **Angular** - Framework pro vývoj webových aplikací
+	- **Vue.js** - Progresivní framework pro budování uživatelských rozhraní
 
-- Bezpečnost - náročné na zajištění kvůli vzdálenému přístupu
-- Technologicky náročné - velké množství technologií, které je třeba ovládat
+### Back-end technologie
+- Back-end technologie se zaměřují na serverovou část webové aplikace, která zajišťuje logiku, databázové operace, autentizaci a další funkcionality.
+- **Programovací jazyky**
+	- **JavaScript (Node.js)** - JavaScript běžící na serveru, umožňuje vytvářet škálovatelné a rychlé aplikace.
+	- **Python (Django, Flask)**
+	- **PHP (Laravel)**
+	- **Ruby (Ruby or Rails)**
+- **Webové servery**
+	- **Apache**
+	- **Nginx**
+- **Databáze**
+	- **Relační databáze (SQL)** - MySQL, PostgreSQL, ...
+	- **NoSQL databáze** - MongoDB, Redis, ...
 
-### Výčet technologií
+### DevOps a nasazení
+- DevOps praktiky a nástroje jsou důležité pro automatizaci, monitorování a správu aplikací po nasazení.
+- **Kontinuální integrace a kontinuální nasazení (CI/CD)**
+	- **Jenkins** - Automatizační server pro CI/CD
+	- **GitLab CI/CD** - Integrované CI/CD v GitLab platformě
+- **Kontejnerizace a orchestrace**
+	- **Docker** - Platforma pro vytváření, nasazení a správu kontejnerů.
+	- **Kubernetes** - Systém pro orchestrace kontejnerizovaných aplikací, umožňuje automatizaci nasazení, škálování a správu kontejnerů.
+- **Cloudové služby**
+	- **AWS (Amazon Web Services)** - Široká škála služeb pro hostování, databáze, úložiště a další.
+	- **Microsoft Azure**
+	- **GCP (Google Cloud Platform)**
 
-Dle chatGPT:
-
-1. **HTML (HyperText Markup Language)**: Základní stavební kámen webových stránek, který definuje strukturu obsahu.
-
-2. **CSS (Cascading Style Sheets)**: Používá se k definování vizuálního vzhledu webových stránek, včetně stylů, barev a rozložení.
-
-3. **JavaScript**: Skriptovací jazyk používaný pro interaktivitu webových stránek. S nástupem moderních frameworků a knihoven se stal klíčovým pro vytváření dynamických aplikací.
-
-4. **Front-end Frameworks**: Frameworky jako React.js, Angular, Vue.js poskytují strukturovaný způsob vytváření uživatelského rozhraní a usnadňují správu stavu aplikace.
-
-5. **Back-end Frameworks**: Frameworky jako Express.js (pro Node.js), Django (Python), Ruby on Rails (Ruby) poskytují strukturovaný způsob tvorby serverové části webových aplikací a správu datové logiky.
-
-6. **Databázové systémy**: SQL (Structured Query Language) databáze jako MySQL, PostgreSQL, nebo NoSQL databáze jako MongoDB, Firebase se používají pro ukládání dat.
-
-7. **APIs (Application Programming Interfaces)**: Poskytují způsob, jak komunikovat s externími službami a integrovat je do webových aplikací.
-
-8. **Protokoly a standardy**: HTTP/HTTPS pro komunikaci mezi klientem a serverem, JSON (JavaScript Object Notation) pro formátování dat, REST (Representational State Transfer) pro návrh API.
-
-9. **Cloud Computing**: Služby jako AWS, Google Cloud Platform, nebo Microsoft Azure poskytují infrastrukturu pro nasazení a škálování webových aplikací.
-
-10. **DevOps nástroje**: Nástroje jako Docker pro kontejnerizaci, Kubernetes pro orchestraci kontejnerů, CI/CD (Continuous Integration/Continuous Deployment) nástroje jako Jenkins, GitLab CI pro automatizaci nasazování aplikací.
-
-11. **Bezpečnostní nástroje a postupy**: SSL/TLS pro šifrování komunikace, autentizace a autorizace uživatelů, ochrana proti útokům typu XSS (Cross-Site Scripting) nebo SQL Injection.
-
-Toto je pouze přehled některých z hlavních technologií a nástrojů používaných při vývoji webových aplikací. Samozřejmě, každý projekt může vyžadovat specifické technologie v závislosti na požadavcích a potřebách.
-
+### Bezpečnost
+- Bezpečnost je klíčovou součástí vývoje webových aplikací, zahrnuje ochranu proti různým typům útoků a zajištění integrity a důvěrnosti dat.
+- **Autentizace a autorizace**
+	- **OAuth, OpenID** - Standardní protokoly pro autentizaci
+- **Bezpečnostní praktiky**
+	- **HTTPS** - Šifrování přenosu dat pomocí SSL/TLS.
 
 ##### Navigace
 Předchozí:  [[Zařazení jazyka C mezi ostatní jazyky, výhody a nevýhody]]
