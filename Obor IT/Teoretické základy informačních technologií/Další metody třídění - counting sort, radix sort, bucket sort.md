@@ -30,7 +30,7 @@ Counting-Sort(A, B, k)
 ><iframe width="620" height="385" src="https://www.youtube.com/embed/EItdcGhSLf4?si=RO0qIakGyg1kTm0k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Radix Sort
-- Používali operátoři mechanických třídič děrných štítků
+- Používali operátoři mechanických třídiček děrných štítků
 - Idea:
 	- Třídíme $d$-místná čísla.
 	- Třídění proběhne v $d$ průchodech.
