@@ -4,8 +4,7 @@
 - Datové rozhraní představuje rozhraní pro připojení k databázi, kde jsou uložena data, se kterými aplikace pracuje.
 
 ## Monolitická architektura
-
-- Všechny funkce aplikace jsou těsně integrovány do jednoho samostatného programu nebo platformy.
+- Celá aplikace je vyvíjena a nasazována jako **jeden celek**.
 - **Výhody**:
 	1. **Srozumitelnost a jednoduchost**: Noví vývojáři mohou snáze pochopit, jak aplikace funguje, protože vše je součástí jedné kódbáze.
 	2. **Jednoduché testování**: Testování může být jednodušší, protože neexistují závislosti na externích službách nebo síťových voláních, které by mohly komplikovat testovací proces.
@@ -17,18 +16,18 @@
 	4. **Odolnost vůči chybám**: Chyba v jedné části aplikace může způsobit selhání celého systému.
 
 ## MVC architektura
+- Rozděluje aplikaci na **3 základní celky**:
+	- **Model** - Odpovídá za práci s daty a přístup k databázi. Také určuje formát dat.
+	- **View** - Vytváří vizualizaci (UI). Typicky taková šablona jak bude vypadat webová stránka při poskytnutí určitých dat.
+	- **Controller** - Implementuje části funkcionality aplikace. Většinou metody, kterým lze předávat parametry.
 
-Rozděluje aplikaci na **3 základní celky**:
-- Model - Odpovídá za práci s daty a přístup k databázi. Také určuje formát dat.
-- View - Vytváří vizualizaci (UI). Typicky taková šablona jak bude vypadat webová stránka při poskytnutí určitých dat.
-- Controller - Implementuje části funkcionality aplikace. Většinou metody, kterým lze předávat parametry.
+| ![[MacBook-2024-05-18-001272.png\|440]] | ![[MacBook-2024-05-18-001271.png\|450]] |
+| ------------------------------------ | -------------- |
 
-![[Pasted image 20240428152907.png | 450]]
-![[MVC.png]]
 ### Charakteristika MVC architektury
 - **Oddělení zájmů**: MVC **odděluje** datovou logiku (Model) od zobrazení (View) a ovládací logiky (Controller), což umožňuje lepší správu a údržbu kódu.
 - **Znovupoužitelnost**: Každá část (Model, View, Controller) může být znovupoužita v jiných částech aplikace nebo dokonce v jiných aplikacích.
-- **Testovatelnost**: Díky oddělení logiky je každá část snadněji testovatelná, což usnadňuje vytváření jednotkových testů a zvyšuje stabilitu aplikace.
+- **Testovatelnost**: Díky oddělení logiky je každá část snadněji testovatelná, což usnadňuje vytváření unit testů a zvyšuje stabilitu aplikace.
 - **Flexibilita**: MVC umožňuje snadnou změnu uživatelského rozhraní nebo aplikační logiky, aniž by to mělo vliv na ostatní části aplikace.
 - **Škálovatelnost**: Díky oddělení zájmů je aplikace obecně snáze škálovatelná, protože lze jednotlivé komponenty rozvíjet nezávisle na sobě.
 ## Architektura mikroslužeb
