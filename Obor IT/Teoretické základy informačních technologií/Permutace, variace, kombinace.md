@@ -8,7 +8,7 @@
 	- Pro $n=3$: $$(a+b)^{3}= \binom{3}{0}a^{3}b^{0}+ \binom{3}{1}a^{2}b^{1}+ \binom{3}{2}a^{1}b^{2}+ \binom{3}{3}a^{0}b^{3}$$
 
 ### Permutace
-- **Permutace $n$ (navzájem různých) objektů** je libovlné seřazení těchto objektů, tj. seřazení od prvního k $n$-tému. 
+- **Permutace $n$ (navzájem různých) objektů** je libovolné seřazení těchto objektů, tj. seřazení od prvního k $n$-tému. 
 - Počet permutací $n$ objektů značíme $P(n)$.
 - Vzoreček: $P(n) = n!$
 - Důkaz vzorečku:
