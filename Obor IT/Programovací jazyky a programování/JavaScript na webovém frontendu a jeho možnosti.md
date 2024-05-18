@@ -1,3 +1,5 @@
+- JavaScript je klíčovou technologií pro tvorbu interaktivních a dynamických webových stránek. 
+
 ## Možnosti využití
 1. **Interaktivita:** 
 	- JS umožňuje interakci s uživatelem na webových stránkách. 
@@ -14,10 +16,10 @@
 	- Pomocí JS můžete provádět **validaci formulářů** **na stránkách** ještě **před** jejich **odesláním** na server. 
 	- To může **zlepšit** uživatelskou zkušenost tím, že uživatele **upozorní na chyby** nebo neplatné vstupy **dříve**, než **formulář odešle**.
 1. **Moderní frameworky a knihovny:** 
-	- Existuje mnoho moderních JavaScriptových frameworků a knihoven, jako například React, Angular, Vue.js atd., které usnadňují vývoj webových aplikací tím, že poskytují strukturovaný a efektivní způsob tvorby uživatelského rozhraní.
+	- Existuje mnoho moderních JavaScriptových frameworků a knihoven, jako například **React, Angular, Vue.js** atd., které usnadňují vývoj webových aplikací tím, že poskytují strukturovaný a efektivní způsob tvorby uživatelského rozhraní.
 2. **Manipulace s daty:** 
-	- JavaScript umožňuje manipulaci s daty na stránce a jejich dynamické zobrazení. 
-	- To zahrnuje načítání dat z externích zdrojů (API), jejich zpracování a zobrazení na stránce bez nutnosti obnovení celé stránky.
+	- JavaScript umožňuje **manipulaci s daty na stránce a jejich dynamické zobrazení**. 
+	- To zahrnuje **načítání dat z externích zdrojů** (API), jejich **zpracování** a **zobrazení** na stránce **bez nutnosti obnovení celé stránky**.
 
 ## Moderní technologie a frameworky
 - **React**: Komponentově orientovaný framework pro stavové a dynamické uživatelské rozhraní.
