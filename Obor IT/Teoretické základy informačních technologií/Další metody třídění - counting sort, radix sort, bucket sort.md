@@ -55,7 +55,7 @@ Radix-Sort(A, d)
 ### Bucket Sort
 - Třídí čísla z intervalu $<0, 1)$
 - Idea:
-	- Projdeme prvky pole $A$ a každý z nich vložíme do příslučného intervalu *(do příslušného seznamu $B[i]$).*
+	- Projdeme prvky pole $A$ a každý z nich vložíme do příslušného intervalu *(do příslušného seznamu $B[i]$).*
 	- Každý seznam setřídíme.
 	- Prvky setříděných seznamů vložíme po řadě do výstupního pole
 - Složitost algoritmu v nejhorším případě je: $\Theta (f(n))$
