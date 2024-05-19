@@ -38,7 +38,7 @@ Counting-Sort(A, B, k)
 		- v $2.$ podle předposlední, 
 		- ...
 - Lze jej využít i na třídění textových řetězců, data ve tvaru rok-měsíc-den, ...
-- Složitost algoritmu v nejhorším případě: $\Theta (d(\text{složitost vnitřního algoritmu})$
+- Složitost algoritmu v nejhorším případě: $\Theta (d*\text{složitost vnitřního algoritmu})$
 ```C
 Radix-Sort(A, d)
 	for i <- 1 to d

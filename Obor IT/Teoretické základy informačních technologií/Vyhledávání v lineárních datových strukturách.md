@@ -5,7 +5,15 @@
 	- Prvky jsou **seřazeny do posloupnosti** (má smysl uvažovat o pořadí prvků)
 	- U každého prvku **známe předka a následníka** (pokud existují)
 
-### Pole
+## Lineární vyhledávání (Linear search)
+- Lineární vyhledávání je **nejjednodušší vyhledávací algoritmus**, který prochází **každý prvek datové struktury jeden po druhém**, dokud nenalezne hledaný prvek nebo neprojde celou strukturu.
+- **Výhody**:
+	- Jednoduchá implementace.
+	- Nevyžaduje žádné předpoklady o uspořádání dat.
+- **Nevýhody**:
+	- Pomalejší pro velké datové sady ve srovnání s efektivnějšími algoritmy.
+
+## Pole
 - Prvky jsou v paměti uspořádány **za sebou**
 - K prvkům přistupujeme pomocí **indexu** v čase $\Theta (1)$ (konstantním čase)
 - Má **fixní velikost** (alternativa dynamické pole)
@@ -35,8 +43,8 @@ proc delete(AS, i)          Θ(1)
 
 ![[MacBook-2024-03-12-000855.png]]
 
-### Vyhledávání v nesetřízeném a setřízeném poli
-#### 1. V nesetřízeném poli
+## Vyhledávání v nesetřízeném a setřízeném poli
+### 1. V nesetřízeném poli
 ```C
 proc search(A,k)
   for i = 0; i < n; i++
@@ -57,7 +65,7 @@ proc search-alt(A,k)
 	- **Průměrný případ** = Pokud se prvek s klíčem $k$ v poli $A$ nachází, pak je počet porovnání $\frac{1 + 2 + 3 + 4 + ... + n}{n} = \frac{n \times (n+1)}{2n} = \frac{n+1}{2}$
 		- *předpokládáme, že všechny prvky v poli vyhledáváme stejně často*
 
-#### 2. V setřízeném poli
+### 2. V setřízeném poli
 - Předpokládejme, že **klíče** bereme z **úplně uspořádané množiny** (čísla, lexikálně uspořádané řetězce, ...)
 - Při neúspěšném vyhledávání v setřízeném poli potřebujeme nejhůře tolik porovnání, jako při vyhledávání v nesetřízeném poli, jsou ale případy, kdy potřebujeme méně
 ```C
@@ -68,7 +76,7 @@ proc search(A,k)
 ```
 - **Složitost** = **V nejhorším případě** *(Kdy je vyhledávaný prvek na konci pole, nebo je větší než všechny ostatní prvky v poli)* je stále $\Theta (n)$
 
-##### Binární vyhledávání
+## Binární vyhledávání
 - Idea:
 	- Při **hledání prvku s klíčem $k$** se podíváme na prostřední prvek pole $A$, řekněme, že je na indexu $s$. 
 	- Pokud je`k == A[s].key` vyhledávání **je úspěšné**
@@ -91,14 +99,14 @@ proc binary-search(A,k)
    return -1
 ```
 
-Strom vyhledání:
-![[MacBook-2024-03-12-000856.png| 500]]
+>[!Example] Setřízené pole převedeme na tzv. **strom vyhledávání**
+>![[MacBook-2024-03-12-000856.png| 500]]
 
 
 >[!Example]- Příklad
 ><iframe width="640" height="385" src="https://www.youtube.com/embed/fDKIpRe8GW4?si=6LEQToB6o9iEI5n_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Interpolační vyhledávání
+## Interpolační vyhledávání
 - Algoritmus je **vylepšením binárního vyhledávání** pro případy, kdy jsou hodnoty v seznamu nejen seřazené, ale **zároveň rovnoměrně rozložené**.
 - Složitost $\Theta (\log \log n)$
 - V nejhorším případě ovšem může být složitost až $O(n)$. Aby se zabránilo nejhoršímu případu, je možné **kombinovat interpolační** vyhledávání **s binárním vyhledáváním** *(například střídat vždy jeden krok interpolačního vyhledávání a jeden binárního vyhledávání)*
@@ -110,7 +118,7 @@ Strom vyhledání:
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/DlCPTPQD6Mw?si=F7EWoP8TXvEkq4Vv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-### Fibonacciho posloupnost vyhledávání
+## Fibonacciho posloupnost vyhledávání
 - **Fibonacciho posloupnost vyhledávání** je *vyhledávací algoritmus, který funguje na principu binárního vyhledávání*, ale místo dělení pole na dvě stejně velká podpole se pole dělí na dvě podpole, jejichž velikost odpovídá dvěma po sobě jdoucím číslům Fibonacciho posloupnosti.
 
 - Algoritmus začne s celým polem a dvěma ukazateli: *jeden na začátku pole a druhý na konci pole.* Poté se vypočte nejbližší číslo Fibonacciho posloupnosti, které je větší nebo rovno velikosti pole. *Toto číslo určuje délku prvního podpole.* Algoritmus porovná hledanou hodnotu s prvkem na konci tohoto podpole. Pokud je hledaná hodnota menší, pole se zmenší na první polovinu, jinak se pole zmenší na druhou polovinu. *Tento postup se opakuje, dokud se hledaná hodnota nenajde nebo dokud se pole nezmenší na velikost jednoho prvku.*
