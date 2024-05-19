@@ -28,11 +28,11 @@
 
 - $o(g)$ ... **Asymptotická ostrá horní mez**
 	- $o(g(n)) = \{ f(n) \mid (\forall c \in \mathbb{N})(\exists n_{0} \in \mathbb{N})(\forall n \geq n_{0}): 0 <f(n) < c \cdot g(n) \}$
-	- **Asymptotická ostrá horní mez funkce $g(n)$** je množina funkcí $f(n)$, takových, že **pro každé** přirozené číslo $c > 0$ **existuje** přirozené číslo $n_{0}$ tak, že **pro každé** $n \geq n_{0}$ platí: $0 < c \cdot f(n) < g(n)$
+	- **Asymptotická ostrá horní mez funkce $g(n)$** je množina funkcí $f(n)$, takových, že **pro každé** přirozené číslo $c > 0$ **existuje** přirozené číslo $n_{0}$ tak, že **pro každé** $n \geq n_{0}$ platí: $0 <  f(n) < c \cdot g(n)$
 
 - $\omega (g)$ ... Asymptotická ostrá dolní mez
-	- $\omega (g(n)) = \{ f(n) \mid (\forall c \in \mathbb{N})(\exists n_{0} \in \mathbb{N})(\forall n \geq n_{0}): 0 < g(n) < c \cdot f(n) \}$
-	- **Asymptotická ostrá dolní mez funkce $g(n)$** je množina funkcí $f(n)$, takových, že **pro každé** přirozené číslo $c > 0$ **existuje** přirozené číslo $n_{0}$ tak, že **pro každé** $n \geq n_{0}$ platí: $0 < g(n) < c \cdot f(n)$
+	- $\omega (g(n)) = \{ f(n) \mid (\forall c \in \mathbb{N})(\exists n_{0} \in \mathbb{N})(\forall n \geq n_{0}): 0 < c \cdot g(n) < f(n) \}$
+	- **Asymptotická ostrá dolní mez funkce $g(n)$** je množina funkcí $f(n)$, takových, že **pro každé** přirozené číslo $c > 0$ **existuje** přirozené číslo $n_{0}$ tak, že **pro každé** $n \geq n_{0}$ platí: $0 < c \cdot g(n) < f(n)$
 
 ### Základní pravidla (vlastnosti)
 #### Věta o tranzitivitě odhadů
