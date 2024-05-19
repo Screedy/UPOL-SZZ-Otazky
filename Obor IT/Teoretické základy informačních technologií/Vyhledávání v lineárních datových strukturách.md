@@ -94,6 +94,10 @@ proc binary-search(A,k)
 Strom vyhledání:
 ![[MacBook-2024-03-12-000856.png| 500]]
 
+
+>[!Example]- Příklad
+><iframe width="640" height="385" src="https://www.youtube.com/embed/fDKIpRe8GW4?si=6LEQToB6o9iEI5n_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Interpolační vyhledávání
 - Algoritmus je **vylepšením binárního vyhledávání** pro případy, kdy jsou hodnoty v seznamu nejen seřazené, ale **zároveň rovnoměrně rozložené**.
 - Složitost $\Theta (\log \log n)$

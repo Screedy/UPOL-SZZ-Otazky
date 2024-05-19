@@ -66,8 +66,7 @@ proc tree-search-iterative(x,k)       //O(h)
       x = x.right
   return x
 ```
->[!Example]- Příklad
-><iframe width="640" height="385" src="https://www.youtube.com/embed/fDKIpRe8GW4?si=6LEQToB6o9iEI5n_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 #### Hledání minimum, maximum
 ```C
 proc tree-minimum(x)               //O(h)
