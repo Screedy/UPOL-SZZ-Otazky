@@ -4,7 +4,6 @@
 - **Hlavní idea**: 
 	- Definujeme **vyváženost uzlu $u$** jako rozdíl výšky levého podstromu a výšky pravého podstromu tohoto uzlu. 
 	- Strom je **přípustný (vyvážený)** pokud pro **každý uzel** $u$ ve stromu platí, že jeho vyváženost je $0, 1,$ nebo $-1$. 
-	- Výšku **prázdného podstromu** definujeme rovnu $-1$.
 
 - **Věta**: Výška přípustného stromu je **seshora omezena** $\frac{3}{2} \lg (n+1)$.
 >[!abstract] Intuice důvodu:
@@ -27,7 +26,7 @@
 - **Drobnost k implementaci:** 
 	- Do uzlu přidáme položku `bf`, ve které budeme udržovat vyváženost uzlu. 
 	- Po změně ve stromu procházíme strom směrem od místa změny ke kořeni. 
-	- Změní-li se výška některého podstromu uzlu, upravíme položku `bf` v tomto uzlu.
+		- Změní-li se výška některého podstromu uzlu, upravíme položku `bf` v tomto uzlu.
 ```C
 struct node {
   left, //levy potomek
