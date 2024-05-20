@@ -4,7 +4,7 @@
 - nejzákladnější webová technologie
 
 ### Syntaxe HTML
-- HTML používá značky (tags), které jsou uzavřeny v hranatých závorkách < >
+- HTML používá značky (tags), které jsou uzavřeny ve špičatých závorkách `< >`
 #### Elementy
 - HTML element se skládá z **otevírací** značky, **obsahu** a **zavírací** značky. 
 - Elementy mohou **obsahovat další elementy** (dětské elementy), **text** nebo mohou být **prázdné**.
