@@ -73,7 +73,7 @@ proc bfs(G, s)
 - $G'$ je strom s kořenem $s$: z principu algortmu `bfs` plyne, že $\mid V' \mid = \mid E' \mid +\ 1$ *(s přidáním každého uzlu mimo $s$ do fronty vytvoříme jednu hranu z $E'$)* a $G'$ je souvislý *(z každého uzlu $v \in V'$ vede cesta do $s$, je to nejkratší cesta nalezená `bfs`)* Uzel $s$ jako jediný nemá rodiče.
 
 #### Průchod do hloubky a jeho vlastnosti
-- **Uzly mají položku pro barvu**, podobně jako u průchodu do hloubky. Možné barvy jsou opět `white`, `gray` a `black`
+- **Uzly mají položku pro barvu**, podobně jako u průchodu do šířky. Možné barvy jsou opět `white`, `gray` a `black`
 - Dále si pro každý uzel budeme **zaznamenávat čas**, kdy byl navštíven poprvé a změnil barvu z `white` na `gray`. K tomu použijeme **položku $d$.** Dále **zaznamenáme čas, kdy byl uzel navštíven podruhé,** k tomu použijeme **položku $f$**
 - Čas budeme udržovat pomocí **globální proměnné `time`**, kterou na začátku nastavíme na $0$, a na vhodných místech inkrementujeme
 ```python

@@ -2,7 +2,7 @@
 - *B strom je definován následujícími podmínkami:*
 	- V uzlech může být uloženo **více klíčů**, **maximálně** však **$2t - 1$**. Ve všech uzlech **mimo kořene** však musí být uloženo **minimálně $t - 1$ klíčů** *(pokud je strom neprázdný je v kořeni vždy alespoň jeden klíč)*
 	- Pokud uzel obsahuje $n$ klíčů, má $0$ (je list) nebo $n+1$ potomků
-	- Všechny listy ve stromu jsou ve stejné hloubce
+		- Všechny listy ve stromu jsou ve stejné hloubce
 	- Klíče jsou v uzlu *uspořádány vzestupně*
 		- $k_{0} < k_{1} < k_{2} < ... < k_{n-1}$ ($1 \leq n \leq 2t - 1$)
 		  ![[MacBook-2024-03-13-000873.png| 400]]
@@ -88,88 +88,90 @@ proc b-tree-search(x,k)
 - Jsme-li během vyhledávání v uzlu $x$, který není zaplněn, a víme, že máme pokračovat s vyhledáváním do jeho potomka $y$, který je zaplněn, pak $y$ rozdělíme ještě předtím, než na něj přejdeme. Protože $x$ není zaplněn, můžeme klíč, který dělením $y$ vznikne, vložit do $x$ bez nutnosti tento uzel dělit. Tím zabráníme možné kaskádě dělení uzlů.
 - Pro vkládání máme dvě procedury: **tree-insert**, která bere jako argument strom a vypořádá se se situací, kdy je kořen zaplněný. Druhá procedura, **tree-insert-nonfull** již bere jako argument uzel: to je kořen podstromu, do kterého vkládáme. O něm předpokládáme, že není zaplněný
 
-```C
-proc split-child(x, i) // procedura rozdeli x.children[i] O(t)
-  // 1. Vytvorime 2 uzly vnikle delenim
-  z = new_node()
-  y = x.children[i]
-  z.leaf = y.leaf
-  z.n = t - 1
-  y.n = t - 1
-  // 1.1 zkopirujeme pravou cast klicu a dat do z
-  for j = 0; j < t-1; j = j + 1
-    z.keys[j] = y.keys[j + t]
-    z.data[j] = y.data[j + t]
-    
-  // 1.2 zkopirujeme pravou cast pointeru na potomky do z
-  if not y.leaf
-    for j = 0; j < t; j = j + 1
-      z.children[j] = y.children[j + t] 
-  
-  // 2. upravime x a zapojime do nej z a vlozime k_t
-  // 2.1 posuneme klice a data v x o 1 doprava
-  for j = x.n - 1; j >= i; j = j - 1
-    x.keys[j + 1] = x.keys[j]
-    x.data[j + 1] = x.data[j]
+>[!Example]- Ukázka vložení prvku (jednofázově)
+>```C
+>proc split-child(x, i) // procedura rozdeli x.children[i] O(t)
+>  // 1. Vytvorime 2 uzly vnikle delenim
+>  z = new_node()
+>  y = x.children[i]
+>  z.leaf = y.leaf
+>  z.n = t - 1
+>  y.n = t - 1
+>  // 1.1 zkopirujeme pravou cast klicu a dat do z
+>  for j = 0; j < t-1; j = j + 1
+>    z.keys[j] = y.keys[j + t]
+>    z.data[j] = y.data[j + t]
+>    
+>  // 1.2 zkopirujeme pravou cast pointeru na potomky do z
+>  if not y.leaf
+>    for j = 0; j < t; j = j + 1
+>      z.children[j] = y.children[j + t] 
+>  
+>  // 2. upravime x a zapojime do nej z a vlozime k_t
+>  // 2.1 posuneme klice a data v x o 1 doprava
+>  for j = x.n - 1; j >= i; j = j - 1
+>    x.keys[j + 1] = x.keys[j]
+>    x.data[j + 1] = x.data[j]
+>
+>  // 2.2 posuneme pointery na potomky doprava
+>  for j = x.n; j >= i+1; j = j - 1
+>    x.children[j + 1] = x.children[j]
+>
+>  // 2.3 zapojime z
+>  x.children[i+1] = z
+>
+>  // 2.4 vlozime k_t do x
+>  x.keys[i] = y.keys[t-1]
+>  x.n = x.n + 1
+>```
+>```C
+>proc tree-insert(T, k, d)
+>  r = T.root
+>  if r.n == 2 * t - 1 // koren je zaplneny
+>    s = new_node()
+>    T.root = s
+>    s.leaf = false
+>    s.n = 0
+>    s.children[0] = r;
+>    split-child(s,0) // toto rozdeli puvodni koren
+>    tree-insert-nonfull(s, k, d)
+>  else
+>    tree-insert-nonfull(r, k, d)
+>```
+>```C
+>proc tree-insert-nonfull(x, k, d)
+>  i = x.n - 1
+>  
+>  // 1. x je list, uz provadime pridani
+>  if x.leaf
+>    // 1.1 vsechny klice vetsi nez k posuneme doprava
+>    while i >= 0 and k < x.keys[i]
+>      x.keys[i+1] = x.keys[i]
+>      x.data[i+1] = x.data[i]
+>      i = i - 1
+>
+>    // 1.2 vlozime k a d
+>    x.keys[i+1] = k
+>    x.data[i+1] = d
+>    x.n = x.n + 1
+>
+>// 2. x neni list, musime najit potomka, kterym budeme pokracovat         
+>  else 
+>    // 2.1 najdeme spravneho potomka
+>    while i >= 0 and k < x.keys[i]
+>      i = i - 1
+>    i = i + 1
+>    // 2.2 kdyz je potomek zaplnen, rozdelime ho
+>    if x.children[i].n == 2 * t - 1
+>    split-child(x, i)
+>    // overime, do ktereho ze vzniklych podstromu patri k
+>    if k > x.keys[i]
+>      i = i + 1
+>
+>    // 2.3 provedeme pridani do potomka (není zaplněn)
+>    tree-insert-nonfull(x.children[i], k, d)
+>```
 
-  // 2.2 posuneme pointery na potomky doprava
-  for j = x.n; j >= i+1; j = j - 1
-    x.children[j + 1] = x.children[j]
-
-  // 2.3 zapojime z
-  x.children[i+1] = z
-
-  // 2.4 vlozime k_t do x
-  x.keys[i] = y.keys[t-1]
-  x.n = x.n + 1
-```
-```C
-proc tree-insert(T, k, d)
-  r = T.root
-  if r.n == 2 * t - 1 // koren je zaplneny
-    s = new_node()
-    T.root = s
-    s.leaf = false
-    s.n = 0
-    s.children[0] = r;
-    split-child(s,0) // toto rozdeli puvodni koren
-    tree-insert-nonfull(s, k, d)
-  else
-    tree-insert-nonfull(r, k, d)
-```
-```C
-proc tree-insert-nonfull(x, k, d)
-  i = x.n - 1
-  
-  // 1. x je list, uz provadime pridani
-  if x.leaf
-    // 1.1 vsechny klice vetsi nez k posuneme doprava
-    while i >= 0 and k < x.keys[i]
-      x.keys[i+1] = x.keys[i]
-      x.data[i+1] = x.data[i]
-      i = i - 1
-
-    // 1.2 vlozime k a d
-    x.keys[i+1] = k
-    x.data[i+1] = d
-    x.n = x.n + 1
-
-// 2. x neni list, musime najit potomka, kterym budeme pokracovat         
-  else 
-    // 2.1 najdeme spravneho potomka
-    while i >= 0 and k < x.keys[i]
-      i = i - 1
-    i = i + 1
-    // 2.2 kdyz je potomek zaplnen, rozdelime ho
-    if x.children[i].n == 2 * t - 1
-    split-child(x, i)
-    // overime, do ktereho ze vzniklych podstromu patri k
-    if k > x.keys[i]
-      i = i + 1
-
-    // 2.3 provedeme pridani do potomka (není zaplněn)
-    tree-insert-nonfull(x.children[i], k, d)
-```
 >[!Example]- Vkládání
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/tT2DT9Z4H-0?si=NVHfsrLgFnUboj-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
