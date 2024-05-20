@@ -90,11 +90,11 @@ proc tree-maximum(x)               //O(h)
 proc tree-successor(x)
   // pripad 1
   if x.right != nil
-  return tree-minimum(x.right)
+	  return tree-minimum(x.right)
 
   // pripad 2
   y = x.p
-  while y != nil and x = y.right
+  while y != nil and x == y.right
     x = y
     y = y.p
   return y

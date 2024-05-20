@@ -6,7 +6,7 @@
 	- Klíče jsou v uzlu *uspořádány vzestupně*
 		- $k_{0} < k_{1} < k_{2} < ... < k_{n-1}$ ($1 \leq n \leq 2t - 1$)
 		  ![[MacBook-2024-03-13-000873.png| 400]]
-- **Výska B-stromu:** B strom s $n \geq 1$ klíči a $t \geq 2$ má výšku nejvýše $\log_{t} \frac{n+1}{2}$
+- **Výška B-stromu:** B strom s $n \geq 1$ klíči a $t \geq 2$ má výšku nejvýše $\log_{t} \frac{n+1}{2}$
 - B-stromy jsou často používány v databázových systémech.
 	- Zaměřují se na vlastnost snížení operací s diskem.
 
@@ -30,7 +30,7 @@ struct node {
 }
 ```
 ```C
-struct node {
+struct tree {
   root, // korenovy uzel
 }
 ```

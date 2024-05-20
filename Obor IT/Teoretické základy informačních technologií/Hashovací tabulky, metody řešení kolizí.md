@@ -57,7 +57,7 @@ proc search(T,k)
 ![[MacBook-2024-03-14-000879.png]]
 
 ### Konstrukce hashovací funkce
-- *Cíl je jednoduché rovnomrné hashování*
+- *Cíl je jednoduché rovnoměrné hashování*
 - Potřebujeme **znalost rozložení pravděpodobnosti při výběru klíče** a **nezávislost** (= výběr jednoho klíče nezmění pravděpodobnosti výběru dalších klíčů)
 - Nejlepší co můžeme udělat je, aby hashovací funkce moc nezávisela na vzorech, vyskytujících se v datech.
 - Používáme **heuristiky**, jejichž cílem je, aby výsledek funkce závisel na všech částech klíče
