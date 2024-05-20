@@ -51,8 +51,8 @@ $$
 >- Vektorový prostor, který je generovaný bází $V=\left[\left\{\vec{u}_1, \vec{u}_2, \vec{u}_3\right\}\right]$ budeme chtít převést na $V=\left[\left\{\vec{w}_1, \vec{w}_2, \vec{w}_3\right\}\right]$ tak abychom věděli, že $v_i \perp v_j$ pro $\forall i, j \in\{1,2,3\}$ kde $i \neq j$ 
 >- **Postup:**
 >	1. $\vec{w_{1}} = \vec{u_{1}}$
->	2. $\vec{w_{2}} = \vec{u_{2}} - \frac{\vec{u_{2}} \circ \vec{w_{1}}}{\vec{w_{1}} \circ \vec{w_{1}}} \circ \vec{w_{1}}$
->	3. $\vec{w_{n}} = \vec{u_{n}} - \frac{\vec{u_{n}} \circ \vec{w_{1}}}{\vec{w_{1}} \circ \vec{w_{1}}} \circ \vec{w_{1}} - \frac{\vec{u_{n}} \circ \vec{w_{2}}}{\vec{w_{2}} \circ \vec{w_{2}}} \circ \vec{w_{2}} - ...- \frac{\vec{u_{n}} \circ \vec{w_{n-1}}}{\vec{w_{n-1}} \circ \vec{w_{n-1}}} \circ \vec{w_{n-1}}$.
+>	2. $\vec{w_{2}} = \vec{u_{2}} - \frac{\vec{u_{2}} \circ \vec{w_{1}}}{\vec{w_{1}} \circ \vec{w_{1}}} \cdot \vec{w_{1}}$
+>	3. $\vec{w_{n}} = \vec{u_{n}} - \frac{\vec{u_{n}} \circ \vec{w_{1}}}{\vec{w_{1}} \circ \vec{w_{1}}} \cdot \vec{w_{1}} - \frac{\vec{u_{n}} \circ \vec{w_{2}}}{\vec{w_{2}} \circ \vec{w_{2}}} \cdot \vec{w_{2}} - ...- \frac{\vec{u_{n}} \circ \vec{w_{n-1}}}{\vec{w_{n-1}} \circ \vec{w_{n-1}}} \cdot \vec{w_{n-1}}$.
 
 >[!Summary]- Postup podrobněji
 >1. Zvolíme si výchozí vektor $\vec{w}_1$ : je jedno který si vezmu, klidně $u_1$ tzn. $\vec{w}_1=\vec{u}_1$
