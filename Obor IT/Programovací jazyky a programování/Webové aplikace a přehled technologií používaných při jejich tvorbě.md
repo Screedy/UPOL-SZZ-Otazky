@@ -2,7 +2,7 @@
 - Původně byly www stránky statické a za webovou aplikaci se označovala j**akákoliv stránka obsahující script**. Dnes scripty používají **snad všechny** webové stránky. 
 	- Proto je těžké určit hranici. 
 - Většina webových aplikací ale využívá **kromě webového serveru** ještě **aplikační** a navíc například **databázi**. 
-- Obecně můžeme říct, že webová aplikace označuje webové stránky, kde je **ve větší míře používán programový kód** na straně klienta nebo serveru.
+- Obecně lze říci, že webová aplikace je webová stránka, která **ve velké míře využívá programový kód** na straně klienta nebo serveru.
 
 ---
 

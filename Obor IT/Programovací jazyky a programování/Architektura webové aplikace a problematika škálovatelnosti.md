@@ -49,5 +49,5 @@
 
 ##### Navigace
 Předchozí:  [[Webové aplikace a přehled technologií používaných při jejich tvorbě]]
-Následující: [[Zpracování HTTP požadavků - předávání dat mezi webovým a aplikačním serverem, překlady realizace]]
+Následující: [[Zpracování HTTP požadavků - předávání dat mezi webovým a aplikačním serverem, příklady realizace]]
 Celý okruh: [[3. Programovací jazyky a programování]]

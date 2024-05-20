@@ -15,7 +15,7 @@
 - Další jednoduché řešení dostaneme vyhrazením částečného pořadí, nebo hierarchie pro zdroje (v tomto případě hůlky), a zřízením konvence, že všechny zdroje budou dosahované v určitém pořadí a v opačném pořadí uvolněné. 
 - V našem případě budou zdroje (hůlky) očíslované od 1 po 5 v nějakém pořadí a každý filozof si vždy vezme nejdříve hůlku s menším číslem a až potom hůlku s větším číslem. 
 - Pak vždy položí nejdříve hůlku s vyšším číslem, následně hůlku s menším číslem. 
-- Pokud tedy 5 filozofů simultánní zvedne hůlku s menším číslem, tak zůstane na stole hůlka s největším číslem, takže 5. filozof bude bez hůlky. 
+- Pokud tedy 5 filozofů najednou zvedne hůlku s menším číslem, tak zůstane na stole hůlka s největším číslem, takže 5. filozof bude bez hůlky. 
 - Navíc pouze jeden z filozofů bude mít přístup k oběma hůlkám. Když dojí, pustí obě hůlky, přičemž tu hůlku s nižším číslem pustí dříve, což umožní, aby se najedl filozof sedící vedle něj.
 
 >[!info]
@@ -24,7 +24,7 @@
 >- Právě proto je tento způsob velmi neefektivní.
 
 ## Řešení Chandel-Misra
-- V roce $1984$ *K. Mani Chandel* a *J. Misra* navrhli jiné řešení problému obědvajících filozofů, aby povolili libovolnému počtu programů (číslovaných $P_{1}$, ..., $P_{n}$) soutěžit o libovolný počet zdrojů (číslovaných $R_{1}$, ..., $R_{m}$). 
+- V roce $1984$ *K. Mani Chandel* a *J. Misra* navrhli jiné řešení problému večeřících filozofů, aby povolili libovolnému počtu programů (číslovaných $P_{1}$, ..., $P_{n}$) soutěžit o libovolný počet zdrojů (číslovaných $R_{1}$, ..., $R_{m}$). 
 - Na rozdíl od Dijkstrova řešení tato označení mohou být libovolná. Uvědomme si, že toto není skutečný problém obědvajících filozofů, protože _vyžaduje_ jejich vzájemnou komunikaci.
 
 1. Pro každý pár filozofů válčících o zdroj vytvoří hůlku a dají ji filozofovi s nižším ID. Každá hůlka může být buď špinavá, nebo čistá. Na začátku je každá hůlka špinavá.

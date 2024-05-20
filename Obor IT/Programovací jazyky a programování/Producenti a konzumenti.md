@@ -2,13 +2,13 @@
 - Producenti vytvářejí data a umísťují je do **sdílené fronty** (**bufferu**), zatímco konzumenti **odebírají data ze stejné fronty a zpracovávají je**.
 - Tento **vzor** se často používá ke **zlepšení výkonu** a **efektivity zpracování dat**.
 ---
-- Vzor producenta a spotřebitele umožňuje lépe souběžně běžet **cyklickým procesům**, které **pracují v různých rychlostech**. 
-- Díky použití **fronty** jako úložného prostoru může producent vytvářet data **nezávisle na rychlosti spotřebitele**. 
+- Vzor producenta a konzumenta umožňuje lepší souběžný běh **cyklických procesů**, které **pracují různými rychlostmi**.
+- Díky použití **fronty** může producent vytvářet data **nezávisle na rychlosti spotřebitele**. 
 - Pokud je tvorba dat rychlá, může producent tyto data **vytvářet napřed** a spotřebitel je pak bude **zpracovávat ve svém vlastním tempu**. 
 - Je to vhodné například při **komunikaci po síti**, kdy fungují dva procesy v různých rychlostech. 
 - První proces může neustále přijímat pakety ze sítě, zatímco druhý přijaté pakety analyzuje. 
-	- V tomto příkladě je první proces producentem a druhý spotřebitelem. 
-	- S použitím zásobníku mohou být pakety přijaté rychleji, než jsou analyzovány. 
+	- V tomto příkladě je první proces producentem a druhý konzumentem. 
+	- S použitím fronty mohou být pakety přijaté rychleji, než jsou analyzovány. 
 
 >[!Example] příklad implementace, v python
 >```python

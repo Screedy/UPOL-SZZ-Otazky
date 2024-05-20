@@ -9,7 +9,7 @@
 
 ## Konvence pro organizaci kódu
 1. **Modularita**: 
-	- Rozdělení kódu do logických modulů (funkcí a souborů) podle jejich funkcí. 
+	- Rozdělení kódu do logických modulů (funkcí a souborů) podle jejich funkčnosti. 
 	- **Funkce**: Každá funkce by měla mít jednoznačně definovaný účel a měla by být zodpovědná za jednu úlohu.
 	- **Soubory**: Kód by měl být rozdělen do více souborů, kde každý soubor má specifický účel.
 2. **Rozdělení do hlavičkových souborů (.h) a zdrojových souborů (.c)**: 

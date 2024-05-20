@@ -1,6 +1,6 @@
 
 ## Iterátory
-- terátor je objekt, který implementuje protokol iterátorů v Pythonu, což znamená, že má metody `__iter__()` a `__next__()`.
+- Iterátor je objekt, který implementuje protokol iterátorů v Pythonu, což znamená, že má dunder metody `__iter__()` a `__next__()`.
 - Iterátory umožňují iteraci přes kolekce prvků jedním směrem, aniž by bylo nutné načítat všechny prvky do paměti najednou.
 - Když jsou všechny prvky vyčerpány, vyvolá se výjimka `StopIteration`.
 

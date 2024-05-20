@@ -63,6 +63,6 @@
 >```
 
 ##### Navigace
-Předchozí:  [[Zpracování HTTP požadavků - předávání dat mezi webovým a aplikačním serverem, překlady realizace]]
+Předchozí:  [[Zpracování HTTP požadavků - předávání dat mezi webovým a aplikačním serverem, příklady realizace]]
 Následující: [[JavaScript na webovém frontendu a jeho možnosti]]
 Celý okruh: [[3. Programovací jazyky a programování]]

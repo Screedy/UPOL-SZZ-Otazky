@@ -42,15 +42,15 @@
 >- uvolní paměť, na kterou ukazuje `ptr`. 
 >- Po uvolnění paměti je ukazatel neplatný a neměl by být použit
 
-## **Správné použití ukazatelů**:
+## Správné použití ukazatelů
 - Ukazatele jsou klíčovým prvkem pro práci s pamětí v jazyce C. Je důležité zajistit, aby byly ukazatele řádně inicializovány a aby neukazovaly na neplatnou nebo uvolněnou paměť.
 - Nebezpečné operace jako je dereferencování neinicializovaných nebo neplatných ukazatelů mohou vést k chybám v běhu programu.
 
-## **Paměťové úniky**:
+## Paměťové úniky
 - Paměťové úniky nastávají, když alokovaná paměť není uvolněna a program již na ni nemá odkaz.
 - Paměťové úniky mohou vést k postupnému plnění paměti a zhoršování výkonu programu. Je důležité pečlivě sledovat, kde se alokuje a uvolňuje paměť, a minimalizovat riziko paměťových úniků.
 
-## **Paměťové útoky**:
+## Paměťové útoky
 - Je důležité si být vědom možných paměťových útoků jako jsou útoky typu buffer overflow, které mohou vést k nežádoucímu přepisování paměti a zneužití programu.
 
 >[!Example] scénář útoku

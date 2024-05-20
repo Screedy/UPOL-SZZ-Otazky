@@ -56,7 +56,7 @@ struct Person {
 struct Person p1;
 ```
 5. **Unions (uniony):**
-	- Unie je podobná struktuře, ale všechny její členy sdílejí stejnou paměťovou oblast.
+	- Union je podobná struktuře, ale všechny její členy sdílejí stejnou paměťovou oblast.
 	- To znamená, že v unii může být v daném okamžiku uložen pouze jeden člen, a všechny ostatní členy přepíšou stejnou oblast paměti.
 ```C
 union Data {
