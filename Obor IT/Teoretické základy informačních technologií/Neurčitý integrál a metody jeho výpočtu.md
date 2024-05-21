@@ -10,10 +10,14 @@
 
 ## Metody výpočtu neurčitého integrálu
 - **Přímá integrace**
-	- Převádíme integrál na primitivní funkci pomocí tabulky základních primitivních funkcí, větě o linearitě a vzorečku $\int{f(x)dx}=F(x)+C \Rightarrow [F(x)+C]' = f(x)$
+	- Převádíme integrál na primitivní funkci pomocí tabulky základních primitivních funkcí, větě o linearitě a vzorečku $\int{f(x)dx}=F(x)+c \Rightarrow [F(x)+c]' = f(x)$
+
 ![[MacBook-2024-05-21-001282.png| 600]]
 - **Integrace užitím substitucí**
 	- **První věta o substituci**
 	- **Druhá věta o substituci**
 - **Metoda per partes**
 - **Integrace racionálních funkcí**
+
+
+![[MacBook-2024-05-21-001283.png]]
