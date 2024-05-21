@@ -46,7 +46,7 @@ více řádků
 - elementy vytvářejí hierarchickou strukturu potomek-rodič
   ![[MacBook-2024-04-28-001093.png| 300]]
 
-## Význam (sémantika) HTML
+## Sémantika (význam) HTML
 - sémantické HTML používá **sémantické značky**, které poskytují **smysluplnou strukturu** obsahu
 - používání sémantických elementů umožňuje **vývojářům, prohlížečům a vyhledávačům** lépe pochopit, **jaké informace stránka obsahuje** a jak jsou tyto informace organizovány
 >[!Example] Příklad sémantiky

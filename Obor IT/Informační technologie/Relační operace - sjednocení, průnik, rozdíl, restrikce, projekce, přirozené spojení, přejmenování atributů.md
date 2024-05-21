@@ -1,5 +1,7 @@
 ## Výraz sjednocení
 - Hodnota výrazu sjednocení, označme $D'$. Tělo $D'$ je sjednocením těl $D_{1}$ a $D_{2}$
+- Sjednocení dvou relací (tabulek) vrací množinu všech řádků, které jsou obsaženy alespoň v jedné z relací. Výsledná tabulka neobsahuje duplicitní řádky.
+- **Podmínky**: Relace musí mít stejný počet sloupců a odpovídající sloupce musí mít kompatibilní datové typy.
 - `( expr1 UNION expr2 )`
 - Např. pro tabulky:
 ```sql
@@ -23,6 +25,8 @@ TABLE movies1;                 | TABLE movies2;
 
 ## Výraz průniku
 - Hodnotu výrazu průniku označme $D'$. Tělo $D'$ je průnikem těl $D_{1}$ a $D_{2}$.
+- Průnik dvou relací vrací množinu všech řádků, které jsou obsaženy v obou relacích.
+- **Podmínky**: Relace musí mít stejný počet sloupců a odpovídající sloupce musí mít kompatibilní datové typy.
 - `( expr1 INTERSECT expr2 )`
 - Pro tabulky ze sjednocení můžeme provést:
 ```sql
@@ -35,6 +39,7 @@ TABLE movies1;                 | TABLE movies2;
 
 ## Výraz rozdíl
 - Hodnotu výrazu rozdílu označme $D'$. Tělo $D'$ je množinovým rozdílem těl $D_{1}$ a $D_{2}$.
+- Rozdíl dvou relací vrací množinu všech řádků, které jsou obsaženy v první relaci, ale nejsou obsaženy ve druhé relaci.
 - Pro tabulku ze sjednocení můžeme provést:
 ```sql
 ( TABLE movies1 ) EXCEPT ( TABLE movies2 );
@@ -122,7 +127,7 @@ WHERE  title = 'The Avengers';
 ```
 
 ## Projekce
-- Projekce je operace, která vytváří novou relaci se záznamy složenými pouze z určitých sloupců původní relace.
+- Projekce je operace, která vybírá určité sloupce (atributy) z tabulky (relace) a vrací novou tabulku obsahující pouze tyto sloupce. 
 - Tato operace redukuje počet sloupců v relaci a může také odstranit duplikátní tuple.
 ```mysql
 ( SELECT DISTINCT A1, . . ., Am FROM expr AS name )
@@ -160,8 +165,8 @@ FROM   movies;
 ```
 
 ## Přirozené spojení
-- Přirozené spojení kombinuje relace podle sloupců, které mají stejný název a datový typ v obou relacích.
-- Výsledná relace obsahuje všechny kombinace tuplů z obou relací, které mají stejné hodnoty ve sloupcích, podle kterých se spojují.
+- Přirozené spojení je operace, která kombinuje dvě tabulky na základě společných atributů (sloupců). 
+- Přirozené spojení automaticky porovnává všechny sloupce, které mají stejný název v obou tabulkách, a vrací pouze ty řádky, které se shodují ve všech těchto sloupcích.
 ```sql
 SELECT table1.*,
        table2.column1,

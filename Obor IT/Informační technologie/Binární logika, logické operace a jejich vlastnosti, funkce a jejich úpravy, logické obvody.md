@@ -1,33 +1,36 @@
 ### Binární logika
-- Formální logický základ: výroková logika - zkoumá pravdivostní hodnotu výroků (pravda/nepravda, spojky/operátory $\rightarrow, \vee, \wedge, \leftrightarrow, \neg$)
+- Je to výroková logika, která zkoumá pravdivostní hodnotu výroků (pravda/nepravda) a používá logické operátory jako $\rightarrow, \vee, \wedge, \leftrightarrow, \neg$.
 - Výroky jako logické výrazy vyhodnocované na hodnoty (pravda/nepravda, $1/0$)
-- Matematický aparát pro práci s dvouhodnotovými log. výrazy: Booleova algebra (binární/dvouhodnotová logika)
-- Fyzická realizace: (elektronické binární) logické obvody - základ digitálních zařízení
+- Pro práci s dvouhodnotovými logickými výrazy se používá **Booleova algebra**, což je základ binární logiky
+- **Fyzická realizace**: Binární logika se fyzicky realizuje prostřednictvím elektronických binárních logických obvodů, které jsou základem digitálních zařízení.
 
-- Logická proměnná $x$
-	- Veličina nabývající dvou možných diskrétních logických hodnot: $0$ a $1$
-	- definice: $x = 1$, jestliže $x \neq 0$ a $x = 0$, jestliže $x \neq 1$
+- **Logická proměnná $x$**
+	- Může nabývat dvou možných diskrétních logických hodnot:  $0$ a $1$
+	- definice: $x = 1$, jestliže $x \neq 0$ a $x = 0$, jestliže $x \neq 1$.
 
-- Logická funkce $f(x_{1}, ..., x_{n})$
-	- Funkce $n$ logických proměnných $x_{1}, ..., x_{n}$ (= $n$-ární funkce) nabývající dvou možných diskrétních hodnot $0$ a $1$
+- **Logická funkce $f(x_{1}, ..., x_{n})$**
+	- Funkce $n$ logických proměnných $x_{1}, ..., x_{n}$ nabývající dvou možných diskrétních hodnot $0$ a $1$
 	- Logická proměnná = logická funkce identity proměnné, skládání funkcí
-	- základní = logické operace
+	- Základními logickými operacemi jsou např. AND ($\wedge$), OR ($\vee$), NOT ($\neg$), atd.
 
-- Booleova algebra (binární logika)
-	- Algebra ("Matematika") logických proměnných a logických funkcí
-	- Dvouhodnotová algebra, algebra dvou stavů
+- **Booleova algebra (binární logika)**
+	- **Algebra logických proměnných a funkcí**: Zahrnuje práci s logickými proměnnými a logickými funkcemi pomocí matematických principů.
+	- Používá pouze dvě hodnoty, $0$ a $1$.
 	- Relace rovnost: $f = g$, právě když $(f = 1$ a $g = 1)$ nebo $(f = 0$ a $g = 0)$
 
-- Logický výraz
-	- Korektně vytvořená posloupnost (symbolů) logických proměnných a funkcí (operátorů) spolu se závorkami
-	- Priority sestupně: negace, log. součin, log. součet
-	- = zápis logické funkce
+- **Logický výraz**
+	- **Definice**: Správně vytvořená posloupnost symbolů logických proměnných a funkcí (operátorů), spolu se závorkami.
+	- Priority sestupně: negace($\neg$), log. součin($\wedge$), log. součet()
+	- **Význam**: Slouží k zápisu logické funkce.
 
-- Logická rovnice
-	- dva logické výrazy v relaci rovnost $=$
+- **Logická rovnice**
+	- **Definice**: Rovnost dvou logických výrazů.
 	- ekvivalentní úpravy = zachování (pravdivosti rovnosti výrazů: např. negace obou stran, logický součin/součet obou stran se stejným výrazem, ..., log. funkce obou stran se stejnými ostatními operandy funkce
-	- NEekvivalentní úpravy: "krácení" obou stran o stejný (pod)výraz
-		- např $x + y = x + z$ není ekvivalentní s $y = z$ 
+	- **Ekvivalentní úpravy**: Změny, které zachovávají pravdivost rovnice, například:
+		- Negace obou stran.
+		- Logický součin nebo součet obou stran se stejným výrazem.
+		- Použití stejné logické funkce na obě strany s identickými ostatními operandy.
+	- **Neekvivalentní úpravy**: Změny, které mohou narušit pravdivost rovnice, například “krácení” obou stran o stejný podvýraz.
 
 ### Axiomy (Booleovy algebry)
 - Komutativa:  $x \cdot y = y \cdot x \qquad x + y = y + x$
@@ -92,7 +95,7 @@
 ## Logické obvody
 - **jeden výstup**: realizace jedné log. funkce
 - **více výstupů**: realizace více log. funkcí zároveň → realizace vícebitové log. funkce ${^n}f$
-- **n-tice vstupů**: reprezentace vícebitových (n-bitových) log. proměnných  ${^n}x$ = vícebitový log. obvod
+- **n-tice vstupů**: reprezentace vícebitových (n-bitových) log. proměnných  $x^{n}$ = vícebitový log. obvod
 
 - **kombinační:** stavy na výstupech obvodu (tj. funkční hodnota) závisí pouze na okamžitých stavech na vstupech (tj. hodnotách proměnných)
 - **sekvenční:** stavy na výstupech obvodu (tj. funkční hodnota) závisí nejen na okamžitých stavech na vstupech (tj. hodnotách proměnných), ale také na předchozích stavech na vstupech

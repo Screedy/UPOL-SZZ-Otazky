@@ -1,11 +1,11 @@
 - Analýza kvality webové stránky je klíčová pro zajištění její funkčnosti, uživatelské přívětivosti a optimalizace pro vyhledávače
 - Vyhledávače můžou brát v potaz **kvalitu webové** stránky při vyhledávání
-#### Kvalitu webové stránky je určena aspekty jako:
-- Přístupnost
-- Uživatelská přívětivost (kvalita UX)
-- Syntaktická správnost
-- Sémantická správnost
-- Rychlost načtení stránky
+- **Kvalita webové stránky je určena aspekty jako:**
+	- Přístupnost
+	- Uživatelská přívětivost (kvalita UX)
+	- Syntaktická správnost
+	- Sémantická správnost
+	- Rychlost načtení stránky
 ## Nástroje a možnosti měření
 - **Google PageSpeed Insights**, **Lighthouse**, **WebAIM**
 - Pro měření kvality webových stránek existuje řada nástrojů, které umožňují analyzovat různé aspekty, jako jsou rychlost načítání, SEO, přístupnost a další

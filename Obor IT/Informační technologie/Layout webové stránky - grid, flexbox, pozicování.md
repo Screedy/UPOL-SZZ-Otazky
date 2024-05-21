@@ -335,7 +335,7 @@ grid-column: x;
 #### Sticky pozicování
 - chová se jako relativně pozicováný ale pokud je odrolován mimo okno začne se chovat fixně
 #### Překrytí elementů
-- překrytí řídí normál flow
+- překrytí řídí normal flow
 - Změnit pořadí překrytí je možné pomocí `z-index`
 - hodnota je celé číslo (i záporné)
 - větší číslo překryje menší

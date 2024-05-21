@@ -2,7 +2,7 @@
 - Regulární výrazy jsou **vzory**, které odpovídají určitým sadám řetězců a umožňují **komplexní vyhledávání** a **nahrazení** v textových datech. 
 - Regex umožňuje specifikovat, jaký text by měl být nalezen pomocí různých symbolů, které reprezentují znaky nebo skupiny znaků.
 
-### Základní komponenty regulárních výrazů:
+### Základní komponenty regulárních výrazů
 - **Literály**: Jsou obyčejné znaky, které odpovídají sami sobě, například `a`, `1`, `B`.
 - **Metaznaky**: Mají speciální význam, jako např.:
     - `.`: Jakýkoliv jeden znak. (kromě nového řádku)
@@ -18,7 +18,7 @@
     - `[]`: Umožňují definovat sadu znaků, z nichž kterýkoliv může být shodný. Například `[abc]` odpovídá `a`, `b`, nebo `c`.
     - `()`: Skupinování více znaků nebo výrazů do jednoho celku pro operace jako je kvantifikace (`*`, `+`, `?`) nebo pro zachytávání podvýrazů.
 
-### Příklady použití regulárních výrazů:
+### Příklady použití regulárních výrazů
 - **grep** - hledání v souborech
 	- Najde všechny řádky, které začínají slovem "Error":
 ```bash

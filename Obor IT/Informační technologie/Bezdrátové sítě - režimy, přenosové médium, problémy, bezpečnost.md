@@ -86,7 +86,7 @@
 	1. Pomocí **sdíleného hesla** (**personal**)
 	2. **autentizační protokol** (**enterprise**) - až od **WPA2**
 - **Šifrování**
-	- Šifrují se rámce, data a kontrolní součet rámce
+	- Šifrují se rámce, data a kontrolní součty rámce
 	- u WPA2/3 se šifrují i některé hlavičky
 - **WPS** (Wi-Fi Protected Setup)
 	- generování a distribuce SSID a nastavení zabezpečení z AP na stanice

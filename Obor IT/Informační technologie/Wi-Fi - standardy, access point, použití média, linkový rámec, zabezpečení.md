@@ -28,6 +28,8 @@
 	- rychlosti až 7/40 Gb/s
 
 ## AP
+- Access Point je zařízení, které umožňuje bezdrátovým zařízením připojit se k síti. 
+- Funguje jako most mezi bezdrátovou a kabelovou sítí.
 
 ## Použití média
 - Wi-Fi používá **rádiové vlny** pro přenos dat mezi zařízeními. 
@@ -64,7 +66,7 @@
 	2. **vysílající** stanice
 	3. **přijemce/odesílatel** v infrastruktuře
 	4. pokud se jedná o komunikaci **mezi více sítěmi**
-		- V takovém případě by **3. adresa byl příjemce** a **4. adesílatel**
+		- V takovém případě by **3. adresa by byla příjemce** a **4. odesílatel**
 ![[MacBook-2024-04-19-001052.png]]
 
 - řídící pole (frame control field expanded)

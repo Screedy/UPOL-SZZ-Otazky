@@ -149,8 +149,7 @@ body { color: white; }
 >	<h2 class="title title-article">dolor sit amet</h2>
 ></article>
 >```
-
- CSS
+>```CSS
 >/* vlastnosti pro všechny nadpisy */ 
 >.title { 
 >	color: gray; 
@@ -162,7 +161,7 @@ body { color: white; }
 >	color: gold; 
 >	border-color: gold; 
 >}
->
+>```
 
 **Základní principy:**
 - vyčlenění **společných vlastností** do jedné třídy, úprava pro specifické části jsou určený dalšími CSS pravidly které upravují jen určité atributy

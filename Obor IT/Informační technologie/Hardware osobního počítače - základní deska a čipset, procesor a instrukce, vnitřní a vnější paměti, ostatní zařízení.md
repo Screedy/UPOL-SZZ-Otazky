@@ -32,7 +32,7 @@
 			- SATA, NVMe, IDE, ...
 - **Chipset**:
 	- koordinuje přenos dat mezi procesorem, pamětí, grafickými kartami, pevnými disky a dalšími periferiemi
-	- Skládá z jednoho nebo více integrovaných obvodů, které fungují jako most mezi různými komponentami počítače.
+	- Skládá se z jednoho nebo více integrovaných obvodů, které fungují jako most mezi různými komponentami počítače.
 	- V moderních počítačích může chipset rovněž řídit některé dodatečné funkce, jako je správa energie a interakce s externími zařízeními.
 	1. **Severní můstek** (Northbridge)
 	    - **Úloha**: Severní můstek byl zodpovědný za řízení vysokorychlostní komunikace mezi CPU, GPU a RAM. 

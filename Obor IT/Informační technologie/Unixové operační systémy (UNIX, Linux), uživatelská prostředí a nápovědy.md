@@ -1,6 +1,14 @@
 ## Unixové operační systémy (UNIX, Linux)
-- **UNIX**: Jde o **komerční** operační systém s **otevřeným** **zdrojovým** kódem a různými implementacemi jako je Solaris (Oracle), AIX (IBM), HP-UX (Hewlett-Packard) a další.
-- **Linux**: Jedná se o **volně dostupný** a **otevřený** operační systém, který je k dispozici v mnoha distribucích, jako jsou Ubuntu, Fedora, Debian, CentOS a další. Linux je často preferován pro servery, desktopová prostředí a vestavěné systémy.
+- **UNIX**: 
+	- UNIX je rodina víceuživatelských, víceúlohových operačních systémů, které byly původně vyvinuty v Bellových laboratořích na konci 60. let.
+	- Jde o **komerční** operační systém s **otevřeným** **zdrojovým** kódem a různými implementacemi jako je Solaris (Oracle), AIX (IBM), HP-UX (Hewlett-Packard) a další.
+	- UNIX byl jeden z prvních operačních systémů, který byl napsán v jazyce C, což umožnilo snadnější přenositelnost mezi různými hardwarovými platformami.
+- **Linux**: 
+	- Jedná se o **volně dostupný** a **otevřený** operační systém, který je k dispozici v mnoha distribucích, jako jsou Ubuntu, Fedora, Debian, CentOS a další. Linux je často preferován pro servery, desktopová prostředí a vestavěné systémy.
+	- Linux je open-source operační systém, který byl inspirován UNIXem. 
+	- Byl vytvořen Linusem Torvaldsem v roce 1991. 
+	- Linux sdílí mnoho vlastností s UNIXem, ale má některé své vlastní unikátní rysy jako je **otevřený zdrojový kód**, **rozmanitost distribucí**, **velká podpora komunity**
+
 
 ## Uživatelská Prostředí
 - **Shell**: Je **textovým uživatelským rozhraní** systému. Běžné shell: **Bash**, **sh**, csh, zsh a další.

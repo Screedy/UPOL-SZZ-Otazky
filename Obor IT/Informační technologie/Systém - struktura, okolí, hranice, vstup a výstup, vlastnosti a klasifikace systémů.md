@@ -30,9 +30,9 @@
 - **Výstup systému** - množina vazeb či proměnných, pomocí kterých **systém působí na okolí**.
 
 ## Vlastnosti systému
-- **Chování**:
-	- Projev dynamiky systému. 
-	- **Dynamika** je **schopnost** vyvolat **změnu** v systému. 
+- **Dynamika (chování)**:
+	- Projev dynamiky systému (**schopnost** vyvolat **změnu** v systému).
+	- Schopnost systému se měnit a přizpůsobovat se v čase.
 	- Např. změna stavu systému
 - **Stav systému**:
 	- Souhrn hodnot jeho atributů, vlastností, které lze pozorovat v daný časový okamžik za přesně definovaných podmínek 
@@ -42,6 +42,12 @@
 	- Nebo také **změna propojení prvků** systému.
 - **Stabilita**:
 	- Schopnost systému **udržet si nezměněné chování i přes působení okolí**, změně vstupů a přes působení procesů probíhajících uvnitř systémů. 
+- **Adaptabilita**:
+	- Schopnost systému se přizpůsobit změnám v okolí nebo v samotném systému.
+- **Komplexnost**:
+	- Míra složitosti systému, často určena počtem a typem prvků a vazeb mezi nimi.
+- **Redundance**:
+	- Přítomnost nadbytečných prvků nebo kapacit, které zvyšují spolehlivost systému.
 ## Klasifikace Systému
 
 ### Otevřenost

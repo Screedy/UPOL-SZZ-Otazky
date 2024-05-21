@@ -16,7 +16,7 @@
 - **Big-endian**: nejvýznamnější byte je uložen na nejnižší adresu a další byty jsou uloženy v následujících vyšších adresách
 	- často používají například síťové protokoly jako je IP
 - **Little-endian**: nejméně významný byte je uložen na nejnižší adresu a další byty jsou uloženy v následujících vyšších adresách
-	- často používán v osobních počítacích s procesory Intel a AMD využívající platformu x86
+	- často používán v osobních počítačích s procesory Intel a AMD využívající platformu x86
 - **Mixed-endian**: mohou používat kombinaci předchozích
 	- využíván na platformě ARM
 
