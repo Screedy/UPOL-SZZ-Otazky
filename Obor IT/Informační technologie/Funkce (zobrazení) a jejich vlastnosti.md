@@ -1,6 +1,6 @@
 ### Pojem funkce
 - Nechť $X, Y$ jsou neprázdné množiny a $f$ je binární relace mezi množinami $X$ a $Y$.
-- Relace $f$ se nazývá **zobrazení $X$ do $Y$**, má-li tyto vlastnosti:
+- Relace $R$ se nazývá **zobrazení $X$ do $Y$**, má-li tyto vlastnosti:
 	- **pro každé $x \in X$ existuje $y \in Y$ tak, že $<x,y> \in R$**
 	- **pro každé $x \in X$ a $y_{1}, y_{2} \in Y$ platí, že $<x,y_{1}> \in R$ a $<x,y_{2}> \in R \rightarrow y_{1} = y_{2}$**
 - Funkce je matematickým protějškem k pojmu přiřazení
