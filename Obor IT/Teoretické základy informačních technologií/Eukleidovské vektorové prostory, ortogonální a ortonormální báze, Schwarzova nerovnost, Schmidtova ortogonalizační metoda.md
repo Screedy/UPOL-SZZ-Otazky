@@ -30,7 +30,7 @@ $$
 - Platí, že $\cos \varphi(\vec{u}, \vec{v})=\frac{\vec{u} \cdot \vec{v}}{\|\vec{u}\| \cdot\|\vec{v}\|}$, kde $0 \leq \varphi \leq \pi$.
 
 ### Ortogonální(kolmé) vektory
-- Vektory $\vec{u}$ a $\vec{v}$ jsou **navzájem ortogonální**, pokud je **jejich skalární součin roven nule**, tj. pokud $\vec{u} \cdot \vec{v}=0$. Píšeme $u \perp v$. 
+- Vektory $\vec{u}$ a $\vec{v}$ jsou **navzájem ortogonální**, pokud je **jejich skalární součin roven nule**, tj. pokud $\vec{u} \cdot \vec{v}=0$. Píšeme $\vec{u} \perp \vec{v}$. 
 >[!Tip]
 >- To zřejmě nastane pokud je jeden z těchto vektorů nulový vektor $0 \in R^n$ nebo pokud svírají tyto vektory pravý úhel, tj. $\cos \varphi=0$ neboli $\varphi(\vec{u}, \vec{v})=\frac{\pi}{2}$
 
@@ -48,7 +48,7 @@ $$
 >- Chci z nich udělat navzájem kolmé vektory. A pak je chci **ortonormalizovat** - aby byly **všechny stejně dlouhé**.
 
 >[!Example] Příklad
->- Vektorový prostor, který je generovaný bází $V=\left[\left\{\vec{u}_1, \vec{u}_2, \vec{u}_3\right\}\right]$ budeme chtít převést na $V=\left[\left\{\vec{w}_1, \vec{w}_2, \vec{w}_3\right\}\right]$ tak abychom věděli, že $v_i \perp v_j$ pro $\forall i, j \in\{1,2,3\}$ kde $i \neq j$ 
+>- Vektorový prostor, který je generovaný bází $V=\left[\left\{\vec{u}_1, \vec{u}_2, \vec{u}_3\right\}\right]$ budeme chtít převést na $V=\left[\left\{\vec{w}_1, \vec{w}_2, \vec{w}_3\right\}\right]$ tak abychom věděli, že $\vec{w_i} \perp \vec{w_j}$ pro $\forall i, j \in\{1,2,3\}$ kde $i \neq j$ 
 >- **Postup:**
 >	1. $\vec{w_{1}} = \vec{u_{1}}$
 >	2. $\vec{w_{2}} = \vec{u_{2}} - \frac{\vec{u_{2}} \circ \vec{w_{1}}}{\vec{w_{1}} \circ \vec{w_{1}}} \cdot \vec{w_{1}}$
