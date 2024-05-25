@@ -42,5 +42,65 @@
 	- množina koncových stavů $F'$ zvolíme podle účelu $A_{1} \times A_{2}$
 ---
 - Nechť $L_{1} = L(A_{1})$ a $L_{2}(A_{2})$, pak pro ověření:
-	- $L_{1} = L_{2}$ zvolím $F'= \set{<q_{1}, q_{2}>| (q_{1} \in F_{1} \land q_{2} \notin F_{2}) \lor (q_{1} \notin F_{1} \land q_{2} \in F_{2})}$ a pokud $L(A_{1} \times A_{2}) = \varnothing$, pak $L_{1} = L_{2}$
-	- $L_{1} \subseteq L_{2}$ zvolím
+	- $L_{1} = L_{2}$ zvolím $F'= \set{<q_{1}, q_{2}>|\ (q_{1} \in F_{1} \land q_{2} \notin F_{2}) \lor (q_{1} \notin F_{1} \land q_{2} \in F_{2})}$ a pokud $L(A_{1} \times A_{2}) = \varnothing$, pak $L_{1} = L_{2}$
+	- $L_{1} \subseteq L_{2}$ zvolím $F'=\set{<q_{1}, q_{2}>|\ (q_{1} \in F_{1} \land q_{2} \notin F_{2})}$ a pokud $L(A_{1} \times A_{2}) = \varnothing$, pak $L_{1} \subseteq L_{2}$
+	- $L_{1} \cap L_{2}$ zvolím $F'=\set{<q_{1}, q_{2}> |\ (q_{1} \in F_{1} \land q_{2} \in F_{2})}$
+	- $L_{1} \cup L_{2}$ zvolím $F'=\set{<q_{1}, q_{2}> |\ (q_{1} \in F_{1} \lor q_{2} \in F_{2})}$
+	- $L_{1} - L_{2}$ zvolím $F'=\set{<q_{1}, q_{2}> |\ (q_{1} \in F_{1} \land q_{2} \notin F_{2})}$
+
+### Uzavřenost na sjednocení
+- Pokud jsou $L$ a $M$ regulurní jazyky, pak též $L \cup M$ je regulární jazyk
+- Důkaz: Již podle definice regulárních jazyků, nebo mohu sestrojit součinový DFA
+
+### Uzavřenost na konkatenaci
+- Pokud jsou $L$ a $M$ regulární jazyky, pak též $L.M$ je regulární jazyk
+>[!tip]- Důkaz
+>- Již podle definice regulárních jazyků, nebo![[MacBook-2024-05-25-001334.png]]
+
+### Uzavřenost na Kleeneho uzávěr
+- Pokud je $L$ regulární jazyk, pak též $L^{*}$ je regulární jazyk
+>[!tip]- Důkaz
+>- Již podle definice regulárních jazyků, nebo![[MacBook-2024-05-25-001335.png]]![[MacBook-2024-05-25-001336.png]]
+
+### Uzavřenost na průnik
+- Pokud jsou $L$ a $M$ regulární jazyky, pak též $L \cap M$ je regulární jazyk
+>[!tip]- Důkaz
+>- Mohu sestrojit součinový DFA![[MacBook-2024-05-25-001337.png]]
+
+### Uzavřenost na rozdíl
+- Pokud jsou $L$ a $M$ regulární jazyky, pak též $L-M$ je regulární jazyk
+>[!tip]- Důkaz
+>- Mohu sestrojit součinový DFA![[MacBook-2024-05-25-001338.png]]
+
+### Uzavřenost na komplement
+- Pokud je $L$ regulární jazyk, pak též co-$L$ je regulární jazyk
+>[!tip]- Důkaz
+>- Lze uvést konstruktivní důkaz:
+>	- Nechť $L$ je regulární jazyk nad abecedou $\Sigma$, rozpoznávaný deterministickým  konečným automatem $A=(Q, \Sigma, \delta, q, F)$. 
+>	- Pak jazyk co-$L$ je rozpoznávaný konečným automatem co-$L=(Q, \Sigma, \delta, q, Q-F)$
+
+### Uzavřenost na reverz
+- Pokud je $L$ regulární jazyk, pak též $L^{R}$ je regulární jazyk
+>[!tip]- Důkaz
+>- Nechť $E$ je regulární výraz pro $L$, ukážeme, jak reverzovat $E$, čímž sestrojíme regulární výraz $E^{R}$ pro $L^{R}$
+>	- Základ: Pokud je $E$ symbol $a, \epsilon,$ či $\varnothing$, pak $E^{R} = E$
+>	- Indukce: Pokud je $E$
+>		- $F+G$, pak $E^{R} = F^{R} + G^{R}$
+>		- $FG$, pak $E^{R} = G^{R}F^{R}$
+>		- $F^{*}$, pak $E^{R} = (F^{R})^{*}$
+
+### Uzavřenost na homomorfismus
+- Pokud je $L$ regulární jazyk a $h$ homomorfismus na jeho abecedě, pak $h(L) = \set{h(w) |\ w \text{ je v } L}$ je též regulární jazyk
+- Důkaz u inverzního homomorfismu
+
+### Uzavřenost na inverzní homomorfismus
+- Třída regulárních jazyků je uzavřena vůči homomorfismu a inverznímu homomorfismu
+- Nechť $h$ je homomorfismus a $L$ jazyk, jehož abeceda je výstupní jazyk $h$
+- $h^{-1}(L) = \set{w |\ h(w) \text{ leží v } L}$
+>[!tip]- Důkaz
+>- ![[MacBook-2024-05-25-001339.png]]
+
+##### Navigace
+Předchozí:  [[Formální jazyky a jejich hierarchie]]
+Následující: [[Konečné automaty deterministické a nedeterministické]]
+Celý okruh: [[1. Teoretické základy informatiky]]
