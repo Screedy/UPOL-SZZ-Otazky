@@ -58,7 +58,6 @@
 >![[MacBook-2024-05-26-001345.png]]
 - Nedeterminismus lze dobře využít jako popisný prostředek, nemá však vliv na výpočetní sílu konečných automatů. Ke každému nedeterministickému konečnému automatu totiž ve skutečnosti existuje ekvivalentní deterministický automat, který lze dokonce algoritmicky zkonstruovat.
 
-
 ##### Navigace
 Předchozí:  [[Regulární jazyky (definice, uzávěrové vlastnosti)]]
 Následující: [[Regulární výrazy, automaty s e-přechody]]
