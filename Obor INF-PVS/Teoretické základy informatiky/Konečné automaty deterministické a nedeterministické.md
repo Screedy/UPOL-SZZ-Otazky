@@ -1,6 +1,6 @@
 ## Deterministický konečný automat
 >[!info] Definice
->- Deterministický konečný automat $M$ je uspořádaná pětice $M = (Q, \Sigma, \delta, q_{0}, F)$, kde:
+>- **Deterministický konečný automat** $M$ je uspořádaná pětice $M = (Q, \Sigma, \delta, q_{0}, F)$, kde:
 >	- $Q$ je neprázdná konečná množina stavů
 >	- $\Sigma$ je konečná množina vstupních symbolů, nazývaná také vstupní abeceda
 >	- $\delta$ je přechodová funkce ve stavu $\delta : Q \times \Sigma \rightarrow Q$
@@ -34,6 +34,29 @@
 - Základním trikem, který dokáže zjednodušit návrh konečného automatu, je zavedení jisté pomocní struktury na stavech. Informaci, která je spojená s daným stavem, je účelné zachytit v jeho označení.
 >[!Example] Příklad
 >- Máme za úkol sestrojit automat rozpoznávající jazyk $$L=\set{w \in \set{a,b}^{*} |\ w \text{ obsahuje podslovo abaa}}$$![[MacBook-2024-05-26-001344.png]]
+
+## Konečný nedeterministický automat
+- Jediný rozdíl je v tom, že **nedeterministický** automat **nemusí mít pro daný stav a vstupní symbol určen následující stav jednoznačně**. Slovo $w$ bude akceptování, pokud alespoň jeden z možných výpočtů nad slovem $w$ skončí v koncovém stavu.
+
+>[!info] Definice
+>- **Nedeterministický konečný automat $M$** je **uspořádaná pětice $M=(Q, \Sigma, \delta, q_{0}, F)$**
+>	- $Q$ je neprázdná konečná množina stavů
+>	- $\Sigma$ je konečná množina vstupních symbolů, nazývaná také vstupní abeceda
+>	- $\delta$ je přechodová funkce ve tvaru $\delta : Q \times \Sigma \rightarrow 2^{Q}$
+>	- $q_{0} \in Q$ je počáteční stav
+>	- $F \subseteq Q$ je množina koncových/akceptujících stavů
+
+- Abychom mohli definovat jazyk přijímaný daným NFA M, zavedeme **rozšíčenou přechodovou funkci** $\hat{\delta}: Q \times \Sigma^{*} \rightarrow 2^{Q}$, definovanou induktivně vzhledem k délce slova ze $\Sigma^{*}$:
+	- $\hat{\delta}(q, \epsilon)=\set{q}$, pro každý stav $q \in Q$
+	- $\hat{\delta}(q, wa)=\cup_{p \in \hat{\delta}(q,w)} \delta (p,a)$
+- Jazyk přijímaný NFA M je definován takto: $$L(M)=\set{w \in \Sigma^{*}|\ \hat{\delta}(q_{0}, w) \cap F \neq 0}$$
+- Nedeterminismus je velmi silná popisný aparát, který často umožňuje zachytit strukturu jazyka elegantním a přirozeným způsobem.
+>[!Example] Příklad
+>- $L=\set{w \in \set{a,b}^{*} |\ w \text{ obsahuje podslovo abba nebo bab}}$
+>- Navrhnout DFA, který rozpoznává $L$, není zcela triviální.
+>- Naopak nederministický automat lze zkonstruovat snadno
+>![[MacBook-2024-05-26-001345.png]]
+- Nedeterminismus lze dobře využít jako popisný prostředek, nemá však vliv na výpočetní sílu konečných automatů. Ke každému nedeterministickému konečnému automatu totiž ve skutečnosti existuje ekvivalentní deterministický automat, který lze dokonce algoritmicky zkonstruovat.
 
 
 ##### Navigace
