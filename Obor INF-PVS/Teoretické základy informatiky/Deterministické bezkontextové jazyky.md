@@ -7,3 +7,8 @@
 
 >[!Example] Příklad
 >![[MacBook-2024-05-29-001400.png]]
+
+##### Navigace
+Předchozí:  [[Deterministické zásobníhové automaty]]
+Následující: [[Turingův stroj, nedeterministický TS]]
+Celý okruh: [[1. Teoretické základy informatiky]]
