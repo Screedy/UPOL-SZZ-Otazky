@@ -68,7 +68,7 @@
 - Bezkontextový jazyk $L$ je prázdný.
 	- Umíme odstranit neterminály, které negenerují žádný terminální řetězec, jestliže je počáteční symbol jeden z nich, pak je bezkontextový jazyk prázdný; jinak ne
 - Bezkontextový jazyk $L$ je nekonečný.
-	- Použij konstantu $n$ z pupming lemmatu.
+	- Použij konstantu $n$ z pumping lemmatu.
 	- Jestliže existuje řetězec v jazyku délky mezi $n$ a $2n-1$, pak je jazyk nekončený; jinak je konečný.
 
 ### Uzávěrové vlastnosti bezkontextových jazyků
