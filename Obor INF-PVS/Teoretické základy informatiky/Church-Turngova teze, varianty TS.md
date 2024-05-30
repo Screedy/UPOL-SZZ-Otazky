@@ -3,8 +3,7 @@
 
 >[!info] Definice problém
 >- Problém **je určen trojicí $(IN, OUT, p)$**, kde $IN$ je množina (přípustných) vstupů, $OUT$ je množina výstupů a $p : IN \rightarrow OUT$ je funkce přiřazující každému vstupu odpovídající výstup
-
-- Algoritmus $A$ řeší problém $P$ zadaný trojicí $(IN, OUT, p)$ spolu s dohodnutým kódováním vstupů a výstupů (tj. prvků množin $IN$ a $OUT$), jestliže **je schopen přijmout** (přečíst) kód jakéhokoli vstupu $x$ z množiny $IN$ a **vydat k němu po konečném počtu kroků kód výstupu $y$** z množiny $OUT$, pro nějž $y = p(x)$.
+>- Algoritmus $A$ řeší problém $P$ zadaný trojicí $(IN, OUT, p)$ spolu s dohodnutým kódováním vstupů a výstupů (tj. prvků množin $IN$ a $OUT$), jestliže **je schopen přijmout** (přečíst) kód jakéhokoli vstupu $x$ z množiny $IN$ a **vydat k němu po konečném počtu kroků kód výstupu $y$** z množiny $OUT$, pro nějž $y = p(x)$.
 
 ## Church-Turingova teze
 >[!info] Teze
