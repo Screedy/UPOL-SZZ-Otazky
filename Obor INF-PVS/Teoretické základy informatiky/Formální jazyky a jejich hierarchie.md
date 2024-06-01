@@ -17,7 +17,7 @@
 - Množinu všech neprázdných slov $\Sigma^{+}$
 >[!Example] Příklad
 >- $\set{a}^{*} = \set{\epsilon,a,aa,aaa,aaaa,...}$
->- $\set{a}^{+} = \set{a}^{*}\\ \set{\epsilon}$
+>- $\set{a}^{+} = \set{a}^{*}$\\$\set{\epsilon}$
 >- $\set{0,1}^{*} = \set{\epsilon,0,1,00,01,10,11,000,001,011,...}$
 - Definitoricky dále klademe $\varnothing^{*}=\set{\epsilon}$ a $\varnothing^{+}=\varnothing$
 - Na každé dvě slova $u, v$ lze aplikovat **binární operaci zřetězení**, která je definována $u.v=uv$
@@ -132,9 +132,9 @@
 
 #### Typ 3
 - Též **regulární**, pravolineární
-- Gramatika je typu $3$, jestliže kažřdé její pravidlo je tvaru $A \rightarrow aB$ nebo $A \rightarrow a$ s eventuelní výjimkou pravidla $S \rightarrow \epsilon$, pokud se $S$ nevyskytuje na pravé straně žádného pravidla
+- Gramatika je typu $3$, jestliže každé její pravidlo je tvaru $A \rightarrow aB$ nebo $A \rightarrow a$ s eventuelní výjimkou pravidla $S \rightarrow \epsilon$, pokud se $S$ nevyskytuje na pravé straně žádného pravidla
 ---
-- Hierarchie gramatik také určuje příslučnou hierarchii jazyků
+- Hierarchie gramatik také určuje příslušnou hierarchii jazyků
 - Z definice je patrné, že každý nový typ gramatiky v Chomského hierarchii je specifikován **zavedením dalších omezujících podmínek** na typ předchozí
 
 >[!Example] Příklad

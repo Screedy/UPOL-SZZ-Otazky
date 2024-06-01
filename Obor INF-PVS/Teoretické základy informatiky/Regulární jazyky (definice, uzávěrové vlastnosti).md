@@ -13,7 +13,7 @@
 >- Je tedy vidět, že každý regulární jazyk lze popsat určením elementárních jazyků a předpisu, který určuje jak na tyto jazyky aplikovat regulární operace.
 
 >[!Example] Příklad regulárního jazyku
->- $L_{R} = \set{w \in \set{0,1}^{*}| w \text{nahlíženo jako binární číslo je dělitelné } 23}$
+>- $L_{R} = \set{w \in \set{0,1}^{*}| w \text{ nahlíženo jako binární číslo je dělitelné } 23}$
 >	- $23$ stavů pojmenovaných $0, 1, ..., 22$ - odpovídají $23$ zbytkům po dělení $23$
 >	- počáteční a jediný koncový stav je $0$
 
