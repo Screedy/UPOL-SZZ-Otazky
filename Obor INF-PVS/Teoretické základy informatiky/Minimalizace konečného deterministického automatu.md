@@ -6,7 +6,7 @@
 - **Nerozlišitelnost stavů** "$\equiv$" je binární relace na množině stavů $Q$, která je navíc ekvivalence
 	- Pro každé $p,q,r \in Q$ platí
 		- **reflexivní:** $p$ je **nerozlišitelné** s $p$
-		- **symetrická**: když $p$ je **nerozlišitelné** se $q$, tak $q$ je **nerozlišitelné** s $p$
+		- **symetrická**: když $p$ je **nerozlišitelné** s $q$, tak $q$ je **nerozlišitelné** s $p$
 		- **tranzitivní**: když $p$ je **nerozlišitelné** s $q$ a $q$ je **nerozlišitelné** s $r$, pak $p$ je **nerozlišitelné** s $r$
 
 - Pro stavy výsledného minimálního DFA $A_{m}$ platí, že jsou to třídy $\equiv$ a množina stavů $A_{m}$ tvoří rozklad $Q$ podle $\equiv$ (předpokládáme, že $A$ nemá nedosažitelné stavy)
@@ -22,7 +22,7 @@
 >[!Example] Příklad
 >- minimalizujte DFA zadaný tabulkou ![[MacBook-2024-05-26-001348.png| 400]]
 >1. Označím dvojice $<p,q>$ takové, že $(p \in F \land q \notin F) \lor (p \notin F \land q \in F)$ ![[MacBook-2024-05-26-001349.png| 400]]
->2. **Můj postup:** Kouknu na volný místa (např. u dvojice $<1,6>$) a kouknu do tabulky, jaké dvojice by museli být označeny, abych mohl označit danou dvojici (tabulka říká buď $<2,6>$ nebo $<3,6>$. A zkontroluju jestli taková není už zaškrtlá (dvojici $<2,6>$ nemáme, ale dvojici $<3,6>$ máme zaškrtlou, takže můžu zašktnout i $<1,6>$). Když pro nějakou ještě nemám zašktnutou dvojici, tak počkám na konec, může se ještě objevit.)
+>2. **Můj postup:** Kouknu na volné místa (např. u dvojice $<1,6>$) a kouknu do tabulky, jaké dvojice by museli být označeny, abych mohl označit danou dvojici (tabulka říká buď $<2,6>$ nebo $<3,6>$. A zkontroluju jestli taková není už zaškrtlá (dvojici $<2,6>$ nemáme, ale dvojici $<3,6>$ máme zaškrtlou, takže můžu zašktnout i $<1,6>$). Když pro nějakou ještě nemám zašktnutou dvojici, tak počkám na konec, může se ještě objevit.)
 >   ![[MacBook-2024-05-26-001350.png| 400]]
 >3. ![[MacBook-2024-05-26-001351.png| 400]]
 >4. ![[MacBook-2024-05-26-001352.png| 400]]

@@ -21,14 +21,13 @@
 >  $\ \ \delta (q_{1},a)=q_{2}\ \ \ \ \delta (q_{1}, b)=q_{0}$
 >  $\ \ \delta (q_{2},a)=q_{0}\ \ \ \ \delta (q_{2}, b)=q_{1}$
 >  Pak $L(\mathcal{M})=\set{w \in \set{a,b}^{*} |\ (\#_{a}(w)- \#_{b}(w)) \text{ mod } 3=2}$.
-- Automat M je možné reprezentovat pomocí tabulky přechodové funkce:![[MacBook-2024-05-26-001341.png| 350]]
-- Stavy automatu jsou vypsány v záhlaví řádků, vstupní symboly v záhlaví sloupců, přechodová funkce je určena obsahem vnitřních polí tabulky, počáteční stav je označen znakem $\rightarrow$ a koncové stavy znakem $\leftarrow$.
-- Ještě přehlednější(a proto nejčastěji používaná) je reprezentace pomocí přechodového grafu, který pro automat $M$ vypadá takto:![[MacBook-2024-05-26-001342.png| 400]]
-- Stavy odpovídají uzlům, přechodová funkce je znázorněna ohodnocenými hranami, vstupní abeceda je tvořena symboly, kterými jsou hrany ohodnoceny, počáteční stav je označen šipkou a koncové stavy jsou dvojitě zakroužkovány
-
-- Nakonec ještě zmiňme reprezentaci výpočetním stromem. Kočen stromu odpovídá počátečnímu stavu. Z každého uzlu, který není listem vychází právě tolik hran ohodnocených symboly vstupní abecedy, kolik má odpovídající stav následníků (je-li tedy totální, pak právě tolik hran, kolik symbolů má vstupní abeceda). Jestliže nějaký stav odpovídá více uzlům, pak hrany vycházejí jen z jednoho z těchto uzlů.
-- Výpočetním stromem lze reprezentovat jen ty automaty, kde každý stav je tzv. dosažitelný z počátečního stavu
-- Výpočetní strom pro daný automat není určen jednoznačně - může se lišit dle toho, zda jej konstruujeme způsobem, který odpovídá například procházení do hloubky, nebo do šířky, či dalšími možnostmi. ![[MacBook-2024-05-26-001343.png]]
+>- Automat M je možné reprezentovat pomocí tabulky přechodové funkce:![[MacBook-2024-05-26-001341.png| 350]]
+>	- Stavy automatu jsou vypsány v záhlaví řádků, vstupní symboly v záhlaví sloupců, přechodová funkce je určena obsahem vnitřních polí tabulky, počáteční stav je označen znakem $\rightarrow$ a koncové stavy znakem $\leftarrow$.
+>- Ještě přehlednější(a proto nejčastěji používaná) je reprezentace pomocí přechodového grafu, který pro automat $M$ vypadá takto:![[MacBook-2024-05-26-001342.png| 400]]
+>	- Stavy odpovídají uzlům, přechodová funkce je znázorněna ohodnocenými hranami, vstupní abeceda je tvořena symboly, kterými jsou hrany ohodnoceny, počáteční stav je označen šipkou a koncové stavy jsou dvojitě zakroužkovány
+>- Nakonec ještě zmiňme reprezentaci výpočetním stromem. Kočen stromu odpovídá počátečnímu stavu. Z každého uzlu, který není listem vychází právě tolik hran ohodnocených symboly vstupní abecedy, kolik má odpovídající stav následníků (je-li tedy totální, pak právě tolik hran, kolik symbolů má vstupní abeceda). Jestliže nějaký stav odpovídá více uzlům, pak hrany vycházejí jen z jednoho z těchto uzlů.
+>- Výpočetním stromem lze reprezentovat jen ty automaty, kde každý stav je tzv. dosažitelný z počátečního stavu
+>- Výpočetní strom pro daný automat není určen jednoznačně - může se lišit dle toho, zda jej konstruujeme způsobem, který odpovídá například procházení do hloubky, nebo do šířky, či dalšími možnostmi. ![[MacBook-2024-05-26-001343.png]]
 
 ## Konstrukce konečných automatů
 - Základním trikem, který dokáže zjednodušit návrh konečného automatu, je zavedení jisté pomocní struktury na stavech. Informaci, která je spojená s daným stavem, je účelné zachytit v jeho označení.
@@ -46,7 +45,7 @@
 >	- $q_{0} \in Q$ je počáteční stav
 >	- $F \subseteq Q$ je množina koncových/akceptujících stavů
 
-- Abychom mohli definovat jazyk přijímaný daným NFA M, zavedeme **rozšíčenou přechodovou funkci** $\hat{\delta}: Q \times \Sigma^{*} \rightarrow 2^{Q}$, definovanou induktivně vzhledem k délce slova ze $\Sigma^{*}$:
+- Abychom mohli definovat jazyk přijímaný daným NFA M, zavedeme **rozšířenou přechodovou funkci** $\hat{\delta}: Q \times \Sigma^{*} \rightarrow 2^{Q}$, definovanou induktivně vzhledem k délce slova ze $\Sigma^{*}$:
 	- $\hat{\delta}(q, \epsilon)=\set{q}$, pro každý stav $q \in Q$
 	- $\hat{\delta}(q, wa)=\cup_{p \in \hat{\delta}(q,w)} \delta (p,a)$
 - Jazyk přijímaný NFA M je definován takto: $$L(M)=\set{w \in \Sigma^{*}|\ \hat{\delta}(q_{0}, w) \cap F \neq 0}$$

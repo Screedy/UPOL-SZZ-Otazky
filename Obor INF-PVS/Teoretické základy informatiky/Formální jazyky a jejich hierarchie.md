@@ -1,7 +1,8 @@
 
 ## Abeceda a jazyk
 ### Abeceda
-- libovolná konečná množina $\Sigma$, jejíž prvky nazýváme znaky abecedy
+- libovolná konečná množina $\Sigma$
+- prvky nazýváme **znaky abecedy**
 >[!Example] Příklad abecedy
 >- množina $\set{a,b}$
 >- množina $\set{0,1,...,9}$
@@ -61,7 +62,7 @@
 		- Podle definice zejména platí $\varnothing .M = M.\varnothing = \varnothing$ a $\set{\epsilon}.M = M.\set{\epsilon} = M$ pro libovolný jazyk $M$. Operace zřetězení jazyků je také zřejmě **asociativní**
 	- **$i$-tá mocnina jazyka $L$** je definována induktivně pro každé $i \in N_{0}$:
 		- $L^{0}=\set{\epsilon}$
-		- $L^{i+1} é L.L^{i}$
+		- $L^{i+1} = L.L^{i}$
 	 Zejména tedy $\varnothing^{0}=\set{\epsilon}, \varnothing^{i} = \varnothing$ pro libovolné $i \in N$ a $\set{\epsilon}^{i}=\set{\epsilon}$ pro libovolné $j \in N_{0}$
 	- **Iterace jazyka $L$** je jazyk $L^{*}=\cup_{i=0}^{\infty} L^{i}$
 	- **Pozitivní iterace jazyka $L$** je taky $L^{+}=\cup_{i=0}^{\infty} L^{i}$. Obecně není pravda, že $L^{+}=L^{*} \backslash \set{\epsilon}$
@@ -149,3 +150,4 @@
 Předchozí:  [[Geometrická interpretace určitého integrálu]]
 Následující: [[Regulární jazyky (definice, uzávěrové vlastnosti)]]
 Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]
+

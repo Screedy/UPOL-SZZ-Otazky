@@ -3,8 +3,8 @@
 >[!info] Definice
 >- Množina regulárních výrazů (regular expressions) nad abecedou $\Sigma$, označovaná $RE(\Sigma)$, je definována induktivně takto:
 >	1. $\epsilon , \varnothing$ a $a$ pro každé $a \in \Sigma$ je **regulární výraz nad $\Sigma$** (tzv. základní regulární výrazy)
->	2. Jsou-li $E$. $F$ regulární výrazy nad $\Sigma$, jsou také $(E.F), (E+F)$ a $(E)^{*}$ **regulární výrazy nad $\Sigma$**
->	3. Každý regulární výraz vznikne po **konečním počtu** aplikací kroků $1$ a $2$
+>	2. Jsou-li $E$, $F$ regulární výrazy nad $\Sigma$, jsou také $(E.F), (E+F)$ a $(E)^{*}$ **regulární výrazy nad $\Sigma$**
+>	3. Každý regulární výraz vznikne po **konečném počtu** aplikací kroků $1$ a $2$
 
 - Základní regulární výrazy se podobají symbolům, se kterými jsme se bězně setkávali. Tučně jsou zapsány proto, že je třeba je chápat jako symboly zcela nové; tyto "dvojníky" jsme zavedli proto, abychom mohli vždy snadno rozlišit mezi syntaxí a sémantikou regulárních výrazů.
 - V regulárních výrazech se mohou vyskytovat také kulaté závorky jako metasymboly, které pomáhají vymezit rozsah operátorů. Abychom jejich použití omezili na minimum, přijmeme konvenci týkající se **priority operátorů:** Největší prioritu má "$*$", pak "$.$" a nakonec "$+$", přičemž "nadbytečné" závorky lze vypouštět.
@@ -43,7 +43,7 @@
 >	- $F \subseteq Q$ je množina koncových/akceptujících stavů
 
 - Rozšířenou přechodovou funkci $\hat{\delta}$ ovšem musíme definovat odlišným způsobem. Nejprve **zavedeme funkci** $D_{\epsilon}:Q \rightarrow 2^{Q}$, která pro daný stav $p$ vrací množinu stavů, kterých může $M$ dosáhnout z $p$ bez toho, aby četl vstup.
-- Pro dané $p \in Q$ je $D_{epsilon}(p)$ nejmenší množina $X \subseteq Q$ taková, že platí:
+- Pro dané $p \in Q$ je $D_{\epsilon}(p)$ nejmenší množina $X \subseteq Q$ taková, že platí:
 	- $p \in X$
 	- Pokud $q \in X$ a $r \in \delta(q, \epsilon)$, pak také $r \in X$.
 - Funkci $D_{\epsilon}$ je možné přirozeně rozšířit na množiny stavů: je-li $Y \subseteq Q$, položíme $$D_{\epsilon}(Y) = \cup_{q \in Y} D_{\epsilon}(q)$$

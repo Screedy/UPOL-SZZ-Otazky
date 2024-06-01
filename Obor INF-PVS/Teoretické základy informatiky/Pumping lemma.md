@@ -17,7 +17,7 @@
 
 >[!Example] Příklady
 >1. $L_{1} = \set{ww |\ w \in \set{a,b}^{*}}$![[MacBook-2024-05-26-001355.png]]
->2. $L_{2} = \set{a^{p} |\ p \text{ je prvočíslo}$![[MacBook-2024-05-26-001356.png]]
+>2. $L_{2} = \set{a^{p} |\ p \text{ je prvočíslo}}$![[MacBook-2024-05-26-001356.png]]
 >3. Dříve jsme tvrdili, že $\set{0\tiny{k}1\tiny{k} |\ k \geq 1}$ není regulární jazyk.
 >	- Předpokládejme, že by byl
 >	- Pak by existovalo $n$ pro pumping lemma

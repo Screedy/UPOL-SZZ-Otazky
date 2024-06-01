@@ -1,4 +1,4 @@
-- Podobně jako regulární jazyky mají též CFL i značný praktický význam, například při definici syntaxe programovacích jazyků, formalizaci pojmu syntaktická analýza a návrhu překladu programovacích jazyků a dalších.
+- Podobně jako regulární jazyky mají též CFG i značný praktický význam, například při definici syntaxe programovacích jazyků, formalizaci pojmu syntaktická analýza a návrhu překladu programovacích jazyků a dalších.
 
 ## Bezkontextová gramatika
 >[!info] Definice bezkontextové gramatiky
