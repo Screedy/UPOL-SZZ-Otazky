@@ -7,9 +7,13 @@
 	- [[2. Informační technologie]]
 	- [[3. Programovací jazyky a programování]]
 - Pro **INF-PVS**:
-	- [[1. Teoretické základy informatiky]]
+	- [[Obor INF-PVS/1. Teoretické základy informatiky|1. Teoretické základy informatiky]]
 	- [[2. Programování a vývoj software]]
 	- [[3. Povinně volitelné předměty specializace Programování a vývoj software]]
+- Pro **INF-OI**:
+	- [[Obor INF-OI/1. Teoretické základy informatiky|1. Teoretické základy informatiky]]
+	- [[2. Algoritmizace a programování]]
+	- [[3. Povinně volitelné předměty specializace OI]]
 
 ## Webová verze
 - Zprovoznil jsem webovou verzi tohoto repozitáře dostupnou na adrese https://statnice.screedy.com/.
