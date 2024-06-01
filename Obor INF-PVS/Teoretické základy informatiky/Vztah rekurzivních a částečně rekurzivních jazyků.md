@@ -20,4 +20,4 @@
 ##### Navigace
 Předchozí:  [[Částečně rekurzivní a a rekurzivní jazyky, jazyky a rozhodovací problémy]]
 Následující: [[Uzávěrové vlastnosti jazyků TS]]
-Celý okruh: [[1. Teoretické základy informatiky]]
+Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

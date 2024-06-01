@@ -11,4 +11,4 @@
 ##### Navigace
 Předchozí:  [[Třída P, třída NP, důvody jejich zavedení, jejich vzájemný vztah]]
 Následující: [[Cook-Levinova věta]]
-Celý okruh: [[1. Teoretické základy informatiky]]
+Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

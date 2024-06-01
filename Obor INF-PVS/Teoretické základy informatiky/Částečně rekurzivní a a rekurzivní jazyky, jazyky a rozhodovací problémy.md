@@ -25,4 +25,4 @@
 ##### Navigace
 Předchozí:  [[Church-Turngova teze, varianty TS]]
 Následující: [[Vztah rekurzivních a částečně rekurzivních jazyků]]
-Celý okruh: [[1. Teoretické základy informatiky]]
+Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

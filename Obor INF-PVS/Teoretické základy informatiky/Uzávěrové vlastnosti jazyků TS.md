@@ -8,4 +8,4 @@
 ##### Navigace
 Předchozí:  [[Vztah rekurzivních a částečně rekurzivních jazyků]]
 Následující: [[Riceova věta]]
-Celý okruh: [[1. Teoretické základy informatiky]]
+Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

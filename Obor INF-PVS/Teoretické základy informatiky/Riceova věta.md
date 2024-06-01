@@ -34,4 +34,4 @@
 ##### Navigace
 Předchozí:  [[Uzávěrové vlastnosti jazyků TS]]
 Následující: [[Složitost algoritmu (časová a paměťová)]]
-Celý okruh: [[1. Teoretické základy informatiky]]
+Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

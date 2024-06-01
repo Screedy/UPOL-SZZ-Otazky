@@ -36,4 +36,4 @@
 ##### Navigace
 Předchozí:  [[Minimalizace konečného deterministického automatu]]
 Následující: [[Bezkontextové jazyky a jejich vlastnosti (uzávěrové vlastnosti, jednoznačnost)]]
-Celý okruh: [[1. Teoretické základy informatiky]]
+Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

@@ -11,4 +11,4 @@
 ##### Navigace
 Předchozí:  [[Deterministické zásobníhové automaty]]
 Následující: [[Turingův stroj, nedeterministický TS]]
-Celý okruh: [[1. Teoretické základy informatiky]]
+Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

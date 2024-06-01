@@ -108,4 +108,4 @@
 ##### Navigace
 Předchozí:  [[Pumping lemma]]
 Následující: [[Zásobníkové automaty]]
-Celý okruh: [[1. Teoretické základy informatiky]]
+Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

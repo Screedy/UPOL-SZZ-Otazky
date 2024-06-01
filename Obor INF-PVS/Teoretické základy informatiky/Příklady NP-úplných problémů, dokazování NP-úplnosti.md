@@ -68,4 +68,4 @@
 ##### Navigace
 Předchozí:  [[Cook-Levinova věta]]
 Následující: [[Třída PSPACE, její vztah k třídám P a NP, PSPACE-úplné problémy]]
-Celý okruh: [[1. Teoretické základy informatiky]]
+Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

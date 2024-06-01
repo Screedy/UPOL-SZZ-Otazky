@@ -32,4 +32,4 @@
 ##### Navigace
 Předchozí:  [[Regulární výrazy, automaty s e-přechody]]
 Následující: [[Pumping lemma]]
-Celý okruh: [[1. Teoretické základy informatiky]]
+Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

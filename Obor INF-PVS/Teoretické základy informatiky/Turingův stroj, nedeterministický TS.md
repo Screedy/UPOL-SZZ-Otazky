@@ -36,4 +36,4 @@
 ##### Navigace
 Předchozí:  [[Deterministické bezkontextové jazyky]]
 Následující: [[Jazyk přijímaný TS, jazyk rozhodovaný TS]]
-Celý okruh: [[1. Teoretické základy informatiky]]
+Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

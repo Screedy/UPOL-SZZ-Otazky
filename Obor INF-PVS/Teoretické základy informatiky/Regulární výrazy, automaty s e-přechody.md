@@ -57,4 +57,4 @@
 ##### Navigace
 Předchozí:  [[Konečné automaty deterministické a nedeterministické]]
 Následující: [[Minimalizace konečného deterministického automatu]]
-Celý okruh: [[1. Teoretické základy informatiky]]
+Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

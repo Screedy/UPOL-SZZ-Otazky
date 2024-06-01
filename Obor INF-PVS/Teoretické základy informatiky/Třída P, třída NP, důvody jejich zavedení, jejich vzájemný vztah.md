@@ -38,4 +38,4 @@ $$PTIME \subseteq NPTIME \subseteq PSPACE = NPSPACE$$
 ##### Navigace
 Předchozí:  [[Složitost algoritmu (časová a paměťová)]]
 Následující: [[NP-úplné problémy]]
-Celý okruh: [[1. Teoretické základy informatiky]]
+Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

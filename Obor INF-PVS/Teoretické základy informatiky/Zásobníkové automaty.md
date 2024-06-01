@@ -25,4 +25,4 @@
 ##### Navigace
 Předchozí:  [[Bezkontextové jazyky a jejich vlastnosti (uzávěrové vlastnosti, jednoznačnost)]]
 Následující: [[Deterministické zásobníhové automaty]]
-Celý okruh: [[1. Teoretické základy informatiky]]
+Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

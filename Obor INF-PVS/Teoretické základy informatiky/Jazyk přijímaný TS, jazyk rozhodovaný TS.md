@@ -20,4 +20,4 @@
 ##### Navigace
 Předchozí:  [[Turingův stroj, nedeterministický TS]]
 Následující: [[Church-Turngova teze, varianty TS]]
-Celý okruh: [[1. Teoretické základy informatiky]]
+Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

@@ -103,4 +103,4 @@
 ##### Navigace
 Předchozí:  [[Formální jazyky a jejich hierarchie]]
 Následující: [[Konečné automaty deterministické a nedeterministické]]
-Celý okruh: [[1. Teoretické základy informatiky]]
+Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

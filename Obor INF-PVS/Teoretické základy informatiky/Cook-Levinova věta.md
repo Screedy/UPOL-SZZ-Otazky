@@ -38,4 +38,4 @@
 ##### Navigace
 Předchozí:  [[NP-úplné problémy]]
 Následující: [[Příklady NP-úplných problémů, dokazování NP-úplnosti]]
-Celý okruh: [[1. Teoretické základy informatiky]]
+Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

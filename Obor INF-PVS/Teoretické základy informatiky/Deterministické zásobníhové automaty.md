@@ -19,4 +19,4 @@
 ##### Navigace
 Předchozí:  [[Zásobníkové automaty]]
 Následující: [[Deterministické bezkontextové jazyky]]
-Celý okruh: [[1. Teoretické základy informatiky]]
+Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

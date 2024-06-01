@@ -48,4 +48,4 @@
 ##### Navigace
 Předchozí:  [[Jazyk přijímaný TS, jazyk rozhodovaný TS]]
 Následující: [[Částečně rekurzivní a a rekurzivní jazyky, jazyky a rozhodovací problémy]]
-Celý okruh: [[1. Teoretické základy informatiky]]
+Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

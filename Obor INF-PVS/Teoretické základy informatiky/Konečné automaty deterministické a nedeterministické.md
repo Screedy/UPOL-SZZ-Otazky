@@ -61,4 +61,4 @@
 ##### Navigace
 Předchozí:  [[Regulární jazyky (definice, uzávěrové vlastnosti)]]
 Následující: [[Regulární výrazy, automaty s e-přechody]]
-Celý okruh: [[1. Teoretické základy informatiky]]
+Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]
