@@ -9,6 +9,6 @@
 >![[MacBook-2024-05-29-001400.png]]
 
 ##### Navigace
-Předchozí:  [[Deterministické zásobníhové automaty]]
+Předchozí:  [[Deterministické zásobníkové automaty]]
 Následující: [[Turingův stroj, nedeterministický TS]]
 Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]
