@@ -7,7 +7,7 @@
 
 ## Normální forma (D)PDA
 - Řekneme, že DPDA $M = (Q, \Sigma, \Gamma, \delta, q_{0}, Z_{0}, F)$ je **v normální formě** jestliže platí:
-	- Je-li $delta(q, a, X) = (p, \gamma)$, pak buď
+	- Je-li $\delta(q, a, X) = (p, \gamma)$, pak buď
 		a. $\gamma = \epsilon$
 		b. $\gamma = X$
 		c. $\gamma = YX$ pro nějaké $Y \in \Gamma$.
