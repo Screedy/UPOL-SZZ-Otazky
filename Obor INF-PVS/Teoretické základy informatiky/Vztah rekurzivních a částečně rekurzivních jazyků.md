@@ -18,6 +18,6 @@
 >- ($P$ i co-$P$ jsou částečně rozhodnutelné $\Rightarrow P$ je rozhodnutelný) Hlavní myšlenka spočívá v tom, že ke dvěma algoritmům lze zkonstruovat algoritmus, který výpočty obou provádí "paralelně". Když takto "současně spustíme" algoritmus $A_{1}$, který částečně rozhoduje $P$, a algoritmus $A_{2}$, který částečně rozhoduje co-$P$, zaručeně dojde k situaci, kdy jeden z algoritmů skončí; když skončí $A_{1}$ s odpovědí $ANO$ (nebo $A_{2}$ s odpovědí $NE$), konbinovaný algoritmus skončí s odpovědí $ANO$, když skončí $A_{2}$ s odpovědí $ANO$ (nebo $A_{1}$ s odpovědí $NE$), kombinovaný algoritmus skončí s odpovědí $NE$.
 
 ##### Navigace
-Předchozí:  [[Částečně rekurzivní a a rekurzivní jazyky, jazyky a rozhodovací problémy]]
+Předchozí:  [[Částečně rekurzivní a rekurzivní jazyky, jazyky a rozhodovací problémy]]
 Následující: [[Uzávěrové vlastnosti jazyků TS]]
 Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

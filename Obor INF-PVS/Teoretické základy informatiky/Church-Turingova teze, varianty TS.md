@@ -1,5 +1,5 @@
 >[!tip] Pojem algoritmus
->- Návod, postup, či posloupnost elementárních kroků, které je možné provédět mechanicky a jednotlivé kroky jsou konečné
+>- Návod, postup, či posloupnost elementárních kroků, které je možné provádět mechanicky a jednotlivé kroky jsou konečné
 
 >[!info] Definice problém
 >- Problém **je určen trojicí $(IN, OUT, p)$**, kde $IN$ je množina (přípustných) vstupů, $OUT$ je množina výstupů a $p : IN \rightarrow OUT$ je funkce přiřazující každému vstupu odpovídající výstup
@@ -16,15 +16,15 @@
 
 >[!info] Jednostranně nekonečná páska
 >![[MacBook-2024-05-29-001402.png]]
->- Je třeba definovat, co se má stát, když se hlava nachází na nejlevějším poláčku pásky a má se posunout doleva
+>- Je třeba definovat, co se má stát, když se hlava nachází na nejlevějším políčku pásky a má se posunout doleva
 >- Dvě nejběžnější možnosti:
 >	- **Nastane "chybový" stav** - výpočet se neúspěšně ukončí
 >	- **Na levém konci je "zarážka"**
 >		- reprezentována speciálním symbolem
->		- tuto zarážku není možné přepsat a nneí na ní možný pohyb směrem doleva
+>		- tuto zarážku není možné přepsat a není na ni možný pohyb směrem doleva
 
 - Simulace oboustranně nekonečnou páskou simulovat jednostranně nekonečnou pásku:
-	- Nepouije se levá strana pásky
+	- Nepoužije se levá strana pásky
 
 - Simulace jednostranně nekonečnou páskou simulovat oboustranně nekonečnou:
 	- Oboustranně nekonečná páska ![[MacBook-2024-05-29-001403.png| 500]]
@@ -47,5 +47,5 @@
 
 ##### Navigace
 Předchozí:  [[Jazyk přijímaný TS, jazyk rozhodovaný TS]]
-Následující: [[Částečně rekurzivní a a rekurzivní jazyky, jazyky a rozhodovací problémy]]
+Následující: [[Částečně rekurzivní a rekurzivní jazyky, jazyky a rozhodovací problémy]]
 Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

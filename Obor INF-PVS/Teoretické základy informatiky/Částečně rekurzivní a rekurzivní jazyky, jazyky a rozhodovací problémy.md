@@ -8,7 +8,7 @@
 
 - Turingův stroj $M$ řeší problém $P$ právě tehdy, když **ke každému vstupu problému $P$ stroj $M$ vydá problémem předepsaný výstup**.
 
-- Turingův strom $M$ řeší problém $ANO/NE$ problém $P$ právě tehdy, když ke **každému vstupu problému $P$ stroj $M$ skončí ve stavu $q_{ANO}$, je-li odpově%d na otázku problém $P$ ano,** či ve stavu $q_{NE}$, je-li odpověď na otázku problému $P$ ne.
+- Turingův strom $M$ řeší problém $ANO/NE$ problém $P$ právě tehdy, když ke **každému vstupu problému $P$ stroj $M$ skončí ve stavu $q_{ANO}$, je-li odpověď na otázku problém $P$ ano,** či ve stavu $q_{NE}$, je-li odpověď na otázku problému $P$ ne.
 
 >[!example] Příklad rozhodovacího problému
 >- Problém prvočíselnosti
@@ -23,6 +23,6 @@
 - Jazyk $L \subseteq \Sigma^{*}$ nazveme jazyk částečně rekurzivní TS, pokud existuje TS $T$, který jej částečně rozhoduje.
 
 ##### Navigace
-Předchozí:  [[Church-Turngova teze, varianty TS]]
+Předchozí:  [[Church-Turingova teze, varianty TS]]
 Následující: [[Vztah rekurzivních a částečně rekurzivních jazyků]]
 Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

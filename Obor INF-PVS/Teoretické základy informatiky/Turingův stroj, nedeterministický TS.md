@@ -5,7 +5,7 @@
 >	- $\Gamma$ je neprázdná množina páskových symbolů, kde $\Sigma \subseteq \Gamma$ a v $\Gamma - \Sigma$ je (přinejmenším) speciální znak $\square$ (prázdný znak \[blank\])
 >	- $q_{0} \in Q$ je počáteční stav
 >	- $F \subseteq Q$ je množina koncových stavů
->	- $\delta : (Q-F) \times \Gamma \rightarrow Q \times \Gamma \times \set{-1,0+1}$ je přechodová funkce
+>	- $\delta : (Q-F) \times \Gamma \rightarrow Q \times \Gamma \times \set{-1,0,+1}$ je přechodová funkce
 
 - Význam instrukce $(q, a) \rightarrow (q', a', m)$ je tento:
 	- Tato instrukce je aplikovatelná v konfiguraci, kdy řídící jednotka je ve stavu $q$ a hlava čte na pásce symbol $a$
@@ -29,7 +29,7 @@
 
 - Nedeterministický algoritmus $A$ "rozhoduje ANO/NE problémy" $P$, jestliže:
 	- Pro vstup problému $P$, na nějž je odpověď ANO, **alespoň jeden výpočet** nedeterministického algoritmu $A$ vydá ANO.
-	- Pro vstup problému $P$, na nějž je odpověď NE, **každý vopočet** nedeterministického algoritmu $A$ vydá NE.
+	- Pro vstup problému $P$, na nějž je odpověď NE, **každý výpočet** nedeterministického algoritmu $A$ vydá NE.
 - Výpočet NTS tvoří **strom výpočtů**![[MacBook-2024-05-29-001401.png]]
 - Činnost nedeterministického TS je možné snadno simulovat pomocí deterministického algoritmu tak, že deterministický algoritmus systematicky simuluje činnost všech jednotlivých větší výpočtu (prochází strom výpočtu do hlouky)
 
