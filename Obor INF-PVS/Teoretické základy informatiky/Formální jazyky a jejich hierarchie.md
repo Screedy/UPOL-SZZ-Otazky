@@ -124,15 +124,15 @@
 - Někdy se též taková gramatiky označují jako **gramatiky bez omezení či frázové gramatiky**
 
 #### Typ 1
-- Též **kontextová**, Context-Sensitive, CSG, méně často též *monoténní*
+- Též **kontextová** gramatika, Context-Sensitive, CSG, méně často též *monoténní*
 - Gramatika je typu $1$, jestliže pro každé její pravidlo $\alpha \rightarrow \beta$ platí $| \alpha | \leq | \beta |$ s eventuelní výjimkou pravidla $S \rightarrow \epsilon$, pokud se $S$ nevyskytuje na pravé straně žádného pravidla
 
 #### Typ 2
-- Též **bezkontextová**, Context-Free, CFG
+- Též **bezkontextová** gramatika, Context-Free, CFG
 - Gramatika je typu $2$, jestliže každé její pravidlo je tvaru $A \rightarrow \alpha$, kde $| \alpha | \geq 1$ s eventuelní výjimkou pravidla $S \rightarrow \epsilon$, pokud se $S$ nevyskytuje na pravé straně žádného pravidla
 
 #### Typ 3
-- Též **regulární**, pravolineární
+- Též **regulární** gramatika, pravolineární
 - Gramatika je typu $3$, jestliže každé její pravidlo je tvaru $A \rightarrow aB$ nebo $A \rightarrow a$ s eventuelní výjimkou pravidla $S \rightarrow \epsilon$, pokud se $S$ nevyskytuje na pravé straně žádného pravidla
 ---
 - Hierarchie gramatik také určuje příslušnou hierarchii jazyků
