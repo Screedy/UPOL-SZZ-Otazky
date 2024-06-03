@@ -7,7 +7,7 @@
 >	- $q_{0} \in Q$ je počáteční stav
 >	- $F \subseteq Q$ je množina koncových/akceptujících stavů
 
-- Takto definovaný atomat je deterministický, protože se v každém kroku výpočtu nachází právě v jednom stavu
+- Takto definovaný automat je deterministický, protože se v každém kroku výpočtu nachází právě v jednom stavu
 - Abychom mohli definovat jazyk přijímaný daným DFA M, zavedeme rozšířenou přechodovou funkci $\hat{\delta}: Q \times E^{*} \rightarrow Q$, definovanou induktivně vzhledem k délce slova ze $\Sigma^{*}$:
 	- $\hat{\delta}(q, \epsilon) = q$, pro každý stav $q \in Q$
 	- $\hat{\delta}(q, wa) = \delta(\hat{\delta}(q,w)a)$
