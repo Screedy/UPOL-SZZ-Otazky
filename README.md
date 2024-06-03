@@ -39,12 +39,4 @@ Po naklonování repozitáře na váš počítač postupujte takto, abyste jej o
 3. Vyberte možnost 'Open folder as vault'.
 4. Navigujte k složce, kam jste naklonovali repozitář, a vyberte ji.
 
-
-## Autoři
-Tento repozitář je výsledkem společné práce následujících autorů:
-- [Karolína Tobiášová](https://github.com/Kermy824)
-- [Petr Jurásek](https://github.com/Screedy)
-- [František Jurek](https://github.com/Homesis)
-- [Daniel Štefák](https://github.com/Daniel-Programmer)
-
 <a href="https://www.buymeacoffee.com/screedy" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
