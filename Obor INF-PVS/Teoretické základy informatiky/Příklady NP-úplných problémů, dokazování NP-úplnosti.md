@@ -52,7 +52,7 @@
 >[!Example] $IS_{DEC} \leq_{p} VC_{DEC}$
 >- V grafu $G = (V, E)$ je $V'$ nezávislá množina právě tehdy, když $V$ \\ $V'$ je vrcholové pokrytí.
 
->[!Example] $VC_{DEC} \leq_{p} HC
+>[!Example] $VC_{DEC} \leq_{p} HC$
 >- Pro (neorientovaný) graf $G = (V, E)$ a číslo $k$ jsme sestrojili graf $G' = (V', E')$ postupně takto:
 >	- Pro každý vrchol $v \in V$ grafu $G$, se stupněm $deg(v)$, zařadíme do $G'$ "řetízek" vrcholů $v_{1} \rightarrow v_{2} \rightarrow ... \rightarrow v_{2 \cdot deg(v)}$ (šipky označují příslušné hrany v $G'$)
 >	- Pro dané číslo $k$ zařadíme do $G'$ navíc vrcholy $u_{1}, u_{2}, ..., u_{k}$ a pro každé $i \in [1,k]$ a každý vrchol $v \in V$ s nenulovým stupněm přidáme do $G'$ hrany $u_{i} \rightarrow v_{1}$ a $v_{2 \cdot deg(v)} \rightarrow u_{i}$ (z $u_{i}$ lze tedy "skočit" na začátek libovolného "řetízku" a z konce libovolného "řetízku" lze zase skočit na $u_{i}$, pro každé $u_{i} \in \set{u_{1}, u_{2}, ..., u_{k}}$);
