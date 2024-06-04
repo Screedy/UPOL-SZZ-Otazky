@@ -1,0 +1,1 @@
+Celý název: Množinové rozklady a Stirlingova čísla, permutace a Stirlingova čísla prvního druhu, číselné rozklady, Gaussovy koeficienty, formální řady, Catalanova čísla, nekonečné matice a inverzní vzorce
