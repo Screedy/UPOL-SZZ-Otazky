@@ -31,7 +31,7 @@
 	- Pro vstup problému $P$, na nějž je odpověď ANO, **alespoň jeden výpočet** nedeterministického algoritmu $A$ vydá ANO.
 	- Pro vstup problému $P$, na nějž je odpověď NE, **každý výpočet** nedeterministického algoritmu $A$ vydá NE.
 - Výpočet NTS tvoří **strom výpočtů**![[MacBook-2024-05-29-001401.png]]
-- Činnost nedeterministického TS je možné snadno simulovat pomocí deterministického algoritmu tak, že deterministický algoritmus systematicky simuluje činnost všech jednotlivých větší výpočtu (prochází strom výpočtu do hlouky)
+- Činnost nedeterministického TS je možné snadno simulovat pomocí deterministického algoritmu tak, že deterministický algoritmus systematicky simuluje činnost všech jednotlivých větví výpočtu (prochází strom výpočtu do hloubky)
 
 ##### Navigace
 Předchozí:  [[Deterministické bezkontextové jazyky]]
