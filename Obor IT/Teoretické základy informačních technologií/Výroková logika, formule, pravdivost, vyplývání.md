@@ -41,7 +41,7 @@
 - Výrazy obsahující *proměnné*, ze kterých se po dosazení hodnot za proměnné stanou výroky, nazýváme **výrokové formy**
 
 - **Výrokové formy** bývají zvykem **označovat písmenem, za kterým jsou v závorce uvedeny všechny proměnné, které forma obsahuje**
-	- Číslo x je větší nebo rovno 3 = **V(x)**
+	- Číslo x je větší nebo rovno 3 = $V(x)$
 	- *$x+y \geq z=U(x,y,z)$*
 
 - **Kvantifikátory** jsou **jazykové výrazy, kterými z výrokových forem vznikají výroky**
