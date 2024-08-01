@@ -114,3 +114,9 @@ $$
 $$
 
 	- ![[Pasted image 20240628133619.png]]
+
+##### Navigace
+
+Předchozí: [[Limita funkce včetně nevlastních, jednostranné limity]]
+Následující: [[Vlastnosti spojitých funkcí, spojitost složené a inverzní funkce]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]

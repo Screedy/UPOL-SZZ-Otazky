@@ -155,3 +155,8 @@ $$
 \liminf a_n := \lim_{n \to \infty} (\inf_{k \geq n} a_k)
 $$
 
+##### Navigace
+
+Předchozí: [[Funkce jedné reálné proměnné, základní vlastnosti]]
+Následující: [[Limita funkce včetně nevlastních, jednostranné limity]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]

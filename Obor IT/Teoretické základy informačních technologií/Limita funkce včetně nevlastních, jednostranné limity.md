@@ -157,3 +157,9 @@ Nechť $a \in \mathbb{R}^*$, $f, g, h : \mathbb{R} \to \mathbb{R}$. Nechť dále
 2. $\lim_{x \to a} g(x) = \lim_{x \to a} h(x) = A \in \mathbb{R}^*$.
 
 Pak také $\lim_{x \to a} f(x) = A$.
+
+##### Navigace
+
+Předchozí: [[Posloupnosti a jejich limity, limes superior, limes inferior]]
+Následující: [[Spojitost funkce - spojitost v bodě, spojitost na intervalu]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]

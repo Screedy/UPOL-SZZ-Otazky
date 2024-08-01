@@ -59,3 +59,8 @@ Nechť navíc $f(a) < f(b)$. Pak:
 ### O hodnotách spojité funkce
   - Funkce $f$ je spojitá na uzavřeném intervalu $\langle a, b \rangle$ a v $(a, b)$ nemá žádné nulové body, pak na $(a, b)$ je buď $f(x) > 0$ nebo $f(x) < 0$ pro všechny $x \in (a, b)$.
 
+##### Navigace
+
+Předchozí: [[Spojitost funkce - spojitost v bodě, spojitost na intervalu]]
+Následující: [[Derivace funkce a její geometrický význam - Pravidla pro derivování funkcí, derivace složené funkce, derivace inverzní funkce, derivace elementárních funkcí]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]

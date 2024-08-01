@@ -177,3 +177,9 @@ $$\lim_{b \to \infty} \int_{a}^{b} f(x)dx$$
 - Jestliže existuje
 $$\lim_{\epsilon \to 0^+} \int_{a + \epsilon}^{b} f(x)dx$$
 říkáme, že $\int_{a}^{b} f(x)dx$ konverguje.
+
+##### Navigace
+
+Předchozí: [[Neurčitý integrál a metody jeho výpočtu]]
+Následující: [[Geometrická interpretace určitého integrálu]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]

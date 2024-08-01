@@ -194,4 +194,8 @@ $$
 
 4. Pomocí substituce
 
-  
+##### Navigace
+
+Předchozí: [[Průběh funkce - základní věty diferenciálního počtu, extrémy funkce, konvexní a konkávní křivky, asymptoty]]
+Následující: [[Riemannův určitý integrál - definice, základní věta integrálního počtu, metody výpočtu]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]

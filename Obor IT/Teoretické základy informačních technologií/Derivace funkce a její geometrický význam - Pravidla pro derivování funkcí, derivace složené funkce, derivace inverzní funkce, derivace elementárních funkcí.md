@@ -98,5 +98,10 @@ $$f^{(n)}(a) = (f^{(n-1)})'(a),$$
 
 - ![[Pasted image 20240628192604.png]]
 
+##### Navigace
+
+Předchozí: [[Vlastnosti spojitých funkcí, spojitost složené a inverzní funkce]]
+Následující: [[Průběh funkce - základní věty diferenciálního počtu, extrémy funkce, konvexní a konkávní křivky, asymptoty]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]
 
 

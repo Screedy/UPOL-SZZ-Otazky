@@ -258,5 +258,8 @@ Podobná věta platí také pro asymptotu v $-\infty$.
     
 6. Nakreslíme graf funkce.
 
+##### Navigace
 
-
+Předchozí: [[Derivace funkce a její geometrický význam - Pravidla pro derivování funkcí, derivace složené funkce, derivace inverzní funkce, derivace elementárních funkcí]]
+Následující: [[Neurčitý integrál a metody jeho výpočtu]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]

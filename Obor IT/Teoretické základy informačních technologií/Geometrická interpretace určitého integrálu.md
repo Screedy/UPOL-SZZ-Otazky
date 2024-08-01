@@ -59,3 +59,9 @@
 - Pokud bychom chtěli spočítat objem rotačního tělesa ohraničený dvěma funkcemi $f(x)$ a $g(x)$, pak pro jeho objem platí: $$V=\pi \int_{a}^{b}|(f(x))^{2}-(g(x))^{2}|dx$$
 ## Obsah rotační plochy
 - Pomocí určitého integrálu spočítáme i obsah pláště rotačního tělesa: $$S=2\pi \int_{a}^{b}|f(x)|*(1+(f^{'}(x))^{2})dx$$
+
+##### Navigace
+
+Předchozí: [[Riemannův určitý integrál - definice, základní věta integrálního počtu, metody výpočtu]]
+Následující: [[Algoritmus, problém, časová složitost algoritmu v nejhorším a průměrném případě]]
+Celý okruh: [[1. Teoretické základy informačních technologií]]
