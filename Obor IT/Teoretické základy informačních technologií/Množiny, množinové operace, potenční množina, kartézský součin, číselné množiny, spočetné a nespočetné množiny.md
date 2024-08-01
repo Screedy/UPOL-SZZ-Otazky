@@ -69,10 +69,22 @@
 
 ### Význačné číselné množiny
 1. Přirozená čísla - $\mathbb{N}$
+	- $1, 2, 3, 4, ...$
+	- Jsou používána pro počítání a pořadí.
 2. Celá čísla - $\mathbb{Z}$
+	- $..., -3, -2, -1, 0, 1, 2, 3, ...$
+	- Zahrnují přirozená čísla, jejich záporné protějšky a nulu.
 3. Racionální čísla - $\mathbb{Q}$
-4. Reální čísla - $\mathbb{R}$
-![[MacBook-2024-05-01-001135.png| 350]]
+	- Čísla, která lze vyjádřit jako podíl dvou celých čísel ($\frac{p}{q}$, kde $p \in \mathbb{Z}$ a $q \in \mathbb{Z} \\ \set{0}$).
+	- Mohou být zlomky nebo celá čísla.
+4. Iracionální čísla
+	- Zahrnuje čísla, která nelze vyjádřit jako podíl dvou celých čísel.
+	- $\pi, e, \sqrt{2}$
+5. Reální čísla - $\mathbb{R}$
+	- Všechna racionální a iracionální čísla.
+	- Zahrnují všechny možné délky na číselné ose.
+
+![[ciselneMnoziny.png | 350]]
 
 ### Množiny konečné/nekonečné a spočetné/nespočetné
 - Množiny se dělí na:
@@ -86,12 +98,18 @@
 
 - Množiny se dále dělí na:
 	- **Spočetné**
-		- Pokud je **konečná**
-		- **Existuje bijekce $f: N \rightarrow A$**
+		- Pokud je **konečná** nebo **existuje bijekce $f: N \rightarrow A$**
+			- Jinými slovy, množina je spočetná, pokud její prvky lze jednoznačně přiřadit k prvkům množiny přirozených čísel. Tedy pokud existuje bijekce mezi touto množinou a podmnožinou $\mathbb{N}$
 		- Značení $\mid A \mid = n$
 	- **Nespočetné**
 		- Není-li spočetná
+		- Nespočetné množiny jsou vždy nekonečné
 		- **Důkaz** nespočetnosti lze například pomocí **Cantorovy diagonální metody**
+
+>[!Example] Příklad spočetné a nespočetné množiny
+>- Množina celých čísel $\mathbb{Z} = \set{..., -2, -1, 0, 1, 2, ...}$ je nekonečná, ale je **spočetná**, protože můžeme zkonstruovat bijekci s množinou $\mathbb{N}$.
+>- Množina reálných čísel $\mathbb{R}$ je nespočetná. To lze dokázat pomocí Cantorova diagonálního argumentu, který ukazuje, že žádná bijekce mezi $\mathbb{N}$ a $\mathbb{R}$ neexistuje.
+
 
 ##### Navigace
 Předchozí:  [[Úplné konjunktivní a disjunktivní normální formy]]
