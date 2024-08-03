@@ -8,7 +8,7 @@
 
 - **Reflexivní**
 	- Pokud **pro každé $x \in X$ platí $<x,x> \in R$**
-	- Každé prvek z $X$ je **v relaci sám se sebou**
+	- Každý prvek z $X$ je **v relaci sám se sebou**
 	- Na matici to poznáme pomocí **diagonály jedniček**
 	- V orientovaném grafu je **u každého vrcholu smyška**
 - **Symetrická**
