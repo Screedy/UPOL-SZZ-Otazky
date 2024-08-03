@@ -40,7 +40,7 @@ f(n)
 - Vraťme se k definici faktoriálu:
 	1. `pro n = 1 je f(n) = 1`
 	2. `pro n > 1 je f(n) = n * f(n - 1)`
-- Intuitivně je jasná, že tímto způsobem je jednoznačně definována jistá funkce. 
+- Intuitivně je jasné, že tímto způsobem je jednoznačně definována jistá funkce. 
 - Z čeho ale plyne že funkce splňující podmínky $1$ a $2$ z uvedené definice existuje a je určena jednoznačně?
 	- **Věta:** Nechť je dána množina $V$, prvek $a \in V$ a funkce $G: \mathbb{N} \times V \rightarrow V$. Pak existuje právě jedna funkce $F: \mathbb{N} \rightarrow V$, pro kterou platí
 		1. $F(1) = a,$
