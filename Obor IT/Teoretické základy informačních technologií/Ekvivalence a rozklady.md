@@ -13,7 +13,7 @@
 - Reflexivní a symetrická relace se nazývá *tolerance*
 - *Tranzitivní tolerance* se nazývá *ekvivalence*
 
-- Pro ekvivalenci $E$ na množině $X$ definujeme pro každý $x \in X$ množinu
+- Pro ekvivalenci $E$ na množině $X$ definujeme pro každé $x \in X$ množinu
 	- $[x]_{E} = \{y \in X \mid <x,y> \in E \}$ = třída ekvivalence prvku $x$
 	- $[x]_{E}$ je množina těch prvků $y \in X$, které jsou E-ekvivalentní $x$
 
