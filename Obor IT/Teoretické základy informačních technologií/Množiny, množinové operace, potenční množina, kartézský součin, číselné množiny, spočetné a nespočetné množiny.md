@@ -80,7 +80,7 @@
 4. Iracionální čísla
 	- Zahrnuje čísla, která nelze vyjádřit jako podíl dvou celých čísel.
 	- $\pi, e, \sqrt{2}$
-5. Reální čísla - $\mathbb{R}$
+5. Reálné čísla - $\mathbb{R}$
 	- Všechna racionální a iracionální čísla.
 	- Zahrnují všechny možné délky na číselné ose.
 
