@@ -12,7 +12,7 @@
 - Relace je matematickým protějškem pojmu **vztah**
 
 - Označuje se **$R = \{<x_{1}, ..., x_{n}>\}$**
-- Číslu $n$ říkáme **arita** relace R, R se nazývá **$n$-ární** (unární, binární, ternární, ...)
+- Číslu $n$ říkáme **arita** relace $R$, $R$ se nazývá **$n$-ární** (unární, binární, ternární, ...)
 - **$<x_{1}, ..., x_{n}> = <y_{1}, ..., y_{m}>$**, právě když **$n = m$** a $x_{1} = y_{1}, ..., x_{n} = y_{m}$
 
 ### Vztah a operace s relacemi
@@ -94,8 +94,8 @@
 - Nechť $R, S, T$ jsou binární relace na $X$, kde $S \subseteq T$
 	- $S^{-1} \subseteq T^{-1}$
 	- $R \circ S \subseteq R \circ T$ a $S \circ R \subseteq T \circ R$
-	- Pokud $R$ je **tranzitivní, pak $R^{n} \subseteq R$** pro každé $n \in N$
-	- $R^{m} \circ R^{n} = R^{m+n} = R^{n} \circ R^{m}$ pro každé $n \in N$
+	- Pokud $R$ je **tranzitivní, pak $R^{n} \subseteq R$** pro každé $n \in \mathbb{N}$
+	- $R^{m} \circ R^{n} = R^{m+n} = R^{n} \circ R^{m}$ pro každé $n \in \mathbb{N}$
 	- Pokud je $X$ konečná a $<x,y> \in R^{i}$ pro každé $i > \mid X \mid$, pak $<x,y> \in R^{m}$ pro nějaké $m \leq \mid X \mid$
 
 ### Uzávěry relací
