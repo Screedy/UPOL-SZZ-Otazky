@@ -18,87 +18,88 @@
 		2. $E_{i} = \cases{E_{i-1}\ \cup \set{e_{i}} \text{ pokud } <V, E_{i-1}\ \cup \set{e_{i}}> \text{neobsahuje kružnici} \\ E_{i-1} \text{ v opačném případě}}$ 
 	4. $E' = E_{i}$
 
-```mermaid
-graph LR
-A -- "2" --- B;
-A -- "3" --- D;
-A -- "3" --- C;
-B -- "4" --- C;
-C -- "1" --- E;
-B -- "3" --- E;
-C -- "5" --- D;
-D -- "7" --- F;
-E -- "8" --- F;
-F -- "9" --- G;
-```
-
-```mermaid
-graph LR
-A -- "2" --- B;
-A -- "3" --- D;
-A -- "3" --- C;
-B -- "4" --- C;
-C -- "1" --- E;
-B -- "3" --- E;
-C -- "5" --- D;
-D -- "7" --- F;
-E -- "8" --- F;
-F -- "9" --- G;
-
-linkStyle 4 stroke:Red;
-```
-```mermaid
-graph LR
-A -- "2" --- B;
-A -- "3" --- D;
-A -- "3" --- C;
-B -- "4" --- C;
-C -- "1" --- E;
-B -- "3" --- E;
-C -- "5" --- D;
-D -- "7" --- F;
-E -- "8" --- F;
-F -- "9" --- G;
-
-linkStyle 4 stroke:Red;
-linkStyle 0 stroke:Red;
-```
-...
-```mermaid
-
-graph LR
-A -- "2" --- B;
-A -- "3" --- D;
-A -- "3" --- C;
-B -- "4" --- C;
-C -- "1" --- E;
-B -- "3" --- E;
-C -- "5" --- D;
-D -- "7" --- F;
-E -- "8" --- F;
-F -- "9" --- G;
-
-linkStyle 4 stroke:Red;
-linkStyle 0 stroke:Red;
-linkStyle 1 stroke:Red;
-linkStyle 2 stroke:Red;
-linkStyle 7 stroke:Red;
-linkStyle 9 stroke:Red;
-```
-- Minimální kostra grafu:
-```mermaid
-
-graph LR
-
-A -- "3" --- D;
-D -- "7" --- F;
-F -- "9" --- G;
-A -- "3" --- C;
-C -- "1" --- E;
-A -- "2" --- B;
-
-linkStyle default stroke:Red;
-```
+> [!Example]- Příklad
+>```mermaid
+>graph LR
+>A -- "2" --- B;
+>A -- "3" --- D;
+>A -- "3" --- C;
+>B -- "4" --- C;
+>C -- "1" --- E;
+>B -- "3" --- E;
+>C -- "5" --- D;
+>D -- "7" --- F;
+>E -- "8" --- F;
+>F -- "9" --- G;
+>```
+>
+>```mermaid
+>graph LR
+>A -- "2" --- B;
+>A -- "3" --- D;
+>A -- "3" --- C;
+>B -- "4" --- C;
+>C -- "1" --- E;
+>B -- "3" --- E;
+>C -- "5" --- D;
+>D -- "7" --- F;
+>E -- "8" --- F;
+>F -- "9" --- G;
+>
+>linkStyle 4 stroke:Red;
+>```
+>```mermaid
+>graph LR
+>A -- "2" --- B;
+>A -- "3" --- D;
+>A -- "3" --- C;
+>B -- "4" --- C;
+>C -- "1" --- E;
+>B -- "3" --- E;
+>C -- "5" --- D;
+>D -- "7" --- F;
+>E -- "8" --- F;
+>F -- "9" --- G;
+>
+>linkStyle 4 stroke:Red;
+>linkStyle 0 stroke:Red;
+>```
+>...
+>```mermaid
+>
+>graph LR
+>A -- "2" --- B;
+>A -- "3" --- D;
+>A -- "3" --- C;
+>B -- "4" --- C;
+>C -- "1" --- E;
+>B -- "3" --- E;
+>C -- "5" --- D;
+>D -- "7" --- F;
+>E -- "8" --- F;
+>F -- "9" --- G;
+>
+>linkStyle 4 stroke:Red;
+>linkStyle 0 stroke:Red;
+>linkStyle 1 stroke:Red;
+>linkStyle 2 stroke:Red;
+>linkStyle 7 stroke:Red;
+>linkStyle 9 stroke:Red;
+>```
+>- Minimální kostra grafu:
+>```mermaid
+>
+>graph LR
+>
+>A -- "3" --- D;
+>D -- "7" --- F;
+>F -- "9" --- G;
+>A -- "3" --- C;
+>C -- "1" --- E;
+>A -- "2" --- B;
+>
+>linkStyle default stroke:Red;
+>```
 
 
 <iframe width="690" height="385" src="https://www.youtube.com/embed/71UQH7Pr9kU?si=siVilj3MfpqRVJ2z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
