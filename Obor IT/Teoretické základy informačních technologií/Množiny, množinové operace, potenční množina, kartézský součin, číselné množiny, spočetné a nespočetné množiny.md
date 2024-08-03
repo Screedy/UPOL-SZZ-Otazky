@@ -96,12 +96,12 @@
 		- Není-li konečná
 		- Značení **$\mid A \mid \ =\ \infty$**
 
-- Množiny se dále dělí na:
-	- **Spočetné**
-		- Pokud je **konečná** nebo **existuje bijekce $f: N \rightarrow A$**
+- Množina může být:
+	- **Spočetná**
+		- Pokud je **konečná** nebo **existuje bijekce $f: \mathbb{N} \rightarrow A$**
 			- Jinými slovy, množina je spočetná, pokud její prvky lze jednoznačně přiřadit k prvkům množiny přirozených čísel. Tedy pokud existuje bijekce mezi touto množinou a podmnožinou $\mathbb{N}$
 		- Značení $\mid A \mid = n$
-	- **Nespočetné**
+	- **Nespočetná**
 		- Není-li spočetná
 		- Nespočetné množiny jsou vždy nekonečné
 		- **Důkaz** nespočetnosti lze například pomocí **Cantorovy diagonální metody**
