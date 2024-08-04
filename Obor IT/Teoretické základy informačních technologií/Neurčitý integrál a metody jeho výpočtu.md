@@ -63,15 +63,11 @@ $$
 - Nechť funkce $f, g : \mathbb{R} \to \mathbb{R}$ jsou definovány na $(a, b)$ a nechť $F' = f$ a $G' = g$ na $(a, b)$.
 - Nechť dále existuje $\int f(x)G(x) \, dx$ na $(a, b)$. Pak také existuje $\int F(x)g(x) \, dx$ na $(a, b)$ a platí
 $$
-
 \int F(x)g(x) \, dx = F(x)G(x) - \int f(x)G(x) \, dx.
-
 $$
 - Tvrzení věty si budeme lépe pamatovat ve tvaru
 $$
-
 \int F G' = F G - \int F' G.
-
 $$
 - Možná čitelnější zápis: $$\int u v' = u v - \int u' v.$$
 - Odvozeno z pravidla pro derivaci součinu funkcí
@@ -89,16 +85,12 @@ $$
 1. Nechť funkce $t = \varphi(x)$ zobrazuje interval $(a, b)$ do intervalu $(\beta, \gamma)$ a nechť na $(a, b)$ existuje vlastní $\varphi'$.
 2. Nechť funkce $f$ má na intervalu $(\beta, \gamma)$ primitivní funkci $F$, tj. platí $F(t) = \int f(t) \, dt$, $t \in (\beta, \gamma)$. Pak na $(a, b)$ existuje primitivní funkce k funkci $(f \circ \varphi) \varphi'$ a platí
 $$
-
 \int (f \circ \varphi)(x) \varphi'(x) \, dx = (F \circ \varphi)(x), \, x \in (a, b)
-
 $$
 neboli
 
 $$
-
 \int f(\varphi(x)) \varphi'(x) \, dx = F(\varphi(x)).
-
 $$
 
   
@@ -121,24 +113,24 @@ $$
 1. Nechť funkce $x = \varphi(t)$ zobrazuje interval $(\beta, \gamma)$ na interval $(a, b)$ a nechť na $(\beta, \gamma)$ existuje vlastní $\varphi' > 0$ (nebo $\varphi' < 0$).
 2. Nechť $G$ je primitivní funkce k funkci $(f \circ \varphi) \varphi'$ na intervalu $(\beta, \gamma)$, tj. platí $G(t) = \int (f \circ \varphi)(t) \varphi'(t) \, dt$, $t \in (\beta, \gamma)$. Pak na $(a, b)$ existuje primitivní funkce k funkci $f$ a platí
 $$
-
 \int f(x) \, dx = (G \circ \varphi^{-1})(x), \, x \in (a, b)
-
 $$
 neboli
 $$
-
 \int f(x) \, dx = G(\varphi^{-1}(x)).
-
 $$
 - Postup výpočtu neurčitého integrálu pomocí druhé věty o substituci:
 1. Hledáme integrál tvaru
 $$\int f(x) \, dx.$$
 2. Zvolíme nějakou vhodnou funkci $\varphi$ a pokud funkce $f$ a $\varphi$ splňují podmínky druhé věty o substituci, pak
    a) položíme $x = \varphi(t)$, $t \in (\beta, \gamma)$, $x \in (a, b)$,
-$$dx = \varphi'(t) \, dt,$$
+$$
+dx = \varphi'(t) \, dt,
+$$
    b) vypočítáme integrál
-$$\int f(\varphi(t)) \varphi'(t) \, dt = G(t), \quad t \in (\beta, \gamma)$$
+$$
+\int f(\varphi(t)) \varphi'(t) \, dt = G(t), \quad t \in (\beta, \gamma)
+$$
    - opět doufáme, že nový výraz je jednodušší než původní integrál v zadání a umíme ho spočítat
 3. Vrátíme se k proměnné $x$ a hledaný neurčitý integrál má tvar
 $$G(\varphi^{-1}(x)), \quad x \in (a, b).$$
