@@ -11,7 +11,7 @@
 ```C
 struct table
 	data:[]key //pole klíčů
-	hash-function //hashovací funkce**
+	hash-function //hashovací funkce
 ```
 
 Kostra přístupu k místu, kde je v tabulce $T$ klíč $k$
