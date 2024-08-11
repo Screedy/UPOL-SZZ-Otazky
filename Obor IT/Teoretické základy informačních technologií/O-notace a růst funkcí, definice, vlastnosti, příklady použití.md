@@ -7,7 +7,7 @@
 	- ![[MacBook-2024-05-13-001247@2x.png | 250]]
 
 - $\Omega(g)$ ... Asymptotická dolní mez
-	- $\Omega (g(n)) = \{ f(n) \mid (\exists c \in \mathbb{N})(\exists n_{0} \in \mathbb{N})(\forall n \geq n_{0}: 0 \leq c \cdot g(n) \leq f(n) \}$
+	- $\Omega (g(n)) = \{ f(n) \mid (\exists c \in \mathbb{N})(\exists n_{0} \in \mathbb{N})(\forall n \geq n_{0}): 0 \leq c \cdot g(n) \leq f(n) \}$
 	- **Asymptotická dolní mez funkce $g(n)$** je množina funkcí $f(n)$, takových že **existuje** přirození číslo $c > 0$ a **existuje** přirozené číslo $n_{0}$ tak, že **pro každé** $n \geq n_{0}$ platí: $0 \leq c \cdot g(n) \leq f(n)$
 	- ![[MacBook-2024-05-13-001245@2x.png | 250]]
 
