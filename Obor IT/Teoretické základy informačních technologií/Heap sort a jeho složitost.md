@@ -12,7 +12,7 @@
 - Algoritmus transformuje vstupní pole na **binární max-haldu**, kde každý rodičovský uzel má hodnotu **větší** než jeho děti.
 - Toto uspořádání **zajistí**, že **největší prvek** je na **vrcholu haldy**.
 - Algoritmus postupně odstraňuje největší prvek (kořen haldy) a vyměňuje ho s posledním prvkem v haldě.
-- Pak znovu obnoví strukturu max-haldy v zbytku pole a pokračuje, dokud nejsou všechny prvky setříděné.
+- Pak znovu obnoví strukturu max-haldy ve zbytku pole a pokračuje, dokud nejsou všechny prvky setříděné.
 ```C
 Left(i)
 	return 2i+1
