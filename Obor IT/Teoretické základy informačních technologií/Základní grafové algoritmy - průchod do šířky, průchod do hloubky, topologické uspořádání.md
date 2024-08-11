@@ -56,7 +56,7 @@ proc bfs(G, s)
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/HZ5YTanv5QE?si=vHtZX2LIAytCaoBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-#### BFS(s) hledá uzly v pořadí podle vzdálenosti od $s$
+#### `BFS(s)` hledá uzly v pořadí podle vzdálenosti od $s$
 - **Definice:** Nejkratší vzdálenost $\delta (u, v)$ z uzlu $u$ do uzlu $v$ je **nejmenší počet hran,** které má nějaká cesta z $u$ do $v$. 
 - Pokud cesta z $u$ do $v$ **neexistuje**, pak $\delta (u,v) = \infty$.
 
