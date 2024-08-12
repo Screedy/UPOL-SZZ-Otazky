@@ -13,7 +13,7 @@
 - V tom případě říkáme, že $f$ zobrazuje prvek $x$ na prvek $y$
 
 - Prvek $y$ nazveme **obraz prvku** $x$, prvek $x$ nazveme **vzor prvku** $y$.
-- Množinu $f(X) = \{ f(x); x \in A \}$ nazveme **úplný obraz množiny $X$**
+- Množinu $f(X) = \{ f(x)\ |\  x \in A \}$ nazveme **úplný obraz množiny $X$**
 
 ### Vlastnosti funkcí
 - Funkce $f: X \rightarrow Y$ se nazývá:

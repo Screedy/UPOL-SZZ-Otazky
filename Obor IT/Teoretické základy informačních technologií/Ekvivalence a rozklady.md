@@ -79,7 +79,7 @@
 
 - Uvažujeme-li o vztahu množiny $X$ a rozkladu $X/E$, pak víme, že každému $x \in X$ přísluší třída rozkladu $[x]_{E}$, pro kterou $x \in [x]_{E}$
 
-- Pro **ekvivalenci E na X** tedy můžeme uvažovat zobrazení **$f_{E}:X \rightarrow X/E$**,
+- Pro **ekvivalenci $E$ na $X$** tedy můžeme uvažovat zobrazení **$f_{E}:X \rightarrow X/E$**,
 	- kde $f_{E}(x) = [x]_{E}$ pro každý $x \in X$,
 	a nazýváme jej přirozené (kanonické) zobrazení.
 
