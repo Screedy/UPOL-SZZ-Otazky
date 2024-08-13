@@ -8,7 +8,7 @@
 	- Na pravděpodobnosti je založen pojem **složitost algoritmu v průměrném případě**
 
 ### Klasická definice pravděpodobnosti (Laplaceova)
-- Nechť $\Omega$ je konečný vzorový prosto a všechny elementární jevy v $\Omega$ jsou stejně pravděpodobné. Pro libovolnou událost $A \subseteq \Omega$, pravděpodobnost $P(A)$ je definována: $$P(A) = \frac{počet\ příznivých\ výsledků\ pro\ A}{celkový\ počet\ možných\ výsledků}$$kde **počet příznivých výsledků** pro $A$ je počet prvků v množině $A$ a **celkový počet možných výsledků** je počet všech prvků ve vzorovém prostoru $\Omega$.
+- Nechť $\Omega$ je konečný vzorový prostor a všechny elementární jevy v $\Omega$ jsou stejně pravděpodobné. Pro libovolnou událost $A \subseteq \Omega$, pravděpodobnost $P(A)$ je definována: $$P(A) = \frac{počet\ příznivých\ výsledků\ pro\ A}{celkový\ počet\ možných\ výsledků}$$kde **počet příznivých výsledků** pro $A$ je počet prvků v množině $A$ a **celkový počet možných výsledků** je počet všech prvků ve vzorovém prostoru $\Omega$.
 
 
 ## Kolmogorova definice pravděpodobnosti
