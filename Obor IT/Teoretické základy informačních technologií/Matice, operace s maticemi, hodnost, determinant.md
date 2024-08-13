@@ -15,7 +15,7 @@
 - Nechť **$r = min\{m,n\}$**, pak prvky $a_{11}, a_{22}, ..., a_{rr}$ tvoří tzv. **hlavní diagonálu matice $A$**.
 
 ### Typy matic
-- Matice $A = (a_{ij})_{m \times n}$ se nazývá **nulová**, jestliže $a_{ij} = 0$ pro každé index $i, j$.
+- Matice $A = (a_{ij})_{m \times n}$ se nazývá **nulová**, jestliže $a_{ij} = 0$ pro každý index $i, j$.
 - Matice $A = (a_{ij})_{m \times n}$ se nazývá **čtvercová** stupně $n$, jestliže $m=n$.
 - Čtvercová matice se nazývá **diagonální**, jestliže mimo hlavní diagonálu jsou všechny prvky nulové
 - Diagonální matice se nazývá **skalární**, jsou-li si všechny prvky hlavní diagonály rovny.
