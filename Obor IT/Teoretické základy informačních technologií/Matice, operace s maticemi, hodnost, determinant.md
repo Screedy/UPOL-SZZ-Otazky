@@ -49,7 +49,7 @@
 
 ### Násobení matice skalárem
 - Nechť $(T; +; \cdot)$ je číselné těleso, $A \in M_{m \times n}(T), c \in T$.
-- Zavedeme zobrazení "$\cdot$":$\ T \times M_{m \times n}(T) \rightarrow M_{m \times n}(T)$ předpisem $c \cdot A = (b_{ij})_{m \times n},$ kde $b_{ij} = c \cdot a_{ij}$ pro každé $i,j$. Toto zobrazení nazýváme násobení matice skalárem.
+- Zavedeme zobrazení "$\cdot$":$\ T \times M_{m \times n}(T) \rightarrow M_{m \times n}(T)$ předpisem $c \cdot A = (b_{ij})_{m \times n},$ kde $b_{ij} = c \cdot a_{ij}$ pro každé $i,j$.
 - *(Prvky z $T$ nazýváme skaláry.)*
 >[!Example] Příklad
 > - Mějme matici $A=\begin{pmatrix}1 & 2 \\ 3 & 4\end{pmatrix}$ a skalár $c = 3$.
@@ -105,7 +105,7 @@
 
   
 ### Maticová transpozice
-- Je-li $A = (a_{ij})_{m \times n}$ matice nad tělesem $T$, pak transponovanou maticí k matici $A$ rozumíme matici $A^{T} = (a_{ij})_{n \times m}$. $A^{T}$ tedy vznikne vzájemnou záměnou odpovídajících řádků a sloupců matice $A$, tedy jakýmsi *překlopením matice $A$ přes hlavní diagonálu*
+- Je-li $A = (a_{ij})_{m \times n}$ matice nad tělesem $T$, pak transponovanou maticí k matici $A$ rozumíme matici $A^{T} = (a_{ij})_{n \times m}$. $A^{T}$ tedy vznikne vzájemnou záměnou odpovídajících řádků a sloupců matice $A$, tedy jakýmsi *překlopením matice $A$ přes hlavní diagonálu*.
 >[!Example] Příklad
 >$$
 >A=
@@ -221,7 +221,7 @@
 >   $$ 
 >   Pak $sgn(\pi_{1}) = (-1)^{2} = 1$ a $sgn(\pi_{2}) = (-1)^{2} = 1$, tedy $P$ je sudá permutace.
 ### Transpozice na množině
-- **Transpozicí na $A = \{1, 2, ..., n\}$** rozumíme permutaci $P$ na $A$ takovou, že existují $i, j \in A$ tak, že $P(i) = j, P(j) = i, P(k) = k$ pro všechny $k \in A \\ \{i,j\}$.
+- **Transpozicí na $A = \{1, 2, ..., n\}$** rozumíme permutaci $P$ na $A$ takovou, že existují $i, j \in A$ tak, že $P(i) = j, P(j) = i, P(k) = k$ pro všechny $k \in A \text{\\} \{i,j\}$.
 > [!Example] Příklad
 >  na $A = \{1,2,3,4,5,6\}$ platí: 
 >  $$
@@ -278,7 +278,7 @@
 > \end{pmatrix}
 > $$
 ### Algebraický doplněk prvku ve čtvercové matici
-- Nechť $A = (a_{ij}) \in M_{n}(T)$. Potom **subdeterminant dílčí matice**, která vznikne z $A$ vynecháním $i$-tého řádku a $j$-tého sloupce, budeme **nazývat minor matice $A$ příslušný k prvku $a_{ij}$**. zmačíme $M_{ij}$.
+- Nechť $A = (a_{ij}) \in M_{n}(T)$. Potom **subdeterminant dílčí matice**, která vznikne z $A$ vynecháním $i$-tého řádku a $j$-tého sloupce, budeme **nazývat minor matice $A$ příslušný k prvku $a_{ij}$**. značíme $M_{ij}$.
 - **Algebraickým doplňkem prvku $a_{ij}$** matice $A$ rozumíme číslo $$A_{ij} = (-1)^{i+j} \cdot M_{ij}.$$
 > [!Example] Příklad
 > $$
