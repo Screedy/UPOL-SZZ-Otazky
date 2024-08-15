@@ -82,13 +82,15 @@ $$
 
 >[!Example]- Isibalo - Matice přechodu
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/ctXsUU_WaGU?si=q-La7AumjigiXYCX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+>
+><iframe width="660" height="385" src="https://www.youtube.com/embed/glyBotI6XY8?si=6GIj-Q6I_NrDg8nA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 ## Něco navíc - Podprostory:
 --- 
 ### Vlastnosti
 Věta 5.5
-Neprázdná podmnožina $W$ pole vektorového prostoru $(V ;+, T$, * ) je polem podprostoru ve $V$ právĕ když s každými prvky $\overrightarrow{u_1}, \overrightarrow{u_2}, \ldots, \overrightarrow{u_n}$ obsahuje také každou jejich lineární kombinaci.
+Neprázdná podmnožina $W$ pole vektorového prostoru $(V ;+, T, \cdot )$ je polem podprostoru ve $V$ právĕ když s každými prvky $\overrightarrow{u_1}, \overrightarrow{u_2}, \ldots, \overrightarrow{u_n}$ obsahuje také každou jejich lineární kombinaci.
 
 ### Průnik
 Průnik $W_1 \cap W_2$ dvou podprostorů $W_1$ a $W_2$ ve $V P(V ;+, T, \cdot)$ je obecně opět podprostor ve $V$. Je to "největší" (vzhledem k $\subseteq$ ) podprostor ve $V$, který je obsažen současně ve $W_1$ a $W_2$.
