@@ -1,11 +1,11 @@
 ## Posloupnost
 - Každé zobrazení $f: \mathbb{N} \to \mathbb{A}$ nazýváme **číselná posloupnost**
-	- kde $A$ je libovolná množina libovolných objektů
+	- kde $\mathbb{A}$ je libovolná množina libovolných objektů
 	- pokud je oborem hodnot číselný, pak mluvíme o **číselné posloupnosti**
 - Posloupnost je **konečná**, jestliže je definičním oborem množina $\{1, 2, ..., k\}$, kde $k \in \mathbb{N}$
-	- takové posloupnosti označujeme jako *uspořádáná n-tice*
-- **Funkční hodnotu** funkce $f$ v bodě $n$ nazýváme **n-tý člen** posloupnosti a značíme $a_{n},\   b_{n}$ apod.
-- **Posloupnost s n-tým členem** pak zapisujeme $(a_{n})^{\infty}_{n=1}$ nebo jen $(a_{n})$
+	- takové posloupnosti označujeme jako *uspořádáná $n$-tice*
+- **Funkční hodnotu** funkce $f$ v bodě $n$ nazýváme $n$**-tý člen** posloupnosti a značíme $a_{n},\   b_{n}$ apod.
+- **Posloupnost s $n$-tým členem** pak zapisujeme $(a_{n})^{\infty}_{n=1}$ nebo jen $(a_{n})$
 	- čteme "posloupnost á en od jedné do nekonečna"
 - Neformálně lze chápat jako kolekci hodnot, ve které jsou prvky dány svým pořadím (sekvence)
 
@@ -108,8 +108,8 @@ $$
 
 ### Vlastnosti limit 
 -  Každá posloupnost má nejvýše jednu limitu 
-	- posloupnost buď limitu nemá (je divergentní) nebo má právě jednu
-- Každá konvergentní posloupnost je omezená
+	- posloupnost **buď limitu nemá** (je **divergentní**) nebo **má právě jednu**
+- Každá konvergentní posloupnost **je omezená**
 
 ### Aritmetické operace s limitami
 - Nechť $\lim_{n \to \infty} a_n = a$, $\lim_{n \to \infty} b_n = b$ jsou konvergentní posloupnosti a nechť $p, q$ jsou reálná čísla, pak platí:
