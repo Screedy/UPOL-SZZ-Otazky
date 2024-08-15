@@ -2,6 +2,10 @@
 
 - Uvažujme číselné těleso $T$ a prvky $a_{1}, \ldots, a_{n}, b \in T$. Úloha určit všechny $n$-tice $\left(x_{1}, \ldots, x_{n}\right) \in T^{n}$, pro něž platí$$\sum_{i=1}^{n} a_{i} x_{i}=a_{1} x_{1} + \cdots + a_{n} x_{n}=b$$se nazývá **lineární rovnice** (LR) o $n$ neznámých nad $T$. **Každá $n$-tice**, pro kterou tato **rovnost nastane**, se nazývá **řešení** této rovnice.
 
+> [!Example]- Isibalo - Lineární rovnice
+><iframe width="660" height="385" src="https://www.youtube.com/embed/EtAaMRVTYvw?si=Wbo-i8o7sU1rB211" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 ### Soustava lineárních rovnic
 
 - Nechť $T$ je číselné těleso a $a_{ij}, b_{i} \in T$ pro každé $i=1, \ldots, m$ a každé $j=1, \ldots, n$. Úloha určit všechny $n$-tice $\left(x_{1}, \ldots, x_{n}\right) \in T^{n}$, pro které současně platí $$
@@ -14,6 +18,10 @@ $$se nazývá **soustava $m$ lineárních rovnic** (SLR) o $n$ neznámých nad $
 ---
 - Jsou-li $M_{1}, \ldots, M_{m}$ množiny řešení rovnic $\left(R_{1}\right), \ldots,\left(R_{m}\right)$, pak pro množinu řešení soustavy $(S)$ platí $$M=M_{1} \cap \ldots \cap M_{m}$$
 - Soustavu $(S)$ můžeme zkráceně zapisovat jako $$\sum_{j=1}^{n} a_{i j} x_{j}=b_{i}, \quad i=1, \ldots, m$$
+
+
+>[!Example]- Isibalo - Soustava lineárních rovnic
+><iframe width="660" height="385" src="https://www.youtube.com/embed/EmJmb_dNJmI?si=2NXmK4okiwrSQM3D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Matice soustavy lineárních rovnic
 - Nechť je dána soustava $(S)$ lineárních rovnic. Pak matici  
@@ -154,7 +162,7 @@ $$
 x_{1}=\frac{1}{b_{11}} \cdot\left(c_{1}-b_{1 n} \cdot x_{n}-b_{1, n-1} \cdot x_{n-1}-\cdots-b_{12} \cdot x_{2}\right)
 $$
 
->[!Example]- Gaussova eliminační metoda
+>[!Example]- Isibalo - Gaussova eliminační metoda
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/buhdFjMy7PU?si=RCeB41e5YyVfnCjR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 > [!Summary] Gaussova eliminační metoda
@@ -199,6 +207,8 @@ $$
 >$$ 
 >tedy $x_{2}=-3$.
 
+>[!Example]- Isibalo - Cramerovo pravidlo
+><iframe width="660" height="385" src="https://www.youtube.com/embed/nyi42cJ8olM?si=C4gvMeMQDubkSvlB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ##### Navigace
 Předchozí: [[Eukleidovské vektorové prostory, ortogonální a ortonormální báze, Schwarzova nerovnost, Schmidtova ortogonalizační metoda]]
 Následující: [[Lineární zobrazení a transformace a jejich matice]]
