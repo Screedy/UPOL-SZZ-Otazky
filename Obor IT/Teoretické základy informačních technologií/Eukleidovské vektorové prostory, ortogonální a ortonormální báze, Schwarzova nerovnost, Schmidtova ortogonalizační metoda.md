@@ -41,7 +41,7 @@ $$
 - Nenulové vzájemně ortogonální vektory $\vec{u_1}, \vec{u_2}, \ldots, \vec{u_n}$ z EVP $V$ jsou **lineárně nezávislé**.
 - Jsou-li vektory $\vec{u_1}, \vec{u_2}, \ldots, \vec{u_n}$ vzájemně ortogonální v EVP $V$ a platí-li $V=$ $\left[\left\{\vec{u_1}, \vec{u_2}, \ldots, \vec{u_n}\right\}\right]$, pak množina $\left\{\vec{u_1}, \vec{u_2}, \ldots, \vec{u_n}\right\}$ je báze VP $V$, tzv. **ortogonální báze**.
 
-### Gram - Schmidtova ortogonalizační metoda
+### Gram-Schmidtova ortogonalizační metoda
 - Metoda, která z **báze** vektorového prostoru vytvoří **ortogonální bázi**.
 >[!Example] Příklad užití
 >- Mám 3 (bázové) vektory, které neleží v jedné rovině. 
