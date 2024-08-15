@@ -3,7 +3,7 @@
 - Nechť $a \in \mathbb{R}$ a je dáno $\delta \in \mathbb{R}, \delta > 0$, pak interval
   $$U_{\delta}(a) = (a - \delta, a + \delta)$$
   nazýváme **$\delta$-okolím bodu** $a$.
-- Interval $U_{\delta}^{-}(a) = (a - \delta, a)$ nazýváme \*\*levým $\delta$-okolím bodu $a$
+- Interval $U_{\delta}^{-}(a) = (a - \delta, a)$ nazýváme **levým $\delta$-okolím bodu $a$**
 - Interval $U_{\delta}^{+} = (a, a + \delta)$ nazýváme **pravým $\delta$-okolím bodu** $a$
 
 ### Prstencové okolí bodu
@@ -29,6 +29,9 @@
 - Píšeme $\lim_{x \to a} f(x) = A$.
 - Pro $a \in \mathbb{R}$ jde o limitu ve vlastním bodě, zatímco pro $a \in \{-\infty, \infty\}$ jde o limitu v nevlastním bodě
 - Je-li $A \in \mathbb{R}$, říkáme, že $f$ má vlastní limitu, zatímco je-li $A \in \{-\infty, \infty\}$, říkáme, že $f$ má nevlastní limitu.
+
+>[!Example]- Isibalo - Úvod do limity funkce
+><iframe width="660" height="385" src="https://www.youtube.com/embed/tSzMZqrAqPc?si=QGl71eCLdLJX-nrm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Jednostranné limity
 

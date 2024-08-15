@@ -93,6 +93,9 @@ $$
 - Zkoumáme chování posloupnosti pro velká přirozená čísla
 - Jedná se o hodnotu, ke které se posloupnost přibližuje, postupuje-li do nekonečna
 
+>[!Example]- Isibalo - Věty o limitách posloupností
+><iframe width="660" height="385" src="https://www.youtube.com/embed/VvBPNeOYQdI?si=KeYNvbsj0alltZ8g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Konečné limity posloupnosti
 - Číslo $a \in \mathbb{R}$ se nazývá **limita posloupnosti** $(a_n)_{n=1}^{\infty}$ právě když ke každému $\varepsilon > 0$ existuje $n_0 \in \mathbb{N}$ tak, že pro každé $n \geq n_0$ platí $|a_n - a| < \varepsilon$, jestliže $n \geq n_0$.
 - Píšeme $\lim_{{n \to \infty}} a_n = a$
@@ -115,7 +118,7 @@ $$
 - Nechť $\lim_{n \to \infty} a_n = a$, $\lim_{n \to \infty} b_n = b$ jsou konvergentní posloupnosti a nechť $p, q$ jsou reálná čísla, pak platí:
 1. $\lim_{n \to \infty} (a_n + b_n) = a + b$
 2.  $\lim_{n \to \infty} (a_n * b_n) = a * b$
-3.  $\lim_{n \to \infty} (a_n / b_n) = a / b$  (pro $b \neq 0$)
+3.  $\lim_{n \to \infty} (\frac{a_n}{b_n}) = \frac{a}{b}$  (pro $b \neq 0$)
 4. $\lim_{n \to \infty} |a_n| = |a|$
 
 ## Limes inferior a Limes superior
