@@ -49,9 +49,9 @@
 - Umožňují názornou představu
 
 ### Potenční množina
-- **$2^{X} = \{ A \mid A \subseteq X\}$**
-- Množina, jejímiž prvky jsou **právě všechny podmnožiny dané množiny X**
 - Značí se $2^{X}$
+- **$2^{X} = \{ A \mid A \subseteq X\}$**
+- Množina, jejímiž prvky jsou **právě všechny podmnožiny dané množiny $X$**
 - Je-li $X$ konečná, pak $\mid 2^{X} \mid = 2^{\mid X \mid}$
 - **Vždy obsahuje prázdnou množinu** ($\varnothing$), protože ta je podmnožinou každé množiny
 >[!Example] Příklad
@@ -60,7 +60,7 @@
 
 ### Kartézský součin
 - Kartézský součin $n$ množin je **množina všech uspořádaných $n$-tic prvků z těchto množin**
-- $X_{1} \times ... \times X_{n} = \{ <x_{1}, ... x_{n}> \mid x_{1} \in X_{1}, ..., x_{n} \in X_{n}\}$
+- $X_{1} \times ... \times X_{n} = \{ <x_{1}, ..., x_{n}> \mid x_{1} \in X_{1}, ..., x_{n} \in X_{n}\}$
 - Je-li $X_{1} = ... = X_{n} = X$, pak píšeme $X^{n}$ a říkáme **$n$-tá kartézská mocnina množiny $X$**
 - Velikost $\mid A \times B \mid$ je $\mid A \mid \times \mid B \mid$
 
@@ -75,7 +75,7 @@
 	- $..., -3, -2, -1, 0, 1, 2, 3, ...$
 	- Zahrnují přirozená čísla, jejich záporné protějšky a nulu.
 3. Racionální čísla - $\mathbb{Q}$
-	- Čísla, která lze vyjádřit jako podíl dvou celých čísel ($\frac{p}{q}$, kde $p \in \mathbb{Z}$ a $q \in \mathbb{Z} \\ \set{0}$).
+	- Čísla, která lze vyjádřit jako podíl dvou celých čísel ($\frac{p}{q}$, kde $p \in \mathbb{Z}$ a $q \in \mathbb{Z} \text{\\} \set{0}$).
 	- Mohou být zlomky nebo celá čísla.
 4. Iracionální čísla
 	- Zahrnuje čísla, která nelze vyjádřit jako podíl dvou celých čísel.
