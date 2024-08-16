@@ -12,16 +12,15 @@
 - Na rozdíl od limity:
 	- musí být funkce $f$ v bodě $a$ definována
 	- limita $\lim_{x \to a} f(x)$ musí být rovna funkční hodnotě v bodě $a$
-- ![[Pasted image 20240628132136.png]]
+- ![[Pasted image 20240628132136.png | 400]]
 
 ## Základní vlastnosti spojitosti
-- z definice plyne několik podmínek pro splnění spojitosti
 - Nechť $f, g : \mathbb{R} \to \mathbb{R}$. Pak:
-1)  $f$ je spojitá v bodě $a$, právě když je v $a$ spojitá zprava i zleva
-2)  Jestliže je $f$ spojitá v $a$, pak existuje $U(a)$ takové, že $f$ je omezená na $U(a)$
-3)  Jsou-li $f, g$ spojité v $a$, pak $|f|$, $f + g$, $f \cdot g$ jsou také v $a$ spojité. Pokud $g(a) \neq 0$, je v $a$ spojitá i $\frac{f}{g}$
-	- Jsou-li funkce f a g spojité v bodě a, pak můžeme o součtu, rozdílu, součinu a podílu těchto funkcí prohlásit, že se jedná o funkci spojitou v bodě a.
-4) Nechť $f$ je spojitá v $a$ a $g$ spojitá v $A = f(a)$. Pak je také $g \circ f$ spojitá v $a$
+	1)  $f$ je spojitá v bodě $a$, právě když je v $a$ spojitá zprava i zleva
+	2)  Jestliže je $f$ spojitá v $a$, pak existuje $U(a)$ takové, že $f$ je omezená na $U(a)$
+	3)  Jsou-li $f, g$ spojité v $a$, pak $|f|$, $f + g$, $f \cdot g$ jsou také v $a$ spojité. Pokud $g(a) \neq 0$, je v $a$ spojitá i $\frac{f}{g}$
+		- Jsou-li funkce $f$ a $g$ spojité v bodě $a$, pak můžeme o součtu, rozdílu, součinu a podílu těchto funkcí prohlásit, že se **jedná o funkci spojitou** v bodě $a$.
+	4) Nechť $f$ je spojitá v $a$ a $g$ spojitá v $A = f(a)$. Pak je také $g \circ f$ spojitá v $a$
 
 ### O limitě složené funkce
 Nechť $f, g : \mathbb{R} \to \mathbb{R}$ a nechť:
@@ -113,7 +112,7 @@ $$
 \lim_{x \to 0^+} \frac{1}{x} = \infty, \quad \text{resp.} \quad \lim_{x \to 0^-} \frac{1}{x} = -\infty
 $$
 
-	- ![[Pasted image 20240628133619.png]]
+- ![[Pasted image 20240628133619.png]]
 
 ##### Navigace
 
