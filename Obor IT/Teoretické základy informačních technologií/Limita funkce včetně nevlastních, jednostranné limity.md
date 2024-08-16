@@ -65,30 +65,26 @@
 
 ## Příklady
 
-- Rozlišujeme 4 typy limit podle toho, jestli $a$, $A$ nabývá reálných nebo hodnot $\pm \infty$
+- Rozlišujeme $4$ typy limit podle toho, jestli $a$, $A$ nabývá reálných nebo hodnot $\pm \infty$
 
-1. Vlastní limita ve vlastním bodě
-   ![[Pasted image 20240627200335.png]]
+>[!Example]- Vlastní limita ve vlastním bodě
+>![[Pasted image 20240627200335.png]]
+>pro $a, A \in \mathbb{R}$
 
-- pro $a, A \in \mathbb{R}$
+>[!Example]- Vlastní limita v nevlastním bodě
+>![[Pasted image 20240627203837.png]]
+>- pro $a \in \mathbb{\pm \infty} \land A\in\mathbb{R}$
+>- pro hodně vzdálené body $x$ se funkční hodnoty přibližují k nějaké reálné funkční hodnotě $A$
 
-2. Vlastní limita v nevlastním bodě
-   ![[Pasted image 20240627203837.png]]
+>[!Example]- Nevlastní limita ve vlastním bodě 
+>![[Pasted image 20240627200435.png]]
+>- pro $a \in \mathbb{R} \land A\in\mathbb{\pm \infty}$
+>- příkladem je např. $f:y=\frac{1}{|x|}$ v bodě $0$
 
-- pro $a \in \mathbb{\pm \infty} \land A\in\mathbb{R}$
-- pro hodně vzdálené body $x$ se funkční hodnoty přibližují k nějaké reálné funkční hodnotě $A$
-
-1. Nevlastní limita ve vlastním bodě
-   ![[Pasted image 20240627200435.png]]
-
-- pro $a \in \mathbb{R} \land A\in\mathbb{\pm \infty}$
-- příkladem je např. $f:y=\frac{1}{|x|}$ v bodě 0
-
-1. Nevlastní limita v nevlastním bodě
-   ![[Pasted image 20240627203755.png]]
-
-- pro $a, A \in \mathbb{\pm \infty}$
-- funkční hodnoty vzdálených $x$ konverguje k $\pm \infty$
+>[!Example]- Nevlastní limita v nevlastním bodě
+>![[Pasted image 20240627203755.png]]
+>- pro $a, A \in \mathbb{\pm \infty}$
+>- funkční hodnoty vzdálených $x$ konverguje k $\pm \infty$
 
 ## Vlastnosti limity funkce
 
