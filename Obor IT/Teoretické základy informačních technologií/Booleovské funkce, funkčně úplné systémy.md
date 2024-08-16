@@ -51,7 +51,15 @@
   > 
   > Podobně pro $\downarrow$.
   
-  
+>[!Example]- Navíc z internetu
+>- Funkčně úplné systémy se používají pro:
+>	1. **Návrh digitálních obvovů**
+>		- V návrhu digitálních obvodů je efektivní používat omezený počet základních operací.
+>		- Funkčně úplné systémy nám umožní realizovat všechny potřebné logické funkce pouze s těmito operacemi.
+>	2. **Teoretickou informatiku**
+>		- Funkčně úplné systémy jsou důležité při studiu výpočetní složitosti a logických teorií. Mohou být použity k analýze, jak složité je realizovat určité funkce pomocí omezených prostředků.
+>	3. **Optimalizaci a minimalizaci logických obvodů**
+>		- S použitím funkčně úplných systémů lze logické obvody optimalizovat a minimalizovat tím, že se redukuje počet různých typů logických operací a brán potřebných k realizaci složitějších operací.
 ##### Navigace
 Předchozí: [[Výroková logika, formule, pravdivost, vyplývání]]
 Následující: [[Úplné konjunktivní a disjunktivní normální formy]]
