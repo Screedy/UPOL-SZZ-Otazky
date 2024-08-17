@@ -2,7 +2,7 @@
 - Dijkstrův algoritmus je jeden z nejznámějších algoritmů **hledání nejkratší cesty**
 ---
 - **Na vstupu**: je neorientovaný graf $G = <V, E>$, jeho hranové ohodnocení $w: E \rightarrow \mathbb{R}^{+}$ a vrchol $s \in V$
-- **Výstupem**: algoritmu je pro každý vrchol $v \in V$ číslo $d(v)$, které je vzdáleností z $s$ do $v$.
+- **Výstupem**: pro každý vrchol $v \in V$ číslo $d(v)$, které je vzdáleností z $s$ do $v$.
 - Algoritmus **používá proměnné**: $A, N, d, m$, 
 	- $A$ a $N$ označují množiny vrcholů 
 	- $d$ označuje funkci přiřazující vrcholům kladná reálná čísla
