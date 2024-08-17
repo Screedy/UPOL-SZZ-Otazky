@@ -20,6 +20,7 @@
 	1. $\|c \cdot \vec{u}\|=|c| \cdot\|\vec{u}\|$,
 	2. $\|\vec{o}\|=0$ a pro $\vec{u} \neq \vec{o}$ pak $\|\vec{u}\|>0$.
 	3. $|\vec{u} \circ \vec{v}| \leq\|\vec{u}\| \cdot\|\vec{v}\|$  (**Schwarzova nerovnost**).
+		- Schwartzova nerovnost říká, že absolutní hodnota skalárního součinu dvou vektorů je vždy menší nebo rovna součinu jejich norm. Rovnost nastává pouze tehdy, když jsou vektory lineárně závislé, tj. jeden vektor je násobkem druhého.
 
 ### Úhel vektorů
 - Nechť $V$ je EVP, $\vec{u}, \vec{v} \in V, \vec{u} \neq \vec{o} \neq \vec{v}$. Úhlem vektorů $\vec{u}$ a $\vec{v}$ rozumíme číslo
