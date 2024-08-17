@@ -45,7 +45,7 @@ nazýváme **matice soustavy** $(S)$, resp. **rozšířená matice soustavy** $(
 ---
 - SLR $A \vec{x}^{T}=\vec{b}^{T}$ je řešitelná právě když je vektor $\vec{b}$ lineární kombinací sloupců matice $A \in \mathcal{M}_{m \times n}(T)$
 
-##### Froberiova věta
+##### Frobeniova věta
 - Nehomogenní soustava lineárních rovnic $A \vec{x}^{T}=\vec{b}^{T}$ je řešitelná právě tehdy, jeli $\mathrm{h}(A)=\mathrm{h}\left(A \mid \vec{b}^{T}\right)$.
 ---
 - Je-li v této situaci navíc $\mathrm{h}(A)=n$, pak má tato soustava **právě jedno řešení**, pokud $\mathrm{h}(A)<n$, pak má nekonečně mnoho řešení (závislých na $n-\mathrm{h}(A)$ parametrech).
