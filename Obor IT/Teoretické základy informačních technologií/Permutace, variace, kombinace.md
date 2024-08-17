@@ -1,4 +1,4 @@
->[!tip] Navíc, ale mohlo by pomoct:
+>[!tip]- Pravidlo součtu a součinu, binomická věta
 >- Pravidlo součtu a součinu:
 >	- **Pravidlo součtu**: Lze-li úkol $A$ provést $m$ způsoby a úkol $B$ n způsoby, přičemž žádný z $m$ způsobů provedení úkolu $A$ není totožný s žádným z $n$ způsobů provedení úkolu $B$, pak provést úkol $A$ nebo úkol $B$ lze **$m + n$** způsoby
 >	- **Pravidlo součinu**: Lze-li úkol $C$ rozložit na po sobě následující úkoly $A$ a $B$ a lze-li úkol $A$ provést $m$ způsoby a úkol $B$ $n$ způsoby, pak úkol $C$ lze provést $m*n$ způsoby
