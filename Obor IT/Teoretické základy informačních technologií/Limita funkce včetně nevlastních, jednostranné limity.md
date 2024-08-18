@@ -3,8 +3,11 @@
 - Nechť $a \in \mathbb{R}$ a je dáno $\delta \in \mathbb{R}, \delta > 0$, pak interval
   $$U_{\delta}(a) = (a - \delta, a + \delta)$$
   nazýváme **$\delta$-okolím bodu** $a$.
-- Interval $U_{\delta}^{-}(a) = (a - \delta, a)$ nazýváme **levým $\delta$-okolím bodu $a$**
-- Interval $U_{\delta}^{+} = (a, a + \delta)$ nazýváme **pravým $\delta$-okolím bodu** $a$
+- Interval $U_{\delta}^{-}(a) = \langle a - \delta, a)$ nazýváme **levým $\delta$-okolím bodu $a$**
+- Interval $U_{\delta}^{+} = (a, a + \delta \rangle$ nazýváme **pravým $\delta$-okolím bodu** $a$
+
+>[!Example]- Isibalo - Okolí bodu
+><iframe width="660" height="385" src="https://www.youtube.com/embed/hKQ_IQZhj60?si=W5hkqw_W1qp-tcdE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Prstencové okolí bodu
 
@@ -44,6 +47,49 @@
     - $\lim_{x \to 0^-} sgn(x) = -1$
     - $\lim_{x \to 0^+} sgn(x) = 1$
 
+>[!Example]- Isibalo - Další úvahy a motivace
+><iframe width="660" height="385" src="https://www.youtube.com/embed/0B0rUKCGNU8?si=DddOpRMJyFPHS64Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+>[!Example]- Isibalo - Jednostranné limity
+><iframe width="660" height="385" src="https://www.youtube.com/embed/l-HdaElTzvQ?si=PulatMeVxQsgaXNz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Typy limit funkce
+
+- Rozlišujeme $4$ typy limit podle toho, jestli $a$, $A$ nabývá reálných nebo hodnot $\pm \infty$
+
+>[!Example]- Isibalo - Typy limit funkce
+><iframe width="660" height="385" src="https://www.youtube.com/embed/W-0s1lMRwkc?si=90SZ0ZKKwQHyTcBs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+>[!Example]- Vlastní limita ve vlastním bodě
+>![[Pasted image 20240627200335.png | 200]]
+>pro $a, A \in \mathbb{R}$
+>- Jdeme k nějaké konkrétní hodnotě a vyjde nám konkrétní výsledek.
+>- např. $\lim_{x \rightarrow  1}(\frac{x^{2}-1}{x-1})=2$
+>
+> <iframe width="660" height="385" src="https://www.youtube.com/embed/R4y0NXiNVRo?si=1ejRy1dAKI8fTKI4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+>[!Example]- Vlastní limita v nevlastním bodě
+>![[Pasted image 20240627203837.png | 200]]
+>- pro $a \in \mathbb{\pm \infty} \land A\in\mathbb{R}$
+>- pro hodně vzdálené body $x$ se funkční hodnoty přibližují k nějaké reálné funkční hodnotě $A$
+>- např. $\lim_{x \rightarrow \infty}(\frac{x+1}{x})=1$
+>
+><iframe width="660" height="385" src="https://www.youtube.com/embed/jV09c5KLRAs?si=-J47ilfs4NWHpVAh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+>[!Example]- Nevlastní limita ve vlastním bodě 
+>![[Pasted image 20240627200435.png | 200]]
+>- pro $a \in \mathbb{R} \land A\in\mathbb{\pm \infty}$
+>- např. $\lim_{x \rightarrow 0}(\frac{1}{x^{2}})=+\infty$
+>
+><iframe width="660" height="385" src="https://www.youtube.com/embed/pTRjPKIu2w8?si=xPBt7HKUQcXSpxT9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+>[!Example]- Nevlastní limita v nevlastním bodě
+>![[Pasted image 20240627203755.png | 200]]
+>- pro $a, A \in \mathbb{\pm \infty}$
+>- funkční hodnoty vzdálených $x$ konverguje k $\pm \infty$
+>- např. $\lim_{x \rightarrow \infty}(x+2) = \infty$
+>
+><iframe width="660" height="385" src="https://www.youtube.com/embed/e79gAkmqJZA?si=F8ufqbjIwvbwGDPC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Použití limity funkce
 
 1. Vyšetření průběhu funkcí
@@ -62,29 +108,6 @@
    - **Definice integrálu**
      - limita Riemannových součtů je definována počtem dělení intervalu $n$, pro $n$ jdoucí k nekonečnu.
    - **Aplikace integrálů**: Integrály se používají k výpočtu obsahu plochy vymezené danými funkcemi, objemu rotačních těles, délky křivky, ...
-
-## Příklady
-
-- Rozlišujeme $4$ typy limit podle toho, jestli $a$, $A$ nabývá reálných nebo hodnot $\pm \infty$
-
->[!Example]- Vlastní limita ve vlastním bodě
->![[Pasted image 20240627200335.png]]
->pro $a, A \in \mathbb{R}$
-
->[!Example]- Vlastní limita v nevlastním bodě
->![[Pasted image 20240627203837.png]]
->- pro $a \in \mathbb{\pm \infty} \land A\in\mathbb{R}$
->- pro hodně vzdálené body $x$ se funkční hodnoty přibližují k nějaké reálné funkční hodnotě $A$
-
->[!Example]- Nevlastní limita ve vlastním bodě 
->![[Pasted image 20240627200435.png]]
->- pro $a \in \mathbb{R} \land A\in\mathbb{\pm \infty}$
->- příkladem je např. $f:y=\frac{1}{|x|}$ v bodě $0$
-
->[!Example]- Nevlastní limita v nevlastním bodě
->![[Pasted image 20240627203755.png]]
->- pro $a, A \in \mathbb{\pm \infty}$
->- funkční hodnoty vzdálených $x$ konverguje k $\pm \infty$
 
 ## Vlastnosti limity funkce
 
