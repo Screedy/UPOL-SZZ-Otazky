@@ -97,11 +97,13 @@ $$
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/VvBPNeOYQdI?si=KeYNvbsj0alltZ8g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Konečné limity posloupnosti
-- Číslo $a \in \mathbb{R}$ se nazývá **limita posloupnosti** $(a_n)_{n=1}^{\infty}$ právě když ke každému $\varepsilon > 0$ existuje $n_0 \in \mathbb{N}$ tak, že pro každé $n \geq n_0$ platí $|a_n - a| < \varepsilon$, jestliže $n \geq n_0$.
+>[!text] Definice
+>Číslo $a \in \mathbb{R}$ se nazývá **limita posloupnosti** $(a_n)_{n=1}^{\infty}$ právě když $$\forall \epsilon > 0 \ \exists n_{0}; \forall n > n_{0}: |a_{n}-A|< \epsilon$$
+>![[MacBook-2024-08-18-001933@2x.png]]
 - Píšeme $\lim_{{n \to \infty}} a_n = a$
 - Takovou posloupnosti $(a_n)_{n=1}^{\infty}$ pak nazýváme **konvergentní**
 	- říkáme že posloupnost $(a_n)_{n=1}^{\infty}$ konverguje k $a$
-	- např. geometrická posloupnost $(a_n)_{n=1}^\infty$, pro jejíž kvocient $q$ platí $|q| < 1$ , je konvergentní a  $\lim_{{n \to \infty}} a_n = 0$, konverguje tedy k 0
+	- např. geometrická posloupnost $(a_n)_{n=1}^\infty$, pro jejíž kvocient $q$ platí $|q| < 1$ , je konvergentní a  $\lim_{{n \to \infty}} a_n = 0$, konverguje tedy k $0$
 - Místo $\lim_{{n \to \infty}} = a$ píšeme také $a_{n} \to a$, čteme posloupnost $a_n$ **konverguje** ke své limitě $a$ 
 
 ### Nekonečné limity posloupnosti
@@ -129,7 +131,7 @@ $$
 - $\liminf_{n \to \infty} a_n \leq \limsup_{n \to \infty} a_n$
 - $\liminf_{n \to \infty} a_n = \limsup_{n \to \infty} (-a_n)$
 
-![[limes-inf-sup.png]]
+![[limes-inf-sup.png | 500]]
 ### Limes superior
 - Nechť $\{a_n\}_{n \in \mathbb{N}}$ je posloupnost reálných čísel. Pak definujeme
 $$
