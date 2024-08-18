@@ -9,7 +9,7 @@ $\\$
 >[!Example]- Isibalo - Lineární zobrazení
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/erNySD-QwQQ?si=Z3GcSUrmYsGIv2Uf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 #### Jádro homomorfismu
-- Je-li $f$ homomorfismus vektorového prostoru $\mathcal{V}$ do vektorového prostoru $\mathcal{V}^{\prime}$, pak jádrem homomorfszmu $f$ nazýváme množinu $\operatorname{Ker} f=\left\{\vec{u} \in V ; f(\vec{u})=\vec{o}^{\prime}\right\}$. 
+- Je-li $f$ homomorfismus vektorového prostoru $\mathcal{V}$ do vektorového prostoru $\mathcal{V}^{\prime}$, pak jádrem homomorfismu $f$ nazýváme množinu $\operatorname{Ker} f=\left\{\vec{u} \in V ; f(\vec{u})=\vec{o}^{\prime}\right\}$. 
 - Symbol $\vec{o}^{\prime}$ označuje nulový vektor ve $\mathcal{V}^{\prime}$.
 $\\[4pt]$
 - **Věta**: Je-li f homomorfismus $\mathcal{V}$ do $\mathcal{V}^{\prime}$, pak
