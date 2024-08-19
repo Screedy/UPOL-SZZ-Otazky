@@ -8,7 +8,7 @@
 - Na rozdíl od limity:
 	- musí být funkce $f$ v bodě $a$ definována
 	- limita $\lim_{x \to a} f(x)$ musí být rovna funkční hodnotě v bodě $a$
-- ![[Pasted image 20240628132136.png | 400]]
+- ![[Pasted image 20240628132136.png | 300]]
 
 >[!Example]- Isibalo - Spojitost v bodě a na intervalu
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/hLNV7Rzl8HI?si=2VaNekZ1HbTNDlwv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
