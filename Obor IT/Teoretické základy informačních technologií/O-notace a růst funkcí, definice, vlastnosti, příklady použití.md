@@ -1,4 +1,6 @@
-
+- O-notace je způsob popisu růstu funkcí v informatice a matematice.
+- Je zásadní pro analýzu algoritmů, zejména pro hodnocení jejich efektivity z hlediska času a paměťové náročnosti, když velikost vstupu roste do nekonečna.
+- O-notace popisuje, jak rychle roste funkce s porovnání s jinou funkcí, když se její vstup (obvykle velikost dat) stává velmi velkým.
 ### Základní pojmy pro porovnání růstu funkcí
 - $O(g)$ ... **Asymptotická horní mez**
 	- používána se pro popis **horního limitu** růstu funkce
@@ -6,7 +8,7 @@
 	- **Asymptotická horní mez funkce $g(n)$** je množina funkcí $f(n)$, takových, že **existuje** přirozené číslo $c > 0$ a existuje přirozené číslo $n_{0}$ tak, že **pro každé** $n \geq n_{0}$ platí $0 \leq f(n) \leq c \cdot g(n)$
 	- ![[MacBook-2024-05-13-001247@2x.png | 250]]
 
-- $\Omega(g)$ ... Asymptotická dolní mez
+- $\Omega(g)$ ... **Asymptotická dolní mez**
 	- $\Omega (g(n)) = \{ f(n) \mid (\exists c \in \mathbb{N})(\exists n_{0} \in \mathbb{N})(\forall n \geq n_{0}): 0 \leq c \cdot g(n) \leq f(n) \}$
 	- **Asymptotická dolní mez funkce $g(n)$** je množina funkcí $f(n)$, takových že **existuje** přirození číslo $c > 0$ a **existuje** přirozené číslo $n_{0}$ tak, že **pro každé** $n \geq n_{0}$ platí: $0 \leq c \cdot g(n) \leq f(n)$
 	- ![[MacBook-2024-05-13-001245@2x.png | 250]]
@@ -27,17 +29,21 @@
 	- **Asymptotická ostrá dolní mez funkce $g(n)$** je množina funkcí $f(n)$, takových, že **pro každé** přirozené číslo $c > 0$ **existuje** přirozené číslo $n_{0}$ tak, že **pro každé** $n \geq n_{0}$ platí: $0 < c \cdot g(n) < f(n)$
 
 ### Základní pravidla (vlastnosti)
-#### Věta o tranzitivitě odhadů
-- Pokud $f = O(g)$ a $g = O(h)$, pak $f = O(h)$.
-- Pokud $f = \Omega (g)$ a $g = \Omega (h)$, pak $f = \Omega (h)$.
-- Pokud $f = \Theta (g)$ a $g = \Theta (h)$, pak $f = \Theta (h)$.
-- Pokud $f = o(g)$ a $g = o(h)$, pak $f = o(h)$.
-- Pokud $f = \omega (g)$ a $g = \omega (h)$, pak $f = \omega (h)$.
+1. **Ignorování konstant**
+	- O-notace ignoruje konstantní násobky a nízké řády členů.
+	- To znamená, že $O(2n) = O(n)$ a $O(3n^{2}+5n) = O(n^{2})$.
+2. Tranzitivita
+	- Pokud $f(n) = O(g(n))$ a $g(n) = O(h(n))$, pak $f(n) = O(h(n))$.
+	- Umožňuje porovnávat různé algoritmy a funkce pomocí řetězení jejich asymptotických růstových charakteristik.
+3. Sčítání
+	- Pokud $f(n) = O(g(n))$ a $h(n) = O(p(n))$, pak $f(n)+h(n)=O(max(g(n),p(n)))$.
+	- Tato vlastnost nám říká, že celkový růst funkce je ovlivněn tím, který člen domunuje při velkých hodnotách $n$.
 
 #### Věta o reflexivitě odhadů
-- $f = O(f)$.
-- $f = \Omega (f)$.
-- $f = \Theta (f)$.
+- Každá funkce je asymptoticky ekvivalentní sama sobě. Tedy pro jakoukoliv funkci $f$ platí:
+	- $f = O(f)$,
+	- $f = \Omega (f)$,
+	- $f = \Theta (f)$.
 
 #### Věta o symetrii odhadů
 - $f = \Theta (g)$ právě když $g = \Theta (f)$.
