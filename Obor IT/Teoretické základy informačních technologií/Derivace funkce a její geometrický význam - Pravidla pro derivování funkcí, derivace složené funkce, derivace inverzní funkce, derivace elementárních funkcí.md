@@ -1,4 +1,7 @@
 ## Geometrický význam derivace funkce
+>[!Example]- Isibalo - Co nám říká derivace v bodě
+><iframe width="660" height="385" src="https://www.youtube.com/embed/SbztjOVe7Eg?si=iPcF0wkddSXrrSp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 - Derivace v bodě vyjadřuje okamžitou rychlost růstu funkce v daném bodě
 - Vezmeme-li obecně přírůstek hodnoty $\Delta x$ ($x_1 - x_0$) a příslušný přírůstek $\Delta y$ ($y_1 - y_0$), pak podíl $\frac{\Delta{y}}{\Delta{x}}$ je rovno průměrné rychlosti růstu v úseku  $x_0$ a $x_1$ 
 	- hodnota tohoto podílu je rovna **směrnici sečny**, která protíná body $[x_0, y_0]$ a $[x_1, y_1]$
@@ -11,7 +14,7 @@
 
 
 - Na obrázku níže jsou znázorněny body $T$ a $S$ na grafu příslušné funkce a sečna, která tyto dva body protíná.
-- ![[Pasted image 20240628174720.png]]
+- ![[Pasted image 20240628174720.png | 500]]
 - Pokud bychom bod $S$ stále přibližovali k bodu $T$ (snižovali $\Delta{x}$) až by splynuly v jeden bod, vznikla by tečna, jejíž směrnice by udávala okamžitou rychlost růstu v daném bodě
 - Směrnici této tečny můžeme znázornit pomocí **limity**: $$
 k_t = \lim_{\Delta x \to 0} k_s = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}
@@ -19,7 +22,7 @@ $$
 - ve výpočtu se často využívá substituce $x = x_0 + h$, tedy $h=x-x_0$ ($\Delta{x}$ je označen $h$,) $$k_t = \lim_{\Delta x \to 0} \frac{f(x_0 + h) - f(x_0)}{h}$$
 - Tato limita díky svojí důležitosti dostala název **derivace funkce v bodě**
 - Jelikož jde o směrnici tečny v daném bodě, můžeme říci, že pokud je kladná, je tečna v daném bodě rostoucí (v opačném případě klesající)
-- ![[Pasted image 20240628184706.png]]
+- ![[Pasted image 20240628184706.png | 400]]
 - Má-li funkce $f$ v každém bodě intervalu $(a, b)$ kladnou, resp. zápornou derivaci, je v tomto intervalu rostoucí, resp. klesající.
 
 ## Derivace funkce v bodě
