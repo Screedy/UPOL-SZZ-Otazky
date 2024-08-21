@@ -1,12 +1,11 @@
 ## Posloupnost
 - Každé zobrazení $f: \mathbb{N} \to A$ nazýváme **číselná posloupnost**
 	- kde $A$ je libovolná množina libovolných objektů
-	- pokud je oborem hodnot číselný, pak mluvíme o **číselné posloupnosti**
+	- pokud je obor hodnot číselný, pak mluvíme o **číselné posloupnosti**
 - Posloupnost je **konečná**, jestliže je definičním oborem množina $\{1, 2, ..., k\}$, kde $k \in \mathbb{N}$
-	- takové posloupnosti označujeme jako *uspořádáná $n$-tice*
+	- takové posloupnosti označujeme jako *uspořádáné $n$-tice*
 - **Funkční hodnotu** funkce $f$ v bodě $n$ nazýváme $n$**-tý člen** posloupnosti a značíme $a_{n},\   b_{n}$ apod.
 - **Posloupnost s $n$-tým členem** pak zapisujeme $(a_{n})^{\infty}_{n=1}$ nebo jen $(a_{n})$
-	- čteme "posloupnost á en od jedné do nekonečna"
 - Neformálně lze chápat jako kolekci hodnot, ve které jsou prvky dány svým pořadím (sekvence)
 
 ### Způsoby zadání posloupnosti
@@ -128,14 +127,14 @@ $$
 ## Limes inferior a Limes superior
 - Tyto pojmy můžeme chápat jako omezení zespoda a seshora pro hodně velké $n$ (v nekonečnu)
 - Posloupnost těchto mezí buďto nabývá nebo se nekonečně blíží v konečném počtu případů
-- Na rozdíl od limity limes inferior i limes superior vždy existují
+- Na rozdíl od limity, limes inferior i limes superior vždy existují
 	- Limita posloupnost existuje, jestliže $\limsup a_n = \liminf a_n$
 - $\liminf_{n \to \infty} a_n \leq \limsup_{n \to \infty} a_n$
 - $\liminf_{n \to \infty} a_n = \limsup_{n \to \infty} (-a_n)$
 
 ![[limes-inf-sup.png | 400]]
 ### Limes superior
-- Nechť $\{a_n\}_{n \in \mathbb{N}}$ je posloupnost reálných čísel. Pak definujeme
+- Nechť $(a_n)_{n \in \mathbb{N}}$ je posloupnost reálných čísel. Pak definujeme
 $$
 \limsup a_n := 
 \begin{cases} 
@@ -149,7 +148,7 @@ $$
 \limsup a_n := \lim_{n \to \infty} (\sup_{k \geq n} a_k)
 $$
 ### Limes inferior
-- Nechť $\{a_n\}_{n \in \mathbb{N}}$ je posloupnost reálných čísel. Pak definujeme
+- Nechť $(a_n)_{n \in \mathbb{N}}$ je posloupnost reálných čísel. Pak definujeme
 $$
 \liminf a_n := 
 \begin{cases} 
