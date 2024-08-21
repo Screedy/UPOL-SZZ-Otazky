@@ -85,7 +85,8 @@ proc tree-maximum(x)               //O(h)
 - **Pořádkový následník uzlu $x$** je *uzel*, který má **v množině $\{z \mid z.\text{key} > x.\text{key}\}$ nejmenší klíč.** Pokud je tato *množina prázdná,* pořádkový následník $x$ neexistuje.
 
 - **Pořádkový předchůdce je duální pojem** (otočíme znaménka porovnání), operace jeho nalezení a důkaz správnosti je analogický
-![[MacBook-2024-03-12-000858.png]]
+>[!tip]- Tvrzení
+>![[MacBook-2024-03-12-000858.png]]
 ```C
 proc tree-successor(x)
   // pripad 1
