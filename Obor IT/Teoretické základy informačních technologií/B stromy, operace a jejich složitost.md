@@ -74,7 +74,7 @@ proc b-tree-search(x,k)
 3. Položku `x.n` zvětšíme o $1$
 - **Problém**: 
 	- Uzel $x$ je již zaplněný - `x.n == 2t-1`, vložením klíče do `x` bychom v tomto vrcholu měli `2t` klíčů a porušili bychom podmínku z definice B-stromu.
-	1. Rozdělením uzlu `x` na dva uzly, každý s `t-1` klíči, a přesunem jednoho klíče do rodiče uzlu `x`
+	1. Rozdělením uzlu `x` na dva uzly, každý s `t-1` klíči, a přesunem jednoho klíče do rodiče uzlu `x`.
 	2. Po rozdělení můžeme `k` vložit do příslušného uzlu.
    ![[MacBook-2024-03-13-000874.png]]
 - **Problém**: 
