@@ -82,7 +82,7 @@
 	- $\pi, e, \sqrt{2}$
 5. Reálné čísla - $\mathbb{R}$
 	- Všechna racionální a iracionální čísla.
-	- Zahrnují všechny možné délky na číselné ose.
+	- Reálná čísla reprezentují všechny možné hodnoty na číselné ose.
 
 ![[ciselneMnoziny.png | 350]]
 
@@ -109,6 +109,10 @@
 >[!Example] Příklad spočetné a nespočetné množiny
 >- Množina celých čísel $\mathbb{Z} = \set{..., -2, -1, 0, 1, 2, ...}$ je nekonečná, ale je **spočetná**, protože můžeme zkonstruovat bijekci s množinou $\mathbb{N}$.
 >- Množina reálných čísel $\mathbb{R}$ je nespočetná. To lze dokázat pomocí Cantorova diagonálního argumentu, který ukazuje, že žádná bijekce mezi $\mathbb{N}$ a $\mathbb{R}$ neexistuje.
+
+
+>[!Example]- Navíc - Cantorova diagonální metoda
+>**<iframe width="660" height="385" src="https://www.youtube.com/embed/ROULC6eMWjk?si=wYomJJ1udxwx-zb0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>**
 
 
 ##### Navigace
