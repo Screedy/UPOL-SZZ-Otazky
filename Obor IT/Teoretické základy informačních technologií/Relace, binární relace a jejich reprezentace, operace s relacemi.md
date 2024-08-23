@@ -59,7 +59,6 @@
 	- **Maticí, Grafem, Seznamem seznamů**
 
 - **Reprezentace maticí (tabulkou)**
-	- Tabulky a matice představují **základní způsob reprezentace binárních relací**
 	- Máme relaci **$R \subseteq X \times Y$**, kde **$X = \{x_{1}, ..., x_{m}\}$** a **$Y = \{y_{1}, ..., y_{n}\}$**. Relaci R repzentujeme maticí/tabulkou, ve které se na místě odpovídající řádku $i$ a sloupci $j$ nachází hodnota, která určuje, **zda dvojici $<x_{i},y_{j}> \in R$**, nebo $<x_{i},y_{j}> \notin R$
 	- $M_{R}$ se nazývá matice relace $R$
 	- **Výhodou je přehlednost, nevýhodou je paměťová náročnost**
