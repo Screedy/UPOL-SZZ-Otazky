@@ -44,12 +44,12 @@
 - Všechny rozklady pro $X = \{a,b,c,d\}$:
 	$$
 	\begin{aligned}
-	\{\{a\},\{b\},\{c\},\{d\}\} &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&\\
-	\{\{a,b\}, \{c\}, \{d\}\} \\
-	\{\{b\},\{a,c\},\{d\}\} \\
-	\{\{b\}, \{c\}, \{a,d\}\, \\
-	\{\{a\},\{b,c\},\{d\}\} \\
-	\{\{a,b,c\},\{d\}\} \\
+	\set{\set{a},\set{b},\set{c},\set{d}} &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&\\
+	\set{\set{a,b}, \set{c}, \set{d}} \\
+	\set{\set{b},\set{a,c},\set{d}} \\
+	\set{\set{b}, \set{c}, \set{a,d}} \\
+	\set{\set{a},\set{b,c},\set{d}} \\
+	\set{\set{a,b,c},\set{d}} \\
 	\set{\set{b,c},\set{a,d}} \\
 	\set{\set{a},\set{c}, \set{b,d}} \\
 	\set{\set{a,c},\set{b,d}} \\
