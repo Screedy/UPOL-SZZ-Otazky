@@ -88,7 +88,7 @@
 - **Pravdivostní ohodnocení** je libovolné zobrazení $e$ výrokových symbolů daného jazyka výrokové logiky do množiny $\{0, 1\}$
 - **0** a **1** reprezentují **nepravda** a **pravda**
 - *Pravdivostní hodnota formule* φ při ohodnocení $e$, označujeme ji $\mid\mid\phi\mid\mid_e$, je definována:
-	- Je-li $\phi$ *výrokovým symbolem p*, pak 
+	- Je-li $\phi$ *výrokovým symbolem $p$*, pak 
 		- $\mid\mid p\mid\mid_e$ = e(p)
 	- Je-li $\phi$ složená formule, pak
 		- $\mid\mid\neg\psi\mid\mid_e$ = $\neg'\mid\mid \psi\mid\mid_{e}$
