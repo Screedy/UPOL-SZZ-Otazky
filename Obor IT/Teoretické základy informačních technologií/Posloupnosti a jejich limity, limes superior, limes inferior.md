@@ -120,7 +120,7 @@ $$
 >	i) $\lim_{x \rightarrow \infty}(a_{n} \pm b_{n}) = \lim_{n \rightarrow \infty}(a_{n}) \pm \lim_{n \rightarrow \infty} (b_{n}) = a \pm b$
 >	ii) $\lim_{x \rightarrow \infty} (a_{n} \cdot b_{n}) = \lim_{n \rightarrow \infty}(a_{n}) \cdot \lim_{n \rightarrow \infty}(b_{n}) = a \cdot b$
 >	iii) $\lim_{x \rightarrow \infty} (\frac{a_{n}}{b_{n}}) = \frac{\lim_{x \rightarrow \infty}(a_{n})}{\lim_{x \rightarrow \infty}(b_{n})} = \frac{a}{b}$ (pro $b \neq 0$; $\forall n \in \mathbb{N}: b_{n} \neq 0$)
->	iv) $\lim_{x \rightarrow \infty}(c \cdot a_{n}) = c \cdot \lim_{x \rightarrow \infty}(a_{n}) = c \cdot a (pro c \in \mathbb{R}, c \neq 0)$
+>	iv) $\lim_{x \rightarrow \infty}(c \cdot a_{n}) = c \cdot \lim_{x \rightarrow \infty}(a_{n}) = c \cdot a ($pro $c \in \mathbb{R}, c \neq 0)$
 
 >[!Example]- Isibalo - Věty o limitách posloupností
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/VvBPNeOYQdI?si=KeYNvbsj0alltZ8g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
