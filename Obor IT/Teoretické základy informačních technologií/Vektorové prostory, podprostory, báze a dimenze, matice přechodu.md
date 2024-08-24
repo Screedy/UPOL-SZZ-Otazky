@@ -21,6 +21,7 @@
 $$
 \vec{v}=\sum_{i=1}^n c_i \overrightarrow{u_i}=c_1 \overrightarrow{u_1}+c_2 \overrightarrow{u_2}+\cdots+c_n \overrightarrow{u_n} .
 $$
+- Je to způsob, jak vyjádřit jeden vektor jako kombinaci jiných vektorů s využitím násobení skaláry a sčítání.
 >[!Example] Příklad $5.3$
 >- Nulový vektor $\vec{o} \in V$ je lineární kombinací libovolných vektorů z $V$
 
