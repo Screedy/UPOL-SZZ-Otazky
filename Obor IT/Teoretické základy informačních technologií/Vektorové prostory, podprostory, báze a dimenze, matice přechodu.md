@@ -16,10 +16,6 @@
 - Nechť máme vektorový prostor $V$ (prvky jsou vektory) nad tělesem $T$ (prvky jsou skaláry). Platí, že "$+$": $V \times V \rightarrow V$ a "$\cdot$": $T \times V \rightarrow V$ (tzn. když **sčítám vektor jiným vektorem** tak výsledek bude zase **v tom samém vektorovém prostoru** a když **násobím vektor skalárem** tak výsledek bude **taktéž v tom samém vektorovém prostoru**)
 - Operace musí být **uzavřené** (např. po násobení **nesmím** dostat něco co **není** ve vektorovém prostoru $V$)
 
->[!Tip] Levá vnější operace
->- Nechť' $A \neq \emptyset \neq B$. 
->- **Levou vnější operaci** nad $A$ a $B$ nazýváme každé zobrazení "$\cdot$" $: A \times B \rightarrow B$.
-
 ### Lineární kombinace vektorů
 - Nechť $V$ je vektorový prostor nad tělesem $T$, nechť $\vec{v}, \vec{u_1}, \vec{u_2}, \ldots, \vec{u_n} \in V$. Říkáme, že vektor $\vec{v}$ je lineární kombinací vektorů $\vec{u_1}, \vec{u_2}, \ldots, \vec{u_n}$, jestliže existují skaláry $c_1, c_2, \ldots, c_n \in T$ tak, že
 $$
