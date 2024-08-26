@@ -4,7 +4,7 @@
 >	- **Pravidlo součinu**: Lze-li úkol $C$ rozložit na po sobě následující úkoly $A$ a $B$ a lze-li úkol $A$ provést $m$ způsoby a úkol $B$ $n$ způsoby, pak úkol $C$ lze provést $m*n$ způsoby
 >- **Binomická věta**
 >	- $(a+b)^{n} = \sum^{n}_{k=0} \binom{n}{k} a^{n-k}b^{k}$
->	- $\binom{n}{k} = \frac{n!}{k!(k-n)!}$
+>	- $\binom{n}{k} = \frac{n!}{k!(n-k)!}$
 >	- Pro $n=3$: $$(a+b)^{3}= \binom{3}{0}a^{3}b^{0}+ \binom{3}{1}a^{2}b^{1}+ \binom{3}{2}a^{1}b^{2}+ \binom{3}{3}a^{0}b^{3}$$
 
 ### Permutace
