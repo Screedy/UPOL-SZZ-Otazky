@@ -9,7 +9,6 @@
 	- $x_1$ = $x_0 + \Delta{x}$
 	- $y_1$ = $y_0 + \Delta{y}$
 
-
 - Na obrázku níže jsou znázorněny body $T$ a $S$ na grafu příslušné funkce a sečna, která tyto dva body protíná.
 - ![[Pasted image 20240628174720.png]]
 - Pokud bychom bod $S$ stále přibližovali k bodu $T$ (snižovali $\Delta{x}$) až by splynuly v jeden bod, vznikla by tečna, jejíž směrnice by udávala okamžitou rychlost růstu v daném bodě
@@ -23,6 +22,10 @@ $$
 - Má-li funkce $f$ v každém bodě intervalu $(a, b)$ kladnou, resp. zápornou derivaci, je v tomto intervalu rostoucí, resp. klesající.
 
 ## Základní věty diferenciálního počtu
+>[!Example]- Isibalo - Motivace přůběhu funkce
+><iframe width="660" height="385" src="https://www.youtube.com/embed/5ZhAVU_qGGw?si=7nKNmnWEGsLfBiYR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 - Nyní si uvedeme několik vět, které nám pomohou jednoduše zjišťovat, na kterých intervalech je funkce rostoucí (klesající), resp. jak dohledat lokální extrémy těchto funkcí.
 ### Stacionární bod
 - Bod $x_0$ nazýváme stacionárním bodem funkce $f$, existuje-li $f'(x_0)$ a je-li $f'(x_0) = 0$.
@@ -53,6 +56,9 @@ $$\forall x \in P_-(a) : f(x) < f(a) \quad \text{a} \quad \forall x \in P_+(a) :
 - Pokud zaměníme ostré nerovnosti za neostré, dostaneme definici pro **lokální maximum**, resp. **lokální minimum**
 - Obecně mluvíme o lokálních extrémech 
 - Jedná se o body, ve kterých funkce mění svojí monotonii
+
+>[!Example]- Isibalo - Co je to monoténnost a extrémy
+><iframe width="660" height="385" src="https://www.youtube.com/embed/pRPIjzGmHQw?si=-1G3i5fc_3YuiN79" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 #### Fermatova věta - nutná podmínka pro lokální extrém
 - Necht' $f : \mathbb{R} \to \mathbb{R},\ a \in \mathbb{R}$ a existuje $f'(a) \in \mathbb{R}$. Má-li funkce $f$ v bodě $a$ extrém, pak $f'(a) = 0$.
@@ -85,6 +91,9 @@ $$\forall x \in P_-(a) : f(x) < f(a) \quad \text{a} \quad \forall x \in P_+(a) :
 - Nechť $f : \mathbb{R} \to \mathbb{R}$, je spojitá v bodě $a \in \mathbb{R}$. Pak:
 1. Je-li $f$ klesající na $P_-(a)$ a rostoucí na $P_+(a)$, pak $f$ má v bodě $a$ ostré lokální minimum.
 2. Je-li $\forall x \in P_-(a) : f'(x) < 0$ a $\forall x \in P_+(a) : f'(x) > 0$, pak $f$ má v bodě $a$ ostré lokální minimum.
+
+>[!Example]- Isibalo - Proč používáme první derivace
+><iframe width="660" height="385" src="https://www.youtube.com/embed/vAJKLwfbaKk?si=4nmnDHi7RSoH8K30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Derivace vyšších řádů
 - Derivaci
@@ -183,6 +192,11 @@ $$
 - Pokud bod $P_2$ má ležet pod touto přímkou, stačí zaměnit „=” za „<” a obecný bod o souřadnicích $(x, y)$ za náš $P_2 = [x_2, f(x_2)]$. 
 - Analogickou úvahu lze provést pro bod ležící nad přímkou.
 
+>[!Example]- Isibalo - Co je to konvexnost a konkávnost
+><iframe width="660" height="385" src="https://www.youtube.com/embed/MrOskBRFUw4?si=leXLOLx_zeHwTk4o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+>[!Example]- Isibalo - Proč druhá derivace
+><iframe width="660" height="385" src="https://www.youtube.com/embed/W_J6YRZqrtA?si=XIB0_nGKikt4vTHK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ### Definice
 - Nechť $f$ je definována na intervalu $I$. Říkáme, že funkce $f$ je na intervalu $I$
 1. **ryze konvexní** právě tehdy, když pro libovolnou trojici $x_1, x_2, x_3 \in I$, $x_1 < x_2 < x_3$ platí
@@ -217,6 +231,9 @@ $$
 ## Asymptota
 - Při vyšetřování průběhu funkce a především pro přesnější kreslení jejího grafu je dobré znát přímky, kterým se graf funkce v okolí některých zajímavých bodů podobá
 - Zjednodušeně řečeno, asymptota je přímka, ke které se graf funkce blíží, ale nikdy se jí nedotkne.
+
+>[!Example]- Isibalo - Co jsou to asymptoty
+><iframe width="660" height="385" src="https://www.youtube.com/embed/_bElzjN6tz4?si=76x9eTi8-dvWkIg_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Asymptota bez směrnice - ABS
 - Nechť $f : \mathbb{R} \rightarrow \mathbb{R}$. Přímka $p : x = a$ se nazývá asymptota bez směrnice (svislá asymptota) $f$ v bodě $a \in \mathbb{R}$, jestliže

@@ -2,6 +2,9 @@
 >[!Example]- Isibalo - Co nám říká derivace v bodě
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/SbztjOVe7Eg?si=iPcF0wkddSXrrSp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+>[!Example]- Isibalo - Definice derivace
+><iframe width="660" height="385" src="https://www.youtube.com/embed/107U5WPllYw?si=NmiaDQQkeF6EZAim" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 - Derivace v bodě vyjadřuje okamžitou rychlost růstu funkce v daném bodě
 - Vezmeme-li obecně přírůstek hodnoty $\Delta x$ ($x_1 - x_0$) a příslušný přírůstek $\Delta y$ ($y_1 - y_0$), pak podíl $\frac{\Delta{y}}{\Delta{x}}$ je rovno průměrné rychlosti růstu v úseku  $x_0$ a $x_1$ 
 	- hodnota tohoto podílu je rovna **směrnici sečny**, která protíná body $[x_0, y_0]$ a $[x_1, y_1]$
