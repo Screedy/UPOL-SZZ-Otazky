@@ -56,9 +56,11 @@
   - Funkce $f$ je spojitá na uzavřeném intervalu $\langle a, b \rangle$ a v $(a, b)$ nemá žádné nulové body, pak na $(a, b)$ je buď $f(x) > 0$ nebo $f(x) < 0$ pro všechny $x \in (a, b)$.
 
 
->[!Example]- Věty o spojitosti funkce
+>[!Example]- Isibalo - Věty o spojitosti funkce
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/M97fpx5iCJ4?si=4Bal4fWWGqRNkGh3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+>[!Example]- Isibalo - Cauchy-Bolzanova věta
+><iframe width="660" height="385" src="https://www.youtube.com/embed/IJ0HajL5G9s?si=Wi2J1GiRhltt2evf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ##### Navigace
 
 Předchozí: [[Spojitost funkce - spojitost v bodě, spojitost na intervalu]]
