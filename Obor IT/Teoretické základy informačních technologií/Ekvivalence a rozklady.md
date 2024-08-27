@@ -33,7 +33,7 @@
 		- Požadujeme, aby dvě různé třídy rozkladu $\Pi$ byly disjunktní
 	- $\cup \, \Pi = X$
 		- Sjednocení všech tříd rozkladu $\Pi$ bylo rovno množině $X$ se nazývá **rozklad na množině $X$**. 
-		- Množiny $Y \in \Pi$ nazýváme **třídy rozkladu $\Pi$**. Pro prvek $x \in X$ označíme $[x]_{\Pi}$ tu třídu rozkladu $\Pi$, která obsahuje $x$.
+- Množiny $Y \in \Pi$ nazýváme **třídy rozkladu $\Pi$**. Pro prvek $x \in X$ označíme $[x]_{\Pi}$ tu třídu rozkladu $\Pi$, která obsahuje $x$.
 
 - Na množině $X$ existují dva mezní rozklady:
 	- $[x]_{\Pi} = \{x\}$
