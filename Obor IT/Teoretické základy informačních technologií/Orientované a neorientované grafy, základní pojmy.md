@@ -2,7 +2,12 @@
 - Grafy představují místa a spojení mezi nimi
 - Grafy mají řadu různorodých aplikací
 
-- Teorie grafů se zabývá situacemi spojenými s grafy (**Jaký vlak si vybrat, abych byl na místě co nejrychleji?** Jak se nejrychleji dostat do školy? **Která cesta je nejkratší?**)
+- Teorie grafů se zabývá situacemi spojenými s grafy
+	- Hledání nejkratší cesty
+	- Problém obchodního cestujícího
+	- Problém barvení grafu
+	- Eulerovy cesty a kružnice
+	- ...
 
 - **Objekty** se nazývají *vrcholy*, **spojení** pak *hrany*
 - Graf je dán množinou vrcholů a množinou hran mezi nimi
