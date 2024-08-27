@@ -36,7 +36,7 @@
 		- QuickSort, Selection Sort.
 	- **Out-of-place algoritmy**
 		- Vytvářejí nový seznam pro seřazené prvky a mohou potřebovat více paměti.
-		- MergeSort. Counting Sort
+		- MergeSort, Counting Sort.
 
 ### Dolní mez složitosti třídění porovnáváním
 - Věta: *Časová složitost v nejhorším případě libovolného algoritmu třídění porovnáváním je $\Omega (n \lg n)$*.
