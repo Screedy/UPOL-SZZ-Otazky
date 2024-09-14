@@ -95,7 +95,7 @@ $$
 ### Konečné limity posloupnosti
 >[!text] Definice
 >Číslo $a \in \mathbb{R}$ se nazývá **limita posloupnosti** $(a_n)_{n=1}^{\infty}$ právě když $$\forall \epsilon > 0 \ \exists n_{0}; \forall n > n_{0}: |a_{n}-A|< \epsilon$$
->![[MacBook-2024-08-18-001933@2x.png]]
+>![[MacBook-2024-08-18-001933.png]]
 - Píšeme $\lim_{{n \to \infty}} a_n = a$
 - Takovou posloupnosti $(a_n)_{n=1}^{\infty}$ pak nazýváme **konvergentní**
 	- říkáme že posloupnost $(a_n)_{n=1}^{\infty}$ konverguje k $a$
@@ -144,22 +144,16 @@ $$
 $$
 
 - Tuto hodnotu nazýváme **limes superior** posloupnosti $\{a_n\}_{n \in \mathbb{N}}$. 
-- Alternativní zápis: $$
-\limsup a_n := \lim_{n \to \infty} (\sup_{k \geq n} a_k)
-$$
+- Alternativní zápis: $$\limsup a_n := \lim_{n \to \infty} (\sup_{k \geq n} a_k)$$
 ### Limes inferior
-- Nechť $(a_n)_{n \in \mathbb{N}}$ je posloupnost reálných čísel. Pak definujeme
-$$
+- Nechť $(a_n)_{n \in \mathbb{N}}$ je posloupnost reálných čísel. Pak definujeme$$
 \liminf a_n := 
 \begin{cases} 
 \lim_{n \to \infty} \inf \{a_k; k \geq n\}, & \text{jestliže je } a_n \text{ zdola omezená} \\
 -\infty, & \text{jestliže je } a_n \text{ zdola neomezená}.
-\end{cases}
-$$
+\end{cases}$$
 - Tuto hodnotu nazýváme **limes inferior** posloupnosti $\{a_n\}_{n \in \mathbb{N}}$. 
-- Alternativní zápis: $$
-\liminf a_n := \lim_{n \to \infty} (\inf_{k \geq n} a_k)
-$$
+- Alternativní zápis: $$\liminf a_n := \lim_{n \to \infty} (\inf_{k \geq n} a_k)$$
 
 ##### Navigace
 
