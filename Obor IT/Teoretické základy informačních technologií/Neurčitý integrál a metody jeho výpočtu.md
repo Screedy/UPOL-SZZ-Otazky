@@ -113,8 +113,7 @@ $$
 	- doufáme, že je výraz jednodušší než původní integrál v zadání a umíme ho spočítat
 1. Vrátíme se k proměnné $x$ a hledaný neurčitý integrál má tvar $F(\varphi(x))$, $x \in (a, b)$.
 
-- Stručněji: 
-$$\int f(\varphi(x)) \cdot \varphi'(x) dx = \left| \begin{array}{c} \varphi(x) = t \\ \varphi'(x) dx = dt \end{array} \right| = \int f(t) dt.$$
+- Stručněji: $$\int f(\varphi(x)) \cdot \varphi'(x) dx = \left| \begin{array}{c} \varphi(x) = t \\ \varphi'(x) dx = dt \end{array} \right| = \int f(t) dt.$$
 
 #### Druhá věta o substituci
 1. Nechť funkce $x = \varphi(t)$ zobrazuje interval $(\beta, \gamma)$ na interval $(a, b)$ a nechť na $(\beta, \gamma)$ existuje vlastní $\varphi' > 0$ (nebo $\varphi' < 0$).
