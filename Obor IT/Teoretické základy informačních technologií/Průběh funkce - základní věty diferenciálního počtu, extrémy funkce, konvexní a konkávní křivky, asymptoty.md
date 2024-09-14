@@ -12,9 +12,7 @@
 - Na obrázku níže jsou znázorněny body $T$ a $S$ na grafu příslušné funkce a sečna, která tyto dva body protíná.
 - ![[Pasted image 20240628174720.png]]
 - Pokud bychom bod $S$ stále přibližovali k bodu $T$ (snižovali $\Delta{x}$) až by splynuly v jeden bod, vznikla by tečna, jejíž směrnice by udávala okamžitou rychlost růstu v daném bodě
-- Směrnici této tečny můžeme znázornit pomocí **limity**: $$
-k_t = \lim_{\Delta x \to 0} k_s = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}
-$$
+- Směrnici této tečny můžeme znázornit pomocí **limity**: $$k_t = \lim_{\Delta x \to 0} k_s = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}$$
 - ve výpočtu se často využívá substituce $x = x_0 + h$, tedy $h=x-x_0$ ($\Delta{x}$ je označen $h$,) $$k_t = \lim_{\Delta x \to 0} \frac{f(x_0 + h) - f(x_0)}{h}$$
 - Tato limita díky svojí důležitosti dostala název **derivace funkce v bodě**
 - Jelikož jde o směrnici tečny v daném bodě, můžeme říci, že pokud je kladná, je tečna v daném bodě rostoucí (v opačném případě klesající)
@@ -73,7 +71,6 @@ $$\forall x \in P_-(a) : f(x) < f(a) \quad \text{a} \quad \forall x \in P_+(a) :
 >- Obráceně to neplatí, což si ukážeme na příkladu.
 >- Uvažujme funkci $f : y = x^3$, $x \in \mathbb{R}$ v bodě $x = 0$. Derivace $f'(x) = 3x^2$ a tedy $f'(0) = 0$, přitom v libovolném levém okolí nuly platí:
 >$$\forall x \in P_-(0) : f(x) < f(0) \land \forall x \in P_+(0) : f(x) > f(0)$$
->![[Pasted image 20240711154516.png]]
 
 >[!Tip] Poznámka
 >- Extrému může nabýt funkce v bodě, v němž derivace vůbec neexistuje
@@ -122,7 +119,7 @@ $$f^{(n)}(x_0) = \left(f^{(n-1)}\right)'(x_0).$$
 	2. Je-li $f''(x_0) > 0$, má funkce $f$ v bodě $x_0$ ostré lokální minimum
 		- posloupnost směrnic tečen totiž roste
 
-![[Pasted image 20240629130440.png]]
+![[Pasted image 20240629130440.png | 200]]
 
 
 ## Věty o střední hodnotě
@@ -156,9 +153,7 @@ $$f^{(n)}(x_0) = \left(f^{(n-1)}\right)'(x_0).$$
 	2. mají v každém bodě $x$ intervalu $(a, b)$ vlastní derivaci
 	3. pro všechna $x \in (a, b)$ platí $g'(x) \neq 0$. 
 - Pak existuje bod $c \in (a, b)$ takový, že platí:
-$$
-\frac{f'(c)}{g'(c)} = \frac{f(b) - f(a)}{g(b) - g(a)}.
-$$
+$$\frac{f'(c)}{g'(c)} = \frac{f(b) - f(a)}{g(b) - g(a)}.$$
 - Jedná se o zobecnění Lagrangeovy věty o střední hodnotě
 
 #### Prostost funkce
@@ -186,9 +181,7 @@ $$\lim_{x \to a} \frac{f'(x)}{g'(x)} = A$$
 - Má-li přímka $P_1P_3$ rovnici $y = kx + q$, pak výrok „$P_2$ leží pod přímkou $P_1P_3$” znamená, že $P_2$ leží v polorovině $\{ (x, y) \in \mathbb{R}^2 \mid y < kx + q \}$). 
 - Rovnice přímky $P_1P_3$ je následovná:
 
-$$
-y = f(x_1) + \frac{f(x_3) - f(x_1)}{x_3 - x_1} (x - x_1).
-$$
+$$y = f(x_1) + \frac{f(x_3) - f(x_1)}{x_3 - x_1} (x - x_1).$$
 - Pokud bod $P_2$ má ležet pod touto přímkou, stačí zaměnit „=” za „<” a obecný bod o souřadnicích $(x, y)$ za náš $P_2 = [x_2, f(x_2)]$. 
 - Analogickou úvahu lze provést pro bod ležící nad přímkou.
 
@@ -201,15 +194,11 @@ $$
 - Nechť $f$ je definována na intervalu $I$. Říkáme, že funkce $f$ je na intervalu $I$
 1. **ryze konvexní** právě tehdy, když pro libovolnou trojici $x_1, x_2, x_3 \in I$, $x_1 < x_2 < x_3$ platí
 
-$$
-f(x_2) < f(x_1) + \frac{f(x_3) - f(x_1)}{x_3 - x_1} (x_2 - x_1).
-$$
+$$f(x_2) < f(x_1) + \frac{f(x_3) - f(x_1)}{x_3 - x_1} (x_2 - x_1).$$
 
 2. **ryze konkávní** právě tehdy, když pro libovolnou trojici $x_1, x_2, x_3 \in I$, $x_1 < x_2 < x_3$ platí
 
-$$
-f(x_2) > f(x_1) + \frac{f(x_3) - f(x_1)}{x_3 - x_1} (x_2 - x_1).
-$$
+$$f(x_2) > f(x_1) + \frac{f(x_3) - f(x_1)}{x_3 - x_1} (x_2 - x_1).$$
 
 - Ověření těchto vlastností pomocí uvedených postupů je však náročné, nalézt a ověřit je lze pomocí druhé derivace (sudé)
 
@@ -237,14 +226,10 @@ $$
 
 ### Asymptota bez směrnice - ABS
 - Nechť $f : \mathbb{R} \rightarrow \mathbb{R}$. Přímka $p : x = a$ se nazývá asymptota bez směrnice (svislá asymptota) $f$ v bodě $a \in \mathbb{R}$, jestliže
-$$
-\lim_{x \to a^{-}} f(x) = \pm \infty \quad \text{nebo} \quad \lim_{x \to a^{+}} f(x) = \pm \infty.
-$$
+$$\lim_{x \to a^{-}} f(x) = \pm \infty \quad \text{nebo} \quad \lim_{x \to a^{+}} f(x) = \pm \infty.$$
 ### Asymptota se směrnicí - ASS
 - Nechť $f : \mathbb{R} \rightarrow \mathbb{R}$. Přímka $p : y = kx + q, x \in \mathbb{R}$ se nazývá asymptota se směrnicí (asymptota v $\pm \infty$) funkce $f$, jestliže
-$$
-\lim_{x \to \pm \infty} [f(x) - (kx + q)] = 0.
-$$
+$$\lim_{x \to \pm \infty} [f(x) - (kx + q)] = 0.$$
 
 - Lineární funkce $p : y = kx + q, x \in \mathbb{R}$ je asymptotou se směrnicí (asymptota v $\infty$), právě když
 	- $k = \lim_{x \to \infty} \frac{f(x)}{x}$, kde $k \in \mathbb{R}$,
