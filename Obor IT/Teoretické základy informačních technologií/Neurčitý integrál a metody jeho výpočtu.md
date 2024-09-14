@@ -114,40 +114,27 @@ $$
 1. Vrátíme se k proměnné $x$ a hledaný neurčitý integrál má tvar $F(\varphi(x))$, $x \in (a, b)$.
 
 - Stručněji: 
-  $$
-\int f(\varphi(x)) \cdot \varphi'(x) dx = \left| \begin{array}{c} \varphi(x) = t \\ \varphi'(x) dx = dt \end{array} \right| = \int f(t) dt.
-$$
-  
+$$\int f(\varphi(x)) \cdot \varphi'(x) dx = \left| \begin{array}{c} \varphi(x) = t \\ \varphi'(x) dx = dt \end{array} \right| = \int f(t) dt.$$
 
 #### Druhá věta o substituci
 1. Nechť funkce $x = \varphi(t)$ zobrazuje interval $(\beta, \gamma)$ na interval $(a, b)$ a nechť na $(\beta, \gamma)$ existuje vlastní $\varphi' > 0$ (nebo $\varphi' < 0$).
 2. Nechť $G$ je primitivní funkce k funkci $(f \circ \varphi) \varphi'$ na intervalu $(\beta, \gamma)$, tj. platí $G(t) = \int (f \circ \varphi)(t) \varphi'(t) \, dt$, $t \in (\beta, \gamma)$. Pak na $(a, b)$ existuje primitivní funkce k funkci $f$ a platí
-$$
-\int f(x) \, dx = (G \circ \varphi^{-1})(x), \, x \in (a, b)
-$$
+$$\int f(x) \, dx = (G \circ \varphi^{-1})(x), \, x \in (a, b)$$
 neboli
-$$
-\int f(x) \, dx = G(\varphi^{-1}(x)).
-$$
+$$\int f(x) \, dx = G(\varphi^{-1}(x)).$$
 - Postup výpočtu neurčitého integrálu pomocí druhé věty o substituci:
 1. Hledáme integrál tvaru
 $$\int f(x) \, dx.$$
 2. Zvolíme nějakou vhodnou funkci $\varphi$ a pokud funkce $f$ a $\varphi$ splňují podmínky druhé věty o substituci, pak
    a) položíme $x = \varphi(t)$, $t \in (\beta, \gamma)$, $x \in (a, b)$,
-$$
-dx = \varphi'(t) \, dt,
-$$
+$$dx = \varphi'(t) \, dt,$$
    b) vypočítáme integrál
-$$
-\int f(\varphi(t)) \varphi'(t) \, dt = G(t), \quad t \in (\beta, \gamma)
-$$
+$$\int f(\varphi(t)) \varphi'(t) \, dt = G(t), \quad t \in (\beta, \gamma)$$
    - opět doufáme, že nový výraz je jednodušší než původní integrál v zadání a umíme ho spočítat
 3. Vrátíme se k proměnné $x$ a hledaný neurčitý integrál má tvar
 $$G(\varphi^{-1}(x)), \quad x \in (a, b).$$
 Stručněji:
-$$
-\int f(x) dx = \left| \begin{array}{c} x = \varphi(t) \\ dx = \varphi'(t) dt \end{array} \right| = \int f(\varphi(t)) \cdot \varphi'(t) dt.
-$$
+$$\int f(x) dx = \left| \begin{array}{c} x = \varphi(t) \\ dx = \varphi'(t) dt \end{array} \right| = \int f(\varphi(t)) \cdot \varphi'(t) dt.$$
 
 ### Integrace racionálních funkcí
 - Je třeba umět integrovat následující čtyři typy zlomků:
@@ -160,37 +147,23 @@ kde $A, B, a, p, q \in \mathbb{R}$, $k \in \mathbb{N}$ a $p^2 - 4q < 0$.
 
 - Výpočet jednotlivých případů:
 1.
-$$
-\int \frac{A}{x - a} dx = \left| x - a = t \atop dx = dt \right| = A \int \frac{1}{t} dt = A \ln |t| + c = A \ln |x - a| + c.
-$$
+$$\int \frac{A}{x - a} dx = \left| x - a = t \atop dx = dt \right| = A \int \frac{1}{t} dt = A \ln |t| + c = A \ln |x - a| + c.$$
 
 2. pro $k > 1$ pak
-$$
-\int \frac{A}{(x - a)^k} dx = \left| x - a = t \atop dx = dt \right| = A \int \frac{1}{t^k} dt = \frac{A}{(1 - k)t^{1 - k}} + c = \frac{A}{(1 - k)(x - a)^{1 - k}} + c.
-$$
+$$\int \frac{A}{(x - a)^k} dx = \left| x - a = t \atop dx = dt \right| = A \int \frac{1}{t^k} dt = \frac{A}{(1 - k)t^{1 - k}} + c = \frac{A}{(1 - k)(x - a)^{1 - k}} + c.$$
 
 3. Je-li $A = 2$ a $B = p$ (čitatel je tak derivací jmenovatele), pak máme obecně
-$$
-\int \frac{Ax + B}{x^2 + px + q} dx = \int \frac{2x + p}{x^2 + px + q} dx = \left| x^2 + px + q = t \atop (2x + p) dx = dt \right| = \int \frac{1}{t} dt = \ln |t| + c = \ln |x^2 + px + q| + c.
-$$
+$$\int \frac{Ax + B}{x^2 + px + q} dx = \int \frac{2x + p}{x^2 + px + q} dx = \left| x^2 + px + q = t \atop (2x + p) dx = dt \right| = \int \frac{1}{t} dt = \ln |t| + c = \ln |x^2 + px + q| + c.$$
 
 - Pokud máme obecně $x^2 + px + q$ a $p^2 - 4q < 0$, pak $$ x^2 + px + q = \left( x + \frac{p}{2} \right)^2 - \frac{p^2}{4} + q = \left( x + \frac{p}{2} \right)^2 + \left( q - \frac{p^2}{4} \right) = \left( q - \frac{p^2}{4} \right) \left( \left( \frac{x + \frac{p}{2}}{\sqrt{q - \frac{p^2}{4}}} \right)^2 + 1 \right). $$
   - Potom je
-$$
-\int \frac{1}{x^2 + px + q} dx = \int \frac{1}{(q - \frac{p^2}{4}) \left( \left( \frac{x + \frac{p}{2}}{\sqrt{q - \frac{p^2}{4}}} \right)^2 + 1 \right)} dx = \left| \frac{x + \frac{p}{2}}{\sqrt{q - \frac{p^2}{4}}} = t \atop dx = \frac{1}{\sqrt{q - \frac{p^2}{4}}} dt \right|
-$$
-$$
-= \frac{1}{\sqrt{q - \frac{p^2}{4}}} \int \frac{1}{t^2 + 1} dt = \frac{1}{\sqrt{q - \frac{p^2}{4}}} \arctan{t + c} = \frac{1}{\sqrt{q - \frac{p^2}{4}}} \arctan \frac{x + \frac{p}{2}}{\sqrt{q - \frac{p^2}{4}}} + c.
-$$
+$$\int \frac{1}{x^2 + px + q} dx = \int \frac{1}{(q - \frac{p^2}{4}) \left( \left( \frac{x + \frac{p}{2}}{\sqrt{q - \frac{p^2}{4}}} \right)^2 + 1 \right)} dx = \left| \frac{x + \frac{p}{2}}{\sqrt{q - \frac{p^2}{4}}} = t \atop dx = \frac{1}{\sqrt{q - \frac{p^2}{4}}} dt \right|$$
+$$= \frac{1}{\sqrt{q - \frac{p^2}{4}}} \int \frac{1}{t^2 + 1} dt = \frac{1}{\sqrt{q - \frac{p^2}{4}}} \arctan{t + c} = \frac{1}{\sqrt{q - \frac{p^2}{4}}} \arctan \frac{x + \frac{p}{2}}{\sqrt{q - \frac{p^2}{4}}} + c.$$
 
 - Nakonec vyřešíme nejobecnější případ třetího typu zlomku. Při výpočtu tohoto integrálu použijeme to, co již známe ze speciálních tvarů v předchozích dvou příkladech.
 - Obecně vypadá úprava a postup takto:
-$$
-\int \frac{Ax + B}{x^2 + px + q} dx = \frac{A}{2} \int \frac{2x + \frac{2B}{A} + p - p}{x^2 + px + q} dx =
-$$
-$$
-= \frac{A}{2} \int \frac{2x + p}{x^2 + px + q} dx + \left( B - \frac{pA}{2} \right) \int \frac{1}{x^2 + px + q} dx.
-$$
+$$\int \frac{Ax + B}{x^2 + px + q} dx = \frac{A}{2} \int \frac{2x + \frac{2B}{A} + p - p}{x^2 + px + q} dx =$$
+$$= \frac{A}{2} \int \frac{2x + p}{x^2 + px + q} dx + \left( B - \frac{pA}{2} \right) \int \frac{1}{x^2 + px + q} dx.$$
 
 - Tyto integrály jsme však postupně vyřešili výše.
 
