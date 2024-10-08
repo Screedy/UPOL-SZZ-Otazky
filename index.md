@@ -32,6 +32,7 @@ Pro práci s tímto repozitářem v Obsidianu budete nejprve potřebovat naklono
 git clone https://github.com/Screedy/SZZ-Otazky2024.git
 ```
 
+
 ### Jak otevřít repozitář v Obsidian
 Po naklonování repozitáře na váš počítač postupujte takto, abyste jej otevřeli v Obsidian:
 1. Otevřete aplikaci Obsidian.
