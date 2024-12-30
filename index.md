@@ -19,6 +19,7 @@
 	- Pro **AINF-VS**:
 		- [[1. Povinné předměty]]
 		- [[2. Povinně volitelné předměty]]
+		- [[3. Ostatní předměty]]
 
 ## Webová verze
 - Zprovoznil jsem webovou verzi tohoto repozitáře dostupnou na adrese https://statnice.screedy.com/.
