@@ -151,7 +151,7 @@ def thread_code(i: int):
 - Rozdílné chování v různých programovacích jazycích, mnoho jej nemá, najdeme však obvykle něco podobného
 
 - Není určeno pořadí uvolňování čekajících procesů $\Rightarrow$ **může dojít k vyhladovění procesu**
-![[MacBook-2025-01-02-002349@2x.png]]
+![[MacBook-2025-01-02-002349@2x.png|300]]
 
 >[!Text] Podmíněná proměnná
 >- Občas je potřeba, aby **proces**, který je právě v monitoru, **počkal na nějakou událost**. Monitor poskytuje tuto funkcionalitu pomocí tzv. *podmíněných proměnných*.
