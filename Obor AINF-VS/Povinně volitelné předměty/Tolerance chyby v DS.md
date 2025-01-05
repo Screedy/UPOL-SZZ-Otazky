@@ -55,6 +55,22 @@ Druhy redundance:
 >- Skupiny jsou dynamické (mohou vznikat, zanikat, uzly odchází, přichází nebo mohou být součástí více skupin)
 >- Organizace uvnitř skupiny, může být rozdílná podle potřeb.
 
+## Tolerance Byzantských chyb: Idea
+- **Byzantská chyba v kontextu DS** se vztahuje k situaci, kdy *některé uzly nebo části systému mohou selhat* a **chovat se nespolehlivě**.
+- Může zahrnout i **záměrné škodlivé chování**.
+- Termín vychází z myšlenky, že **byzantský generál**, který vede armádu, se může rozhodnout jednat zrádně a poslat falešné informace či dokonce úplně selhat.
+
+- Tolerování $m$ Byzantských chyb vyžaduje $3m+1$ uzlů.
+- Shoda je na **rozhodnutí většiny**.
+- Vyžaduje **exponenciální počet zpráv** (velice nákladné).
+
+>[!Example] Postup:
+>- Máme **server**, který předá zprávu uzlům
+>- Ty si pak **mění zprávy mezi sebou** a **odpovědi** od kolegů **si značí do tabulky**
+>- Podle tabulky vyhodnotí výsledek (podle většiny) a znovu si přepošle s ostatními
+>- Následně **dochází ke shodě**
+>![[MacBook-2025-01-05-002372@2x.png]]
+
 <div style="text-align: center; margin-top: 20px;">
     <!-- Horní tlačítka -->
     <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 10px;">
