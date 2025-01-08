@@ -1,12 +1,14 @@
 ## Synchronizace bez sdílené paměti
 ### Distribuovaný systém
 - Distribuovaný systém lze chápat jako *speciální* případ paralelního.
-- Obecně se jedná o **kolekci autonomních systémů**, které se **chovají jako jeden systém** (systémy mohou však být i na jednom uzlu).
+- Obecně se jedná o **kolekci (autonomních) systémů**, které se **chovají jako jeden systém**.
+- Mohou být na jednom uzlu/stroji, na LAN i WAN.
 
-- Alternativní popis: *Soubor nezávislých, autonomních výpočetních elementů propojených komunikační sítí. Výpočetní elementy komunikují formou posílání zpráv za účelem formy spolupráce.*
-
-- Vznikají nám nové problémy (jiná architektura, než byla doteď)
-	- Absence synchronizace pomocí sdílené paměti. Musíme však řešit **komunikaci mezi systémy** (komunikace je nespolehlivá, pomalá)
+- Rozdíly oproti dosud uvažovaným paralelním systémům:
+	- Absence synchronizace pomocí sdílené paměti.
+	- Musíme však řešit **komunikaci mezi systémy** (komunikace je nespolehlivá, pomalá).
+	- Absence synchronizace času.
+	- ...
 
 #### Architektura distribuovaných systémů
 - Skládá se z:
@@ -14,43 +16,71 @@
 	- **propojení uzlů**
 	- **API** (umožňuje komunikaci mezi různými komponentami a poskytuje standardizovaný způsob, jakým mohou aplikace nebo služby vzájemně interagovat)
 - Typy architektur:
-	- Layer-based (TCP/IP, MVC, ...)
+	- Layer-based
+		- Systém rozdělený do logických vrstev.
+		- Vrstvy odděleny (nezávislé) a komunikují mezi sebou (API).
+		- TCP/IP, MVC, ...
 	- Services-oriented
-		- object-based
-		- resource-based
-		- event-based
-		- blockchain
+		- Snaha o znovupoužitelnost komponent jako služeb.
+		- Služby mohou běžet na různých strojích, vystavují rozhraní (API).
+		- Vysoká modularita a dobrá škálovatelnost.
+	- Event-based architecture
+		- Centrální prvek jsou události a jejich průběh systémem.
+		- Komponenty asynchronně produkují a konzumují události.
+		- Chytrá domácnost, IoT, Kafka, ...
 - Organizace distribuovaného systému:
 	- **klient-server**
 	- **peer-to-peer**
 
+#### Klient-server
+- Klienti požadují službu od serverů.
+- Servery služby nabízejí.
+
+- Jeden uzel může být pro někoho server a pro někoho klient.
+- Typicky (ale není to nutnost) po síti.
+- Request-response (požadavek-odpověď) komunikace.
+- Např. webové služby, souborové servery, email servery, ...
+
 #### Struktura peer-to-peer
 - Označení typu počítačových sítí, ve které spolu komunikují přímo jednotliví klienti
-- Topologie sítě:
-	- Strukturovaná - **ring**, **tree**, **grid**, ... (např. Chord, distribuovaná hash tabulka)
-	- Nestrukturovaná - struktura není pevně dána, neudržitelné s rostoucí velikostí
-	- Hybridní - **kombinace** klient-server a peer-to-peer (např. BitTorrent)
+- Každý uzel má stejnou roli i odpovědnost.
+- Každý uzel zná své sousedy.
+- Plně decentralizované a snadno škálovatelné.
+- Např. Torrenty
 
 ### Komunikace
-- V distribuovaných sítích existuje několik způsobů komunikace mezi uzly nebo komponentami systému. Způsob komunikace může záviset na **architektuře** distribuovaného systému, **potřebách aplikace** a **požadovaných vlastnostech**.
+- V distribuovaných sítích existuje několik způsobů komunikace mezi uzly nebo komponentami systému. 
+- Způsob komunikace může záviset na **architektuře** distribuovaného systému, **potřebách aplikace** a **požadovaných vlastnostech**.
 
 - **Remote Procedure Call** (RPC)
-- **Zasílání zpráv, Inter Process Communication** (IPC)
-	- výrazně jednodušší a běžné
-	- různé implementace
-	- různé modely
-		- request-reply
-		- publisher-subscriber
-		- pipeline
+- **Message-Oriented Communication** (MOC)
+- **Inter Process Communication** (IPC)
+- **Multicast** a **broadcast**
 
 #### RPC
 - Je mechanismus umožňující **volání procedur** nebo funkcí, které běží na vzdáleném počítači či uzlu, tak, **jako by byly volány lokálně**
-- Velmi komplikované - volaná procedura **nemá přístup** k aktuálnímu **stavu** volajícího. Proto je jej potřeba **předat** volanému. Například pomocí pointeru.
-- Aktuální stav třeba převést do zaslatelné podoby - pojmy **marshaling** a **unmarshaling**
->[!tip] Marshaling a unmarshaling
->Procesy převodu dat na formát vhodný pro přenost (marshaling) a zpětný proces převodu těchto dat z formátu přenosu do interní reprezentace (unmarshaling)
+- Velmi komplikované - volaná procedura **nemá přístup** k aktuálnímu **stavu** volajícího. Proto je jej potřeba **předat** volanému.
 
-- Varianty:
+>[!tip] Hlavní myšlenka
+>- Klient volá funkci na server stejným způsobem, jako by volal lokální funkci.
+>- RPC mechanismus se postará o přenos dat, volání vzdálené procedury a návrat výsledků.
+
+- Volající netuší, že volá proceduru vzdáleného objektu.
+- Z jeho pohledu normální lokální volání a čeká na výsledek.
+- *Middleware* volajícího předhodí obrys vzdáleného objektu - **stub**.
+- A vyvolá metodu stubu $\rightarrow$ middleware zařídí komunikaci:
+	1. Vytvoří zprávu s požadavkem včetně argumentů,
+	2. vykomunikuje s OS odeslání zprávy serveru,
+	3. počká na odpověď,
+	4. rozbalí odpověď,
+	5. vrátí výsledek volajícímu.
+
+>[!fail] Problémy RPC
+>- Předávání parametrů (marshalling/unmarshalling)
+>- Zpráva je posloupnost bytů - jak ji interpretovat?
+>- Endianita
+
+- Varianty RPC:
 	- **Synchronní RPC:**
 		- V synchronním RPC čeká volající proces (klient) na odpověď ze vzdáleného procesu (serveru) po dobu trvání RPC. 
 		- Klient je **blokován**, dokud server nevrátí výsledek volané procedury.
@@ -62,22 +92,29 @@
 	- **Multicast RPC**:
 		- Při použití multicastu jsou zprávy odeslány všem uzlům ve specifické multicastové skupině, což umožňuje efektivní komunikaci s více uzly současně.
 
-#### Pipes
-- *Nejjednodušší forma IPC*
-- Potrubí je primitivní mechanismus, který vytváří spojení mezi dvěma procesy.
-- Jedná se o **nejčastěji unidirekční**, což znamená, že data mohou proudit pouze jedním směrem.
+### Message-Oriented Communication (MOC)
+#### Roura (pipe)
+- Jednosměrné spojení výstupu procesu a vstupu jiného procesu.
+- Funguje na principu **FIFO**.
 - Pro komunikaci v obou směrech jsou potřeba dvě potrubí, jedno pro každý směr.
 - Některé jazyky mají i **duplexní pipes** (např. Python)
 
 - Existují dvě hlavní kategorie potrubí:
 	- **Nepojmenované** - Vytváří se dynamicky **v rámci procesu a jeho potomků**. Vhodné pro komunikaci mezi příbuznými procesy.
 	- **Pojmenované** - Existují **samostatně**. Jsou vhodné pro komunikaci mezi nezávislými procesy.
-- Funguje na principu **FIFO**.
 
-#### Fronta zpráv
-- Fronta zpráv umožňuje *asynchronní komunikaci mezi komponentami systému*.
-- Výměna zpráv probíhá přes centrální místo, které **udržuje zprávy dokud nejsou zpracovány**.
-- Je možná **oboustranná komunikace**.
+#### Fronta zpráv (message queue)
+- Centrální místo pro výměnu zpráv.
+- Perzistentní, oboustranné.
+- Posílá a přijímá zprávy daných typů.
+- Např. RabbitMQ
+
+#### Message broker
+- Centrální místo pro výměnu zpráv.
+- Obecné zprávy (procesy více typů).
+- Rozumí typu zpráv.
+- Analyzuje zprávu, nějak ji zpracuje a potom na to zareaguje.
+- Např. Apache Kafka
 
 #### Síťové sokety
 - Síťové sockety jsou rozhraním, umožňující aplikacím vytvářet komunikační kanály pro přenost dat přes síť.
@@ -88,10 +125,10 @@
 	3. **Naslouchání na serverovém socketu** (pouze pro server)
 		- Pokud jde o serverový socket, ten čeká na příchozí požadavky na připojení od klientů.
 	4. **Přijetí připojení** (pouze pro server)
-	5. **Přenost dat**
+	5. **Přenos dat**
 	6. **Uzavření spojení**
 
->[!Example] Večeřící filozofové - distribuované řešení
+>[!Example]- Večeřící filozofové - distribuované řešení
 >- Potřeba změnit zadání, jinak nelze distribuovaně řešit
 >- **Vidličky = procesy**
 >	- Komunikace mezi vidličkou a sdílenými filozofy.
@@ -100,6 +137,36 @@
 >	- Když chce jíst potřebuje další vidličku od souseda, pošle mu zprávu s žádostí o vidličku.
 >	- Pokud filozof obdrží žádost, vidličku si nechá pokud je čistá, jinak ji vyčistí a pošle (žádost si pamatuje)
 >	- Když se filozof nají, vidličky jsou špinavé (pošle ji jedné zapamatované žádosti)
+
+### Inter-Process Communication
+- Komunikace mezi procesy na stejném stroji.
+- Lze uvažovat vše zmíněné:
+	- Sdílené paměť, synchronizační primitiva, roury, fronty, RPC
+- Většinou není perzistentní, nejsou problémy sítě.
+- Procesy mohou sdílet stav.
+
+## Návrh paralelních programů
+- Když chceme sekvenční úlohu přepsat na paralelní, obvykle postupujeme:
+	1. Nejprve vyřešíme úlohu sekvenčně.
+	2. Poté uděláme dekompozici sekvenční úlohy na paralelně vykonávané úlohy.
+	3. Definujeme závislosti mezi úlohami.
+	4. Je potřeba provést analýzu závislostí (dependency graph)
+
+- Jsou dva typy dekompozice:
+	1. **Dekompozice úloh** - rozložím na menší nezávislé paralelní úlohy
+	2. **Dekompozice dat** - rozdělím data na nezávislé části, které pak zpracuji paralelně
+
+>[!info] Fosterova metodologie
+>- Vytvořil postup návrhů paralelních programů.
+>
+> Postup:
+> 1. Rozdělení na menší části (dekompozice)
+> 2. Zabezpečení komunikace mezi částmi
+> 3. Aglomerace (spojování částí do logických celků)
+> 4. Mapování (technická realizace)
+
+---
+*\*Toto je navíc z předchozího ročníku.*
 
 ### Asynchronní programování
 - Nejedná se o paralelní programování, kód se ve skutečnosti vykonává **sériově**.
@@ -144,26 +211,6 @@
 - Nativní korutiny *jsou přímo podporovány v jádře programovacího jazyka nebo runtime prostředí*.
 	- To znamená, že nemusíme používat knihovny nebo dodatečné moduly pro vytváření a správu korutin.
 - Nativní korutiny obvykle nabízejí *efektivní správu paměti*, což může být důležité při manipulaci s velkým množstvím korutin.
-
-## Návrh paralelních programů
-- Když chceme sekvenční úlohu přepsat na paralelní, obvykle postupujeme:
-	1. Nejprve vyřešíme úlohu sekvenčně.
-	2. Poté uděláme dekompozici sekvenční úlohy na paralelně vykonávané úlohy.
-	3. Definujeme závislosti mezi úlohami.
-	4. Je potřeba provést analýzu závislostí (dependency graph)
-
-- Jsou dva typy dekompozice:
-	1. **Dekompozice úloh** - rozložím na menší nezávislé paralelní úlohy
-	2. **Dekompozice dat** - rozdělím data na nezávislé části, které pak zpracuji paralelně
-
->[!info] Fosterova metodologie
->- Vytvořil postup návrhů paralelních programů.
->
-> Postup:
-> 1. Rozdělení na menší části (dekompozice)
-> 2. Zabezpečení komunikace mezi částmi
-> 3. Aglomerace (spojování částí do logických celků)
-> 4. Mapování (technická realizace)
 
 ## Chord systém
 - = **Distribuovaná hash tabulka**
