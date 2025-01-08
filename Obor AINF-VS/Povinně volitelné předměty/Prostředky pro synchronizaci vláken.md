@@ -1,8 +1,9 @@
+*\*Otázka obsahuje i synchronizační primitiva z předchozí otázky.*
 ## ThreadPool
-- Návrhový vzor
-- **Úkoly** se ukládají **do fronty** a postupně jsou jim **přidělována** vlákna
-- Odpadá režie znovuvytvoření vláken (zrychlení, menší režie)
-- Běžné primitivum v řadě programovacích jazyků
+- Návrhový vzor i běžný nástroj.
+- **Úkoly** se ukládají **do fronty** a postupně jsou jim **přidělována** vlákna.
+- Odpadá režie znovuvytvoření vláken (zrychlení, menší režie).
+- Běžně dostupné v jazycích.
 
 >[!Example]- Příklad vytvoření threadpoolu v Pythonu
 >```Python
@@ -27,12 +28,18 @@
 - ...
 
 ### Večeřící filozofové
-- Simulace *současného přístupu k více zdrojům*
+- Procesy požadující více sdílených zdrojů.
+- Jeden typ procesu - filozof- se dvěma operacemi:
+	- jí (vyžaduje zdroje),
+	- přemýšlí (nevyžaduje zdroje).
+
 >[!tip] Problém:
->*$5$ filozofů přemýšlí, folozof jí*.
+>$5$ filozofů sedí u kulatého stolu a mezi každou dvojící leží jedna vidlička.
 >Jíst může, pokud má dvě vidličky.
->Vidličku **nemůže** mít více filozofů
-- Je potřeba synchronizace $\Rightarrow$ *lehce může dojít k deadlocku*
+>Vidličku **nemůže** mít více filozofů.
+>![[MacBook-2025-01-06-002395@2x.png|300]]
+- Je potřeba synchronizace $\Rightarrow$ *lehce může dojít k deadlocku*.
+
 >[!success] Řešení:
 >1. Jeden filozof je **levák** a zdvihá vidličky naopak (není efektivní a férové - u některých zdrojů určit prioritu)
 >2. **Číšník** - Máme vlákno, které zajistí koordinace (velké plýtvání zdroji, může dojít k vyhladovění - filozofové se budou předbíhat)
@@ -40,38 +47,56 @@
 >4. Budeme mít jen **4 židle** (nevznikne deadlock, ale musíme vyřešit filozofy sdílející vidličku)
 
 ### Producent-konzument
-- Reálný, často používaný problém
+- Reálný, často používaný problém.
+
 >[!tip] Problém:
 >Producenti produkují, konzumenti konzumují a sdílejí omezený prostor - nelze tedy **přepsat nezkonzumované** a nelze **opakovaně konzumovat**
 - Typicky máme více producentů a konzumentů
+- Komunikují přes buffer.
+	- Když někdo přidává/odebírá data do/z bufferu, buffer není v konzistentním stavu.
+	- $\rightarrow$ přístup k bufferu musí být ve vzájemném vyloučení.
+- Cílem bufferu **není** řešit rozdíl v rychlosti procesů.
+
 >[!success] Řešení:
 >- Dva semafory (`not_empty`, `not_full`) a zámek (zápis na místo v poli)
 >- Zjednodušeně:
 >```Python
 ># Producent
->	not_full.wait()
->	# produkce
->	not_empty.signal()
+>	item = produce_item() #produkce
+>	
+>	not_full.wait()                # Čekej, dokud není místo v bufferu
+>	mutex.acquire()                # Získání zámku
+>	# uložení položky na buffer
+>	mutex.release()                # Uvolnění zámku
+>	not_empty.signal()             # Signalizuj, že buffer není prázdný
 >
 ># Konzument
->	not_empty.wait()
+>	not_empty.wait()             # Čekej, dokud není něco v bufferu
+>	mutex.acquire()              # Získání zámku
 >	# konzumace
->	not_full.signal()
+>	mutex.release()               # Uvolnění zámku
+>	not_full.signal()             # Signalizuj, že buffer není plný
 >```
 
 ### Čtenáři a písaři
-- Reálný, často používaný problém
+- Reálný, často používaný problém.
 - Dva typy procesů soutěží o přístup k datům:
 	- písaři **mezi sebou**
 	- čtenáři jako třída **s písaři**
-- Písaři se vzájemně vylučují
-- Čtenáři jako třída vylučuje písaře
+- Písaři musí psát ve vzájemném vyloučení.
+- Čtenáři jako třída vylučuje písaře. Mohou však číst zároveň.
+- Např. přístup k souboru, DB, datové struktuře, ...
+
 >[!success] Řešení:
 >- Obecně přímočaré, ale je třeba dávat pozor na **spravedlivost** (preference čtenářů nebo písařů)
 >- Některé jazyky mají RWlock
 >
 >>[!text] Nespravedlivé řešení - *upřednostňuje čtenáře*:
 >>![[MacBook-2025-01-03-002355@2x.png]]
+>>Ř1: Získání přístupu k počtu čtenářů
+>>Ř3: Pokud jde o prvního čtenáře, blokuj písaře
+>>Ř4: Uvolni přístup k počtu čtenářů
+>>Ř8: Poslední čtenář uvolňuje zámek pro písaře
 >
 >>[!text] Spravedlivé řešení
 >>![[MacBook-2025-01-03-002356@2x.png]]
