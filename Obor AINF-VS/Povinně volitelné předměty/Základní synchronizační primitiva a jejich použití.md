@@ -1,9 +1,9 @@
 ## Zámek
-- Pouze **dva stavy**
-- **Silný nástroj zabraňující paralelizaci** (třeba používat uvážlivě)
-- Příklad: Chceme modifikovat pole, každé vlákno přičte k hodnotě pole $1$
+- Nejjednodušší synchronizační primitivum.
+- Pouze **dva stavy**: zamknuto nebo odemknuto.
+- Jednoduché použití, ale pozor na přehnanou synchronizaci.
 
->[!Example] Chceme modifikovat pole, každé vlákno přičte k hodnotě pole $1$
+>[!Example] Příklad: chceme modifikovat pole, každé vlákno přičte k hodnotě pole $1$
 >```Python
 >data: T.List[int] = [0] * 10000000
 >idx: int = 0
@@ -71,19 +71,19 @@
 >	idx_local = idx
 >	idx += 1
 >	mutex.release()
->if idx_local >= len(data):
->	break
->data[idx_local] += 1
+>	if idx_local >= len(data):
+>		break
+>	data[idx_local] += 1
 >```
 
 ## Semafor
-- Nazývá se také *chráněný čitač*
-- **Chráněnná proměnná** obsahuje **počítadlo s nezápornými celými čísly**
-- *Chráněně* je možné **pouze zapisovat**, ne číst
-- *Nestrukturované primitivum, je náročnější jej použít při rozsáhlejších programech*
-- **Operace čekání** - pokud je hodnota čísla nenulová, **sníží hodnotu** o jedna, jinak **čeká**, až bude hodnota zvýšena
-- **Operace signalizace** - zvýší hodnotu o $1$
-- operace `P` a `V` se provádějí atomicky
+- Nazývá se také *chráněný čítač*.
+- **Chráněná proměnná** obsahuje **počítadlo s nezápornými celými čísly**.
+- *Chráněně* je možné **pouze zapisovat**, ne číst.
+- *Nestrukturované primitivum, je náročnější jej použít při rozsáhlejších programech*.
+- **Operace čekání** - pokud je hodnota čísla nenulová, **sníží hodnotu** o jedna, jinak **čeká**, až bude hodnota zvýšena.
+- **Operace signalizace** - zvýší hodnotu o $1$.
+- operace `P` a `V` se provádějí atomicky.
 
 - **Binární semafor** - zámek
 - **Obecný semafor** - slouží k řízení přístupu ke zdrojům, kterých je konečné množství
@@ -127,7 +127,17 @@ def thread_code_3(i: int):
 	# do some work
 ```
 
+- Např. Omezení přístupu ke zdroji. *Tři vlákna mohou současně tisknout do sdílené tiskárny.*
+
 ## Bariéra
+- Mechanismus synchronizace, zajišťující, že více vláken nebo procesů čeká na určitém bodě programu, dokud všechny nedosáhnou tohoto bodu.
+
+>[!Example] Jak bariéra funguje
+>- Každé vlákno nebo proces pokračuje svou činnost, dokud nedosáhne bodu, kde je umístěna bariéra.
+>- Jakmile vlákno dosáhne bariéry, zastaví se a čeká na ostatní vlákna.
+>- Jakmile všechna vlákna dosáhnou bariéry, bariéra se “uvolní” a všechna vlákna mohou pokračovat dále ve své činnosti.
+
+
 ```Python
 def thread_code(i: int):
 	inter_local: int = iter
@@ -145,10 +155,17 @@ def thread_code(i: int):
 ```
 
 ## Monitor
-- **Strukturovaný**, používá se na **synchronizace v objektu/modulu**
-- **Vyšší** synchronizační primitivum
-- Operace na monitoru **jsou prováděny se vzájemným vyloučením** (pouze jeden proces může používat monitor, ostatní čekají)
+- **Strukturovaný** synchronizační nástroj.
+- **Vyšší** synchronizační primitivum.
 - Rozdílné chování v různých programovacích jazycích, mnoho jej nemá, najdeme však obvykle něco podobného
+	- Jeden pohled:
+		- Zobecnění jádra OS ve smyslu, že se KS řeší v privilegovaném režimu (tj. v monitoru).
+		- Místo jednoho "jádra" má každý objekt/modul/... svůj monitor.
+		- V jednom okamžiku s monitorem pracuje nejvýše jeden proces.
+	- Druhý pohled:
+		- Zobecnění objektu z OOP $\rightarrow$ každý monitor je instance nějaké třídy.
+		- Navíc ale s každou instancí může v jednom okamžiku pracovat nejvýše jeden proces.
+		- Všechna data monitoru musí být zapouzdřená. (stav lze měnit pouze definovanými operacemi)
 
 - Není určeno pořadí uvolňování čekajících procesů $\Rightarrow$ **může dojít k vyhladovění procesu**
 ![[MacBook-2025-01-02-002349@2x.png|300]]
@@ -156,7 +173,7 @@ def thread_code(i: int):
 >[!Text] Podmíněná proměnná
 >- Občas je potřeba, aby **proces**, který je právě v monitoru, **počkal na nějakou událost**. Monitor poskytuje tuto funkcionalitu pomocí tzv. *podmíněných proměnných*.
 >
->- Když funkce monitoru potřebuje počkat na splnění podmínky, vyvolá operaci `wait` na podmíněné proměnné, která je s touto podmínkou svázána. Tato operace proces zablokuje, zámek držený tímto procesem je uvolněn (odejde z monitoru, aby mohl někdo jiný vejít) a proces e odstraněn ze seznamu běžících procesů a čeká, dokud není podmínka splněna. **Jiné procesy zatím mohou vstoupit do monitoru** (zámek byl uvolněn). Pokud je jiným procesem podmínka splněna, může funkce monitoru "*signalizovat*", tj. probudit čekající proces pomocí operace `signal`.
+>- Když funkce monitoru potřebuje počkat na splnění podmínky, vyvolá operaci `wait` na podmíněné proměnné, která je s touto podmínkou svázána. Tato operace proces zablokuje, zámek držený tímto procesem je uvolněn (odejde z monitoru, aby mohl někdo jiný vejít) a proces je odstraněn ze seznamu běžících procesů a čeká, dokud není podmínka splněna. **Jiné procesy zatím mohou vstoupit do monitoru** (zámek byl uvolněn). Pokud je jiným procesem podmínka splněna, může funkce monitoru "*signalizovat*", tj. probudit čekající proces pomocí operace `signal`.
 >- Kdyby proces při čekání monitor neopustil, vznikl by **deadlock**
 >- Implementace je například pomocí fronty blokovaných procesů.
 >- Funguje na třech metodách:
