@@ -30,28 +30,40 @@
 
 ## Kritická reference
 - Proměnná je kritická reference, pokud
-	1. Do proměnné je zapisování a je čtena v jiném procesu
+	1. Do proměnné je zapisováno a je čtena v jiném procesu
 	2. Proměnná je čtena a je do ní zapisováno v jiném procesu (to stejné, akorát naopak)
 - Podmínka kritických referencí = **každá akce** programu obsahuje **nejvýše jednu** kritickou referenci
-- Není dostatečné, pořád je potřeba synchronizace
+	- Není dostatečné, pořád je potřeba synchronizace
 
 ## Korektnost programu
-- Sekvenční program má smysl ladit, má pouze jeden scénář
-- Paralelní program **má více scénářů, nelze** ladit jako sekvenční
-- **Vlastnost programu** je **tvrzení**, které **je platné** pro **všechny** možné scénáře
-- **Korektnost** konkurentního programu definována pomocí vlastní programu:
-	- **Bezpečnost (safety)** = **tvrzení**, nebo jeho negace, které **je platné** pro každý stav výpočtu (např. "program nikdy nezatuhne")
-	- **Živost (liveliness)** = **tvrzení,** které **je platné** pro **alespoň jeden** stav výpočtu (např. "program se někdy rozběhne")
+- Sekvenční program má smysl ladit, má pouze jeden scénář.
+- Paralelní program **má více scénářů, nelze** ladit jako sekvenční.
+- **Vlastnost programu** je **tvrzení**, které **je platné** pro **všechny** možné scénáře.
+- Existují dvě klíčové kategorie vlastností:
+	- **Bezpečnost (safety)** = **tvrzení**, nebo jeho negace, které **je platné** pro každý stav výpočtu (např. "program nikdy nezatuhne").
+		- (Bezpečnost lze intuitivně chápat jako zajištění, že program **nedělá chyby**.)
+	- **Živost (liveliness)** = **tvrzení,** které **je platné** pro **alespoň jeden** stav výpočtu.
+		- (Živost lze chápat jako zajištění, že program **nezůstane ve slepé uličce a postupuje dál**.)
 - Bezpečnost a živost jsou duální vlastnosti - negace jedné je druhá
+	- Negace bezpečnostní vlastnosti může být formulována jako živostní vlastnost.
+		- Například: “Program nikdy nezatuhne” (bezpečnost) je negace “Program někdy zatuhne” (živost).
+	- Negace živostní vlastnosti může být formulována jako bezpečnostní vlastnost.
+		- Například: “Vlákno A se někdy dostane ke zdroji” (živost) je negace “Vlákno A se nikdy nedostane ke zdroji” (bezpečnost).
+
+>[!Example] Konkrétní příklady:
+>- *"Dvě vlákna nemohou současně vstoupit do kritické sekce."*
+>	- Pokud tato vlastnost selže, najdeme konkrétní protipříklad. (např. vlákno $A$ a vlákno $B$ vstoupila současně).
+>- *"Vlákno $A$, které čeká na zámek, se nakonec dostane do kritické sekce."*
+>	- Pokud tato vlastnost selže, znamená to, že vlákno $A$ zůstane navždy zablokováno (např. kvůli **mrtvému zámku**).
 
 ## Férovost
-- Korektnost programu vyžaduje férovost, závisí na plánování politice konkrétní architektury
-![[MacBook-2024-12-30-002333@2x.png]]
-- Proces A může jet donekonečna
+- Korektnost programu vyžaduje férovost, závisí na plánovací politice konkrétní architektury.
+![[MacBook-2024-12-30-002333@2x.png|500]]
+- Proces $A$ může jet donekonečna.
 
 ## Kritická sekce
 - Dijkstra, 1965
-- n procesů vykonává (v nekonečné smyčce) posloupnost akcí rozdělenou na dvě části: **kritická sekce a nekritická sekce**
+- $n$ procesů vykonává (v nekonečné smyčce) posloupnost akcí rozdělenou na dvě části: **kritická sekce a nekritická sekce**
 - **Kritická sekce** je část kódu, kdy **program pracuje se sdílenými zdroji** (například pamětí)
 - Pokud je jeden proces v kritické sekci, další proces **nesmí vstoupit** do kritické sekce
 
@@ -80,44 +92,46 @@ Požadavky na kritickou sekci (korektnost):
 
 #### Dekkerův algoritmus
 ![[MacBook-2025-01-02-002339@2x.png]]
-- Kombinace prvního a čtvrtého pokusu
+- Kombinace prvního a čtvrtého pokusu.
+	- Hlídáme právo na vstup (`turn`).
+	- Žádáme o vstup (`wantA`, `wantB`).
 - Lze použít **jen pro dva procesy**. Jinak je to strašně složité.
-
-#### Řešení kritické sekce pomocí složených akcí
-![[MacBook-2025-01-02-002341@2x.png]]
-- Implementace zámku
-- Funguje na **libovolný** počet procesů
-- Vyžaduje **silnou férovost**
 
 #### Petersonův algoritmus (Tie-breaker)
 ![[MacBook-2025-01-02-002342@2x.png]]
-- Vychází z Dekkerova algoritmu
+- Vychází z Dekkerova algoritmu.
 - `last` indikuje který proces jako poslední začal vykonávat vstupní protokol (a bude dále čekat)
-- Podmínka nesplňuje podmínku kritických referencí
-- Algoritmus je **korektní** i když se podmínky **vykonávají neatomicky**
-- Zobecnění na *n* procesů je poměrně komplikované
+- Podmínka nesplňuje podmínku kritických referencí.
+	- Algoritmus je **korektní** i když se podmínky **vykonávají neatomicky**.
+- Zobecnění na *n* procesů je poměrně komplikované.
 
 #### Bakery algoritmus
 ![[MacBook-2025-01-02-002343@2x.png]]
 - Čísla v proměnných `nA` a `nB` **představují pořadové lístky**
 - Vyžaduje `fetch-and-add`, jinak není férový
+
 ![[MacBook-2025-01-02-002344@2x.png]]
 - "Elegantní"
 - Počítáme s tím, že máme neomezený počet lístků (lze vyřešit pomocí modulo)
 - Potřeba **zjistit největší lístek**, což je pomalé
 - Navíc musíme počítat, že operace `max` musí být **atomická**
 
-#### Lampart-Bakery algoritmus
+#### Lamport-Bakery algoritmus
 ![[MacBook-2025-01-02-002345@2x.png]]
-- První **skutečně použitelný algoritmus**
-- Problém: Pokud **selže jeden proces**, může dojít k **deadlocku**
+- První **skutečně použitelný algoritmus**.
+	- Třeba tam, kde HW nepodporuje synchronizační primitiva.
+- `vybrano` zajišťuje, že budeme vědět o případných kolizích u spočítání maxima.
+	- V tom případě se rozhodneme podle indexu procesu.
 
-#### Szymanského algoritmus
+>[!fail] Problém:
+>- Pokud **selže jeden proces**, může dojít k **deadlocku**.
+
+#### Navíc: Szymanského algoritmus
 ![[MacBook-2025-01-02-002346@2x.png]]
 - Odstraňuje nedostatky předchozích algoritmů
 - Analogie **čekárny**
 - **Testy** (všechny, existuje) **musejí být jednotné** (záleží na pořadí), jinak nefunguje
-	- `0` - nekritický sekce
+	- `0` - nekritická sekce
 	- `1` - vstup do kritické sekce
 	- `2` - čekání na ostatní vstupující do čekací místnosti
 	- `3` - vstup do čekací místnosti
