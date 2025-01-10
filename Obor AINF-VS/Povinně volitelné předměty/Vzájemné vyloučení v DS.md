@@ -49,7 +49,7 @@
 
 - Vstup do kritické sekce:
 	- Když token dorazí k uzlu, který si přeje vstoupit do kritické sekce, může vstoupit do této části kódu.
-	- Během této doby **ostatní uzly nemohou vstoupit** do kritické sekce, protože token se nachází v rokou uzlu, který je právě v této sekci.
+	- Během této doby **ostatní uzly nemohou vstoupit** do kritické sekce.
 
 - Opuštění kritické sekce:
 	- Když proces dokončí svou činnost v kritické sekci, předá token dalšímu uzlu v prstenci.
