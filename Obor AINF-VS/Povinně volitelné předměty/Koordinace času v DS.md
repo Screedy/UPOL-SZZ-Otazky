@@ -66,8 +66,8 @@
 	- Uzly $p$ a $q$ zprávu zaznamenají a **uloží si čas přijetí $T_{p_{m}}$ a $T_{q_{m}}$**
 	- Uzly $p$ a $q$ si pošlou časy $T_{p_{m}}$ a $T_{q_{m}}$ a určí vzájemný offset (průměrem, lineární regrese)
 
-## Lamportovi logické hodiny
-- Lamportovi logické hodiny jsou konceptem navrženým Leslie Lamportem.
+## Lamportovy logické hodiny
+- Lamportovy logické hodiny jsou konceptem navrženým Leslie Lamportem.
 - Slouží k uspořádání událostí v DS.
 - Tyto logické hodiny **nezajišťují přesný čas**, ale **umožňují porovnávání pořadí událostí** na různých uzlech systému.
 
