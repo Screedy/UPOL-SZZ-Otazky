@@ -3,9 +3,25 @@
 
 - Shoda v systémech bez selhání, je velmi **jednoduchá** zjistit.
 
+## Skupiny
+- Zavedení redundance.
+- Úlohu uzlu převezme skupina uzlů.
+
+>[!text] Protokol primární-záloha
+>- Hierarchická skupina.
+>- Pracuje primární (zápisy).
+>- Výpadek primárního $\rightarrow$ záloha převezme roli.
+>![[MacBook-2025-01-10-002416.png|200]]
+
+>[!text] Protokol replikovaného zápisu
+>- *Plochá* skupina.
+>- Všichni stejná role.
+>- Nemají kritický bod.
+>- **Nutná** koordinace.
+>![[MacBook-2025-01-10-002417.png]]
 ## Shoda v systémech s možností selhání
 - Fail-stop (silná podmínka)
-	- Využití algoritmu Flooding consensus nebo Paxos
+	- Využití algoritmů **Flooding consensus** nebo **Paxos**
 
 ### Flooding consensus
 - *Algoritmus sloužící k dosažení shody v DS*.
@@ -18,6 +34,7 @@
 >- *Pokud uzel neobdrží informace od všech ostatních* posun do **dalšího kola**
 >
 >![[MacBook-2025-01-04-002367.png]]
+>![[MacBook-2025-01-10-002418.png]]
 
 ### Paxos
 - Algoritmus pro *dosažení shody v DS*, i když se **jednotlivé uzly mohou chovat nespolehlivě** (např. mohou selhat nebo se zpozdit).
@@ -61,6 +78,15 @@
 >>- Pokud **selže navrhující uzel v průběhu fáze přijetí**, jiný uzel **převezme jeho roli** a v případě, že *existuje alespoň jedna informace o návrhu* (zpráva `accept()`), **převezme ji**.
 >
 >>- Funguje i v případě, že více uzlů zahájí návrh, můžu ale dojít k livelocku. To se řeší volbou lídra (např. Bully, Raft, ...)
+
+## Raft algoritmus
+- Fail-noisy model.
+- Shoda v DS ve formě replikovaného logu operací.
+- "*Moderní", často používaný. 'Náhrada Paxosu', který je hodně komplikovaný.
+- Stavy uzlů:
+	- Lídr, následovník, kandidát.
+- https://raft.github.io
+
 
 <div style="text-align: center; margin-top: 20px;">
     <!-- Horní tlačítka -->
