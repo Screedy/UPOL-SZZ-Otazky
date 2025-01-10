@@ -15,7 +15,7 @@
 >- Poté uzel $p$ předá dotaz na klíč k uzlu $q$ na indexu $j$ následovně:$$FT_{p}[j] \leq k < FT_{p}[j+1]$$
 >	- pokud $p < k < FT_{p}[1]$, pak $q = FT_{p}[1]$ (je menší než první záznam v tabulce)
 >	- pokud $p < k \text{and} k > FT_{p}[s]$, pak $q = FT_{p}[s]$ (je větší než všechny záznamy v tabulce)
->![[MacBook-2025-01-03-002357@2x.png]]
+>![[MacBook-2025-01-03-002357.png]]
 
 ### Přidání uzlu do chord systému
 - Přidání uzlu do Chord systému je proces, který **zahrnuje aktualizaci struktury kruhu a redistribuci odpovědnosti za klíče** tak, aby nový uzel byl začleněn do sítě.

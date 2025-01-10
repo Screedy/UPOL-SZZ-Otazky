@@ -34,7 +34,7 @@
 	- Je **slabší jak silná konzistence**, ale **silnější než sekvenční**.
 	- Implementace vyžaduje evidenci zápisů v jednotlivých uzlech a graf závislosti operací.
 
-![[MacBook-2025-01-05-002373@2x.png]]
+![[MacBook-2025-01-05-002373.png]]
 
 - **Sekvenční konzistence** = Některé repliky mohou být pozadu, ale změny jsou stále ve stejném pořadí.
 	- To vyvolává však problém, že při sekvenční konzistenci klient může *číst nejprve od uzlu, který je aktuální* a následně *od uzly, který je pozadu*.

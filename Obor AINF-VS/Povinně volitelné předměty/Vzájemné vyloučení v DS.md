@@ -9,7 +9,7 @@
 >3. Proces $i$ po dokončení práce pošle `RELEASE`.
 >4. Rozhodčí pošle `OK` dalšímu ve frontě, nebo čeká na žádost.
 
-- Rozhodčí může sehnat $\rightarrow$ to ostatní nepoznají.
+- Rozhodčí může selhat $\rightarrow$ to ostatní nepoznají.
 - Rozhodčí může být přetížený (je to prostě bottleneck).
 
 ## Ricart-Agrawala algoritmus
@@ -27,7 +27,7 @@
 >3. Při přijetí $(N-1)$ `ack` zpráv, proces **vstoupí do kritické sekce**.
 >4. Při výstupu proces $p_{i}$ **pošle `ack` všem ve frontě** čekajícím procesům.
 
-![[MacBook-2025-01-10-002407@2x.png]]
+![[MacBook-2025-01-10-002407.png]]
 
 >[!fail] Problém:
 >- **$N$ bodů selhání**

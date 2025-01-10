@@ -97,7 +97,7 @@
 >	- Neporovnatelné jsou považovány za konkurentní.
 
 >[!Example] Příklad:
->![[MacBook-2025-01-04-002363@2x.png]]
+>![[MacBook-2025-01-04-002363.png]]
 
 <div style="text-align: center; margin-top: 20px;">
     <!-- Horní tlačítka -->

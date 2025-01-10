@@ -81,7 +81,7 @@
 >- Omezení volebního období:
 >	- Každé nové **volební období** v Raft algoritmu **je vyhrazeno pro jednu volbu lídra.** To znamená, že každá volba lídra má svoje vlastní volební období.
 
-![[MacBook-2025-01-04-002364@2x.png]]
+![[MacBook-2025-01-04-002364.png]]
 
 >[!fail] Problémy volby lídra:
 >- V některých případech nechceme vybírat lídra pouze podle identifikátoru. Je nutné zohlednit i například:
@@ -101,7 +101,7 @@
 >- **List potvrdí přijetí `ELECTION`** a **zašle informace o svých možnostech** (stav baterie, rychlost, ...) **rodiči**.
 >- **Informace** (vždy nejlepší volba) se **propagují** sítí zpět k **source** uzlu.
 >
->![[MacBook-2025-01-04-002365@2x.png]]
+>![[MacBook-2025-01-04-002365.png]]
 
 ## Odbočka: Broadcast
 - **Broadcast představuje poměrně velkou zátěž** (velký počet zaslaných zpráv).

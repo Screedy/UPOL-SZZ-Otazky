@@ -37,7 +37,7 @@
 >$5$ filozofů sedí u kulatého stolu a mezi každou dvojící leží jedna vidlička.
 >Jíst může, pokud má dvě vidličky.
 >Vidličku **nemůže** mít více filozofů.
->![[MacBook-2025-01-06-002395@2x.png|300]]
+>![[MacBook-2025-01-06-002395.png|300]]
 - Je potřeba synchronizace $\Rightarrow$ *lehce může dojít k deadlocku*.
 
 >[!success] Řešení:
@@ -92,14 +92,14 @@
 >- Některé jazyky mají RWlock
 >
 >>[!text] Nespravedlivé řešení - *upřednostňuje čtenáře*:
->>![[MacBook-2025-01-03-002355@2x.png]]
+>>![[MacBook-2025-01-03-002355.png]]
 >>Ř1: Získání přístupu k počtu čtenářů
 >>Ř3: Pokud jde o prvního čtenáře, blokuj písaře
 >>Ř4: Uvolni přístup k počtu čtenářů
 >>Ř8: Poslední čtenář uvolňuje zámek pro písaře
 >
 >>[!text] Spravedlivé řešení
->>![[MacBook-2025-01-03-002356@2x.png]]
+>>![[MacBook-2025-01-03-002356.png]]
 
 ### Kuřáci
 - **Agent** má zdroje - **papír, tabák** a **sirky**

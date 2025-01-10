@@ -8,7 +8,7 @@
 - **Postup výpočtu** v DS je **posloupnost konzistentních řezů**.
 - **Konzistentní snapshot** je **zachycení stavu konzistentního řezu**.
 
-![[MacBook-2025-01-05-002374@2x.png]]
+![[MacBook-2025-01-05-002374.png]]
 - Cut $1$ je good.
 - Cut $2$ není konzistentní, protože do něj nenáleží událost $h$ ($g$ závisí na $h$).
 
@@ -54,7 +54,7 @@
 	- *Pokud koordinátor obdrží* **od všech `VOTE-COMMIT`**, pošle všem zprávu `GLOBAL-COMMIT`, jinak `GLOBAL-ABORT`.
 	- Pokud uzel obdrží `GLOBAL-COMMIT` provede commit.
 	- Problémy: Mnoho bodů selhání, řešení jsou časovače.
-	- ![[MacBook-2025-01-05-002375@2x.png]]
+	- ![[MacBook-2025-01-05-002375.png]]
 	- Uzel, který **neobdrží `VOTE-REQUEST`** po **čase pošle `VOTE-ABORT`**.
 	- Koordinátor ve stavu *wait* **po čase pošle `GLOBAL-ABORT**.
 	- Uzel v ready stavu (čeká na koordinátora) má dvě možnosti:
@@ -62,7 +62,7 @@
 		- Po čase **kontaktovat jiný uzel** a zeptat se zda neobdržel `GLOBAL-*`
 		- Pokud v tomto bodu *selže koordinátor*, pak **nekonečné blokování**.
 - **Three-phase commit**:
-	- ![[MacBook-2025-01-05-002376@2x.png]]
+	- ![[MacBook-2025-01-05-002376.png]]
 	- Navíc `PREPARE-COMMIT` zpráva.
 		- Koordinátor ve stavu **`PRE-COMMIT`**, po čase může poslat `GLOBAL-COMMIT`.
 		- Uzel ve stavu `READY` nebo `PRE-COMMIT` analogické jako u 2-fázového commitu, ale pokud je více jak polovina uzlů ve stavu `READY`, tak `VOTE-ABORT`.

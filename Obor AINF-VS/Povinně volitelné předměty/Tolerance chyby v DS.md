@@ -69,7 +69,7 @@ Druhy redundance:
 >- Ty si pak **mění zprávy mezi sebou** a **odpovědi** od kolegů **si značí do tabulky**
 >- Podle tabulky vyhodnotí výsledek (podle většiny) a znovu si přepošle s ostatními
 >- Následně **dochází ke shodě**
->![[MacBook-2025-01-05-002372@2x.png]]
+>![[MacBook-2025-01-05-002372.png]]
 
 <div style="text-align: center; margin-top: 20px;">
     <!-- Horní tlačítka -->

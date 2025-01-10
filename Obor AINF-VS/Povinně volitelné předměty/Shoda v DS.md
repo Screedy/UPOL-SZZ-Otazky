@@ -17,7 +17,7 @@
 >- Každý uzel **deterministicky zvolí volbu**.
 >- *Pokud uzel neobdrží informace od všech ostatních* posun do **dalšího kola**
 >
->![[MacBook-2025-01-04-002367@2x.png]]
+>![[MacBook-2025-01-04-002367.png]]
 
 ### Paxos
 - Algoritmus pro *dosažení shody v DS*, i když se **jednotlivé uzly mohou chovat nespolehlivě** (např. mohou selhat nebo se zpozdit).
@@ -48,16 +48,16 @@
 >	- Pokud uzel **obdrží dostatek potvrzení ve fázi přijetí**, může **rozhodnout o hodnotě**, kterou předložil.
 >	- Pokud uzel obdrží odmítnutí nebo nedostatek potvrzení, musí **zahájit nový pokus o dosažení shody** s novým číslem přípravy.
 >
->![[MacBook-2025-01-04-002368@2x.png]]
+>![[MacBook-2025-01-04-002368.png]]
 
 >[!fail] Možné chyby:
->>![[MacBook-2025-01-04-002369@2x.png]]
+>>![[MacBook-2025-01-04-002369.png]]
 >>- Pokud **selže uzel přijímající návrh**, nic se neděje, **dokud funguje většina**.
 >
->>![[MacBook-2025-01-04-002370@2x.png]]
+>>![[MacBook-2025-01-04-002370.png]]
 >>- Pokud selže **navrhující uzel před návrhem**, jeho **roli převezme jiný uzel**.
 >
->>![[MacBook-2025-01-04-002371@2x.png]]
+>>![[MacBook-2025-01-04-002371.png]]
 >>- Pokud **selže navrhující uzel v průběhu fáze přijetí**, jiný uzel **převezme jeho roli** a v případě, že *existuje alespoň jedna informace o návrhu* (zpráva `accept()`), **převezme ji**.
 >
 >>- Funguje i v případě, že více uzlů zahájí návrh, můžu ale dojít k livelocku. To se řeší volbou lídra (např. Bully, Raft, ...)

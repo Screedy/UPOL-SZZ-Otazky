@@ -58,7 +58,7 @@
 
 ## Férovost
 - Korektnost programu vyžaduje férovost, závisí na plánovací politice konkrétní architektury.
-![[MacBook-2024-12-30-002333@2x.png|500]]
+![[MacBook-2024-12-30-002333.png|500]]
 - Proces $A$ může jet donekonečna.
 
 ## Kritická sekce
@@ -77,9 +77,9 @@ Požadavky na kritickou sekci (korektnost):
 ### Proces hledání řešení kritické sekce
 #### Nesprávné pokusy
 
-| ![[MacBook-2025-01-02-002335@2x.png]] | ![[MacBook-2025-01-02-002336@2x.png]] |
+| ![[MacBook-2025-01-02-002335.png]] | ![[MacBook-2025-01-02-002336.png]] |
 | ------------------------------------- | ------------------------------------- |
-| ![[MacBook-2025-01-02-002337@2x.png]] | ![[MacBook-2025-01-02-002338@2x.png]] |
+| ![[MacBook-2025-01-02-002337.png]] | ![[MacBook-2025-01-02-002338.png]] |
 - **První pokus:**
 	- Proces, který je na řadě na kritickou sekci, může zůstat v nekritické sekci.
 	- Druhý proces **vyhladoví.** (Porušení zaručení vstupu a absence uváznutí)
@@ -91,14 +91,14 @@ Požadavky na kritickou sekci (korektnost):
 	- Může dojít k **vyhladovění**. Procesy budou vyžadovat a vzdávat přístup současně.
 
 #### Dekkerův algoritmus
-![[MacBook-2025-01-02-002339@2x.png]]
+![[MacBook-2025-01-02-002339.png]]
 - Kombinace prvního a čtvrtého pokusu.
 	- Hlídáme právo na vstup (`turn`).
 	- Žádáme o vstup (`wantA`, `wantB`).
 - Lze použít **jen pro dva procesy**. Jinak je to strašně složité.
 
 #### Petersonův algoritmus (Tie-breaker)
-![[MacBook-2025-01-02-002342@2x.png]]
+![[MacBook-2025-01-02-002342.png]]
 - Vychází z Dekkerova algoritmu.
 - `last` indikuje který proces jako poslední začal vykonávat vstupní protokol (a bude dále čekat)
 - Podmínka nesplňuje podmínku kritických referencí.
@@ -106,18 +106,18 @@ Požadavky na kritickou sekci (korektnost):
 - Zobecnění na *n* procesů je poměrně komplikované.
 
 #### Bakery algoritmus
-![[MacBook-2025-01-02-002343@2x.png]]
+![[MacBook-2025-01-02-002343.png]]
 - Čísla v proměnných `nA` a `nB` **představují pořadové lístky**
 - Vyžaduje `fetch-and-add`, jinak není férový
 
-![[MacBook-2025-01-02-002344@2x.png]]
+![[MacBook-2025-01-02-002344.png]]
 - "Elegantní"
 - Počítáme s tím, že máme neomezený počet lístků (lze vyřešit pomocí modulo)
 - Potřeba **zjistit největší lístek**, což je pomalé
 - Navíc musíme počítat, že operace `max` musí být **atomická**
 
 #### Lamport-Bakery algoritmus
-![[MacBook-2025-01-02-002345@2x.png]]
+![[MacBook-2025-01-02-002345.png]]
 - První **skutečně použitelný algoritmus**.
 	- Třeba tam, kde HW nepodporuje synchronizační primitiva.
 - `vybrano` zajišťuje, že budeme vědět o případných kolizích u spočítání maxima.
@@ -127,7 +127,7 @@ Požadavky na kritickou sekci (korektnost):
 >- Pokud **selže jeden proces**, může dojít k **deadlocku**.
 
 #### Navíc: Szymanského algoritmus
-![[MacBook-2025-01-02-002346@2x.png]]
+![[MacBook-2025-01-02-002346.png]]
 - Odstraňuje nedostatky předchozích algoritmů
 - Analogie **čekárny**
 - **Testy** (všechny, existuje) **musejí být jednotné** (záleží na pořadí), jinak nefunguje

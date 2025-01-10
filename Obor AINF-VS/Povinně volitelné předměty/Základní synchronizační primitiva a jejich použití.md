@@ -168,7 +168,7 @@ def thread_code(i: int):
 		- Všechna data monitoru musí být zapouzdřená. (stav lze měnit pouze definovanými operacemi)
 
 - Není určeno pořadí uvolňování čekajících procesů $\Rightarrow$ **může dojít k vyhladovění procesu**
-![[MacBook-2025-01-02-002349@2x.png|300]]
+![[MacBook-2025-01-02-002349.png|300]]
 
 >[!Text] Podmíněná proměnná
 >- Občas je potřeba, aby **proces**, který je právě v monitoru, **počkal na nějakou událost**. Monitor poskytuje tuto funkcionalitu pomocí tzv. *podmíněných proměnných*.
@@ -178,11 +178,11 @@ def thread_code(i: int):
 >- Implementace je například pomocí fronty blokovaných procesů.
 >- Funguje na třech metodách:
 >	- `wait` - čekání **VŽDY BLOKUJE** 
->	  ![[MacBook-2025-01-02-002350@2x.png|200]]
+>	  ![[MacBook-2025-01-02-002350.png|200]]
 >	- `signal` - pouští čekající proces, když žádný není nic nedělá 
->	  ![[MacBook-2025-01-02-002351@2x.png|200]]
+>	  ![[MacBook-2025-01-02-002351.png|200]]
 >	- `empty` - vrací `true` nebo `false`, podle toho, zda někdo čeká 
->	  ![[MacBook-2025-01-02-002352@2x.png|200]]
+>	  ![[MacBook-2025-01-02-002352.png|200]]
 >
 >**Problém**:
 >- Při **uvolnění** čekající proces pokračuje a "**vstupuje**" do monitoru, **signalizující** proces ale také **pokračuje "do"** monitoru. **Dostáváme se do neplatného stavu!**
@@ -190,7 +190,7 @@ def thread_code(i: int):
 >	- Uvolněný čekající (W), Signalizující (S), Ostatní čekající (E)
 >	- Klasické řešení: **E < S < W**
 
-![[MacBook-2025-01-02-002353@2x.png]]
+![[MacBook-2025-01-02-002353.png]]
 
 >[!Text] Chráněné objekty
 >- Klasický monitor podmíněnými proměnnými vyžaduje explicitní implementaci `waitC()`, `signalC()` a `emptyC()`
