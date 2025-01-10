@@ -175,7 +175,7 @@
 >- Rozšíření: Agent nečeká na signalizaci
 
 ### Hodující divoši
-- $n$ divochů jí $x$ porcí misionáře z hrnce. Pokud **dojdou**, **požádají kuchaře** o navaření dalších $n$ porcí.
+- $n$ divochů jí $x$ porcí misionáře z hrnce. Pokud **dojdou**, **požádají kuchaře** o navaření dalších $x$ porcí.
 
 >[!success]- Řešení:
 >```Python
