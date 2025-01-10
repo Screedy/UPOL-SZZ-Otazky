@@ -8,9 +8,10 @@
 - Předpoklady:
 	- Existuje *identifikátor* uzlu.
 	- Uzly o sobě *navzájem vědí*.
+	- Uzly mohou vypadnout.
 
 ## Bully algoritmus
-- Cílem je *zvolit nejsilnějšího* (nejvyššího) *procesu na základě jejich identifikátoru*.
+- Cílem je *zvolit nejsilnější* (nejvyšší) *proces na základě jejich identifikátoru*.
 
 - Detekce potřeby nového lídra:
 	- Každý proces v DS *pravidelně kontroluje*, zda je *stávající lídr stále dostupný*.
@@ -27,6 +28,8 @@
 >- Aktualizace informací:
 >	- Ostatní procesy **aktualizují své informace o aktuálním lídrovi** na základě nových zpráv.
 >	- Pokud *některý z nich zjistí*, že má vyšší identifikátor než nový lídr, **může zahájit svou vlastní volbu**.
+
+![[MacBook-2025-01-10-002412.png]]
 
 - Bully algoritmus funguje dobře v situacích, kdy **potřebujeme rychle zvolit nového lídra** v reakci na **výpadek stávajícího**.
 - Časová složitost je $\mathcal{O}(n^{2})$, kde $n$ je počet procesů v systému.
@@ -49,39 +52,53 @@
 >- Potvrzení lídra:
 >	- Každý proces přijímá příchod zprávy o novém lídrovi a **aktualizuje svůj stav** o **identifikátor nového lídra**.
 
+![[MacBook-2025-01-10-002413.png]]
+
 - Opět existuje varianta, kdy se volí lídr s **nejnižším identifikátorem**.
 
 ## Raft algoritmus
 - Moderní (2014) a *především jednoduchý algoritmus*, implementovaný v mnoha jazycích.
 - Je založen na většinové shodě.
-- Běžně se používá pro **replikaci dat**, avšak lze použít i pro samotnou volbu lídra
+- Běžně se používá pro **replikaci dat**, avšak lze použít i pro samotnou volbu lídra.
 
-- Raft je algoritmus pro dohodu, který byl navržen pro DS s cílem *zajištění konzistentního stavu mezi uzly*. Volba lídra je **součástí Raft algoritmu**, který *umožňuje jednomu z uzlů zastávat roli lídra pro určitý čas*.
+- Stavy uzlů:
+	- Leader, Následovník, Kandidát
+- Term = Volební období.
+- Split-vote = nikdo nezískal (restart, náhodné zpoždění)
 
 >[!Example] Průběh:
 >- Inicializace:
->	- Každý uzel v DS **začíná ve stavu "Follower"** (sledující).
+>	- Každý uzel v DS **začíná ve stavu "Follower"** (následovník).
+>- Vyvolání voleb - následovník:
+>	- zvýší svůj term,
+>	- stane se kandidátem,
+>	- hlasuje sám pro sebe,
+>	- požádá o hlas všechny ostatní (zašle zprávu).
+>- Uzel obdrží zprávu o hlas:
+>	- Když *kandidát* (follower je podobný) *obdrží zprávu `RequestVote`*, zkontroluje, zda **je volební období žádajícího kandidáta větší než jeho vlastní**.
+>	- Pokud je **období větší**, aktualizuje svoje období, přejde do stavu **následníka** a hlasuje pro kandidáta.
+>	- Pokud je **term stejný nebo menší**, žádost o hlasování zamítne.
+>- Výsledek:
+>	- Vyhraje volby:
+>		- kandidát dostane většinu hlasů,
+>		- prohlásí se leaderem.
+>	- Jiný kandidát se prohlásí leaderem (zpráva) a:
+>		- má term větší nebo roven mému $\rightarrow$ návrat k následovnictví.
+>		- má term menší než můj $\rightarrow$ odmítnu ho.
+>	- Dlouho nevyhrává nikdo - **timeout** $\rightarrow$ restart voleb.
+
+>[!text] Další pojmy:
 >- Časový limit voleb:
 >	- Každý uzel čeká na **náhodný** časový limit voleb. 
 >	- Pokud uzel během tohoto časového limitu *neobdrží zprávu od lídra* nebo *jakéhokoli kandidáta*, přejde do **stavu "kandidát"** a **zahájí nové volební období**.
->- Rozšíření hlasování:
->	- Když se uzel stane kandidátem **hlasuje pro sebe**. Poté *odešle zprávu `RequestVote` všem ostatním uzlům* a **vyžádá si jejich hlasy**.
->- Zpracování žádosti o hlasování:
->	- Když *kandidát* (follower je podobný) *obdrží zprávu `RequestVote`*, zkontroluje, zda **je volební období žádajícího kandidáta větší než jeho vlastní**. 
->	- Pokud je **období větší**, aktualizuje svoje období, přejde do stavu **následníka** a hlasuje pro kandidáta.
->	- Pokud je **termín stejný nebo menší**, žádost o hlasování zamítne.
->- Volební většina:
->	- Pokud kandidát **získá hlasy od většiny uzlů**, stane se lídrem pro aktuální období.
->	- Odesílá zprávu, že je nový lídr pro dané období.
 >- Heartbeats:
 >	- Jakmile se uzel stane vůdcem, zasílá **periodicky zprávy** všem následovníkům, aby si **udržel své vedení** a zabránil zahájení nových voleb.
->
 >- Ztráta lídra:
 >	- Pokud *následovník neobdrží Heartbeat během určitého časového limitu*, **přejde do stavu kandidáta** a **zahájí nové volební období**.
 >- Omezení volebního období:
 >	- Každé nové **volební období** v Raft algoritmu **je vyhrazeno pro jednu volbu lídra.** To znamená, že každá volba lídra má svoje vlastní volební období.
 
-![[MacBook-2025-01-04-002364.png]]
+![[MacBook-2025-01-10-002414.png]]
 
 >[!fail] Problémy volby lídra:
 >- V některých případech nechceme vybírat lídra pouze podle identifikátoru. Je nutné zohlednit i například:
@@ -102,6 +119,7 @@
 >- **Informace** (vždy nejlepší volba) se **propagují** sítí zpět k **source** uzlu.
 >
 >![[MacBook-2025-01-04-002365.png]]
+>![[MacBook-2025-01-10-002415.png]]
 
 ## Odbočka: Broadcast
 - **Broadcast představuje poměrně velkou zátěž** (velký počet zaslaných zpráv).
