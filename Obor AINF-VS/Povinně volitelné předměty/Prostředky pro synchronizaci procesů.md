@@ -94,9 +94,9 @@
 - Jednosměrné spojení výstupu procesu a vstupu jiného procesu.
 - Funguje na principu **FIFO**.
 - Pro komunikaci v obou směrech jsou potřeba dvě potrubí, jedno pro každý směr.
-- Některé jazyky mají i **duplexní pipes** (např. Python)
+- Některé jazyky mají i **duplexní roury** (např. Python)
 
-- Existují dvě hlavní kategorie potrubí:
+- Existují dvě hlavní kategorie rour:
 	- **Nepojmenované** - Vytváří se dynamicky **v rámci procesu a jeho potomků**. Vhodné pro komunikaci mezi příbuznými procesy.
 	- **Pojmenované** - Existují **samostatně**. Jsou vhodné pro komunikaci mezi nezávislými procesy.
 
@@ -120,7 +120,7 @@
 	2. **Navázání spojení** (pouze pro klienta)
 		- Pokud jde o komunikaci typu klient-server, klientový socket se snaží navázat spojení se serverovým socketem.
 	3. **Naslouchání na serverovém socketu** (pouze pro server)
-		- Pokud jde o serverový socket, ten čeká na příchozí požadavky na připojení od klientů.
+		- Čeká na příchozí požadavky na připojení od klientů.
 	4. **Přijetí připojení** (pouze pro server)
 	5. **Přenos dat**
 	6. **Uzavření spojení**
