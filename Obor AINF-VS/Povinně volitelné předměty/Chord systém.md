@@ -1,28 +1,30 @@
 ## Chord systém
-- = **Distribuovaná hash tabulka**
-- Chord systém se používá pro organizaci a vyhledávání informací v distribuovaných systémech. Je navržen tak, aby poskytoval efektivní a spolehlivé řešení pro distribuované uchovávání a vyhledávání klíčů v síti. 
-- Chord byl původně navržen pro použití v prostředí peer-to-peer sítí, ale jeho koncepty jsou aplikovatelné i na jiné typy distribuovaných systémů.
+- = **Distribuovaná hashovací tabulka**
+- Chord systém se používá pro organizaci a vyhledávání informací v distribuovaných systémech. 
+- Navržen tak, aby poskytoval efektivní a spolehlivé řešení pro distribuované uchovávání a vyhledávání klíčů v síti. 
+-  Původně navržen pro  peer-to-peer sítě, ale jeho koncepty jsou aplikovatelné i na jiné typy DS.
 
-- Chord vytváří **kruhovou strukturu**, kde každý uzel (node) v síti má přiřazen jedinečný identifikátor (klíč). Uzly jsou uspořádány do kruhu podle hodnot jejich identifikátorů. Identifikátor má $m$ bitů (obvykle $128$ nebo $160$) a celkově je poté v $2^{m}$ uzlů.
+- Chord vytváří **kruhovou strukturu**, kde každý uzel (node) v síti má přiřazen jedinečný identifikátor (klíč). 
+- Uzly jsou uspořádány do kruhu podle hodnot jejich identifikátorů. Identifikátor má $m$ bitů (obvykle $128$ nebo $160$) a celkově je poté v $2^{m}$ uzlů.
 
 - Uzel s klíčem $k$ je spravován uzlem s klíčem $id$, kde $id \geq k$, tento uzel se nazývá `succ(k)` (successor)
 
 - Hlavní úkol je pro $k$ efektivně najít `succ(k)`.
 
 >[!Example]- Řešení:
->- Každý uzel má **Finger Table (FT)** obsahující $s$ záznamů ($s <leq m$).
+>- Každý uzel má **Finger Table (FT)** obsahující $s$ záznamů ($s < m$).
 >- Záznamy v tabulce pro uzel $p$ vypočítáme následovně: $$FT_{p}[i]=\text{succ}(p+2^{i-1})$$
 >- Poté uzel $p$ předá dotaz na klíč k uzlu $q$ na indexu $j$ následovně:$$FT_{p}[j] \leq k < FT_{p}[j+1]$$
 >	- pokud $p < k < FT_{p}[1]$, pak $q = FT_{p}[1]$ (je menší než první záznam v tabulce)
->	- pokud $p < k \text{and} k > FT_{p}[s]$, pak $q = FT_{p}[s]$ (je větší než všechny záznamy v tabulce)
+>	- pokud $p < k \text{ and } k > FT_{p}[s]$, pak $q = FT_{p}[s]$ (je větší než všechny záznamy v tabulce)
 >![[MacBook-2025-01-03-002357.png]]
 
 ### Přidání uzlu do chord systému
-- Přidání uzlu do Chord systému je proces, který **zahrnuje aktualizaci struktury kruhu a redistribuci odpovědnosti za klíče** tak, aby nový uzel byl začleněn do sítě.
+- Proces, který **zahrnuje aktualizaci struktury kruhu a redistribuci odpovědnosti za klíče** tak, aby nový uzel byl začleněn do sítě.
 
 >[!Example] Postup:
 >1. Nový uzel $p$, který se chystá připojit k síti, vygeneruje svůj jedinečný identifikátor (klíč).
->2. Nový uzel musí najít svého "souseda" v kruhu Chord. tj. `succ(p+1)`. Často provedeno pomocí **vyhledávacího dotazu**. Nový uzel může začít hledání od některého existujícího uzlu v síti.
+>2. Nový uzel musí najít svého "souseda" v kruhu Chord. tj. `succ(p+1)`. Často provedeno pomocí **vyhledávacího dotazu**.
 >3. Každý uzel $q$ si drží aktualizovanou FT:
 >	- $FT_{q}[1] = \text{succ}(q+1) - q$ ví, že první záznam odkazuje na následující uzel v kruhu.
 >	- Každý uzel pravidelně ověřuje podmínku:
