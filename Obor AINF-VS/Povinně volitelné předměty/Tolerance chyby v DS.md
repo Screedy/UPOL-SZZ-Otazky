@@ -1,16 +1,29 @@
-- Tolerance chyb v DS se zabývá **schopností systému udržet svou funkčnost** a **korektnost i přes přítomnost chyb** nebo **selhání některých jeho částí**.
 - Cílem je zajistit, aby systém i přes chyby v jednotlivých uzlech nebo komponentách fungoval spolehlivě, udržoval konzistentní stav a poskytoval očekávané služby.
 
 - Selhání uzlů nebo komunikačního kanálu vede k chybám.
-- Obecně by měli DS tolerovat určité množství chyb.
+- Obecně by měly DS tolerovat určité množství chyb.
 
->[!Example] Základní koncepty, které požadujeme od našeho systému:
+>[!Example] Základní vlastnosti DS:
 >- **Dostupnost** - dostupnost systému v čase
 >- **Spolehlivost** - doba běhu bez chyb
 >- **Bezpečnost** - nedojde ke katastrofickému selhání při chybě
 >- **Udržovatelnost** - jak snadno lze odstranit chyby
 
+- Vysoká dostupnost vs. vysoká spolehlivost.
+- Různé metriky
+	- MTTF - Mean Time To Failure
+	- MTTR - Mean Time To Repair
+	- MTBF - Mean Time Between Failures
+
 ## Klasifikace chyb
+### Podle trvání
+- Přechodná (transient) - objeví se jednou a zmizí.
+	- Třeba výpadek signálu.
+- Přerušovaná (intermittent) - chyba se objevuje a mizí.
+	- Chvíli funguje vpohodě, pak chyba, pak vpohodě, ...
+- Trvalá (permanent) - chyba zůstává do vyřešení.
+	- Objeví a už nezmizí (např. odejde HDD).
+
 ### Podle projevu
 
 | chyba           | popis                                           |
@@ -19,11 +32,10 @@
 | chyba vynechání | selhání poslání či přijetí zprávy               |
 | chyba časování  | odpověď není doručena v daném časovém intervalu |
 | chyba odpovědi  | odpověď je nesprávná                            |
-| libovolná chyba | (Byzantská) libovolná odpověď v libovolném čase |
+| náhodná chyba   | (Byzantská) náhodná odpověď v libovolném čase   |
 ### Selhání uzlu
 - V **asynchronních systémech** je **obtížné přímo určit, že nastala chyba**.
-	- Zejména pokud dojde k něčemu, *co by mohlo být vnímáno jako běžné zpoždění nebo ztráta zprávy*.
-	- Komunikace probíhá bez nějakého pevného časového rámce a tudíž detekce chyby může být komplikovaná.
+	- Komunikace probíhá **bez** nějakého **pevného časového rámce** a tudíž detekce chyby může být komplikovaná.
 - V **synchronních systémech** existuje **časový rámec pro vykonání operací a doručení zpráv**.
 	- *Selhání uzlu může být detekováno, pokud nedojde k očekávané akci v daném časovém rámci.*
 - **Částečně-synchronní systémy** jsou jako **synchronní systémy bez omezení času.**
