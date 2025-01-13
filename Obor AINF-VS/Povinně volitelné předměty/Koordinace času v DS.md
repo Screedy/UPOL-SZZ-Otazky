@@ -5,6 +5,10 @@
 - Omezení: **čas nikdy nevracíme zpět**
 	- Není dobré pro logiku počítače. Musíme se zpomalit a počkat až nás reálný čas doběhne.
 
+>[!tip] Definice mimoběžnosti:
+>**Mimoběžnost** říká, že mezi dvěma událostmi existuje vztah, který je buď **kauzální** (tj. jedna událost ovlivňuje druhou), nebo není možné, aby tyto události byly současné.
+>Pokud dvě události nejsou mimoběžné, říkáme, že jsou **současné (concurrent)**.
+
 ## Cristianův algoritmus
 - Cristianův algoritmus je *jedním z jednoduchých algoritmů pro synchronizaci času* v DS.
 - Byl navržen v roce **1989 Cristianem Flaviem**, Brazilským informatikem.
@@ -89,9 +93,8 @@
 - Oproti Lamportovým logickým hodinám, které zajišťují porovnání pořadí událostí, vektorové hodiny *uchovávají více informací o vzájemných vztazích mezi událostmi*.
 
 >[!Example] Jak fungují:
->- Vektor hodin:
->	- Každý uzel v DS udržuje vlastní vektor hodin.
->	- Vektor hodin obsahuje **pro každý uzel ze systému hodnotu**, která představuje *aktuální počet provedených událostí na daném uzlu*.
+>- Každý uzel v DS udržuje vlastní vektor hodin.
+>- Vektor hodin obsahuje **pro každý uzel ze systému hodnotu**, která představuje *aktuální počet provedených událostí na daném uzlu*.
 >- Porovnání vektorů hodin:
 >	- Chování je analogické jako v případě logických hodin $$VC_{1} \leq VC_{2} \text{ pokud } VC_{1}[i]\leq VC_{2}[i] \text{ pro } \forall i$$ $$VC_{1} < VC_{2} \text{ pokud } VC_{1} \leq VC_{2} \text{ a } \exists j \text{ takové, že } VC_{1}[j] < VC_{2}[j]$$
 >	- Neporovnatelné jsou považovány za konkurentní.
