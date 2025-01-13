@@ -1,3 +1,6 @@
+- Vzájemné vyloučení je mechanismus, který zajišťuje, že v daném okamžiku může určitý kritický úsek kódu (nebo sdílený prostředek) používat pouze jeden proces.
+- Je důležitý pro zajištění konzistence a zabránění konfliktů.
+
 ## Centralizované řešení
 - Velmi jednoduchá myšlenka i provedení.
 - Jeden uzel (**rozhodčí**) rozhoduje o výhradním přístupu ke sdílenému zdroji.
@@ -26,8 +29,8 @@
 >2. Proces $p_{j}$ při přijetí $(p_{i}, t)$ pošle `ack` pokud **nechce vstoupit nebo $t$ je menší než logické hodiny procesu $p_{j}$**, jinak si **přidá $p_{i}$ do fronty**.
 >3. Při přijetí $(N-1)$ `ack` zpráv, proces **vstoupí do kritické sekce**.
 >4. Při výstupu proces $p_{i}$ **pošle `ack` všem ve frontě** čekajícím procesům.
-
-![[MacBook-2025-01-10-002407.png]]
+>
+>![[MacBook-2025-01-10-002407.png]]
 
 >[!fail] Problém:
 >- **$N$ bodů selhání**

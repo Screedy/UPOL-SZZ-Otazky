@@ -28,8 +28,9 @@
 >- Aktualizace informací:
 >	- Ostatní procesy **aktualizují své informace o aktuálním lídrovi** na základě nových zpráv.
 >	- Pokud *některý z nich zjistí*, že má vyšší identifikátor než nový lídr, **může zahájit svou vlastní volbu**.
+>
+>![[MacBook-2025-01-10-002412.png]]
 
-![[MacBook-2025-01-10-002412.png]]
 
 - Bully algoritmus funguje dobře v situacích, kdy **potřebujeme rychle zvolit nového lídra** v reakci na **výpadek stávajícího**.
 - Časová složitost je $\mathcal{O}(n^{2})$, kde $n$ je počet procesů v systému.
@@ -51,8 +52,9 @@
 >	- Tento proces pak **zprávu vyhodnotí a informuje všechny uzly o výsledku** (pošle další "lístek").
 >- Potvrzení lídra:
 >	- Každý proces přijímá příchod zprávy o novém lídrovi a **aktualizuje svůj stav** o **identifikátor nového lídra**.
+>
+>![[MacBook-2025-01-10-002413.png]]
 
-![[MacBook-2025-01-10-002413.png]]
 
 - Opět existuje varianta, kdy se volí lídr s **nejnižším identifikátorem**.
 
