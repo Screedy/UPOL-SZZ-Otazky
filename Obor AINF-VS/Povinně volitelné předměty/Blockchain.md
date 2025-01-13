@@ -1,3 +1,38 @@
+## Distribuované transakce
+- Transakce, která zahrnuje více uzlů v DS.
+- Mezibankovná převod (různé systémy), zápis do více různých DB, ...
+- Zaměřili jsme se na distribuované transakce.
+
+## Distribuovaný commit
+### One-phase commit:
+- *Koordinátor* **zahájí operaci** a řekne ostatním, **co mají udělat**.
+- Problém: **Chybí zpětná vazba**, pokud uzel nedokáže operaci provést, není koordinátor informován.
+
+### Two-phase commit:
+- *Koordinátor* **pošle všem `VOTE-REQUEST`**.
+- **Uzel pošle `VOTE-COMMIT`**, pokud *je připraven provést commit*. Jinak `VOTE-ABORT`.
+- *Pokud koordinátor obdrží* **od všech `VOTE-COMMIT`**, pošle všem zprávu `GLOBAL-COMMIT`, jinak `GLOBAL-ABORT`.
+- Pokud uzel obdrží `GLOBAL-COMMIT` provede commit.
+
+>[!fail] Problém:
+> Mnoho bodů selhání, řešení jsou časovače.
+
+
+![[MacBook-2025-01-13-002435.png]]
+- Uzel, který **neobdrží `VOTE-REQUEST`** po **čase pošle `VOTE-ABORT`**.
+- Koordinátor ve stavu *wait* **po čase pošle `GLOBAL-ABORT`**.
+- Uzel v ready stavu (čeká na koordinátora) má dvě možnosti:
+	- **Blokovat** dokud **koordinátor nepošle zprávu**.
+	- Po čase **kontaktovat jiný uzel** a zeptat se zda neobdržel `GLOBAL-*`
+	- Pokud v tomto bodu *selže koordinátor*, pak **nekonečné blokování**.
+
+### Three-phase commit:
+![[MacBook-2025-01-13-002436.png]]
+- Navíc `PREPARE-COMMIT` zpráva.
+	- Koordinátor ve stavu **`PRE-COMMIT`**, po čase může poslat `GLOBAL-COMMIT`.
+	- Uzel ve stavu `READY` nebo `PRE-COMMIT` analogické jako u 2-fázového commitu, ale pokud je více jak polovina uzlů ve stavu `READY`, tak `VOTE-ABORT`.
+
+## Blockchain
 - **Blockchain** je **datová struktura pro realizaci distribuované účetní knihovny**.
 - *Myšlenka blockchainu vznikla v roce 2008*, když někdo, který používal pseudonym **Satoshi Nakamoto**, publikoval bílou knihu s názvem *"Bitcoin: A Peer-to-Peer Electronic Cash System"*. Tato publikace byla zveřejněna na kryptografickém fóru. 
 - První blockchain byl implementován jako součást kryptoměny Bitcoin, která byla spuštěna **v lednu 2009**.
@@ -5,32 +40,148 @@
 - Jelikož sdílíme data, tak podle CAP teorému, musíme učinit volbu:
 	- Typicky pro blockchain **zachováváme AP na úkol C**.
 
-- Typy blockchainů:
-	- **Veřejný**
-	- **Privátní**
-	- **Kontrolovaný**
+- Bitcoin, Ethereum, Dogecoin, ...
+- Ale nejen kryptoměny:
+	- DNS, IoT, lékařské záznamy, smart contracts, ...
 
-## Základní myšlenka blockchain struktury
-- Je to řetězec provázaných bloků.
-- Každý blok obsahuje:
-	- **Data** (záznamy, transakce, ...)
-	- **Kryptografický hash dat**
-	- **Kryptografický hash předchozích dat**
-	- **Timestamp**
+- Jsou nejen veřejmé:
+	- Nějaká míra centralizace, omezení přístupnosti nebo transparentnosti, ...
+	- Privátní (centralizovaný)m
+	- Hybridní (řízený důvěryhodným konsorciem, s autentizací)
+
+### Bloky a jejich provázání
+- Blockchain - řetězec (provázaných) bloků
+- Blok obsahuje:
+	- **Data** (transakce, záznamy, ...),
+	- **Timestamp**,
+	- **Hash dat** (většinou kryptografický),
+	- **Hash předchozího bloku** (většinou kryptografický),
 	- ...
 
 - První blok v řetězci se nazývá **genesis block**
+	- Jediný blok, který nemá předchozí hash block.
 
 - **Hash dat zabezpečuje blok**:
 	- Jelikož používáme **kryptografickou hashovací funkci**, tak jedna z její podmínek je, že mi malá změna v datech udělá velkou změnu po zahashování.
 	- Takže *velmi snadná verifikace změny*.
+	- Předchozí bloky *prakticky* nelze měnit.
 - **Provázání bloků zabezpečuje blockchain**:
 	- *Každý blok potvrzuje předešlé*.
 	- Potvrzení spočívá v tom, že **máme vždy hash předešlého bloku** (odkaz).
 
-- Každý uzel v síti si *udržuje vlastní kopii blockchainu* a *každý uzel může mít jinou kopii*, proto je **nutná shoda**.
-- Stačí se nám **shodnout na jednom bloku**, protože se tím *shodneme na všech předešlých*.
-- Na to však **nelze použít klasické algoritmy** (jako Paxos, Raft), protože v těchto algoritmech *má každý uzel jeden hlas a kdyby se připojilo hodně uzlů, tak by mohli vytvořit vlastní pravdu* (Sybil attack).
+- Každý uzel může mít vlastní kopii blockchainu.
+- Stačí shoda jenom na jednom (posledním) bloku.
+
+### Shoda, Pow
+- Proof of Work.
+
+>[!Example] Jak funguje:
+>- Vytvoření nového validního bloku vyžaduje velké množství práce.
+>1. Zájemce posbírá transakce do bloku.
+>2. Sestaví základ bloku.
+>3. Musí blok doplnit tak, aby vyřešil nějakou výpočetně náročnou hádanku.
+>4. Hádanka má upravitelnou obtížnost (dle aktuálních možností sítě).
+
+- Kdo to zvládne první, získává odměnu za blok (poplatky, nové prostředky, ...)
+- Ověření validity bloku (výsledku hádanky) musí být triviální.
+- Změna bloku = přepočítání všech dalších bloků $\rightarrow$ nereálné.
+
+>[!fail] Problémy:
+>spotřeba, pooly, rychlost
+
+- Např. Bitcoin a délka nulového prefixu hashe.
+
+### Shoda, PoS
+- Proof of Stake.
+- Problémy PoW $\rightarrow$ místo práce zástava.
+
+>[!Example] Jak funguje:
+>- Vytvoření nového bloku vyžaduje (relativně) velkou zástavu.
+>1. Zájemce (validátor) nabídne zástavu (kryptoměnu daného blockchainu).
+>2. Systém vybere zájemce
+>	- Podle velikosti zástavy,
+>	- podle dlouhodobé důvěryhodnosti,
+>	- s prvkem náhody.
+>3. Vítěz posbírá transakce do bloku a připojí jej do sítě.
+>- Ostatní validátoři ověří plastnosti bloku ($\rightarrow$ odměna).
+>	- OK: Vítěz získává odměnu za blok.
+>	- KO: Vítěz ztrácí zástavu, je penalizován v síti.
+
+- Podvod vyžaduje mít hodně prostředků $\rightarrow$ útok na sebe sama.
+
+>[!fail] Problém:
+>Potenciální centralizace bohatství (a moci).
+
+### Shoda, další
+- Delegated PoS
+- Proof of Authority
+- Proof of Elapsed Time
+- Practical Byzantine Fault Tolerance
+
+### Hrozby
+- 51% útok - ovládnutí většiny v síti.
+- Sybil(a) útok - vydávání se za více účastníků.
+- Eclipse útok - oddělení uzlu.
+- Chyby v chytrých smlouvách (smart contracts) - zneužití bugu.
+- Fyzická/linková vrstva - útok na podpurné vrstvy.
+- Kryptografie - aktuálně kvantové počítače a SHA-256.
+- DDoS - přetížení sítě.
+- Sociální inženýrství - útoky na uživatele obecně.
+
+## Bitcoin
+- První úplná implementace DLT.
+- Alternativa k fiat měnám.
+- Fixní počet 21,000,000 BTC
+- 1 BTC = $10^{8}$ Satoshi (lze rozdělit).
+- Na začátku byla odměna 50 BTC v bloku.
+	- Halving každých 210.000 bloků.
+- Hashovací funkce SHA-256
+- **Privátní klíč** podepisuje transakce
+- **Veřejný klíč** ověřuje
+- Velikost bloku do 1MB (dnes už 4MB)
+- PoW: Doplnit blok o nonce(číslo), aby hash měl prefix $0^{n}$.
+- Délka prefixu $n$ je nastavitelná.
+
+## Ethereum
+- "Druhá nejvýznamnější" kryptoměna.
+- Záměr: Blockchain může poskytovat více než jen měnu (smart contracts).
+- Nemá limit, ale má jiné nástroje pro omezení inflace.
+- Hash: **Keccak-256** (modifikace SHA-3).
+- **Primární klíč** podepisuje.
+- **Veřejný klíč** ověřuje.
+- Původně PoW, paměťově náročné operace.
+- Nyní PoS. Snížení spotřeby o 99%.
+- Podporuje smart contracts:
+	- součástí je EVM (Ethereum Virtual Machine)
+	- Vlastní bytekód, Turingovsky úplný.
+	- Jazyky: Solidity, vyper
+	- V transakci očekává vstup a platbu.
+
+
+<div style="text-align: center; margin-top: 20px;">
+    <!-- Horní tlačítka -->
+    <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 10px;">
+        <a href="obsidian://open?vault=SZZ-Otazky2024&file=Obor%20AINF-VS%2FPovinn%C4%9B%20voliteln%C3%A9%20p%C5%99edm%C4%9Bty%2FChord%20syst%C3%A9m" style="text-decoration: none;">
+            <button style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Předchozí otázka
+            </button>
+        </a>
+        <a href="" style="text-decoration: none;">
+            <button style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Následující otázka
+            </button>
+        </a>
+    </div>
+    <!-- Spodní tlačítko -->
+    <a href="obsidian://open?vault=SZZ-Otazky2024&file=Obor%20AINF-VS%2F2.%20Povinn%C4%9B%20voliteln%C3%A9%20p%C5%99edm%C4%9Bty" style="text-decoration: none;">
+        <button style="padding: 15px 30px; background-color: #ADD8E6; color: black; border: none; border-radius: 5px; cursor: pointer; width: 43%;">
+            Všechny otázky
+        </button>
+    </a>
+</div>
+
+---
+*\*Shoda, bitcoin jak byla probírána s panem doktorem Trnečkou.*
 
 ### Shoda
 - **Practical Byzantine Fault Tolerance** je algoritmus navržený pro *dosažení tolerance Byzantských chyb v DS*. Tato tolerance je klíčová v situacích, kdy některé komponenty systému mohou selhat nebo **jednat zákeřně**.
@@ -103,25 +254,3 @@
 	- proof-of-elapsed-time
 	- ...
 - Minimální škálovatelnost počtu transakcí za sekundu
-
-<div style="text-align: center; margin-top: 20px;">
-    <!-- Horní tlačítka -->
-    <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 10px;">
-        <a href="obsidian://open?vault=SZZ-Otazky2024&file=Obor%20AINF-VS%2FPovinn%C4%9B%20voliteln%C3%A9%20p%C5%99edm%C4%9Bty%2FChord%20syst%C3%A9m" style="text-decoration: none;">
-            <button style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;">
-                Předchozí otázka
-            </button>
-        </a>
-        <a href="" style="text-decoration: none;">
-            <button style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;">
-                Následující otázka
-            </button>
-        </a>
-    </div>
-    <!-- Spodní tlačítko -->
-    <a href="obsidian://open?vault=SZZ-Otazky2024&file=Obor%20AINF-VS%2F2.%20Povinn%C4%9B%20voliteln%C3%A9%20p%C5%99edm%C4%9Bty" style="text-decoration: none;">
-        <button style="padding: 15px 30px; background-color: #ADD8E6; color: black; border: none; border-radius: 5px; cursor: pointer; width: 43%;">
-            Všechny otázky
-        </button>
-    </a>
-</div>
