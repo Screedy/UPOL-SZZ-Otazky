@@ -23,12 +23,13 @@
 >	1. Poprvé: 
 >		- Uloží svůj stav. 
 >		- Uloží příchozí kanál (ze kterého market přišel) jako prázdný (zprávy přijaté po marketu nejsou součástí snímku).
->		- Pošle market zprávy všem ostatním procesům přes své výstupní kanály.
+>		- Pošle marker zprávy všem ostatním procesům přes své výstupní kanály.
 >	1. Jindy: Uloží stav na kanálu.
 >3. Proces s markerem dostane zprávu bez markeru
 >	- Musí být z okamžiku před snapshotem,
 >	- přepošle ji iniciátorovi, aby ji přidal
-
+>
+>![[Pasted image 20250114202744.png]]
 - FIFO kanály (jinak problém)
 
 ## Dijkstra-Scholten algoritmus
