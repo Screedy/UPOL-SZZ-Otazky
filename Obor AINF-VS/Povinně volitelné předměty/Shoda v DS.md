@@ -24,14 +24,14 @@
 
 ### Flooding consensus
 - *Algoritmus sloužící k dosažení shody v DS*.
-- Jedná se o jednoduchý přístup, kde **každý uzel systému periodicky rozesílá svůj stav nebo informace o změnách všech ostatních uzlů** ve svém okolí.
+- Jedná se o jednoduchý přístup, kde **každý uzel systému periodicky rozesílá svůj stav nebo informace o změnách všem ostatním uzlům** ve svém okolí.
 - Tento proces se nazývá "**flooding**" (případně "epidemic dissemination").
 - Fail-stop (ví kdo vypadl a umí s tím pracovat)
 
 >[!Example] Postup:
 >- V každém kole si **aktivní uzly vymění své návrhy**.
 >- Každý uzel z návrhu **deterministicky zvolí volbu**.
->- Pokud někdo nedostane některou odpověď, začne nové kole.
+>- Pokud někdo nedostane některou odpověď, začne nové kolo.
 >- Všichni dostanou všechny odpovědi $\rightarrow$ volba $\rightarrow$ konec.
 >
 >![[MacBook-2025-01-10-002418.png]]

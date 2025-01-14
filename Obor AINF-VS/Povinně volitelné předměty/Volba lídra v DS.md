@@ -120,19 +120,8 @@
 >- **List potvrdí přijetí `ELECTION`** a **zašle informace o svých možnostech** (stav baterie, rychlost, ...) **rodiči**.
 >- **Informace** (vždy nejlepší volba) se **propagují** sítí zpět k **source** uzlu.
 >
->![[MacBook-2025-01-04-002365.png]]
 >![[MacBook-2025-01-10-002415.png]]
 
-## Odbočka: Broadcast
-- **Broadcast představuje poměrně velkou zátěž** (velký počet zaslaných zpráv).
-- Vhodné je použít například **Gossip protokol** (někdy také epidemic protokol)
-	- Propagace:
-		- Každý uzel *posílá zprávu náhodným uzlům*.
-		- Po určitém počtu konverguje.
-	- Agregace:
-		- Každý uzel $P_{i}$ *si nastaví proměnnou $v_{i}$ na $0$ pouze $P_{1}$ nastaví $v_{1}$ na $1$*.
-		- Když $P_{i}$ **konverguje** $P_{j}$ nastaví své **$v$ na $(v_{i} + v_{j}) / 2$**.
-		- Z průměru hodnoty je možné odhadnout počet uzlů v síti.
 
 <div style="text-align: center; margin-top: 20px;">
     <!-- Horní tlačítka -->
@@ -155,3 +144,16 @@
         </button>
     </a>
 </div>
+
+---
+*\*Navíc od pana doktora Trnečky*
+## Odbočka: Broadcast
+- **Broadcast představuje poměrně velkou zátěž** (velký počet zaslaných zpráv).
+- Vhodné je použít například **Gossip protokol** (někdy také epidemic protokol)
+	- Propagace:
+		- Každý uzel *posílá zprávu náhodným uzlům*.
+		- Po určitém počtu konverguje.
+	- Agregace:
+		- Každý uzel $P_{i}$ *si nastaví proměnnou $v_{i}$ na $0$ pouze $P_{1}$ nastaví $v_{1}$ na $1$*.
+		- Když $P_{i}$ **konverguje** $P_{j}$ nastaví své **$v$ na $(v_{i} + v_{j}) / 2$**.
+		- Z průměru hodnoty je možné odhadnout počet uzlů v síti.

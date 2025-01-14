@@ -1,6 +1,6 @@
 ## Synchronizace bez sdílené paměti
 ### Distribuovaný systém
-- Distribuovaný systém lze chápat jako *speciální* případ paralelního.
+- Lze chápat jako *speciální* případ paralelního.
 - Obecně se jedná o **kolekci (autonomních) systémů**, které se **chovají jako jeden systém**.
 - Mohou být na jednom uzlu/stroji, na LAN i WAN.
 
@@ -58,7 +58,7 @@
 - **Multicast** a **broadcast**
 
 #### RPC
-- Je mechanismus umožňující **volání procedur** nebo funkcí, které běží na vzdáleném počítači či uzlu, tak, **jako by byly volány lokálně**
+- Je mechanismus umožňující **volání procedur** nebo funkcí, které běží na vzdáleném počítači či uzlu, tak, **jako by byly volány lokálně**.
 - Velmi komplikované - volaná procedura **nemá přístup** k aktuálnímu **stavu** volajícího. Proto je jej potřeba **předat** volanému.
 
 >[!text] Hlavní myšlenka:

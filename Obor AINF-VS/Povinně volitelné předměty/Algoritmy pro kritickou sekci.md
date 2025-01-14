@@ -1,5 +1,5 @@
 ## Synchronizace
-- je **forma komunikace** mezi procesy nebo vlákny v počítačovém systému
+- je **forma komunikace** mezi procesy nebo vlákny v počítačovém systému.
 - *Cílem synchronizace* je zajistit, aby *přístup k sdíleným prostředkům* (sdílená paměť, zařízení, databáze, ...) byl prováděn v **souladu s předem stanovenými pravidly** a aby **nedocházelo k nekonzistencím nebo konfliktům**
 
 - Rozlišujeme pokud procesy/vlákna mají:
