@@ -1,7 +1,6 @@
 ## Distribuované transakce
 - Transakce, která zahrnuje více uzlů v DS.
-- Mezibankovná převod (různé systémy), zápis do více různých DB, ...
-- Zaměřili jsme se na distribuované transakce.
+- Mezibankovný převod (různé systémy), zápis do více různých DB, ...
 
 ## Distribuovaný commit
 ### One-phase commit:
@@ -46,7 +45,7 @@
 
 - Jsou nejen veřejmé:
 	- Nějaká míra centralizace, omezení přístupnosti nebo transparentnosti, ...
-	- Privátní (centralizovaný)m
+	- Privátní (centralizovaný)
 	- Hybridní (řízený důvěryhodným konsorciem, s autentizací)
 
 ### Bloky a jejich provázání

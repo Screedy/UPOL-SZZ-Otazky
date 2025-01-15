@@ -9,8 +9,8 @@
 
 
 ## Konzistence
-- **Typ konzistence** nám říká, jaké *data dostaneme při čtení z různých replik*.
 - **Problém konzistence** je spojen s akcí **čtení** z *různých replik zároveň*. Může se stát, že se dostaneme **k rozdílným datům** (zpoždění, cache, ...)
+- **Typ konzistence** nám říká, jaké *data dostaneme při čtení z různých replik*.
 
 ### Typy konzistence
 - **Silná konzistence**
@@ -93,7 +93,7 @@
 - Rozšířením CAP teorému získáme PACELC.
 #### PACELC teorém
 - Pokud $P$ (tolerance rozdělení na části), pak výběr mezi $A$ (dostupnost) a $C$ (konzistence), jinak $E$ (else) výběr mezi $L$ (latence) a $C$ (konzistence).
-- Doplňuje známý **CAP teorém** tím, že zohledňuje nejen situaci, kdy dochází k výpadku sítě (partition tolerance), ale také situace bez výpadků, kdy musí být upřednostněna buď **latence (Latency)**, nebo **konzistence (Consistency)**
+- Doplňuje **CAP teorém** tím, že zohledňuje nejen situaci, kdy dochází k výpadku sítě (partition tolerance), ale také situace bez výpadků, kdy musí být upřednostněna buď **latence (Latency)**, nebo **konzistence (Consistency)**
 - ![[MacBook-2025-01-11-002426.png|350]]
 
 ## CALM teorém
