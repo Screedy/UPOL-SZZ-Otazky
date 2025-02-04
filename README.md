@@ -45,5 +45,3 @@ Po naklonování repozitáře na váš počítač postupujte takto, abyste jej o
 2. V levém dolním rohu klikněte na 'Open another vault'.
 3. Vyberte možnost 'Open folder as vault'.
 4. Navigujte k složce, kam jste naklonovali repozitář, a vyberte ji.
-
-<a href="https://www.buymeacoffee.com/screedy" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
