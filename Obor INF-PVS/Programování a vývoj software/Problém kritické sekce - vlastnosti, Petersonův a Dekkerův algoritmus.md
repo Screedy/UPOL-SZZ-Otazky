@@ -4,6 +4,7 @@
 1) **vlastnost bezpečnosti** - tvrzení o nežádoucím stavu, musí být nepravdivé v každém stavu historie
 2) **vlastnost živosti** - program se dostane do žádoucího stavu
 ## Kritická sekce
+- část programu, kde se praucje se sdílenými zdroji
 - platí zde několik pravidel
 1) **vzájemné vyloučení** - maximálně 1 proces je v kritické sekci - *bezpečnost*
 2) **absence uváznutí** - pokud se 2 procesy snaží vstoupit do kritické sekce, alespoň 1 uspěje - *životnost*

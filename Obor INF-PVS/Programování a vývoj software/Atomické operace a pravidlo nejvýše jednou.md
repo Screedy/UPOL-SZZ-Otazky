@@ -9,7 +9,15 @@
 
 - výraz (přiřazení), který splňuje pravidlo nejvýše jednou považujeme za *atomický*
 	- atomický výraz jsme označovali v hranatých závorkách `[výraz]`
-
+## Atomická operace
+- Jedná se o operace, která se provede celá a nemůže být její provádění přerušeno jiným procesem (případně se neprovede vůbec)
+- Jsou důležité při paralelním programování a synchronizaci
+- Používají se taktéž v databázích (často nazývané jako *transakce*)
+1) test and set - použit v semaforech
+2) swap
+3) compare and swap
+4) fetch and add
+5) load link/store conditional
 
 
 
