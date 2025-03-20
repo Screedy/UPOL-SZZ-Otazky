@@ -1,4 +1,3 @@
-
 ## Určitý integrál
 - Existuje několik definic určitého integrálu:
 	- Cauchyův

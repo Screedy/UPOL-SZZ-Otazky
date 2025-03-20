@@ -1,6 +1,5 @@
 - Python je dynamicky typovaný jazyk, což znamená, že interpret je schopen automaticky určit datový typ proměnné na základě přiřazené hodnoty. 
 - V Pythonu se datové typy automaticky přizpůsobují hodnotám, které jsou jim přiřazeny, a umožňují dynamickou manipulaci s daty.
-
 ## Základní datové typy:
 1. **Integer (celé číslo):** 
 	- celá čísla
@@ -36,7 +35,6 @@
 6. **NoneType**:
 	- Speciální typ reprezentující absenci hodnoty.
 	- Má jedinou hodnotu `None`
-
 ## Vlastnosti datových typů v Pythonu:
 1. **Dynamické přiřazení typů:** Python automaticky určuje datový typ proměnných na základě hodnoty, která je do nich přiřazena. Například:
 
@@ -55,7 +53,6 @@ list = [1, 2, 3] list.append(4) # Přidává prvek 4 na konec seznamu
 4. **Metody a operátory:** Každý datový typ v Pythonu má své vlastní metody a operátory pro manipulaci s daty. Například metoda `append()` pro seznamy, nebo operátor `+` pro spojování řetězců.
 
 5. **Dynamická alokace paměti:** Python spravuje paměť dynamicky, což znamená, že se stará o alokaci a dealokaci paměti pro proměnné a datové struktury.
-
 ## Mutabilita
 > [!info]
 > **mutabilní objekt** ... po jeho vytvoření umožňuje měnit jeho vnitřní stav
@@ -76,7 +73,6 @@ list = [1, 2, 3] list.append(4) # Přidává prvek 4 na konec seznamu
 >>> type(42)
 <class 'int'>
 ```
-
 #### Imutabilní objekty
 - `int`
 - `float`
@@ -85,7 +81,6 @@ list = [1, 2, 3] list.append(4) # Přidává prvek 4 na konec seznamu
 - `bytes`
 - `tuple`
 - `bool` (odvozený i `int`)
-
 #### Mutabilní objekty
 - `list`
 - `dictionary`

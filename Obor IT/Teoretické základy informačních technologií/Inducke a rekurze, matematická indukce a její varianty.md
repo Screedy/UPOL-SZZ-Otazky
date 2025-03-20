@@ -69,6 +69,6 @@ f(n)
 	- definujeme pro atomické prvky $T$,
 	- definujeme pro složené prvky $T$.
 ##### Navigace
-Předchozí:  [[Pravděpodobnost, Laplaceova definice, pravděpodobnostní prostor, náhodná veličina, střední hodnota]]
+Předchozí:  [[Pravděpodobnost, Laplaceova definice, pravděpodobnostní prostor, náhodná veličina, střední hodnota, vlastnosti pravděpodobnosti]]
 Následující: [[Orientované a neorientované grafy, základní pojmy]]
 Celý okruh: [[1. Teoretické základy informačních technologií]]
