@@ -1,23 +1,26 @@
-- **Strom** je parametrizován přirozeným **číslem $t \geq 2$**
-- *B strom je definován následujícími podmínkami:*
-	- V uzlech může být uloženo **více klíčů**, **maximálně** však **$2t - 1$**. Ve všech uzlech **mimo kořene** však musí být uloženo **minimálně $t - 1$ klíčů** *(pokud je strom neprázdný je v kořeni vždy alespoň jeden klíč)*
-	- Pokud uzel obsahuje $n$ klíčů, má $0$ (je list) nebo $n+1$ potomků
-		- Všechny listy ve stromu jsou ve stejné hloubce
-	- Klíče jsou v uzlu *uspořádány vzestupně*
+- Strom je parametrizován přirozeným **číslem $t \geq 2$**
+- B-strom je **definován** následujícími podmínkami:
+	1) V uzlech může být uloženo **více klíčů**, **maximálně** však **$2t - 1$**. Ve všech uzlech **mimo kořene** však musí být uloženo **minimálně $t - 1$ klíčů** *(pokud je strom neprázdný je v kořeni vždy alespoň jeden klíč)*
+	2) Pokud uzel obsahuje $n$ klíčů, má $0$ (je list) nebo $n+1$ potomků
+	3) Všechny listy ve stromu jsou ve stejné hloubce
+	4) Klíče jsou v uzlu *uspořádány vzestupně*
 		- $k_{0} < k_{1} < k_{2} < ... < k_{n-1}$ ($1 \leq n \leq 2t - 1$)
 		  ![[MacBook-2024-03-13-000873.png| 400]]
 - **Výška B-stromu:** B strom s $n \geq 1$ klíči a $t \geq 2$ má výšku nejvýše $\log_{t} \frac{n+1}{2}$
 - B-stromy jsou často používány v databázových systémech.
 	- Zaměřují se na vlastnost snížení operací s diskem.
+#### Nákres stromu
+![[b-strom.jpeg]]
 
->[!Example]- Úvod
+>[!Example]- Úvod (video)
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/FgWbADOG44s?si=VZkYlNgWOHYCSgjb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
->[!Example]- Vlastnosti
+>[!Example]- Vlastnosti (video)
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/fAfuZiFDpRo?si=nbe9TPSTLAuwjQVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
-### Implementace
+>[!info]
+>B-strom s paramterem $t≥2$ obsahující $n≥1$ klíčů má výšku nejvýše $log_t(n+1/2)$
+## Implementace
 ```C
 struct node {
   keys, // pole klicu o velikosti 2t-1
@@ -26,7 +29,6 @@ struct node {
   n, // počet klíčů v uzlu
   leaf, // priznak toho, jestli je uzel listem
   data, // pointer na satelitni data
-  …
 }
 ```
 ```C
@@ -42,8 +44,7 @@ proc create-empty-tree(T)
   x.n = 0
   T.root = x
 ```
-
-### Operace s B-stromy
+## Operace s B-stromy
 #### Vyhledávání - $O(t\ log_{t}\ n)$
 - Zobecnění vyhledávání ve vyhledávacím stromě. Rozhodování, do kterého podstromu se vydáme je nyní založeno na porovnávání s polem klíčů, nikoliv jenom s jedním klíčem.
 - *Neúspěsné vyhledávání končí v listu.*
@@ -66,8 +67,6 @@ proc b-tree-search(x,k)
 ```
 >[!Example]- Vyhledávání
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/jLEhJqNVauc?si=uJJUy8XQFgww5ZEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
 #### Vložení prvku (dvoufázově) - $O(t\ log_{t}\ n)$
 1. Uzel, kam budeme vkládat, **nalezneme** pomocí **upravené** operace **b-tree-search**, která **vrací pointer** na **uzel** $x$, a **index** $i$ v poli `x.keys`, na který budeme vkládat.
 2. Vložení provedeme **posunutím prvků** v tomto poli **od** indexu $i$ **doprava** a na uvolněné místo zapíšeme $k$.
@@ -174,8 +173,6 @@ proc b-tree-search(x,k)
 
 >[!Example]- Vkládání
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/tT2DT9Z4H-0?si=NVHfsrLgFnUboj-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
 #### Mazání prvku (dvoufázové) $O(t\ \log_{t}\ n)$
 - 1\. fáze - **vlastní smazání**:
 	1. Operací `tree-search` nalezneme uzel $x$ a index $i$, tak, že `k == x.keys[i]`

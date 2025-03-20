@@ -7,12 +7,12 @@
 		- např. pro $I = \set{2,3,5}$ je to $|A_{2} \cap A_{3} \cap A_{5}|$. Výraz $(-1)^{|I|+1}$ je roven $1$, pokud $I$ obsahuje lichý počet prvků, a je roven $-1$, pokud $I$ obsahuje sudý počet prvků.
 - Tedy v součtu na pravé straně jsou počty prvků všech možných průniků (jednočlenných, dvoučlenných, ..., až po $n$-členné) utvořené z $A_{1}, ..., A_{n}$, přitom počet prvků daného průniku je se znaménkem $+$ pro průniky **lichého počtu** množin a se znaménkem $-$ pro průníky **sudého počtu množin**.
 
->[!Example]- Důkaz
+>[!tip]- Důkaz
 >![[MacBook-2024-05-31-001428.png]]![[MacBook-2024-05-31-001429.png]]
 
 >[!Example] Příklad
 >- V jedné malé základní škole fungují tři kroužky. Florbalový kroužek navštěvuje 18 dětí, výtvarný 14 dětí a šachový je osmičlenný. Z florbalistů jsou dva šachisté a čtyři výtvarníci. Do výtvarného a zároveň do šachového kroužku chodí tři děti. Jedno dítě chodí na všechny tři kroužky. Kolik dětí navštěvuje alespoň jeden ze tří uvedených kroužků?
->	- **Řešení**: $|F \cup V \cup Š| = 18 + 14 + 8 - 2- 4- 3 + 1 = 32$
+>- **Řešení**: $|F \cup V \cup Š| = 18 + 14 + 8 - 2- 4- 3 + 1 = 32$
 
 
 ##### Navigace

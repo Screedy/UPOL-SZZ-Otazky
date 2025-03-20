@@ -45,5 +45,5 @@
 
 ##### Navigace
 Předchozí:  [[Uspořádání, Hasseovy diagramy]]
-Následující: [[Pravděpodobnost, Laplaceova definice, pravděpodobnostní prostor, náhodná veličina, střední hodnota]]
+Následující: [[Pravděpodobnost, Laplaceova definice, pravděpodobnostní prostor, náhodná veličina, střední hodnota, vlastnosti pravděpodobnosti]]
 Celý okruh: [[1. Teoretické základy informačních technologií]]

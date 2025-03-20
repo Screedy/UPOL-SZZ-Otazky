@@ -66,7 +66,6 @@ reversed(numbers)
 list("123456")
 # ['1', '2', '3', '4', '5', '6']
 ```
-
 #### Dvojrozměrný seznam
 ```python
 matrix = [
@@ -89,7 +88,6 @@ for _ in range(2):
 
 matrix_zeroes[0][0] = 1
 ```
-
 ## Tuple
 ```python
 point = (10, 20)
@@ -104,7 +102,6 @@ point[0] = 20
 x, y = point
 ```
 - Nejedná se o *mutable* typ (čili *immutable*)
-
 ## Dictionary
 - Vazba *klíč - hodnota*
 > [!info]

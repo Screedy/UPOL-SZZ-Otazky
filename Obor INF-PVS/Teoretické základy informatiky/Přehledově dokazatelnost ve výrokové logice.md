@@ -1,7 +1,8 @@
 ## Dokazatelnost VL
->[!tip] Odvozovací pravidlo modus ponens
+>[!tip] Odvozovací pravidlo Modus Ponens
 >- **Odvozovací pravidlo** = předpis pomocí nějž ze vstupních formulí odvozujeme další formule $$MP: \frac{\phi, \phi \Rightarrow \psi}{\psi}$$
 >- Z formulí $\phi$ a $\phi \Rightarrow \psi$ odvodíme formuli $\psi$
+>- Např. $\neg q$ vzniká z použitím **MP** z formulí $p \Rightarrow r$ a $(p \Rightarrow r) \Rightarrow \neg q$
 
 >[!info] Axiomy VL
 >- **Axiomy** = formule, které automaticky přijímáme jako "platné"
@@ -11,26 +12,29 @@
 >	- (A2): $(\phi \Rightarrow (\psi \Rightarrow \chi)) \Rightarrow ((\phi \Rightarrow \psi) \Rightarrow (\phi \Rightarrow \chi))$
 >	- (A3): $(\neg \psi \Rightarrow \neg \phi) \Rightarrow (\phi \Rightarrow \psi)$
 ### Důkaz, syntaktické vyplývání
-- **Důkaz formule $\psi$ z množiny formulí $T$** je libovolná posloupnost formulí $\psi_{1},...,\psi_{n}$ taková, že $\psi_{n} = \psi$ a každá $\psi_{i} (i = 1, ..., n)$:
-	- je **axiomem**
-	- nebo **náleží do $T$**
-	- nebo **vzniká** z předchozích formulí důkazu **pomocí odvozovacího pravidla MP**
-		- tedy existují indexy $j, k < i$ tak, že $\psi_{k}$ je formule ve tvaru $\psi_{j} \Rightarrow \psi_{i}$
-- **Formule $\psi$ je dokazatelná z $T$** (zapisujeme $T \vdash \psi$), pokud existuje důkaz formule $\psi$ z $T$. Pokud $\vdash \psi$, pak říkáme, že $\psi$ je **dokazatelná**
 
+> [!info] Definice důkazu formule
+> - **Důkaz formule $\psi$ z množiny formulí $T$** je libovolná posloupnost formulí $\psi_{1},...,\psi_{n}$ taková, že $\psi_{n} = \psi$ a každá $\psi_{i} (i = 1, ..., n)$:
+>>- je **axiomem**
+>>- nebo **náleží do $T$**
+>>- nebo **vzniká** z předchozích formulí důkazu **pomocí odvozovacího pravidla MP**
+>>- tedy existují indexy $j, k < i$ tak, že $\psi_{k}$ je formule ve tvaru $\psi_{j} \Rightarrow \psi_{i}$
+>- **Formule $\psi$ je dokazatelná z $T$** (zapisujeme $T \vdash \psi$), pokud existuje důkaz formule $\psi$ z $T$. Pokud $\vdash \psi$, pak říkáme, že $\psi$ je **dokazatelná**
 - **Dokazatelnosti** budeme také říkat **syntaktické vyplývání**, abychom tím zdůraznili, že jde o protějšek sémantického vyplývání
-	- $T \vDash \psi$ = sémantické vyplývání
-	- $T \vdash \psi$ = **syntaktické vyplývání**
+	- $T \vDash \psi$ ... **sémantické** vyplývání (pravdivost)
+	- $T \vdash \psi$ ... **syntaktické** vyplývání (dokazatelnost)
 
 >[!tip] Tvrzení
 >- Pro každou množinu formulí $T$ a formule $\psi, \phi$ platí, že z $T \vdash \psi \Rightarrow \phi$ a $T \vdash \psi$ plyne $T \vdash \phi$.
 
 >[!tip] Věta
 >- Pro každou formuli $\psi$ platí $\vdash \psi \Rightarrow \psi$.
+>- *Neboli že plyne z prázdné množiny.*
 
->[!info] Monotonie dokazatelnosti (MD)
+>[!tip] Lemma monotonie dokazatelnosti (MD)
 >- Nechť $T$ a $S$ jsou množiny formulí a $\psi, \phi$ jsou formule. 
 >- Pak platí: Pokud $T \vdash \psi$ a pro každou $\phi \in T$ máme $S \vdash \phi$, pak $S \vdash \psi$.
+> - Z platnosti $\vdash \phi$ jednoduše odvodíme $T \vdash \phi$
 
 >[!tip] Věta o dedukci (VoD)
 >- Pro každou množinu formulí $T$ a formule $\psi, \phi$ platí:
@@ -42,7 +46,7 @@
 
 >[!tip] Věta o důkazu sporem
 >- Nechť $T$ je množina formulí, nechť $\psi$ je libovolná formule. Pak platí: $T \vdash \psi$, právě když $T \vdash \neg \psi$ je **sporná množina**.
->	- Předpokládáme neplatnost tvrzení a dojdeme ke sporu, čímž dokážeme platnost daného tvrzení
+>- *Předpokládáme neplatnost tvrzení a dojdeme ke sporu, čímž dokážeme platnost daného tvrzení.*
 
 >[!tip] Věta o důkazu rozborem případů
 >- Pro množinu formulí $T$ a formule $\psi, \phi, \chi$ platí $T, \psi \lor \phi \vdash \chi$, právě když $T, \psi \vdash \chi$ a $T, \phi \vdash \chi$
@@ -62,6 +66,6 @@
 >	- Speciálně, každá pravdivá formule je dokazatelná
 
 ##### Navigace
-Předchozí:  [[Základní syntaktické a sémantické pojmy výrokové logiky]]
+Předchozí:  [[Výroková logika, jazyk, formule, pravdivost, vyplývání, tautologie, základní syntaktické a sémantické pojmy výrokové logiky]]
 Následující: [[Syntax a sémantika predikátové logiky]]
-Celý okruh: [[1. Teoretické základy informačních technologií]]
+Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky|1. Teoretické základy informatiky]]

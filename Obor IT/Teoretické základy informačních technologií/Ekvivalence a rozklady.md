@@ -1,7 +1,6 @@
 ### Ekvivalence
 - Ekvivalence jsou matematickým protějškem k pojmu **nerozlišitelnost**
 - Binární relace $E$ na množině $A \neq \varnothing$ se nazývá **ekvivalence**, je-li **reflexivní, symetrická a tranzitivní**.
-
 - Vlastnosti:
 	- **Reflexivní**
 		- Každé $x$ z $X$ je totožné s $x$, tedy $x$ nelze rozlišit od $x$
@@ -10,8 +9,8 @@
 	- **Tranzitivní**
 		- Pokud $x$ nelze rozlišit od $y$ a $y$ od $z$, pak i $x$ nelze rozlišit od $z$
 
-- Reflexivní a symetrická relace se nazývá *tolerance*
-- *Tranzitivní tolerance* se nazývá *ekvivalence*
+- Reflexivní a symetrická relace se nazývá ***tolerance***
+- *Tranzitivní tolerance* se nazývá ***ekvivalence***
 
 - Pro ekvivalenci $E$ na množině $X$ definujeme pro každé $x \in X$ množinu
 	- $[x]_{E} = \{y \in X \mid <x,y> \in E \}$ = třída ekvivalence prvku $x$
@@ -22,10 +21,8 @@
 - Relace *identity* $id_{x}$ je *nejmenší* ekvivalence na $X$
 	- $id_{x} = \{<a,a>,<b,b>,<c,c>\}$
 - Relace *kartézského součinu* $\iota_{X}$ je největší ekvivalence na $X$
-
 ### Rozklad
 - Rozklad na množině je matematický protějšek shluků nerozlišitelných prvků
-
 - Nechť **$X \neq \varnothing$** je množina. Systém množin $\Pi \subseteq 2^{X}$ splňují
 	- **$Y \neq \varnothing$ pro každou $Y \in \Pi$**
 		- Rozklad $\Pi$ na $X$ je systém neprázdných podmnožin $Y$
@@ -34,7 +31,6 @@
 	- $\cup \, \Pi = X$
 		- Sjednocení všech tříd rozkladu $\Pi$ bylo rovno množině $X$ se nazývá **rozklad na množině $X$**. 
 - Množiny $Y \in \Pi$ nazýváme **třídy rozkladu $\Pi$**. Pro prvek $x \in X$ označíme $[x]_{\Pi}$ tu třídu rozkladu $\Pi$, která obsahuje $x$.
-
 - Na množině $X$ existují dva mezní rozklady:
 	- $[x]_{\Pi} = \{x\}$
 		- Všechny třídy rozkladu $\Pi$ jsou jednoprvkové
@@ -42,7 +38,7 @@
 		- Máme jen jednu třídu rozkladu $\Pi$, která je rovna celé $X$
 
 - Všechny rozklady pro $X = \{a,b,c,d\}$:
-	$$
+$$
 	\begin{aligned}
 	\set{\set{a},\set{b},\set{c},\set{d}} &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&\\
 	\set{\set{a,b}, \set{c}, \set{d}} \\
@@ -72,7 +68,6 @@
 	je rozklad příslušný ekvivalenci $E$
 
 - Pro ekvivalenci $E$ na $X$ a pro rozklad $\Pi$ na $X$ máme **$E_{\Pi_E} = E, \, \Pi_{E_\Pi} = \Pi$**
-
 ### Přirozené zobrazení
 - Rozklad na množině $X$ příslušný ekvivalenci $E$ označujeme běžně $X/E$ místo $\Pi_{E}$ a někdy jej nazýváme faktorová množina $X$ podle $E$
 - Jelikož $[x]_{E} = [x]_{\Pi E}$, říkáme, že $[x]_{E}$ je třída rozkladu množiny $X$ podle $E$
