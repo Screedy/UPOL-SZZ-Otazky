@@ -1,0 +1,10 @@
+- Pro binární relaci $R$ na $X$ definujeme binární relace:
+	- $Ref(R)$ = reflexivní uzávěr relace $R$
+		- $Ref(R) = R \cup id_{x}$
+		- K relaci přidám *relaci identity* (každý prvek v relaci sám se sebou)
+	- $Sym(R)$ = symetrický uzávěr relace $R$
+		- $Sym(R) = R \cup R^{-1}$
+		- K relaci přidám *inverzní relaci*
+	- $Tra(R)$ = tranzitivní uzávěr relace R
+		- $Tra(R)$ = $\cup^{\infty}_{n=1} R^{n}$
+		- Sjednocení nekonečně mnoho relací $R^{1} \cup ,... , \cup R^{n}$, pokud ale je R definována na konečné množině $X$, kde $\mid X \mid = n$, pak $Tra(R) = \cup^{n}_{i=1} R^{i}$

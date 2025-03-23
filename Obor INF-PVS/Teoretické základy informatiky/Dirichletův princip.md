@@ -30,7 +30,3 @@
 >	- objektů tedy musí být alespoň $mr+1$, tedy $11 * 2 + 1 = 23$
 >	- Kostkami musím hodit alespoň $23 \times$, abych dostal $3\times$ stejný součet.
 
-##### Navigace
-Předchozí:  [[Princip inkluze a exkluze]]
-Následující: [[Základní syntaktické a sémantické pojmy výrokové logiky]]
-Celý okruh: [[1. Teoretické základy informačních technologií]]

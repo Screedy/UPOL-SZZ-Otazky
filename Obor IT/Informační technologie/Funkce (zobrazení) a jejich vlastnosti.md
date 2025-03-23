@@ -1,4 +1,4 @@
-### Pojem funkce
+## Pojem funkce
 - Nechť $X, Y$ jsou neprázdné množiny a $R$ je binární relace mezi množinami $X$ a $Y$.
 - Relace $R$ se nazývá **zobrazení $X$ do $Y$**, má-li tyto vlastnosti:
 	- **pro každé $x \in X$ existuje $y \in Y$ tak, že $<x,y> \in R$**
@@ -14,8 +14,7 @@
 
 - Prvek $y$ nazveme **obraz prvku** $x$, prvek $x$ nazveme **vzor prvku** $y$.
 - Množinu $f(X) = \{ f(x)\ |\  x \in A \}$ nazveme **úplný obraz množiny $X$**
-
-### Vlastnosti funkcí
+#### Vlastnosti funkcí
 - Funkce $f: X \rightarrow Y$ se nazývá:
 	- **Prostá (injektivní),** právě když:
 		- pro **každé $x_{1}, x_{2} \in X$ platí, jestliže $x_{1} \neq x_{2}$ pak $f(x_{1}) \neq f(x_{2})$**

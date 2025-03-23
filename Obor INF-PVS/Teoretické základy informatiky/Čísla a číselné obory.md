@@ -1,3 +1,5 @@
+- Číselné obory tvoří hierarchickou strukturu ($N⊂Z⊂Q⊂R⊂C$)
+	- ![[Pasted image 20250318102849.png]]
 >[!info] Přirozená čísla
 >- Jsou to čísla $1,2,3,...$
 >- Množinu všech přirozených čísel označujeme $\mathbb{N}$
@@ -11,7 +13,8 @@
 >- Množinu všech racionálních čísel označujeme $\mathbb{Q}$
 >- Lze je zapisovat pomocí zlomku nebo pomocí desetinného rozvoje
 >
->>[!Example]- Dokažte, že $\sqrt{2} \notin \mathbb{Q}
+>>[!Example]- Příklad
+>>- Dokažte, že $\sqrt{2} \notin \mathbb{Q}
 >>$![[MacBook-2024-05-31-001433.png]]
 
 >[!info] Iracionální čísla
@@ -31,8 +34,3 @@
 >- Symbolem $i$ je tzv. imaginární jednotka, pro niž platí $i^{2} = -1$
 >- Množinu všech komplexních čísel značíme $\mathbb{C}$
 >- Každé komplexní číslo $z = a + bi$ můžeme vyjídřit i v **tzv. goniometrickém tvaru $z = r (\cos{\psi} + i \sin{\psi})$**, kde číslo $r = \sqrt{a^{2}+b^{2}}$ **je tzv. absolutní hodnota** a **úhel $\psi$ argument komplexního čísla**
-
-##### Navigace
-Předchozí:  [[Syntax a sémantika predikátové logiky]]
-Následující: [[Vybrané číselné funkce a rychlosti jejích růstu]]
-Celý okruh: [[1. Teoretické základy informačních technologií]]
