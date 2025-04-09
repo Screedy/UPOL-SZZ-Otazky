@@ -222,3 +222,191 @@
 	- IPSec
 	- Signal Protocol
 	- Implementace přímo v HW
+
+## RSA
+- **Rivest Shamir Adleman** (tvůrci)
+- **Asymetrická šifra**
+- Dle délky klíče je považována za velmi bezpečnou.
+- Použití:
+	- Bezpečná výměna tajných klíčů pro symetrické šifrování
+	- Digitální podpis
+
+### Generování soukromého a veřejného klíče (příjemce)
+1. Zvolí se **dvě různá prvočísla $p$ a $q$**
+	- Přibližně **stejně** velká
+	- Typická velikost 1024 - 3072 bitů nebo i více.
+2.  Vypočítá se **součin** $n=p*q$, platí $\varphi (n) = (p-1) * (q-1)$
+	- *Eulerova funkce $\varphi : \varphi (n)$ je počet přirozených čísel menších než $n$ a nesoudělných s $n$.*
+3. Náhodně se **zvolí** $e \in \{1,2, ..., \varphi (n) - 1\}$ tak, **aby** $\text{gcd}(e, \varphi (n)) = 1$
+	- $e$ se nazývá **veřejný exponent**
+	- Často se volí $e=3$.
+4. Pomocí rozšířeného Euklidova algoritmu **vypočítáme inverzi** $e \text{ modulo } \varphi (n)$, označíme $d=e^{-1} \text {mod} \varphi (n)$.
+
+- $k_{e} = \langle e, n \rangle$ reprezentuje **veřejný klíč**.
+- $k_{d} = d$ reprezentuje **soukromý klíč**.
+- Čísla $p, q$ se mohou odložit (nejsou potřeba), ale **NIKDY** se **nesmí zveřejnit**.
+
+### Šifrování a dešifrování
+- Otevřený text $n \in M$ se rozdělí na číselné bloky $x_{i}$ tak, aby $x_{i} < n$$.
+- Šifrování:
+	- $e(x_{i}, k_{e}) = x^{e}_{i} \text{ mod } n$
+- Dešifrování:
+	- $d(y_{i}, k_{d}) = y^{d}_{i} \text{ mod } n$
+
+>[!Example] Příklad
+>1. otevřený text $m = 688232687966668003$
+>2. $p=47$, $q=71$, $n=p*q=3337$
+>3. zvolíme $e=79$, $79$ není soudělné s $(p-1)*(q-1) = 3220$
+>4. $d$ vypočítáme jako inverzní prvek k $79$ v $(\mathbb{Z}_{3320},*)$, tzv. $d=1019$
+>5. otevřený text $m$ rozdělíme do bloků $$
+\begin{aligned}
+m_{1} &= 688 \\
+m_{2} &= 232 \\
+m_{3} &= 687 \\
+m_{4} &= 966 \\
+m_{5} &= 688 \\
+m_{6} &= 003
+\end{aligned}
+$$ tak, aby $m_{i} < n = 3337$.
+> - Šifrování 1. bloku: $c_{1} = 688^{79} \text{ mod } 3337 = 1570$.
+> 	- Podobně pro další bloky.
+> - Celkem získáme šifrovanou zprávu $$c = 1570\ 2756\ 2091\ 2276\ 2423\ 158$$
+>   Dešifrování 1. bloku: $m_{1} = 1570^{1019} \text{ mod } 3337 = 688$.
+> 	- Podobně pro další bloky.
+
+### Praktické aspekty
+- **Generování velkých prvočísel**
+	- Pro výpočet modulu $n$ potřebujeme dvě velká prvočísla
+	- Princip:
+		- Náhodně vygenerujeme číslo příslušné délky
+		- Provedeme text prvočísel
+	- Problémy:
+		- Kolik čísel musíme vygenerovat, abychom narazili na prvočíslo?
+			- Náhodně vygenerované číslo $p$ mezi $1$ a $N$ je prvočíslo s pravděpodobností přibližně $\frac{1}{\text{ln}N}$
+		- Jak efektivně provést text prvočíselnosti?
+			- Fermatův test, ASK, ...
+- **Rychlé umocnění**
+	- Jedná se o **zásadní problém**, jelikož bez rychlého umocnění by bylo šifrování RSA nepoužitelné.
+	- Pro urychlení se používá vhodná kombinace násobení (MUL) a výpočtu druhé mocniny (SQ)
+
+### Bezpečnost RSA (vedlejší otázka)
+- Bezpečnost RSA je založena na předpokladu, že problém faktorizace IFP je pro velké moduly obtížný.
+
+>[!tip] IFP
+>- Faktorizace IFP (Integer Factorization Problem) je matematický problém spočívající v rozložení celého čísla na součin prvočísel.
+
+- Nevíme však přesně, do jaké třídy složitosti tento problém spadá.
+- Předpokládá se, že je v **NP-úplný**.
+
+#### Útok pomocí postranního kanálu
+- **Postranní kanál** je nežádoucí způsob výměny informací mezi zařízením (nebo programem implementující šifru) a jeho okolím.
+- Postranní kanály se dají použít k prolomení RSA, aniž bychom se pokoušeli o faktorizaci.
+- Při šifrování v HW mohou být postranní kanály (spotřeba, zvuk, teplo, ...)
+- Tyto projevy můžeme změřit a na jejich základě odhadnout část soukromého klíče.
+
+---
+## Kryptografické hashovací funkce
+- **Kryptogragická hashovací funkce** je **zobrazení** $\text{hash: } X \rightarrow Y$, kde:
+	- $x \in X$ je **zpráva** (soubor) libovolné délky
+	- $y \in Y$ je posloupnost znaků **pevné délky** nazývaná *hashovací hodnota*
+
+- **Základní vlastnosti:**
+	1. Hashovací funkce je **deterministická**.
+	2. Hashovací funkce je **jednosměrná**.
+	3. Jediným způsobem, jak získat hashovanou hodnotu $\text{hash}(x)$ pro zprávu $x$ je vyhodnocení funkce $\text{hash}$ pro $x$.
+	4. **Lavinový efekt**: náhodná nebo záměrná (i velmi malá) změna zprávy na vstupu **výrazně změní** hashovanou hodnotu.
+
+- **Podmínky kladené na bezpečnost hasnovací funkce**:
+	- **Odolnost vůči získání vzoru**
+		- Pro zadanou hasnovanou hodnotu $y$, je velmi obtížné najít zprávu $x$ tak, že $y = \text{ hash}(x)$
+	- **Odolnost vůči získání jiného vzoru**
+		- Pro zadanou zprávu $x_{1}$ je velmi obtížné najít takovou zprávu $x_{2} \neq x_{1}$ tak, že $\text{hash}(x_{1}) = \text{ hash}(x_{2})$
+	- **Odolnost vůči kolizi**
+		- Je velmi obtížné nalézt jakékoliv $x_{1} \neq x_{2}$, any $\text{hash}(x_{1}) = \text{ hash}(x_{2})$
+
+- **Analogie k otisku prstu**
+	- Otisk prstu je snadné pořídit.
+	- Máme-li otisk prstu, je nemožné z něj rekonstruovat jeho nositele.
+	- Máme-li konkrétního člověka, je nemožné najít jiného člověka se stejným otiskem.
+	- Je nemožné najít jakékoliv dva lidi, kteří by měli stejný otisk.
+
+### Použití
+- Ověření integrity souboru
+- Ověření hesla
+- Digitální podpis
+
+### Implementace
+- MD5 - Message-Digest algorithm 5
+	- Délka hashované hodnoty je 128b.
+	- Nesplňuje podmínku odolnosti vůči kolizím (byl proveden collision attack)
+		- Roku 2006 byl publikován efektivní algoritmus pro hledání kolizí
+	- Dnes se používá pouze pro ověřování integrity souborů
+- SHA-1 - Secure Hash Algorithm
+	- Délka hashované hodnoty je 160b.
+	- V roce 2005 byla publikována první známá kolize SHA-1 v praxi.
+		- Od té doby byly objeveny další útoky a kolize.
+		- Postupem času se stává čím dál snazší generovat kolize pro SHA-1 pomocí pokročilých výpočetních metod.
+- SHA-2
+	- Následní SHA-1
+	- Obsahuje skupiny algoritmů SHA-224, SHA-256, SHA-384 a SHA-512
+
+### Hashovací funkce pro hesla
+- Většina předchozích navržena s ohledem na efektivní výpočet pro velké vstupy.
+- Vznik speciálních hashovacích funkcí pro hashování hesel.
+- Využívají:
+	- Záměrného zpomalení
+	- Sůl jako další argument
+	- Často iterativní výpočet
+
+- Implementace:
+	- PBKDF2 (Password-Based Key Derivation Function 2)
+		- Kryptografická funkce určená k odvození hashované hodnoty z hesla
+		- Odolná vůči útokům hrubou silou.
+		- Bere jako vstup heslo, sůl (náhodný řetězec použitý k posílení hesla) a parametry algoritmu (počet iterací a velikost odvozeného klíče)
+		- Následně použije iterativní proces s použitím kryptografické hashovací funkce (např. SHA-256, SHA-512) k odvození hashované hodnoty.
+
+## Prolomení hashovacích funkcí (vedlejší otázka)
+- Prolomení hashovací funkce znamená **nalezení kolize** nebo **reverzního mapování** pro danou funkci.
+	- To by umožnilo útočníkovi vytvořit dvě různé vstupy s identickým hashem nebo získat původní vstup z daného hashe.
+- Existuje několik způsobů, jak se může útočník pokusit prolomit hashovací funkci:
+
+1. **Brute Force Attack**
+	- Útočník může zkoušet různé kombinace vstupních hodnot, dokud nenajde takovou, která má stejný hash jako cílový.
+	- Postup může být časově náročný.
+2. **Dictionary Attack**
+	- Útočník může použít předem vytvořený seznam běžných hesel nebo možných vstupních hodnot.
+	- Zkouší, zda některý z nich vytváří požadovaný hash.
+3. **Rainbow Table Attack**
+	- Útočník může použít předpočítané tabulky obsahující páry vstupních hodnot a jejich odpovídajících hashů.
+	- Pokud útočník získá hash, může ho porovnat s tabulkou a zjistit odpovídající vstupní hodnotu.
+	- Účinný proti slabým nebo běžným hashovacím funkcím.
+4. **Collision Attack**
+	- Útočník může aktivně hledat dvě různé vstupní hodnoty, který mají stejný hash.
+	- Tento typ útoku je náročný a vyžaduje pokročilé kryptoanalytické techniky.
+	- Pokud úspěšný, může vytvoření falešných dat nebo dokonce vyvrácení integrity systému.
+5. **Využití slabostí v hashovací funkci**
+	- Pokud jsou nalezeny slabiny v algoritmu hashovací funkce, může útočník využít těchto slabostí k získání požadovaných vstupů nebo kolizí.
+
+## Digitální podpis
+
+## Podepisování
+1. Ze zprávy se **vytvoří hash**.
+	- Kvůli efektivitě, integritě, ...
+2. Hash se *zašifruje* pomocí **soukromého klíče**.
+	- Je potřeba šifry, která to umožňuje (např. RSA)
+3. Zašifrovaný hash se přiloží ke zprávě a je odeslán.
+	- Potřeba zveřejnit veřejný klíč.
+
+### Ověření podpisu
+1. Příjemce oddělí zašifrovaný hash od zprávy.
+2. Hash se *dešifruje* pomocí *veřejného klíče* podepisujícího.
+3. Příjemce *porovná* hash zprávy a *dešifrovaný* hash.
+4. Pokud se rovnají, vlastník soukromého klíče podepsal dokument v daném znění.
+
+![[MacBook-2025-04-09-002868.png| 500]]
+
+### Podvržení veřejného klíče
+- Problém může nastat v distribuci veřejného klíče.
+- Pokud by byl **distribuován spolu** se zprávou/souborem, mohl by jej někdo po cestě změnit.
+	- *Man In The Middle attack* (MITM).
+- Problém vyřeší **certifikace veřejného klíče** *"vyšší autoritou"*.
