@@ -87,6 +87,12 @@
 >	- načítají se při spuštění programu
 >	- jsou sdíleny mezi soubory $\rightarrow$ šetří místo
 >	- knihovna můžu v OS chybět
+
+
+> [!info]
+> **interpret** ... vykonává program zadaný zdrojovým kódem krok po kroku
+> **kompilátor** (překladač) ... překládá program do obvykle nižšího jazyka
+
 ##### Navigace
 Předchozí: [[Operační systém, architektura, poskytovaná rozhraní]]
 Následující: [[Správa procesoru - procesy a vlákna, plánování jejich běhu, komunikace a synchronizace]]
