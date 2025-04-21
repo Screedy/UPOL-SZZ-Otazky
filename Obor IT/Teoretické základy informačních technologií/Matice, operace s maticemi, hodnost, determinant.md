@@ -1,3 +1,5 @@
+### Číselné těleso
+- **těleso** ... množina, kde jsou definované 2 binární operace
 ### Matice
 - Nechť $(T; +; \circ)$ je **číselné těleso,** $m, n \in \mathbb{N}$ a dále nechť $a_{ij} \in T$ pro všechny indexy $i = 1, 2, ..., m$ a $j = 1,2,...,n$. Potom **schéma**
   $$
@@ -196,8 +198,8 @@
 - Nechť $\Pi = (k_{1}, k_{2}, ..., k_{n})$ je pořadí množiny $A = \{a_{1}, a_{2}, ..., a_{n}\}$. Říkáme, že **prvky $k_{i}$ a $k_{j}$ tvoří inverzi v $\Pi$**, jestliže $i<j$, přestože $k_{i} > k_{j}$.
 
 - **Znaménkem pořadí $\Pi$** nazveme číslo $sgn(\Pi) = (-1)^{[\Pi]}$, přitom $[\Pi]$ značí počet inverzí v pořadí $\Pi$.
-- Je-li $sgn(\Pi) = 1$, nazveme pořadí $\Pi$ sudé.
-- Je-li $sgn(\Pi) = -1$, nazveme pořadí $\Pi$ liché.
+- Je-li $sgn(\Pi) = 1$, nazveme pořadí $\Pi$ sudé (nebo naopak **počet inverzí je sudý** => 1)
+- Je-li $sgn(\Pi) = -1$, nazveme pořadí $\Pi$ liché. (nebo naopak **počet inverzí je lichý** => -1)
 > [!Example] Příklad
 > *V pořadí  $\pi = (2, 1, 4, 5, 3)$ množiny $A$ jsou inverze    $2,1$ ;  $4,3$ ; $5,3$* tedy $sgn(\pi) = (-1)^{3} = -1$, tedy $\pi$ je liché.
 
@@ -222,6 +224,7 @@
 >   Pak $sgn(\pi_{1}) = (-1)^{2} = 1$ a $sgn(\pi_{2}) = (-1)^{2} = 1$, tedy $P$ je sudá permutace.
 ### Transpozice na množině
 - **Transpozicí na $A = \{1, 2, ..., n\}$** rozumíme permutaci $P$ na $A$ takovou, že existují $i, j \in A$ tak, že $P(i) = j, P(j) = i, P(k) = k$ pro všechny $k \in A \text{\\} \{i,j\}$.
+- *Slovy*: zamění 2 prvky a ostatní ponechá stejně
 > [!Example] Příklad
 >  na $A = \{1,2,3,4,5,6\}$ platí: 
 >  $$

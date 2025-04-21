@@ -48,7 +48,9 @@ nazýváme **matice soustavy** $(S)$, resp. **rozšířená matice soustavy** $(
 ##### Frobeniova věta
 - Nehomogenní soustava lineárních rovnic $A \vec{x}^{T}=\vec{b}^{T}$ je řešitelná právě tehdy, jeli $\mathrm{h}(A)=\mathrm{h}\left(A \mid \vec{b}^{T}\right)$.
 ---
-- Je-li v této situaci navíc $\mathrm{h}(A)=n$, pak má tato soustava **právě jedno řešení**, pokud $\mathrm{h}(A)<n$, pak má nekonečně mnoho řešení (závislých na $n-\mathrm{h}(A)$ parametrech).
+- Je-li v této situaci navíc
+	1) $\mathrm{h}(A)=n$, pak má tato soustava **právě jedno řešení**
+	2) pokud $\mathrm{h}(A)<n$, pak má **nekonečně mnoho řešení** (závislých na $n-\mathrm{h}(A)$ parametrech).
 > [!Summary] Frobeniova věta
 > Lineární soustava rovnic má řešení, pokud a jen pokud je **hodnost matice koeficientů rovna hodnosti rozšířené matice**. Rozšířená matice zahrnuje jak matici koeficientů, tak sloupec pravých stran rovnic.
 > To se dá vyjádřit vztahem: $\mathrm{h}(A)=\mathrm{h}\left(A \mid \vec{b}^{T}\right)$
@@ -205,7 +207,7 @@ $$
 >3 & 25 & -1
 >\end{array}\right|=-60
 >$$ 
->tedy $x_{2}=-3$.
+>tedy $x_{2}=-3$ (pro $x_2$ řešení nahradím 2. sloupec matice tím co je za $=$)
 
 >[!Example]- Isibalo - Cramerovo pravidlo
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/nyi42cJ8olM?si=C4gvMeMQDubkSvlB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

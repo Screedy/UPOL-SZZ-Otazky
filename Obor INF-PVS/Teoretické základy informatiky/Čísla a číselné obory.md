@@ -1,5 +1,6 @@
 - Číselné obory tvoří hierarchickou strukturu ($N⊂Z⊂Q⊂R⊂C$)
-	- ![[Pasted image 20250318102849.png]]
+ ![[Pasted image 20250318102849.png]]
+
 >[!info] Přirozená čísla
 >- Jsou to čísla $1,2,3,...$
 >- Množinu všech přirozených čísel označujeme $\mathbb{N}$

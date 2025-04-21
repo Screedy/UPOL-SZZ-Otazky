@@ -26,7 +26,7 @@ $$
 a_{n+1} = a_n + d. \tag{6.1}
 $$
 
-- Číslo $d$ nazýváme diference aritmetické posloupnosti.
+- Číslo $d$ nazýváme *diference* aritmetické posloupnosti.
 
 ### Geometrická posloupnost
 - Posloupnost $(a_n)_{n=1}^{\infty}$ se nazývá **geometrická**, právě když existuje takové $q \in \mathbb{R}$, že pro libovolné $n \in \mathbb{N}$ platí
@@ -34,7 +34,7 @@ $$
 a_{n+1} = a_n \cdot q. \tag{6.3}
 $$
 
-- Číslo $q$ nazýváme kvocientem geometrické posloupnosti.
+- Číslo $q$ nazýváme *kvocientem* geometrické posloupnosti.
 
 
 ## Monotónnost posloupnosti

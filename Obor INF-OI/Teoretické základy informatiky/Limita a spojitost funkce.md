@@ -149,7 +149,7 @@ Pak také $\lim_{x \to a} f(x) = A$.
 Nechť $f, g : \mathbb{R} \to \mathbb{R}$ a nechť:
 - $\lim_{x \to a} f(x) = A \in \mathbb{R}$,
 - $g$ je spojitá v $A$.
-Pak $\lim_{x \to a} g(f(x)) = g(A)$.
+- pak $\lim_{x \to a} g(f(x)) = g(A)$.
 #### O spojitosti elementárních funkcí
 - Nechť $f : \mathbb{R} \to \mathbb{R}$, $x \in D(f)$ je elementární. Pak v každém bodě $x \in D(f)$ je $f$ spojitá.
 #### Spojitost na intervalu (množině)
@@ -178,6 +178,8 @@ Nechť navíc $f(a) < f(b)$. Pak:
 
 #### O hodnotách spojité funkce
   - Funkce $f$ je spojitá na uzavřeném intervalu $\langle a, b \rangle$ a v $(a, b)$ nemá žádné nulové body, pak na $(a, b)$ je buď $f(x) > 0$ nebo $f(x) < 0$ pro všechny $x \in (a, b)$.
+#### O spojitosti inverzní funkce
+- Funkce $f$ je spojitá a ryze monotónní na intervalu $I$. Pak $f^{-1}$ je také spojitá.
 ## Jednostranná spojitost a body nespojitosti
 - Mějme funkci $f : A \to \mathbb{R}$. 
 - Jestliže v jistém levém, resp. pravém okolí bodu $a$ není funkce $f$ definována, pak mluvíme o jednostranné spojitosti v bodě $a$ zprava, resp. zleva.
