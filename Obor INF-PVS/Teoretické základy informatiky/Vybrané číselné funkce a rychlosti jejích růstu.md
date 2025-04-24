@@ -22,4 +22,3 @@
 - $f(n) = n!$
 - Z hlediska O-notace nejhorší možnost rychlosti růstu
 - Např. Počet možných permutací množiny
-## Funkce goniometrické

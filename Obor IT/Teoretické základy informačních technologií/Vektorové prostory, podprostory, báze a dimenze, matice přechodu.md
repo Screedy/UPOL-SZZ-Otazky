@@ -40,8 +40,8 @@ pouze v případě, že $c_1=c_2=\ldots=c_n=0$, se vektory $\vec{u_1}, \vec{u_2}
 
 ### Báze vektorového prostoru $V$
 - Je to **množina lineárně nezávislých vektorů**, které **"generují" prostor** $V$.
-- Generují znamená, že pomocí této množiny jsme schopni vyjádřit libovolný vektor prostoru $V$.
-- (kdybychom nějaký vektor z této množiny odebrali, už bychom nedokázali vyjádřit celý prostor $V$)
+- Generují znamená, že pomocí této množiny jsme schopni vyjádřit libovolný vektor prostoru $V$
+- Kdybychom nějaký vektor z této množiny odebrali, už bychom nedokázali vyjádřit celý prostor $V$
 
 ### Dimenze
  - **Dimenze** vektorového prostoru $V$ je rovna **počtu prvků báze** tohoto vektorového prostoru. 

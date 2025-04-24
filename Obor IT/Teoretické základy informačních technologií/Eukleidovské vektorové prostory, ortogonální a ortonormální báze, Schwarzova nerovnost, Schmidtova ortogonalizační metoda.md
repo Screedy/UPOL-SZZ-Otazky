@@ -44,6 +44,7 @@ $$
 
 ### Gram-Schmidtova ortogonalizační metoda
 - Metoda, která z **báze** vektorového prostoru vytvoří **ortogonální bázi**.
+
 >[!Example] Příklad užití
 >- Mám 3 (bázové) vektory, které neleží v jedné rovině. 
 >- Chci z nich udělat navzájem kolmé vektory. A pak je chci **ortonormalizovat** - aby byly **všechny stejně dlouhé**.

@@ -3,6 +3,7 @@
 > 
 > Značíme: $a \equiv b \space (mod \space n)$
 - Jinými slovy to znamená, že jejich rozdíl je násobkem $n$
+- Čili 2 čísla $a$ a $b$ mají stejný zbytek po dělení číslem $n$
 #### Vlastnosti kongruence modulo n
 >[!tip] Věta
 >Nechť $a,b \in \mathbb{Z}, n \in \mathbb{N}$. Pak jsou následující podmínky ekvivalentní:
@@ -27,6 +28,3 @@
 	- Třída obsahuje číslo $i \in \mathbb{Z}$ je značena $[i]_{\equiv_n}$
 	- Platí: $i = \{j \mid j = i + kn, k \in \mathbb{Z} \}$
 	- $[2]_{\equiv_5} = \{ ..., -8, -3, 2, 7, 12, ... \}$
-
-
-
