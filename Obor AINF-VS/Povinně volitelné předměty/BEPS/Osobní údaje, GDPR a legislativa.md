@@ -1,0 +1,21 @@
+- Průnik do počítačových systémů ošetřuje **Trestní zákoník**.
+	- Zákon č. 40/2009 Sb. §230-232
+- Citace: *"Kdo překoná bezpečnostní opatření, a tím **neoprávněně získá přístup** k počítačovému systému nebo k jeho části, bude potrestán **odnětím svobody až na dvě léta**, zákazem činnosti nebo propadnutím věci."*
+- §231 - Specifikuje tresty podle toho co se **získanými hesly/postupy** uděláte.
+- §232 - Ošetřuje škody způsobené z nedbalosti.
+
+- **GDPR** = **Obecné nařízení o ochraně osobních údajů**
+	- Nařízení Evropského parlamentu
+- **Osobní údaje** jsou **jakékoliv informace**, které se **vztahují k identifikované nebo identifikovatelné fyzické osobě**.
+	- To znamená, že pokud lze z daných údajů přímo nebo nepřímo **určit konkrétního jednotlivce**, jedná se o osobní údaje.
+	- Definice osobních údajů se může lišit v závislosti na právním kontextu, ale obecně zahrnuje širokou škálu informací.
+
+- Příklady osobních údajů v různých kontextech:
+	- **Zdravotní kontext**:
+		- Lékařské záznamy, údaje o diagnózách, léčbě, výsledcích testů.
+	- **Pracovní kontext**:
+		- Osobní složky zaměstnanců, pracovní smlouvy, hodnotící zprávy.
+	- **Finanční kontext**:
+		- Údaje o příjmech, výdajích, úvěrech, investicích.
+	- **Online kontext**:
+		- Informace získané při registraci na webových stránkách, nákupní historie, IP adresy při přístupu k online službám.
