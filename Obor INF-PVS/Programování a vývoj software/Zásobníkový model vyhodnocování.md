@@ -1,0 +1,12 @@
+- Zásobníkové programování je zvláštní paradigma
+- Nízkoúrovňové
+- **zásobník** ... datová struktura LIFO
+	- čili máme jen 2 operace - `push` a `pop`
+	- ![[Pasted image 20250422210404.png]]
+- Můžeme simulovat *zásobníkový stroj*, který vše řeší přes pouze zásobníky (může jich být více)
+	- `rslt` ... zásobník na data
+	- `exec` ... zásobník na kód programu, který se vykonává
+	- stroj pracuje iterativně po jednotlivých krocích
+	- obvykle používá **postfixovou notaci**
+- Bytecody některých programovací hjazyků používají zásobníkový stroj (Python, Java, .NET)
+- Zásobník má omezenou velikost $\longrightarrow$ může dojít $\longrightarrow$ problém stack overflow
