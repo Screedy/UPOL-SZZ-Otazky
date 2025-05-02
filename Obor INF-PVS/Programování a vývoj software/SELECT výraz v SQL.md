@@ -139,7 +139,7 @@ GROUP BY year, country;
   OFFSET   start )
 ```
 
-Klauzule se vyhodnocují v tomto pořadí:
+Vyhodnocovací pořadí klauzulí u `SELECT` výrazu:
 1. `FROM` - získání vstupní tabulky
 2. `WHERE` - filtrování řádků
 3. `GROUP BY` - seskupování

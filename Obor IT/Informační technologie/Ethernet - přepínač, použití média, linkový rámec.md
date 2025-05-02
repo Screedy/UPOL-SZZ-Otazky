@@ -1,7 +1,7 @@
 ### Linková vrstva
 ![[MacBook-2024-03-18-000913.png]]
 
-### Linkový rámec
+### Linkový (ethernetový) rámec
 - Zatímco na úrovni fyzické vrstvy jsou data přenášena v jejich surové podobě (sekvence bitů), na úrovni linkové vrstvy jsou data organizována do **linkových rámců**
 - Struktura Ethernet II linkového rámce:![[MacBook-2024-03-18-000914.png]]
 - Ethernetový rámec má proměnlivou velikost 64-1518 B - závisí na datové části

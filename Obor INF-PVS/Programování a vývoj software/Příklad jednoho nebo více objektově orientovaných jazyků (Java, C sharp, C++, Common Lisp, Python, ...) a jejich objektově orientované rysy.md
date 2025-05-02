@@ -5,7 +5,7 @@
 3) Polymorfismus
 4) Abstrakce
 - více v [[Objektově orientované programování - třídy a objekty, zprávy a metody]]
-## 1. Python a OOP
+## Python a OOP
 - multiparadigmatický a dynamicky typovaný jazyk
 - z hlediska organizace kódu je každá třída umístěna v samostatném modulu se stejným názvem
 - jako jeden z mála jazyků podporuje vícenásobnou dědičnost
@@ -14,17 +14,18 @@
 		1) metoda přepsána v obou předcích - záleží na pořadí uvedení rodičů `class Class4(Class2, Class3)`
 		2) přepsána pouze v jednom - rodiči používá "nejbližší" metodu
 - definice pomocí klíčového slova `class`
->[!info]
->```Python
->class Person:
->	# Konstruktor
-> 	def __init__(self, name, age):
-> 		self.name = name
-> 		self.age = age
->
->	# Metoda
-> 	def greet(self):
-> 		print(f"Hello, my name is {self.name}. I am {self.age}y. old.")
+```Python
+class Person:
+	# Konstruktor
+ 	def __init__(self, name, age):
+ 		self.name = name
+ 		self.age = age
+
+	# Metoda
+ 	def greet(self):
+ 	print(f"Hello, my name is {self.name}. I am {self.age}y. old.")
+``` 
+
 - vytvoření instance třídy probíhá metodou `__init__()`
 - narozdíl od běžně známých pravidel obvykle v Pythonu nevytváříme settery ani gettery a k vlastnostem přistupujeme napřímo přes tečkovou notaci `honza.age`
 	- pokud chceme metodu udělat "privátní" začíná její název podtržítkem `_greet()`
@@ -35,8 +36,8 @@
 	- např. `__repr__` a `__str__` implementujeme `repr()` a `str()`
 - existuje široký výčet těchto metod (celý k nalezení [zde](https://docs.python.org/3/reference/datamodel.html#basic-customization))
 - doporučuje se užívat tohoto způsobu implementace než si pro ony metody zavádět vlastní názvy
-## 2. C\#
-```C#
+## C\# a OOP
+```Csharp
 class Person
 {
     public string Name { get; set; }
@@ -89,4 +90,11 @@ interface IEquatable<T>
 - není možné pro vytvoření instance použít slovo `new`
 - pouze jediná instance se vytvoří při načítání programu do paměti, kterou potom je možné použít
 - je označena jako `sealed`
-
+## Lisp a OOP
+- realizuje CLOS (common lisp object system)
+- umožňuj vícenásobnou dědičnost
+- základní pojmy
+	- `defclass` ... vytvoří třídu
+	- `make-instace` ... vytvoří instanci třídy
+	- `defmethod` ... definuje metodu
+- umožňuje některá implicitní nastavení OOP předefinovat programátorem
