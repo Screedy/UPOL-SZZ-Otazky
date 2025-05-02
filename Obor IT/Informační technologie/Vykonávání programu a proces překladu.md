@@ -6,7 +6,7 @@
 ### Příznaky
 - operace nastavují za svého chodu příznaky
 - **příznaky pro řízení výpočtu:**
-	- `SF` (Sign Flag) - výsledek je záporný - `0`, výsledek je kladný - `1`
+	- `SF` (Sign Flag) - výsledek je záporný - `1`, výsledek je kladný - `0`
 	- `ZF` (Zero Flag) - výsledek byla $0$
 	- `CF` (Carry Flag) - výsledek je větší/menší než největší/nejmenší možné číslo
 	- `OF` (Overflow Flag) - příznak přetečení
