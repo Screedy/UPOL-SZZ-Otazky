@@ -1,3 +1,4 @@
+#imat1 #diferencialni-pocet #extremy-funkce #asymptoty #konkavni #konvexni #prubeh-funkce
 ## Geometrický význam derivace funkce
 - Derivace v bodě vyjadřuje okamžitou rychlost růstu funkce v daném bodě
 - Vezmeme-li obecně přírůstek hodnoty $\Delta x$ ($x_1 - x_0$) a příslušný přírůstek $\Delta y$ ($y_1 - y_0$), pak podíl $\frac{\Delta{y}}{\Delta{x}}$ je rovno průměrné rychlosti růstu v úseku  $x_0$ a $x_1$ 
