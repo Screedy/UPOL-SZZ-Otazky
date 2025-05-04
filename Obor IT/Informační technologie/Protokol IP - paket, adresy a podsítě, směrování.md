@@ -104,8 +104,9 @@
 - Komunikace mezi uzly propojenými na úrovni vrstvy **L2** se označuje jako **komunikace v lokální síti**.
 - Je třeba znám **MAC adresu příjemce**, jelikož IP packet je vkládán do linkového rámce.
 - Při komunikaci na úrovni L3 vrstvy se využívají pouze IP adresy. Je tedy třeba zajistit překlad **IP adresy na MAC adresu**.
-	- Zjistit k dané IP adrese MAC adresu NIC. Tento překlad zajištuje **protokol ARP**.
-
+	- Zjistit k dané IP adrese MAC adresu NIC. Tento překlad zajištuje **protokol ARP** (posílající *ARP zprávu* pomocí broadcast).
+	- ARP zprávy mohou představovat bezpečnostní hrozbu (útok *ARP spoofing*)
+	- Možnost obrany pomocí statické ARP cache nebo automatické detekce útoku
 ### Směrování mimo lokální síť
 - Hlavním úkolem síťové vrstvy je **nalezení nejvhodnější cesty** a následné **odesílání IP paketů** touto cestou mimo lokální síť.
 - Komunikaci mimo lokální síť lehce **poznáme porovnáním adres** sítí odesílatele a příjemce.

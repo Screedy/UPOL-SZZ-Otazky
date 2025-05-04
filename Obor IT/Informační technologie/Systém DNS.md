@@ -1,6 +1,6 @@
+- Video o DNS: https://www.youtube.com/watch?v=J44jvmoDxzo&ab_channel=CZNIC
 - Každý uzel v počítačové síti je identifikován pomocí IP adresy. $\rightarrow$ **nejsou lehce zapamatovatelné**
 - Řešením tohoto problému jsou **doménová jména**. **Textová**, snadněji zapamatovatelná **identifikace uzlu** v počítačové síti.
-
 ## Doménové jméno
 - Doménová jména se zapisují jako **textové řetězce** o maximální délce $255$ znaků. 
 - Při zápisu se využívají pouze **ASCII** znaky a **nerozlišují** se velká a malá písmena.
@@ -21,8 +21,12 @@
 - Pokud je odpověď větší než $512$B, je využito TCP spojení pro získání kompletní odpovědi.
 
 - Překlad řeší **resolver**.
+	- Veřejné DNS resolvery - Google `8.8.8.8` nebo Cloudflare `1.1.1.1`, v Česku třeba CZ.NIC `185.43.135.1`
 - Na klientovi je resolver **součástí operačního systému**. Může být řešen i mimo klienta na serveru.
 - Obvykle může překlad řešit **lokální jmenný server** nebo **veřejný resolver**. Z tohoto důvodu musí mít **jmenné servery uloženy IP adresy kořenových serverů**.
+- Jsou 2 typy odpovědí - **autoritativní** (primární/sekundární server) a **neautoritativní** (z cache)
+- **Nerekurzivní dotaz** - je vrácena odpověď, kde leží další jmenný server
+- **Rekurzivní dotaz** - dotazovaný server se stává resolverem neboli vrací konečnou odpověď
 
 >[!Example] Příklad zjištění IP adresy www.example.com
 >0. Klient chce zjistit IP adresu ke jménu www.example.com. Klient nejprve prohledá svoji lokální cache, zda v ní není uložena odpověď.
@@ -40,7 +44,12 @@
 ## Uložení DNS záznamů
 - DNS záznamy jsou uloženy v RR (Resource Records) záznamech.
 ![[MacBook-2024-04-17-001038.png]]
-
+#### Reverzní překlad
+- Překlad IP adresy na doménu
+- Využívá se speciální top-level doména `arpa` a subdoména `in-addr`
+## Bezpečnost DNS
+- Dosud nerealizován úspěšný útok na celosvětovou infrastrukturu
+- DNSsec - přidává autentizaci odpovědi
 ##### Navigace
 Předchozí:  [[Protokoly TCP a UDP - spojení a řízení toku dat]]
 Následující: [[Aplikační služby a tvorba síťových aplikací]]

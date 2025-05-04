@@ -18,7 +18,6 @@
 - jsou identifikovány jménem
 - stejně jako funkce mohou obsahovat argumenty a "výsledkem" může být vrácená hodnota
 - objekt na přijetí zprávy reaguje tak, že spustí a vykoná kód zvaný **metoda** (proces nazývaný obsluha zprávy)
-- ?? eventálně dodat typy zpráv - private, protected, public ??
 #### Události
 - odlišné od obecných zpráv
 1) objekt ji posílá svému majiteli (delegátovi)
@@ -29,7 +28,12 @@
 - má jméno a parametry
 - objekt může mít více metod
 - metody a zasílané zprávy mají **stejný název**
->[!info]
+- máme různé typy metod
+	- **public** - veřejná, přístupná odkudkoliv i z venčí
+	- **protected** - chráněná, přístup pouze ze třídy a jejich potomků (Python `_method()`)
+	- **private** - soukromá, může volat jen ona třída přímo (Python `__method()`)
+	- v ostatních jazycích se obvykle značí klíčovými slovy
+> [!info]
 >**vnitřní stav objektu** - souhrn dat, která objekt obsahuje
 
 >[!info]
