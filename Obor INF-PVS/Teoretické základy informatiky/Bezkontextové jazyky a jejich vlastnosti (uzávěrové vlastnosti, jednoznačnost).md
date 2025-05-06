@@ -121,5 +121,5 @@
 ---
 ##### Navigace
 Předchozí:  [[Pumping lemma]]
-Následující: [[Zásobníkové automaty]]
+Následující: [[Zásobníkové automaty deterministické a nedeterministické]]
 Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]
