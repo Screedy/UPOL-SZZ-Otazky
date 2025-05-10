@@ -1,3 +1,4 @@
+#imat1 #diferencialni-pocet #extremy-funkce #asymptoty #konkavni #konvexni #prubeh-funkce
 ## Geometrický význam derivace funkce
 - Derivace v bodě vyjadřuje okamžitou rychlost růstu funkce v daném bodě
 - Vezmeme-li obecně přírůstek hodnoty $\Delta x$ ($x_1 - x_0$) a příslušný přírůstek $\Delta y$ ($y_1 - y_0$), pak podíl $\frac{\Delta{y}}{\Delta{x}}$ je rovno průměrné rychlosti růstu v úseku  $x_0$ a $x_1$ 
@@ -32,9 +33,9 @@
 
 ### Monotónnost funkce
 - Říkáme, že funkce $f : \mathbb{R} \to \mathbb{R}$ je rostoucí v bodě $a \in \mathbb{R}$ právě tehdy, když existuje $P(a) \subseteq D(f)$ takové, že
-$$\forall x \in P_-(a) : f(x) < f(a) \quad \text{a} \quad \forall x \in P_+(a) : f(x) > f(a).$$
+$$\forall x \in P^-(a) : f(x) < f(a) \quad \text{a} \quad \forall x \in P^+(a) : f(x) > f(a).$$
 - Obdobně můžeme definovat pojmy klesající, neklesající a nerostoucí.
-- $P_-(a)$, resp. $P_+(a)$ značí levé, resp. pravé prstencové okolí bodu $a$.
+- $P^-(a)$, resp. $P^+(a)$ značí levé, resp. pravé prstencové okolí bodu $a$.
 
 #### Postačující podmínka pro lokální monotonii
 - Necht' $f : \mathbb{R} \to \mathbb{R}, a \in \mathbb{R}$ a existuje $f'(a) \in \mathbb{R}$. Pak
@@ -127,11 +128,11 @@ $$f^{(n)}(x_0) = \left(f^{(n-1)}\right)'(x_0).$$
 	- např. L'Hospitalovo pravidlo, určitý integrál...
 #### Rolleova věta
 - Nechť funkce $f$ má následující vlastnosti:
-1. Je spojitá na uzavřeném intervalu $\langle a, b \rangle$.
-2. Je diferencovatelná na otevřeném intervalu $(a, b)$.
-3. Platí $f(a) = f(b)$.
-- Potom v otevřeném intervalu $(a, b)$ existuje alespoň jeden bod $x$ takový, že $f'(x) = 0$
-	- v nějakém bodě změní monotonii (rovnost koncových bodů)
+	1. Je spojitá na uzavřeném intervalu $\langle a, b \rangle$.
+	2. Je diferencovatelná na otevřeném intervalu $(a, b)$ (má derivaci v každém bodě tohoto intervalu).
+	3. Platí $f(a) = f(b)$.
+- Potom v otevřeném intervalu $(a, b)$ existuje alespoň jeden bod $c$ takový, že $f'(c) = 0$
+	- "V nějakém bodě změní monotonii (rovnost koncových bodů)"
 - Věta sama zaručuje pouze existenci alespoň jednoho takového bodu, neumožňuje nám však ani tento bod určit, ani stanovit počet takových bodů
 
 ![[Pasted image 20240629131912.png]]
@@ -145,8 +146,6 @@ $$f^{(n)}(x_0) = \left(f^{(n-1)}\right)'(x_0).$$
 - ![[Pasted image 20240629144430.png]]
 - **Fyzikální interpretace**
 	- Uvážíme-li nějakou veličinu, která se v čase mění podle hladké funkce, pak existuje okamžik uvnitř časového intervalu $(a,b)$, kdy je **okamžitá změna této veličiny rovna průměrné změně** za celý časový interval $(a,b)$ - střední hodnota
-
-
 #### Cauchyova věta
 - Nechť funkce $f(x)$, $g(x)$ mají následující vlastnosti:
 	1. jsou spojité na intervalu $\langle a, b \rangle$
@@ -155,7 +154,6 @@ $$f^{(n)}(x_0) = \left(f^{(n-1)}\right)'(x_0).$$
 - Pak existuje bod $c \in (a, b)$ takový, že platí:
 $$\frac{f'(c)}{g'(c)} = \frac{f(b) - f(a)}{g(b) - g(a)}.$$
 - Jedná se o zobecnění Lagrangeovy věty o střední hodnotě
-
 #### Prostost funkce
 - Nechť funkce $f$ vyhovuje podmínkám **Lagrangeovy věty** a navíc ať $f'(x) \neq 0$ pro všechna $x \in (a, b)$. Potom je funkce $f$ prostá na $\langle a, b \rangle$.
 - **Důkaz**: 

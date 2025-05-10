@@ -1,6 +1,5 @@
-
 ## Abeceda a jazyk
-### Abeceda
+#### Abeceda
 - libovolná konečná množina $\Sigma$
 - prvky nazýváme **znaky abecedy**
 >[!Example] Příklad abecedy
@@ -8,7 +7,7 @@
 >- množina $\set{0,1,...,9}$
 >- množina $\varnothing$
 
-### Slovo
+#### Slovo
 - **Slovo $v$ nad abecedou** $\Sigma$ je libovolná konečná posloupnost znaků této abecedy
 - **Počet členů** této posloupnosti značíme $|v|$ a nazýváme **délkou slova**
 - **Počet výskytů** znaku $a$ ve slově $v$ značíme $\#_{a}(v)$
@@ -56,7 +55,7 @@
 
 ## Operace nad jazyky
 - Nechť $L$ je libovolný jazyk nad abecedou $\Sigma$ a $K$ libovolný jazyk nad abecedou $\Delta$.
-- Jelikož $L$ i $K$ jsou množiny, můžeme aplikovat standarní množinové operace **sjednocení, průnik a rozdíl**. Výsledkem je vždy jazyk nad abecedou $\Sigma \cup \Delta$.
+- Jelikož $L$ i $K$ jsou množiny, můžeme aplikovat standardní množinové operace **sjednocení, průnik a rozdíl**. Výsledkem je vždy jazyk nad abecedou $\Sigma \cup \Delta$.
 - Dále definujeme:
 	- Zřetězení jazyků $K$ a $L$ je jazyk $K.L = \set{uv|u \in K, v \in L}$ nad abecedou $\Sigma \cup \Delta$.
 		- Podle definice zejména platí $\varnothing .M = M.\varnothing = \varnothing$ a $\set{\epsilon}.M = M.\set{\epsilon} = M$ pro libovolný jazyk $M$. Operace zřetězení jazyků je také zřejmě **asociativní**
@@ -114,6 +113,7 @@
 >  - Jazyk $L(G)$ vypadá takto: $$L(G) = \set{u \in \set{a,b}^{*} | \#_{a}(u)=\#_{b}(u)}.$$
 
 ## Chromského hierarchie gramatik a jazyků
+- ![[Pasted image 20250504185700.png]]
 - Lingvista **Noam Chomsky** rozdělil gramatiky do čtyř skupin (typů) na základě různých omezení na tvar pravidel
 - Jeho práce byla původně motivována úvahami o struktuře přirozeného jazyka, z dnešního pohledu má však především význam jako základní rozdělení gramatik podle jejich popisné síly.
 - Chomského hierarchie rozlišuje **tyto čtyři (základní) typy gramatik:**
@@ -123,28 +123,23 @@
 - Na tvar pravidel se nekladou žádné omezující požadavky
 - Někdy se též taková gramatiky označují jako **gramatiky bez omezení či frázové gramatiky**
 
-#### Typ 1
-- Též **kontextová** gramatika, Context-Sensitive, CSG, méně často též *monoténní*
+#### Typ 1 (kontextová)
+- Context-Sensitive, CSG, méně často též *monoténní*
 - Gramatika je typu $1$, jestliže pro každé její pravidlo $\alpha \rightarrow \beta$ platí $| \alpha | \leq | \beta |$ s eventuelní výjimkou pravidla $S \rightarrow \epsilon$, pokud se $S$ nevyskytuje na pravé straně žádného pravidla
 
-#### Typ 2
-- Též **bezkontextová** gramatika, Context-Free, CFG
+#### Typ 2 (bezkontextová)
+- Context-Free, CFG
 - Gramatika je typu $2$, jestliže každé její pravidlo je tvaru $A \rightarrow \alpha$, kde $| \alpha | \geq 1$ s eventuelní výjimkou pravidla $S \rightarrow \epsilon$, pokud se $S$ nevyskytuje na pravé straně žádného pravidla
 
-#### Typ 3
-- Též **regulární** gramatika, pravolineární
+#### Typ 3 (regulární)
 - Gramatika je typu $3$, jestliže každé její pravidlo je tvaru $A \rightarrow aB$ nebo $A \rightarrow a$ s eventuelní výjimkou pravidla $S \rightarrow \epsilon$, pokud se $S$ nevyskytuje na pravé straně žádného pravidla
 ---
 - Hierarchie gramatik také určuje příslušnou hierarchii jazyků
 - Z definice je patrné, že každý nový typ gramatiky v Chomského hierarchii je specifikován **zavedením dalších omezujících podmínek** na typ předchozí
 
->[!Example] Příklad
->- Každá regulární gramatika je také gramatikou bezkontextovou, kontextovou i typu $0$
->- Naopak to ovšem neplatí
-
 >[!Info] Tvrzení
->- Nak abecedou $\set{a}$ existuje jazyk, který není typu $0$.
->- (Existuje nespočetně mnoho jazyků nad abecedou $\set{a}$, tedy je nelze vyjádřit konečnou reprezentací)
+>- Nad abecedou $\set{a}$ existuje jazyk, který není typu $0$.
+>- Existuje nespočetně mnoho jazyků nad abecedou $\set{a}$, tedy je nelze vyjádřit konečnou reprezentací.
 
 ##### Navigace
 Předchozí:  [[Geometrická interpretace určitého integrálu]]

@@ -1,28 +1,30 @@
 >[!info] Riceova věta
 >- Každá netriviální vstupně/výstupní vlastnost programů je nerozhodnutelná.
 
-- Upravit znění věty se dá např. takto:
-	- Je-li $V$ netriviální vstupně/výstupní vlastností TS, pak je **nasledující problém nerozhodnutelný.**
-	  
-	  **Název**: Zjišťování vlastnosti $V$
-	  **Vstup**: TS $M$
-	  **Otázka**: Má $M$ vlastnost $V$?
-- Věta mluví o **vstupně/výstupních vlastnostech** programů. Pro každý program $Pg$ si představme (obecně konečnou) **tabulku s dvěma sloupci:**
-	- v prvním sloupci jsou všechny přípustně vstupy programu
-	- v druhém sloupci je ke každému vstupu $w$ uveden příslušný výstup $Pg(w)$. 
+- Upravit znění věty se dá např. takto: "Je-li $V$ netriviální vstupně/výstupní vlastností TS, pak je **nasledující problém nerozhodnutelný.**"
+- Definice problému: 
+	- **Název**: Zjišťování vlastnosti $V$
+	 - **Vstup**: TS $M$
+	 - **Otázka**: Má $M$ vlastnost $V$?
+- Věta mluví o **vstupně/výstupních vlastnostech** programů, co to je?
+## Vstupně/výstupní vlastnost (I/O vlastnost)
+-  Pro každý program $Pg$ si představme (obecně konečnou) **tabulku s dvěma sloupci:**
+	1) v prvním sloupci jsou všechny přípustně vstupy programu
+	2) druhém sloupci je ke každému vstupu $w$ uveden příslušný výstup $Pg(w)$. 
 		- V případě, že výpočet $Pg$ pro vstup $w$ je **konečný** jako výstup vydá $Pg(w)$, nebo znak $\vdash$ (nedefinováno) v případě, že výpočet $Pg$ na $w$ je **nekonečný**.
-
-- Tabulka tedy zachycuje **\[částečné\] zobrazení vstupů na výstupu**, které $Pg$ realizuje; můžeme jí říkat $I/O$-tabulka ($I$=input, $O$=output).
-
-- Každá vlastnost $V$ Turingových strojů **rozdělí množinu** všech TS **na dvě disjunktní podmnožiny**
-	- množina strojů, která vlastnost $V$ **má**
-	- množina strojů, která vlastnost $V$ **nemá**
-
-- Vlastnost $V$ je **triviální**, jestliže je jedna z oněch dvou příslušných množin **prázdná** (tedy všechny stroje vlastnost $V$ mají nebo nemají)
-- Vlastnost $V$ je **netriviální**, jestliže **ji alespoň jeden stroj má** a **alespoň jeden stroj nemá**
-
->[!info] Definice převeditelnosti
->- Mějme $ANO/NE$ problémy $P_{1}, P_{2}$. Řekneme, že problém $P_{1}$ **je algoritmicky převeditelný na problém $P_{2}$** ($P_{1} \leq_{m} P_{2}$), jestliže **existuje algoritmus $A$**, který pro libovolný vstup $w$ problému $P_{1}$ sestrojí vstup problému $P_{2}$, $A(w)$, přičemž platí, že odpověď na otázku problému $P_{1}$ pro vstup $w$ je $ANO$ **právě tehdy,** když odpověď na otázku problému $P_{2}$ pro vstup $A(w)$ je $ANO$.
+- Tabulka tedy zachycuje **zobrazení vstupů na výstupu**, které $Pg$ realizuje
+## Triviální a netriviální vlastnosti
+- Každá vlastnost $V$ TS rozdělí množinu všech TS **na dvě disjunktní podmnožiny**
+	1) množina strojů, která vlastnost $V$ **má**
+	2) množina strojů, která vlastnost $V$ **nemá**
+- **Triviální vlastnosti $V$** ... alespoň jedna z oněch dvou množin je **prázdná** (všechny TS vlastnost $V$ mají nebo nemají)
+- **Netriviální vlastnosti $V$** ... alespoň jeden stroj ji nemá a jeden má (množiny nejsou prázdné)
+## Algoritmická převoditelnost
+- Jde o relace $\leq_m$ (tzv. mapping reduction)
+- Vztahuje se pouze na $ANO/NE$ problémy
+- Řekneme, že problém $P_{1}$ **je algoritmicky převeditelný na problém $P_{2}$** ($P_{1} \leq_{m} P_{2}$), jestliže **existuje algoritmus $A$**, který pro libovolný vstup $w$ problému $P_{1}$ sestrojí vstup problému $P_{2}$, $A(w)$, přičemž platí, že odpověď na otázku problému $P_{1}$ pro vstup $w$ je $ANO$ **právě tehdy,** když odpověď na otázku problému $P_{2}$ pro vstup $A(w)$ je $ANO$.
+- Matematicky: Existuje vyčíslitelná funkce $f:\Sigma^* \rightarrow \Sigma^*$ taková, že $\forall w \in \Sigma^*  : w \in L_1 \Leftrightarrow f(w) \in L_2$.
+- Ke každému $ANO/NE$ problému náleží jazyk, takže $P_1 \leq_m P_2$ můžeme chápat jako $L_1 \leq_m L_2$
 
 >[!Example] Důkaz Riceovy věty
 >- Uvažujme libovolnou netriviální vstupně/výstupní vlastnost $V$ Turingový stroj. Nechť stroj $M_{1}$, který se **nezastaví na žádný vstup**, vlastnost $V$ nemá, a nechť stroj $M_{2}$ vlastnost $V$ má, nebo naopak. Takové dva stroje $M_{1}$ a $M_{2}$ **nutně musí existovat**.

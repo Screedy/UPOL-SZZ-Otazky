@@ -83,7 +83,7 @@ budeme nazývat dolní Riemannův integrál funkce $f$.
 ### Riemannův integrál
 - Říkáme, že $f : \mathbb{R} \to \mathbb{R}$ definovaná a **omezená** na intervalu $\langle a, b \rangle$ je *Riemannovsky integrovatelná* na $\langle a, b \rangle$ právě tehdy, když
 $$\overline{S} = \underline{S}$$
-	- horní a dolní Riemannovy integrály funkce $f$ jsou si rovny (dolní mez horních součtů a horní mez dolních součtů jsou si rovny)
+- horní a dolní Riemannovy integrály funkce $f$ jsou si rovny (dolní mez horních součtů a horní mez dolních součtů jsou si rovny)
 - Krátce to budeme zapisovat jako $f(x) \in \mathcal{R}(a, b)$
 - Společná hodnota se pak nazývá **Riemannův integrál** a značí se
 $$(R) \int_{a}^{b} f(x) \, dx,$$

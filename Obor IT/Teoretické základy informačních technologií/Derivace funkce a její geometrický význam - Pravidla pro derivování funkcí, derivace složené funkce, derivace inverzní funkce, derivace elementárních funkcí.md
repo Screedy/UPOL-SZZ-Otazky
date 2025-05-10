@@ -27,8 +27,8 @@
 - Má-li funkce $f$ v každém bodě intervalu $(a, b)$ kladnou, resp. zápornou derivaci, je v tomto intervalu rostoucí, resp. klesající.
 
 ## Derivace funkce v bodě
-- Vedle pojmu limita, spojitost patří derivace mezi základní stavební prvky diferenciálního počtu
-- Použití:
+- Vedle pojmu *limita*, spojitost patří derivace mezi základní stavební prvky diferenciálního počtu
+- **Použití**:
 	- určení okamžité rychlosti dané veličiny v daném v bodě (směrnice tečny v bodě)
 	- vyšetření průběhu funkce – monotonie, extrémy, konvexnost/konkávnost, inflexní body
 	- optimalizace – hledání lokálního maxima/minima
