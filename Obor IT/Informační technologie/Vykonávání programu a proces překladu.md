@@ -1,10 +1,11 @@
 ## Vykonávání programu
 - Procesor zpracovává jednu instrukci za druhou (pokud není uvedeno jinak $\rightarrow$ skok).
 - **nepodmíněný skok**: operace `JMP r/m/i` - ekvivalence `GOTO`
-- **není** přítomna operace ekvivalentní k `if`
+- **není** přítomna operace ekvivalentní k `if` nebo `loop` (takže se používají skoky)
 
 ### Příznaky
 - operace nastavují za svého chodu příznaky
+- Jsou to hodnoty bitů v registru `EF`
 - **příznaky pro řízení výpočtu:**
 	- `SF` (Sign Flag) - výsledek je záporný - `1`, výsledek je kladný - `0`
 	- `ZF` (Zero Flag) - výsledek byla $0$
@@ -46,14 +47,16 @@
 - speciální operace pro snadnější implementaci cyklů 
 - `LOOP` - odečte $1$ or `RCX`/`ECX` a pokud v něm není nula $\rightarrow$ provede skok
 
-### Odhad skoků
+### Odhad skoků (branch prediction)
 - podmíněné skoky zpomalují běh programu $\rightarrow$ procesory provádí různé heuristiky pro odhad, zda bude skok proveden
 - Např. čtyř-stavové počítadlo se saturací (`11`, `10`, `01`, `00` - až na `00` počítá, že se skok provede)
+- Počítadlo se nazývá *branch prediction buffer*
 
 ### Zásobník
-- procesor má vyčlenění úsek paměti pro zásobník
-	- ten uchovává pomocné výpočty, návratové adresy, lokální proměnné, ...
+- vyčleněný úsek paměti pro procesor
+	- uchovává pomocné výpočty, návratové adresy, lokální proměnné, ...
 - vyšší programovací jazyky obvykle neumožňují manipulaci s tímto zásobníkem
+- registr `ESP` je vrcholem zásobníku
 - operace: `PUSH r/m/i`, `POP r/m`
 
 ### Volání funkcí s konvencí `cdecl`
@@ -70,14 +73,23 @@
 	3. obnovíme hodnotu `EBP`
 	4. provedeme návrat z funkce `ret`
 	5. odstraníme argumenty ze zásobníku
-
+- Po návratu z funkce mohou registry `EAX, ECX, EDX` obsahovat cokoliv
+- **callee-saved** registry ... volaný se stará o uchování hodnot (pro lokální proměnné)
+- **caller-saved** registry ... volající se stará o uchování hodnot (pro dlouhodobější proměnné)
+#### Přerušení
+- způsob reakce na vnější asynchroní (neočekávané) události 
+	- obvykle nějaký vstup (uživatel ťuknul do klávesnice, příchod paketu) potřebující CPU
+- **obsluha přerušení** (podobná běžným funkcím)
+- vždy po dokončení celé instrukce (instrukce = atomická operace)
+- vyvolání přerušení -> uložení stavu programu -> obsluha přerušení -> pokračování, tam kde CPU skončil
+- souběh více přerušení => nutný **řadič přerušení**
 ## Proces překladu
 - Je to proces, kterým se zdrojový kód napsaný v programovacím jazyce (např. C, Java) převádí na strojový kód, který může být proveden procesorem.
-
 1. **Preprocesor:** expanduje makra, odstraní nepotřebný kód, načte požadované soubory (např. `math.h`)
 2. **Překladač:** generuje kód v assembleru
 3. **Assembler:** vygeneruje objektový kód (`foo.c` $\rightarrow$ `foo.obj`/`foo.o`)
 4. **Linker:** sloučí několik souborů s objektovým kódem + knihovny do spustitelného souboru
+- Můžeme použít více jazyků, když před sloučením dostaneme spojitelné objektové soubory
 
 >[!Tip] Statická vs dynamická knihovna
 >- **staticky linkovaná knihovna** - instaluje s programem
@@ -86,12 +98,14 @@
 >- **dynamická linkovaná knihovna** - program použivá knihovny OS
 >	- načítají se při spuštění programu
 >	- jsou sdíleny mezi soubory $\rightarrow$ šetří místo
->	- knihovna můžu v OS chybět
+>	- knihovna může v OS chybět
+>	- rozdílné řešení ve Windows a v UNIX
 
 
 > [!info]
 > **interpret** ... vykonává program zadaný zdrojovým kódem krok po kroku
-> **kompilátor** (překladač) ... překládá program do obvykle nižšího jazyka
+> 
+> **kompilátor** (překladač) ... překládá program do (obvykle) nižšího jazyka
 
 ##### Navigace
 Předchozí: [[Operační systém, architektura, poskytovaná rozhraní]]
