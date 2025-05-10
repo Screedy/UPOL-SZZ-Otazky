@@ -1,4 +1,3 @@
-
 ## Procesy
 - neformálně: **proces** = **běžící program** (vykonávaná činnost)
 - Každý proces má svůj vlastní **virtuální adresní prostor**
@@ -6,6 +5,7 @@
 	- Obsahuje **kód programu, paměťový prostor, data, zásobník, registry**
 - Operační systém **spravuje** a **organizuje** procesy
 - Komunikace mezi procesy a sdílení zdrojů vyžaduje **synchronizaci**
+- Proces se může nacházet v několika stavech
 ```mermaid
 graph BT
 A[nový] -- admited--> B[připravený]
@@ -15,6 +15,7 @@ C -- pause --> B
 C -- I/O or Event wait --> D
 C -- terminated --> E[ukončený]
 ```
+- Informace o procesu jsou v tabulce procesů (PCB - process control block)
 
 >[!Example] Plánování procesů
 >1. **uložení stavu CPU do PCB** (Process Control Block) aktuálního procesu
