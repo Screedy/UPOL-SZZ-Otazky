@@ -1,8 +1,9 @@
+## Paměťová (prostorová) složitosti
 - **Třídou prostorové složitosti $S(f)$**, rozumíme třídu těch problémů, které jsou řešeny TS s **prostorovou složitostí v $O(f)$**
-- **PSPACE**:
-	- Třída obsahující **všechny problémy řešitelné algoritmy s polynomiální prostorovou složitostí.**
-- **NPSPACE**:
-	- Třída obsahující **všechny problémy řešitelné nedeterministickými algoritmy s polynomiální prostorovou složitostí**.
+#### PSPACE
+- Třída obsahující **všechny problémy řešitelné algoritmy s polynomiální prostorovou složitostí.**
+#### NPSPACE
+- Třída obsahující **všechny problémy řešitelné nedeterministickými algoritmy s polynomiální prostorovou složitostí**.
 
 ## Vzájemný vztah
 $$PTIME \subseteq NPTIME \subseteq PSPACE = NPSPACE$$
@@ -30,8 +31,10 @@ $$PTIME \subseteq NPTIME \subseteq PSPACE = NPSPACE$$
 
 ## Polynomiální redukce
 - Mějme $ANO/NE$ problémy $P_{1}, P_{2}$. Řekneme, že problém $P_{1}$ je polynomiálně převeditelný na problém $P_{2}$, $P_{1} \leq_{p} P_{2}$, jestliže **existuje** (převádějící) **polynomiální algoritmus $A$**, který pro libovolný vstup $w$ problému $P_{1}$ sestrojí vstup problému $P_{2}$, $A(w)$, přičemž platí, že odpověď na otázku problému $P_{1}$ pro vstup $w$ je $ANO$ právě tehdy, když odpověď na otázku problému $P_{2}$ pro vstup $A(w)$ je $ANO$.
-- Problém $Q$ nazveme **PSPACE-tězký**, pokud každý problém ve třídě PSPACE lze na problém $Q$ polynomiálně převést, tedy pokud platí $\forall P \in \text{ PSPACE } : P \leq_{p} Q$.
-- Problém $Q$ nazveme **PSPACE-úplným**, pokud je PSPACE-tězký a náleží do třídy PSPACE
+#### PSPACE-těžký
+Problém $Q$ nazveme **PSPACE-tězký**, pokud každý problém ve třídě PSPACE lze na $Q$ polynomiálně převést, tedy platí $\forall P \in \text{ PSPACE } : P \leq_{p} Q$.
+#### PSPACE-úplný
+- Problém $Q$ nazveme **PSPACE-úplným**, pokud je PSPACE-tězký a náleží do třídy PSPACE.
 
 ## Příklady PSPACE - úplných problémů
 >[!Example] Q-SAT (QBF)

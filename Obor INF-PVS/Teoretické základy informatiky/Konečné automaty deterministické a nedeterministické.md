@@ -35,7 +35,7 @@
 >- Máme za úkol sestrojit automat rozpoznávající jazyk $$L=\set{w \in \set{a,b}^{*} |\ w \text{ obsahuje podslovo abaa}}$$![[MacBook-2024-05-26-001344.png]]
 
 ## Konečný nedeterministický automat
-- Jediný rozdíl je v tom, že **nedeterministický** automat **nemusí mít pro daný stav a vstupní symbol určen následující stav jednoznačně**. Slovo $w$ bude akceptování, pokud alespoň jeden z možných výpočtů nad slovem $w$ skončí v koncovém stavu.
+- Jediný rozdíl je v tom, že **nedeterministický** automat **nemusí mít pro daný stav a vstupní symbol určen následující stav jednoznačně**. Slovo $w$ bude akceptován, pokud alespoň jeden z možných výpočtů nad slovem $w$ skončí v koncovém stavu.
 
 >[!info] Definice
 >- **Nedeterministický konečný automat $M$** je **uspořádaná pětice $M=(Q, \Sigma, \delta, q_{0}, F)$**
@@ -49,11 +49,10 @@
 	- $\hat{\delta}(q, \epsilon)=\set{q}$, pro každý stav $q \in Q$
 	- $\hat{\delta}(q, wa)=\cup_{p \in \hat{\delta}(q,w)} \delta (p,a)$
 - Jazyk přijímaný NFA M je definován takto: $$L(M)=\set{w \in \Sigma^{*}|\ \hat{\delta}(q_{0}, w) \cap F \neq 0}$$
-- Nedeterminismus je velmi silná popisný aparát, který často umožňuje zachytit strukturu jazyka elegantním a přirozeným způsobem.
+- Nedeterminismus je velmi silný popisný aparát, který často umožňuje zachytit strukturu jazyka elegantním a přirozeným způsobem.
 >[!Example] Příklad
 >- $L=\set{w \in \set{a,b}^{*} |\ w \text{ obsahuje podslovo abba nebo bab}}$
->- Navrhnout DFA, který rozpoznává $L$, není zcela triviální.
->- Naopak nederministický automat lze zkonstruovat snadno
+>- Navrhnout DFA, který rozpoznává $L$, není zcela triviální. Naopak nederministický automat lze zkonstruovat snadno
 >![[MacBook-2024-05-26-001345.png]]
 - Nedeterminismus lze dobře využít jako popisný prostředek, nemá však vliv na výpočetní sílu konečných automatů. Ke každému nedeterministickému konečnému automatu totiž ve skutečnosti existuje ekvivalentní deterministický automat, který lze dokonce algoritmicky zkonstruovat.
 

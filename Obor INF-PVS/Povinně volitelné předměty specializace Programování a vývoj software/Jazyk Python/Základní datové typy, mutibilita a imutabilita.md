@@ -86,15 +86,15 @@ list = [1, 2, 3] list.append(4) # Přidává prvek 4 na konec seznamu
 - `dictionary`
 - `set`
 
-| Data Type    | Built-in Class            | Mutable |
-| ------------ | ------------------------- | ------- |
-| Numbers      | `int`, `float`, `complex` | ❌       |
-| Strings      | `str`                     | ❌       |
-| Tuples       | `tuple`                   | ❌       |
-| Bytes        | `bytes`                   | ❌       |
-| Booleans     | `bool`                    | ❌       |
-| Frozen sets  | `frozenset`               | ❌       |
-| Lists        | `list`                    | ✅       |
-| Dictionaries | `dict`                    | ✅       |
-| Sets         | `set`                     | ✅       |
-| Byte arrays  | `bytearray`               | ✅       |
+| Datový typ   | Třída                     | Mutabilní |
+| ------------ | ------------------------- | --------- |
+| Numbers      | `int`, `float`, `complex` | ❌         |
+| Strings      | `str`                     | ❌         |
+| Tuples       | `tuple`                   | ❌         |
+| Bytes        | `bytes`                   | ❌         |
+| Booleans     | `bool`                    | ❌         |
+| Frozen sets  | `frozenset`               | ❌         |
+| Lists        | `list`                    | ✅         |
+| Dictionaries | `dict`                    | ✅         |
+| Sets         | `set`                     | ✅         |
+| Byte arrays  | `bytearray`               | ✅         |
