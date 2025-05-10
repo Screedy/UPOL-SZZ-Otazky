@@ -17,5 +17,5 @@
 
 ##### Navigace
 Předchozí:  [[Binomická věta]]
-Následující: [[Dirichletův princip]]
+Následující: [[Pravděpodobnost, Laplaceova definice pravděpodobnosti, pravděpodobnostní prostor, vlastnosti pravděpodobnosti]]
 Celý okruh: [[1. Teoretické základy informačních technologií]]
