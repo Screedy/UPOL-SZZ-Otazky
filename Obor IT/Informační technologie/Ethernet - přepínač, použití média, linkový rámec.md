@@ -37,7 +37,7 @@
 
 
 - **CSMA/CD (Carrier Sense Multiple Access / Collision Detection)**
-	- Jako CSMA, ale jakmile začně vysílat **neustále poslouchá**
+	- Jako CSMA, ale jakmile začne vysílat **neustále poslouchá**
 	- Pokud dojde ke kolizi okamžitě se zastaví a vyšle signál **JAM**
 	- Po odeslání JAM signálu se uzel na náhodnou dobu odmlčí (Výchozí čas podle MAC adresy)
 
