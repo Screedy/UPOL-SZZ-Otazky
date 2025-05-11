@@ -31,7 +31,7 @@
 	- 2 režimy - vzorkování a instrumentace
 
 - code coverage ... kolik % kódu je pokryto testy
-	- ani 100 % nemusí znamenat bezchybnost
+	- ani 100% nemusí znamenat bezchybnost
 ##### Testy komponent (unit)
 - odhaluje chyby v samostatných komponentách
 - fake data (i fake rozhraní)

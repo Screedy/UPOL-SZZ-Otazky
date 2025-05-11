@@ -73,6 +73,7 @@
 	- mercurial
 	- bazaar
 #### Webové CVS
+- *concurent version system*
 - slouží především pro prezentaci
 - rychlo prohlížení kódu i nevývojáři
 - vizualizace větví

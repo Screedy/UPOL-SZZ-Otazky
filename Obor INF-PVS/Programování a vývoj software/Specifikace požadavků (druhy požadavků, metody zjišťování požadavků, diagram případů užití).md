@@ -37,10 +37,10 @@
 	- nejsou realistické
 	- možné spory
 	- různé pojmy
-4) **objevování požadavků** - interakce s účastníky (nesmíme na nikoho zapomenout)
-5) **klasifikace a organizace** - setřídení nasbíraných informací
-6) **prioritizace a vyjednávání** - řešení sporů, co má přednost
-7) **dokumentace** - bude sloužit jako podklad pro další fázi
+1) **objevování požadavků** - interakce s účastníky (nesmíme na nikoho zapomenout)
+2) **klasifikace a organizace** - setřídení nasbíraných informací
+3) **prioritizace a vyjednávání** - řešení sporů, co má přednost
+4) **dokumentace** - bude sloužit jako podklad pro další fázi
 - fáze možno opakovat, kvůli zpětné vazbě
 - rozhovory
 	- uzavřené vs otevřené otázky
@@ -64,3 +64,8 @@
 - co je za problém, zda je validní, jak konkrétně změnit
 - co jde ruku v ruce se změnou (cena, implementace, časová náročnost)
 - rozchod DSP a reality při urgentní změna (může vést k lavinovému efektu)
+#### Diagram případů užití (use case diagram)
+- účelem je popsání funkcionalit systému
+- používají se 2 entity - *aktéři* a *případy užití*
+- jak má vypadat chování systému zvenčí (ne jak se to bude dělat)
+- ![[Pasted image 20250511120356.png|500]]
