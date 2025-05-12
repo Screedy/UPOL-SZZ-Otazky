@@ -143,4 +143,3 @@ $ python3 -m pip install pytest
 $ py -m pip install pytest
 ```
 - Podrobnější informace [zde](https://packaging.python.org/en/latest/tutorials/installing-packages/#installing-from-pypi)
-- 
