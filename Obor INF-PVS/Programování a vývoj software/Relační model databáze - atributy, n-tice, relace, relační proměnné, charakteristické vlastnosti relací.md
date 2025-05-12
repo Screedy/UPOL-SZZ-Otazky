@@ -1,5 +1,6 @@
-$R = {<The Avengers, 1998>, <The Avengers, 2012>, <The Matrix>, 1999}$
-- n-tice nemají význam
+$$R = {<The Avengers, 1998>, <The Avengers, 2012>, <The Matrix>, 1999}$$
+- n-tice (tuple) nemají význam
+	- $Tupl(S)$  ... relace nad $S$
 - Zavedeme tedy *relace*, kde složky budou pojmenovány a tyto jména nazýváme **atributy**
 - Atributy mají svou doménu (nejvýše spočetná množina hodnot)
 - $Y$ ... množina všech atributů
@@ -42,3 +43,5 @@ $R = {<The Avengers, 1998>, <The Avengers, 2012>, <The Matrix>, 1999}$
 - Určitý výrok
 - Pokud relace obsahuje danou n-tici, pak je výrok pravdivý
 	- Např. mám tabulky s filmy (`title`) a roky vydání (`year`), vlastnost *"Vlastním film `title` natočený roku `year`."* je pravdivá
+	- Nechť $R$ je relace nad $S$ a $V(t)$ je vlastnost nad $R$. Poté $V(t)$ je charakteristická vlastnost pokud platí $t \in R$ pokud $V(t) = true$
+	- $V(t)$ určujte $R$ pokud $R = \{t \in Tupl(S) \; | \; V(t)\}$ 

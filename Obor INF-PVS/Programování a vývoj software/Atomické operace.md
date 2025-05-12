@@ -12,6 +12,7 @@
 ## Atomická operace
 - Jedná se o operace, která se provede celá a nemůže být její provádění přerušeno jiným procesem (případně se neprovede vůbec)
 - Jsou důležité při paralelním programování a synchronizaci
+- Na úrovni assembleru se jedná o jednu instrukci
 - Používají se taktéž v databázích (často nazývané jako *transakce*)
 1) test and set - použit v semaforech
 2) swap

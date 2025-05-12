@@ -8,7 +8,7 @@
 	- `exec` ... zásobník na kód programu, který se vykonává
 	- stroj pracuje iterativně po jednotlivých krocích
 	- obvykle používá **postfixovou notaci**
-- Bytecody některých programovací hjazyků používají zásobníkový stroj (Python, Java, .NET)
+- Bytecody některých programovací jazyků používají zásobníkový stroj (Python, Java, .NET)
 - Zásobník má omezenou velikost $\longrightarrow$ může dojít $\longrightarrow$ problém stack overflow
 #### Popis práce zásobníkového paradigmatu
 1) Datový zásobník je prádzný, vše je na programovém

@@ -18,6 +18,10 @@
 - **výhody**: jednoduchá měřitelnost pokroku a řádná dokumentace k ukončeným fázím
 - **nevýhody**: možná špatná struktura, první verze až po ukončení 1. vodopádu (trvá dlouho)
 ![[Pasted image 20250221121739.png]]
+
+> [!tip]
+> - **kloc** ... thousand lines of code
+> - Jednotka používaná pro měření rozsahu projektu.
 ## Evoluční model
 - rychle se vyvine prvotní verze (můžeme ukázat zákazníkovi) => upřesňování požadavků => vývoj verze finální
 - extrémně důležitá zpětná vazba

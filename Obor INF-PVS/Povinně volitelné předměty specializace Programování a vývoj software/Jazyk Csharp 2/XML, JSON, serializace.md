@@ -1,8 +1,7 @@
 ## Čtení XML pomocí `XmlDocument`
+- Pro čtení XML lze využít přístup přes DOM (Document Object Model).
 
-Pro čtení XML lze využít přístup přes DOM (Document Object Model).
-
-### Ukázkový XML vstup:
+#### Ukázkový XML vstup:
 ```xml
 <items>
   <item att1="foo" att2="bar">
@@ -12,7 +11,7 @@ Pro čtení XML lze využít přístup přes DOM (Document Object Model).
 </items>
 ```
 
-### Zpracování XML:
+#### Zpracování XML:
 ```csharp
 XmlDocument doc = new XmlDocument();
 doc.Load("in.xml");
@@ -29,11 +28,8 @@ foreach (XmlNode node in nodes) {
 }
 ```
 
----
-
 ## Zápis XML
-
-Stromová konstrukce XML a zápis do souboru:
+- Stromová konstrukce XML a zápis do souboru:
 ```csharp
 XmlDocument doc = new XmlDocument();
 XmlDeclaration declaration = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
@@ -59,11 +55,8 @@ doc.WriteContentTo(writer);
 writer.Close();
 ```
 
----
-
 ## Serializace do XML
-
-Serializace umožňuje převod objektu do XML:
+- Serializace umožňuje převod objektu do XML:
 ```csharp
 public class Item {
     public int Number { get; set; }
@@ -76,23 +69,16 @@ XmlSerializer serializer = new XmlSerializer(typeof(Item));
 using TextWriter writer = new StreamWriter("item.xml");
 serializer.Serialize(writer, i);
 ```
-
----
-
 ## Deserializace z XML
-
-Načtení dat ze souboru zpět do objektu:
+- Načtení dat ze souboru zpět do objektu:
 ```csharp
 XmlSerializer serializer = new XmlSerializer(typeof(Item));
 using FileStream fs = new FileStream("item.xml", FileMode.Open);
 Item deserialized = (Item)serializer.Deserialize(fs);
 ```
 
----
-
 ## Formát JSON
-
-JSON je textový formát pro výměnu dat, např.:
+- JSON je textový formát pro výměnu dat, např.:
 ```json
 {
   "jmeno": "Tomáš",
@@ -101,26 +87,20 @@ JSON je textový formát pro výměnu dat, např.:
 }
 ```
 
----
-
-## Serializace do JSON (`System.Text.Json`)
-
+#### Serializace do JSON (`System.Text.Json`)
 ```csharp
 Item obj = new Item { Number = 42, Str = "text", Numbers = new[] { 1, 2, 3 } };
 string json = JsonSerializer.Serialize(obj);
 ```
 
-## Deserializace z JSON
-
+#### Deserializace z JSON
 ```csharp
 string json = "{"Number":42,"Str":"text","Numbers":[1,2,3]}";
 Item obj = JsonSerializer.Deserialize<Item>(json);
 ```
 
 ---
-
 ## Shrnutí
-
 - `XmlDocument` umožňuje ruční manipulaci s XML.
 - Serializace/deserializace zjednodušuje práci s objekty a jejich uložením.
 - `System.Text.Json` poskytuje rychlý a efektivní způsob práce s JSON formátem.

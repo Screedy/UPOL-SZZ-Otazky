@@ -7,6 +7,11 @@
 - Definované funkce se snažíme použít opakovaně
 - Např. `C, Pascal, Fortran`
 - Použití: Jednoduché aplikace, vestavěné systémy, OS
+
+> [!tip] Vedlejší efekt
+> - Změna systému, která nastává mimo výstup funkce/metody. Ovlivní externí prostředí. Nedá se zpětně zjistit.
+> 
+> - Např. změna globální proměnné, tisk na obrazovku
 ## Funkcionální programování
 - Jde o deklarativní programovací paradigma (co se má udělat, nikoliv jak)
 - Program se skládá z funkcí, které nemění stav programu

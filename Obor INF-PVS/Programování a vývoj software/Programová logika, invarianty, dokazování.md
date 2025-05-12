@@ -1,4 +1,4 @@
-## Hoaerova trojice
+## Hoareova trojice
 $$
 \begin{gather}
 \{x = 0\} \\

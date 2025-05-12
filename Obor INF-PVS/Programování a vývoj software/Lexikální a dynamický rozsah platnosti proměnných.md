@@ -16,6 +16,3 @@
 
 > [!tip]
 > Funkční vazby symbolů u lokálních funkcí jsou vždy lexikální.
-
-
-

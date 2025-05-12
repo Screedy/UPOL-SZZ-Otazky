@@ -2,17 +2,17 @@
 - Zahrnuje:
 	- Přerušení fyzické linky
 	- Rušení a odposlech
-- Zabránění odposlechu je obvykle zajištěno omezeným přístupem k přenosovému médiu.
-- Na fyzické vrstvě jsou přenášena data ve formě bitů. Nemá smysl uvažovat o modifikaci dat.
+- Zabránění odposlechu je obvykle zajištěno **omezeným přístupem k přenosovému médiu**.
+- Na fyzické vrstvě jsou přenášena data ve formě bitů. **Nemá smysl uvažovat o modifikaci dat**.
 
 ## Bezpečnost na úrovni linkové vrstvy
 - Kontrolní součet v linkových rámcích pomáhá odhalit pouze chyby přenosu.
 	- Žádoucí rychlé spočítání a verifikace.
 - Rizika:
-	- Útočník může snadno měnit obsah linkového rámce. 
-	- Ůtočník může vytvářet umělé linkové rámce a posílat je do sítě
-	- Teoreticky je možné poslat BPDU rámce, které budou blokovat vytvoření topologie, nebo měnit topologii dle útočníkových požadavků.
-	- Je možné zahltit síť linkovými rámci.
+	- Útočník může **snadno měnit obsah linkového rámce**. 
+	- Útočník může **vytvářet umělé linkové rámce** a posílat je do sítě
+	- Teoreticky je možné poslat BPDU (ze STP) rámce, které budou blokovat vytvoření topologie, nebo měnit topologii dle útočníkových požadavků.
+	- Je **možné zahltit síť linkovými rámci**.
 - Chránit se třeba pomocí BPDU Guard.
 
 - NIC jsou identifikována na základě MAC adresy.
@@ -25,10 +25,10 @@
 ## Bezpečnost na úrovni síťové vrstvy
 - Největší bezpečnostní problém $\rightarrow$ protokol IP.
 	- Není šifrován, poskytuje pouze primitivní integrity dat.
-- IP pakety je možné snadno odposlouchávat.
+- **IP pakety je možné snadno odposlouchávat**.
 	- Není možné zabránit, jelikož data v hlavičce IP paketu jsou nezbytná pro směrování paketů.
 	- Odposlechnutý paket je možné snadno modifikovat. Je tedy možné podvrhnout IP adresy odesílatele i příjemce, nebo zcela změnit data.
-- Bezpečnost později přidána v podobě protokolu IPSec (IP Security).
+- Bezpečnost později přidána v podobě **protokolu IPSec** (IP Security).
 	- IPSec poskytuje (transparentní) šifrování IP paketů a zabezpečuje jejich integritu a autentifikaci.
 	- Umožňuje fungovat ve dvou režimech:
 		- Transportní režim (šifruje pouze data).

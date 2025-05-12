@@ -12,6 +12,7 @@
 
 ## Architektura OS
 - Architektura operačního systému popisuje jeho vnitřní strukturu a způsob, jakým jsou spravovány systémové zdroje a služby. 
+- Máme 2 módy - kernel a uživatelský.
 - Mezi klíčové aspekty architektury OS patří jeho 
 	- **jádro**, 
 	- **správa procesů a vláken**, 
@@ -55,8 +56,8 @@
 ## Poskytovaná rozhraní
 Operační systémy poskytují několik typů rozhraní:
 1. **Uživatelské Rozhraní (User Interface - UI)**:
-    - **Grafické uživatelské rozhraní (GUI)**
-    - **Příkazová řádka (CLI)**
+    - Grafické uživatelské rozhraní (GUI)
+    - Příkazová řádka (CLI)
 2. **Programovací rozhraní (Application Programming Interface - API)**:
     - Umožňuje vývojářům softwaru psát aplikace, které mohou využívat služby poskytované operačním systémem, jako je **přístup k souborovému systému, síťové komunikaci, správě okna** atd.
 3. **Hardwarové abstrakční vrstvy (Hardware Abstraction Layers - HAL)**:

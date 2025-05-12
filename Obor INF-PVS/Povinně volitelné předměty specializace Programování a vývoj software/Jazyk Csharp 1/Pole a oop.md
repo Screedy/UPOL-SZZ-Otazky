@@ -1,6 +1,5 @@
 ## Práce s poli
-
-Pole v C# je datová struktura pro pevný počet prvků stejného datového typu. Délka pole je určena při jeho vytvoření a nelze ji později změnit.
+- Pole v C# je datová struktura pro pevný počet prvků stejného datového typu. Délka pole je určena při jeho vytvoření a nelze ji později změnit.
 
 ### Deklarace a inicializace
 ```csharp
@@ -36,10 +35,9 @@ bool[] pBool = new bool[20];
   ```
 
 ## Vícedimenzionální pole
+- C# umožňuje práci s vícerozměrnými poli.
 
-C# umožňuje práci s vícerozměrnými poli.
-
-### Obdélníková pole
+#### Obdélníková pole
 ```csharp
 int[,,] pole3d = new int[3,6,9];
 int[,] pole2d = new int[,] { {1,2}, {3,4}, {5,6} };
@@ -47,7 +45,7 @@ int[,] pole2d = new int[,] { {1,2}, {3,4}, {5,6} };
 - Počet dimenzí: `pole2d.Rank`
 - Délka určité dimenze: `pole3d.GetLength(1)`
 
-### Nepravidelná (zubatá) pole – pole polí
+#### Nepravidelná (zubatá) pole – pole polí
 ```csharp
 int[][] polePoli = new int[3][];
 polePoli[0] = new int[] { 1, 2, 3, 4, 5 };
@@ -56,38 +54,31 @@ polePoli[2] = new int[] { 1 };
 ```
 
 ## Úvod do objektově orientovaného programování (OOP)
-
-Objektově orientované programování je hlavní paradigma jazyka C#. Program je tvořen objekty, které mají:
-
-- Stav (vlastnosti)
-- Chování (metody)
-- Možnost interakce
-
-Výhodou OOP je:
-- Snadná strukturalizace a údržba kódu
-- Možnost rozdělení vývoje mezi více programátorů
-- Rozšiřitelnost a znovupoužitelnost
-
-## Základní principy OOP
-
+- Objektově orientované programování je hlavní paradigma jazyka C#. Program je tvořen objekty, které mají:
+	- Stav (vlastnosti)
+	- Chování (metody)
+	- Možnost interakce
+- Výhodou OOP je:
+	- Snadná strukturalizace a údržba kódu
+	- Možnost rozdělení vývoje mezi více programátorů
+	- Rozšiřitelnost a znovupoužitelnost
+#### Základní principy OOP
 - **Zapouzdření** – oddělení vnitřní reprezentace od vnějšího rozhraní.
 - **Dědičnost** – možnost odvození nové třídy z existující.
 - **Polymorfismus** – schopnost volat stejné rozhraní s různým chováním.
 - **Rozhraní objektů** – přesně definovaný způsob, jak s objektem komunikovat.
 
-## Třídy v C#
+## Třídy v C\#
+- Třída je šablona pro vytváření objektů. Obsahuje:
+	- **Fields (polička)** – proměnné reprezentující stav objektu.
+	- **Konstanty** – neměnné hodnoty, často `public static`.
+	- **Metody** – operace prováděné objektem.
+	- **Properties (vlastnosti)** – přístupové metody ke stavovým proměnným.
+	- **Konstruktory** – speciální metody volané při vytvoření objektu.
+	- **Destruktor** – volán při odstranění objektu (většinou spravován GC).
+	- **Vnořené třídy** – třídy definované uvnitř jiné třídy.
 
-Třída je šablona pro vytváření objektů. Obsahuje:
-
-- **Fields (polička)** – proměnné reprezentující stav objektu.
-- **Konstanty** – neměnné hodnoty, často `public static`.
-- **Metody** – operace prováděné objektem.
-- **Properties (vlastnosti)** – přístupové metody ke stavovým proměnným.
-- **Konstruktory** – speciální metody volané při vytvoření objektu.
-- **Destruktor** – volán při odstranění objektu (většinou spravován GC).
-- **Vnořené třídy** – třídy definované uvnitř jiné třídy.
-
-### Příklad definice třídy
+#### Příklad definice třídy
 ```csharp
 public class HardDiskDrive {
     public const string Name = "Hard disk drive";
@@ -106,7 +97,7 @@ public class HardDiskDrive {
 }
 ```
 
-### Konstruktor
+#### Konstruktor
 ```csharp
 public HardDiskDrive(uint capacity, string manufacturer, string partNumber, uint bufferSize, uint writeSpeed)
 {
@@ -117,28 +108,22 @@ public HardDiskDrive(uint capacity, string manufacturer, string partNumber, uint
     WriteSpeed = writeSpeed;
 }
 ```
-Vytvoření objektu:
+- Vytvoření objektu:
 ```csharp
 HardDiskDrive disk = new HardDiskDrive(1000000, "WD", "SX04210345", 1000, 10000);
 ```
 
 ## Volání metod a přetěžování
-
-Metody voláme pomocí tečkové notace:
+- Metody voláme pomocí tečkové notace:
 ```csharp
 disk.WriteNumber(42, 42468);
 ```
-
-Třída může obsahovat více metod se stejným názvem, ale různými parametry – tzv. **přetěžování metod**.
+- Třída může obsahovat více metod se stejným názvem, ale různými parametry – tzv. **přetěžování metod**.
 
 ## Statické metody
-
-Statické metody jsou volány bez nutnosti vytvářet instanci třídy. Příkladem je `Math.Sqrt(25)`. Používají se ke zpřístupnění obecné funkcionality spojené s třídou.
-
-Deklarace:
+- Statické metody jsou volány bez nutnosti vytvářet instanci třídy. Příkladem je `Math.Sqrt(25)`. Používají se ke zpřístupnění obecné funkcionality spojené s třídou.
+- Deklarace:
 ```csharp
 public static double Vypocitej(...) { ... }
 ```
-
-Nejznámější statickou metodou je metoda `Main`, vstupní bod programu.
-
+- Nejznámější statickou metodou je metoda `Main`, vstupní bod programu.

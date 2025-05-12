@@ -40,7 +40,9 @@ head :- body
 - Při vytváření těchto úsudků vzniká strom, který může být **nekonečný**
 #### Strom úsudků
 - Vizualizace procesu *usuzování*
+- ![[Pasted image 20250511103925.png]]
 #### Nekonečný strom úsudků
+- ![[Pasted image 20250511104117.png|400]]
 - Řešení 2 způsoby
 	 1) líné stromy
 	 2) průchod do šířky - hůře předvídatelné pořadí odpovědí; v konečném čase dorazíme ke každé odpovědi

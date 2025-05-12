@@ -73,4 +73,3 @@
 > *externí vedlejší efekt* ... není možné zpětně programem zjistit (např. tiskový výstup)
 
 - **literál** ... textový řetězec zadaný přímo ve zdrojovém kódu
-

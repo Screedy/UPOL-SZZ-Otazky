@@ -80,9 +80,5 @@
 
 >[!info]
 >**KISS** = keep it simple stupid
->obecně věci fungují dobře pokud jsou jednoduché
->komponenta by měla dělat 1 věc, ale pořádně
-
-
-
-
+>- obecně věci fungují dobře pokud jsou jednoduché
+>- komponenta by měla dělat 1 věc, ale pořádně

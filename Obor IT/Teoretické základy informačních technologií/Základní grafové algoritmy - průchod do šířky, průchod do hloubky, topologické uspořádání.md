@@ -1,8 +1,9 @@
-### Průchod grafu
+#### Průchod grafu
 - Pro graf $G$ a počáteční vrchol $s$, chceme *systematicky navštívit všechny vrcholy dosažitelné z $s$*, každý z nich **právě jednou.**
 - Vrchol $v$ je dosažitelný z $s$, pokud existuje cesta z $s$ do $v$.
 
-#### Průchod do šířky a jeho vlastnosti
+## Průchod do šířky (BFS) a jeho vlastnosti
+- *Breadth first search*
 - **Vstup:**
 	- Graf $G=(V, E)$
 	- Vrchol $s \in V$
@@ -72,7 +73,8 @@ proc bfs(G, s)
 	- $E' = \{\{v, u\} \mid \text{parent}[u] = v\}$
 - $G'$ je strom s kořenem $s$: z principu algortmu `bfs` plyne, že $\mid V' \mid = \mid E' \mid +\ 1$ *(s přidáním každého uzlu mimo $s$ do fronty vytvoříme jednu hranu z $E'$)* a $G'$ je souvislý *(z každého uzlu $v \in V'$ vede cesta do $s$, je to nejkratší cesta nalezená `bfs`)* Uzel $s$ jako jediný nemá rodiče.
 
-#### Průchod do hloubky a jeho vlastnosti
+## Průchod do hloubky (DFS) a jeho vlastnosti
+- *Depth first search*
 - **Uzly mají položku pro barvu**, podobně jako u průchodu do šířky. Možné barvy jsou opět `white`, `gray` a `black`
 - Dále si pro každý uzel budeme **zaznamenávat čas**, kdy byl navštíven poprvé a změnil barvu z `white` na `gray`. K tomu použijeme **položku $d$.** Dále **zaznamenáme čas, kdy byl uzel navštíven podruhé,** k tomu použijeme **položku $f$**
 - Čas budeme udržovat pomocí **globální proměnné `time`**, kterou na začátku nastavíme na $0$, a na vhodných místech inkrementujeme

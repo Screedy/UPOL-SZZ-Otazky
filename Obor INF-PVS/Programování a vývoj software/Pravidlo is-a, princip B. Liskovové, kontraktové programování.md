@@ -25,7 +25,6 @@
 3) postkondice potomka musí být silnější než postkondice předka
 ## Princip Barbary Liskovové
 - přísnější než *is-a* 
->[!inof]
+>[!info]
 >**Princip B. Liskovové (formální znění)**
 >Pokud s instancemi třídy pracujeme se znalostmi o této třídě, máme jistotu, že dojdeme ke správným výsledkům, ikdyž instance není přímou instancí třídy.
-
