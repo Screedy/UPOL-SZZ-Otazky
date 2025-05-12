@@ -1,8 +1,6 @@
 ## Výčtový typ (`enum`)
-
-Výčtový typ (enumeration) slouží k vytvoření vlastního typu, který může nabývat pouze předem definovaných pojmenovaných hodnot.
-
-### Základní deklarace
+- Výčtový typ (enumeration) slouží k vytvoření vlastního typu, který může nabývat pouze předem definovaných pojmenovaných hodnot.
+#### Základní deklarace
 ```csharp
 public enum ComputerFormFactor {
     Atx,
@@ -16,7 +14,7 @@ ComputerFormFactor ff = ComputerFormFactor.BigTower;
 Console.WriteLine(ff); // vypíše: BigTower
 ```
 
-### Interní reprezentace
+#### Interní reprezentace
 - Interně je `enum` reprezentován jako `int` (číselné hodnoty).
 - Možné je přetypování oběma směry:
 ```csharp
@@ -24,7 +22,7 @@ int x = (int)ComputerFormFactor.Laptop;
 ComputerFormFactor cf = (ComputerFormFactor)2;
 ```
 
-### Změna základního typu
+#### Změna základního typu
 ```csharp
 public enum UsbConnector : short {
     Mini = 1,
@@ -34,7 +32,7 @@ public enum UsbConnector : short {
 }
 ```
 
-### Bitová kombinace hodnot (`Flags`)
+#### Bitová kombinace hodnot (`Flags`)
 ```csharp
 [Flags]
 public enum DaysOfWeek {
@@ -51,13 +49,10 @@ public enum DaysOfWeek {
 ```
 
 ## Rozšiřující metody (`Extension methods`)
-
-Rozšiřují funkcionalitu existujících tříd bez nutnosti dědění nebo úprav.
-
-### Syntaxe
+- Rozšiřují funkcionalitu existujících tříd bez nutnosti dědění nebo úprav.
+#### Syntaxe
 - Metoda je statická a definuje se ve statické třídě.
 - První parametr musí být označený `this`.
-
 ```csharp
 public static class Extensions {
     public static int GetWordCount(this string s) {
@@ -70,7 +65,7 @@ public static class Extensions {
 }
 ```
 
-### Použití
+#### Použití
 ```csharp
 string s = "toto je test";
 int count = s.GetWordCount();
@@ -78,15 +73,12 @@ int count = s.GetWordCount();
 int x = -5;
 bool isNeg = x.IsBelowZero();
 ```
-
 - Použití musí být povoleno pomocí `using` pro jmenný prostor obsahující metody.
 - Nelze přepsat existující metody daného typu.
 
 ## Práce s časem – `DateTime`
-
-Typ `DateTime` reprezentuje datum a čas s vysokou přesností.
-
-### Vytváření instancí
+- Typ `DateTime` reprezentuje datum a čas s vysokou přesností.
+#### Vytváření instancí
 ```csharp
 DateTime begin = new DateTime(); // 01.01.0001
 DateTime someDate = new DateTime(2023, 9, 6);
@@ -96,14 +88,12 @@ DateTime today = DateTime.Today;
 string input = "03.05.2023 20:23:55";
 DateTime parsed = DateTime.ParseExact(input, "MM.dd.yyyy HH:mm:ss", CultureInfo.InvariantCulture);
 ```
-
-### Formátování
+#### Formátování
 ```csharp
 Console.WriteLine(now.ToString("D"));
 Console.WriteLine(today.ToString("MM.dd.yyyy HH:mm:ss"));
 ```
-
-### Operace s DateTime
+#### Operace s DateTime
 - Přičítání času: `AddHours()`, `AddMinutes()`, `AddDays()`
 - Odečítání: `Subtract()`
 - Statické metody:
@@ -111,17 +101,13 @@ Console.WriteLine(today.ToString("MM.dd.yyyy HH:mm:ss"));
   - `DateTime.IsLeapYear(year)`
 - Vlastnosti: `Ticks`, `DayOfWeek`, `IsDaylightSavingTime()`
 
-## Výjimky v C#
-
-### Obecně
-Výjimky (exceptions) slouží ke zpracování neočekávaných stavů v běhu programu. Typicky jde o:
-
-- Dělení nulou
-- Neplatné indexy
-- Neexistující soubory
-- Chybné vstupy
-
-### Struktura `try-catch`
+## Výjimky v C\#
+- Výjimky (*exceptions*) slouží ke zpracování neočekávaných stavů v běhu programu. Typicky jde o:
+	- Dělení nulou
+	- Neplatné indexy
+	- Neexistující soubory
+	- Chybné vstupy
+#### Struktura `try-catch`
 ```csharp
 try {
     // rizikový kód
@@ -129,10 +115,8 @@ try {
     Console.WriteLine("Došlo k chybě: " + e.Message);
 }
 ```
-
 - Lze mít více `catch` větví pro specifické typy výjimek.
 - `finally` se vykoná vždy (i při chybě, i bez ní).
-
 ```csharp
 try {
     // ...
@@ -143,15 +127,12 @@ try {
 }
 ```
 
-### Vlastní výjimky
-Výjimky lze dědit z `System.Exception` a definovat vlastní chování nebo zprávy.
-
-### Klíčová slova
+#### Vlastní výjimky
+- Výjimky lze dědit z `System.Exception` a definovat vlastní chování nebo zprávy.
+#### Klíčová slova
 - `throw` – vyvolání výjimky
 - `throw e` – předání dál (znovuvyvolání)
 - `catch (Exception e) {}` – nebezpečné, pokud ignorováno
-
-### Příklady
 ```csharp
 int[] arr = new int[10];
 arr[10] = 1; // IndexOutOfRangeException
@@ -161,11 +142,8 @@ int y = 5 / x; // DivideByZeroException
 ```
 
 ---
-
 ## Shrnutí
-
 - `enum` poskytuje typově bezpečný způsob práce s výčty konstant.
 - Extension metody rozšiřují existující typy bez zásahu do jejich definice.
 - `DateTime` umožňuje práci s časem včetně formátování a operací.
 - Výjimky umožňují bezpečně řešit chyby za běhu programu pomocí `try-catch-finally`.
-

@@ -1,11 +1,9 @@
 ## Properties a fields
-
-### Fields
+#### Fields
 - Základní datové členy třídy
 - Uchovávají stav objektu
 - Měly by být `private`, přístupné přes `property` nebo metody
-
-### Properties
+#### Properties
 - Veřejné rozhraní pro přístup k `field` hodnotám
 - Mohou obsahovat validaci nebo výpočty
 - Automaticky generované property:
@@ -13,7 +11,7 @@
 public int Length { get; set; }
 ```
 
-### Vlastní implementace s validací
+#### Vlastní implementace s validací
 ```csharp
 private int _length;
 
@@ -25,53 +23,43 @@ public int Length {
 }
 ```
 
----
-
 ## Přetížení operátorů
-
-C# umožňuje definovat vlastní chování standardních operátorů pro vlastní typy.
-
-### Přípustné operátory k přetížení:
+- C# umožňuje definovat vlastní chování standardních operátorů pro vlastní typy.
+#### Přípustné operátory k přetížení:
 - Aritmetické: `+`, `-`, `*`, `/`, `%`, `++`, `--`
 - Relační: `==`, `!=`, `<`, `>`, `<=`, `>=`
 - Logické: `!`, `~`, `&`, `|`, `^`, `<<`, `>>`
 
-### Syntaxe
+#### Syntaxe
 ```csharp
 public static Complex operator +(Complex c1, Complex c2) {
     return new Complex(c1.Real + c2.Real, c1.Imaginary + c2.Imaginary);
 }
 ```
-
 - Nepřetěžují se: `=`, `.` (členové), `?:`, `as`, `is`, `new`, `typeof`...
 
----
-
 ## N-tice (tuples)
+- Rychlý způsob, jak vracet nebo uchovávat více hodnot bez nutnosti vytvářet třídu.
 
-Rychlý způsob, jak vracet nebo uchovávat více hodnot bez nutnosti vytvářet třídu.
-
-### Deklarace
+#### Deklarace
 ```csharp
 (int, string, double) mojeNtice = (5, "text", 3.14);
 Console.WriteLine(mojeNtice.Item3);
 ```
 
-### Pojmenování prvků
+#### Pojmenování prvků
 ```csharp
 (int id, string jmeno, double hodnota) zaznam = (1, "Jana", 99.5);
 Console.WriteLine(zaznam.jmeno);
 ```
 
+>[!tip]
 > Pojmenování funguje pouze v době kompilace, ne při reflexi.
 
----
-
 ## Delegáti
+- Delegát je typ bezpečný z hlediska typů, který uchovává odkaz na metodu.
 
-Delegát je typ bezpečný z hlediska typů, který uchovává odkaz na metodu.
-
-### Základní použití
+#### Základní použití
 ```csharp
 delegate int MathOperation(int x, int y);
 
@@ -86,14 +74,11 @@ int[] MapMathOperation(int[] a, int[] b, MathOperation op) {
     return result;
 }
 ```
-
 - Delegáty lze kombinovat (např. v GUI, nebo pro více `void` metod).
 - Používají se také pro paralelní operace (`BeginInvoke`, `EndInvoke`).
 
 ---
-
 ## Shrnutí
-
 - `Property` je mechanismus pro bezpečný přístup ke `fieldům`.
 - Operátory v C# lze přetížit a definovat jejich chování pro vlastní typy.
 - N-tice (`tuple`) jsou lehká náhrada struktury/třídy pro vícenásobné návraty.

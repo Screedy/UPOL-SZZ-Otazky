@@ -1,12 +1,11 @@
 ## Práce s konzolí
-
-### Vstup od uživatele
-Čtení textového vstupu:
+#### Vstup od uživatele
+- Čtení textového vstupu:
 ```csharp
 string vstup = Console.ReadLine();
 ```
 
-Příklad čtení číselného vstupu s ošetřením výjimky:
+- Příklad čtení číselného vstupu s ošetřením výjimky:
 ```csharp
 static void ReadNumber(out int a, string text) {
     Console.Write(text);
@@ -19,7 +18,7 @@ static void ReadNumber(out int a, string text) {
 }
 ```
 
-### Změna vzhledu konzole
+#### Změna vzhledu konzole
 ```csharp
 Console.BackgroundColor = ConsoleColor.Green;
 Console.ForegroundColor = ConsoleColor.Red;
@@ -29,7 +28,7 @@ Console.SetWindowSize(80, 25);
 Console.Title = "Moje aplikace";
 ```
 
-### Reakce na stisk klávesy
+#### Reakce na stisk klávesy
 ```csharp
 ConsoleKeyInfo info = Console.ReadKey();
 if (info.Key == ConsoleKey.Backspace) {
@@ -38,10 +37,8 @@ if (info.Key == ConsoleKey.Backspace) {
 ```
 
 ## Struktury (`struct`)
-
-Struktura je **hodnotový typ**, definovaný uživatelem, podobný třídě, ale jednodušší.
-
-### Deklarace
+- Struktura je **hodnotový typ**, definovaný uživatelem, podobný třídě, ale jednodušší.
+#### Deklarace
 ```csharp
 public struct StorageItem {
     public int Length;
@@ -54,7 +51,7 @@ public struct StorageItem {
 }
 ```
 
-### Vytváření instancí
+#### Vytváření instancí
 ```csharp
 StorageItem si = new StorageItem(); // volání bez parametrů
 si.Length = 32;
@@ -67,8 +64,8 @@ si2.Height = 20;
 si2.Name = "Box";
 ```
 
-### Přiřazování struktur
-Při přiřazení se kopíruje hodnota:
+#### Přiřazování struktur
+- Při přiřazení se kopíruje hodnota:
 ```csharp
 StorageItem kopie = si;
 kopie.Length = 5;
@@ -77,19 +74,17 @@ kopie.Length = 5;
 
 ## Rozdíl mezi strukturou a třídou
 
-| Vlastnost              | Struktura (`struct`) | Třída (`class`) |
-|------------------------|----------------------|------------------|
-| Uložení v paměti       | zásobník (stack)     | halda (heap)     |
-| Dědičnost              | ne (jen z ValueType) | ano              |
-| Typ                    | hodnotový            | referenční       |
-| Výchozí konstruktor    | implicitní bez parametrů | definovatelný |
-| Metoda Equals()        | porovnává po složkách | lze přepsat      |
+|                         | `struct`                 | `class`       |
+| ----------------------- | ------------------------ | ------------- |
+| **Uložení v paměti**    | zásobník (stack)         | halda (heap)  |
+| **Dědičnost**           | ne (jen z ValueType)     | ano           |
+| **Typ**                 | hodnotový                | referenční    |
+| **Výchozí konstruktor** | implicitní bez parametrů | definovatelný |
+| **Metoda Equals()**     | porovnává po složkách    | lze přepsat   |
 
 ## Indexery
-
-Indexery umožňují přistupovat k prvkům třídy podobně jako k prvkům pole pomocí `[]`.
-
-### Deklarace
+- Indexery umožňují přistupovat k prvkům třídy podobně jako k prvkům pole (pomocí `[]`).
+#### Deklarace
 ```csharp
 public class Dictionary<K, V> {
     private List<K> keys = new List<K>();
@@ -112,20 +107,16 @@ public class Dictionary<K, V> {
 }
 ```
 
-### Použití
+#### Po#užití
 ```csharp
 Dictionary<string, int> d = new Dictionary<string, int>();
 d["jablko"] = 5;
 Console.WriteLine(d["jablko"]);
 ```
-
-Indexery mohou být i vícerozměrné a nemusí používat jen celočíselné indexy – typ může být libovolný.
+- Indexery mohou být i vícerozměrné a nemusí používat jen celočíselné indexy – typ může být libovolný.
 
 ---
-
 ## Shrnutí
-
 - Pomocí `Console.ReadLine()` a dalších metod lze číst a ovlivňovat výstup v konzoli.
 - `struct` je lehká alternativa třídy pro jednoduché datové objekty bez dědičnosti.
 - Indexery umožňují přistupovat k prvkům tříd podobně jako k poli pomocí `[]`.
-
