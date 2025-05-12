@@ -1,3 +1,0 @@
-# typování, hodnotové a referenční datové typy, platforma .NET, cykly, podmínky, ...
-
-
