@@ -10,7 +10,6 @@
 ### Klasická definice pravděpodobnosti (Laplaceova)
 - Nechť $\Omega$ je konečný vzorový prostor a všechny elementární jevy v $\Omega$ jsou stejně pravděpodobné. Pro libovolnou událost $A \subseteq \Omega$, pravděpodobnost $P(A)$ je definována: $$P(A) = \frac{počet\ příznivých\ výsledků\ pro\ A}{celkový\ počet\ možných\ výsledků}$$kde **počet příznivých výsledků** pro $A$ je počet prvků v množině $A$ a **celkový počet možných výsledků** je počet všech prvků ve vzorovém prostoru $\Omega$.
 
-
 ## Kolmogorova definice pravděpodobnosti
 - Je dán **náhodný pokus**:
 	- hod kostkou
@@ -65,7 +64,6 @@
 > 		1. **Nezápornost**: $P(A) \geq 0$ pro všechna $A$ v $\sigma$-algebře.
 > 		2. **Normalita**: $P(\Omega) = 1$
 > 		3. $\sigma$-**aditivita**: Pro jakoukoli sekvenci vzájemně disjunktních množin $A_{1}, A_{2}, ...$ v $\sigma$-algebře platí, že $P(\cup_{i=1}^{\infty}\ A_{i}) = \sum_{i=1}^{\infty} P(A_{i})$
-
 
 ## Náhodná veličina, střední hodnota
 
