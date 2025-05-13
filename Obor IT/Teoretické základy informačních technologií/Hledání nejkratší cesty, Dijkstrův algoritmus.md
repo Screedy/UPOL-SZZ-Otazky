@@ -1,6 +1,11 @@
-### Hledání nejkratší cesty a Dijkstrův algoritmus
-- Dijkstrův algoritmus je jeden z nejznámějších algoritmů **hledání nejkratší cesty**
----
+## Ohodnocené grafy
+- Pro řešení následujících problémů je nutné mít hrany v grafu ohodnocené (musí mít přidělenou cenu)
+- Hranové ohodnocení grafu je množina hodnot $D$ a funkce $w: V \rightarrow D$
+- Vrcholové ohodnocení grafu je množina hodnot $D$ a funkce $w: E \rightarrow D$
+- ![[Pasted image 20250513102859.png|300]]
+## Hledání nejkratší cesty a Dijkstrův algoritmus
+>[!tip]
+>Dijkstrův algoritmus je jeden z nejznámějších algoritmů **hledání nejkratší cesty**
 - **Na vstupu**: je neorientovaný graf $G = <V, E>$, jeho hranové ohodnocení $w: E \rightarrow \mathbb{R}^{+}$ a vrchol $s \in V$
 - **Výstupem**: pro každý vrchol $v \in V$ číslo $d(v)$, které je vzdáleností z $s$ do $v$.
 - Algoritmus **používá proměnné**: $A, N, d, m$, 
@@ -21,7 +26,7 @@
 	- Algoritmus toto možné zlepšení prověří pro vrcholy $u$ z $A$, do kterých vede z $v$ hrana. Algoritmus tedy pro každý $v \in N$ a pro každý $u \in A$, pro který existuje hrana $\{v, u\} \in E$, porovná hodnotu $d(v) + w(\{v, u\})$ (délka možné cesty z s do u, která vede přes v) s hodnotou $d(u)$ (délka dosud nejkratší nalezené cesty z $s$ do $u$). 
 	- Je-li $d(v) + w(\{v, u\}) < d(u)$(tj. cesta přes v je kratší), změní se hodnota $d(u) \text{ na } d(u) = d(v) + w(\{v, u\})$. 
 	- Algoritmus se pak vrátí ke kroku 2. V něm se ověří, zda je v $A$ ještě nějaký vrchol $v$ s hodnotou $d(v) < \infty$. Pokud ano, znamená to, že v $A$ se nacházejí kandidáti na zlepšení hodnot $d(u)$ a pokračuje se znovu jako výše, tedy stanovením nové množiny $N$ , odebráním vrcholů z $A$ a tak dále. Pokud ale v $A$ žádný vrchol $v$ s hodnotou $d(v) < \infty$ není, algoritmus skončí. 
-	- Na konci je množina $A$ buď prázdná, a to tehdy, když ke všem vrcholům z $s$ cesta existuje, nebo je neprázdná, a obsahuje jen vrcholy $v$ s hodnotou $d(v) = \infty$. Vrcholy s hodnotou $d(v) = \infty$ jsou právě ty, ke kterým z s neexistuje cesta.
+	- Na konci je množina $A$ buď prázdná, a to tehdy, když ke všem vrcholům z $s$ cesta existuje, nebo je neprázdná, a obsahuje jen vrcholy $v$ s hodnotou $d(v) = \infty$. Vrcholy s hodnotou $d(v) = \infty$ jsou právě ty, ke kterým z počátku $s$ neexistuje cesta.
 
 ### Algoritmus
 - **Vstup:** Graf $G = <V, E>$, vrchol $s \in V$, hranové ohodnocení $w: E \rightarrow \mathbb{R}^{+}$
@@ -33,7 +38,10 @@
 	3. $m = min\{d(v) \mid v \in A\}, N= \{ v \in A \mid d(v)=m \}, A = A - N$
 	4. Pro všechny $v \in N, u \in A$ takové, že $\{v,u\} \in E$ jestliže $d(v) + w(\{v,u\}) < d(u),$ pak $d(u)=d(v)+w(\{v,u\});$ pokračuj krokem $2.$
 
+#### Animace
+![[Dijkstra_Animation.gif|400]]
 
+#### Video
 <iframe width="690" height="385" src="https://www.youtube.com/embed/_lHSawdgXpI?si=d6NouOUOCmePLEzT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ##### Navigace

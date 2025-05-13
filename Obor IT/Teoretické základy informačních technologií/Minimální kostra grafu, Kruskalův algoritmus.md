@@ -101,9 +101,16 @@
 >linkStyle default stroke:Red;
 >```
 
-
+#### Animace
+![[Pasted image 20250513090055.png]]
+#### Video
 <iframe width="690" height="385" src="https://www.youtube.com/embed/71UQH7Pr9kU?si=siVilj3MfpqRVJ2z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+#### Jarníkův (Primův) algoritmus
+- Alternativní algoritmus pro hledání nejkratší cesty, které má české kořeny
+- Byl znovu několikrát objeven v zahraničí
+#### Borůvkův algoritmus
+- Další alternativa pro hledání nejkratší cesty s českými kořeny
+- Taktéž znovu několikrát objeven v zahraničí
 ##### Navigace
 Předchozí:  [[Hledání nejkratší cesty, Dijkstrův algoritmus]]
 Následující: [[Stromy, kořenové stromy, vztahy mezi výškou, počtem vrcholů, počtem listů]]

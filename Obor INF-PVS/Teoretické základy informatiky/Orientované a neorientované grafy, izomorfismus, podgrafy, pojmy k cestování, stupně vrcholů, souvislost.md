@@ -14,6 +14,8 @@
 - Na obrázku je **neorientovaný graf** který má vrcholy $u, v, w, x$ a $y$
 - *Vrcholy* jsou znázorněny *kroužky*. Úsečky znázorňují *hrany*.
 - Protože v neorientovaném grafu **nemají hrany orientaci**, můžeme hranu mezi vrcholy reprezentovat **neuspořádanou dvojicí, tedy dvouprvkovou množinou** napr. $\{u, w\}$
+- **Komponenta** neorientovaného grafu je každý jeho maximální souvislý podgraf.
+- Komponenty tvoří rozklad grafu
 ## Orientovaný graf
 ![[MacBook-2024-03-05-000789.png| 300]]
 - Na obrázku je *orientovaný graf* který má opět vrcholy $u, v, w, x$ a $y$
@@ -40,6 +42,7 @@
 - Obrázek daného grafu není určen jednoznačně. Dva různé obrázky přitom mohou popisovat v zásadě stejné grafy, byť to na první pohled není patrné. 
 - V případě, že graf je dán obrázkem, mohou se obrázky dvou v zásadě stejných grafů lišit rozmístěním vrcholů, zakreslením hran, popř. také označením vrcholů. 
 - Grafy, které mají stejnou strukturu, se nazývají **izomorfní**.
+	- Značíme $G_1 \cong G_2$
 
 - Nechť **$G_{1} = <V_{1}, E_{1}>$ a $G_{2} = <V_{2}, E_{2}>$** jsou <u>neorientované</u> grafy. **Bijekce $h: V_{1} \rightarrow V_{2}$** se nazývá *izomorfismus* $G_{1}$ do $G_{2}$, pokud pro každé vrcholy $u, v \in V_{1}$ je
 	- **$\{u, v \} \in E_{1}$ právě když $\{h(u), h(v)\} \in E_{2}$**
@@ -47,7 +50,22 @@
 - Nechť **$G_{1} = <V_{1}, E_{1}>$ a $G_{2} = <V_{2}, E_{2}>$** jsou <u>orientované</u> grafy. **Bijekce $h: V_{1} \rightarrow V_{2}$** se nazývá *izomorfismus* $G_{1}$ do $G_{2}$, pokud pro každé vrcholy $u, v \in V_{1}$ je
 	- **$<u, v > \in E_{1}$ právě když $<h(u), h(v)> \in E_{2}$**
 ![[MacBook-2024-03-05-000791.png]]
-
+#### Stupeň vrcholu
+- Počet hran, které z daného vrcholu vycházejí
+- Stupeň vrcholu $v \in V$ grafu $<V, E>$ je počet hran, pro které je $v$ koncovým vrcholem, značí se $deg(v)$
+- Počet vrcholů lichého stupně je v libovolném grafu sudý.
+- V grafu $G=<V, E>$ je $\sum_{v \in V} deg(v) = 2 \cdot |E|$ 
+#### Skóre grafu
+- Jako **skóre grafu** se označuje libovolně uspořádaná posloupnost stupňů jeho vrcholů
+- Dvě skóre jsou stejná pokud jedno dostaneme permutací druhého (nezáleží na pořadí)
+- Věty pro vztahy 2 grafů a skóre
+	- Pokud jsou skóre jiná $\rightarrow$ grafy nemohou být izomorfní
+	- Pokud jsou 2 grafy izomorfní $\rightarrow$ musí mít stejná skóre
+		- Obrácené implikace NEplatí (viz obrázek, stejná skóre, jiné grafy)
+	- ![[Pasted image 20250513100551.png|350]]
+#### Souvislost v grafu
+- Graf je souvislý pokud mezi každými 2 uzly $u$ a $v$ existuje sled z $u$ do $v$
+- 
 ## Podgrafy
 - Části grafů se nazývají podgrafy
 - (Orientovaný nebo neorientovaný) **graf $<V_{1}, E_{1}>$** je podgrafem grafu $<V_{2}, E_{2}>$, právě když **$V_{1} \subseteq V_{2}$ a $E_{1} \subseteq E_{2}$**. Podgraf $<V_{1}, E_{1}>$ grafu $<V_{2}, E_{2}>$ se nazývá **indukovaný**, právě když **$E_{1}$ obsahuje každou hranu z $E_{2}$**, jejíž oba **koncové vrcholy patří do $V_{1}$**
