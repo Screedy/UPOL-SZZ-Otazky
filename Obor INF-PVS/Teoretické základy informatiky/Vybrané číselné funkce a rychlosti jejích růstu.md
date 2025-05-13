@@ -8,6 +8,8 @@
 ## Kvadratická funkce
 - $f(n) = n^2$
 - Např. neefektivní třídící algoritmy (bubble sort), brute-force algoritmy
+## Kubická funkce
+- $f(n) = n^3$
 ## Exponenciální funkce
 - $f(n) = b^n$
 1) $b > 1$ - rostoucí
@@ -18,7 +20,11 @@
 - $f(n) = log(n)$
 - Velmi dobře použitelný algoritmus v praxi
 - Např. dělení problému na poloviny, binární hledání
+## Logaritmicko-lineární funkce
+- $f(n) = n \cdot log(n)$
 ## Funkce faktoriál
 - $f(n) = n!$
 - Z hlediska O-notace nejhorší možnost rychlosti růstu
 - Např. Počet možných permutací množiny
+## Funkce konstantní
+- $f(n) = c$
