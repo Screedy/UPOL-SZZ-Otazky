@@ -1,9 +1,9 @@
 ### Vektorový prostor
 
-- Čtveřici $(V ;+, T, \cdot)$ nazýváme vektorový prostor, jestliže
-	1. $(V ;+)$ je abelovská grupa s jednotkou $\vec{o}$ (nulový vektor);
-	2. $T$ je číselné těleso;
-	3. $\cdot : T \times V \rightarrow V$ je levá vnější operace nad $T$ a $V$;
+- **Čtveřici** $(V ;+, T, \cdot)$ nazýváme vektorový prostor, jestliže
+	1. $(V ;+)$ je *abelovská grupa* s jednotkou $\vec{o}$ (nulový vektor);
+	2. $T$ je *číselné těleso*;
+	3. $\cdot : T \times V \rightarrow V$ je *levá vnější operace* nad $T$ a $V$;
 	4. Pro všechny $\vec{u}, \vec{v} \in V$ a všechny $c, d \in T$ platí
 		- $c \cdot(\vec{u}+\vec{v})=c \cdot \vec{u}+c \cdot \vec{v}$,
 		- $(c+d) \cdot \vec{u}=c \cdot \vec{u}+d \cdot \vec{u}$,

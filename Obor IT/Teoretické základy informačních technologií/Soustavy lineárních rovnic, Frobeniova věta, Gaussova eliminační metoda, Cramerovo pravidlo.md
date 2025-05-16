@@ -74,7 +74,7 @@ nazýváme **matice soustavy** $(S)$, resp. **rozšířená matice soustavy** $(
 
 ### Gaussův tvar
 
->[!Info]- Vedoucí prvek
+>[!Info] Vedoucí prvek
 >- **Vedoucím prvkem řádku** (řádkového vektoru) matice $A \in \mathcal{M}_{m \times n}(T)$ rozumíme **první nenulový prvek zleva** v tomto řádku.
 
 - O matici $A \in \mathcal{M}_{m \times n}(T)$ řekneme, že je v **Gaussově tvaru** (GT), pokud všechny její nulové řádky jsou až za nenulovými a navíc pro každé její dva nenulové řádky $\overrightarrow{a_i}, \overrightarrow{a_j}$ musí být splněno, že pokud $i<j$, pak vedoucí prvek $i$-tého řádku leží ve sloupci, jehož index je menší než index sloupce, ve kterém leží vedoucí prvek $j$-tého řádku.
