@@ -43,12 +43,13 @@
 - Jedná se tedy o systém relací a funkcí pro daný jazyk
 #### M-ohodnocení
 - Zobrazení přiřazující každé proměnné $x$ prvek $v(x) \in M$
+
 >[!info] Definice
 >Nechť $v$ je M-ohodnocení. Hodnota $\mid\mid t \mid|mid_{M, v}$ termu $t$ v $M$ při $v$ je definována takto
 >> 1. $v(x)$ - je-li $t$ proměnná $x$
 >> 2. $f^M(\mid\mid t_1 \mid\mid_{M, v}, ..., \mid\mid t_k \mid\mid_{M, v})$ - je-li tvaru $f(t_1, ..., t_k)$
 
-> [!infi] Definice
+> [!info] Definice
 > Pravdivostní hodnota $\|\varphi \|_{M,v}$ formule $\varphi$ při M-ohodncení $v$ je definována takto:
 >> 1) pro atomické forumule: $$\| r(t_1, \dots, t_n) \|_{M,v} = \begin{cases} 1, & \text{je-li } \langle \| t_1 \|_{M,v}, \dots, \| t_n \|_{M,v} \rangle \in r^M \\ 0, & \text{jinak} \end{cases}$$
 >> 2) pro formule $( \varphi )$ ve tvaru $( \neg \alpha )$ a $(\alpha \Rightarrow \beta)$: $$ \neg \alpha \|_{M,v} = \begin{cases} 1, & \text{pokud } \| \alpha \|_{M,v} = 0 \\  0, & \text{pokud } \| \alpha \|_{M,v} = 1 \end{cases} $$ 
@@ -59,9 +60,11 @@
 - **tautologie ve struktuře** jestliže $\| \varphi \|_{M,v} = 1$ platí pro každé M-ohodnocení
 - **tautologie** pokud je $\varphi$ tautologií v každé struktuře $M$
 	- Prostě pro libovolnou strukturu a libovolné ohodnocení musí být pravdivá
+
 >[!info] Definice
 > **Teorie** v jazyku PL typu $\lt R, F, \sigma \gt$  je libovolná množina $T$ formulí jazyka tohoto typu. Struktura $M$ jazyka typu $\lt R, F, \sigma \gt$ se nazývá **model teorie** $T$ (zápis: $M \vDash T$ či $\| T \|_M = 1$), jestliže **každá formule z $T$ je pravdivá v $M$**.
 - Teorie má stejný význam jako v přirozeném jazyce ("Nesouhlasím s tvojí teorií"). Přičemž teorií myslíme soubor tvrzení (v PL je to množina formulí)
+
 >[!info] Definice
 > Množina $S$ formulí **sémanticky plyne** z množiny $T$ formulí  (píšeme $T \models S$; píšeme také $T \models \varphi$), jestliže $S = \{\varphi\}$, podobně když $T = \{\psi\}$, jestliže každý model $T$ je modelem $S$).
 > 

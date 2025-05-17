@@ -1,9 +1,9 @@
 ## Konečná a nekonečná množina
 - Množina $A$ je konečná pokud existuje $n \in \mathbb{N}$ a bijekce $f:\{ 1, 2, ..., n \} \rightarrow A$
-	- Prvky můžeme seřadit do posloupnosti
+	- Prvky můžeme seřadit do konečné posloupnosti
 - Množina A je nekonečná pokud není konečná
 - **mohutnost** (velikost) množiny ... počet jejich prvků ... $|A|$
-## Spočetná množina
+## Spočetná a nespočetná množina
 - Množina $A$ je spočetná pokud je konečná nebo existuje bijekce $f: \mathbb{N} \rightarrow A$ (tzv. spočetně nekonečná)
 - Základní množinou je identita $f(n) = n$ (bijekce $\mathbb{N} \rightarrow \mathbb{N}$)
 - Množina $\Sigma^*$ všech řetězců nad abecedou $\Sigma = \{ a_1, ..., a_n \}$ je spočetná
