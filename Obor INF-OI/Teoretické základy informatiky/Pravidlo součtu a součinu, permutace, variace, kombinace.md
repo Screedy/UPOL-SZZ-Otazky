@@ -10,7 +10,7 @@
 #### Permutace s opakováním
 - Seřazujeme-li objekty, z nichž některé jsou stejné
 - Je dáno **$n$ objektů rozdělených do $r$ skupin**, které mají po řadě **$n_{1}, ..., n_{r}$ objektů**. Objekty v každé ze skupin jsou **navzájem nerozlišitelné.** Každé seřazení těchto $n$ objektů se nazývá **permutace s opakováním** (daným parametry ($n_{1}, ..., n_{r}$)). Počet takových permutací **značíme $P(n_{1}, ..., n_{r})$**.
-- Vzoreček: **Pro $n_{1} + ... + n_{r} = n$ je $P(n_{1}, ..., n_{r}) = \frac{n!}{n_{1} * ... * n_{r}}$**
+- Vzoreček: **Pro $n_{1} + ... + n_{r} = n$ je $P(n_{1}, ..., n_{r}) = \frac{n!}{n_{1}! * ... * n_{r}!}$**
 ## Variace
 - Je dáno $n$ (navzájem různých) objektů a číslo $r \leq n$. **Variace $r$ (objektů) z $n$ (objektů)** je **libovolný výběr $r$ objektů z daných $n$ objektů**, ve kterém záleží na pořadí vybíraných objektů. 
 - Počet takových variací značíme $V(n,r)$.
