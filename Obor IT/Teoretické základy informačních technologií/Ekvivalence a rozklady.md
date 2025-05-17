@@ -28,7 +28,7 @@
 		- Rozklad $\Pi$ na $X$ je systém neprázdných podmnožin $Y$
 	- **Pro každé $Y_{1}, Y_{2} \in \Pi$ platí: pokud $Y_{1} \cap Y_{2} \neq \varnothing$, pak $Y_{1} = Y_{2}$**
 		- Požadujeme, aby dvě různé třídy rozkladu $\Pi$ byly disjunktní
-	- $\cup \, \Pi = X$
+	- $\bigcup \, \Pi = X$
 		- Sjednocení všech tříd rozkladu $\Pi$ bylo rovno množině $X$ se nazývá **rozklad na množině $X$**. 
 - Množiny $Y \in \Pi$ nazýváme **třídy rozkladu $\Pi$**. Pro prvek $x \in X$ označíme $[x]_{\Pi}$ tu třídu rozkladu $\Pi$, která obsahuje $x$.
 - Na množině $X$ existují dva mezní rozklady:
