@@ -6,15 +6,21 @@
 #### Faktoriál
 1) Rekurzivní výpočet
 ```python
-def fact:
-	if (n = 1)
+def fact_1(n):
+	if n == 1:
 		return 1
-	else 
-		return n * fact(n-1)
+	else: 
+		return n * fact_1(n-1)
 ```
 2) Induktivní výpočet
-	- Pro $n=1$ je $f(n)=1$
-	- Pro $n>1$ je $f(n) = n*f(n-1)$
+```python
+def fact_2(n):
+	res = 1
+	while (n > 1):
+		res *= n
+		n--
+	return res
+```
 
 - Můžeme definovat i číselné množiny
 	- např. množina $L$ všech lichých čísel - pro $1 \in L$, pokud $n \in L$ pak $n+2 \in L$
