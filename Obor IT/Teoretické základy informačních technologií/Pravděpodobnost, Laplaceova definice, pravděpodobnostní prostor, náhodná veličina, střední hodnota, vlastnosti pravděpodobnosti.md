@@ -30,16 +30,17 @@
 	- $\Omega$ je neprázdná množina elementárních jevů (výsledků pokusu)
 	- $\mathcal{A} \subseteq 2^{\Omega}$ je množina jevů
 	- $P: \mathcal{A} \rightarrow [0,1]$ je pravděpodobnostní míra pro jev $A \in \mathcal{A}$ je $P(A) \in [0, 1]$ pravděpodobnost, že nastane jev $A$
----
-- Pravděpodobnostní prostor je trojice $<\Omega, \mathcal{A}, P>$, kde:
-	- $<\Omega, \mathcal{A}>$ je $\sigma$-algebra (sigma) na $\Omega$, tj. $\Omega \neq \varnothing,$ $\varnothing \neq \mathcal{A} \subseteq 2^{\Omega}$ a platí:
-		- je-li $A \in \mathcal{A}$, pak $\overline{A} \in \mathcal{A}$
-		- jsou-li $A_{1}, A_{2}, ... \in \mathcal{A}$, pak $\bigcup_{i = 1}^{\infty}\ A_{i} \in \mathcal{A}$
-	- $P$ je pravděpodobnostní míra, tj. $P$ je zobrazení přiřazující každé množině $A \in \mathcal{A}$ reálné číslo $P(A)$, které splňuje:
-		- $P(A) \geq 0$ pro každý $A \in \mathcal{A}$
-		- $P(\Omega) = 1$
-		- $P(\cup_{i=1}^{\infty}\ A_{i}) = \sum_{i=1}^{\infty} P(A_{i})$ pro každou posloupnost jevů $A_{1}, A_{2}, ...,$ které jsou po dvou disjunktní, tj. $A_{i}\ \cap A_{j} = \varnothing$ pro $i \neq j$.
----
+
+> [!info] Definice
+> - Pravděpodobnostní prostor je trojice $<\Omega, \mathcal{A}, P>$, kde:
+> - $<\Omega, \mathcal{A}>$ je $\sigma$-algebra (sigma) na $\Omega$, tj. $\Omega \neq \emptyset,$ $\emptyset \neq \mathcal{A} \subseteq 2^{\Omega}$ a platí:
+>> - je-li $A \in \mathcal{A}$, pak $\overline{A} \in \mathcal{A}$
+>> - jsou-li $A_{1}, A_{2}, ... \in \mathcal{A}$, pak $\bigcup_{i = 1}^{\infty}\ A_{i} \in \mathcal{A}$
+> - $P$ je pravděpodobnostní míra, tj. $P$ je zobrazení přiřazující každé množině $A \in \mathcal{A}$ reálné číslo $P(A)$, které splňuje:
+>> - $P(A) \geq 0$ pro každý $A \in \mathcal{A}$
+>> - $P(\Omega) = 1$
+>> - $P(\bigcup_{i=1}^{\infty}\ A_{i}) = \sum_{i=1}^{\infty} P(A_{i})$ pro každou posloupnost jevů $A_{1}, A_{2}, ...,$ které jsou po dvou disjunktní, tj. $A_{i}\ \cap A_{j} = \emptyset$ pro $i \neq j$.
+
 - Prvky $\omega \in \Omega$ se nazývají **elementární jevy** a představují výsledky náhodného pokusu.
 - **Množiny $A \in \mathcal{A}$** se nazývají **jevy**, někdy také **měřitelné jevy**, a jsou to podmnožiny množiny $\Omega$, ale ne každá podmnožina množiny $\Omega$ musí být jevem.
 - Jev je tedy množina $A$ sestávající z nějakých výsledků pokusu, o nichž říkáme, že jsou jevy $A$ příznivé.
@@ -55,7 +56,7 @@
 > 	- Při hodu kostkou by vzorový prostor byl $\Omega = \set{1,2,3,4,5,6}$
 > - $\sigma$-algebra nad vzorovým prostorem $\Omega$ je kolekce podmnožin $\Omega$ které jsou považovány za **měřitelné**.
 > 	- Musí splňovat: 
-> 		1. Obsahuje $\varnothing$
+> 		1. Obsahuje $\emptyset$
 > 		2. Je uzavřená na doplňky (pokud množina $A$ je v $\sigma$-algebře, pak její doplněk je taky).
 > 		3. Je uzavřená na spočetné sjednocení
 > 			- Pokud $A_{1}, A_{2}, ...$ jsou v $\sigma$-algebře, pak $\cup_{i = 1}^{\infty}\ A_{i}$ je také v $\sigma$-algebře.
@@ -65,6 +66,14 @@
 > 		2. **Normalita**: $P(\Omega) = 1$
 > 		3. $\sigma$-**aditivita**: Pro jakoukoli sekvenci vzájemně disjunktních množin $A_{1}, A_{2}, ...$ v $\sigma$-algebře platí, že $P(\cup_{i=1}^{\infty}\ A_{i}) = \sum_{i=1}^{\infty} P(A_{i})$
 
+#### Vlastnosti pravděpodobnosti
+- Pro libovolné jevy $A$ a  $B$ v pravděpodobnostním prostoru platí:
+	1) $P(\overline{A}) = 1 - P(A)$
+	2) $P(\emptyset) = 0$
+	3) je-li $A \subseteq B$, pak $P(A) \leq P(B)$  
+	4) $0 \leq P(A) \leq 1$
+	5) $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+	6) princip inkluze a exkluze pro pravděpodobnosti
 ## Náhodná veličina, střední hodnota
 
 ### Náhodná veličina
@@ -74,8 +83,10 @@
 	- např. $X(\omega) = 182$
 - Výška mužů se tedy v tomto pohledu jeví jako **náhodná veličina**
 	- výška je náhodná, protože je tento muž vybrán náhodně.
----
-- **Náhodná veličina** na konečném nebo diskrétním pravděpodobnostním prostoru $<\Omega, 2^{\Omega}, P>$ je funkce $X: \Omega \rightarrow \mathbb{R}$.
+> [!info] Definice
+> - **Náhodná veličina** na konečném nebo diskrétním pravděpodobnostním prostoru $<\Omega, 2^{\Omega}, P>$ je funkce $X: \Omega \rightarrow \mathbb{R}$.
+>> - $X$ ... číselná charakteristika výsledků (hmotnost, věk, výška, ...)
+>> - $X(\omega)$ je hodnota výsledku $\omega$ (př. hmotnost osoby $\omega$)
 
 ### Střední hodnota náhodné veličiny
 - Střední hodnota (také očekávaná hodnota) náhodné veličiny $X$ se značí $E(X)$ a je definována následovně: $$E(X)=\sum_{x \in X(\Omega)} x\ \cdot P(X = x)$$
@@ -91,9 +102,10 @@
 - $var\ X$ vyjadřuje, jak moc jsou hodnoty $X$ rozptýleny kolem $E(X)$. Čím je větší, tím jsou více rozptýleny.
 
 
-> [!note] Kvantil a Modus
-> **Kvantil** je míra polohy rozdělení pravděpodobnosti náhodné veličiny. Medián je 0.5-kvantil.
-> **Modus** je, zhruba řečeno, nejčastější hodnota náhodné veličiny
+> [!note] Kvantil, medián a modus
+> - **Kvantil** je míra polohy rozdělení pravděpodobnosti náhodné veličiny
+> - **Medián** je 0.5-kvantil.
+> - **Modus** je, zhruba řečeno, nejčastější hodnota náhodné veličiny
 
 ##### Navigace. 
 Předchozí:  [[Permutace, variace, kombinace]]
