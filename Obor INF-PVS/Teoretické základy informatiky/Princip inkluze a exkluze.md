@@ -1,6 +1,6 @@
 - **Princip inkluze a exkluze** je často používaný kombinatorický princip
 - Udává počet prvků sjednocení několika množin **pomocí počtu prvků průniku** jednotlivých množin
-- Pro množiny $A_{1}, ..., A_{n}$ platí $$| A_{1} \cup A_{2} \cup\ ...\ \cup A_{n}| = \sum_{\varnothing \neq l \subseteq \set{1,2,...,n}}(-1)^{|I|} |\cap_{i \in I} A_{i}|$$
+- Pro množiny $A_{1}, ..., A_{n}$ platí $$| A_{1} \cup A_{2} \cup\ ...\ \cup A_{n}| = \sum_{\varnothing \neq I \subseteq \set{1,2,...,n}}(-1)^{|I|} |\cap_{i \in I} A_{i}|$$
 - Zastavme se nejdřív nad tím, co princip inkluze a exkluze říká.
 	- Na levé straně rovnosti je počet prvků, které patří do sjednocení $A_{1} \cup ... \cup A_{n}$. tj. alespoň do jedné z $A_{1}, ... A_{n}$.
 	- Na pravé straně je součet výrazů $(-1)^{|I| + 1} | \cap_{i \in I} A_{i}|$, kde $I$ probíhá přes všechny neprázdné podmnožiny množiny $set{1, ..., n}$. $|\cap_{i +in I} A_{i}|$ je počet prvků průniku množiny, jejichž index patří do $I$

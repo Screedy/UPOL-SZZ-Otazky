@@ -3,7 +3,7 @@
 - *Teorie grafů* se zabývá situacemi spojenými s grafy
 	- Hledání nejkratší cesty
 	- Problém obchodního cestujícího
-	- Problém barvení grafu
+	- Problém barvení grafu (problém 4 barev)
 	- Eulerovy cesty a kružnice
 	- atd.
 - **Objekty** se nazývají *vrcholy*, **spojení** pak *hrany*
@@ -65,7 +65,6 @@
 	- ![[Pasted image 20250513100551.png|350]]
 #### Souvislost v grafu
 - Graf je souvislý pokud mezi každými 2 uzly $u$ a $v$ existuje sled z $u$ do $v$
-- 
 ## Podgrafy
 - Části grafů se nazývají podgrafy
 - (Orientovaný nebo neorientovaný) **graf $<V_{1}, E_{1}>$** je podgrafem grafu $<V_{2}, E_{2}>$, právě když **$V_{1} \subseteq V_{2}$ a $E_{1} \subseteq E_{2}$**. Podgraf $<V_{1}, E_{1}>$ grafu $<V_{2}, E_{2}>$ se nazývá **indukovaný**, právě když **$E_{1}$ obsahuje každou hranu z $E_{2}$**, jejíž oba **koncové vrcholy patří do $V_{1}$**
