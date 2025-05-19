@@ -38,7 +38,8 @@ Pro práci s tímto repozitářem v Obsidianu budete nejprve potřebovat naklono
 git clone https://github.com/Screedy/SZZ-Otazky2024.git
 ```
 
-
+>[!warning]
+> Na **operačním systému Windows** je limitovaná maximální délka cesty na 256 znaků. Tato limitace způsobí **špatné naklonování některých otázek** a případné problémy při pushování či pull request do remote repozitáře. Může se také stát, že některé otázky se vám budou zobrazovat jako nevypracované (či neexistující), přestože hotové jsou a to kvůli špatnému odkazu v Obsidian.
 ### Jak otevřít repozitář v Obsidian
 Po naklonování repozitáře na váš počítač postupujte takto, abyste jej otevřeli v Obsidian:
 1. Otevřete aplikaci Obsidian.

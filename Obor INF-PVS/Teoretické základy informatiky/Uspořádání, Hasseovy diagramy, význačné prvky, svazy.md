@@ -43,7 +43,7 @@
 - Je vhodné, aby se hrany nekřížili
 
 >[!Example] Příklad hasseova diagramu
->![[MacBook-2024-03-05-000783.png| 700]]
+>![[MacBook-2024-03-05-000783.png| 610]]
 ## Význačné prvky v uspořádaných množinách a jejich vztahy
 - Nechť $<X, \leq >$ je uspořádaná množina. Prvek $x \in X$ se nazývá:
 	- **minimální**, jestliže pro každý $y \in X$ platí: pokud $y \leq x$, pak $x = y$

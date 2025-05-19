@@ -14,8 +14,8 @@
 - Často se používá v kryptografii
 
 >[!tip] Věta - Bézoutova rovnost
-> Nechť $a, b \in \mathbb{N}$. Pak existují čísla $x, y, z \in \mathbb{Z}$ taková, že $NSD(a, b) = ax + by$.
-- Jinými slovy říká, že NSD dvou přirozených čísel lze zapsat jako *lineární kombinaci* s celočíselnými koeficienty. Tyto koeficienty můžeme získat použitím rozšířeného Eukleidova algoritmu.
+> Nechť $a, b \in \mathbb{N}$. Pak existují čísla $x, y \in \mathbb{Z}$ taková, že $NSD(a, b) = ax + by$.
+- Jinými slovy říká, že NSD dvou přirozených čísel lze zapsat jako *lineární kombinaci* s celočíselnými koeficienty. Tyto koeficienty můžeme získat použitím rozšířeného Euklidova algoritmu.
 ```python
 # 01 rekurzivní 
 def gcd_recursive(a, b):

@@ -1,4 +1,4 @@
-- Číselné obory tvoří hierarchickou strukturu ($N⊂Z⊂Q⊂R⊂C$)
+- Číselné obory tvoří hierarchickou strukturu ($\mathbb{N} ⊂ \mathbb{Z} ⊂ \mathbb{Q} ⊂ \mathbb{R} ⊂ \mathbb{C}$)
  ![[Pasted image 20250318102849.png]]
 
 >[!info] Přirozená čísla

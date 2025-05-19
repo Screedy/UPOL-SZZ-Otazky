@@ -1,5 +1,6 @@
 ## Zásobníkový automat (PDA)
 - PDA (push-down automat) si lze představit jako konečný automat s tím, že navíc obsahuje (pomocnou) paměť, která pracuje jako zásobník a jejíž velikost není shora omezená
+- Přijímají (jako CFG) bezkontextové jazyky
 
 >[!info] Definice nedeterministického zásobníkového automatu
 >- **Nedeterministický zásobníkový automat** (PDA) je sedmice $M = (Q, \Sigma, \Gamma, \delta, q_{0}, Z_{0}, F)$, kde:
@@ -15,7 +16,7 @@
 #### Konfigurace
 - Nechť $M = (Q, \Sigma, \Gamma, \delta, q_{0}, Z_{0}, F)$ je PDA.
 - **Vnitřní konfigurací** $M$ nazveme libovolný prvek $(q, \gamma) \in Q \times \Gamma^{*}$, kde $q$ je **momentální stav** PDA $M$ a $\gamma$ je **celý obsah zásobníku** s vrcholem psaným vlevo.
-- **Konfigurací** nazveme libovolný prvek $(p, w, a)$ z $Q \times \Sigma^{*} \times \Gamma^{*}$, udávající mimo vnitřní konfigurace navíc i $w$ - **dosud nepřečtenou část vstupního řetězu**.
+- **Konfigurací** nazveme trojici $(p, w, a)$ z $Q \times \Sigma^{*} \times \Gamma^{*}$, udávající mimo vnitřní konfigurace navíc i $w$ - **dosud nepřečtenou část vstupního řetězu**.
 
 - Na množině všech konfigurací automatu $M$ definujeme binární relaci $\vdash_{M}$, **krok výpočtu** takto: $$(p, aw, Za) \vdash_{M} (q, w, \gamma a) \Leftrightarrow^{def} \exists(q,\gamma) \in \delta(p, a, Z) \text{ pro } a \in \Sigma \cup \set{\epsilon}$$ Reflexivní a tranzitivní uzávěr relace kroku výpočtu značíme $\vdash_{M}^{*}$
 

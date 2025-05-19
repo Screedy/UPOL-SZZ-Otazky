@@ -165,7 +165,7 @@ Nechť $f : \mathbb{R} \to \mathbb{R}$ je definována na intervalu $(a, b)$.
 	- Zjednodušeně, je-li funkce f spojitá v uzavřeném intervalu ⟨a,b⟩, pak nabývá v alespoň jednom bodě svého lokálního maxima a v alespoň jednom bodě svého minima.
 	- Tato věta nám dává jistotu v existenci lokálního maxima a minima, neříká však nic o jejich vyhledání
 	
-Nechť navíc $f(a) < f(b)$. Pak:
+Nechť navíc $f(a) < f(b)$, pak:
 3. **O nabývání mezihodnot (Bolzanova-Weierstrassova věta):** $f$ nabývá v intervalu $(a, b)$ všech hodnot mezi $f(a)$ a $f(b)$. 
 	- To znamená, že pro libovolné číslo $d \in (f(a), f(b))$ existuje číslo $c \in (a, b)$ takové, že $f(c) = d$.
 >[!tip] Bolzanova věta
@@ -203,11 +203,10 @@ Nechť navíc $f(a) < f(b)$. Pak:
 $$
 \lim_{x \to a^+} f(x) \neq \lim_{x \to a^-} f(x)
 $$
--  tomto případě nazveme bod $a$ nespojitostí prvního druhu a číslo
+-  V tomto případě nazveme bod $a$ nespojitostí prvního druhu a číslo $s(a)$ nazýváme **skokem funkce v bodě $a$.**
 $$
 s(a) = \lim_{x \to a^+} f(x) - \lim_{x \to a^-} f(x)
 $$
-nazýváme **skokem funkce v bodě $a$.**
 - Např. funkce $f(x) = \text{sgn} x$ má v bodě 0 nespojitost prvního druhu.
 	- ![[Pasted image 20240628133546.png]]
 

@@ -32,7 +32,7 @@
 
 ## Důsledky spojitosti funkce
 - Spojitost funkce na intervalu má zajímavé důsledky důležité pro vyšetření průběhu funkce
-### O omezenosti a minimu (Weierstrassova věta)
+### Weierstrassova věta o omezenosti a minimu 
 - Nechť $f : \mathbb{R} \to \mathbb{R}$ je spojitá na uzavřeném intervalu $\langle a, b \rangle$. Pak:
 	1. **O omezenosti**: $f$ je omezená na $\langle a, b \rangle$.
 	2. **O maximu a minimu:** $f$ nabývá na $\langle a, b \rangle$ svého (lokálního) maxima a minima. 
@@ -44,13 +44,14 @@
 - Nechť navíc $f(a) < f(b)$. Pak:
 	3. **O nabývání mezihodnot (Bolzanova-Weierstrassova věta):** $f$ nabývá v intervalu $(a, b)$ všech hodnot mezi $f(a)$ a $f(b)$. 
 	- To znamená, že pro libovolné číslo $d \in (f(a), f(b))$ existuje číslo $c \in (a, b)$ takové, že $f(c) = d$.
-### Bolzanova věta 
-- Nechť $f : \mathbb{R} \to \mathbb{R}$ je spojitá na uzavřeném intervalu $\langle a, b \rangle$ taková, že $f(a) \cdot f(b) < 0$. Pak existuje $c \in \mathbb{R}$ takové, že $c \in (a, b)$ a $f(c) = 0$.
-	-  její graf v alespoň jednom vnitřním bodě tohoto intervalu protíná osu x
-- Jedná se o postačující podmínku, který je přímým důsledkem **Bolzano-Weierstrassovy** věty
-	- zajišťuje nám existenci nulového bodu
-	- nulový bod lze nalézt **metodou půlení intervalu**
-- ![[Pasted image 20240628134849.png | 300]]
+	
+>[!tip] Bolzanova věta 
+> - Nechť $f : \mathbb{R} \to \mathbb{R}$ je spojitá na uzavřeném intervalu $\langle a, b \rangle$ taková, že $f(a) \cdot f(b) < 0$. Pak existuje $c \in \mathbb{R}$ takové, že $c \in (a, b)$ a $f(c) = 0$.
+>> -  její graf v alespoň jednom vnitřním bodě tohoto intervalu protíná osu x
+> - Jedná se o **postačující podmínku**, který je přímým důsledkem *Bolzano-Weierstrassovy* věty
+>> - zajišťuje nám existenci nulového bodu
+>> - nulový bod lze nalézt **metodou půlení intervalu**
+> - ![[Pasted image 20240628134849.png | 300]] 
 
 ### O hodnotách spojité funkce
   - Funkce $f$ je spojitá na uzavřeném intervalu $\langle a, b \rangle$ a v $(a, b)$ nemá žádné nulové body, pak na $(a, b)$ je buď $f(x) > 0$ nebo $f(x) < 0$ pro všechny $x \in (a, b)$.

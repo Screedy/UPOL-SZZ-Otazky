@@ -112,7 +112,7 @@
 >  - Pak např. $AaBAbBS$ je větná forma $G$, zatímco $ABb$ nikoliv.
 >  - Jazyk $L(G)$ vypadá takto: $$L(G) = \set{u \in \set{a,b}^{*} | \#_{a}(u)=\#_{b}(u)}.$$
 
-## Chromského hierarchie gramatik a jazyků
+## Chomského hierarchie gramatik a jazyků
 - ![[Pasted image 20250504185700.png]]
 - Lingvista **Noam Chomsky** rozdělil gramatiky do čtyř skupin (typů) na základě různých omezení na tvar pravidel
 - Jeho práce byla původně motivována úvahami o struktuře přirozeného jazyka, z dnešního pohledu má však především význam jako základní rozdělení gramatik podle jejich popisné síly.

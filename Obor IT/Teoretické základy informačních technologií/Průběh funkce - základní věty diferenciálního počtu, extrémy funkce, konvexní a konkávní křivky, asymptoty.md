@@ -65,7 +65,7 @@ $$\forall x \in P^-(a) : f(x) < f(a) \quad \text{a} \quad \forall x \in P^+(a) :
 - Tyto body označujeme jako **stacionární body** 
 	- Výstižněji také "**body podezřelé z extrému**".
 
->[!Tip] Poznámka
+>[!note] Poznámka
 >- Tvrzení nám sice zajišťuje podmínku, za které by mohl nastat v bodě extrém, nic nám však neříká, zda tam opravdu nastane.
 >	- kladná (záporná) derivace v bodě $\implies$ funkce v bodě roste (klesá),
 >	- extrém v bodě $\implies$ nulová derivace v bodě.
@@ -73,7 +73,7 @@ $$\forall x \in P^-(a) : f(x) < f(a) \quad \text{a} \quad \forall x \in P^+(a) :
 >- Uvažujme funkci $f : y = x^3$, $x \in \mathbb{R}$ v bodě $x = 0$. Derivace $f'(x) = 3x^2$ a tedy $f'(0) = 0$, přitom v libovolném levém okolí nuly platí:
 >$$\forall x \in P_-(0) : f(x) < f(0) \land \forall x \in P_+(0) : f(x) > f(0)$$
 
->[!Tip] Poznámka
+>[!note] Poznámka
 >- Extrému může nabýt funkce v bodě, v němž derivace vůbec neexistuje
 >- Např. funkce $f : y = |x|$ nemá v bodě $x = 0$ derivaci, má zde pouze jednostranné derivace (jednostranné limity) $f'_− = −1$ a $f'_+ = 1$. 
 >- Přitom víme, že má v tomto bodě minimum ($\forall x \in P(0) : f(x) > 0$).
@@ -202,12 +202,12 @@ $$f(x_2) > f(x_1) + \frac{f(x_3) - f(x_1)}{x_3 - x_1} (x_2 - x_1).$$
 
 ### O konvexnosti a konkávnosti funkce na intervalu
 - Nechť je $f$ spojitá na intervalu $I$ a nechť v každém vnitřním bodě tohoto intervalu existuje druhá derivace. Pak
-	1. Je-li $f''(x) > 0$ v každém vnitřním bodě $x$ intervalu $I$, je $f$ ryze konvexní na $I$.
+	1. Je-li $f''(x) > 0$ v každém vnitřním bodě $x$ intervalu $I$, je $f$ ryze konvexní na $I$
 		- posloupnost směrnic tečen roste
-	1. Je-li $f''(x) < 0$ v každém vnitřním bodě $x$ intervalu $I$, je $f$ ryze konkávní na $I$.
+	2. Je-li $f''(x) < 0$ v každém vnitřním bodě $x$ intervalu $I$, je $f$ ryze konkávní na $I$
 		- posloupnost směrnic tečen klesá
 		- "Do konkávy do kávu nenaliješ" :)
-	1. Je-li $f''(x) = 0$ v každém vnitřním bodě $x$ intervalu $I$, je $f$ lineární na $I$.
+	3. Je-li $f''(x) = 0$ v každém vnitřním bodě $x$ intervalu $I$, je $f$ lineární na $I$.
 
 - Bod, kde se konvexnost mění na konkávnost nebo naopak, nazveme **inflexním bodem**.
 

@@ -2,8 +2,8 @@
 
 - Nechť je $f: \mathbb{R} \rightarrow \mathbb{R}$ definována na intervalu $I$ libovolného druhu.
 - Potom máme funkci $F: \mathbb{R} \rightarrow \mathbb{R}$ takovou, že $\forall{x} \in I$ platí $F'(x)=f(x)$
-	 - *pokud zderivuji funkci $F$ dostanu funkci $f$
-	 -  $F$ nazýváme **primitivní funkcí k $f$ na $I$*
+	 - pokud zderivuji funkci $F$ dostanu funkci $f$
+	 - $F$ nazýváme **primitivní funkcí k $f$ na $I$**
 
 ### O primitivní funkci
 1. Nechť $F$ je primitivní funkce k $f$ na $I$. Pak také funkce $G$ definovaná předpisem $G(x) = F(x) + c$, $x \in I$, $c \in \mathbb{R}$ je primitivní funkcí k $f$ na $I$.
@@ -15,7 +15,7 @@
 - Nechť existuje alespoň jedna primitivní funkce $F$ k funkci $f$ na intervalu $I$.
 - Množinu všech primitivních funkcí k funkci $f$ na $I$ pak nazýváme **neurčitý integrál funkce $f$ na $I$** a značíme jej $$\int{f(x)dx}=\{F(x) +c\ |\ c \in \mathbb{R}\}.$$
 - Primitivních funkcí $F(x)$ k funkci $f$ je nekonečně mnoho a liší se pouze konstantou $c$
-	- jde o tzv. *integrační konstantu
+	- jde o tzv. *integrační konstantu*
 	- to je dáno tím, že při derivaci funkce $F$ se vyloučí veškeré konstanty
 - Po integraci funkce $f$ na $F$ je vhodné tuto konstantu pro úplnost doplnit
 	- (po získání primitivní funkce k $f$ - *opačná operace k derivaci*)

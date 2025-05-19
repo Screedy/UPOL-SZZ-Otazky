@@ -1,4 +1,3 @@
-
 ### Skalární součin
 
 - Nechť $V=(V ;+, \mathbb{R},\,\cdot\,)$ je VP nad tělesem reálných čísel. Skalárním součinem na $V$ nazveme každé zobrazení $\circ: V \times V \rightarrow \mathbb{R}$, které pro každé $\vec{u}, \vec{v}, \vec{w} \in V$ a pro každé $c \in \mathbb{R}$ splňuje:
@@ -30,7 +29,7 @@ $$
 - Ze Schwarzovy nerovnosti plyne, že úhel $\varphi$ je určen korektně.
 - Platí, že $\cos \varphi(\vec{u}, \vec{v})=\frac{\vec{u} \cdot \vec{v}}{\|\vec{u}\| \cdot\|\vec{v}\|}$, kde $0 \leq \varphi \leq \pi$.
 
-### Ortogonální(kolmé) vektory
+### Ortogonální (kolmé) vektory
 - Vektory $\vec{u}$ a $\vec{v}$ jsou **navzájem ortogonální**, pokud je **jejich skalární součin roven nule**, tj. pokud $\vec{u} \cdot \vec{v}=0$. Píšeme $\vec{u} \perp \vec{v}$. 
 >[!Tip]
 >- To zřejmě nastane pokud je jeden z těchto vektorů nulový vektor $0 \in R^n$ nebo pokud svírají tyto vektory pravý úhel, tj. $\cos \varphi=0$ neboli $\varphi(\vec{u}, \vec{v})=\frac{\pi}{2}$

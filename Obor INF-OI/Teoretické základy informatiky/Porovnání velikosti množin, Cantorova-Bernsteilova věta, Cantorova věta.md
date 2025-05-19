@@ -4,7 +4,7 @@
 1) Pro konečnou množinu $A$ lze $|A|$ ztotožnit s počtem prvků $A$
 2) Pro nekonečnou množinu je to složitější
 - Můžeme provádět operace porovnání $|A|= |B|$, $|A|<|B|$ a $|A|>|B|$
-- Značíme $ℵ$
+- Značíme $ℵ$ (alef)
 - $ℵ_0 = |\mathbb{N}|$, tj. mohutnost množiny $\mathbb{N}$
 - $ℵ_1 = |\mathbb{R}|$, tj. mohutnost množiny $\mathbb{R}$
 	- víme, že $ℵ_0 < ℵ_1$

@@ -1,4 +1,3 @@
-
 ## Pumping lemma pro regulární jazyky
 - Užitečný nástroj, který umožňuje dokázat, že daný jazyk **není** regulární (**neumožňuje** dokázat, že jazyk regulární je)
 >[!info] Definice

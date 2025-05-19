@@ -42,13 +42,15 @@
 >[!Example] Příklad
 >- Gramatika $G_{1}$ s pravidly $E \rightarrow E+E |\ E*E |\ (E) |\ i$, která je ekvivalentní s gramatikou $G_{0}$ z příkladu výše. Je víceznačná, např. protože věta $i+i+i$ má dvě různé levé derivace a jim odpovídající dva různé derivační stromy:![[MacBook-2024-05-29-001395.png]]
 
-- **Chromského normální forma**
-	- Řekneme, že CFG $G = (N, \Sigma, P, S)$ je v **Chromského normální formě**, právě když je $G$ bez $\epsilon$-pravidel a každé pravidlo z $P$ má jeden z těchto tvarů:
-		- $A \rightarrow BC, B,C \in N$
-		- $A \rightarrow a, a \in \Sigma$
+#### Chomského normální forma (CNF)
+- Řekneme, že CFG $G = (N, \Sigma, P, S)$ je v *Chomského normální formě*, právě když je $G$ bez $\epsilon$-pravidel a každé pravidlo z $P$ má jeden z těchto tvarů:
+	- $A \rightarrow BC$ ... neterminál generuje dva neterminály
+	- $A \rightarrow a$ ... neterminál generuje jeden terminál
+	- $S \rightarrow \epsilon$, pokud $S$ není na pravé straně žádného pravidla
+- Převod CFG se provádí pomocí 6 kroků (lze tam převést každá)
 
-- **Greibachová normální forma**
-	- Řekneme, že CFG $G = (N, \Sigma, P, S)$ je v **Greibachové normální formě**, právě když je $G$ **bez $\epsilon$-pravidel** a každé pravidlo z $P$ je tvaru $A \rightarrow a \alpha (a \in \Sigma, \alpha \in N^{*})$
+#### Greibachová normální forma
+- Řekneme, že CFG $G = (N, \Sigma, P, S)$ je v **Greibachové normální formě**, právě když je $G$ **bez $\epsilon$-pravidel** a každé pravidlo z $P$ je tvaru $A \rightarrow a \alpha (a \in \Sigma, \alpha \in N^{*})$
 
 ## Bezkontextové jazyky
 - Jazyk, který je definovaný nějakou bezkontextovou gramatikou
@@ -107,7 +109,7 @@
 
 ---
 **! Navíc**
-#### Deterministické ezlkontextové jazyky
+#### Deterministické bezkontextové jazyky
 - V řadě (i praktických) aplikací je třeba zjistit, zda daný jazyk $L$ je (a nebo není) DCFL.
 - K důkazu, že je **DCFL stačí nalézt odpovídající DPDA**. Obrácená situace, kdy chceme ukázat, že $L$ není DCFL, může být složitější. Pokud by $L$ nebyl ani CFL, můžeme použít pumping lemma, ale často $L$ může být CFL, ale ne DCFL. Jelikož není známo žádné pumping lemma, které by platilo specialně do DCFL, **musíme se spolehnout jen na uzávěrové vlastnosti**. Naštěstí DCFL jsou uzavřeny na některé operace, například vůči doplňku, na něž CFL obecně uzavřeny nejsou.
 

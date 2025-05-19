@@ -9,8 +9,8 @@
 	- Jedno, ale libovolné, seřazení dostaneme tak, že vybereme $1.$ prvek *(lze provést $n$ způsoby)*, poté vybereme $2.$ prvek *(to lze provést $n-1$ způsoby)*, poté vybereme $3.$ prvek *(to lze $n-2$ způsoby)*, ..., nakonec vybereme $n$-tý prvek *(to lze provést jedním způsobem)*. Podle pravidla součinu lze takový výběr provést **$n * (n-1) * (n-2) * ... * 1 = n!$** způsoby. Tedy **$P(n) = n!$**.
 #### Permutace s opakováním
 - Seřazujeme-li objekty, z nichž některé jsou stejné
-- Je dáno **$n$ objektů rozdělených do $r$ skupin**, které mají po řadě **$n_{1}, ..., n_{r}$ objektů**. Objekty v každé ze skupin jsou **navzájem nerozlišitelné.** Každé seřazení těchto $n$ objektů se nazývá **permutace s opakováním** (daným parametry ($n_{1}, ..., n_{r}$)). Počet takových permutací **značíme $P(n_{1}, ..., n_{r})$**.
-- Vzoreček: **Pro $n_{1} + ... + n_{r} = n$ je $P(n_{1}, ..., n_{r}) = \frac{n!}{n_{1} * ... * n_{r}}$**
+- Je dáno **$n$ objektů rozdělených do $r$ skupin**, které mají po řadě **$n_{1}, ..., n_{r}$ objektů**. Objekty v každé ze skupin jsou **navzájem nerozlišitelné.** Každé seřazení těchto $n$ objektů se nazývá **permutace s opakováním** (daným parametry ($n_{1}, ..., n_{r}$)). Počet takových permutací **značíme $\stackrel{\_\_}{P}(n_{1}, ..., n_{r})$**.
+- Vzoreček: **Pro $n_{1} + ... + n_{r} = n$ je $\stackrel{\_\_}{P}(n_{1}, ..., n_{r}) = \frac{n!}{n_{1}! * ... * n_{r}!}$**
 ## Variace
 - Je dáno $n$ (navzájem různých) objektů a číslo $r \leq n$. **Variace $r$ (objektů) z $n$ (objektů)** je **libovolný výběr $r$ objektů z daných $n$ objektů**, ve kterém záleží na pořadí vybíraných objektů. 
 - Počet takových variací značíme $V(n,r)$.
