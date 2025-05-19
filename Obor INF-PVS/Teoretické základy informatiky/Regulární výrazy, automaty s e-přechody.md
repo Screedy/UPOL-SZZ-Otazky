@@ -1,4 +1,3 @@
-
 ## Regulární výrazy
 >[!info] Definice
 >- Množina regulárních výrazů (regular expressions) nad abecedou $\Sigma$, označovaná $RE(\Sigma)$, je definována induktivně takto:
@@ -25,9 +24,9 @@
 
 - Nechť $E$ je regulární výraz. Pak existuje konečný automat rozpoznávající $L(E)$
 - Nechť $L$ je akceptovaný nějakým (libovolným) DFA, pak $L$ je popsatelný nějakým regulárním výrazem.
->[!Example] Struktura převeditelnosti
->![[MacBook-2024-05-26-001346.png]]
 
+>[!info] Struktura převeditelnosti
+>![[MacBook-2024-05-26-001346.png]]
 
 ## Nedeterministický konečný automat s $\epsilon$-přechody
 - Model nedeterministického konečného automatu je možné dála rozšířit o tzv. $\epsilon$-kroky. Automat pak může svůj stav za určitých okolností změnit samovolně. Tato schopnost je formálně popsána pomocí $\epsilon$-kroků, které si lze na přechodových grafech představit jako hrany, jejichž návěštím je prázdné slovo. Přes tyto hrany může automat během výpočtu na slově $w$ měnit svůj stav bez toho, aby ze vstupu cokoliv přečetl - mezi přečtením dvou po sobě jdoucích symbolů z $w$ může provést libovolné konečné množství $\epsilon$-přechodů

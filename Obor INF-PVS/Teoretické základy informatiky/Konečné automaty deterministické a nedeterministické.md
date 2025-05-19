@@ -1,4 +1,5 @@
-## Deterministický konečný automat
+## Deterministický konečný automat (DFA)
+- *Deterministic finite automata*
 >[!info] Definice
 >- **Deterministický konečný automat** $M$ je uspořádaná pětice $M = (Q, \Sigma, \delta, q_{0}, F)$, kde:
 >	- $Q$ je neprázdná konečná množina stavů
@@ -8,7 +9,7 @@
 >	- $F \subseteq Q$ je množina koncových/akceptujících stavů
 
 - Takto definovaný automat je deterministický, protože se v každém kroku výpočtu nachází právě v jednom stavu
-- Abychom mohli definovat jazyk přijímaný daným DFA M, zavedeme rozšířenou přechodovou funkci $\hat{\delta}: Q \times E^{*} \rightarrow Q$, definovanou induktivně vzhledem k délce slova ze $\Sigma^{*}$:
+- Abychom mohli definovat jazyk přijímaný daným DFA M, zavedeme rozšířenou přechodovou funkci $\hat{\delta}: Q \times \Sigma^{*} \rightarrow Q$, definovanou induktivně vzhledem k délce slova ze $\Sigma^{*}$:
 	- $\hat{\delta}(q, \epsilon) = q$, pro každý stav $q \in Q$
 	- $\hat{\delta}(q, wa) = \delta(\hat{\delta}(q,w)a)$
 
@@ -34,7 +35,8 @@
 >[!Example] Příklad
 >- Máme za úkol sestrojit automat rozpoznávající jazyk $$L=\set{w \in \set{a,b}^{*} |\ w \text{ obsahuje podslovo abaa}}$$![[MacBook-2024-05-26-001344.png]]
 
-## Konečný nedeterministický automat
+## Nedeterministický konečný automat (NFA)
+- *Nondeterministic finite automata*
 - Jediný rozdíl je v tom, že **nedeterministický** automat **nemusí mít pro daný stav a vstupní symbol určen následující stav jednoznačně**. Slovo $w$ bude akceptován, pokud alespoň jeden z možných výpočtů nad slovem $w$ skončí v koncovém stavu.
 
 >[!info] Definice
@@ -48,6 +50,7 @@
 - Abychom mohli definovat jazyk přijímaný daným NFA M, zavedeme **rozšířenou přechodovou funkci** $\hat{\delta}: Q \times \Sigma^{*} \rightarrow 2^{Q}$, definovanou induktivně vzhledem k délce slova ze $\Sigma^{*}$:
 	- $\hat{\delta}(q, \epsilon)=\set{q}$, pro každý stav $q \in Q$
 	- $\hat{\delta}(q, wa)=\cup_{p \in \hat{\delta}(q,w)} \delta (p,a)$
+- Oproti DFA je rozdíl ve obrazech přechodové funkce, kde je $2^{Q}$ místo $Q$
 - Jazyk přijímaný NFA M je definován takto: $$L(M)=\set{w \in \Sigma^{*}|\ \hat{\delta}(q_{0}, w) \cap F \neq 0}$$
 - Nedeterminismus je velmi silný popisný aparát, který často umožňuje zachytit strukturu jazyka elegantním a přirozeným způsobem.
 >[!Example] Příklad
