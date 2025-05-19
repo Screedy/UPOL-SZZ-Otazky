@@ -20,19 +20,22 @@
 - ![[Pasted image 20240628174720.png | 500]]
 - Pokud bychom bod $S$ stále přibližovali k bodu $T$ (snižovali $\Delta{x}$) až by splynuly v jeden bod, vznikla by tečna, jejíž směrnice by udávala okamžitou rychlost růstu v daném bodě
 - Směrnici této tečny můžeme znázornit pomocí **limity**: $$k_t = \lim_{\Delta x \to 0} k_s = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}$$
-- ve výpočtu se často využívá substituce $x = x_0 + h$, tedy $h=x-x_0$ ($\Delta{x}$ je označen $h$,) $$k_t = \lim_{\Delta x \to 0} \frac{f(x_0 + h) - f(x_0)}{h}$$
-- Tato limita díky svojí důležitosti dostala název **derivace funkce v bodě**
+- ve výpočtu se často využívá substituce $x = x_0 + h$, tedy $h=x-x_0$ ($\Delta{x}$ je označen $h$) 
+>[!info] Derivace funkce v bodě
+> - Tuto limitu díky svojí důležitosti dostala označujeme jako **derivaci funkce v bodě**.
+$$k_t = \lim_{\Delta x \to 0} \frac{f(x_0 + h) - f(x_0)}{h}$$
+
 - Jelikož jde o směrnici tečny v daném bodě, můžeme říci, že pokud je kladná, je tečna v daném bodě rostoucí (v opačném případě klesající)
 - ![[Pasted image 20240628184706.png | 400]]
 - Má-li funkce $f$ v každém bodě intervalu $(a, b)$ kladnou, resp. zápornou derivaci, je v tomto intervalu rostoucí, resp. klesající.
 
 ## Derivace funkce v bodě
-- Vedle pojmu *limita*, spojitost patří derivace mezi základní stavební prvky diferenciálního počtu
+- Vedle pojmu *limita*, spojitost patří *derivace* mezi základní stavební prvky diferenciálního počtu
 - **Použití**:
-	- určení okamžité rychlosti dané veličiny v daném v bodě (směrnice tečny v bodě)
-	- vyšetření průběhu funkce – monotonie, extrémy, konvexnost/konkávnost, inflexní body
-	- optimalizace – hledání lokálního maxima/minima
-	- určení některých limit pomocí l’H pravidla
+	1) určení okamžité rychlosti dané veličiny v daném v bodě (směrnice tečny v bodě)
+	2) vyšetření průběhu funkce – monotonie, extrémy, konvexnost/konkávnost, inflexní body
+	3) optimalizace – hledání lokálního maxima/minima
+	4) určení některých limit pomocí *L’Hospitalova pravidla*
 - Říkáme, že funkce má v bodě $x_0 \in D(f)$ derivaci, je-li definovaná v okolí bodu $x_0$ a existuje-li
 $$
 \lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h}

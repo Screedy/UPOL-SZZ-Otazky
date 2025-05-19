@@ -37,7 +37,7 @@
 	- Postup algoritmu viz gif výše. Vstupem je seznam čísel, z kterého se od nejmenšího odebírají postupně čísla a jejich násobky. Pokud by odebírané číslo mělo být větší než odmocnina největšího čísla, tak algoritmus skončí). Neodebraná čísla jsou prvočísla. 
 ## Věty o jednoznačnosti
 >[!tip] Věta o jednoznačnosti dělění se zbytkem
->Pro $a, b \in \mathbb{Z}, b \neq 0$ extisutjí jednoznačně určená $q, r \in \mathbb{Z}$ tak, že $a = bq + r$ a $0 ≤ r < b$.
+>Pro $a, b \in \mathbb{Z}, b \neq 0$ existují jednoznačně určená $q, r \in \mathbb{Z}$ tak, že $a = bq + r$ a $0 ≤ r < b$.
 - Číslu $r$ říkáme *zbytek po celočíselném dělení*, číslo $q$ je *částečný podíl*
 	- $a \mod b = r$
 

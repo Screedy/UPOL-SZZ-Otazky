@@ -3,7 +3,7 @@
 	- Cauchyův
 	- Newtonův,
 	- **Riemannův** (nejčastější) - zobecnění Cachyuova integrálu,
-	- Lebesgueův...
+	- Lebesgueův, ...
 - Definice se liší množinou funkcí, pro které platí
 - Na rozdíl od neurčitého integrálu, kde výsledkem je množina primitivních funkcí, je výsledkem určitého integrálu **číslo**, které můžeme interpretovat jako obsah plochy pod křivkou grafu funkce $f$ na intervalu $\langle a, b \rangle$ 
 	- určitý integrál uvažujeme na uzavřeném intervalu, na níž je funkce $f$ omezena
@@ -136,8 +136,6 @@ $$\forall \epsilon > 0 \; \exists \delta > 0 \; \forall x, y \in \langle a, b \r
 > - Nechť $f \in \mathcal{R}(a, b)$ a $F(x) = \int_{a}^{x} f(t)dt$, pak $F$ je spojitá na $\langle a, b \rangle$.
 > - Nechť $f$ je spojitá na $\langle a, b \rangle$, pak $F(x) = \int_{a}^{x} f(t)dt$, je diferencovatelná na $\langle a, b \rangle$, a platí $F' = f$.
 > 	- $F$ je tedy primitivní k $f$.
-
-
 
 ### Newton-Leibnizova formule
 - Následující věta umožňuje snadný způsob výpočtu určitého integrálu:
