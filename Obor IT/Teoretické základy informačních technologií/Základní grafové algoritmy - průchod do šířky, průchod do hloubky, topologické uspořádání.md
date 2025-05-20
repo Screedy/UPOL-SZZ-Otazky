@@ -79,7 +79,7 @@ proc bfs(G, s)
 - Dále si pro každý uzel budeme **zaznamenávat čas**, kdy byl navštíven poprvé a změnil barvu z `white` na `gray`. K tomu použijeme **položku $d$.** Dále **zaznamenáme čas, kdy byl uzel navštíven podruhé,** k tomu použijeme **položku $f$**
 - Čas budeme udržovat pomocí **globální proměnné `time`**, kterou na začátku nastavíme na $0$, a na vhodných místech inkrementujeme
 ```python
-proc dfs(G)
+def dfs(G)
   foreach u in G.V
     color[u] = white
     parent[u] = nil
@@ -88,18 +88,18 @@ proc dfs(G)
     if color[u] == white
     dfs-visit(G,u)
 ```
-```c
-proc dfs-visit(G, u)
+```python
+def dfs-visit(G, u)
   time = time + 1
-  d[u] = time  // prvni navsteva uzlu u
+  d[u] = time  # prvni navsteva uzlu u
   color[u] = gray
-  foreach v in G.adj[u] // navstivime vsechny nenavstivene sousedy u
+  foreach v in G.adj[u] # navstivime vsechny nenavstivene sousedy u
     if color[v] == white
       parent[v] = u
       dfs-visit(G,v)
   color[u] = black
   time = time + 1
-  f[u] = time   // druha navsteva uzlu u
+  f[u] = time   # druha navsteva uzlu u
 ```
 - **Složitost:**
 	- Proceduru `dfs-visit` voláme **pro každý uzel právě jednou**
