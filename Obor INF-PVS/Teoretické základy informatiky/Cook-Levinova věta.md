@@ -1,4 +1,4 @@
->[!info] Cookova věta
+>[!info] Cookova (Cookova-Levivona) věta
 >- Problém SAT je NP-úplný.
 >  
 >  **Název:** SAT (problém splnitelnosti booleovských formulí)

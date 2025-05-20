@@ -1,5 +1,5 @@
 >[!tip] Konkrétní polynomiální redukce
->$$SAT \leq_{p} 3-SAT \leq_{p} IS_{DEC} \leq_{p} VC_{DEC} \leq_{p} HC \leq_{p} HK \leq_{p} \triangle - TSP_{DEC} \leq_{p} TSP_{DEC}$$
+>$$SAT \leq_{p} 3-SAT \leq_{p} IS_{DEC} \leq_{p} VC_{DEC} \leq_{p} HC \leq_{p} HK \leq_{p} \triangle - TSP_{DEC} \leq_{p} TSP_{DEC}$$ 
 
 >[!info] $SAT$ (problém splnitelnosti booleovských formulí)
 >**Název**: SAT

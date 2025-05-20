@@ -37,6 +37,8 @@
 #### Netriviální I/O vlastnost
 - Platí podle [[Riceova věta|Riceovy věty]]
 - Zda-li daný TS má onu vstupně-výstupní vlastnost
+#### Zda jazyk generovaný CFG je celý?
+- Neboli máme CFG $G = (\prod, \Sigma, S, P)$ a otázka zda $L(G) = \Sigma^*$
 
 ##### Navigace
 Předchozí:  [[Church-Turingova teze, varianty TS]]
