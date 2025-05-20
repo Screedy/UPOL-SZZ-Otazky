@@ -17,7 +17,7 @@
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/DB1HFCEdLxA?si=R0IPA6zVt48l5f0k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-### Operace s AVL stromy
+## Operace s AVL stromy
 - Operace `insert` a `delete` děláme jako u **binárního vyhledávacího stromu**. Problém ovšem je, že **tyto operace mohou strom učinit nepřípustným**![[MacBook-2024-03-12-000859.png]]
 >[!tip]
 >Pozorujme, že přidáním nebo odebráním uzlu můžeme změnit vyváženost **pouze uzlů na cestě** od přidaného/smazaného uzlu **ke kořeni**. 
@@ -56,7 +56,7 @@ struct tree {
 	- $h(x)$ ... výška podstromu s kořenem $x$
 	- $\rightarrow$ ... odvodím
 
-##### 1. případ - Pravá (Levá) rotace
+##### 1. případ - Jednoduchá pravá či levá rotace
 - $A$ je o jedna větší než $B$ a $C$
   $y.\text{bf} == 1 \rightarrow \ \ \ h(A) = h(B) + 1$
   $\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ h(y) = h(A) + 1$
@@ -67,7 +67,7 @@ struct tree {
 
 - Po rotaci: $h(y) = h(A) + 1$
   ![[MacBook-2024-03-12-000860.png| 400]]
-##### 2. případ - Pravá (Levá rotace)
+##### 2. případ - Pravá rotace
 - $C$ je o jedna menší než $A$ a $B$
   $y.\text{bf} == 0 \rightarrow \ \ \ h(A) = h(B)$
   $\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ h(y) = h(A) + 1$
@@ -91,7 +91,7 @@ struct tree {
 - Nemůžeme použít pravou rotaci, protože po přepojení je $B$ o dva větší než $A$.![[MacBook-2024-03-13-000868.png| 500]]
 - $x. \text{bf} == 2 \rightarrow$ $y$ existuje
   $y. \text{bf} == -1 \rightarrow$ $z$ existuje
-  
+##### 4. případ - Levo-pravá rotace
   $z.\text{bf} == 1 \rightarrow \ \ \ h(B) = h(C)+1$
   $\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ h(z) = h(B) + 1$
   $y.\text{bf} == -1 \rightarrow \ \ h(z) = h(A) + 1$
