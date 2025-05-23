@@ -11,14 +11,19 @@
 #### Sdílené vazby
 - umožní komunikaci mezi procesy
 - nový proces sdílí s procesem, který jej vytvořil všechny vazby definované **v době vzniku**
+## Paralelní program
+- **paralelní program** ... určuje více procesů, které spolupracují na splnění úkolu
+	- např. UI, OS, paralelní algoritmy, databázové systémy
+- velký úkol se rozdělí na menší části, které se vykonávají naráz
+- přináší určitá úskalí, která je nutno řešit (sdílení vazeb, sdílení zdrojů, přepínání procesů)
+
 ## Plánovač
-- uloží běžící proces a následně obnoví **náhodně** vybraný proces
+- uloží běžící proces a následně obnoví **náhodně** nebo jinak vybraný proces
+- zajišťuje přepínaní mezi procesy, tak aby se dostaly ke zdrojům
 - spouštíme po
 	- náhodně zvoleném čase (čas jako počet kroků zásobníkového stroje)
 	- nebo při vyprázdnění programového zásobníku
 
-- **paralelní program** ... určuje více procesů, které spolupracují na splnění úkolu
-	- např. UI, OS, paralelní algoritmy, databázové systémy
 #### Algoritmy pro plánování
 1) First comed first served
 	- první proces získá procesor, zbytek čeká ve frontě
