@@ -32,10 +32,10 @@
 1. **Ignorování konstant**
 	- O-notace ignoruje konstantní násobky a nízké řády členů.
 	- To znamená, že $O(2n) = O(n)$ a $O(3n^{2}+5n) = O(n^{2})$.
-2. Tranzitivita
+2. **Tranzitivita**
 	- Pokud $f(n) = O(g(n))$ a $g(n) = O(h(n))$, pak $f(n) = O(h(n))$.
 	- Umožňuje porovnávat různé algoritmy a funkce pomocí řetězení jejich asymptotických růstových charakteristik.
-3. Sčítání
+3. **Sčítání**
 	- Pokud $f(n) = O(g(n))$ a $h(n) = O(p(n))$, pak $f(n)+h(n)=O(max(g(n),p(n)))$.
 	- Tato vlastnost nám říká, že celkový růst funkce je ovlivněn tím, který člen domunuje při velkých hodnotách $n$.
 
@@ -53,7 +53,7 @@
 - $f = o(g)$ právě když $g = \omega (f)$.
 
 ## Big-O Complexity chart
-![[MacBook-2024-04-29-001106.png]]
+![[MacBook-2024-04-29-001106.png|650]]
 
 <iframe width="690" height="385" src="https://www.youtube.com/embed/__vX2sjlpXU?si=E-RiU8rWlfMJvZvC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

@@ -11,7 +11,7 @@
 	- mezera - odděluje jednotlivé rámce
 
 ### Mac adresa
-- Každé zařízení v počítačové síti má fyzické síťové rozhraní. (NIC)
+- Každé zařízení v počítačové síti má fyzické síťové rozhraní (NIC - network interface controller)
 - Každé fyzické rozhraní má fyzickou adresu, označujeme jako MAC adresa
 - Velikost **6B**, zapisuje se hexadecimálně ve tvaru XX:XX:XX:XX:XX:XX, kde X je $0-9$ nebo $A-F$
 	- První 3B - identifikace výrobce
@@ -40,9 +40,12 @@
 	- Jako CSMA, ale jakmile začne vysílat **neustále poslouchá**
 	- Pokud dojde ke kolizi okamžitě se zastaví a vyšle signál **JAM**
 	- Po odeslání JAM signálu se uzel na náhodnou dobu odmlčí (Výchozí čas podle MAC adresy)
+	- Po určitém počtu (obvykle 16) neúspěšných pokusů je přenos jako celek neúspěšný
 
 - **CSMA/CA (Carrier Sense Multiple Access / Collision Avoidance)**
 	- Snaží se kolizím předcházet
+	- Možnost "rezervovat" si médium
+	- Po odvysílání rámce se čeká na jeho potvrzení
 	- V bezdrátových sítích
 
 - Moderní **ethernetový kabel** nevyužívá CSMA/CD, jelikož nedochází ke kolizím

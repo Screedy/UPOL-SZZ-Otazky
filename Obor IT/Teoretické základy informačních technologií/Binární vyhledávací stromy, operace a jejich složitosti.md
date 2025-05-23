@@ -33,7 +33,7 @@ struct tree {
 ```
 
 ### Operace s binárními stromy
-#### Průchod stromem
+#### Rekurzivní průchod stromem
 ```C
 //navštíví všechny vrcholy podstromu s kořenem x
 proc in-order-walk(x) 
@@ -43,7 +43,12 @@ proc in-order-walk(x)
     in-order-walk(x.right)
 ```
 - $\Theta (n)$ (analogie průchodu do hloubky)
-
+#### Průchod do hloubky (DFS)
+- Používá zásobník (stack)
+- ![[Depth-First-Search.gif|300]]
+#### Průchod do šířky (BFS)
+- Používá frontu (queue)
+- ![[Breadth-First-Search-Algorithm.gif|300]]
 #### Vyhledávání
 - Porovnávám klíč s klíčem vrcholu, **podle výsledku** pokračuji do levého nebo do pravého podstromu
 ```C

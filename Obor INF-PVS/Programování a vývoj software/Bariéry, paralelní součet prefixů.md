@@ -10,7 +10,9 @@
 	- **problém:** takto implementovanou bariéru můžeme použít pouze jednou
 >[!info]
 >**Fetch and add**
-> Složená atomická operace `FA(var, num)`. `var` je proměnná a `num` číslo. Atomicky provede následující kroky: zjistí hodnotu `val` proměnné `var`, zvýší hodnotu `var` o `num` a vrátí hodnotu `val`.
+> Složená atomická operace `FA(var, num)`.
+>> - `var` je proměnná a `num` číslo.
+>> - Atomicky provede následující kroky: zjistí hodnotu `val` proměnné `var`, zvýší hodnotu `var` o `num` a vrátí hodnotu `val`.
 ```python
 # Implementace bariéry
 FA(count, 1)
@@ -33,6 +35,3 @@ $$
 - Paralelním přístupem sčítám postupně v krocích prvky v poli, tím se mi postupně budují nová pole a zvětšuji vzdálenost sčítaných prvků ($0, 1, ...$)
 	- Postupně dostavám korektní výsledky od začátku pole až nakonec
 - Tím se mi časová složitost zlepší na $log_2(n)$
-- 
- 
-

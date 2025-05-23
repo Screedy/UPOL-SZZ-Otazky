@@ -10,13 +10,13 @@
 4) integrita ... zabránění neoprávněnému přístupu
 5) robustnost ... chování při ztížených podmínkách
 #### Vnitřní vlastnosti (od programátora)
-6) udržovatelnost ... snadnost přidání nových funkcí
-7) flexibilita ... úprava pro jiné než původně zamýšlené použití
-8) přenositelnost ... běh v jiných prostředích
-9) znovupoužitelnost ... kolik % můžeme použít i jinde
-10) čitelnost ... čtení zdrojáků
-11) testovatelnost ... nutné úsilí při tvorbě testů
-12) srozumitelnost ... pochopení architektury
+1) udržovatelnost ... snadnost přidání nových funkcí
+2) flexibilita ... úprava pro jiné než původně zamýšlené použití
+3) přenositelnost ... běh v jiných prostředích
+4) znovupoužitelnost ... kolik % můžeme použít i jinde
+5) čitelnost ... čtení zdrojáků
+6) testovatelnost ... nutné úsilí při tvorbě testů
+7) srozumitelnost ... pochopení architektury
 #### Formátování
 - zkombinovat obojí je náročné (i drahé)
 - vazba vlastností? vyžadují se navzájem? není nutné, požadavky se celkem doplňují

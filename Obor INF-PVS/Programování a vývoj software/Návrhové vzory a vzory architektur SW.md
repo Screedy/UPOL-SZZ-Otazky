@@ -89,14 +89,15 @@
 - v compiletime nemusíme vědět jaké třídy konkrétně dostaneme
 #### Abstract factory
 - využívá se hodně
-- vytvaří instance vzájemně souvisejících tříd, ale nemusíme specifikovat konkrétní třídy těchto objektů
+- vytváří instance vzájemně souvisejících tříd, ale nemusíme specifikovat konkrétní třídy těchto objektů
+- jsme pak schopni s více těmito třídami komunikovat skrz jedno rozhraní
 #### Builder
 - tolik se nepoužívá
 - odděluje konstrukci objektů od jejich prezentace
 #### Factory method
 - vysoké použití
-- interface pro tvorbu objektů, jehož potomci rozhodnou co se vytvoří
-- při tom když třída neví jaké třídy objektů má vytvářet
+- rozhraní pro tvorbu objektů, jehož potomci rozhodnou jaká přesná instance se vytvoří
+- použití při tom, když třída neví jaké třídy objektů má vytvářet
 - má několik součástí
 	- product
 	- concrete product
@@ -108,14 +109,14 @@
 #### Prototype
 - střední
 - specifická instance třídy
-- nový objekt se vytvoří klonováním prototypu
+- nový objekt se vytvoří klonováním prototypu (když je vytvoření nového objektu nákladné)
 #### Singleton
-- dost se používá
+- hodně se používá
 - třída pouze s jedinou instancí (globálně dostupná)
 - chceme, aby danou funkcionalitu měla pod kontrolou jen 1 instance
 	- např. logger, přístup do DB, plánovač v OS
 - konkrétní implementaci je nejlepší nechat přímo na třídě (globální proměnná není moc dobrá)
-- `private konstruktor`
+- specifikum je `private konstruktor`
 ## Strukturální vzory
 - jak jsou třídy a objekty složeny do sebe
 - využívají dědičnost
@@ -124,50 +125,53 @@
 - konvertuje rozhraní navzájem nekompatabilních tříd
 - příklad celkem triviální
 - součásti
-	- target - definice rozhraní v dané doméně
-	- client - volá nekompatabilní rozhraní
-	- adaptee - nekompatabilní rozhraní
-	- adapter - překladač
+	- *target* - definice rozhraní v dané doméně
+	- *client* - volá nekompatabilní rozhraní
+	- *adaptee* - nekompatabilní rozhraní
+	- *adapter* - překladač
 - důsledky - kolik práce dělá? volá jen metody nebo i další práce?
 #### Bridge
-- střední
-- odděluje rozhraní a implemetaci objektu
+- střední použití
+- odděluje rozhraní a implemetaci objektu, aby mohly být vyvíjeny nezávisle
 #### Composite
-- vyšší
-- uspořádá objekty do stromové struktury a s tou se pak dá pracovat jako s jediným objektem
+- vyšší použití
+- uspořádá objekty do stromové struktury, s kterou se pak dá pracovat jako s jediným objektem
+- např. grafické scény, souborové systémy
 #### Decorator
-- střední
+- střední použití
 - dynamicky rozšiřuje funkcionalitu objektu
-- znám z Pythonu
+- známe především z Pythonu
 #### Facade
-- vysoká
-- třídá vytvářející rozhraní pro celý subsystém (rozhraní vyšší úrovně)
+- vysoké použití
+- třída vytvářející rozhraní pro celý subsystém (rozhraní vyšší úrovně)
 - taková rozhraní pro rozhraní
-- proč? potřebujeme komunikovat se všemi třídami v subsystému
-- důsledky - odstínění komponent subsystému (=> menší závislost)
+- proč?: potřebujeme komunikovat se všemi třídami v subsystému
+- důsledky - odstínění komponent subsystému => menší závislost
 #### Flyweight
-- nízká
-- efektivní správa více objektů s podobnou strukturou, sdílení dat
+- nízké použití
+- efektivní správa více objektů s podobnou strukturou
+	- sdílení dat => nižší spotřeba paměti
 #### Proxy
-- vyšší
-- objekt zajišťující přístup k jinému objektu (deleguje to)
+- vyšší použití
+- objekt zajišťující přístup k jinému objektu (deleguje/zastupuje to)
+- např. lazy loading, ochrana přístupu
 ## Vzory chování
-- rozdělují zoodpovědnost
+- rozdělují zodpovědnost
 - řeší komunikaci mezi objekty
-- tzv. control flow (téžké sledovat za běhu)
+- tzv. control flow (těžké sledovat za běhu)
 - třídní a objektové vzory
 #### Chain of responsibility
-- nízké
-- předání požadavku do řetězce objektů
+- nízké použití
+- předání požadavku do řetězce objektů dokud ho některý nezpracuje
 #### Interpreter
-- nízká
-- interpretace vět jednoduhcého jazyka
+- nízké použití
+- interpretace vět jednoduchého jazyka
 #### Mediator
-- nižší
-- komunikace mezi 2 třídami (komunikují přes prostředníka)
+- nižší použití
+- komunikace mezi 2 objekty pomocí prostředníka
 #### Observer (pozorovatel)
 - objektový
-- 1:N - při změně stavu 1 objektu informauje ostatní
+- 1:N - při změně stavu 1 objektu informuje ostatní objekty
 - proč? systém se musí udržovat v konzistentním stavu
 	- tabulka s daty -> změna dat -> nutné změnit zobrazení, o kterém data ale neví
 1) **subject** - zná pozorovatele, rozhraní pro přihlášení a odhlášení odběru změn
@@ -180,7 +184,7 @@
 #### Iterator (cursor, enumerator)
 - objektový
 - poskytuje sekvenční procházení datové struktury
-- vše pak můžeme procházet stejným způsobem a nemsuíme řešit zda jde o strom, list nebo tečkové páry
+- vše pak můžeme procházet stejným způsobem a nemusíme řešit zda jde o strom, list nebo tečkové páry
 1) **concreteIterator** - implementace rozhraní, udržuje aktuální pozici
 2) **aggregate** - rozhraní pro vytvoření objektu Iterator
 3) **concreteAggregate** - konkrétní datová struktura, umožňuje sekvenční průchod
@@ -192,6 +196,6 @@
 #### Visitor
 - definování nové operace třídě bez její úpravy
 #### Memento
-- řeší uchování vnitřního stavu objektu, tak abychom se do něj mohli později napříkald vrátit
-- neporušuje zpouzdření
-- např. pro operaci undo
+- řeší uchování vnitřního stavu objektu, tak abychom se do něj mohli později například vrátit
+- neporušuje zapouzdření
+- např. pro operaci `undo`

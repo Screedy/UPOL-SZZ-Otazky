@@ -5,7 +5,7 @@ $$R = {<The Avengers, 1998>, <The Avengers, 2012>, <The Matrix>, 1999}$$
 - Atributy mají svou doménu (nejvýše spočetná množina hodnot)
 - $Y$ ... množina všech atributů
 - **relační schéma** ... konečna podmnožiny množiny atributů 
-- Pokud nějaké n-tice splňuje relační schéma ($R$) nazýváme ji ***n-tice nad $R$**
+- Pokud nějaké n-tice splňuje relační schéma ($R$) nazýváme ji **n-tice nad $R$**
 - Relace reprezentujeme **tabulkami** a **n-tici nazýváme řádek**
 	- Tabulky jsou uloženy v **tabulkové proměnné** či **relační proměnné**
 - Můžeme s nimi provádět běžné množinové operace

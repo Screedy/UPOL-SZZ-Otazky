@@ -30,8 +30,6 @@
 - **profiler** - ukazuje kde v systému trávíme nejvíc času a co využívá nejvíce zdrojů
 	- 2 režimy - vzorkování a instrumentace
 
-- code coverage ... kolik % kódu je pokryto testy
-	- ani 100% nemusí znamenat bezchybnost
 ##### Testy komponent (unit)
 - odhaluje chyby v samostatných komponentách
 - fake data (i fake rozhraní)

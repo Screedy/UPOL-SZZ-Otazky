@@ -22,7 +22,7 @@ head :- body
 ; Cíl
 (goal)
 (? subgoal1 subgoal2 ...)
-(? alarm-on police-on way)
+(? alarm-on police-on-way)
 ```
 - *Substitucí* se myslí proces, kde se jedná o dosazení konkrétní hodnoty za proměnnou
 - **proměnná** ... symbol začínající otazníkem ... např: `?x, ?a`
@@ -40,6 +40,7 @@ head :- body
 - Při vytváření těchto úsudků vzniká strom, který může být **nekonečný**
 #### Strom úsudků
 - Vizualizace procesu *usuzování*
+- Pokud ve stromu úsudků vyjde `(?)` je odpověď na otázku `TRUE`
 - ![[Pasted image 20250511103925.png]]
 #### Nekonečný strom úsudků
 - ![[Pasted image 20250511104117.png|400]]

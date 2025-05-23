@@ -111,6 +111,8 @@
 - Hlavním úkolem síťové vrstvy je **nalezení nejvhodnější cesty** a následné **odesílání IP paketů** touto cestou mimo lokální síť.
 - Komunikaci mimo lokální síť lehce **poznáme porovnáním adres** sítí odesílatele a příjemce.
 - Směrování je realizováno pomocí předávání paketů na síťových rozhraních jednotlivých zařízení. **Typicky realizované routerem**. Směrování je rozhodováno na základě IP adresy příjemce IP paketu a směrovací tabulky. Ta obsahuje informace o dalším uzlu sítě (next-hop), který má být paket předán.
+- Obvykle označeno jako *směrování/routování*
+- Překlad síťových adres v [[NAT - účel, typy, problémy]]
 
 ##### Navigace
 Předchozí:  [[Ethernet - přepínač, použití média, linkový rámec]]

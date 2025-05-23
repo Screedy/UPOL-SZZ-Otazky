@@ -1,4 +1,5 @@
-- Video o DNS: https://www.youtube.com/watch?v=J44jvmoDxzo&ab_channel=CZNIC
+> [!example]- Video o DNS
+> ![](https://www.youtube.com/watch?v=J44jvmoDxzo&ab_channel=CZNIC)
 - Každý uzel v počítačové síti je identifikován pomocí IP adresy. $\rightarrow$ **nejsou lehce zapamatovatelné**
 - Řešením tohoto problému jsou **doménová jména**. **Textová**, snadněji zapamatovatelná **identifikace uzlu** v počítačové síti.
 ## Doménové jméno

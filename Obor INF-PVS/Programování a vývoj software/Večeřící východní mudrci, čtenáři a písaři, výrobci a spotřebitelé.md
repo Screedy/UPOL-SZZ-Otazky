@@ -27,7 +27,7 @@
 - Pak vždy položí nejdříve hůlku s vyšším číslem, následně hůlku s menším číslem. 
 - Pokud tedy 5 filozofů najednou zvedne hůlku s menším číslem, tak zůstane na stole hůlka s největším číslem, takže 5. filozof bude bez hůlky. 
 - Navíc pouze jeden z filozofů bude mít přístup k oběma hůlkám. Když dojí, pustí obě hůlky, přičemž tu hůlku s nižším číslem pustí dříve, což umožní, aby se najedl filozof sedící vedle něj.
-#### Řešení 2 (číšník)
+#### Řešení 3 (číšník)
 - Jednoduché řešení lze dosáhnout zavedením číšníka u stolu. 
 - Číšník určí, kdo si hůlky vezme, co v podstatě vyřeší problém rozhodování. Protože si uvědomuje, které hůlky jsou použity, je schopen rozhodnout a zabránit tak deadlocku. 
 - Protože na stole zůstala v případě 5 filozofů ještě jedna hůlka, je zřejmé, že následovat v jezení bude ten filozof, který se stal jejím dočasným majitelem. Tomu pak číšník přisoudil hůlku, kterou zrovna obsluhuje vedle sedící filozof.

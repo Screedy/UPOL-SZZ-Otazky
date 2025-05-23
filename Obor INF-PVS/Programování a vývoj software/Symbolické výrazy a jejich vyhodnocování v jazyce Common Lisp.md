@@ -1,7 +1,7 @@
 #### Symbolický výraz
 - Jde o jednoduchý výraz (*atom*) nebo složený výraz (*seznam*)
 #### Jednoduchý výraz (atom)
-- Jde o *číslo* (10, -5, 4.9999D0) nebo *symbol* (posloupnost písmen/čísel/znaků) nebo další možnosti
+- Jde o *číslo* (10, -5, 4.9999D0) nebo *symbol* (posloupnost písmen/čísel/znaků) nebo literál
 #### Složený výraz (seznam)
 - Posloupnost jednoho nebo více výrazů (*prvky složeného výrazu*), které jsou odděleny mezerami
 - `(+ 1 2), (+). (1 2 3)`

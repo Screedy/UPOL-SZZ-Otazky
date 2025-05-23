@@ -1,6 +1,6 @@
 ### Ekvivalence
 - Ekvivalence jsou matematickým protějškem k pojmu **nerozlišitelnost**
-- Binární relace $E$ na množině $A \neq \varnothing$ se nazývá **ekvivalence**, je-li **reflexivní, symetrická a tranzitivní**.
+- Binární relace $E$ na množině $A \neq \emptyset$ se nazývá **ekvivalence**, je-li **reflexivní, symetrická a tranzitivní**.
 - Vlastnosti:
 	- **Reflexivní**
 		- Každé $x$ z $X$ je totožné s $x$, tedy $x$ nelze rozlišit od $x$

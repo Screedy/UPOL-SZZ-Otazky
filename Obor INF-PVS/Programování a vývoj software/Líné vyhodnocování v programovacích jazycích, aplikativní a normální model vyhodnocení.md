@@ -7,11 +7,10 @@
 - Nemožné pracovat s nekonečnými datovými strukturami
 - Výjimku mají speciální operátory (a některá makra) - `if, and, or`
 
-- Funkcionální programovací jazyky používají **normální vyhodnocovací model**
-	- Používá myšlenku líného vyhodnocování
 ## Normální model
+- Používá myšlenku líného vyhodnocování
 - **referenční transparentnost** ... výraz může být nahrazen hodnotou, jelikož to nemá vliv na výsledek
-- např. Haskell
+- Především u funkcionálních jazyků např. Haskell
 - Velmi efektivní
 - Možnost práce s nekonečnými datovými strukturami
 - Horší využití paměti

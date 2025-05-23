@@ -25,6 +25,6 @@
 ## Petersonův algortimus (tie-breaker)
 - vychází z *Dekkerova algoritmu*
 - proměnná `last` indikuje, kdo poslední začal vykonávat vstup
-- akce `await not in2 or last = 2` nemusí být aotmické
+- akce `await not in2 or last = 2` nemusí být atomické
 - zobecnění je opět kompikované (obvykle 2 procesy)
 ![[petersonuv-algoritmus.png]]

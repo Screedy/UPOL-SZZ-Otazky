@@ -27,6 +27,9 @@ Naive-Select(A[0 ... n-1], i)
 	return A[i]
 ```
 
+#### Porovnávání po dvojicích
+- Máme 2 proměnné $max$ a $min$. Procházíme pole a bereme dvojice prvků, které porovnáváme mezi sebou a pak s našimi proměnnými a případně korektně zařadíme. Po průchodu celým polem máme v $max$ největší a v $min$ nejmenší.
+
 #### Randomized-Select
 - Použijeme **Partition** z algoritmu QuickSort s **náhodným** výběrem pivota *(Rozdíl oproti QuickSort je, že po provedení Partition se zabýváme vždy **jen jednou částí**, levou nebo pravou)*
 - Složitost algoritmu v průměrném případě: $\Theta (n)$
@@ -56,6 +59,10 @@ Příklad:
 >[!Example]- Příklad
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/AHaaFVmAsvA?si=Xw3qDMfgqfKATgHH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+#### i-tá pořádková statistika v nejhorším čase $O(n)$
+- Existuje
+- Lze najít třeba v *Cormen et al.: Introduction to Algorithms*
+- Myšlenka je opět dělení pole na $n$ částí, použití mediánu a rekurzivních volání
 ##### Navigace
 Předchozí:  [[Další metody třídění - counting sort, radix sort, bucket sort]]
 Následující: [[Vyhledávání v lineárních datových strukturách]]
