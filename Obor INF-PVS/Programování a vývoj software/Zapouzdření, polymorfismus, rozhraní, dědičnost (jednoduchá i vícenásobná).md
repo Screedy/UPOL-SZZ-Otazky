@@ -33,17 +33,19 @@ class Bird implements Flight {
 - může dojít k tzv. **přepisování metod** (pro každou třídu definujeme jinou obsluhu zprávy)
 	- pokud má objekt na výběr více metodami stejného názvu, vykoná vždy tu **nejvíce specifickou**
 	- jiný náhled: hledá ji ve stromu třídu od spodu nahoru dokud ji nenajde (případně skončí chybou)c
-	- i v tomto případě můžeme vynutit zavolání předchozí metody (v Lispu `(call-next-method`)
+	- i v tomto případě můžeme vynutit zavolání předchozí metody (v Lispu `(call-next-method)`)
 - typ *datové abstrakce*
+
 >[!info] Princip dědičnosti
 >Možnost vytvářet ke třídám potomky (eventuálně předky). Vzniká tím stromová hierarchie (**strom dědičnosti**). Pokud je vztah přímý (není na cestě obsažena třída) nazýváme **přímý předek/potomek**.
+
 - ![[strom-trid.png]]
 #### Vícenásobná dědičnost
 - třída dědí o více než 1 rodiče (není podporováno ve všech jazycích)
 - může přinášet tzv. *problém diamantu*
 - ![[problem-diamantu.png]]
-	- tento problém má různá řešení (podle jazyku)
+- tento problém má různá řešení (podle jazyku)
 	- `C++` - bere třídu A jako rozdílného předka podle B a C, z A udělá virtuální
 	- `Python` - používá tzv. MRO (method resolution order) a linearizačního algoritmu, který vytvoří seznam předků jako seznam a podle něj hledá, metoda `__mro__` pro zjištění
 - Jazyky nepodporující tuto funkcionalitu to řeší různě - pomocí rozhraní či abstraktních tříd (C#, Java)
-- 
+

@@ -103,9 +103,9 @@
 
 
 > [!info]
-> **interpret** ... vykonává program zadaný zdrojovým kódem krok po kroku
+> - **interpret** ... vykonává program zadaný zdrojovým kódem krok po kroku
 > 
-> **kompilátor** (překladač) ... překládá program do (obvykle) nižšího jazyka
+> - **kompilátor** (překladač) ... překládá program do (obvykle) nižšího jazyka
 
 ##### Navigace
 Předchozí: [[Operační systém, architektura, poskytovaná rozhraní]]

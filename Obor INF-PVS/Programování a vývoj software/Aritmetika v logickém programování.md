@@ -1,5 +1,5 @@
 - Liší se od běžných jazyků, proto se operace pro aritmetiku obvykle provádí pomocí speciálních operátorů
--  Bavíme o jazyku `PROLOG` a jazyku založeném na Scheme vytvořeném na PP4
+- Bavíme o jazyku `PROLOG` a jazyku založeném na Scheme vytvořeném na PP4
 ## Prolog
 - Poskytuje předdefinovaná operátory
 - Vyhodnocení je potřeba vynutit procedurou `is`
@@ -19,6 +19,11 @@
 true.
 ```
 - Speciální operátor pro rovná se a nerovná se `=:=` a `=\=`
+## Přirozená čísla s nulou
+- Čísla jsou reprezentovány jako následující objekty:
+	1) číslo nula označíme `zero`
+	2) pokud `n` je číslo, pak `(succ n)` je následník čísla n
+- Př. `(succ (succ zero)` odpovídá číslu $2$
 #### Sčítání
  - Pomocí následníků, takže jakoby "rekurzivně"
  ```lisp

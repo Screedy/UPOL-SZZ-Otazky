@@ -1,16 +1,20 @@
 ## Pravidlo *is-a*
 - vychází ze stromu dědičnosti
 - vztah podmnožina a nadmnožina
+
 >[!info]
 >**Pravidlo is-a**
 >Je-li třída D potomkem třídy C, pak každé D je C.
+
 - příklad z reality *každý automobil je vozidlo, každý pes je savec* (podle reality se snažíme program modelovat)
 - ![[strom-dedicnost.png]]
 - z obrázku platí: *point is a shape, polygon is a compound-shape*
 - **ne**platí: *circle is a compound-shape*
+
 >[!info]
 >**Princip substituce**
 >Pokud kdekoliv v programu nahradíme instanci třídy instancí jejího potomka, musíme dostat stejné výsledky.
+
 ## Kontraktové programování
 - pochází z jazyka *Eiffel*
 - založeno na principu *"Než začneme programovat třídu, stanovíme podmínky , které musí splňovat (kontrakty).*
@@ -24,7 +28,8 @@
 2) prekondice potomka musí být slabší než prekondice předka (potomek může odebírat)
 3) postkondice potomka musí být silnější než postkondice předka
 ## Princip Barbary Liskovové
-- přísnější než *is-a* 
+
 >[!info]
 >**Princip B. Liskovové (formální znění)**
+>
 >Pokud s instancemi třídy pracujeme se znalostmi o této třídě, máme jistotu, že dojdeme ke správným výsledkům, ikdyž instance není přímou instancí třídy.

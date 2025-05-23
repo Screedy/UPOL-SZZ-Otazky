@@ -33,15 +33,17 @@
 	- **protected** - chráněná, přístup pouze ze třídy a jejich potomků (Python `_method()`)
 	- **private** - soukromá, může volat jen ona třída přímo (Python `__method()`)
 	- v ostatních jazycích se obvykle značí klíčovými slovy
+
 > [!info]
 >**vnitřní stav objektu** - souhrn dat, která objekt obsahuje
 
 >[!info]
->čtení vlastnosti - *getter* - `property()`
->nastavení vlastnosti - *setter* - `set-property()`
+>- čtení vlastnosti - *getter* - `property()`
+>- nastavení vlastnosti - *setter* - `set-property()`
 ## Atributy / sloty
 - data v objektu 
 - nejsou uživateli (navenek) známé
+
 >[!warning]
 >**Bariéra mezi vnitřním stavem a rozhraním**
 >- je nutné rozlišovat mezi autorem objektu a uživatelem (v realitě to pořád může být tentýž programátor)

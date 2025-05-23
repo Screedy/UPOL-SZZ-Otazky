@@ -48,28 +48,28 @@
 - databáze obsahující všechny informace nutné ke správě verzí a sledování změn
 - `.git`
 - object store ... vše potřebné pro obnovení verze (logy, autoři, úložiště origo souborů)
-- index ... dočasný binární soubor trackující změny
+- **index** ... dočasný binární soubor trackující změny
 	- po commitu jsou zaznamenány natrvalo
-- commit ... záznam o změně v repozitáři
+- **commit** ... záznam o změně v repozitáři
 	- ukládá pouze změněné soubory
 	- vždy má předka
 	- má unikátní jméno
-- větvění ... rozdělení do více souběžných větví
+- **větvení** ... rozdělení do více souběžných větví
 	- spojení pomocí merge
 	- proč? izolovanost jednotlivých funkcí, rozdělení podle vývojářů, oddělení pro různé verze
 	- má vždy jméno (master, dev, testing, ...)
 	- aktivní je vždy jen 1
-- merge ... spojení
+- **merge** ... spojení
 	- mohou nastat konflikty, jinak automatické
 	- upravíme buď ručně nebo pomocí nějakého nástroje
-- stash ... zásobník pro odležení rozpracované práce
+- **stash** ... zásobník pro odležení rozpracované práce
 	- pokud potřebujeme nutně jít dělat něco jiného
-	- uložíme si jen pro sebe (není nikd epublikována)
-- remote ... vzdálený repozitář
+	- uložíme si jen pro sebe (není nikde publikována)
+- **remote** ... vzdálený repozitář
 	- developement a bare
 	- clone nebo fetch dat
 
-- git má samozřejmě i alternativy, ale je nejpopiulárnější
+- git má samozřejmě i alternativy, ale je nejpopulárnější
 	- mercurial
 	- bazaar
 #### Webové CVS

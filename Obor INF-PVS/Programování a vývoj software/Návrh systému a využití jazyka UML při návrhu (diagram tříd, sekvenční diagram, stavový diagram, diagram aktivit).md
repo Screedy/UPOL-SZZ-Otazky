@@ -5,7 +5,7 @@
 - Je velmi intuitivní
 
 - Modelování může mít různou preciznost a jsou různé modely
-#### Struzkturální prvky v UML
+#### Strukturální prvky v UML
 - Podstatná jména jazyka (pro koncepty nebo fyzické věci)
 1) Třídy - formální popis objektů mající stejné vlastnosti
 2) Aktivní třídy - třídy obsahující více procesů či vláken
@@ -61,7 +61,7 @@
 - Zobrazuje spolupráci objektů v času (formou zasílání zpráv obvykle)
 - Obvykle se znázorňuje v rámci 1 případu užití
 - Čas roste shora dolů
-- ![[Pasted image 20250424084321.png]]
+- ![[Pasted image 20250424084321.png|500]]
 ## Stavový diagram
 - Zobrazuje stavový stroj daného objektu
 - Dynamický pohled na systém (přechody, události, aktivity)

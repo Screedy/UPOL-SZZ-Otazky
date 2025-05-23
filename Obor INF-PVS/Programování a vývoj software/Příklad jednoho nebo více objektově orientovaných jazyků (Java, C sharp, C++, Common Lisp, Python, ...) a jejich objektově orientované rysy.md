@@ -23,7 +23,7 @@ class Person:
 
 	# Metoda
  	def greet(self):
- 	print(f"Hello, my name is {self.name}. I am {self.age}y. old.")
+	 	print(f"Hello, my name is {self.name}. I am {self.age}y. old.")
 ``` 
 
 - vytvoření instance třídy probíhá metodou `__init__()`
@@ -75,7 +75,7 @@ person.Display() // Output: Name: John, Age: 30
 	- `private` (výchozí)
 	- `private protected`
 #### Dědičnost
-- s vyjímkou vícenásobné funguje běžně
+- s výjimkou vícenásobné funguje běžně
 - třídu můžeme označit jako `abstract`, tzn. některé její metody nemusí mít implementaci (také abstraktní metody) a třída slouží jako předek pro jiné třídy (není zamýšleno vytvářet přímo její instance)
 - opakem je klíčové slovo `sealed`, které zakazuje ostatním třídám od této dědit
 #### Rozhraní (interface)

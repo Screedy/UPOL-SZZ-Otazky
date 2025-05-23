@@ -9,6 +9,7 @@ $$
 - obecně $\{something\}$ je výrok o stavu programu a uprostřed je program *P*
 - **prekondice** ... výrok o stavu programu před jeho začátkem $\{ϕ\}$
 - **postkondice** ... výrok o stavu programu po jeho konci $\{ψ\}$
+
 >[!info]
 >**Pravdivost trojice** je dána tak, že program je ve stavu spňujícím $\{ϕ\}$, poté se program $P$ vykoná a výsledný stav splňuje $\{ψ\}$.
 

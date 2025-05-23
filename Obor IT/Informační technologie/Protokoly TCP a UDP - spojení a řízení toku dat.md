@@ -51,7 +51,7 @@
 >[!Example] 3-fázový handshake
 >1. Klient posílá TCP segment (bez dat) s příznakem SYN a náhodně vygenerovaným číslem seq. Tento krok se označuje jako aktivní otevření.
 >2. Server posílá segment (bez dat) s příznaky SYN a ACK a náhodně vygenerovaným číslem seq a číslem potvrzení ack.
->3. Klient posílá segment s  přiznakem ACK a číslem potvrzení nastavení seq + 1. Již může nést data.
+>3. Klient posílá segment s  přiznakem ACK a číslem potvrzení nastavení `seq + 1`. Již může nést data.
 >![[MacBook-2024-04-17-001026.png| 300]]
 
 #### Přenos dat
@@ -101,7 +101,7 @@
 - Pokud budeme zmenšovat okno, nesmí dojít k situaci, kdy jsou již odeslané bajty mimo posuvní okénko
 
 #### Pozitivní potvrzování
-- TCP využívá **komulativní potvrzování**. 
+- TCP využívá **kumulativní potvrzování**. 
 - To znamená, že je vždy potvrzováno přijetí souvislé sekvence bajtů.
 - Potvrzení je generováno dle následujících pravidel:
 	1. Při poslání dat je vždy segmentu nastaven příznak ACK a hodnota čísla potvrzení na číslo následující očekávané sekvence.
@@ -133,7 +133,7 @@
 	1. **Fáze pomalého startu.** Okno zahlcení se postupně zvětšuje $1 \times, 2 \times, 4 \times, 8 \times, ...$ až je dosaženo stanovené hodnoty limit. Tato hodnota se v průběhu spojení mění.
 	2. **Fáze vyhýbání se zahlcením.** Pokud dojde k potvrzení všech dat v okně zahlcení, je toto okno zvětšeno o hodnotu 1.
 	3. **Fáze detekce zahlcení.** V případě, že je detekována potřeba opětovného zaslání segmentu, je dle události, která odeslání spustila, upraveno okno zahlcení.
-		- Pokud v**ypršel RTO časovač**: je nastaven limit na hodnotu $\frac{1}{2}$ okna zahlcení a velikost okna zahlcení je nastavena na $1$. Je zahájena fáze pomalého startu.
+		- Pokud **vypršel RTO časovač**: je nastaven limit na hodnotu $\frac{1}{2}$ okna zahlcení a velikost okna zahlcení je nastavena na $1$. Je zahájena fáze pomalého startu.
 		- Pokud byl segment poslán na základě detekce tří duplicitních potvrzení: je nastaven limit na hodnotu $\frac{1}{2}$ okna zahlcení a velikost okna zahlcení je nastavena na hodnotu limit. Poté je zahájena fáze vyhýbaní se zahlcení.
 
 ![[MacBook-2024-04-17-001034.png| 500]]

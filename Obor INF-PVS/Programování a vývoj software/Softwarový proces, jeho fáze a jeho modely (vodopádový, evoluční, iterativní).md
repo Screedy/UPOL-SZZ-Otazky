@@ -6,7 +6,7 @@
 	- **nejdůležitější část** (když to zkazím hned tady, tak se to potáhne všude dál)
 	- nutné znát i problematiku zakázky
 	- výstupem je formální definice = **dokument specifikace požadavků** (DSP)
-	- studie proveditelnosti ->  zjištění a analýza požadavků -> soupis požadavků -> kontrola co jsme udělali
+	- **studie proveditelnosti** ->  zjištění a analýza požadavků -> soupis požadavků -> kontrola co jsme udělali
 2) návrh + vývoj - ta technická část
 3) validace - ověření, toho co se udělalo
 4) evoluce - úpravy při tom, co SW už běží
