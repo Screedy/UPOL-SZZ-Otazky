@@ -13,7 +13,7 @@
 ## Správa paměti v jednoúlohových operačních systémech
 - v jeden okamžik může běžet pouze jeden proces - žádné extra nároky
 - časté řešení: OS a ovladače zařízení na začátku nebo na konci, program ve zbylé části
-![[MacBook-2024-05-03-001158.png]]
+![[pamet_jednoulohove_OS.png]]
 
 ## Stránkování
 - alternativa k přidělování souvislých bloků paměti, kde místo operační paměti naopak "kouskujeme" programy
@@ -24,10 +24,11 @@
 - provádí se **mapování** logických adres na fyzické
 - CPU společně s OS udržuje stránkovací tabulku, díky které se adresy převádí
 >[!Example]+ Ukázka stránkování
-![[MacBook-2024-05-03-001160.png]]
-- logická adresa: pd, kde p je číslo stránky a d je offset
-- fyzická adresa: fd
-- číslo stránky se vezme jako index do stránkovací tabulky a nahradí se tam uložených číslem rámce f
+>![[strankovani.png]]
+
+- logická adresa: `pd`, kde `p` je číslo stránky a `d` je offset
+- fyzická adresa: `fd`
+- číslo stránky se vezme jako index do stránkovací tabulky a nahradí se tam uložených číslem rámce `f`
 ---
 - v praxi se používají víceúrovňové tabulky
 	- část logické adresy udává tabulku, další část index v tabulce a další část offset
@@ -45,7 +46,7 @@
 	- oproti tomu segmentace umožňuje rozdělit program do logických celků
 ---
 - při použití segmentace a stránkování programy nepracují přímo s lineární adresou
-- používají logickou adresu ve tvaru segment + offset a ta se poté převádí na fyzickou adresu pomocí stránkování
+- používají logickou adresu ve tvaru `segment + offset` a ta se poté převádí na fyzickou adresu pomocí stránkování
 >[!Example]+ Ukázka segmentace
 ![[MacBook-2024-05-03-001162.png]]
 
