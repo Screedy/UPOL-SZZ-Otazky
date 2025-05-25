@@ -1,6 +1,7 @@
 >[!Example] Příklad
 >- Máme za úkol propojit města $v_{1}, ..., v_{n}$ elektrickým vedením, a to tak, aby výstavba vedení byla co nejlevnější. Musíme tedy rozhodnout, mezi kterými městy máme natáhnout elektrické dráty tak, aby se elektřina mohla dostat z každého města do každého jiného města. Přitom víme, že mezi některými dvojicemi měst přímé propojení postavit nelze. Pokud města $v_{i}$ a $v_{j}$ propojit lze, známe náklady na výstavbu vedení mezi $v_{i}$ a $v_{j}$.
 
+- **Strom** je graf, který je souvislý a neobsahuje kružnice.
 - **Kostra neorientovaného grafu $G$** je jeho **podgraf $G'$**, který je **stromem** a obsahuje **všechny vrcholy** grafu $G$.
 - Je-li $w: E \rightarrow \mathbb{R}^{+}$ **hranové ohodnocení** grafu $G = <V, E>$, nazývá se **kostra $G' = <V, E'>$ minimální kostra**, pokud má ze všech koster grafu $G$ nejmenší hodnotu $w(G')$, kde $w(G')= \sum_{\{u,v\} \in E'} w(\{u,v\})$
 

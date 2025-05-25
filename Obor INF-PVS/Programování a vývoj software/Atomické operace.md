@@ -16,18 +16,9 @@
 - Jsou důležité při paralelním programování a synchronizaci
 - Na úrovni assembleru se jedná o jednu instrukci
 - Používají se taktéž v databázích (často nazývané jako *transakce*)
-1) test and set - použit v semaforech
-2) swap
-3) compare and swap
-4) fetch and add
-5) load link/store conditional
-
-
-
-
-
-
-
-
-
-
+1) **test and set** - nastaví hodnotu proměnné `a` a vrátí její původní hodnotu (použití v semaforech nebo zámcích)
+2) **swap** - atomicky prohodí hodnoty 2 proměnných
+3) **compare and swap** - atomicky porovná 2 proměné a pouze při úspěchu jejich hodnoty prohodí
+4) **fetch and add** - přičte $1$ k `a` a vrátí původní hodnotu `a`
+5) **load link** - načte hodnotu a sleduje zda se ji někdo snaží změnit
+6) **store conditional** - pokusí se zapsat novou hodnotu, úspěšné pouze pokud se nikdo jiný nepokusil zapsat, vrátí `t` nebo `nil` 

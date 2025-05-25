@@ -16,7 +16,7 @@
 #### Nejmenší společný násobek (NSN)
 - Nejmenší číslo, které je společným násobkem obou čísel
 - *Společný násobek* je číslo, pro které platí: $x, y, n \in \mathbb{N}$ a $x \mid n$ i $y \mid n$
-	- Z této množiny čísel vybereme největší a to je NSN
+	- Z této množiny čísel vybereme nejmenší a to je NSN
 
 >[!tip] Věta - souvislost NSD a NSN
 >Nechť $x, y \in \mathbb{N}$ pak platí $NSD(x, y) \cdot NSN(x, y) = x \cdot y$.
@@ -50,7 +50,7 @@
 > Pokud navíc NSD($a$, $p$) = 1 pak $a^{p-1} \equiv 1$ (mod $p$)
 
 >[!tip] Eulerova věta
-Pokud $a$ a $n$ jsou **nesoudělná čísla** (tedy NSD$⁡(a,n)=1$ ), pak: $a^{φ(n)}≡1$ (mod n)
+Pokud $a$ a $n$ jsou **nesoudělná čísla** (tedy NSD$⁡(a,n)=1$), pak: $a^{φ(n)}≡1$ (mod n)
 
 >[!tip] Eulerova funkce
 >$\varphi(n)$ ... počet přirozených čísel menších než $n$ a s $n$ nesoudělných 

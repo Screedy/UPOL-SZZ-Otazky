@@ -63,8 +63,8 @@
 		- $L^{0}=\set{\epsilon}$
 		- $L^{i+1} = L.L^{i}$
 	 Zejména tedy $\varnothing^{0}=\set{\epsilon}, \varnothing^{i} = \varnothing$ pro libovolné $i \in N$ a $\set{\epsilon}^{i}=\set{\epsilon}$ pro libovolné $j \in N_{0}$
-	- **Iterace jazyka $L$** je jazyk $L^{*}=\cup_{i=0}^{\infty} L^{i}$
-	- **Pozitivní iterace jazyka $L$** je taky $L^{+}=\cup_{i=0}^{\infty} L^{i}$. Obecně není pravda, že $L^{+}=L^{*} \backslash \set{\epsilon}$
+	- **Iterace jazyka $L$** je jazyk $L^{*}=\bigcup_{i=0}^{\infty} L^{i}$
+	- **Pozitivní iterace jazyka $L$** je taky $L^{+}=\bigcup_{i=1}^{\infty} L^{i}$. Obecně není pravda, že $L^{+}=L^{*} \backslash \set{\epsilon}$
 		- tato rovnost platí právě tehdy, když $L$ neobsahuje $\epsilon$
 	- **Doplněk jazyka $L$** je jazyk co-L = $\Sigma^{*} \backslash L$
 	- **Zrcadlovým obrazem** (též reverzí) **slova $x = a_{1},...,a_{n}$** nazýváme slovo $\omega^{R}=a_{n},...,a_{1}$. **Zrcadlový obraz jazyka $L$** definujeme jako $L^{R}=\set{\omega^{R}| \omega^{L}}$

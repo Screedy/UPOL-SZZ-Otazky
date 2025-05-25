@@ -17,5 +17,5 @@ tags:
 - Můžeme urychlit pokud použijeme algoritmus vnitřního třídění jako Quick Sort nebo Merge Sort (na menší části)
 #### Časová složitost
 - Čtení a ukládání má složitost $O(N)$
-- Samotný algoritmus vnitřního třídění pak $O(\log n)$
-- Celkově tedy $O(\log n)$ (záleží na použití třídícího algoritmu ve vnějším třídění)
+- Samotný algoritmus vnitřního třídění pak $O(n \cdot \log n)$
+- Celkově tedy $O(n \cdot \log n)$ (záleží na použití třídícího algoritmu ve vnějším třídění)

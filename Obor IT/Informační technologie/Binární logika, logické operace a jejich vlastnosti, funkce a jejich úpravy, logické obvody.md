@@ -20,7 +20,7 @@
 
 - **Logický výraz**
 	- **Definice**: Správně vytvořená posloupnost symbolů logických proměnných a funkcí (operátorů), spolu se závorkami.
-	- Priority sestupně: negace($\neg$), log. součin($\wedge$), log. součet()
+	- Priority sestupně: negace($\neg$), log. součin($\wedge$), log. součet($\vee$)
 	- **Význam**: Slouží k zápisu logické funkce.
 
 - **Logická rovnice**
