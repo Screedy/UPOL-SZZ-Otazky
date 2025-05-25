@@ -5,9 +5,13 @@
 >Uživatel nepozná navenek o jaký typ se jedná (základní nebo virtuální).
 #### Virtuální tabulka v SQL
 ```SQL
-CREATE VIEW table AS expr;
+CREATE VIEW view_name AS
+SELECT column1, column2
+FROM table_name;
 
-DROP VIEW table;
+DROP VIEW view_name;
+
+UPDATE view_name SET column1 = value1 WHERE condition;
 ```
 - Tabulková proměnná table se nazývá virtuální
 - Aktualizovatelná pokud platí:
