@@ -1,18 +1,18 @@
 ## Co je ORM?
-- ORM (Object-Relational Mapping) je technologie, která umožňuje pracovat s databází pomocí běžných objektů v jazyce C#.  
+- ORM (*Object-Relational Mapping*) je technologie, která umožňuje pracovat s databází pomocí běžných objektů v jazyce C#.  
 - Cílem je **odstínit programátora od přímé práce se SQL** a umožnit přístup k datům přes třídy, kolekce a vlastnosti.
-
-## Entity Framework (EF)
+#### Entity Framework (EF)
 - Entity Framework je nejpoužívanější ORM framework v C#.
 - **EF 6** – starší verze, součást .NET Frameworku
 - **EF Core** – moderní, multiplatformní verze (doporučeno)
 - Oficiální dokumentace: [https://docs.microsoft.com/en-us/ef/](https://docs.microsoft.com/en-us/ef/)
-## Přístupy vývoje databáze
+#### Přístupy vývoje databáze
 - **Code First** – definujeme modely v kódu → databáze se generuje podle něj.
 - **Database First** – začínáme existující databází → generuje se kód z databáze.
 - V této lekci používáme přístup **Code First**.
-## Instalace EF Core pomocí NuGet
-- NuGet je správce balíčků pro platformu .NET
+#### Instalace EF Core pomocí NuGet
+> [!tip]
+> **NuGet** je správce balíčků pro platformu .NET
 - Nutné balíčky (pro SQLite např.):
 	- `Microsoft.EntityFrameworkCore`
 	- `Microsoft.EntityFrameworkCore.Sqlite`
@@ -28,9 +28,9 @@ public class Custommer {
     public virtual Address Address { get; set; } // navigační vlastnost
 }
 ```
-**Konvence EF:**
-- Vlastnost `Id` nebo `NázevTřídyId` je automaticky primární klíč.
-- Navigační vlastnosti (`virtual`) propojují entity mezi sebou.
+- **Konvence EF:**
+	- Vlastnost `Id` nebo `NázevTřídyId` je automaticky primární klíč.
+	- Navigační vlastnosti (`virtual`) propojují entity mezi sebou.
 
 ## Kontext databáze – `DbContext`
 - Objekt zajišťující komunikaci s databází:
@@ -79,8 +79,16 @@ using (var ctx = new EshopContext()) {
 }
 ```
 
-## Vztahy mezi entitami
+## Migrace databáze
+- Při změně objektu je nutné změnu "propsat" i do databáze => systém verzování a migrací
+- Tabulka `_EFMigrationHistory` zaznamenává změny v databázi
+```shell
+dotnet ef migrations add <nazev_migrace>
 
+dotnet ef database update
+```
+- Po těchto příkazech proběhla aktualizace databáze s propsání změn
+## Vztahy mezi entitami
 #### Vazba 1:N
 - např. adresa má více studentů
 ```csharp
@@ -139,4 +147,3 @@ ctx.Entry(student).State = EntityState.Deleted;
 - `DbContext` je základní brána pro práci s daty.
 - Podporuje LINQ pro dotazy, navigační vlastnosti a migrace schématu.
 - EF šetří čas, ale je třeba chápat jeho principy – zejména vztahy, konvence a životní cyklus objektů.
-

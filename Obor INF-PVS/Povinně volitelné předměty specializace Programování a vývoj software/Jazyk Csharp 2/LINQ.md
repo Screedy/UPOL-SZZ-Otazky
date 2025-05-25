@@ -41,7 +41,8 @@ Console.WriteLine(square(5)); // Výstup: 25
 - Může být použit pro tvorbu výrazu (`Expression<T>`).
 - Staticky typovaný – při přiřazení musí být znám typ.
 
-## LINQ – Language Integrated Query
+## LINQ
+- *Language Integrated Query*
 - LINQ je technologie, která umožňuje psát dotazy přímo v jazyce C#. Tyto dotazy fungují nad:
 	- kolekcemi (`IEnumerable`)
 	- databázemi (Entity Framework)

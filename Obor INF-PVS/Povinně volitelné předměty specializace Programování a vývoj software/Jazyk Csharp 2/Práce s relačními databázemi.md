@@ -48,7 +48,7 @@ using (SqlConnection conn = new SqlConnection(connectionString)) {
 ```
 
 #### Získání `connectionString`:
-Najdeme v *Properties* připojené databáze ve Visual Studiu nebo si jej vygenerujeme ručně.
+- Najdeme v *Properties* připojené databáze ve Visual Studiu nebo si jej vygenerujeme ručně.
 ## Parametrizované dotazy
 - Nikdy nevkládat data od uživatele přímo do SQL řetězce – hrozí **SQL Injection**!
 
