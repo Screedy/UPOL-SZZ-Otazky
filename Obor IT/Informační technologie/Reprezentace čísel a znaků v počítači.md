@@ -80,9 +80,10 @@
 		- **exponent** - Určuje **stupně škálování mantisy**. Exponent je obvykle uložen ve formátu s **pevným** posunem (offset), což znamená, že k jeho hodnotě je **přičtena určitá konstanta** (nejčastěji **127** pro jednoduchou přesnost a 1023 pro dvojitou přesnost), aby bylo možné reprezentovat záporné i kladné exponenty.
 		- **mantisa** - vlastní číselná hodnota čísla
 	- Číslo $-6.25$ by mohlo být reprezentováno jako:
+		- $6,25 = 1,5625 \cdot 2^2$
 		- **Znaménko**: $1$ (pro záporné číslo)
-		- **Exponent**: $1000\ 0011$($130$ v decimálním systému, odpovídá reálnému exponentu $3$, protože $130-127=3$)
-		- **Mantisa**: $100\ 1000\ 0000\ 0000\ 0000\ 0000$ (frakce za 1., v tomto případě 1.1001 v binární formě, což odpovídá 1.5625)
+		- **Exponent**: $(1000\ 0001)_{2}$ ($(129)_{10}$ odpovídá reálnému exponentu $2$, protože $129-127=2$)
+		- **Mantisa**: $100\ 1000\ 0000\ 0000\ 0000\ 0000$ (frakce za desetinou čárkou, v tomto případě $0.1001$ v binární formě, což odpovídá $0.5625$)
 	- Výhody:
 		- široký rozsah hodnot
 		- flexibilita
