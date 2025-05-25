@@ -88,8 +88,7 @@
 
 ##### Posuvné okénko
 - Posuvné okénko **vymezuje**, jak velkou část odesílacího bufferu **je možné poslat**, aniž by došlo k zahlcení příjemce
-- Strategie stop and wait je **neefektivní**.
-	- Po poslání dat se čeká na potvrzení
+- Strategie *stop and wait* (po poslání dat se čeká na potvrzení) je **neefektivní**.
 - Namísto toho se data v okně odesílají **bez nutnosti čekání na potvrzení** jejich přijetí. Jakmile je odeslaná část potvrzena, **okno se posouvá**.
 
 >[!Example] Příklad posuvného okénka
@@ -111,7 +110,7 @@
 		- Toto pravidlo zabraňuje **zbytečnému opakovanému poslání** již poslaného segmentu. V důsledku tohoto pravidla by neměly být více než dva nepotvrzené segmenty.
 	4. Pokud příjemce obdrží **neočekávaná segment**, je okamžitě posláno **potvrzení očekávaného segmentu**. 
 		- Tímto je **protistrana informována o ztrátě** segmentu
-	5. Pokud příjemce **obdrží chybějící segment**, je posláno potvrzení oče**kávaného segmentu**. 
+	5. Pokud příjemce **obdrží chybějící segment**, je posláno potvrzení **očekávaného segmentu**. 
 		- Tímto je protistrana informována, že **chybějící segment již přišel**.
 	6. Pokud příjemce **obdrží duplicitní segment**, **zahodí jej** a je **posláno potvrzení očekávaného segmentu**. 
 		- Toto pravidlo slouží **pro kompenzaci ztracených potvrzení**.

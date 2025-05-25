@@ -114,7 +114,7 @@ struct tree {
 >[!Example]- Dvojitá rotace - pravo levá
 >![[MacBook-2024-03-13-000872.png]]
 
-### Přidání - $O(\lg n)$
+### Přidání - $O(\log n)$
 - Provedeme vkládání jako v binárním vyhledávacím stromě. 
 - Poté jdeme po cestě od rodiče přidaného uzlu do kořene a upravujeme položky $\text{bf}$. ($u$ je aktuální uzel, u kterého jsme provedli úpravu $b$)
 
@@ -143,7 +143,7 @@ proc avl-insert(T, x)
     u = u.p
 ```
 
-### Odebrání - $O(\lg n)$
+### Odebrání - $O(\log n)$
 - Provedeme odebrání **jako v binárním vyhledávacím stromě**. 
 - Poté jdeme od uzlu vybraného *podle následujícího postupu* ke kořeni a upravujeme položku $\text{bf}$
 - **Postup výběru uzlu**:

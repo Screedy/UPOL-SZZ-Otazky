@@ -114,9 +114,3 @@ d["jablko"] = 5;
 Console.WriteLine(d["jablko"]);
 ```
 - Indexery mohou být i vícerozměrné a nemusí používat jen celočíselné indexy – typ může být libovolný.
-
----
-## Shrnutí
-- Pomocí `Console.ReadLine()` a dalších metod lze číst a ovlivňovat výstup v konzoli.
-- `struct` je lehká alternativa třídy pro jednoduché datové objekty bez dědičnosti.
-- Indexery umožňují přistupovat k prvkům tříd podobně jako k poli pomocí `[]`.

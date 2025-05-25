@@ -12,8 +12,8 @@
 - Primitivní *vs* uživatelsky definovaná funkce
 
 ## Rekurzivní funkce
-- Taková funkce, která ve svém těle volá sebe samu
-- Výpočetní proces je rekurzivní pokud během aplikace funkce dojde k aplikaci téže funkce
+- Taková funkce, která ve svém těle volá sebe samu (poznáme ze zdrojového kódu)
+- Výpočetní proces je rekurzivní pokud během aplikace funkce dojde k aplikaci téže funkce (poznáme při běhu programu)
 - Nutné mít *ukončovací podmínku*, jinak dojde k zacyklení
 >[!info]
 >Výpočetní proces je **iterativní** když na konci aplikace funkce dojde opět k aplikaci stejné funkce.

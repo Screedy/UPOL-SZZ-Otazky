@@ -1,4 +1,4 @@
-## Vlákna v `c#`
+## Vlákna v C\#
 - Standardně má aplikace jedno hlavní vlákno. Pomocí knihovny `System.Threading` lze pracovat s více vlákny a dosáhnout tak paralelního zpracování.
 
 #### Výhody více vláken

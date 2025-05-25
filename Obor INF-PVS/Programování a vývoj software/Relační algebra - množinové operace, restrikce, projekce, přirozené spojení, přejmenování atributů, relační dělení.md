@@ -46,3 +46,26 @@
 - systém postupu
 	- pokud se záznam z tabulky A nachází ve všech možnostech tabulky B, bude se nacházet i ve výsledné tabulce
 - používáme pro dotazy typu "*Osoba P má ráda všechny filmy tvůrce C.*"
+- např. mějme tyto 2 tabulky (`peoples_car` a `car_brands`)
+```sql
+| person | car      |
+| ------ | -------- |
+| John   | Audi     |
+| Peter  | Mercedes |
+| Peter  | Skoda    |
+| Zoe    | Skoda    |
+| Zoe    | Audi     |
+| Jane   | Mercedes |
+
+| car      |
+| -------- |
+| Mercedes |
+| Skoda    |
+```
+- Relačním podílem `peoples_car` a `car_brands` bychom získali následující tabulku
+```sql
+| person |
+| ------ |
+| Peter  |
+```
+
