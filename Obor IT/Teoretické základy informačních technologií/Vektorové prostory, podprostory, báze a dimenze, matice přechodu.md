@@ -90,7 +90,7 @@ Věta 5.5
 Neprázdná podmnožina $W$ pole vektorového prostoru $(V ;+, T, \cdot )$ je polem podprostoru ve $V$ právĕ když s každými prvky $\overrightarrow{u_1}, \overrightarrow{u_2}, \ldots, \overrightarrow{u_n}$ obsahuje také každou jejich lineární kombinaci.
 
 ### Průnik
-Průnik $W_1 \cap W_2$ dvou podprostorů $W_1$ a $W_2$ ve $V P(V ;+, T, \cdot)$ je obecně opět podprostor ve $V$. Je to "největší" (vzhledem k $\subseteq$ ) podprostor ve $V$, který je obsažen současně ve $W_1$ a $W_2$.
+Průnik $W_1 \cap W_2$ dvou podprostorů $W_1$ a $W_2$ ve $V P \ (V ;+, T, \cdot)$ je obecně opět podprostor ve $V$. Je to "největší" (vzhledem k $\subseteq$ ) podprostor ve $V$, který je obsažen současně ve $W_1$ a $W_2$.
 
 Příklad
 Uvažujme množiny

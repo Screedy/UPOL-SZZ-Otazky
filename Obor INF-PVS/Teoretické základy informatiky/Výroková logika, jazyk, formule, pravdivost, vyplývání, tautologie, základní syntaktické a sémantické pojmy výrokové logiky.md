@@ -9,7 +9,7 @@
 	- *Temporální logika* - zabývá se tvrzeními, ve kterých hraje roli **čas**
 	- *Fuzzy logika* - studuje **více pravdivostních hodnot**
 - Znalost základů logiky nám umožňuje srozumitelně a jednoznačně se vyjadřovat a argumentovat
-#### **Výroky a logické spojky**
+#### Výroky a logické spojky
 - **Výrok** je **tvrzení** (výpověď), u kterého má smysl uvažovat o jeho pravdivosti
 - **Logické spojky** jsou *jazykové výrazy*, kterými **z jednodušších výroků vytváříme výroky složitější**
 - Výrok může mít 
@@ -35,7 +35,7 @@
 - Algoritmicky je pak můžeme převádět do *ÚKNF* nebo *ÚDNF* 
 #### Některé zákony VL
 ![[Pasted image 20250319211812.png]]
-## **Výroky s proměnou, kvantifikátory**
+## Výroky s proměnou, kvantifikátory
 - Některé výrazy *přirozeného jazyka* obsahují proměnné
 	- Číslo x je větší nebo rovno 3
 	-  $x+y \geq z$
@@ -46,19 +46,19 @@
 	- *$x+y \geq z=U(x,y,z)$*
 
 - **Kvantifikátory** jsou **jazykové výrazy, kterými z výrokových forem vznikají výroky**
-#### **Obecný kvantifikátor** -  $\forall$
+#### Obecný kvantifikátor -  $\forall$
 - *Je pravdivý*, pokud **pro všechny hodnoty z oboru hodnot je výrok pravdivý**
 - Použití pro výrokovou formu "x je větší nebo rovno 1":
 	- Pro každé *x* platí, že *x* je větší nebo rovno 1
 	- ($\forall x$) ($x$ je větší nebo rovno 1)
 	- ($\forall x$) ($x\geq 1$)
-#### **Existenční kvantifikátor** - $\exists$
+#### Existenční kvantifikátor - $\exists$
 - *Je pravdivý*, pokud **pro alespoň jednu hodnotu z oboru hodnot je výrok pravdivý**
 - Použití pro výraz "x je větší nebo rovno 1":
 	- Existuje $x$ tak, že $x$ je větší nebo rovno 1
 	- $(\exists x)$ ($x$ je větší nebo rovno 1)
 	- $(\exists x)$ $(x\geq 1)$
-## **Základy výrokové logiky**
+## Základy výrokové logiky
 - Výroková logika **je nejjednodušším formálním systémem logiky**
 - Ve výrokové logice nepracujeme s výroky samotnými, ale **pracujeme s formami výroků**
 - Formy výroků se nazývají **formule** a jsou to **přesně definované řetězce symbolů**
@@ -94,6 +94,6 @@
 - **Tautologie** = je-li formule při **každém ohodnocení pravdivá**
 - **Kontradikce** = je-li formule při **každém ohodnocení nepravdivá**
 - **Splnitelná** = je-li formule **alespoň při jednom ohodnocení pravdivá**
-## Vyplývání
+#### Sémantické Vyplývání
 - **Formule $\psi$ sémanticky plyne z formule $\phi$**, značíme $\phi \models \psi$, jestliže $\psi$ je pravdivá při každém ohodnocení, při kterém je pravdivá $\phi$
 - Pokud $\psi$ sémanticky plyne z $\phi$ a naopak, říkáme, že $\psi$ a $\phi$ jsou sémanticky ekvivalentní $\phi \equiv \psi$
