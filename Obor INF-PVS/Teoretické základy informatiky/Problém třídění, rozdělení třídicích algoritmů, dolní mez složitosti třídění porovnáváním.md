@@ -45,7 +45,7 @@
 
 ### Dolní mez složitosti třídění porovnáváním
 >[!tip] Věta
->*Časová složitost v nejhorším případě libovolného algoritmu třídění porovnáváním je $\Omega (n \log n)$*.
+>Časová složitost v nejhorším případě libovolného algoritmu třídění porovnáváním je $\Omega (n \log n)$.
 - Čili nejsme schopni najít algoritmus, který by byl v časové složitosti lepši než již existující
 
 >[!Example]- Důkaz věty

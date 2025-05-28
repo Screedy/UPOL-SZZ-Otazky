@@ -5,6 +5,7 @@
 		- Přemístí se prvky tak $A[p ... q - 1] \leq A[q]$ a $A[q + 1 ... r] \geq A[q]$
 	- Fáze "panuj":
 		- Setřídí se části $A[p ... q - 1]$ a $A[q + 1 ... r] \rightarrow$ **znovu zavolání** QuickSort
+	- Výběr pivota můžeme provést více způsoby: náhodně, medián ve tříděné části, první/poslední prvek tříděné části
 - Jedná se o tzv. **rekurzivní algoritmus**.
 	- Při provádění algoritmu QuickSort (ve fázi "panuj") se *volá* sám QuickSort. 
 	- To **nevede k zacyklení**, protože algoritmus je *volán* pro **stále kratší části** pole $A$. 
