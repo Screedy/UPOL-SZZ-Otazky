@@ -253,6 +253,7 @@
 
 >[!Tip] Sarrusovo pravidlo
 >- Vyjádření determinantů matic $2.$ a $3.$ stupně lze znázornit i schematicky:
+>- Pokud šipka jde zleva doprava, pak výsledek přičítám, pokud zprava doleva, pak ho odečítám
 >- Pro $n=2:$
 >![[MacBook-2024-03-10-000819.png| 150]]
 >- Pro $n=3:$

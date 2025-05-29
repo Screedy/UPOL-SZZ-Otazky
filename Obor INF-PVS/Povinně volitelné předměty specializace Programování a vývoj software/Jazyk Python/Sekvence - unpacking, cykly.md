@@ -104,10 +104,12 @@ x, y = point
 - Nejedná se o *mutable* typ (čili *immutable*)
 ## Dictionary
 - Vazba *klíč - hodnota*
+
 > [!info]
->`dict.items()` ... pro celou vazbu
-> `dict.keys()` ... klíče
-> `dict.values()` ... hodnoty
+> - `dict.items()` ... pro celou vazbu
+> - `dict.keys()` ... klíče
+> - `dict.values()` ... hodnoty
+
 ```python
 point = {"x": 10, "y": 20}
 point = dict([("x", 10), ("y", 20)])
@@ -163,13 +165,15 @@ for q, a in zip(questions, answers):
 ## Set (množina)
 - Jedná se o neseřazenou kolekci neduplicitních prvků (stejně jak v matematice)
 - Podporuje běžné množinové operace
+
 > [!info]
-> *sjednocení* - `union()` nebo `|`
-> *průnik* - `intersection()` nebo `& `
-> rozdíl - `difference()` nebo `-`
-> *symetrická diference* (sjednocení bez průsečíku) - `symetrci_difference()` nebo `^`
+> - *sjednocení* - `union()` nebo `|`
+> - *průnik* - `intersection()` nebo `& `
+> - rozdíl - `difference()` nebo `-`
+> - *symetrická diference* (sjednocení bez průsečíku) - `symetrci_difference()` nebo `^`
 > 
-> **zápis**: `a.union(b)`
+> - **zápis**: `a.union(b)`
+
 ```python
 numbers = {10, 20, 5, 10}
 

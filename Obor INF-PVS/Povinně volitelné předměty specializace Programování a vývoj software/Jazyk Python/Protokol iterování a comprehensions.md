@@ -55,6 +55,8 @@ itertools.filterfalse(lambda x: x % 3, range(20))
 ## Comprehensions
 - Společně s cykly se jedná o nejčastější využití *iteračního* protokolu
 - Jistý způsobem nahrazuje `for` cyklus (jiný zápis i jiné provedení "uvnitř")
+	- Interně se totiž překládá přímo do jazyka C
+	- Umí lépe alokovat paměť
 ```python
 # Oba následující příklady dělají totéž
 
