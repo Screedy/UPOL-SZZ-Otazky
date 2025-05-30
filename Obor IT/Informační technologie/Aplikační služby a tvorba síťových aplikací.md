@@ -67,9 +67,9 @@
 ![[MacBook-2024-04-18-001043.png]]
 - Alice bude chtít poslat mail Bobovi:
 	- Alice použije poštovního klienta (aplikaci). 
-		- **UA** - User Agent
+		- **UA** (user agent)
 		- Umožňuje **posílat** a **přijímat** e-maily.
-	- Jakmile je e-mail vytvořen, Alice jej **odešle**. O **odeslání** se stará **Message Transfer Agent** (**MTA**), který je **součástí UA**. Ten pomocí **Extended Simple Mail Transfer Protocol (ESMTP)** pošle zprávu **mail serveru** Alice.
+	- Jakmile je e-mail vytvořen, Alice jej odešle. O odeslání se stará *Message Transfer Agent (MTA)*, který je **součástí UA**. Ten pomocí *Extended Simple Mail Transfer Protocol (ESMTP)* pošle zprávu mail serveru Alice.
 		- Přesněji řečeno: MTA klient, který je součástí Alicina UA, pošle e-mail MTA serveru, který je součástí Alicina mail serveru.
 	- Mail server Alice e-mail dále zpracovává. Mohou nastat dva případy:
 		1. Bob používá **stejný mail server**. Mail se zařadí do odpovídajícího **mail boxu** (poštovní schránky).
@@ -78,7 +78,7 @@
 
 - Pokud si Bob bude chtít vyzvednout poštu:
 	- Použije svého **klienta** (aplikaci).
-	- O přístup do mail boxu se stará část klienta, která se označuje **Message Access Agent (MAA)**. MAA, který je realizován jako **klient-server služba**, pomocí **Internet Mail Access Protocol 4 (IMAP4)** přistoupí k Bobovu mail boxu a **stáhne jeho obsah** do Bobova **poštovního klienta**.
+	- O přístup do mail boxu se stará část klienta, která se označuje *Message Access Agent (MAA)*. MAA, který je realizován jako klient-server služba, pomocí *Internet Mail Access Protocol 4 (IMAP4)* přistoupí k Bobovu mail boxu a **stáhne jeho obsah** do Bobova poštovního klienta.
 
 #### Struktura e-mailu
 ![[MacBook-2024-04-18-001044.png| 400]]
