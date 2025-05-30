@@ -53,3 +53,23 @@
 	4) plánování (revize předchozí části, plánování další, info zákazníkovi)
 - jediná metoda explicitně řešící rizika
 ![[Pasted image 20250221125144.png]]
+
+## Agilní metody vývoje
+- Metody založené na iterativním vývoji
+- Umožňují rychlý vývoj a dokáží pružně reagovat na změnu požadavků
+- Obvykle rozdělují vývoj do menších částí/cyklů (tzv. *sprints*) a také menších týmů
+- Týmy se sebeorgnaizují
+- [Tady](https://agilemanifesto.org/iso/cs/manifesto.html|fawf) je tzv. *agile manifesto*, kde se dají nalézt původní a hlavní myšlenky
+
+#### SCRUM
+- **Sprint** pevně daná časová jednotka po jejímž konci se dodá funkční celek
+- **Denní scrum** mítinky - krátké denní stand-up porady
+- **Scrum master** - osoba která zajišťuje, aby v týmu vše fungovalo 
+- ![[Pasted image 20250530085340.png|600]]
+
+#### Kanban
+- Práce a její dílčí úkoly by se měli **vizualizovat** (nějaká tabule obvykle)
+![[Pasted image 20250530085422.png|600]]
+- Vhodné tam, kde je neustálý příliv úkolů
+- **WIP limit** (work in progress) - maximální počet úkolů ve sloupci
+- V grafu se dá znázornit % položek v jednotlivých částech tabule
