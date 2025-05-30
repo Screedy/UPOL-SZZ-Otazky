@@ -39,14 +39,22 @@
 	- cache procesoru obsahující **hodně používané části** stránkovacích tabulek
 	- pro danou stránku uchovává **adresu rámce**
 	- pokud je v cache - **cache hit**, jinak **cache miss** a načtení stránky trvá déle
+- **CoW**
+	- *copy on write*
+	- Příznak stránky zakazující zápis do ní
+	- Data se do ní nezapisují hned, ale až při pokusu o její změnu
+	- Kvůli úspoře místa
 
 ## Segmentace
 - paměť je rozdělena do několika segmentů (alespoň na kód, data, zásobník)
-- stránkování je obvykle pro programátora transparentní
-	- oproti tomu segmentace umožňuje rozdělit program do logických celků
----
-- při použití segmentace a stránkování programy nepracují přímo s lineární adresou
-- používají logickou adresu ve tvaru `segment + offset` a ta se poté převádí na fyzickou adresu pomocí stránkování
+- stránkování je obvykle pro programátora transparentní, oproti tomu segmentace umožňuje rozdělit program do logických celků
+- **ochranná vlastnost** - horní a dolní hranice a mimo tu se nedá dostat
+- **deskriptor segmentu** - popisuje segment (báze, limit, oprávnění)
+	- *global description table* (GDT)
+	- *local description table* (LDT)
+- při použití segmentace a stránkování programy **nepracují přímo s logickou adresou**
+	- používají **lineární adresu** ve tvaru `segment + offset` a ta se poté převádí na fyzickou adresu pomocí stránkování
+	- převod logické na lineární je segmentace
 >[!Example]+ Ukázka segmentace
 ![[MacBook-2024-05-03-001162.png]]
 
@@ -55,6 +63,14 @@
 - k primární paměti je připojen ještě velký soubor na disku
 - za pomoci OS se počítač tváří, jako by primární paměti bylo více
 - aktuálně používaná  data musí být v RAM
+- pokud stránka není v primární paměti, tak nastane *page fault* a je nutné ji tam načíst
+- pokud je plno, tak nutný **výběr oběti** místo jaké stránky se načte ona nová (více přístupů)
+- nutná ochrana paměti (probíhá na více úrovních)
+	- DPL - úrověň kam se bude přistupovat
+	- CPL - momentální úroveň
+	- RPL - požadovaná úroveň
+	- nižší hodnota => vyšší oprávnění
+
 >[!Example] Pojmy
 >- **virtuální paměť**: operační paměť zahrnující jak primární paměť, tak i vyhrazený prostor na pevním disku
 >- **swapování**: je proces, kdy OS vyměňuje úsek operační paměti mezi primární pamětí a diskem

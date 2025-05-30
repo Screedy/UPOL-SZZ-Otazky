@@ -1,7 +1,7 @@
 - Práce s pamětí uživatelských procesů (aplikací) se liší od OS
 - Dva základní typy
-	- **zásobník** (stack)
-	- **halda** (heap)
+	- **zásobník** (stack) - používá se pro funkce (lokální proměnné), menší a rychlejší
+	- **halda** (heap) - větší, po konci funkce uvolní, není unikátní pro vlákno (tzn. je sdílená)
 - Obvykle řeší běhové prostředí (např. JVM) či standardní knihovna (např. dlmalloc)
 
 ## Linux - `ptmalloc`
