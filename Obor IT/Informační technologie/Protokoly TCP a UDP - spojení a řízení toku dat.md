@@ -22,6 +22,7 @@
 	- Porty mají **nezávislý** rozsah pro **TCP** a **UDP**.
 
 ### Protokol TCP
+- *transmission control protocol*
 - **Spojová spolehlivá služba** zajišťující **spolehlivé** doručení dat.
 - V jeho kompetenci je:
 	- **Potvrzování přijetí** dat
@@ -49,9 +50,9 @@
 - Navázání spojení probýhá technikou **3-fázového handshake**
 
 >[!Example] 3-fázový handshake
->1. Klient posílá TCP segment (bez dat) s příznakem SYN a náhodně vygenerovaným číslem seq. Tento krok se označuje jako aktivní otevření.
->2. Server posílá segment (bez dat) s příznaky SYN a ACK a náhodně vygenerovaným číslem seq a číslem potvrzení ack.
->3. Klient posílá segment s  přiznakem ACK a číslem potvrzení nastavení `seq + 1`. Již může nést data.
+>1. Klient posílá TCP segment (bez dat) s příznakem $SYN$ a náhodně vygenerovaným číslem `seq1`. Tento krok se označuje jako aktivní otevření.
+>2. Server posílá segment (bez dat) s příznaky $SYN$ a $ACK$ a náhodně vygenerovaným číslem `seq2` a číslem potvrzení `ack = seq1 + 1`.
+>3. Klient posílá segment s  přiznakem $ACK$ a číslem potvrzení nastavení `seq2 + 1`. Již může nést data.
 >![[MacBook-2024-04-17-001026.png| 300]]
 
 #### Přenos dat
@@ -138,6 +139,7 @@
 ![[MacBook-2024-04-17-001034.png| 500]]
 
 ### Protokol UDP
+- *user datagram protocol*
 - UDP je oproti TCP **výrazně jednodušší**. Zajišťuje pouze **nespojovou nespolehlivou službu** a nedisponuje žádnými prostředky pro řízení toku dat.
 - UDP **negarantuje doručení dat**.
 
