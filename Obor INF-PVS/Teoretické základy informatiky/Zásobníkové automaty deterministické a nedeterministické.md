@@ -1,5 +1,6 @@
 ## Zásobníkový automat (PDA)
-- PDA (push-down automat) si lze představit jako konečný automat s tím, že navíc obsahuje (pomocnou) paměť, která pracuje jako zásobník a jejíž velikost není shora omezená
+- *Push down automata*
+- Lze si je představit jako konečný automat s tím, že navíc obsahuje (pomocnou) paměť, která pracuje jako zásobník a jejíž velikost není shora omezená
 - Přijímají (jako CFG) bezkontextové jazyky
 
 >[!info] Definice nedeterministického zásobníkového automatu
@@ -43,5 +44,5 @@
 
 ##### Navigace
 Předchozí:  [[Bezkontextové jazyky a jejich vlastnosti (uzávěrové vlastnosti, jednoznačnost)]]
-Následující: [[Deterministické zásobníkové automaty]]
+Následující: [[Turingův stroj (TS), nedeterministický TS]]
 Celý okruh: [[Obor INF-PVS/1. Teoretické základy informatiky]]

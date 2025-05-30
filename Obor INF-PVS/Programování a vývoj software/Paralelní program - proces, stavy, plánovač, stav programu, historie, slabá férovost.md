@@ -61,7 +61,7 @@
 - např. současné OS
 
 - **atomická operace** ... během vykonání je NELZE přerušit
-- **historie** ... posloupnost atomických operací
+- **historie** ... posloupnost stavů atomických operací
 ## Slabá férovost
 - historie je *slabě férová* pokud v každém stavu platí: "jestliže se proces chystá vykonat operaci, musí se dále v historii objevit"
 - plánovač je *slabě férový* pokud jsou slabě férová všechny jeho historie

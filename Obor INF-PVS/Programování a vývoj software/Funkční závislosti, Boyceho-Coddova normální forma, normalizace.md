@@ -20,6 +20,6 @@
 - Je **splněna** pokud v tabulce není žádná netriviální funkční závislost $X \rightarrow Y$ nebo pokud pro každé $X$ platí, že je nadklíčem
 - Přísnější než 3NF
 #### Rozklad
-- ![[Pasted image 20250428211034.png]]
+- Pro relaci $\mathcal{D}$ na $R$ se relace $\mathcal{D}_1 = \pi _S(\mathcal{D})$ a $\mathcal{D}_2 = \pi _T(\mathcal{D})$ nazývají *rozkladem* relace $\mathcal{D}$ podle $S$ a $T$.
 - Spojením oněch 2 relací (podle relační algebry) opět dostaneme původní relaci
-	- Pokud je to přesně ona (nic není navíc), tak se jedná o **beztrarátový rozklad**
+	- Pokud je to přesně ona (nic není navíc), tak se jedná o **bezztrátový rozklad**

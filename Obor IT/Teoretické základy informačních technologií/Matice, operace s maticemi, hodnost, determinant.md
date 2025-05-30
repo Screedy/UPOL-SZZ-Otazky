@@ -253,6 +253,7 @@
 
 >[!Tip] Sarrusovo pravidlo
 >- Vyjádření determinantů matic $2.$ a $3.$ stupně lze znázornit i schematicky:
+>- Pokud šipka jde zleva doprava, pak výsledek přičítám, pokud zprava doleva, pak ho odečítám
 >- Pro $n=2:$
 >![[MacBook-2024-03-10-000819.png| 150]]
 >- Pro $n=3:$
@@ -299,6 +300,21 @@
 > \end{vmatrix}
 > = -2
 > $$
+
+### Adjungovaná matice
+- Transponovaná matice algebraických doplňků
+- Používá se k sestavení inverzní matice
+- Postup
+	1. Udělám algebraický doplněk pro všechny prvky
+	2. Matici transponuju
+### Inverzní matice
+- **Pouze ke čtvercovým maticím**
+- Pro matici $A$ existuje právě 1 inverzní matice $A^{-1}$
+- Platí: $\ A \cdot A^{-1} = A^{-1} \cdot A = E$ ($E$ ... jednotková matice)
+- **Postup**
+	1. sestavíme $adj(A)$
+	2. spočítáme $det(A)$
+	3. inverzní matice je $A^{-1} = \frac{1}{det(A)} \cdot adj(A)$
 
 ### Laplaceův rozvoj determinantu
 - Nechť $A = (a_{ij}) \in M_{n}(T)$. Pak pro každý řádkový index $i = 1, 2, ..., n$ platí

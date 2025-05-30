@@ -55,8 +55,8 @@ list = [1, 2, 3] list.append(4) # Přidává prvek 4 na konec seznamu
 5. **Dynamická alokace paměti:** Python spravuje paměť dynamicky, což znamená, že se stará o alokaci a dealokaci paměti pro proměnné a datové struktury.
 ## Mutabilita
 > [!info]
-> **mutabilní objekt** ... po jeho vytvoření umožňuje měnit jeho vnitřní stav
-> **imutabilní objekt** ... po vytvoření NENÍ možné měnit vnitřní stav
+> - **mutabilní objekt** ... po jeho vytvoření umožňuje měnit jeho vnitřní stav
+> - **imutabilní objekt** ... po vytvoření NENÍ možné měnit vnitřní stav
 
 - Proměnná v Pythonu je pouze odkazem na objekt, až samotný objekt je umístěn někde v paměti 
 #### Hodnota (value)

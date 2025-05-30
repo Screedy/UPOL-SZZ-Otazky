@@ -11,22 +11,37 @@ $$
 - **postkondice** ... výrok o stavu programu po jeho konci $\{ψ\}$
 
 >[!info]
->**Pravdivost trojice** je dána tak, že program je ve stavu spňujícím $\{ϕ\}$, poté se program $P$ vykoná a výsledný stav splňuje $\{ψ\}$.
+>**Pravdivost trojice** je dána tak, že program je ve stavu spňujícím $\{ \phi \}$, poté se program $P$ vykoná a výsledný stav splňuje $\{ \psi \}$.
 
-#### Přiřazení
+#### (Axiom) přiřazení
 $$
 \begin{gather}
-\{ϕ(v/e)\} \\
+\{\phi(v/e)\} \\
 v = e \\
-\{ϕ\}
+\{\psi\}
 \end{gather}
 $$
 - $v$ ... proměnná
 - $e$ ... výraz
 - $ϕ$ ... tvrzení
 - $ϕ(v/e)$ ... nahrazení $v$ za $e$ ve $ϕ$
-
-- možnost zesílení prekondice a oslabení postkondice
+- **Např.**
+$$ 
+\begin{gather}
+\{ x + 1 = 2 \} \\
+x \leftarrow x + 1 \\
+\{ x = 2 \}
+\end{gather}
+$$
+	- *A to dále můžeme zjednodušit jako*
+$$ 
+\begin{gather}
+\{ x = 1 \} \\
+x \leftarrow x + 1 \\
+\{ x = 2 \}
+\end{gather}
+$$
+- Můžeme zesílit prekondici a oslabit postkondici
 #### Nenarušení tvrzení
 - $P$ ... akce
 - $ϕ$ ... prekondice $P$

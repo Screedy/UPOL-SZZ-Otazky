@@ -4,12 +4,17 @@
 - Růst je lineární ($O(n)$)
 ## Funkce lineární
 - $f(n) = n$
+- $y = ax + b$
 - Např. průchod polem
 ## Kvadratická funkce
 - $f(n) = n^2$
 - Např. neefektivní třídící algoritmy (bubble sort), brute-force algoritmy
 ## Kubická funkce
 - $f(n) = n^3$
+## Mocniná funkce se záporným exponentem
+- $f(n) = n^{-1}$
+- tzv. nepřímá úměrnost
+- Rozdílné pokud je exponent sudý/lichý
 ## Exponenciální funkce
 - $f(n) = b^n$
 1) $b > 1$ - rostoucí
@@ -28,3 +33,9 @@
 - Např. Počet možných permutací množiny
 ## Funkce konstantní
 - $f(n) = c$
+## Funkce sin, cos, tag, cotag
+- $f(x) = sin(x)$
+- $f(x) = cos(x)$
+- $f(x) = tg(x)$
+- $f(x) = cotg(x)$
+- ![[Pasted image 20250526154419.png]]

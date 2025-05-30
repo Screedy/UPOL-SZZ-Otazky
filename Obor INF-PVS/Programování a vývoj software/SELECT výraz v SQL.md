@@ -145,6 +145,7 @@ Vyhodnocovací pořadí klauzulí u `SELECT` výrazu:
 3. `GROUP BY` - seskupování
 4. `HAVING` - filtrování skupin
 5. `SELECT` - výpočet výstupní tabulky
-6. `ORDER BY` - třídění řádků
-7. `OFFSET` - vynechání řádků ze začátku
-8. `LIMIT` - omezení počtu řádků
+6. `DISTINCT` - odstranění duplicit
+7. `ORDER BY` - třídění řádků
+8. `OFFSET` - vynechání řádků ze začátku
+9. `LIMIT` - omezení počtu řádků

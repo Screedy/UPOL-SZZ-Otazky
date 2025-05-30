@@ -23,8 +23,8 @@
 - Relace *kartézského součinu* $\iota_{X}$ je největší ekvivalence na $X$
 ### Rozklad
 - Rozklad na množině je matematický protějšek shluků nerozlišitelných prvků
-- Nechť **$X \neq \varnothing$** je množina. Systém množin $\Pi \subseteq 2^{X}$ splňují
-	- **$Y \neq \varnothing$ pro každou $Y \in \Pi$**
+- Nechť **$X \neq \emptyset$** je množina. Systém množin $\Pi \subseteq 2^{X}$ splňují
+	- **$Y \neq \emptyset$ pro každou $Y \in \Pi$**
 		- Rozklad $\Pi$ na $X$ je systém neprázdných podmnožin $Y$
 	- **Pro každé $Y_{1}, Y_{2} \in \Pi$ platí: pokud $Y_{1} \cap Y_{2} \neq \varnothing$, pak $Y_{1} = Y_{2}$**
 		- Požadujeme, aby dvě různé třídy rozkladu $\Pi$ byly disjunktní

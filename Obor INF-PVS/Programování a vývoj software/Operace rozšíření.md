@@ -10,7 +10,7 @@
 	- Např. hodnota výrazu `age + 1` v n-tici `{<age, 32>}` je 33 (32 + 1 = 33)
 ##  Definice rozšíření
 - Relace $D$ na $R$, atribut $y \notin R$ a skalární výraz $\theta$ na $R$ potom rozšíření $D$ o $y$ podle $\theta$ definujeme takto:
- ![[Pasted image 20250502172832.png]]
+$$ \epsilon_{y \leftarrow \uptheta} (\mathcal{D}) = \{ r \ \cup \ \{ \langle y, \theta(r) \rangle \} \ | \ r \in \mathcal{D} \} $$
 - Rozšíří relaci o nový atribut
 	- Ten se pro každou n-tici dopočítá z původní n-tice pomocí výrazu
 ```sql

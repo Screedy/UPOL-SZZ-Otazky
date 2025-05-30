@@ -60,8 +60,8 @@
   - Je-li funkce rostoucí nebo klesající, říkáme, že je **ryze monotonní na $M$**.
 - **Parita a periodičnost:**
   - Nechť $f: \mathbb{R} \rightarrow \mathbb{R}$ a $M \subset D(f)$. Říkáme, že funkce $f$ je
-    1. **sudá na množině $M$,** právě když $$\forall{x} \in M: (-x) \in M \land f(x) = f(-x)$$
-    2. **lichá na množině $M$,** právě když $$\forall{x} \in M:(-x) \in M \land f(-x) = -f(x)$$
+    1. **sudá na množině $M$** (symetrická podle $y$), právě když $$\forall{x} \in M: (-x) \in M \land f(x) = f(-x)$$
+    2. **lichá na množině $M$** (symetrická podle $x$), právě když $$\forall{x} \in M:(-x) \in M \land f(-x) = -f(x)$$
     3. **$p$-periodická na množině $M$** s periodou $p \in \mathbb{R}$ $$\forall{x} \in M: x + p \in M \land x-p \in M \land f(x+p)=f(x-p)=f(x)$$
 
 ### Funkce injektivní, surjektivní, bijektivní

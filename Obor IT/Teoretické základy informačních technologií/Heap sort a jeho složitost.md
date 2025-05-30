@@ -1,4 +1,3 @@
-- Třídění **haldou** (hromadou)
 - Využívá **datovou strukturu** zvanou **halda**
 	- **(Binární) halda =** pole, ve kterém uložení prvků **simuluje** jejich **přirozené uložení** v **binárním stromu**
 - Složitost algoritmu v nejhorším případě: $\Theta (n \log n)$

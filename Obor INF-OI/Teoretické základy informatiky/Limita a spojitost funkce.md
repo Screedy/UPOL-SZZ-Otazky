@@ -189,16 +189,16 @@ Nechť navíc $f(a) < f(b)$, pak:
 Říkáme, že funkce $f : A \to \mathbb{R}$ je spojitá zprava (zleva) v bodě $a \in A$, jestliže platí:
 - $\lim_{x \to a^+} f(x) = f(a)$
 - resp. $\lim_{x \to a^-} f(x) = f(a)$
-#### Body nespojitosti
+### Body nespojitosti
 - Body definičního oboru funkce $f$, v nichž není funkce spojitá, nazýváme body nespojitosti funkce $f$. Tyto body můžeme roztřídit do tří skupin
-#### Body odstranitelné nespojitosti
+#### 1. Body odstranitelné nespojitosti
 - Existuje konečná limita $\lim_{x \to a} f(x) = b$, ale $b \neq f(a)$. 
 - Stačí funkci $f$ v bodě $a$ předefinovat tak, že položíme $f(a) = b$ a funkce se stane spojitou. 
 - K bodům odstranitelné nespojitosti patří také body, v nichž je funkce $f$ nedefinovaná, ale existuje v něm limita $\lim_{x \to a} f(x) = b$. 
 	- V takovém případě postačí funkci $f$ v bodě $a$ dodefinovat tak, že položíme $f(a) = b$. Funkci $f$ tak rozšíříme na $D(f) \cup \{a\}$.
 - Např. Funkce $f(x) = \frac{\sin x}{x}$ není definována v bodě $x = 0$.
 	- ![[Pasted image 20240628133523.png]]
-#### Nespojitost prvního druhu
+#### 2. Nespojitost prvního druhu
 - Existují konečné jednostranné limity, ale nejsou si rovny:
 $$
 \lim_{x \to a^+} f(x) \neq \lim_{x \to a^-} f(x)
@@ -210,7 +210,7 @@ $$
 - Např. funkce $f(x) = \text{sgn} x$ má v bodě 0 nespojitost prvního druhu.
 	- ![[Pasted image 20240628133546.png]]
 
-#### Nespojitost druhého druhu
+#### 3. Nespojitost druhého druhu
 - Jestliže alespoň jedna z jednostranných limit neexistuje nebo je nevlastní $\lim_{x \to a^+} f(x) = \infty$, pak bod $a$ nazveme bodem nespojitosti druhého druhu.
 - Např. funkce $f(x) = \frac{1}{x}$ má v bodě 0 nespojitost druhého druhu.
 	- Tvrzení nám dokáže opět jednostranné limity:

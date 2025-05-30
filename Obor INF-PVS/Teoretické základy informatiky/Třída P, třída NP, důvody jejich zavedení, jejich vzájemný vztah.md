@@ -2,22 +2,29 @@
 >- Pro funkci $f: \mathbb{N} \rightarrow \mathbb{N}$ rozumíme **třídou časové složitosti $T(f)$**, množinu těch probému, které jsou řešeny TS s **časovou složitostí v $O(f)$**.
 >- **Třídou prostorové složitosti $S(f)$**, rozumíme třídu těch problémů, které jsou řešeny TS s **prostorovou složitostí v $O(f)$**
 
+#### Time$(f(n))$
+- Množina všech problémů, které jsou TS rešitelné s časovou složitostí $O(f(n))$.
+
 ## PTIME
-- Třída obsahující **všechny problémy řešitelné algoritmy (TS) s polynomiální časovou složitostí** $$PTIME = \bigcup_{k \in \mathbb{N}} TIME(n^{k})$$
+- Třída obsahující **všechny problémy řešitelné algoritmy (TS) s polynomiální časovou složitostí** $$PTIME = \bigcup_{k \in \mathbb{N}} Time(n^{k})$$
 - **Robustnost třídy** PTIME znamená **nezávislost** na zvoleném referenčním modelu počítačů. Když bychom totiž jako referenční model vzali např. stroje RAM, třída PTIME by se nezměnila.
 - Patří sem: dosažitelnost v grafu, nejkratší cesta v grafu, minimální kostra v grafu, třídění, ...
 
+#### Ntime$(f(n))$
+- Množina všech $ANO/NE$ problémů, které jsou rozhodované NTS s časovou složitostí $O(f(n))$. 
+
 ## NPTIME
 - Třída **všech $ANO/NE$ problémů**, které jsou rozhodovány **nedeterministickými algoritmy s polynomiální časovou složitostí.**
-- $$NPTIME = \bigcup_{k \in \mathbb{N}} NTIME(n^k) $$
+- $$NPTIME = \bigcup_{k \in \mathbb{N}} Ntime(n^k) $$
 - **Robustnost třídy** NPTIME znamená **nezávislost** na zvoleném referenčním modelu počítačů. Když bychom totiž jako referenční model vzali např. stroje RAM, třída NPTIME by se nezměnila
 
 >[!tip] Důvod zavedení tříd **PTIME** a **NPTIME**
 >- Třídy časové složitosti PTIME a NPTIME byly vytvořené pro **popis** a **kategorizaci** problémů, které jsou řešitelné deterministickými a nedeterministickými algoritmy s polynomiální časovou složitostí.
->- **PSPACE**
->	- Třída obsahující **všechny problémy řešitelné algoritmy s polynomiální prostorovou složitostí.**
->- **NPSPACE**
->	- Třída obsahující **všechny problémy řešitelné nedeterministickými algoritmy s polynomiální prostorovou složitostí**
+
+## PSPACE
+- Třída obsahující všechny problémy řešitelné algoritmy s **polynomiální prostorovou složitostí**.
+## NPSPACE
+- Třída obsahující všechny problémy řešitelné **nedeterministickými algoritmy s polynomiální prostorovou složitostí**.
 
 ## Vzájemný vztah
 $$PTIME \subseteq NPTIME \subseteq PSPACE = NPSPACE$$

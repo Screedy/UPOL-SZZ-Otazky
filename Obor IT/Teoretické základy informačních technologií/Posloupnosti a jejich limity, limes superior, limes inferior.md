@@ -16,7 +16,7 @@
 	2. **Rekurentně**
 		- Členy posloupnosti jsou určeny pomocí jednoho nebo více předcházejících členů
 		- Typickým příkladem je Fibonacciho posloupnost: $$a_1=0, a_2=1, a_{n+2}=a_{n+1}+a_n$$
-## Podposloupnost
+### Podposloupnost
 - Posloupnost $(b_{n})$ se nazývá **podposloupnost** $(a_{n})$, právě když existuje posloupnost přirozených čísel $k_{1} < k_{2} < k_{3} < ...$ tak, že $\forall{n \in \mathbb{N}}$ je $b_{n} = a_{kn}$.
 
 ## Speciální posloupnosti

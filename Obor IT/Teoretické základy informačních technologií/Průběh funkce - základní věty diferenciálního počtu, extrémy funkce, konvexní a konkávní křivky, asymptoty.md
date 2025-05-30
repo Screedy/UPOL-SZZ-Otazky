@@ -217,7 +217,7 @@ $$f(x_2) > f(x_1) + \frac{f(x_3) - f(x_1)}{x_3 - x_1} (x_2 - x_1).$$
 
 ## Asymptota
 - Při vyšetřování průběhu funkce a především pro přesnější kreslení jejího grafu je dobré znát přímky, kterým se graf funkce v okolí některých zajímavých bodů podobá
-- Zjednodušeně řečeno, asymptota je přímka, ke které se graf funkce blíží, ale nikdy se jí nedotkne.
+- Zjednodušeně řečeno, asymptota je přímka, **ke které se graf funkce blíží**, ale nikdy se jí nedotkne.
 
 >[!Example]- Isibalo - Co jsou to asymptoty
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/_bElzjN6tz4?si=76x9eTi8-dvWkIg_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
