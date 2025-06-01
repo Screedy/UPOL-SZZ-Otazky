@@ -303,7 +303,7 @@ if (obj is Person) { ... }
 if (zasobnik is IStack) { ... }
 ```
 
-## Properties a fields
+## Properties, fields a methods
 #### Fields
 - Základní datové členy třídy
 - Uchovávají stav objektu
@@ -316,8 +316,8 @@ if (zasobnik is IStack) { ... }
 public int Length { get; set; }
 ```
 
-#### Vlastní implementace s validací
 ```csharp
+// Vlastní implementace s validací
 private int _length;
 
 public int Length {
@@ -328,6 +328,16 @@ public int Length {
 }
 ```
 
+#### Methods
+- Blok kódu, který vykoná sérii příkazů
+- Obvykle zajišťuje komplexnější funkcionalitu
+- Mohou být `static` = nezávisí na konkrétní instanci
+```csharp
+abstract class Motorcycle {
+	// Anyone can call this.
+	public void StartEngine() {/* Method statements here */ }
+}
+```
 ## Přetížení operátorů
 - C# umožňuje definovat vlastní chování standardních operátorů pro vlastní typy.
 #### Přípustné operátory k přetížení:
