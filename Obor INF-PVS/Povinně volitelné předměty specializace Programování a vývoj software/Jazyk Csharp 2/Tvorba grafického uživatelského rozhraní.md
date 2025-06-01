@@ -1,3 +1,42 @@
+## Práce s konzolí
+#### Vstup od uživatele
+- Čtení textového vstupu:
+```csharp
+string vstup = Console.ReadLine();
+```
+
+- Příklad čtení číselného vstupu s ošetřením výjimky:
+```csharp
+static void ReadNumber(out int a, string text) {
+    Console.Write(text);
+    string input = Console.ReadLine();
+    try {
+        a = int.Parse(input);
+    } catch (Exception) {
+        ReadNumber(out a, text);
+    }
+}
+```
+
+#### Změna vzhledu konzole
+```csharp
+Console.BackgroundColor = ConsoleColor.Green;
+Console.ForegroundColor = ConsoleColor.Red;
+Console.ResetColor();
+Console.Clear();
+Console.SetWindowSize(80, 25);
+Console.Title = "Moje aplikace";
+```
+
+#### Reakce na stisk klávesy
+```csharp
+ConsoleKeyInfo info = Console.ReadKey();
+if (info.Key == ConsoleKey.Backspace) {
+    Console.WriteLine("Zmáčkl backspace");
+}
+```
+
+
 ## WPF application
 - *Windows presentation foundation*
 - Už z názvu vyplývá, že není multiplatformní

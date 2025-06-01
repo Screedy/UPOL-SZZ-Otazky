@@ -76,7 +76,7 @@
 		- ㄱφ
 		- (φ ∧ 𝜓)
 		- (φ ∨ 𝜓)
-		- (φ ⟶ 𝜓)
+		- (φ $\rightarrow$ 𝜓)
 		- (φ ↔ 𝜓)
 ## Pravdivost
 - **Pravdivostní ohodnocení** je libovolné zobrazení $e$ výrokových symbolů daného jazyka výrokové logiky do množiny $\{0, 1\}$

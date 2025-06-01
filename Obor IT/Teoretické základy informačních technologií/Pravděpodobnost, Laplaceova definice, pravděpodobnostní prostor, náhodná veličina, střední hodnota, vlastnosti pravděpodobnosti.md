@@ -7,10 +7,10 @@
 - Pravděpodobnost a statistika nás učí, jak **kvantitativně vyhodnocovat data**.
 	- Na pravděpodobnosti je založen pojem **složitost algoritmu v průměrném případě**
 
-### Klasická definice pravděpodobnosti (Laplaceova)
+### Klasická Laplaceova definice pravděpodobnosti 
 - Nechť $\Omega$ je konečný vzorový prostor a všechny elementární jevy v $\Omega$ jsou stejně pravděpodobné. Pro libovolnou událost $A \subseteq \Omega$, pravděpodobnost $P(A)$ je definována: $$P(A) = \frac{počet\ příznivých\ výsledků\ pro\ A}{celkový\ počet\ možných\ výsledků}$$kde **počet příznivých výsledků** pro $A$ je počet prvků v množině $A$ a **celkový počet možných výsledků** je počet všech prvků ve vzorovém prostoru $\Omega$.
 
-## Kolmogorova definice pravděpodobnosti
+### Kolmogorova definice pravděpodobnosti
 - Je dán **náhodný pokus**:
 	- hod kostkou
 	- výběr člověka z populace ČR
@@ -102,7 +102,7 @@
 - Střední hodnota náhodné veličiny nám dává užitečnou, ale jen omezenou informaci. To platí i pro průměrnou hodnotu, která je speciálním případem střední hodnoty: *Jeden člověk sní celé kuře, druhý nic: v průměru měl každý půl kuřete*
 - Vidíme tedy, že průměr poskytují jen omezenou informaci o veličině $X$. Hodnoty $X$ mohou být kolem střední hodnoty $E(X)$ různě **rozptýleny**. K vyjádření toho, jak moc jsou rozptýleny, slouží tzv. *rozptyl*
 
-- **Rozptyl $var\ X$** náhodné veličiny $X$ je definován vztahem $var\ X=E((X-E(X))^{2})$.
+- **Rozptyl $var\ X$** náhodné veličiny $X$ je definován vztahem $var\ X=E[(X-E(X))^{2}]$.
 - **Směrodatná odchylka** $\sigma$ náhodné veličiny $X$ je druhá odmocnina rozptylu, tj. $\sigma =  \sqrt{var\ X}$.
 - $var\ X$ vyjadřuje, jak moc jsou hodnoty $X$ rozptýleny kolem $E(X)$. Čím je větší, tím jsou více rozptýleny.
 

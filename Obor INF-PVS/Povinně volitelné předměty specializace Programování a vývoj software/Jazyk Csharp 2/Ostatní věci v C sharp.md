@@ -14,29 +14,6 @@
 ```
 - `#error`, `#warning` – vynucení chyby nebo varování
 - `#region`, `#endregion` – pro skládání kódu ve Visual Studiu
-## Rozhraní `IComparable`
-- Slouží k **porovnávání objektů** mezi sebou, například při řazení v kolekcích.
-
-```csharp
-public interface IComparable {
-    int CompareTo(object obj);
-}
-```
-
-#### Návratová hodnota:
-- `< 0` – objekt je menší než `obj`
-- `= 0` – objekty jsou stejné
-- `> 0` – objekt je větší než `obj`
-
-#### Implementace:
-```csharp
-public int CompareTo(object obj) {
-    if (obj is Person other) {
-        return this.Age.CompareTo(other.Age);
-    }
-    throw new ArgumentException("Object is not a Person");
-}
-```
 
 ## Třída `Regex` – regulární výrazy
 - Umožňuje efektivní **vyhledávání a zpracování textových vzorů**.
@@ -54,9 +31,3 @@ foreach (Match match in rx.Matches("další text")) {
 - Ověření struktury (např. e-mail)
 - Extrakce údajů z textu
 - Získání více výskytů určitého vzoru
-
----
-## Shrnutí
-- **Direktivy** ovlivňují kompilaci programu podmíněným překladem.
-- **Rozhraní `IComparable`** umožňuje přirozené třídění objektů.
-- **Regulární výrazy (`Regex`)** poskytují výkonný nástroj pro analýzu a zpracování textu.

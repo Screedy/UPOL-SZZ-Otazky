@@ -6,7 +6,7 @@
 > **Jazyk PL** obsahuje:
 >> - **proměnné** $x, y, z, ..., x_1, ...$
 >> - **relační symboly** $p, q, r, ..., p_1, ...$ (ke každému relačnímu symbolu $r$ je dáno nezáporné číslo $\sigma(r)$ nazývané *arita symbolu* $r$)
->> - **funkční symboly** $f, g, h, ..., f_1, ...$ (ke každému relačnímu symbolu $r$ je dáno nezáporné číslo $\sigma(r)$ nazývané *arita symbolu* $f$)
+>> - **funkční symboly** $f, g, h, ..., f_1, ...$ (ke každému relačnímu symbolu $f$ je dáno nezáporné číslo $\sigma(f)$ nazývané *arita symbolu* $f$)
 >> - **symboly pro logické spojky**: $\neg$ a $\Rightarrow$
 >> - **symbol pro univerzální kvantifikátor** $\forall$
 >> - **pomocné symboly** jako závorky a čárka
@@ -14,25 +14,28 @@
 - Množina všech **funkčních** symbolů jazyka se značí $F$
 - Je-li $r \in R$ a $\sigma(r) = n$, pak řekneme že $r$ je **n-ární** (ekvivalentně pro $f$ a $F$)
 - Trojici $\lt R, F, \sigma \gt$ nazýváme jako **typ jazyka** (jednoznačně to určí jazyk)
-	- Množiny $R$ a $F$ musí být disjunktní
+	- Platí $R \cap F = \emptyset$ (musí být disjunktní)
 - Základní jednotky jazyka jsou **termy a formule**
 
 > [!info] Definice
 > **Term** jazyka typu $\lt R, F, \sigma \gt$ je definován takto
 >> - každá proměnná $x$ je term
 >> - pokud $f \in F$ je n-ární a jsou $t_1, ..., t_n$ termy, pak $f(t_1, ..., t_n)$ je term
+
 - Pro zápis používáme **infixovou notaci**
 	- $x f y$ místo $f(x, y)$ ... $2 + 3$ místo $+(2, 3)$
+
 >[!info] Definice
 >**Formule** jazyka typu $\lt R, F, \sigma \gt$ je definován takto
 >> - je-li $r \in R$ je n-ární a jsou $t_1, ..., t_n$ termy, pak $r(t_1, ..., t_n)$ je (atomická) formule
->> - jsou-li $\varphi$ a $\psi$ formule, pak $\neq \varphi, (\varphi \Rightarrow \psi)$ jsou také formule
+>> - jsou-li $\varphi$ a $\psi$ formule, pak $\neg \varphi, (\varphi \Rightarrow \psi)$ jsou také formule
 >> - je-li $\varphi$ formule a $x$ proměnná, pak $(\forall x)\varphi$ je formule
 
 - I v PL můžeme provádět důkazy strukturální indukcí jako ve VL
 
 ## Sémantika predikátové logiky
 - Přiřazuje význam (nemá smysl uvažovat $x + 0$)
+
 >[!info] Definice
 >**Struktura pro jazyk** typu $\lt R, F, \sigma \gt$ je trojice $M = \lt M, R^M, F^M \gt$, která sestává z:
 >> - neprázdné množiny $M$
