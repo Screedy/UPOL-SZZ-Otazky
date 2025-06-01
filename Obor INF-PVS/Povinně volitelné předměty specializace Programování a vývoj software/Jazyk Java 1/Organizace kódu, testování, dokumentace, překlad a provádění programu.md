@@ -157,3 +157,40 @@ stream.parallel()
 - Streamy lze zpracovávat **paralelně**, pokud je to výhodné.
 
 ---
+
+## Organizace kódu v Javě
+
+Java programy se skládají z tříd, každá ve vlastním souboru s příponou `.java`. Třídy jsou členěny do balíčků (packages), které odpovídají adresářové struktuře. Balíček se definuje direktivou `package` na začátku souboru.
+
+Hlavní třída má statickou metodu `main`, která slouží jako vstupní bod programu.
+
+## Testování
+
+Testování se provádí pomocí knihovny JUnit. Testy se zapisují jako metody označené anotací `@Test` a ověřují očekávané chování pomocí asercí.
+
+Testy se zpravidla organizují do zrcadlové struktury vůči produkčnímu kódu a spouštějí se pomocí nástrojů jako Maven nebo Gradle.
+
+## Dokumentace
+
+Java používá komentáře ve formátu JavaDoc, které jsou umístěné nad třídami a metodami. Obsahují popis funkce, parametrů a návratových hodnot.
+
+Z komentářů lze vygenerovat HTML dokumentaci.
+
+Příklad komentáře:
+
+```java
+/**
+ * Vrátí součet dvou čísel.
+ * @param a první číslo
+ * @param b druhé číslo
+ * @return součet
+ */
+```
+
+## Překlad a provádění programu
+
+Program se nejprve překládá pomocí kompilátoru `javac`, který ze zdrojového kódu vytvoří soubor `.class` s bajtkódem.
+
+Při spouštění programů se bajtkód vykonává na virtuálním stroji JVM, který jej překládá do strojového kódu pomocí tzv. just-in-time kompilace.
+
+Tento přístup umožňuje nezávislost kódu na platformě a jednotné spouštění na různých operačních systémech.
