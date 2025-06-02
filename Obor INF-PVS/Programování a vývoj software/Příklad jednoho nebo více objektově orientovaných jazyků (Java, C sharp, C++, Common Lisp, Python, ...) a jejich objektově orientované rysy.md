@@ -1,4 +1,3 @@
-*Změna názvu u C# z důvodu problémů v Obsidianu.*
 ## Obecné hlavní rysy
 1) Zapouzdření
 2) Dědičnost
