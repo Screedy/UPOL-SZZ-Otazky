@@ -12,7 +12,7 @@
 
 >[!Example] Příklad
 >- V jedné malé základní škole fungují tři kroužky. Florbalový kroužek navštěvuje 18 dětí, výtvarný 14 dětí a šachový je osmičlenný. Z florbalistů jsou dva šachisté a čtyři výtvarníci. Do výtvarného a zároveň do šachového kroužku chodí tři děti. Jedno dítě chodí na všechny tři kroužky. Kolik dětí navštěvuje alespoň jeden ze tří uvedených kroužků?
->- **Řešení**: $|F \cup V \cup Š| = 18 + 14 + 8 - 2- 4- 3 + 1 = 32$
+>- **Řešení**: $|F \cup V \cup Š| = |A| + |B| + |C| - |A \cap B| - |B \cap C| - |A \cap C| + |A \cap B \cap C|  = 18 + 14 + 8 - 2- 4- 3 + 1 = 32$
 
 
 ##### Navigace

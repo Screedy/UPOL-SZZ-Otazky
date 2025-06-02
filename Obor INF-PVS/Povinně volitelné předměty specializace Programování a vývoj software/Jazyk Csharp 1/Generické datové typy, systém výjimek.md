@@ -170,6 +170,31 @@ Console.WriteLine(today.ToString("MM.dd.yyyy HH:mm:ss"));
   - `DateTime.IsLeapYear(year)`
 - Vlastnosti: `Ticks`, `DayOfWeek`, `IsDaylightSavingTime()`
 
+## Rozhraní `IComparable`
+- Slouží k **porovnávání objektů** mezi sebou, například při řazení v kolekcích.
+
+```csharp
+public interface IComparable {
+    int CompareTo(object obj);
+}
+```
+
+#### Návratová hodnota:
+- `< 0` – objekt je menší než `obj`
+- `= 0` – objekty jsou stejné
+- `> 0` – objekt je větší než `obj`
+
+#### Implementace:
+```csharp
+public int CompareTo(object obj) {
+    if (obj is Person other) {
+        return this.Age.CompareTo(other.Age);
+    }
+    throw new ArgumentException("Object is not a Person");
+}
+```
+
+
 ## Výjimky v C\#
 - Výjimky (*exceptions*) slouží ke zpracování neočekávaných stavů v běhu programu. Typicky jde o:
 	- Dělení nulou

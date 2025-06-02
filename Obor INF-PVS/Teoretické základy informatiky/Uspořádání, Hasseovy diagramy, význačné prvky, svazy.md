@@ -1,7 +1,7 @@
 #disk1 #svazy #hasseovy-diagramy #uspořádání
 ## Uspořádání
 - *Uspořádání* je matematický protějšek pojmu **hierarchie**
-- Binární relace $U$ na množině $A \neq \varnothing$ se nazývá **uspořádání**, je-li **reflexivní, antisymetrická a tranzitivní.**
+- Binární relace $U$ na množině $A \neq \emptyset$ se nazývá **uspořádání**, je-li **reflexivní, antisymetrická a tranzitivní.**
 >[!tip]
 >- **Reflexivní** - Každé $x$ z $X$ je totožné s $x$, tedy $x = x$
 > - **Tranzitivní** - Pokud $x \leq y$ a $y \leq z$, pak i $x \leq z$

@@ -8,7 +8,7 @@
 	- **ÚDNF** se **nedá vytvořit** pokud se jedná o **kontradikci** a **ÚKNF** se **nedá vytvořit** pokud se jedná o **tautologii**
 
 ### Vytvoření ÚDNF
-- Pro každý řádek tabulky odpovídající ohodnocení $e$, při kterém má funkce $f$ hodnotu **$1$** sestrojíme **ÚEK**, tak že
+- Pro každý řádek tabulky odpovídající ohodnocení $e$, při kterém má funkce $f$ hodnotu $1$ sestrojíme **ÚEK**, tak že
 	- $p_{i}$ pro $e(p_{i})=1$
 	- $\neg p_{i}$ pro $e(p_{i})=0$
 - Výsledná ÚDNF je disjunkcí ÚEK z předchozího kroku

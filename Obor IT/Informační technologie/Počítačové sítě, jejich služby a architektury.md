@@ -53,12 +53,12 @@
 	- \- udržovat stav komunikace
 	- \+ zpoždění přenosu je minimální
 
-## Model ISO
+## Model ISO/OSI
 - Jedná se o obecný popis komunikace mezi dvěma uzly
 - Je používán jako **abstraktní a referenční** model komunikace
 	- Pouze obecný popis komunikace
 	- Při implementaci se na něj odkazujeme
-- Model OSI rozděluje komunikaci na 7 vrstev, které označujeme L1-L7
+- Model ISO/OSI rozděluje komunikaci na 7 vrstev, které označujeme L1-L7
   ![[MacBook-2024-03-18-000910.png| 300]]
 - Vrstva L1 je považována za nejnižší vrstvu a L7 za nejvyšší
 - Obecně ne všechny vrstvy musí být v reálné komunikaci implementovány

@@ -113,6 +113,78 @@ public int GetVal(int x, int y) {
 internal void LoadInternalConfig() { ... }
 ```
 
+## Struktury (`struct`)
+- Struktura je **hodnotový typ**, definovaný uživatelem, podobný třídě, ale jednodušší.
+#### Deklarace
+```csharp
+public struct StorageItem {
+    public int Length;
+    public int Width;
+    public int Height;
+    public string Name;
+
+    public int Volume() => Length * Width * Height;
+    public int Area() => Length * Width;
+}
+```
+
+#### Vytváření instancí
+```csharp
+StorageItem si = new StorageItem(); // volání bez parametrů
+si.Length = 32;
+
+// nebo vše ručně, nutno inicializovat všechny hodnoty
+StorageItem si2;
+si2.Length = 32;
+si2.Width = 10;
+si2.Height = 20;
+si2.Name = "Box";
+```
+
+#### Přiřazování struktur
+- Při přiřazení se kopíruje hodnota:
+```csharp
+StorageItem kopie = si;
+kopie.Length = 5;
+// si.Length zůstává nezměněné
+```
+
+## Rozdíl mezi strukturou a třídou
+
+|                         | `struct`                 | `class`       |
+| ----------------------- | ------------------------ | ------------- |
+| **Uložení v paměti**    | zásobník (stack)         | halda (heap)  |
+| **Dědičnost**           | ne (jen z ValueType)     | ano           |
+| **Typ**                 | hodnotový                | referenční    |
+| **Výchozí konstruktor** | implicitní bez parametrů | definovatelný |
+| **Metoda Equals()**     | porovnává po složkách    | lze přepsat   |
+
+## Indexery
+- Indexery umožňují přistupovat k prvkům třídy podobně jako k prvkům pole (pomocí `[]`).
+#### Deklarace
+```csharp
+public class Dictionary<K, V> {
+    private List<K> keys = new List<K>();
+    private List<V> values = new List<V>();
+
+    public V this[K key] {
+        get {
+            int index = keys.IndexOf(key);
+            if (index > -1) return values[index];
+            else return default(V);
+        }
+        set {
+            int index = keys.IndexOf(key);
+            if (index == -1) {
+                keys.Add(key);
+                values.Add(value);
+            }
+        }
+    }
+}
+```
+
+
 ## Rozhraní (interface)
 - Rozhraní v C# je formální popis veřejného rozhraní třídy – tj. jaké metody (nebo vlastnosti) musí třída implementovat. Rozhraní neobsahuje implementaci, pouze hlavičky metod.
 #### Definice rozhraní
@@ -231,7 +303,7 @@ if (obj is Person) { ... }
 if (zasobnik is IStack) { ... }
 ```
 
-## Properties a fields
+## Properties, fields a methods
 #### Fields
 - Základní datové členy třídy
 - Uchovávají stav objektu
@@ -244,8 +316,8 @@ if (zasobnik is IStack) { ... }
 public int Length { get; set; }
 ```
 
-#### Vlastní implementace s validací
 ```csharp
+// Vlastní implementace s validací
 private int _length;
 
 public int Length {
@@ -256,6 +328,16 @@ public int Length {
 }
 ```
 
+#### Methods
+- Blok kódu, který vykoná sérii příkazů
+- Obvykle zajišťuje komplexnější funkcionalitu
+- Mohou být `static` = nezávisí na konkrétní instanci
+```csharp
+abstract class Motorcycle {
+	// Anyone can call this.
+	public void StartEngine() {/* Method statements here */ }
+}
+```
 ## Přetížení operátorů
 - C# umožňuje definovat vlastní chování standardních operátorů pro vlastní typy.
 #### Přípustné operátory k přetížení:

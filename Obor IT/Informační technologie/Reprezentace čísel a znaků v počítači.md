@@ -10,8 +10,8 @@
 - **Dekódování** = zobrazení kódového slova (posloupnost 0 a 1) na původní číslo nebo znak
 
 ## Endianita
-= byte oder (pořadí bytů)
-- slouží pro popis pořadí bytů, ve kterém jsou číselné hodnoty uloženy v počítačové paměti.
+= byte oder (pořadí bajtů)
+- slouží pro popis pořadí bajtů, ve kterém jsou číselné hodnoty uloženy v počítačové paměti.
 
 - **Big-endian**: nejvýznamnější byte je uložen na nejnižší adresu a další byty jsou uloženy v následujících vyšších adresách
 	- často používají například síťové protokoly jako je IP

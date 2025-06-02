@@ -301,7 +301,7 @@
 > = -2
 > $$
 
-### Adjungovaná matice
+#### Adjungovaná matice
 - Transponovaná matice algebraických doplňků
 - Používá se k sestavení inverzní matice
 - Postup

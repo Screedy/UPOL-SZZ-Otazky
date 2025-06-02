@@ -19,10 +19,10 @@
 - Zadat (definovat) funkci $f$ znamená **určit její definiční obor $D(f)$ a jisté pravidlo $V(x,y)$**, jehož oborem pravdivosti je $f$ a které stanovuje, jak k zadanému $x \in D(f)$ najít hodnotu $f(x)$.
 - Podle toho, jak je toto pravidlo formulováno, rozlišujeme tato zadání funkce:
   1.  **rovnicí (předpisem):** $$
-	   \begin{aligned}
+	   \begin{gather}
 	   f=\set{(x,y) \in \mathbb{R} \times \mathbb{R}; y=x^{2}-1}\\
-	   f: y=x^{2}-1&&&&&&&&&&&&&&&&
-	   \end{aligned}$$
+	   f: y=x^{2}-1
+	   \end{gather}$$
   2.  **tabulkou:**
       ```sql
       |  x  | -2  | -1  | 0   | 1   | 2   | 3   |
@@ -67,13 +67,13 @@
 ### Funkce injektivní, surjektivní, bijektivní
 - Funkce $f: X \rightarrow Y$ se nazývá:
   - **Prostá (injektivní),** právě když
-    - pro **každé $x_{1}, x_{2} \in X$ platí, jestliže $x_{1} \neq x_{2}$, pak $f(x_{1}) \neq f(x_{2})$**
+    - pro každé $x_{1}, x_{2} \in X$ platí, jestliže $x_{1} \neq x_{2}$, pak $f(x_{1}) \neq f(x_{2})$
     - _tedy neopakují se $y$ pro dvě různá $x$_
     - např. lineární funkce
   - **Funkce množiny $X$ na množinu $Y$ (surjektivní),** právě když
-    - pro **každé $y \in Y$ existuje $x \in X$ tak, že $f(x) = y$**
+    - pro každé $y \in Y$ existuje $x \in X$ tak, že $f(x) = y$
     - _tedy musí být použity všechny prvky z $Y$_
-  - **Vzájemně jednoznačná (bijektivní)**, právě když **je injektivní a surjektivní**
+  - Vzájemně jednoznačná (**bijektivní**), právě když **je injektivní a surjektivní**
 
 ##### Navigace
 

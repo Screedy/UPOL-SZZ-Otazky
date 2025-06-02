@@ -15,5 +15,6 @@
 - Možnost práce s nekonečnými datovými strukturami
 - Horší využití paměti
 - Náchylné na *space leaks* využije mnohem více paměti než by se očekávalo (způsobí právě líné vyhodnocování)
+- *redukce ($\beta$-redukce)* ... vyhodnocení výrazu
 #### Redukce v normálním modelu
 ![[Pasted image 20250424110206.png]]

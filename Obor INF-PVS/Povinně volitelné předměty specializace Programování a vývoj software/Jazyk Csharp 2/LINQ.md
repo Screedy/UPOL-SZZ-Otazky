@@ -1,3 +1,4 @@
+- *Language integrated query*
 ## Delegáti v C\#
 - Delegát v C# je objekt, který reprezentuje odkaz na metodu. Chová se jako typově bezpečný ukazatel na funkci.
 

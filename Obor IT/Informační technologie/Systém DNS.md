@@ -13,7 +13,7 @@
 
 ## Jmenné servery
 - Kořenová doména je umístěna na **kořenovém** (jmenném) **serveru**. 
-- Ve skutečnosti **existuje $13$ kořenových serverů**, ty se **značí písmeny** $a-m$, jsou rozmístěny **po celém světě** a jsou spravovány různými institucemi.
+- Ve skutečnosti **existuje 13 kořenových serverů**, ty se **značí písmeny** $a-m$, jsou rozmístěny **po celém světě** a jsou spravovány různými institucemi.
 - Každý z těchto serverů **existuje v mnoha kopiích**.
 
 ## Překlad doménového jména na IP adresu

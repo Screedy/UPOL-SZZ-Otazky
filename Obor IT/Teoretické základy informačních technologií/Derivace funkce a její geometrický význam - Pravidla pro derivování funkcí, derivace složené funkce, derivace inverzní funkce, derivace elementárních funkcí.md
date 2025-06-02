@@ -23,7 +23,7 @@
 - ve výpočtu se často využívá substituce $x = x_0 + h$, tedy $h=x-x_0$ ($\Delta{x}$ je označen $h$) 
 >[!info] Derivace funkce v bodě
 > - Tuto limitu díky svojí důležitosti dostala označujeme jako **derivaci funkce v bodě**.
-$$k_t = \lim_{\Delta x \to 0} \frac{f(x_0 + h) - f(x_0)}{h}$$
+$$k_t = \lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h}$$
 
 - Jelikož jde o směrnici tečny v daném bodě, můžeme říci, že pokud je kladná, je tečna v daném bodě rostoucí (v opačném případě klesající)
 - ![[Pasted image 20240628184706.png | 400]]
