@@ -1,4 +1,4 @@
-### Lineární zobrazení
+## Lineární zobrazení
 - Nechť $\mathcal{V}=(V,+, \mathcal{T},\, \cdot\,)$ a $\mathcal{V}^{\prime}=\left(V^{\prime},+, \mathcal{T}, \, \cdot \,\right)$ jsou vektorové prostory nad číselným tělesem $\mathcal{T}$. Potom zobrazení $f: V \rightarrow V^{\prime}$ nazveme homomorfismus vektorového prostoru $\mathcal{V}$ do vektorového prostoru $\mathcal{V}^{\prime}$, jestliže
 	1. $\forall \vec{u}, \vec{v} \in V ; f(\vec{u}+\vec{v})=f(\vec{u})+f(\vec{v})$,
 	2. $\forall c \in T, \vec{u} \in V ; f(c \vec{u})=c f(\vec{u})$.
@@ -11,11 +11,24 @@ $\\$
 #### Jádro homomorfismu
 - Je-li $f$ homomorfismus vektorového prostoru $\mathcal{V}$ do vektorového prostoru $\mathcal{V}^{\prime}$, pak jádrem homomorfismu $f$ nazýváme množinu $\operatorname{Ker} f=\left\{\vec{u} \in V ; f(\vec{u})=\vec{o}^{\prime}\right\}$. 
 - Symbol $\vec{o}^{\prime}$ označuje nulový vektor ve $\mathcal{V}^{\prime}$.
-$\\[4pt]$
+
+$\\$
+- $Ker$ ... *kernel* (jádro)
+- $Im$ ... *image* (obraz)
+- **defekt** ... dimenze jádra
+- **hodnost** ... dimenze obrazu
+- Platí: $dim (\text{Ker}) + dim (\text{Im}) = dim (\text{U})$ ($\mathcal{V}$ ... původní prostor)
+
+$\\$
 - **Věta**: Je-li f homomorfismus $\mathcal{V}$ do $\mathcal{V}^{\prime}$, pak
 	- $f$ je injektivní, právě když $\operatorname{Ker} f=\{\vec{o}\}$;
 	- $f$ je surjektivní, právě když $\operatorname{Im} f=\mathcal{V}^{\prime}$;
 	- $f$ je izomorfismus, právě když $\operatorname{Ker} f=\{\vec{o}\}$ a $\operatorname{Im} f=\mathcal{V}^{\prime}$.
+
+$\\$
+>[!tip]
+>- **Lineární zobrazení** je takové, kde se $\vec{o}_{\mathcal{V}}$ zobrazí na $\vec{o}_{\mathcal{V^{\prime}}}$
+>- Nulový vektor z prvního prostoru se zobrazí na nulový vektor z druhého (platí pro všechny).
 
 $\\$
 - **Věta**: Nechť $\mathcal{V}, \mathcal{V}^{\prime}, \mathcal{V}^{\prime \prime}$ jsou vektorové prostory nad tělesem $\mathcal{T}, f$ homomorfismus $\mathcal{V}$ do $\mathcal{V}^{\prime}, g$ homomorfismus $\mathcal{V}^{\prime}$ do $\mathcal{V}^{\prime \prime}$. Potom složené zobrazení $f \circ g: V \rightarrow V^{\prime \prime}(t j . \forall \vec{u} \in$ $V ;(f \circ g)(\vec{u})=g(f(\vec{u})))$ je homomorfismus $\mathcal{V}$ do $\mathcal{V}^{\prime \prime}$.
