@@ -30,8 +30,15 @@ y_i=y_i−1+x_i \\
 Pro \; i = 1, 2, ..., n -1
 \end{gather}
 $$
+#### Triviální přístup
 - Triviálním přístupem získáme lineární časovou složitost ($n$)
 	- ![[Pasted image 20250315153716.png]]
-- Paralelním přístupem sčítám postupně v krocích prvky v poli, tím se mi postupně budují nová pole a zvětšuji vzdálenost sčítaných prvků ($0, 1, ...$)
-	- Postupně dostavám korektní výsledky od začátku pole až nakonec
-- Tím se mi časová složitost zlepší na $log_2(n)$
+#### Paralelní přístup
+- Postupujeme v krocích, kdy na konci kroku máme nové pole a součty v daném kroku můžeme spustit paralelně
+- Sčítáme od konce vždy 2 prvky se zvětšující se vzdáleností ($1, 2, 4, 8,...$)
+- Korektní výsledky ale dostavám od začátku až nakonec
+- Stačí pokud provedem $\lceil log_2(n) \rceil$ kroků, kde $n$ je délka pole => časová složitost se zlepší na $log_2(n)$
+- **Pseudokód**:
+	- ![[Pasted image 20250603161553.png|475]]
+- **Náčrtek**:
+	- ![[Pasted image 20250603162257.png|500]]
