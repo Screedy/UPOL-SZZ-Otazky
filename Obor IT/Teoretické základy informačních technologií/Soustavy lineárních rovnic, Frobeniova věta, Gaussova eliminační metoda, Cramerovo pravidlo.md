@@ -177,7 +177,7 @@ $$
 - Další možnost jak řešit SLR.
 - Nelze použít vždy.
 - Pouze když soustava obsahuje tolik **rovnic jako neznámých** a navíc **hodnost** její matice je **plná**.
-### Věta (Cramerovo pravidlo):
+### Cramerovo pravidlo:
 - Je dána soustava $n$ lineárních rovnic $A \vec{x}^{T}=\vec{b}^{T}$ o $n$ neznámých nad $T$ taková, že platí $\operatorname{det}(A) \neq 0$. Pak tato soustava má právě jedno řešení $\vec{x}=\left(x_{1}, \ldots, x_{n}\right)$, pro něž platí
 $$
 x_{j}=\frac{\operatorname{det}\left(A_{j}\right)}{\operatorname{det}(A)} \quad \forall j=1, \ldots, n

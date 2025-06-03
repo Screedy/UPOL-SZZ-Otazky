@@ -34,6 +34,7 @@
     - $\lim_{x \to 0^+} sgn(x) = 1$
 ## Typy limit funkce
 - Rozlišujeme $4$ typy limit podle toho, jestli $a$, $A$ nabývá reálných nebo hodnot $\pm \infty$
+
 >[!Example]- Isibalo - Typy limit funkce
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/W-0s1lMRwkc?si=90SZ0ZKKwQHyTcBs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

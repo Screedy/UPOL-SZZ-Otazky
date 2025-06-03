@@ -12,7 +12,7 @@
 	1) v prvním sloupci jsou všechny přípustně vstupy programu
 	2) druhém sloupci je ke každému vstupu $w$ uveden příslušný výstup $Pg(w)$. 
 		- V případě, že výpočet $Pg$ pro vstup $w$ je **konečný** jako výstup vydá $Pg(w)$, nebo znak $\vdash$ (nedefinováno) v případě, že výpočet $Pg$ na $w$ je **nekonečný**.
-- Tabulka tedy zachycuje **zobrazení vstupů na výstupu**, které $Pg$ realizuje
+- Mají-li 2 TS stejnou I/O tabulku, pak oba musí onu vlastnost mít nebo oba nemít
 ## Triviální a netriviální vlastnosti
 - Každá vlastnost $V$ TS rozdělí množinu všech TS **na dvě disjunktní podmnožiny**
 	1) množina strojů, která vlastnost $V$ **má**
