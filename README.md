@@ -14,11 +14,11 @@
 		2. Programování a vývoj software
 		3. Povinně volitelné předměty - specializace PVS
 	- Pro **Informatika - specializace obecná informatika**:
-		- 1. Teoretické základy informatiky
-		- 2. Algoritmizace a programování
-		- 3. Povinně volitelné předměty - specializace OI
+		1. Teoretické základy informatiky
+		2. Algoritmizace a programování
+		3. Povinně volitelné předměty - specializace OI
 - Pro **magisterské studium**:
-	- Pro **AINF-VS**:
+	- Pro **Aplikovaná informatika - vývoj software**:
 		1. Povinné předměty
 		2. Povinně volitelné předměty
 		3. Ostatní předměty
