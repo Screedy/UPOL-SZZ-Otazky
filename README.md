@@ -40,6 +40,6 @@ git clone https://github.com/Screedy/SZZ-Otazky2024.git
 ### Jak otevřít repozitář v Obsidian
 - Po naklonování repozitáře na váš počítač postupujte takto, abyste jej otevřeli v Obsidian:
 	1. Otevřete aplikaci Obsidian.
-	2. V levém dolním rohu klikněte na 'Open another vault'.
-	3. Vyberte možnost 'Open folder as vault'.
+	2. V levém dolním rohu klikněte na `Open another vault`.
+	3. Vyberte možnost `Open folder as vault`.
 	4. Navigujte k složce, kam jste naklonovali repozitář, a vyberte ji.
