@@ -22,6 +22,14 @@ def fact_2(n):
 	return res
 ```
 
+- Popis faktoriálu matematicky
+$$
+f(n)=
+\begin{cases}
+1 & \text{pokud } n = 1, \\
+n\ \cdot f(n-1) & \text{pokud } n > 1.
+\end{cases}
+$$
 - Můžeme definovat i číselné množiny
 	- např. množina $L$ všech lichých čísel - pro $1 \in L$, pokud $n \in L$ pak $n+2 \in L$
 - Taktéž i formule výrokové logiky (induktivně definovaná struktura)
@@ -30,10 +38,11 @@ def fact_2(n):
 		- $\neg\psi$
 		- $\psi \wedge \phi$
 		- $\psi \vee \phi$
-		- $\psi \rightarrow \phi$
-		- $\psi \leftrightarrow \phi$
+		- $\psi \Rightarrow \phi$
+		- $\psi \Leftrightarrow \phi$
 - Sierpisnkého trojúhelníky
 ![[Pasted image 20250420134907.png]]
+
 ## Matematická indukce
 - Umožňuje dokazovat tvrzení jako "pro každé přirozené číslo platí..."
 >[!info] Princip indukce
@@ -41,20 +50,31 @@ def fact_2(n):
 >> a) $V(1)$ - indukční předpoklad
 >> b) pro každé $n \in N$: z $V(n)$ plyne $V(n+1)$ - indukční krok
 
-![[Pasted image 20250420135224.png]]
-
+#### Důkaz principu indukce
+- Provedeme ho sporem. Předpokládejme, že princip indukce neplatí, tj. existuje tvrzení $V(\cdot)$ splňující:
+	1. $V(1)$
+	2. pro každé $n \in \mathbb(N):$ z $V(n)$ plyne $V(n+1)$
+- Ale pro nějaké $n' \in \mathbb(N)$  tvrzení $V(n')$ neplatí.
+- Označme 
+$$K = \{ m \in \mathbb{N} \ | \ V(m) \ \text{neplatí} \} $$
+- $K$ je prázdná (neboť $n' \in K$). $K$ má tedy nejmenší prvek $k$ a ten je různý od $1$ (protože $V(1)$ platí). Pak tedy $k - 1 \notin K$, tedy $V(k-1)$ platí. Z indukčního kroku plyne, že platí i $V(k)$, tedy $k \notin K$, což je spor s $k \in K$. $\square$
 #### Varianty důkazu matematickou indukcí
 - Indukce nemusí začínat 1
 - ![[Pasted image 20250420135725.png]]
 #### Definice matematickou indukcí
 - Třeba pro faktoriál (viz na začátku tohoto souboru)
-- ![[Pasted image 20250420135853.png]]
+>[!info] Věta 8.9.
+> **Věta:** Nechť je dána množina $V$, prvek $a \in V$ a funkce $G: \mathbb{N} \times V \rightarrow V$. Pak existuje právě jedna funkce $F: \mathbb{N} \rightarrow V$, pro kterou platí:
+>> 1. $F(1) = a,$
+>> 2. pro každé $n \in \mathbb{N}$: $F(n+1)=G(n,F(n))$
+>
+
 ## Strukturální indukce
-- Jde o zobecnění matematické indukce
+- Jde o **zobecnění matematické indukce**
 - Místo množiny $\mathbb{N}$ pracujeme s množinou $T$
 - Množina $T$ je množina řetězců obvykle utvořena podle induktivních pravidel (např. výrokové formule)
 - Např. důkaz pro stejných počet levých i pravých závorek ve výrokové formuli
 	- ![[Pasted image 20250420140721.png]]
 #### Definice strukturální indukcí
-- Definujeme pro bazické prvky $T$ (předpoklad) a složené prvky $T$ (krok)
+- Definujeme pro bazické/atomické prvky z $T$ (předpoklad) a složené prvky $T$ (krok)
 - Používá se pro: aritmetické výrazy, definici seznamů, definici stromů
