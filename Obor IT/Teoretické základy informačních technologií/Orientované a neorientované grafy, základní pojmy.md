@@ -75,6 +75,6 @@
 - **vzdálenost z vrcholu $u$ do vrcholu $v$** je **délka cesty z $u$ do $v$**, které má ze všech cest z $u$ do $v$ **délku nejmenší**
 
 ##### Navigace
-Předchozí:  [[Inducke a rekurze, matematická indukce a její varianty]]
+Předchozí:  [[Indukce a rekurze, matematická indukce a její varianty, strukturální indukce]]
 Následující: [[Hledání nejkratší cesty, Dijkstrův algoritmus]]
 Celý okruh: [[1. Teoretické základy informačních technologií]]

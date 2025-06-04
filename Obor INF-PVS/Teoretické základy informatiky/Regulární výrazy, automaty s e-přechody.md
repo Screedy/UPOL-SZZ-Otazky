@@ -13,7 +13,7 @@
 	- $L(\epsilon) = \set{\epsilon}$
 	- $L(\varnothing) = \varnothing$
 	- $L(E_{1}+E_{2}) = L(E_{1}) \cup L(E_{2})$
-	- $L(E_{1}.E_{2}) = L(E_{1}).L(E_{2})$
+	- $L(E_{1}E_{2}) = L(E_{1}) \cdot L(E_{2})$
 	- $L(E^{*}) = (L(E))^{*}$
 
 >[!Example] Příklady

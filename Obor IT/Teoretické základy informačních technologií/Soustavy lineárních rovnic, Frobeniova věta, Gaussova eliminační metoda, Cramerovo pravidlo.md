@@ -177,7 +177,7 @@ $$
 - Další možnost jak řešit SLR.
 - Nelze použít vždy.
 - Pouze když soustava obsahuje tolik **rovnic jako neznámých** a navíc **hodnost** její matice je **plná**.
-### Věta (Cramerovo pravidlo):
+### Cramerovo pravidlo:
 - Je dána soustava $n$ lineárních rovnic $A \vec{x}^{T}=\vec{b}^{T}$ o $n$ neznámých nad $T$ taková, že platí $\operatorname{det}(A) \neq 0$. Pak tato soustava má právě jedno řešení $\vec{x}=\left(x_{1}, \ldots, x_{n}\right)$, pro něž platí
 $$
 x_{j}=\frac{\operatorname{det}\left(A_{j}\right)}{\operatorname{det}(A)} \quad \forall j=1, \ldots, n
@@ -213,5 +213,5 @@ $$
 ><iframe width="660" height="385" src="https://www.youtube.com/embed/nyi42cJ8olM?si=C4gvMeMQDubkSvlB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ##### Navigace
 Předchozí: [[Eukleidovské vektorové prostory, ortogonální a ortonormální báze, Schwarzova nerovnost, Schmidtova ortogonalizační metoda]]
-Následující: [[Lineární zobrazení a transformace a jejich matice]]
+Následující: [[Lineární zobrazení, transformace a jejich matice]]
 Celý okruh: [[1. Teoretické základy informačních technologií]]

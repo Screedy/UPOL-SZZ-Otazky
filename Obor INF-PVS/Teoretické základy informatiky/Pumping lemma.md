@@ -1,5 +1,6 @@
 ## Pumping lemma pro regulární jazyky
 - Užitečný nástroj, který umožňuje dokázat, že daný jazyk **není** regulární (**neumožňuje** dokázat, že jazyk regulární je)
+
 >[!info] Definice
 >- Nechť $L$ je regulární jazyk, pak existuje číslo $n \in N$ tak, že každý řetězec $w \in L$ délky alespoň $n$ lze rozdělit na tři části $w = xyz$, které splňují
 >	1. $|y| > 0$
