@@ -56,7 +56,7 @@
 
 >[!tip] Věta o korektnosti
 >- Pro libovolnou množinu formulí $T$ a formuli $\psi$ platí, že je-li $T \vdash \psi$, pak $T \vDash \psi$.
->	- Speciálně tedy, každá dokazatelná formule je tautologií
+>- Speciálně tedy, každá dokazatelná formule je tautologií
 
 >[!info] Churchovo lemma (ChL)
 >- Pro libovolnou formuli $\psi(p_{1}, ... p_{n})$ platí $p^{e}_{1}, ... ,p^{e}_{n} \vdash \psi^{e}$
