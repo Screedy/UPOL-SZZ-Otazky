@@ -77,6 +77,6 @@
 
 ##### Navigace
 
-Předchozí: [[Lineární zobrazení a transformace a jejich matice]]
+Předchozí: [[Lineární zobrazení, transformace a jejich matice]]
 Následující: [[Posloupnosti a jejich limity, limes superior, limes inferior]]
 Celý okruh: [[1. Teoretické základy informačních technologií]]

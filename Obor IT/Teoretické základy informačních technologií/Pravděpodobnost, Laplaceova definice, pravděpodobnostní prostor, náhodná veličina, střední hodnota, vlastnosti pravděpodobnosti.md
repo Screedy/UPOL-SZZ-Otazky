@@ -114,5 +114,5 @@
 
 ##### Navigace. 
 Předchozí:  [[Permutace, variace, kombinace]]
-Následující: [[Inducke a rekurze, matematická indukce a její varianty]]
+Následující: [[Indukce a rekurze, matematická indukce a její varianty, strukturální indukce]]
 Celý okruh: [[1. Teoretické základy informačních technologií]]
