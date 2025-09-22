@@ -85,11 +85,19 @@
 - souběh více přerušení => nutný **řadič přerušení**
 ## Proces překladu
 - Je to proces, kterým se zdrojový kód napsaný v programovacím jazyce (např. C, Java) převádí na strojový kód, který může být proveden procesorem.
-1. **Preprocesor:** expanduje makra, odstraní nepotřebný kód, načte požadované soubory (např. `math.h`)
-2. **Překladač:** generuje kód v assembleru
+1. **Preprocesor:** expanduje makra, odstraní nepotřebný kód, načte hlavičkové soubory (např. `math.h`)
+2. **Překladač:** generuje kód v assembleru (z kódu v C)
 3. **Assembler:** vygeneruje objektový kód (`foo.c` $\rightarrow$ `foo.obj`/`foo.o`)
-4. **Linker:** sloučí několik souborů s objektovým kódem + knihovny do spustitelného souboru
-- Můžeme použít více jazyků, když před sloučením dostaneme spojitelné objektové soubory
+4. **Linker:** sloučí několik souborů s objektovým kódem a knihovny do spustitelného souboru (můžeme použít více jazyků, když před sloučením dostaneme spojitelné objektové soubory)
+
+- Například v překladači *gcc* se dá nahlížet do různých fází pomocí přepínačů (např. `gcc -E foo.c` nebo `gcc -S foo.c`)
+
+- Pravidla pro překlad jsou v souboru *Makefile*
+```
+cil: zdroj-1 zdroj-2 ...
+	krok prekladu 1
+	krok prekladu 2
+```
 
 >[!Tip] Statická vs dynamická knihovna
 >- **staticky linkovaná knihovna** - instaluje s programem
