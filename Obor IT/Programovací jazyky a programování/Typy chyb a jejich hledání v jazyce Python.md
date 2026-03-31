@@ -57,9 +57,9 @@ KeyError: 'c'
 - AttributeError nastává, když se pokusíte přistoupit k atributu objektu, který tento objekt neobsahuje.
 
 ```Python
->>> my_list = [1, 2, 3]
->>> print(my_list.append)
-AttributeError: 'list' object has no attribute 'append'
+>>> text = "Hello"
+>>> text.append(" world!")
+AttributeError: 'str' object has no attribute 'append'
 ```
 
 ### 7. NameError:
