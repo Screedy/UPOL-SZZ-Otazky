@@ -8,10 +8,10 @@
 > **Vstup:**
 >
 > - Posloupnost symbolů ze zdrojové abecedy
-> - Zdrojová abeceda$A$
+> - Zdrojová abeceda $A$
 > - Číslo $n = |A|$
-> - Číslo$k\ ...$pevná délka kódových slov
-> - Číslo$m\ ...$velikost kódové abecedy
+> - Číslo $k\ ...$ pevná délka kódových slov
+> - Číslo $m\ ...$ velikost kódové abecedy
 > - (_Volitelně_) Pravděpodobnostní výskyty jednotlivých symbolů z abecedy
 >
 > **Výstup:**
@@ -48,18 +48,20 @@ C(T) ← přiřaď kódová slova délky k libovolně
 **Jak to funguje krok po kroku:**
 
 1. Začni s množinou zdrojových slov $T = A$.
-2. Opakuj: vyber slovo s **nejvyšší pravděpodobností** a nahraď ho $n$novými slovy (původní slovo prodloužené o každý symbol abecedy). Tím se počet slov v $T$zvýší o $n - 1$.
-3. Pokračuj, dokud novou rozšířenou množinu $T$lze zakódovat$m^k$kódovými slovy.
+2. Opakuj: vyber slovo s **nejvyšší pravděpodobností** a nahraď ho $n$ novými slovy (původní slovo prodloužené o každý symbol abecedy). Tím se počet slov v $T$ zvýší o $n - 1$.
+3. Pokračuj, dokud novou rozšířenou množinu $T$ lze zakódovat $m^k$ kódovými slovy.
 4. Přiřaď kódová slova libovolně.
 
 > [!info]
-> **Proč právě nejpravděpodobnější slovo?** Protože jeho rozšířením se průměrná délka zdrojových slov zvýší nejvíce — časté symboly vytvoří delší fráze, což maximalizuje počet vstupních symbolů zakódovaných jedním kódovým slovem.
+> **Proč právě nejpravděpodobnější slovo?**
+>
+> Protože jeho rozšířením se průměrná délka zdrojových slov zvýší nejvíce — časté symboly vytvoří delší fráze, což maximalizuje počet vstupních symbolů zakódovaných jedním kódovým slovem.
 
 ### 1.4 Příklad kódování — krok po kroku
 
 #### Příklad
 
-**Vstup:** `barbaraabarboraubaru`, $k = 4$, $A = {a, b, r, u, o}$, $m = 2$(binární kód)
+**Vstup:** `barbaraabarboraubaru`, $k = 4$, $A = {a, b, r, u, o}$, $m = 2$ (binární kód)
 
 **Pravděpodobnosti symbolů** (z frekvencí ve vstupu, 20 symbolů):
 
@@ -71,13 +73,13 @@ C(T) ← přiřaď kódová slova délky k libovolně
 | u   | 2   | 2/20 = 0.10 |
 | o   | 1   | 1/20 = 0.05 |
 
-**Kapacita:** $m^k = 2^4 = 16$kódových slov
+**Kapacita:** $m^k = 2^4 = 16$ kódových slov
 
 **Počáteční stav:** $T = {a, b, r, u, o}$, $|T| = 5$
 
 **Krok 1:** Podmínka: $5 + 1 \cdot 4 = 9 \leq 16$✓
 
-Nejpravděpodobnější slovo: $a$($P(a) = 7/20$)
+Nejpravděpodobnější slovo: $a$ ($P(a) = 7/20$)
 
 $T = {aa, ab, ar, au, ao, b, r, u, o},\ |T| = 9$
 
@@ -91,7 +93,7 @@ Nejpravděpodobnější slovo v $T$: $b$ ($P(b) = 5/20$)
 
 $T = {aa, ab, ar, au, ao, ba, bb, br, bu, bo, r, u, o}$, $|T| = 13$
 
-**Krok 3:** Podmínka: $5 + 3 \cdot 4 = 17 > 16$ ✗ → **STOP**
+**Krok 3:** Podmínka: $5 + 3 \cdot 4 = 17 < 16$ ✗ → **STOP**
 
 **Výsledný slovník:**
 
@@ -118,12 +120,12 @@ $T = {aa, ab, ar, au, ao, ba, bb, br, bu, bo, r, u, o}$, $|T| = 13$
 
 ### 1.5 Dekódování
 
-- Dekódování je **jednoduché** — přečti $k$bitů, vyhledej v tabulce příslušné zdrojové slovo, zapiš ho na výstup. Díky pevné délce kódových slov se dekodér vždy synchronizuje.
+- Dekódování je **jednoduché** — přečti $k$ bitů, vyhledej v tabulce příslušné zdrojové slovo, zapiš ho na výstup. Díky pevné délce kódových slov se dekodér vždy synchronizuje.
 
 ### 1.6 Vlastnosti
 
 - **Prefixový kód**: Jelikož kódová slova mají _pevnou délku_.
-- **Robustnost**: Chyby v kódových slovech se při dekódování **nešíří**, protože kódová slova mají pevnou délku a dekodér se vždy synchronizuje po$k$bitech.
+- **Robustnost**: Chyby v kódových slovech se při dekódování **nešíří**, protože kódová slova mají pevnou délku a dekodér se vždy synchronizuje po $k$ bitech.
 - **Modely**: Pouze statický a semi-adaptivní model (nelze snadno adaptovat za běhu)
 - **Průměrná délka kódu:**
 
@@ -131,7 +133,7 @@ $$
 \bar{l}(C(T)) = \frac{k}{\sum_{i=1}^{t} P(w_i) \cdot l(w_i)}
 $$
 
-kde $t$je počet zdrojových slov $w_i$délky $l(w_i)$s pravděpodobností výskytu $P(w_i)$.
+kde $t$ je počet zdrojových slov $w_i$ délky $l(w_i)$ s pravděpodobností výskytu $P(w_i)$.
 
 ---
 
@@ -180,7 +182,7 @@ ShannonFano(1, n)
   1. Vypočítají se pravděpodobnosti výskytu každého symbolu ve zdrojové abecedě.
   2. Symboly se seřadí podle jejich pravděpodobností výskytu od nejvyšší po nejnižší.
   3. Seznam symbolů se rozdělí na dvě části tak, aby součet pravděpodobností v obou částech byl **co nejvyrovnanější**.
-  4. **První části** se přiřadí bit $0$a druhé části se přiřadí bit $1.$
+  4. **První části** se přiřadí bit $0$ a druhé části se přiřadí bit $1.$
   5. Tento proces se rekurzivně opakuje pro obě části, dokud všechny symboly nemají přiřazené unikátní kódy.
 
 ### 2.3 Příklad kódování — krok po kroku
@@ -220,7 +222,7 @@ Dva symboly → $C(a) = 00$, $C(b) = 01$
 - $j = 3$: $|0.25 - 0.15| = 0.10$ ← **minimum**
 - $j = 4$: $|0.35 - 0.05| = 0.30$
 
-Dělíme: ${r}$dostane prefix `10`, ${u, o}$dostane prefix `11`.
+Dělíme: ${r}$ dostane prefix `10`, ${u, o}$ dostane prefix `11`.
 
 **Krok 3 — dělení (4, 5):**
 
@@ -272,4 +274,4 @@ Dekódování probíhá průchodem kódovým stromem od kořene — čteme bit p
 - **Prefixový kód**: Žádné kódové slovo není prefixem jiného, jednoznačně a okamžitě dekódovatelný
 - **Není obecně optimální**: Existují rozložení pravděpodobností, kde Huffmanův kód má nižší průměrnou délku. Shannon-Fanovo kódování dělí shora (top-down), Huffmanovo zdola (bottom-up), což zaručuje optimalitu.
 - **Splňuje Shannonovu větu o kódování zdroje:** $\frac{H(A)}{\log_2 m} \leq \bar{l}(C(A)) < \frac{H(A)}{\log_2 m} + 1$
-- **Složitost:** $O(n \log n)$pro setřídění + $O(n)$pro rekurzivní konstrukci
+- **Složitost:** $O(n \log n)$ pro setřídění + $O(n)$ pro rekurzivní konstrukci

@@ -37,7 +37,7 @@
 
 - Řešení:
   - **Varianta 1 (explicitní příznak):** Použije se speciální znak, který se ve zdrojových datech nevyskytuje.
-  - **Varianta 2 (příznak za symboly):** Vypíšeme $k$kopií symbolu a poté kód délky zmenšené o $k$(tj. $r - k$). Dekodér ví, že pokud vidí $k$stejných symbolů za sebou a poté číslo, jedná se o run.
+  - **Varianta 2 (příznak za symboly):** Vypíšeme $k$ kopií symbolu a poté kód délky zmenšené o $k$ (tj. $r - k$). Dekodér ví, že pokud vidí $k$ stejných symbolů za sebou a poté číslo, jedná se o run.
 
 ### 1.4 Pseudokód (kompresní algoritmus)
 
@@ -91,9 +91,11 @@ Rozložení na runy:
 
 - **==Výhody:==**
   - Jednoduchá implementace
-  - Velmi nízká výpočetní náročnost — $O(n)$čas i prostor.
+  - Velmi nízká výpočetní náročnost — $O(n)$ čas i prostor.
 - **==Nevýhoda:==**
-  - **Efektivita závisí na datech:** Vynikající pro data s dlouhými runy (binární obrazy BMP, faxové přenosy, jednoduché grafiky). Špatný pro data bez opakování (může výstup dokonce zvětšit!).
+  - **Efektivita závisí na datech:**
+    - Vynikající pro data s dlouhými runy (binární obrazy BMP, faxové přenosy, jednoduché grafiky).
+    - Špatný pro data bez opakování.
 - **Aplikace:** Formát obrázků BMP.
 
 ---
@@ -115,21 +117,22 @@ Rozložení na runy:
 >
 > - Zakódované data
 
-- Jejím základním principem je _převedení vstupních symbolů na posloupnost čísel_ (indexů). **Často se opakující symboly** jsou kódovány **malými čísly**, speciálně posloupnost **stejných symbolů** se převede na **posloupnost nul**.
+- Jejím základním principem je _převedení vstupních symbolů na posloupnost čísel_ (indexů).
+- **Často se opakující symboly** jsou kódovány **malými čísly**, speciálně posloupnost **stejných symbolů** se převede na **posloupnost nul**.
 
 **Formální popis:**
 
 - Udržujeme seznam (permutaci) zdrojové abecedy $A = {a_1, a_2, \ldots, a_n}$.
 - _Volitelně_ seznam na začátku setřídíme sestupně podle pravděpodobností výskytu symbolů.
-- Pro každý symbol $a$na vstupu:
-  1. Najdeme jeho pozici $i$v seznamu.
+- Pro každý symbol $a$ na vstupu:
+  1. Najdeme jeho pozici $i$ v seznamu.
   2. Na výstup zapíšeme číslo $i$.
-  3. Symbol $a$přesuneme na **začátek** seznamu (a ostatní posunu o jedno dozadu).
+  3. Symbol $a$ přesuneme na **začátek** seznamu (a ostatní posunu o jedno dozadu).
 
 > [!note]
 > **Intuice:** Pokud se symbol právě vyskytl, je na začátku seznamu, příště dostane index 0. Pokud se symbol opakuje mnohokrát za sebou, celá sekvence se změní na řadu nul.
 >
-> A i v obecnějším případě — když se v datech vyskytují lokální shluky určitých symbolů (což je po BWT typické) — vznikají malá čísla, která se efektivně komprimují.
+> A i v obecnějším případě — když se v datech vyskytují lokální shluky určitých symbolů — vznikají malá čísla, která se efektivně komprimují.
 
 ### 2.2 Pseudokód (kódování)
 
@@ -228,14 +231,12 @@ Výstup by byl: `0, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 2, 0, 2, 0, 0, 0, 0, 2, 1`
 **Výstup:** `bbbbaaaa` ✓
 
 
-https://www.youtube.com/watch?v=obbK0scsb98
-
 ### 2.6 Vlastnosti MTF
 
 - **Lokálně adaptivní:** Přizpůsobuje se lokálním změnám ve frekvenci symbolů. Nepotřebuje znát pravděpodobnosti předem (stačí dohodnout počáteční pořadí).
 - **Není kompresní metoda sama o sobě** — je to **transformace**, která vytváří příznivější vstup pro navazující kódování. Sama o sobě data nezkracuje (výstup má stejný počet symbolů jako vstup).
-- **Časová složitost:** $O(n \cdot |A|)$v nejhorším případě (každý symbol může vyžadovat posunutí celého seznamu). Pro malé abecedy zanedbatelné. Pro velké abecedy lze optimalizovat datovými strukturami.
-- **Prostorová složitost:** $O(|A|)$na seznam.
+- **Časová složitost:** $O(n \cdot |A|)$ v nejhorším případě (každý symbol může vyžadovat posunutí celého seznamu). Pro malé abecedy zanedbatelné. Pro velké abecedy lze optimalizovat datovými strukturami.
+- **Prostorová složitost:** $O(|A|)$ na seznam.
 
 ### 2.7 Alternativní varianty přesunu
 
@@ -252,6 +253,6 @@ https://www.youtube.com/watch?v=obbK0scsb98
 > 1. **BWT (Burrows-Wheelerova transformace):** Permutuje vstupní blok tak, aby se vytvořily shluky stejných symbolů (symboly se stejným kontextem se ocitnou vedle sebe).
 > 2. **MTF:** Převede shluky stejných symbolů na sekvence nul a malých čísel.
 > 3. **RLE:** Zakóduje dlouhé sekvence nul kompaktně.
-> 4. **Huffmanovo nebo aritmetické kódování (statické kódování):** Zakóduje výsledná čísla s proměnnou délkou kódových slov podle frekvencí.
+> 4. **Huffmanovo nebo aritmetické kódování (statistické kódování):** Zakóduje výsledná čísla s proměnnou délkou kódových slov podle frekvencí.
 >
 > Tento pipeline používá například **bzip2**.

@@ -2,7 +2,7 @@
 
 ### 1.1 Popis a princip
 
-- **Aritmetické kódování** je _entropické kódování_, které reprezentuje celou zprávu jediným číslem z intervalu $\langle 0,1)$.
+- **Aritmetické kódování** je _entropické kódování_, které reprezentuje celou zprávu jediným číslem z intervalu $\langle 0,1)$
 
 > [!warning]
 > **Vstup**:
@@ -14,8 +14,8 @@
 > **Výstup**:
 >
 > - Komprimovaná data
-> - (_Volitelně — nemusí přímo vracet, ale dekodér potřebuje_) Délka zdrojového slova
-> - (_Volitelně — nemusí přímo vracet, ale dekodér potřebuje_) Distribuční funkce
+> - Délka zdrojového slova
+> - Distribuční funkce
 
 **1.1.1 Motivace vzniku**
 
@@ -27,7 +27,7 @@
 > **Problém**: Huffman přiřazuje každému symbolu **celý počet bitů**.
 
 > [!note]
-> **Příklad**: Pokud máme tedy zdroj: $p_1=0.95, p_2=0.05$. Entropie je $H(A) ≈ 0.286\ \text{b/symbol}$. Teoreticky by stačilo přenášet asi 0.286 bitu na symbol. Huffman má kódy `A=0, B=1` . Průměrná délka je tedy: $0.95⋅1 + 0.05⋅1 = 1\ \text{b/symbol}$. Což je zde celkem neefektivní$1≫0.286$.
+> **Příklad**: Pokud máme tedy zdroj: $p_1=0.95, p_2=0.05$. Entropie je $H(A) ≈ 0.286\ \text{b/symbol}$. Teoreticky by stačilo přenášet asi 0.286 bitu na symbol. Huffman má kódy `A=0, B=1` . Průměrná délka je tedy: $0.95⋅1 + 0.05⋅1 = 1\ \text{b/symbol}$. Což je zde celkem neefektivní $1≫0.286$.
 
 - **Řešení?** Nekóduj jednotlivé symboly, ale bloky symbolů. Počet symbolů v abecedě, ale roste exponenciálně: pro blok délky $k$: $|A^k|$. Exponenciální nárůst Huffmanova stromu.
 
@@ -40,10 +40,10 @@
 
 **1.1.2 Kumulativní distribuční funkce (CDF)**
 
-- V aritmetickém kódování se používá _k rozdělení intervalu_$\langle 0, 1)$na **podintervaly odpovídající jednotlivým symbolům** $a_i$.
-- Abeceda $A = {a_1, a_2, \ldots, a_n}$s pravděpodobnostmi $p_i = P(a_i)$.
+- V aritmetickém kódování se používá _k rozdělení intervalu_ $\langle 0, 1)$ na **podintervaly odpovídající jednotlivým symbolům** $a_i$.
+- Abeceda $A = {a_1, a_2, \ldots, a_n}$ s pravděpodobnostmi $p_i = P(a_i)$.
 - Kumulativní pravděpodobnost: $F_X(i) = \sum_{k=1}^{i} p_k$, přičemž $F_X(0) = 0$.
-- Každý symbol $a_i$odpovídá podintervalu$\langle F_X(i-1), F_X(i))$délky $p_i$.
+- Každý symbol $a_i$ odpovídá podintervalu $\langle F_X(i-1), F_X(i))$ délky $p_i$.
 
 > [!note]
 > - **Intuice:** Čím pravděpodobnější symbol, tím širší podinterval → méně bitů potřeba k jeho specifikaci → lepší komprese.
@@ -127,8 +127,8 @@ A tak dále pro každý další symbol — **interval se stále zmenšuje**.
 
 ### 1.4 Dekódování
 
-- Dekodér zná distribuční funkci $F_X$a délku $L$zdrojového slova.
-- Načte binární číslo $x \in [0, 1)$a opakovaně hledá, do kterého podintervalu $x$padne.
+- Dekodér zná distribuční funkci $F_X$ a délku $L$ zdrojového slova.
+- Načte binární číslo $x \in \langle 0, 1)$ a opakovaně hledá, do kterého podintervalu $x$ padne.
 
 ```
 l ← 0
@@ -147,10 +147,10 @@ while j < L:
 ```
 
 > [!info]
-> Pro nalezení symbolu se spočte **normalizovaná pozice** $\frac{x - l}{u - l}$a zjistí se, do kterého podintervalu $\langle F_X(i-1), F_X(i))$tato hodnota padne.
+> Pro nalezení symbolu se spočte **normalizovaná pozice** $\frac{x - l}{u - l}$ a zjistí se, do kterého podintervalu $\langle F_X(i-1), F_X(i))$ tato hodnota padne.
 
 > [!danger]
-> Pro dekódování je nutné znát délku $L$původního zdrojového slova.
+> Pro dekódování je nutné znát délku $L$ původního zdrojového slova.
 
 #### Příklad
 
@@ -158,7 +158,7 @@ while j < L:
 
 - Vstup: `011010001010` = $0.411376953125$
 - $L=20$
-- Abeceda$A = \{a, b, r, u, o\}$, indexy $a_1=a,\ a_2=b,\ a_3=r,\ a_4=u,\ a_5=o$
+- Abeceda $A = \{a, b, r, u, o\}$, indexy $a_1=a,\ a_2=b,\ a_3=r,\ a_4=u,\ a_5=o$
 - Distribuční funkce (kumulativní pravděpodobnost): $F_X(0)=0,\ F_X(1)=0{.}35,\ F_X(2)=0{.}6,\ F_X(3)=0{.}85,\ F_X(4)=0{.}95,\ F_X(5)=1$
 
 **Krok 1**: _Vypočítat_ $\frac{x-l}{u-l}=\frac{0.411376953125-0}{1-0}=0.411376953125 \rightarrow \langle F_X(1), F_X(2)) \rightarrow$`b`
@@ -184,12 +184,12 @@ Přepočítám interval: $l=0.39484375,\ u=0.415625$
 
 ### 1.5 Přeškálování (rescaling) a průběžný výstup
 
-- S každým dalším symbolem se interval $\langle l, u)$zmenšuje → v praxi **podtečení** **aritmetiky** s omezenou přesností (float/double).
+- S každým dalším symbolem se interval $\langle l, u)$ zmenšuje → v praxi **podtečení** **aritmetiky** s omezenou přesností (float/double).
 - Navíc bez přeškálování _nelze produkovat výstup_ **průběžně** — všechny bity by se vypsaly až na konci.
 
 ### Tři případy přeškálování
 
-Přeškálování se provádí vždy, když $l$a $u$leží ve stejné části intervalu $\langle 0, 1)$:
+Přeškálování se provádí vždy, když $l$ a $u$ leží ve stejné části intervalu $\langle 0, 1)$:
 
 | Případ | Podmínka | Akce | Intuice |
 | --- | --- | --- | --- |
@@ -201,10 +201,10 @@ Přeškálování se provádí vždy, když $l$a $u$leží ve stejné části in
 
 - Při případu 1: zapíšeme `0` a poté $c$-krát `1` (inverze).
 - Při případu 2: zapíšeme `1` a poté $c$-krát `0` (inverze).
-- Při případu 3: žádný okamžitý výstup, jen $c \leftarrow c + 1$(odložení rozhodnutí).
+- Při případu 3: žádný okamžitý výstup, jen $c \leftarrow c + 1$ (odložení rozhodnutí).
 
 > [!note]
-> **Důvod:** Případ 3 nastává, když interval „sedí" uprostřed a nemůžeme určit první bit — ale jakmile se interval posune do jedné poloviny (případ 1 nebo 2), dodatečné $c$bitů inverze „doplní" odložená rozhodnutí.
+> **Důvod:** Případ 3 nastává, když interval „sedí" uprostřed a nemůžeme určit první bit — ale jakmile se interval posune do jedné poloviny (případ 1 nebo 2), dodatečné $c$ bitů inverze „doplní" odložená rozhodnutí.
 
 #### Příklad přeškálování
 
@@ -260,8 +260,8 @@ Přeškálování se provádí vždy, když $l$a $u$leží ve stejné části in
 ### Princip
 
 - Dekodér provádí **stejné přeškálování** jako kodér a **navíc přeškáluje i hodnotu** $x$.
-- Na začátku načte $\lceil -\log_2 \frac{p_{\min}}{4} \rceil$bitů do $x$.
-- Při přeškálování: $x \leftarrow 2(x - d) + b \cdot 2^{-\lceil -\log_2 \frac{p_{\min}}{4} \rceil}$, kde $b$je další načtený bit.
+- Na začátku načte $\lceil -\log_2 \frac{p_{\min}}{4} \rceil$ bitů do $x$.
+- Při přeškálování: $x \leftarrow 2(x - d) + b \cdot 2^{-\lceil -\log_2 \frac{p_{\min}}{4} \rceil}$, kde $b$ je další načtený bit.
 
 ---
 
@@ -270,7 +270,7 @@ Přeškálování se provádí vždy, když $l$a $u$leží ve stejné části in
 - Celočíselná varianta aritmetického kódování je upravená verze standardního aritmetického kódování, která **používá celočíselné operace** místo operací s plovoucí desetinnou čárkou. Tato úprava _zjednodušuje implementaci_, zejména v prostředích, kde manipulace s plovoucí desetinnou čárkou může být _neefektivní_ nebo _kde je omezená přesnost těchto operací problematická_.
 
 > [!info]
-> V praxi se interval $\langle0, 1)$zobrazí na **celočíselný rozsah** $\langle0, M-1)$, kde $M$je typicky $2^8$, $2^{16}$, $2^{32}$nebo $2^{64}$.
+> V praxi se interval $\langle0, 1)$ zobrazí na **celočíselný rozsah** $\langle0, M-1)$, kde $M$ je typicky $2^8$, $2^{16}$, $2^{32}$ nebo $2^{64}$.
 
 ---
 

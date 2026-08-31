@@ -8,14 +8,14 @@
 > **Vstup**:
 >
 > - Posloupnost symbolů zdrojové abecedy
-> - Číslo$K \ ...$maximální velikost bloku
-> - (_Volitelně_) Zdrojová abeceda$A$
+> - Číslo $K \ ...$ maximální velikost bloku
+> - (_Volitelně_) Zdrojová abeceda $A$
 >
 > **Výstup**:
 >
-> - Číslo$k \ ...$použitá velikost bloku ( často$K$, ale text nemusí vyjít přesně)
-> - Transformovaný blok velikosti$k$(posloupnost **posledních symbolů** setříděných rotací)
-> - Číslo$i \ ...$pozice originálního bloku
+> - Číslo $k \ ...$ použitá velikost bloku ( často $K$, ale text nemusí vyjít přesně)
+> - Transformovaný blok velikosti $k$ (posloupnost **posledních symbolů** setříděných rotací)
+> - Číslo $i \ ...$ pozice originálního bloku
 
 > [!info]
 > Jde o **Burrows-Wheeler transformaci** — zkráceně **BWT**.
@@ -49,19 +49,19 @@ while načti ze vstupu nejvýše K symbolů jako blok b_k do
 
 **Popis**:
 
-1. Načti blok$b^k = b_1^k$délky$k$ze vstupní posloupnosti. Nejvýše bude mít délku$K$symbolů.
-2. Vytvoř$k$_cyklických rotací_ bloku$b^k$:
-  - $b_1^k =$původní blok
-  - $b_i^k =$rotace $b_{i-1}^k$o 1 symbol doleva (první symbol se přesune na konec)
-3. Setřiď všech$k$rotací **lexikograficky**.
+1. Načti blok $b^k = b_1^k$ délky $k$ ze vstupní posloupnosti. Nejvýše bude mít délku $K$ symbolů.
+2. Vytvoř $k$ _cyklických rotací_ bloku $b^k$:
+  - $b_1^k =$ původní blok
+  - $b_i^k =$ rotace $b_{i-1}^k$ o 1 symbol doleva (první symbol se přesune na konec)
+3. Setřiď všech $k$ rotací **lexikograficky**.
 4. Výstupem je:
-  - číslo$k$(délka bloku)
+  - číslo $k$ (délka bloku)
   - posloupnost **posledních symbolů** setříděných rotací: $L_1, L_2, \ldots, L_k$
-  - index$i$řádku, ve kterém se nachází původní (nerotovaný) blok $b^k$
+  - index $i$ řádku, ve kterém se nachází původní (nerotovaný) blok $b^k$
 
 ### 1.3 Příklad kódování — krok po kroku
 
-![](/api/files/019ecba4-20d6-7518-be7b-a0736bcf52d2/MacBook-2026-05-14-004638@2x.png)
+![[019ecba4-20d6-7518-be7b-a0736bcf52d2.png]]
 
 ---
 
@@ -92,13 +92,16 @@ for j = 1 to k do
     i ← φ^{-1}(i)
 ```
 
-![](/api/files/019ecba4-20a7-71b2-879e-20da15aa49d7/MacBook-2026-06-15-004763@2x.png)
+![[019ecba4-20a7-71b2-879e-20da15aa49d7.png]]
 
 > [!info]
-> Při ručním výpočtu na papíře je dobrý postup tento:
+> **Postup**:
 >
-> 1. Zapsat sloupce$F$a$L$HNED vedle sebe. Dopsat sloupec s indexy.
-> 2. Přidat sloupec$\varphi^{-1}$. Tedy pro každý symbol v$F$najít stejný symbol v$L$se stejným pořadím výskytu.
+> 1. Setřídíme lexikograficky sloupec $L$, vznikne sloupec $F$
+> 2. Zapsat sloupce $F$ a $L$ vedle sebe.
+> 3. Pro každý symbol v $F$ najít stejný symbol v $L$ se stejným pořadím výskytu. Můžeme je například propojit
+> 4. Začneme na indexu, který nám byl předán
+> 5. Přesunu se na odpovídající řádek v sloupci $L$. Ve stejném řádku v sloupci $F$ máme následující symbol.
 
 ---
 

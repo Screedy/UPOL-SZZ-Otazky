@@ -1,6 +1,6 @@
 ## 1. Slovníkové metody
 
-- Slovníkové metody využívají skutečnosti, že se v datech často _opakují stejné posloupnosti symbolů_ (vzory, fráze). Místo opakovaného ukládání těchto vzorů _ukládají odkazy na jejich dřívější výskyty_.
+- Slovníkové metody využívají skutečnosti, že jsou v datech často _opakují stejné posloupnosti symbolů_ (vzory, fráze). Místo opakovaného ukládání těchto vzorů _ukládají odkazy na jejich dřívější výskyty_.
 
 ### 1.1 Základní vlastnosti:
 
@@ -55,7 +55,7 @@
 
 - Kódování indexů _statickým kódem nebo statistickým kódováním_ (Huffmanovým nebo aritmetickým)
 
-![](/api/files/019ecc86-fe02-703a-a555-69dee02294d8/MacBook-2026-06-15-004767@2x.png)
+![[019ecc86-fe02-703a-a555-69dee02294d8.png]]
 
 ### 2.3 Výhody
 
@@ -75,8 +75,8 @@
 > **Vstup**:
 >
 > - Posloupnost symbolů zdrojové abecedy
-> - Číslo $K \ ...$velikost search buffer
-> - Číslo $L \ ...$velikost look-ahead buffer
+> - Číslo $K \ ...$ velikost search buffer
+> - Číslo $L \ ...$ velikost look-ahead buffer
 >
 > **Výstup**:
 >
@@ -86,11 +86,11 @@
 
 - Sliding window se v LZ77 skládá z dvou částí:
   - **Search buffer:**
-    - _Velikost_ bufferu je definována **parametrem**$K$
-    - Obsahuje již zpracovaná data = _posloupnost_$K$_bezprostředně předchozích symbolů_
+    - _Velikost_ bufferu je definována **parametrem** $K$
+    - Obsahuje již zpracovaná data = _posloupnost_ $K$ _bezprostředně předchozích symbolů_
     - Slouží jako **adaptivní slovník**, kde algoritmus vyhledává dříve zpracované fráze
   - **Look-ahead buffer**
-    - _Velikost_ bufferu je definována **parametrem**$L$
+    - _Velikost_ bufferu je definována **parametrem** $L$
     - Obsahuje _aktuální sekvenci symbolů_ k zpracování
 - LZ77 předpokládá, že **opakující se vzory se vyskytují blízko sebe** - do vzdálenosti $K$
 
@@ -157,9 +157,9 @@ if x není prázdný řetězec then
 
 ### 3.4 Dekódování
 
-- Dekodér čte trojice $(o, l, a)$a rekonstruuje výstup:
-  - Zkopíruj$l$symbolů ze vzdálenosti$o$od aktuální pozice ve výstupu.
-  - Připoj symbol$a$.
+- Dekodér čte trojice $(o, l, a)$ a rekonstruuje výstup:
+  - Zkopíruj $l$ symbolů ze vzdálenosti $o$ od aktuální pozice ve výstupu.
+  - Připoj symbol $a$.
 - Dekodér **nepotřebuje znát** původní search buffer - ten si rekonstruuje z dosud dekódovaného výstupu.
 
 ---
@@ -168,15 +168,15 @@ if x není prázdný řetězec then
 
 ### 4.1 LZR
 
-- Délky$K$a$L$bufferů jsou **neomezené** (teoreticky).
+- Délky $K$ a $L$ bufferů jsou **neomezené** (teoreticky).
 - V praxi omezena paměťovými možnostmi.
 
 ### 4.2 LZSS
 
-- **LZSS** je vylepšení LZ77 — řeší jeho _hlavní neefektivitu_: LZ77 posílá trojici$(\text{offset}, \text{délka}, \text{další symbol})$ i tehdy, když **žádná shoda nebyla nenalezena**, což je plýtvání.
+- **LZSS** je vylepšení LZ77 — řeší jeho _hlavní neefektivitu_: LZ77 posílá trojici $(\text{offset}, \text{délka}, \text{další symbol})$ i tehdy, když **žádná shoda nebyla nenalezena**, což je plýtvání.
 - LZSS místo toho používá **příznakový bit**:
   - **0** → následuje literál (jeden znak přímo)
-  - **1** → následuje dvojice$(\text{offset}, \text{délka})$— odkaz do slovníku
+  - **1** → následuje dvojice $(\text{offset}, \text{délka})$— odkaz do slovníku
 - Pokud by bylo kódování odkazu **stejně dlouhé** nebo **delší** než _samotný symbol_, algoritmus místo toho _zapisuje zakódovaný samostatný symbol_.
 
 #### **4.2.1 Varianty LZSS:**
@@ -191,7 +191,7 @@ if x není prázdný řetězec then
 
 **4.3.1 Hlavní rysy**:
 
-- Výstupem jsou **dvojice**$(\text{délka}, \text{vzdálenost})$nebo **samostatné symboly** (jako LZSS).
+- Výstupem jsou **dvojice** $(\text{délka}, \text{vzdálenost})$ nebo **samostatné symboly** (jako LZSS).
 - Využívá **lazy matching**.
   - Pokud je nalezena shoda, algoritmus ji nemusí ihned zakódovat, ale porovná ji se shodou začínající o symbol později. Pokud je pozdější shoda delší, použije se ta, protože vede k lepší kompresi.
 - Vstup se zpracovává **po blocích**. Každý blok může mít jiný mód — algoritmus vybere ten nejvýhodnější.
@@ -215,11 +215,11 @@ if x není prázdný řetězec then
 
 ### Typické velikosti bufferů
 
-- $K$(search buffer): až **tisíce** symbolů, v Deflate $K = 2^{15} = 32768$B.
-- $L$(look-ahead buffer): **desítky až stovky** symbolů.
+- $K$ (search buffer): až **tisíce** symbolů, v Deflate $K = 2^{15} = 32768$ B.
+- $L$ (look-ahead buffer): **desítky až stovky** symbolů.
 
 ### Časová složitost
 
 - Hlavní bottleneck je **vyhledávání nejdelšího vzoru** v search bufferu.
-- Naivní přístup: $O(K \cdot L)$na jeden krok (S hashovací tabulkou nebo suffix stromem: výrazně rychlejší)
-- **Dekomprese je vždy rychlá** — $O(1)$na jeden výstupní symbol (pouhé kopírování + připojení).
+- Naivní přístup: $O(K \cdot L)$ na jeden krok (S hashovací tabulkou nebo suffix stromem: výrazně rychlejší)
+- **Dekomprese je vždy rychlá** — $O(1)$ na jeden výstupní symbol (pouhé kopírování + připojení).

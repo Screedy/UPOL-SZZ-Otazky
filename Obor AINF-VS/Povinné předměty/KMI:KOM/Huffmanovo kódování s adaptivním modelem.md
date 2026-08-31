@@ -8,7 +8,7 @@
 > **Vstup**:
 >
 > - Posloupnost symbolů ze zdrojové abecedy
-> - Číslo $m\ ...$velikost kódové abecedy
+> - Číslo $m\ ...$ velikost kódové abecedy
 >
 > **Výstup**:
 >
@@ -42,15 +42,15 @@
 > **Definice**: Binární strom s nezápornými váhami uzlů je Huffmanův (tj. odpovídá optimálnímu prefixovému kódu) **právě tehdy**, když lze jeho uzly očíslovat tak, že:
 >
 > - každý uzel, kromě kořene, má svého **sourozence**,
-> - uzly _lze seřadit_ do posloupnosti _podle neklesající váhy_ $w_1 \le w_2 \le \dots \le w_{2n-1}$, ve které **sourozenci sousedí** (uzly$2k-1$a$2k$jsou sourozenci) a každý uzel má **číslo menší** než jeho rodič.
+> - uzly _lze seřadit_ do posloupnosti _podle neklesající váhy_ $w_1 \le w_2 \le \dots \le w_{2n-1}$, ve které **sourozenci sousedí** (uzly $2k-1$ a $2k$ jsou sourozenci) a každý uzel má **číslo menší** než jeho rodič.
 
 > [!note]
 > **Intuice**: V Huffmanově stromu platí, že **čím méně pravděpodobný symbol, tím hlouběji leží** (delší kód). Sibling property je přesné kritérium, jak to ověřit: očíslujeme uzly „odspodu nahoru, zleva doprava" podle vah a musí vyjít, že váhy nikdy neklesají a sourozenci jsou vždy vedle sebe. Pokud po inkrementaci nějakého listu tato vlastnost přestane platit, stačí **prohodit** porušující uzel na správné místo.
 
 - **Jak se využívá v algoritmu:** U každého uzlu:
   
-  - **počet výskytů**$n(x)$symbolu$x$ (= váha uzlu),
-  - **pořadové číslo**$i(v(x))$uzlu.
+  - **počet výskytů** $n(x)$ symbolu $x$ (= váha uzlu),
+  - **pořadové číslo** $i(v(x))$ uzlu.
   
   Při inkrementaci váhy listu pak postupujeme od listu ke kořeni a kdekoliv by se sibling property porušila, **prohodíme** uzel (i s celým podstromem) s uzlem, který má **nejnižší pořadové číslo mezi uzly stejné váhy**. Tím se sibling property zachová s minimem práce.
 
@@ -61,15 +61,15 @@
 >
 > **Řešení**: Speciální (escape) **symbol ε**
 
-- V abecedě je navíc symbol$\varepsilon$značící **neexistující / první výskyt** symbolu.
-- Strom začíná jako jediný list$\varepsilon$.
-- Když kodér potká **nový** symbol$a$(jeho list ve stromu ještě není), pošle:
-  1. **kód**$\varepsilon$— cesta stromem k aktuálnímu listu$\varepsilon$ (tj. „pozor, nový symbol)
+- V abecedě je navíc symbol $\varepsilon$ značící **neexistující / první výskyt** symbolu.
+- Strom začíná jako jediný list $\varepsilon$.
+- Když kodér potká **nový** symbol $a$ (jeho list ve stromu ještě není), pošle:
+  1. **kód** $\varepsilon$— cesta stromem k aktuálnímu listu $\varepsilon$ (tj. „pozor, nový symbol)
   2. **doslovné zakódování symbolu** $a$ (např. jeho fixní binární/ASCII zápis nebo raw symbol).
 - Když kodér potká **známý** symbol, pošle jen jeho kód (cestu stromem).
 
 > [!danger]
-> **Důležitý detail:** Při úplně **prvním** symbolu je$C(\varepsilon)$ještě **prázdný řetězec** (strom má jediný list$\varepsilon$v kořeni), takže se pošle jen doslovné zakódování symbolu. Teprve od druhého symbolu má $\varepsilon$nenulovou cestu.
+> **Důležitý detail:** Při úplně **prvním** symbolu je $C(\varepsilon)$ ještě **prázdný řetězec** (strom má jediný list $\varepsilon$ v kořeni), takže se pošle jen doslovné zakódování symbolu. Teprve od druhého symbolu má $\varepsilon$ nenulovou cestu.
 
 ---
 
@@ -113,10 +113,10 @@ if vl(a) ∉ V_H(A) then
     // Pokračuj inkrementací vah nahoru (viz 1.2.4) od uzlu x
 ```
 
-- **Nový symbol jde na hranu** `0`**,** $\varepsilon$**zůstává na hraně** `I`
+- **Nový symbol jde na hranu** `0`**,** $\varepsilon$ **zůstává na hraně** `I`
 
 > [!note]
-> **Intuice:** Vezmu list$\varepsilon$, „rozdvojím" ho na vnitřní uzel se dvěma potomky: nově viděný symbol$a$(váha 1) a$\varepsilon$(váha 0). Pak je potřeba přičíst jedničku všem předkům až ke kořeni.
+> **Intuice:** Vezmu list $\varepsilon$, „rozdvojím" ho na vnitřní uzel se dvěma potomky: nově viděný symbol $a$ (váha 1) a $\varepsilon$ (váha 0). Pak je potřeba přičíst jedničku všem předkům až ke kořeni.
 
 #### 1.2.4 Aktualizace stromu — existující symbol
 
@@ -155,13 +155,13 @@ n(x) ← n(x) + 1                                  // inkrementuj kořen
 
 Abeceda $A = {a, b, r, u, o}$, kódová abeceda binární ($m = 2$). Pořadové číslo uzlu je u něj uvedeno.
 
-**Start:** jediný list `ε` (číslo 1),$C(\varepsilon)=$prázdný.
+**Start:** jediný list `ε` (číslo 1),$C(\varepsilon)=$ prázdný.
 
-![](/api/files/019ec66d-5155-730f-b0e3-9ac2bfce776e/MacBook-2026-06-14-004754@2x.png)
+![[019ec66d-5155-730f-b0e3-9ac2bfce776e.png]]
 
 **Symbol** `b` (nový, ε prázdné) → výstup `b` (jen doslovný symbol):
 
-![](/api/files/019ec644-adc7-730f-a703-69de778c0d75/MacBook-2026-06-14-004749@2x.png)
+![[019ec644-adc7-730f-a703-69de778c0d75.png]]
 
 Nyní $C(b)=$`0`, $C(\varepsilon)=$`1`.
 
@@ -169,17 +169,17 @@ Nyní $C(b)=$`0`, $C(\varepsilon)=$`1`.
 
 **Symbol** `a` (nový) → výstup `C(ε)`$\cdot$`a` = `1`$\cdot$`a` = `1a`. Rozštěpíme list ε:
 
-![](/api/files/019ec646-df6d-7249-a270-3ee757f3dc84/MacBook-2026-06-14-004750@2x.png)
+![[019ec646-df6d-7249-a270-3ee757f3dc84.png]]
 
-Nyní$C(b)=$`0`, $C(a)=$`10`, $C(\varepsilon)=$`11`.
+Nyní $C(b)=$`0`, $C(a)=$`10`, $C(\varepsilon)=$`11`.
 
 **Výstup po** `ba`**:** `b1a`
 
 **Symbol** `r` (nový) → výstup `C(ε)` + `r` = `11` + `r` = `11r`:
 
-![](/api/files/019ec648-2296-7673-99a6-c7beee91e64d/MacBook-2026-06-14-004751@2x.png)
+![[019ec648-2296-7673-99a6-c7beee91e64d.png]]
 
-Nyní$C(b)=$`0`, $C(a)=$`10`, $C(r)=$`110`, $C(\varepsilon)=$`111`.
+Nyní $C(b)=$`0`, $C(a)=$`10`, $C(r)=$`110`, $C(\varepsilon)=$`111`.
 
 **Výstup po** `bar`**:** `b1a11r`
 
@@ -188,7 +188,7 @@ Nyní$C(b)=$`0`, $C(a)=$`10`, $C(r)=$`110`, $C(\varepsilon)=$`111`.
 
 **Symbol** `b` (existující) → výstup `0`
 
-![](/api/files/019ec64b-9bbe-7263-bae3-1962cde9051d/MacBook-2026-06-14-004752@2x.png)
+![[019ec64b-9bbe-7263-bae3-1962cde9051d.png]]
 
 Symbol `b` **už ve stromu je**. Žádné prohození není třeba. Inkrementujeme váhu listu `b`.
 
@@ -196,7 +196,7 @@ Symbol `b` **už ve stromu je**. Žádné prohození není třeba. Inkrementujem
 
 **Symbol** `u` (existující) → výstup `11110`
 
-![](/api/files/019ec695-40ce-723f-a855-d61f50ef7d98/MacBook-2026-06-14-004758@2x.png)
+![[019ec695-40ce-723f-a855-d61f50ef7d98.png]]
 
 Symbol `u` už ve stromu je. Symbol `o` má stejnou váhu a menší pořadové číslo → dojde k prohození se symbolem `u`. Symbol `a` má stejnou váhu a menší pořadové číslo → dojde k prohození se symbolem `rouε`. Poté inkrementujeme.
 
@@ -243,7 +243,7 @@ while není konec vstupu do
   - Strom může být „nevyvážený" — průměrná délka kódu je o něco horší než u Vittera.
 - **Vitter (algoritmus Λ / V, 1987):**
   - Vylepšuje FGK pomocí **implicitního číslování** a dodatečné invariantní podmínky (preferuje uzly výše ve stromu).
-  - **Garantuje**, že počet bitů adaptivního kódu nepřekročí délku statického Huffmana o více než$O(1)$na symbol; konkrétně dává **nejvýše o jeden bit na symbol více** než ideální statický Huffman.
+  - **Garantuje**, že počet bitů adaptivního kódu nepřekročí délku statického Huffmana o více než $O(1)$ na symbol; konkrétně dává **nejvýše o jeden bit na symbol více** než ideální statický Huffman.
   - V praxi obvykle o trošku lepší komprese než FGK.
 - **Společné:** obě udržují **sibling property**, liší se jen pravidlem výběru uzlu pro prohození a uspořádáním.
 
@@ -251,5 +251,5 @@ while není konec vstupu do
 
 ### 1.6. Složitost a implementační poznámky
 
-- **Časová složitost na symbol:** $O(l)$, kde $l$je délka kódu daného symbolu (= hloubka listu) — aktualizace probíhá po cestě od listu ke kořeni. Pro celý vstup délky $N$tedy $O(N \cdot \bar{l})$.
-- **Prostorová složitost:** $O(n)$uzlů pro abecedu velikosti $n$(strom má nejvýše $2n-1$uzlů + uzel ε).
+- **Časová složitost na symbol:** $O(l)$, kde $l$ je délka kódu daného symbolu (= hloubka listu) — aktualizace probíhá po cestě od listu ke kořeni. Pro celý vstup délky $N$ tedy $O(N \cdot \bar{l})$.
+- **Prostorová složitost:** $O(n)$ uzlů pro abecedu velikosti $n$ (strom má nejvýše $2n-1$ uzlů + uzel ε).

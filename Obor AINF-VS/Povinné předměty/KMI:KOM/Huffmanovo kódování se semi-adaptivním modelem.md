@@ -8,7 +8,7 @@
 > Vstup:
 >
 > - Posloupnost symbolů ze zdrojové abecedy
-> - Číslo $m\ ...$velikost kódové abecedy
+> - Číslo $m\ ...$ velikost kódové abecedy
 > - (_Volitelně_) Seřazené pravděpodobnostní výskyty jednotlivých symbolů z abecedy (od nejmenší po největší)
 >
 > Výstup:
@@ -29,27 +29,27 @@
 Huffmanovo kódování konstruuje kód **„zdola nahoru"** — od _nejméně pravděpodobných symbolů_:
 
 1. Seřaď symboly podle pravděpodobností (sestupně).
-2. Vezmi$m$ symbolů s nejmenšími pravděpodobnostmi a spoj je do jednoho „pseudosymbolu"$m'$se součtovou pravděpodobností.
+2. Vezmi $m$ symbolů s nejmenšími pravděpodobnostmi a spoj je do jednoho „pseudosymbolu"$m'$ se součtovou pravděpodobností.
 3. Rekurzivně pokračuj, dokud nezbude jediný symbol (kořen stromu).
 4. Kódová slova vzniknou procházením stromu od kořene k listům — na každé hraně přiřadíme symbol kódové abecedy.
 
-**1.1.3 Proč**$m$**a ne**$m'$**?**
+**1.1.3 Proč** $m$ **a ne** $m'$**?**
 
-- Při binárním kódování$m = 2$ je v prvním kroku vždy $m' = 2$(spojujeme dva symboly). U obecné$m\text{-ární}$kódové abecedy je v **prvním** kroku potřeba $m' = (n - 2) \bmod (m - 1) + 2$symbolů, v dalších krocích pak vždy$m$symbolů.
+- Při binárním kódování $m = 2$ je v prvním kroku vždy $m' = 2$ (spojujeme dva symboly). U obecné $m\text{-ární}$ kódové abecedy je v **prvním** kroku potřeba $m' = (n - 2) \bmod (m - 1) + 2$ symbolů, v dalších krocích pak vždy $m$ symbolů.
 
 > [!danger]
-> **Důvod:** Chceme, aby všechny kratší kódová slova (všechny vnitřní uzly stromu) měly plný počet$m$potomků. Kdyby první krok sloučil jiný počet symbolů, **vznikly by neobsazené větve** a kód by nebyl optimální.
+> **Důvod:** Chceme, aby všechny kratší kódová slova (všechny vnitřní uzly stromu) měly plný počet $m$ potomků. Kdyby první krok sloučil jiný počet symbolů, **vznikly by neobsazené větve** a kód by nebyl optimální.
 
 **1.1.4 Huffmanův strom**
 
 > [!success]
-> **Definice:** Huffmanův strom $T_H(A) = \langle V_H(A), E_H(A) \rangle$je $m\text{-ární}$strom, kde:
+> **Definice:** Huffmanův strom $T_H(A) = \langle V_H(A), E_H(A) \rangle$ je $m\text{-ární}$ strom, kde:
 >
-> - **Listové uzly** $v_l(a_i)$odpovídají zdrojovým symbolům $a_i \in A$.
-> - **Vnitřní uzly** $v(a'_{n'})$odpovídají pseudosymbolům vytvořeným sloučením v rekurzi.
-> - **Kořenový uzel** $v_r$je výsledek posledního sloučení.
+> - **Listové uzly** $v_l(a_i)$ odpovídají zdrojovým symbolům $a_i \in A$.
+> - **Vnitřní uzly** $v(a'_{n'})$ odpovídají pseudosymbolům vytvořeným sloučením v rekurzi.
+> - **Kořenový uzel** $v_r$ je výsledek posledního sloučení.
 > - **Hrany** jsou označeny symboly kódové abecedy $b_1, \dots, b_{m'}$.
-> - **Kódové slovo** $C(a)$= zřetězení označení hran na cestě z kořene $v_r$do listu $v_l(a)$.
+> - **Kódové slovo** $C(a)$= zřetězení označení hran na cestě z kořene $v_r$ do listu $v_l(a)$.
 
 ### 1.2 Typy modelů dat (kontext Huffmanova kódování)
 
@@ -131,7 +131,7 @@ Krok 4: Spojíme ab (12) a ruo (8) → kořen (20)
 
 **Výsledný strom:**
 
-![](/api/files/019ec2d8-b712-74ac-a4dd-7c03af00adbb/MacBook-2026-05-13-004634@2x.png)
+![[019ec2d8-b712-74ac-a4dd-7c03af00adbb.png]]
 
 **Výsledné kódy:**
 
@@ -188,20 +188,20 @@ Krok 2: |A'| = 3 ≤ m = 3 → přiřadíme přímo:
 
 - Pokud _každý symbol_ je **výrazně pravděpodobnější** než _všechny následující symboly dohromady_. Vznikne velmi nevyvážený strom, což v podstatě vytvoří unární kód.
 
-![](/api/files/019ec2d8-b6fa-7289-8ad2-6097756c1417/MacBook-2026-06-13-004746@2x.png)
+![[019ec2d8-b6fa-7289-8ad2-6097756c1417.png]]
 
 ### 2.2 Blokový kód jako Huffmanův
 
 - V případě _rovnoměrného rozdělení pravděpodobností_ se Huffmanův kód degeneruje na **blokový kód,** ve kterém mají všechna kódová slova stejnou délku.
 
-![](/api/files/019ec2d8-b70b-7249-bfc4-cd9d3a6cef8f/MacBook-2026-06-13-004748@2x.png)
+![[019ff610-4534-7121-bcb9-473040345954.png]]
 
 ### 2.3 Minimální rozdíly v délkách kódových slov
 
 - Říká, že pokud při konstrukci Huffmanova stromu _vhodně rozhoduješ mezi symboly se stejnou pravděpodobností_, můžeš získat kód, kde se délky kódových slov liší co nejméně.
 - **Příklad**: Oba kódy mají stejnou průměrnou délku, takže jsou optimální. První je ale "vyváženější", protože délky se liší méně.
 
-![](/api/files/019ec2d8-b705-756e-95ab-bedc2f1967a0/MacBook-2026-06-13-004745@2x.png)
+![[019ec2d8-b705-756e-95ab-bedc2f1967a0.png]]
 
 ---
 
@@ -218,9 +218,9 @@ Krok 2: |A'| = 3 ≤ m = 3 → přiřadíme přímo:
 ### 4.1 Časová složitost
 
 - **Konstrukce stromu:** $O(n \log n)$
-- **Kódování/dekódování:** $O(N \cdot l_{\max})$kde $N$je délka vstupu a $l_{\max}$maximální délka kódového slova.
+- **Kódování/dekódování:** $O(N \cdot l_{\max})$ kde $N$ je délka vstupu a $l_{\max}$ maximální délka kódového slova.
 
 ### 4.2 Prostorová složitost
 
-- **Strom:** $O(n)$uzlů. Přesně $2n - 1$uzlů pro binární strom, kde $n$je počet symbolů.
-- **Tabulka kódů:** $O(n)$pro uložení kódových slov.
+- **Strom:** $O(n)$ uzlů. Přesně $2n - 1$ uzlů pro binární strom, kde $n$ je počet symbolů.
+- **Tabulka kódů:** $O(n)$ pro uložení kódových slov.

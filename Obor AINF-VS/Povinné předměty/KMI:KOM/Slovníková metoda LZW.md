@@ -1,6 +1,41 @@
-## 3. LZW
+## 1. Slovníkové metody
 
-### 3.1 Popis a princip
+- Slovníkové metody využívají skutečnosti, že se v datech často _opakují stejné posloupnosti symbolů_ (vzory, fráze). Místo opakovaného ukládání těchto vzorů _ukládají odkazy na jejich dřívější výskyty_.
+
+### 1.1 Základní vlastnosti:
+
+- Nevyužívají _statistický model_ (pravděpodobnosti výskytu symbolů).
+- Využívají _opakující se vzory_ (slova, části vět, řetězce znaků).
+- Komprese je založena na nahrazování opakovaných vzorů odkazy do slovníku.
+- Často dosahují dobré komprese u _dat s mnoha opakováními_. (Oproti přímého kódování vstupu, kódujeme odkaz na místo v slovníku → vyšší míra komprese)
+
+### 1.2 Slovník
+
+- Slovník obsahuje dříve nalezené, často používané, vzory a může být:
+  - **implicitní slovník** – slovník je tvořen již zpracovanou částí vstupu (není samostatná struktura), vzory se referencují zpětným odkazem na pozici a délku (např. LZ77).
+  - **explicitní slovník** – slovník je samostatná tabulka vzorů budovaná za běhu (samostatná struktura), do výstupu se zapisují indexy do této tabulky (např. LZW).
+
+### 1.3 Aktualizace slovníku
+
+- Podle způsobu vytváření rozlišujeme:
+  - **statické** – slovník je _znám_ předem a během komprese se nemění,
+  - **semi-adaptivní** – slovník se _vytvoří před kompresí_ ze vstupních dat,
+  - **adaptivní** – slovník _vzniká a aktualizuje se_ během komprese.
+
+> [!info]
+> Při omezené velikosti slovníku se používají strategie nahrazování vzorů, např. **LRU (Least Recently Used)**.
+
+### 1.4 Výhody
+
+- jednoduchá a rychlá dekomprese,
+- nevyžadují odhad pravděpodobností,
+- velmi účinné při výskytu opakujících se vzorů.
+
+---
+
+## 2. LZW
+
+### 2.1 Popis a princip
 
 - **LZW** je _slovníková kompresní metoda_ z rodiny LZ algoritmů. Přesněji patří _do rodiny LZ78_ a její **nejpopulárnější variantou**.
 
@@ -8,20 +43,20 @@
 > **Vstup:**
 >
 > - Posloupnost symbolů ze zdrojové abecedy
-> - Zdrojová abeceda$A$
+> - Zdrojová abeceda $A$
 >
 > **Výstup**:
 >
 > - Komprimovaná data
 
-#### 3.1.1 Klíčový rozdíl oproti LZ78
+#### 2.1.1 Klíčový rozdíl oproti LZ78
 
 - **LZ78** na výstupu zapisuje **dvojici (index, symbol)** - index nejdelšího nalezeného slova ve slovníku + další symbol za ním.
 - **LZW** na výstupu zapisuje **pouze index** - žádný extra symbol. To je možné díky tomu, že slovník je inicializován všemi symboly vstupní abecedy (ne prázdný jako u LZ78).
 
 ---
 
-## 3.2 Pseudokód
+## 2.2 Pseudokód
 
 ```
 Inicializuj slovník D: pro každý symbol a ∈ A přidej slovo „a" s indexem.
@@ -46,7 +81,7 @@ if x ≠ prázdný řetězec then
 
 ---
 
-## 3.3 Příklad kódování — krok po kroku
+## 2.3 Příklad kódování — krok po kroku
 
 #### Příklad
 
@@ -68,25 +103,25 @@ if x ≠ prázdný řetězec then
 | Krok | Čtený symbol | x (aktuální) | xa  | xa ve slovníku? | Akce |
 | --- | --- | --- | --- | --- | --- |
 | 1   | b   | ""  | b   | ANO | x ← `b` |
-| 2   | a   | `b` | ba  | NE  | výstup: **2** (b), slovník[6]=ba, x ← `a` |
-| 3   | r   | `a` | ar  | NE  | výstup: **1** (a), slovník[7]=ar, x ← `r` |
-| 4   | b   | `r` | rb  | NE  | výstup: **3** (r), slovník[8]=rb, x ← `b` |
+| 2   | a   | `b` | ba  | NE  | výstup: **2** `(b)`   slovník[6]=ba   x ← `a` |
+| 3   | r   | `a` | ar  | NE  | výstup: **1** `(a)`   slovník[7]=ar   x ← `r` |
+| 4   | b   | `r` | rb  | NE  | výstup: **3** `(r)`   slovník[8]=rb   x ← `b` |
 | 5   | a   | `b` | ba  | ANO | x ← `ba` |
-| 6   | r   | `ba` | bar | NE  | výstup: **6** (ba), slovník[9]=bar, x ← `r` |
-| 7   | a   | `r` | ra  | NE  | výstup: **3** (r), slovník[10]=ra, x ← `a` |
-| 8   | a   | `a` | aa  | NE  | výstup: **1** (a), slovník[11]=aa, x ← `a` |
-| 9   | b   | `a` | ab  | NE  | výstup: **1** (a), slovník[12]=ab, x ← `b` |
+| 6   | r   | `ba` | bar | NE  | výstup: **6** `(ba)`   slovník[9]=bar   x ← `r` |
+| 7   | a   | `r` | ra  | NE  | výstup: **3** `(r)`   slovník[10]=ra   x ← `a` |
+| 8   | a   | `a` | aa  | NE  | výstup: **1** `(a)`   slovník[11]=aa   x ← `a` |
+| 9   | b   | `a` | ab  | NE  | výstup: **1** `(a)`   slovník[12]=ab   x ← `b` |
 | 10  | a   | `b` | ba  | ANO | x ← `ba` |
 | 11  | r   | `ba` | bar | ANO | x ← `bar` |
-| 12  | b   | `bar` | barb | NE  | výstup: **9** (bar), slovník[13]=barb, x←`b` |
-| 13  | o   | `b` | bo  | NE  | výstup: **2** (b), slovník[14]=bo, x ← `o` |
-| 14  | r   | `o` | or  | NE  | výstup: **5** (o), slovník[15]=or, x ← `r` |
+| 12  | b   | `bar` | barb | NE  | výstup: **9** `(bar)`   slovník[13]=barb   x←`b` |
+| 13  | o   | `b` | bo  | NE  | výstup: **2** `(b)`   slovník[14]=bo   x ← `o` |
+| 14  | r   | `o` | or  | NE  | výstup: **5** `(o)`   slovník[15]=or   x ← `r` |
 | 15  | a   | `r` | ra  | ANO | x ← `ra` |
-| 16  | u   | `ra` | rau | NE  | výstup: **10** (ra), slovník[16]=rau, x←`u` |
-| 17  | b   | `u` | ub  | NE  | výstup: **4** (u), slovník[17]=ub, x ← `b` |
+| 16  | u   | `ra` | rau | NE  | výstup: **10** `(ra)`   slovník[16]=rau   x←`u` |
+| 17  | b   | `u` | ub  | NE  | výstup: **4** `(u)`   slovník[17]=ub   x ← `b` |
 | 18  | a   | `b` | ba  | ANO | x ← `ba` |
 | 19  | r   | `ba` | bar | ANO | x ← `bar` |
-| 20  | u   | `bar` | baru | NE  | výstup: **9** (bar), slovník[18]=baru, x←`u` |
+| 20  | u   | `bar` | baru | NE  | výstup: **9** `(bar)`   slovník[18]=baru   x←`u` |
 | konec | —   | `u` | —   | —   | výstup: **4** (u) |
 
 **Výstup:** `2 1 3 6 3 1 1 9 2 5 10 4 9 4`
@@ -112,7 +147,7 @@ if x ≠ prázdný řetězec then
 
 ---
 
-## 3.4 Dekódování
+## 2.4 Dekódování
 
 - Dekodér musí rekonstruovat **stejný slovník**, jaký vytvořil kodér, aniž by dostal slovník jako vstup.
 
@@ -171,14 +206,14 @@ while načti ze vstupu a dekóduj kód indexu i ve slovníku do
 
 ---
 
-## 3.5 Datová reprezentace slovníku
+## 2.5 Datová reprezentace slovníku
 
 ### Trie (n-ární strom)
 
 Slovník LZW lze přirozeně reprezentovat jako **trie** (prefixový strom), stejně jako u LZ78:
 
 - Kořen odpovídá prázdnému řetězci.
-- Děti kořene jsou symboly abecedy $A$(počáteční slovník).
+- Děti kořene jsou symboly abecedy $A$ (počáteční slovník).
 - Každý uzel odpovídá jednomu slovu ve slovníku.
 - Hrana je označena symbolem, uzel nese index slova.
 
@@ -186,16 +221,16 @@ Slovník LZW lze přirozeně reprezentovat jako **trie** (prefixový strom), ste
 
 ### Hashovací tabulka
 
-V praxi se pro **kódování** používá **hešovací tabulka** pro rychlé vyhledávání, zda slovo$xa$je ve slovníku:
+V praxi se pro **kódování** používá **hashovací tabulka** pro rychlé vyhledávání, zda slovo $xa$ je ve slovníku:
 
-- **Klíč**: dvojice (index slova$x$, symbol$a$).
-- **Hodnota**: index slova$xa$ve slovníku.
-- Časová složitost vyhledávání: $O(1)$amortizovaně.
+- **Klíč**: dvojice (index slova $x$, symbol $a$).
+- **Hodnota**: index slova $xa$ ve slovníku.
+- Časová složitost vyhledávání: $O(1)$ amortizovaně.
 
 Pro **dekódování** stačí **tabulka (pole)** s řádky slovníku, kde každý řádek ukládá:
 
-- Index rodičovského slova (prefix$x$).
-- Symbol$a$(poslední symbol slova$xa$).
+- Index rodičovského slova (prefix $x$).
+- Symbol $a$ (poslední symbol slova $xa$).
 
 Při rekonstrukci slova se prochází řetěz rodičů od daného indexu zpět ke kořeni - slovo se čte pozpátku. Velikost slovníku bývá typicky jednotky až desítky tisíc položek (běžně $2^{16} = 65536$).
 
@@ -220,13 +255,13 @@ Při rekonstrukci slova se prochází řetěz rodičů od daného indexu zpět k
 
 ---
 
-## 3.6 Varianty LZW
+## 2.6 Varianty LZW
 
 - **LZC**:
   - **Proměnná šířka indexu** – velikost slovníku se postupně **zdvojnásobuje** od `512`až po `2^16`.
   - **Po naplnění** slovníku se slovník stává **statickým** (přestane se přidávat).
   - Při **poklesu kompresního poměru pod mez** se slovník **vymaže** a začíná se nanovo.
-  - **Vylepšení – Exclusion principle** využívá informaci o předchozím dekódovaném slovu. Ze seznamu možných kandidátů se _vyloučí položky, které nemohou následovat_, a index se pak kóduje _vzhledem k menší množině_ zbývajících slov. Tím lze snížit počet bitů potřebných pro kódování indexů.**u.**
+  - **Vylepšení – Exclusion principle** využívá informaci o předchozím dekódovaném slovu. Ze seznamu možných kandidátů se _vyloučí položky, které nemohou následovat_, a index se pak kóduje _vzhledem k menší množině_ zbývajících slov. Tím lze snížit počet bitů potřebných pro kódování indexů**.**
 - **LZT**:
   - Varianta LZC.
   - **Po naplnění** slovníku se nezmrazuje ani nemaže celý slovník, ale **vyřadí se slovo s nejméně kódovaným indexem**.
@@ -243,16 +278,16 @@ Při rekonstrukci slova se prochází řetěz rodičů od daného indexu zpět k
 
 ---
 
-## 7. Implementace a praktické aspekty
+# 3. Implementace a praktické aspekty
 
-### Časová složitost
+## 3.1 Časová složitost
 
-- **Kódování:** Pro každý vstupní symbol se provede jedno vyhledávání ve slovníku. S hashovací tabulkou je to $O(1)$amortizovaně → celková složitost $O(n)$pro vstup délky $n$.
+- **Kódování:** Pro každý vstupní symbol se provede jedno vyhledávání ve slovníku. S hashovací tabulkou je to $O(1)$ amortizovaně → celková složitost $O(n)$ pro vstup délky $n$.
 - **Dekódování:** Podobně $O(n)$, ale rekonstrukce slova z tabulky vyžaduje průchod řetězu rodičů (délka slova) → v praxi stále velmi rychlé.
 
 ### Prostorová složitost
 
-- Slovník: $O(S)$, kde $S$je maximální počet položek slovníku.
+- Slovník: $O(S)$, kde $S$ je maximální počet položek slovníku.
 - Každá položka: index rodiče + symbol → konstantní velikost na položku.
 
 ### Výhody LZW
@@ -269,10 +304,10 @@ Při rekonstrukci slova se prochází řetěz rodičů od daného indexu zpět k
 
 ---
 
-## 3.6 Kódování indexů
+# 4. Kódování indexů
 
 Výstupem LZW kodéru je posloupnost celočíselných indexů. Ty je potřeba zakódovat do bitového řetězce. Možnosti:
 
-- **Pevná délka kódu:** Pokud je maximální velikost slovníku$2^k$, každý index se kóduje do$k$bitů. Jednoduché, ale neefektivní na začátku, kdy slovník je malý.
+- **Pevná délka kódu:** Pokud je maximální velikost slovníku $2^k$, každý index se kóduje do $k$ bitů. Jednoduché, ale neefektivní na začátku, kdy slovník je malý.
 - **Postupně rostoucí délka:** Na začátku se kóduje menším počtem bitů (odpovídajícím aktuální velikosti slovníku), délka se zvyšuje, jakmile počet položek slovníku překročí aktuální kapacitu - používá varianta **LZC**.
 - **Statistické kódování:** Indexy se kódují Huffmanovým nebo aritmetickým kódováním - pro ještě vyšší kompresi, ale složitější implementace.
