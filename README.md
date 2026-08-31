@@ -33,7 +33,7 @@
 	2. Navigujte do složky, kde chcete repozitář uložit.
 	3. Spusťte následující příkaz:
 ```bash
-git clone https://github.com/Screedy/SZZ-Otazky2024.git
+git clone https://github.com/Screedy/UPOL-SZZ-Otazky.git
 ```
 - Alternativně je možné použít třeba [GitHub Desktop](https://github.com/apps/desktop), kde vás uživatelské rozhraní provede celým procesem.
 
