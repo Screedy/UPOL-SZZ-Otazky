@@ -5,7 +5,7 @@
 >
 > **Každá fáze návrhu má svůj odpovídající test**.
 
-![](/api/files/019f0e32-c040-74ff-83b0-e67793b0d647/obrazek.png)
+![[019f0e32-c040-74ff-83b0-e67793b0d647.png]]
 
 > [!warning]
 > Graficky má tvar písmene **V**

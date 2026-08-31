@@ -26,7 +26,7 @@
 5. **Nasazení** — předání zákazníkovi, instalace
 6. **Údržba** — opravy chyb, drobné úpravy
 
-![](/api/files/019eee7b-cf24-7149-819d-84f11bfc7405/obrazek.png)
+![[019eee7b-cf24-7149-819d-84f11bfc7405.png]]
 
 ## 2.2 Výhody vodopádu
 
@@ -125,7 +125,7 @@
 
 ### Události
 
-- Sprint planning
+- **Sprint planning**
   - Plánování sprintu.
   - Tým si vybírá úkoly z _Product backlog_.
   - _Sprint Backlog_ = výběr úkolů pro aktuální sprint
@@ -150,7 +150,7 @@
     - Co nefungovalo?
     - Co zlepšit?
 
-![](/api/files/019eef2c-205b-72de-981b-cf3f46252f22/obrazek.png)
+![[019eef2c-205b-72de-981b-cf3f46252f22.png]]
 
 ## 4.4 Kanban
 
@@ -160,7 +160,7 @@
 - Je horší na dlouhodobé plánování.
 - Je méně strukturovaný než Scrum.
 
-![](/api/files/019eef37-80fc-7528-b98b-f5f321044e16/obrazek.png)
+![[019eef37-80fc-7528-b98b-f5f321044e16.png]]
 
 ## 4.5 Extrémní programování
 

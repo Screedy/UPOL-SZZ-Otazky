@@ -167,7 +167,7 @@
 
 **Příklad**
 
-![](/api/files/019f14dd-8499-73bd-82b2-d1374197ab88/obrazek.png)
+![[019f14dd-8499-73bd-82b2-d1374197ab88.png]]
 
 ## **5.1 Prvky Ganttova diagramu**
 

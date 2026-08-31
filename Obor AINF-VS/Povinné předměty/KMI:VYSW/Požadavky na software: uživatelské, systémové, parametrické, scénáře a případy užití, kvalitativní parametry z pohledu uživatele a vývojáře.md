@@ -1,6 +1,8 @@
 # 1. Úvod
 
-- _Zjednodušeně řečeno:_ **Požadavky na software** popisují, _co má systém dělat_ a _jaké vlastnosti má mít_.
+> [!success]
+> **Požadavky na software** popisují, _co má systém dělat_ a _jaké vlastnosti má mít_.
+
 - Jsou **základem celého vývoje** - špatně definované požadavky vedou k problémům v návrhu, implementaci i testování.
 - V celém vývoji software _určování požadavků_ je _součástí_ **specifikace software**, která má několik základních fází:
   1. **Studie proveditelnosti**
@@ -52,7 +54,7 @@
 # 2. Uživatelské požadavky
 
 > [!success]
-> **Uživatelské požadavky** _popisují funkční a nefunkční požadavky_ **v přirozeném jazyce**. Tedy jazykem srozumitelným pro zákazníka, koncové uživatele, manažery (bez odborných slov, …). Často jsou **doplněny diagramy**.
+> **Uživatelské požadavky** _popisují funkční a nefunkční požadavky_ **v přirozeném jazyce**. Tedy jazykem srozumitelným pro zákazníka, koncové uživatele, manažery (bez odborných slov). Často jsou **doplněny diagramy**.
 
 - Popisují pouze _externí chování systému s co nejméně návrhových specifik_ (Uživatele nemusí zajímat v jakém jazyce je systém implementován. Nepotřebuje vědět, na kolika pevných discích v RAID poli je databáze uložena.)
 
@@ -84,12 +86,14 @@
   - _Zdroj_ požadavku (s kým diskutovat změny)
 - Konzistentní používání jazyka (rozlišovat povinné a volitelné funkcionality)
   - _Povinné_ — slova ty “musí poskytovat”, “bude poskytovat”
-  - _Nepovinné_ — “měl by poskytovat!”
+  - _Nepovinné_ — “měl by poskytovat”
 
 # 3. Systémové požadavky
 
 > [!success]
-> **Systémové požadavky** jsou _detailním rozpracováním uživatelských požadavků_. **Přesně popisují** funkcionalitu a vlastnosti systému tak, aby podle nich bylo možné _software navrhnout, implementovat a otestovat_. Musí být _jednoznačné_, _úplné_, _konzistentní_ a _ověřitelné_. Určené pro _vývojáře, analytiky, architekty, testery_. Jsou doplněny **vhodnými diagramy, tabulkami, vzorečky**.
+> **Systémové požadavky** jsou _detailním rozpracováním uživatelských požadavků_. **Přesně popisují** funkcionalitu a vlastnosti systému tak, aby podle nich bylo možné _software navrhnout, implementovat a otestovat_. Musí být _jednoznačné_, _úplné_, _konzistentní_ a _ověřitelné_.
+>
+> Určené pro _vývojáře, analytiky, architekty, testery_. Jsou doplněny **vhodnými diagramy, tabulkami, vzorečky**.
 
 - Jsou často součástí smluv.
 - Opět psány v přirozeném jazyce (ale přesněji).
@@ -242,32 +246,32 @@
   - **Aktér = Subjekt komunikující se systémem**
     - Může to být uživatel, administrátor, externí systém…
     - Ve UML se kreslí jako _panáček_  
-      ![](/api/files/019d9aac-b2b9-771f-89fc-016ca195507f/MacBook-2026-04-17-004557@2x.png)
+      ![[019d9aac-b2b9-771f-89fc-016ca195507f.png]]
   - **Případ užití = Funkcionalita systému**
     - Například: Přihlášení, vyhledání knihy, rezervace, …
-    - Ve UML se kreslí jako _elipsa s názvem_![](/api/files/019d9aac-f8df-731a-b2af-0511f8c919c6/MacBook-2026-04-17-004558@2x.png)
+    - Ve UML se kreslí jako _elipsa s názvem_![[019d9aac-f8df-731a-b2af-0511f8c919c6.png]]
   - **Vazba asociace = Základní vztah mezi aktérem a případem užití**
     - Vyjadřuje, že _aktér_ danou _funkcionalitu používá_.
     - Ve UML se kreslí jako propojení aktéra a případu užití
   - **Vazba «include» = Povinné vložení jiného případu užití**
     - Používá se pro funkcionalitu, která se opakuje na více místech
-    - Například: Při rezervaci se vždy musí provést ověření uživatele.![](/api/files/019d9aad-a617-75d8-92ba-92525cee6c47/MacBook-2026-04-17-004560@2x.png)  
+    - Například: Při rezervaci se vždy musí provést ověření uživatele.![[019d9aad-a617-75d8-92ba-92525cee6c47.png]]  
       
   - **Vazba «extend» = Volitelné rozšíření případu užití**
     - Používá se pro doplňkové nebo podmíněné chování.
-    - Například: Použití slevového kupónu rozšiřuje objednávku. Objednávku lze vytvořit i bez kupónu.![](/api/files/019d9aad-d736-744b-98c6-9135fdf26964/MacBook-2026-04-17-004561@2x.png)
+    - Například: Použití slevového kupónu rozšiřuje objednávku. Objednávku lze vytvořit i bez kupónu.![[019d9aad-d736-744b-98c6-9135fdf26964.png]]
   - **Generalizace aktérů = Umožňuje vytvořit hierarchii aktérů**
     - Potomek dědí všechny vazby svého předka. Každý může mít navíc vlastní specializované funkcionality.
     - Například: Čtenář i knihovník jsou uživatelé systému.
   - **Hranice systému = Obdélník představující modelovaný systém**
     - Uvnitř se nacházejí případy užití.
     - Vně se nacházejí aktéři.
-    - Jasně určuje, co je součástí systému a co patří do jeho okolí.![](/api/files/019d9aae-61f2-727e-a0ff-6ca96322c079/MacBook-2026-04-17-004563@2x.png)
+    - Jasně určuje, co je součástí systému a co patří do jeho okolí.![[019d9aae-61f2-727e-a0ff-6ca96322c079.png]]
 
 > [!info]
 > _Příklad — Blog_:
 >
-> ![](/api/files/019eeb69-1389-716d-8c97-171888c4d724/obrazek.png)
+> ![[019eeb69-1389-716d-8c97-171888c4d724.png]]
 
 # 6. Kvalitativní parametry z pohledu uživatele a vývojáře
 
